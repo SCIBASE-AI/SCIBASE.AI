@@ -17,6 +17,20 @@ export function handleError(e: unknown): NextResponse {
     if (e.code === "P2025") {
       return NextResponse.json({ error: "Not found" }, { status: 404 });
     }
+    if (e.code === "P2003") {
+      // Foreign key violation where the FK is on the current user's id means
+      // the session references a user that no longer exists (e.g. after a DB
+      // reset). Treat as 401 so the client knows to re-authenticate.
+      const field = (e.meta?.field_name as string | undefined) ?? "";
+      if (field.includes("reviewerId") || field.includes("authorId") ||
+          field.includes("endorserId") || field.includes("userId")) {
+        return NextResponse.json(
+          { error: "Session user not found — please sign out and sign in again" },
+          { status: 401 }
+        );
+      }
+      return NextResponse.json({ error: "Related record not found" }, { status: 422 });
+    }
   }
   if (e instanceof Error) {
     const { message } = e;

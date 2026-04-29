@@ -45,7 +45,10 @@ export function ReviewForm({ projectId, onSubmitted }: Props) {
       });
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        throw new Error(body?.error ?? `HTTP ${res.status}`);
+        const msg = res.status === 401
+          ? (body?.error ?? "Session expired — please sign out and sign in again")
+          : (body?.error ?? `HTTP ${res.status}`);
+        throw new Error(msg);
       }
       setContent("");
       setVisibility("PUBLIC");

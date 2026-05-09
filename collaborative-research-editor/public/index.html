@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SCIBASE Collaborative Research Editor</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <header class="toolbar">
+          <div>
+            <p class="eyebrow">SCIBASE.AI</p>
+            <h1>Collaborative Research Editor</h1>
+          </div>
+          <div class="presence" id="presence"></div>
+        </header>
+
+        <section class="document">
+          <div class="document-header">
+            <div>
+              <p class="label">Live manuscript</p>
+              <h2 id="title">Loading...</h2>
+            </div>
+            <button id="save-version">Save version</button>
+          </div>
+          <div id="blocks" class="blocks"></div>
+        </section>
+      </section>
+
+      <aside class="panel">
+        <section>
+          <h2>Publication Outline</h2>
+          <ol id="outline"></ol>
+        </section>
+        <section>
+          <h2>Collaboration State</h2>
+          <dl id="manifest" class="manifest"></dl>
+        </section>
+        <section>
+          <h2>Review Workflow</h2>
+          <div class="workflow">
+            <button id="add-comment">Add reviewer comment</button>
+            <button id="add-suggestion">Suggest abstract edit</button>
+            <button id="lock-abstract">Lock abstract</button>
+          </div>
+        </section>
+      </aside>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

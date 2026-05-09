@@ -1,0 +1,14 @@
+{
+  "name": "@scibase/collaborative-research-editor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-contained collaborative scientific editor prototype for SCIBASE.AI issue #12.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

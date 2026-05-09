@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Collaborative research editor demo screenshot">
+  <rect width="1280" height="720" fill="#101416"/>
+  <rect x="32" y="32" width="830" height="656" rx="8" fill="#f7f6f0"/>
+  <rect x="894" y="32" width="354" height="656" rx="8" fill="#151d18" stroke="#334339"/>
+  <text x="64" y="74" fill="#4f8e65" font-family="Arial, sans-serif" font-size="16" font-weight="700">SCIBASE.AI</text>
+  <text x="64" y="116" fill="#172018" font-family="Arial, sans-serif" font-size="36" font-weight="800">Collaborative Research Editor</text>
+  <rect x="64" y="158" width="760" height="126" rx="6" fill="#ffffff" stroke="#cdd4c8"/>
+  <text x="88" y="194" fill="#5f705f" font-family="Arial, sans-serif" font-size="14" font-weight="700">MARKDOWN</text>
+  <text x="88" y="232" fill="#172018" font-family="Arial, sans-serif" font-size="24" font-weight="700"># Abstract</text>
+  <text x="88" y="264" fill="#172018" font-family="Arial, sans-serif" font-size="18">Summarize the research question, method, and key result.</text>
+  <rect x="64" y="304" width="760" height="100" rx="6" fill="#ffffff" stroke="#cdd4c8"/>
+  <text x="88" y="340" fill="#5f705f" font-family="Arial, sans-serif" font-size="14" font-weight="700">LATEX</text>
+  <text x="88" y="378" fill="#172018" font-family="Arial, sans-serif" font-size="28">E = mc²</text>
+  <rect x="64" y="424" width="760" height="134" rx="6" fill="#ffffff" stroke="#cdd4c8"/>
+  <text x="88" y="460" fill="#5f705f" font-family="Arial, sans-serif" font-size="14" font-weight="700">NOTEBOOK-CELL</text>
+  <text x="88" y="500" fill="#12533c" font-family="Menlo, monospace" font-size="18">import pandas as pd</text>
+  <text x="88" y="530" fill="#12533c" font-family="Menlo, monospace" font-size="18">print('ready')</text>
+  <circle cx="768" cy="82" r="20" fill="#4f8e65" stroke="#d9c26d" stroke-width="3"/>
+  <text x="755" y="89" fill="#edf1ee" font-family="Arial, sans-serif" font-size="16" font-weight="800">Ad</text>
+  <text x="924" y="82" fill="#edf1ee" font-family="Arial, sans-serif" font-size="22" font-weight="800">Publication Outline</text>
+  <text x="924" y="126" fill="#d9e5d8" font-family="Arial, sans-serif" font-size="17">1. markdown: # Abstract...</text>
+  <text x="924" y="160" fill="#d9e5d8" font-family="Arial, sans-serif" font-size="17">2. latex: E = mc²</text>
+  <text x="924" y="194" fill="#d9e5d8" font-family="Arial, sans-serif" font-size="17">3. notebook-cell: import pandas...</text>
+  <text x="924" y="266" fill="#edf1ee" font-family="Arial, sans-serif" font-size="22" font-weight="800">Collaboration State</text>
+  <text x="924" y="310" fill="#98b7a3" font-family="Arial, sans-serif" font-size="17">openComments</text>
+  <text x="1192" y="310" fill="#edf1ee" font-family="Arial, sans-serif" font-size="17">2</text>
+  <text x="924" y="344" fill="#98b7a3" font-family="Arial, sans-serif" font-size="17">openSuggestions</text>
+  <text x="1192" y="344" fill="#edf1ee" font-family="Arial, sans-serif" font-size="17">1</text>
+  <text x="924" y="378" fill="#98b7a3" font-family="Arial, sans-serif" font-size="17">openTasks</text>
+  <text x="1192" y="378" fill="#edf1ee" font-family="Arial, sans-serif" font-size="17">1</text>
+  <text x="924" y="450" fill="#edf1ee" font-family="Arial, sans-serif" font-size="22" font-weight="800">Review Workflow</text>
+  <rect x="924" y="484" width="276" height="42" rx="6" fill="#d9c26d"/>
+  <text x="962" y="511" fill="#11140f" font-family="Arial, sans-serif" font-size="16" font-weight="700">Add reviewer comment</text>
+  <rect x="924" y="542" width="276" height="42" rx="6" fill="#d9c26d"/>
+  <text x="962" y="569" fill="#11140f" font-family="Arial, sans-serif" font-size="16" font-weight="700">Suggest abstract edit</text>
+  <rect x="924" y="600" width="276" height="42" rx="6" fill="#d9c26d"/>
+  <text x="986" y="627" fill="#11140f" font-family="Arial, sans-serif" font-size="16" font-weight="700">Lock abstract</text>
+</svg>

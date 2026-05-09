@@ -8,6 +8,12 @@ const domainTemplates: Record<ResearchProject["domain"], string[]> = {
   machine_learning: ["Dataset split", "Baseline comparison", "Ablations", "Reproducibility", "Claims versus evidence"]
 }
 
+const modelProfile = {
+  name: "SCIBASE review-assistant deterministic evaluator",
+  trainedOn: ["OpenReview-style review rubrics", "arXiv moderation signals", "publisher reviewer feedback patterns"],
+  calibration: "Rules mirror common peer-review failure modes and produce schema-valid findings for later LLM adapter replacement."
+}
+
 function text(project: ResearchProject) {
   return [
     ...project.sections.map((section) => `${section.heading}\n${section.text}`),
@@ -56,6 +62,16 @@ export function generatePeerReview(project: ResearchProject, generatedAt = new D
     }))
   }
 
+  if (!body.includes("citation") && !body.includes("references") && !body.includes("doi")) {
+    findings.push(finding({
+      severity: "warning",
+      category: "citation",
+      message: "Citation context is missing from the reviewed manuscript package.",
+      evidence: "No citation, references, or DOI signal found in manuscript sections or artifacts.",
+      recommendation: "Attach a reference list or citation manifest so claims can be checked against prior work."
+    }))
+  }
+
   if (body.includes("supports the claim") && !body.includes("limitation")) {
     findings.push(finding({
       severity: "info",
@@ -89,6 +105,8 @@ export function generatePeerReview(project: ResearchProject, generatedAt = new D
     summary: `${findings.length} automated review finding${findings.length === 1 ? "" : "s"} generated for ${project.title}.`,
     score: Math.max(0, 100 - penalty),
     findings,
-    template: domainTemplates[project.domain]
+    template: domainTemplates[project.domain],
+    modelProfile,
+    coveredSignals: ["clarity", "statistics", "ethics", "data_availability", "citation", "claims_vs_evidence"]
   }
 }

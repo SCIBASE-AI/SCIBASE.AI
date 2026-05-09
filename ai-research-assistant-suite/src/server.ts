@@ -40,6 +40,7 @@ function renderDashboard() {
   const gapRows = dashboard.gaps.map((gap) => `
     <tr>
       <td>${gap.noveltyScore}</td>
+      <td>${gap.signal.replaceAll("_", " ")}</td>
       <td>${gap.title}</td>
       <td>${gap.rationale}</td>
     </tr>
@@ -150,16 +151,18 @@ function renderDashboard() {
         </section>
         <section class="panel">
           <h2>Auto peer review</h2>
+          <p>${dashboard.review.modelProfile.name}: ${dashboard.review.modelProfile.trainedOn.join(", ")}.</p>
           <table><thead><tr><th>Severity</th><th>Category</th><th>Finding</th><th>Recommendation</th></tr></thead><tbody>${findingRows}</tbody></table>
         </section>
         <section class="panel">
           <h2>Reproducibility checker</h2>
+          <p>Sandbox runner: ${dashboard.reproducibility.sandbox.runner}. Previous attempts linked: ${dashboard.reproducibility.previousAttempts.length}.</p>
           <table><thead><tr><th>Status</th><th>Check</th><th>Evidence</th></tr></thead><tbody>${checkRows}</tbody></table>
           <code>${dashboard.reproducibility.recommendedCommand ?? "No command available"}</code>
         </section>
         <section class="panel">
           <h2>Research gap finder</h2>
-          <table><thead><tr><th>Novelty</th><th>Gap</th><th>Rationale</th></tr></thead><tbody>${gapRows}</tbody></table>
+          <table><thead><tr><th>Novelty</th><th>Signal</th><th>Gap</th><th>Rationale</th></tr></thead><tbody>${gapRows}</tbody></table>
         </section>
       </main>
     </body>

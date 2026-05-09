@@ -47,6 +47,34 @@ export const projects: ResearchProject[] = [
         type: "dataset",
         path: "data/manifest.json",
         content: "{\"rows\": 1200, \"license\": \"controlled-access\"}"
+      },
+      {
+        id: "pipeline_script",
+        type: "pipeline",
+        path: "pipelines/reproduce.py",
+        content: "load manifest; train model; evaluate AUROC; write results.json"
+      },
+      {
+        id: "validation_split",
+        type: "test_set",
+        path: "data/validation_split.json",
+        content: "{\"strategy\":\"held-out patient cohort\",\"size\":360}"
+      },
+      {
+        id: "expected_results",
+        type: "results",
+        path: "results/expected.json",
+        content: "{\"AUROC\":0.82,\"primaryEndpoint\":\"therapy_response\",\"seed\":42}"
+      }
+    ],
+    previousReproducibilityAttempts: [
+      {
+        attemptId: "attempt_2026_05_08_ci",
+        executedAt: "2026-05-08T18:20:00.000Z",
+        runner: "local-sandbox-simulator",
+        status: "passed",
+        confidenceScore: 96,
+        notes: "Notebook and pipeline reproduced expected AUROC within tolerance."
       }
     ]
   },
@@ -93,6 +121,8 @@ export const corpus: CorpusPaper[] = [
     citationCount: 182,
     replicationCount: 2,
     unresolvedQuestions: ["Do organoid response signatures transfer across cohorts?"],
+    limitations: ["Single-center cohort and limited validation across treatment regimens."],
+    negativeFindings: ["Marker transfer was weak in pediatric cohorts"],
     publishedAt: "2024-02-01"
   },
   {
@@ -103,6 +133,8 @@ export const corpus: CorpusPaper[] = [
     citationCount: 96,
     replicationCount: 1,
     unresolvedQuestions: ["Which marker panels remain robust under batch effects?"],
+    limitations: ["Batch effects were only partially corrected across organoid lines."],
+    negativeFindings: ["Two candidate markers failed under cross-site validation"],
     publishedAt: "2023-11-20"
   },
   {
@@ -113,6 +145,8 @@ export const corpus: CorpusPaper[] = [
     citationCount: 64,
     replicationCount: 0,
     unresolvedQuestions: ["How should uncertainty be communicated to agricultural planners?"],
+    limitations: ["Forecast reliability drops in data-sparse agricultural regions."],
+    negativeFindings: ["Baseline climatology outperformed learned models in two low-data regions"],
     publishedAt: "2025-01-18"
   },
   {
@@ -123,6 +157,8 @@ export const corpus: CorpusPaper[] = [
     citationCount: 44,
     replicationCount: 4,
     unresolvedQuestions: ["Can automated checks detect fragile claims before review?"],
+    limitations: ["Benchmarks used public datasets with limited private-data coverage."],
+    negativeFindings: ["Heuristic checks missed claims that depended on hidden preprocessing"],
     publishedAt: "2025-06-09"
   }
 ]

@@ -2,12 +2,12 @@
 
 Self-contained implementation for issue #16. The module provides deterministic assistant workflows that can later be backed by hosted LLMs or scientific models:
 
-- Auto peer review reports with domain templates, statistical checks, ethics/data availability checks, and claims-versus-evidence flags
-- Reproducibility confidence checks across notebooks, execution environments, dataset manifests, run commands, and deterministic seeds
-- Research gap finder using project keywords, citation signals, replication counts, and unresolved questions from a seed corpus
+- Auto peer review reports with domain templates, review-dataset profile metadata, statistical checks, ethics/data availability checks, citation checks, and claims-versus-evidence flags
+- Reproducibility confidence checks across notebooks, execution environments, pinned dependencies, dataset manifests, pipeline artifacts, validation splits, expected outputs, run commands, deterministic seeds, and previous attempts
+- Research gap finder using project keywords, citation signals, replication counts, unresolved questions, limitations, and negative-result follow-ups from a seed corpus
 - Combined project dashboard with review score, reproducibility score, top gap novelty, and readiness score
 - JSON APIs and demo UI for reviewer smoke tests
-- Unit tests for review generation, reproducibility scoring, gap discovery, and dashboard composition
+- Unit tests for review generation, reproducibility scoring, sandbox metadata, gap discovery, and dashboard composition
 
 ## Run locally
 
@@ -45,7 +45,7 @@ curl -s http://localhost:3002/api/gaps/project_organoid_response | jq .
 
 The deterministic services are designed as stable boundaries for production model adapters:
 
-- `generatePeerReview` can accept LLM-generated findings after schema validation.
-- `runReproducibilityChecks` can call a sandbox runner and merge execution logs into the same report shape.
-- `findResearchGaps` can swap the seed corpus for vector search, citation graph traversal, or Semantic Scholar/PubMed connectors.
+- `generatePeerReview` exposes the model/rubric profile and can accept LLM-generated findings after schema validation.
+- `runReproducibilityChecks` already returns sandbox metadata and previous-attempt links; production can replace the local simulator with a real notebook/container runner.
+- `findResearchGaps` can swap the seed corpus for vector search, citation graph traversal, or Semantic Scholar/PubMed connectors while preserving the same opportunity schema.
 - The current implementation avoids raw private-content export and uses project-local artifacts only.

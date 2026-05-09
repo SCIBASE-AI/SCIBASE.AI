@@ -10,6 +10,8 @@ describe("AI research assistant suite", () => {
     const report = generatePeerReview(projects[0], "2026-05-09T00:00:00.000Z")
 
     expect(report.template).toContain("Ethics statement")
+    expect(report.modelProfile.trainedOn).toContain("OpenReview-style review rubrics")
+    expect(report.coveredSignals).toContain("claims_vs_evidence")
     expect(report.findings.some((finding) => finding.category === "data_availability")).toBe(true)
     expect(report.score).toBeLessThan(100)
   })
@@ -19,6 +21,8 @@ describe("AI research assistant suite", () => {
 
     expect(report.confidenceScore).toBe(100)
     expect(report.status).toBe("passed")
+    expect(report.sandbox.outputConsistency).toBe("consistent")
+    expect(report.previousAttempts[0]?.status).toBe("passed")
     expect(report.recommendedCommand).toContain("python reproduce.py")
   })
 
@@ -28,6 +32,7 @@ describe("AI research assistant suite", () => {
     expect(gaps.length).toBeGreaterThan(0)
     expect(gaps[0].noveltyScore).toBeGreaterThan(70)
     expect(gaps[0].evidencePaperIds.length).toBe(1)
+    expect(gaps.some((gap) => gap.signal === "negative_result_follow_up")).toBe(true)
   })
 
   it("builds a combined dashboard readiness score", () => {

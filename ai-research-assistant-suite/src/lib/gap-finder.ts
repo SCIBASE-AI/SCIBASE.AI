@@ -14,7 +14,7 @@ export function findResearchGaps(project: ResearchProject, corpus: CorpusPaper[]
     .filter((item) => item.shared.length > 0)
 
   const gaps = related.flatMap((item) => {
-    return item.paper.unresolvedQuestions.map((question, index) => {
+    const unresolved = item.paper.unresolvedQuestions.map((question, index) => {
       const noveltyScore = Math.min(100, Math.round(
         45 +
         item.shared.length * 12 +
@@ -26,11 +26,36 @@ export function findResearchGaps(project: ResearchProject, corpus: CorpusPaper[]
         id: `gap_${item.paper.id}_${index}`,
         title: question,
         rationale: `${item.paper.title} is related via ${item.shared.join(", ")} and has ${item.paper.replicationCount} replications.`,
+        signal: "unresolved_question" as const,
         keywords: item.shared,
         noveltyScore,
         evidencePaperIds: [item.paper.id]
       }
     })
+
+    const lowReplication = item.paper.replicationCount <= 1
+      ? [{
+          id: `gap_${item.paper.id}_replication`,
+          title: `Replicate ${item.paper.title} with independent data`,
+          rationale: `Topic cluster has ${item.paper.citationCount} citations but only ${item.paper.replicationCount} replication attempts.`,
+          signal: "low_replication_cluster" as const,
+          keywords: item.shared,
+          noveltyScore: Math.min(100, 70 + item.shared.length * 6 + Math.min(18, item.paper.citationCount / 12)),
+          evidencePaperIds: [item.paper.id]
+        }]
+      : []
+
+    const negativeFollowUps = item.paper.negativeFindings.map((finding, index) => ({
+      id: `gap_${item.paper.id}_negative_${index}`,
+      title: `Follow up negative result: ${finding}`,
+      rationale: `${item.paper.title} reports a limitation or negative result that suggests a targeted follow-up study.`,
+      signal: "negative_result_follow_up" as const,
+      keywords: item.shared,
+      noveltyScore: Math.min(100, 68 + item.shared.length * 8 + Math.max(0, 5 - item.paper.replicationCount) * 4),
+      evidencePaperIds: [item.paper.id]
+    }))
+
+    return [...unresolved, ...lowReplication, ...negativeFollowUps]
   })
 
   return gaps

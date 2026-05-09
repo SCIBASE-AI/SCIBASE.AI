@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SCIBASE Scientific Knowledge Graph</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <p>SCIBASE.AI / issue #17</p>
+        <h1>Scientific Knowledge Graph</h1>
+      </header>
+      <section class="grid">
+        <article class="panel hero">
+          <p class="label">Graph Index</p>
+          <h2 id="graphSummary">Loading...</h2>
+          <div id="nodes"></div>
+        </article>
+        <article class="panel">
+          <p class="label">Entity Page</p>
+          <h2 id="entityTitle"></h2>
+          <div id="entity"></div>
+        </article>
+        <article class="panel">
+          <p class="label">Knowledge Navigation</p>
+          <h2>Search journeys</h2>
+          <div id="navigation"></div>
+        </article>
+        <article class="panel">
+          <p class="label">AI Recommendations</p>
+          <h2>Discovery mode</h2>
+          <div id="recommendations"></div>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

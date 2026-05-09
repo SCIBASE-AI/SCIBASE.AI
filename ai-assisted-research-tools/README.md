@@ -65,4 +65,4 @@ curl -s "http://localhost:4128/api/summarize?mode=layperson"
 curl -s "http://localhost:4128/api/citations?style=Nature"
 ```
 
-Demo artifacts are committed under `docs/demo/`.
+Demo artifacts are committed under `docs/demo/`, including `dashboard.png`, `ai-assisted-research-tools.svg`, and `ai-assisted-research-tools-demo.mp4`.

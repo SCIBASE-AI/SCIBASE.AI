@@ -1,0 +1,14 @@
+{
+  "name": "@scibase/user-project-management",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-contained user and project management prototype for SCIBASE.AI issue #11.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

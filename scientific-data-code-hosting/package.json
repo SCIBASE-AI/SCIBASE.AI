@@ -1,0 +1,14 @@
+{
+  "name": "@scibase/scientific-data-code-hosting",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-contained scientific data and code hosting prototype for SCIBASE.AI issue #14.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

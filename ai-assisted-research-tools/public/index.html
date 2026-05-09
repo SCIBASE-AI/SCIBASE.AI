@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SCIBASE AI-Assisted Research Tools</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SCIBASE.AI / issue #13</p>
+          <h1>AI-Assisted Research Tools</h1>
+        </div>
+        <div class="score" aria-label="review quality score">
+          <span id="score">--</span>
+          <small>review score</small>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <aside class="panel manuscript">
+          <p class="label">Manuscript</p>
+          <h2 id="title">Loading manuscript...</h2>
+          <div id="profile" class="profile-grid"></div>
+          <div class="highlight">
+            <p class="label">Highlighted text</p>
+            <p id="highlighted"></p>
+          </div>
+        </aside>
+
+        <section class="panel summaries">
+          <div class="section-heading">
+            <div>
+              <p class="label">AI Paper Summarizer</p>
+              <h2>Domain-aware summaries</h2>
+            </div>
+            <div class="segmented" role="tablist" aria-label="summary modes">
+              <button class="active" data-mode="abstract">Abstract</button>
+              <button data-mode="executive">Executive</button>
+              <button data-mode="layperson">Layperson</button>
+            </div>
+          </div>
+          <p id="summary" class="summary-text"></p>
+          <div class="columns">
+            <div>
+              <p class="label">Key findings</p>
+              <ul id="findings"></ul>
+            </div>
+            <div>
+              <p class="label">Next steps</p>
+              <ul id="nextSteps"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel review">
+          <div class="section-heading">
+            <div>
+              <p class="label">AI Peer Review Aid</p>
+              <h2>Diagnostic manuscript report</h2>
+            </div>
+            <span id="template" class="tag"></span>
+          </div>
+          <div id="issues" class="issue-list"></div>
+        </section>
+
+        <section class="panel citations">
+          <div class="section-heading">
+            <div>
+              <p class="label">AI Citation Tool</p>
+              <h2>Recommendations and insert text</h2>
+            </div>
+            <select id="style" aria-label="citation style">
+              <option>Nature</option>
+              <option>APA</option>
+              <option>MLA</option>
+            </select>
+          </div>
+          <div id="citations" class="citation-list"></div>
+        </section>
+      </section>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

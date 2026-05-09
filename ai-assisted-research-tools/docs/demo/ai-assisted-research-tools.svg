@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI-Assisted Research Tools demo dashboard</title>
+  <desc id="desc">Static preview of the SCIBASE AI summarizer, peer review aid, and citation recommendation dashboard.</desc>
+  <rect width="1280" height="760" fill="#f7f4eb"/>
+  <text x="54" y="78" fill="#637167" font-family="Arial" font-size="16" font-weight="700">SCIBASE.AI / ISSUE #13</text>
+  <text x="54" y="136" fill="#18201c" font-family="Arial" font-size="54" font-weight="900">AI-Assisted Research Tools</text>
+  <rect x="54" y="188" width="342" height="468" fill="#fff" stroke="#d8ded3"/>
+  <text x="82" y="234" fill="#637167" font-family="Arial" font-size="13" font-weight="700">MANUSCRIPT</text>
+  <text x="82" y="270" fill="#18201c" font-family="Arial" font-size="24" font-weight="800">Organoid response model</text>
+  <rect x="82" y="318" width="282" height="1" fill="#d8ded3"/>
+  <text x="82" y="352" fill="#1d6d54" font-family="Arial" font-size="20" font-weight="800">biology · 148 words</text>
+  <text x="82" y="392" fill="#637167" font-family="Arial" font-size="16">organoids, response, biomarkers,</text>
+  <text x="82" y="418" fill="#637167" font-family="Arial" font-size="16">confidence, validation</text>
+  <rect x="430" y="188" width="796" height="214" fill="#fff" stroke="#d8ded3"/>
+  <text x="458" y="234" fill="#637167" font-family="Arial" font-size="13" font-weight="700">AI PAPER SUMMARIZER</text>
+  <text x="458" y="270" fill="#18201c" font-family="Arial" font-size="26" font-weight="800">Domain-aware summaries</text>
+  <text x="458" y="320" fill="#25302a" font-family="Arial" font-size="19">Executive summary highlights predictive signal, uncertainty gaps,</text>
+  <text x="458" y="350" fill="#25302a" font-family="Arial" font-size="19">reproducibility needs, and next steps for prospective replication.</text>
+  <rect x="430" y="426" width="386" height="230" fill="#fff" stroke="#d8ded3"/>
+  <text x="458" y="472" fill="#637167" font-family="Arial" font-size="13" font-weight="700">AI PEER REVIEW AID</text>
+  <text x="458" y="510" fill="#18201c" font-family="Arial" font-size="24" font-weight="800">Diagnostic report</text>
+  <rect x="458" y="540" width="318" height="34" fill="#fff8ef" stroke="#b26a13"/>
+  <text x="476" y="563" fill="#80500e" font-family="Arial" font-size="15">Statistics: missing confidence intervals</text>
+  <rect x="458" y="590" width="318" height="34" fill="#fff1f1" stroke="#b13434"/>
+  <text x="476" y="613" fill="#842121" font-family="Arial" font-size="15">Compliance: missing ethics statement</text>
+  <rect x="840" y="426" width="386" height="230" fill="#fff" stroke="#d8ded3"/>
+  <text x="868" y="472" fill="#637167" font-family="Arial" font-size="13" font-weight="700">AI CITATION TOOL</text>
+  <text x="868" y="510" fill="#18201c" font-family="Arial" font-size="24" font-weight="800">Recommendations</text>
+  <text x="868" y="552" fill="#1d6d54" font-family="Arial" font-size="17" font-weight="800">Dose response profiling in organoids</text>
+  <text x="868" y="584" fill="#637167" font-family="Arial" font-size="15">Matches context for oncology, biomarkers,</text>
+  <text x="868" y="608" fill="#637167" font-family="Arial" font-size="15">dose response, and reproducible workflows.</text>
+  <rect x="1110" y="48" width="116" height="88" fill="#fff" stroke="#d8ded3"/>
+  <text x="1144" y="92" fill="#1d6d54" font-family="Arial" font-size="34" font-weight="900">40</text>
+  <text x="1132" y="116" fill="#637167" font-family="Arial" font-size="13" font-weight="700">SCORE</text>
+</svg>

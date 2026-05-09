@@ -1,0 +1,14 @@
+{
+  "name": "@scibase/ai-assisted-research-tools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-contained AI-assisted research tooling prototype for SCIBASE.AI issue #13.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

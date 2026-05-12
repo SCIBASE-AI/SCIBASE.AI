@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "issue": 14,
+  "domain": "scientific_data_hosting",
+  "endpoints": [
+    {"method": "POST", "path": "/api/artifacts/upload", "description": "Upload artifact and create initial version"},
+    {"method": "POST", "path": "/api/artifacts/{artifactId}/versions", "description": "Create new artifact version"},
+    {"method": "GET", "path": "/api/artifacts/{artifactId}", "description": "Fetch artifact metadata and version summary"},
+    {"method": "POST", "path": "/api/execution/jobs", "description": "Create reproducibility execution job"},
+    {"method": "GET", "path": "/api/execution/jobs/{jobId}", "description": "Get job status/output references"}
+  ],
+  "metadata_standards": ["JSON-LD", "DataCite", "schema.org"],
+  "fair_principles": ["findable", "accessible", "interoperable", "reusable"]
+}

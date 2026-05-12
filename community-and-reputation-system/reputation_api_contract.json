@@ -1,0 +1,51 @@
+{
+  "module": "community-and-reputation-system",
+  "issue": 15,
+  "version": "v0.1",
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/api/reputation/events",
+      "summary": "Append reputation event",
+      "idempotency_key_header": "Idempotency-Key",
+      "request": {
+        "user_id": "uuid",
+        "action_type": "string",
+        "reference_kind": "string",
+        "reference_id": "string",
+        "raw_delta": "integer",
+        "confidence": "number",
+        "metadata": "object"
+      },
+      "response": {
+        "event_id": "uuid",
+        "weighted_delta": "integer",
+        "snapshot": {
+          "total_score": "integer",
+          "badge_tier": "string",
+          "trust_state": "string"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/reputation/users/{user_id}",
+      "summary": "Get current reputation snapshot and score breakdown"
+    },
+    {
+      "method": "GET",
+      "path": "/api/reputation/users/{user_id}/events",
+      "summary": "List event ledger for explainability and audits"
+    },
+    {
+      "method": "POST",
+      "path": "/api/reputation/moderation/actions",
+      "summary": "Apply moderation action linked to reputation evidence"
+    },
+    {
+      "method": "POST",
+      "path": "/api/reputation/appeals",
+      "summary": "Open appeal against moderation action"
+    }
+  ]
+}

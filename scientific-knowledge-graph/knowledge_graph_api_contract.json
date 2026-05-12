@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "issue": 17,
+  "domain": "scientific_knowledge_graph",
+  "endpoints": [
+    {"method": "POST", "path": "/api/kg/extract", "description": "Extract entities/relations from uploaded artifacts"},
+    {"method": "POST", "path": "/api/kg/link", "description": "Link extracted entities to ontology references"},
+    {"method": "GET", "path": "/api/kg/entities/{entityId}", "description": "Fetch entity profile + relations"},
+    {"method": "POST", "path": "/api/kg/query", "description": "Run graph traversal/query with filters"},
+    {"method": "GET", "path": "/api/kg/recommendations", "description": "Get user/context-aware research recommendations"}
+  ],
+  "ontology_examples": ["MeSH", "UniProt", "PubChem"],
+  "payloads": {
+    "recommendation": {"entityId": "string", "reason": "string", "score": 0.0}
+  }
+}

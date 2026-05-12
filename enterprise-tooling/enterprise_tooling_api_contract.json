@@ -1,0 +1,38 @@
+{
+  "module": "enterprise-tooling",
+  "issue": 19,
+  "version": "v0.1",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/enterprise/orgs/{org_id}/dashboard",
+      "summary": "Organization admin dashboard aggregates"
+    },
+    {
+      "method": "GET",
+      "path": "/api/enterprise/orgs/{org_id}/audit-logs",
+      "summary": "Filterable audit log list",
+      "query": ["from", "to", "severity", "actor", "action"]
+    },
+    {
+      "method": "POST",
+      "path": "/api/enterprise/orgs/{org_id}/policies",
+      "summary": "Create versioned tenant policy"
+    },
+    {
+      "method": "POST",
+      "path": "/api/enterprise/orgs/{org_id}/webhooks",
+      "summary": "Register enterprise webhook endpoint"
+    },
+    {
+      "method": "GET",
+      "path": "/api/enterprise/orgs/{org_id}/webhooks/deliveries",
+      "summary": "Delivery attempts and retry state"
+    },
+    {
+      "method": "GET",
+      "path": "/api/enterprise/orgs/{org_id}/usage",
+      "summary": "Daily usage snapshots"
+    }
+  ]
+}

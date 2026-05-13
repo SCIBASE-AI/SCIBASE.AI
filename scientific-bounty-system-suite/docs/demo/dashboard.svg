@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Scientific Bounty System dashboard preview">
+  <rect width="1280" height="720" fill="#f5f7f6"/>
+  <text x="72" y="74" fill="#2a6f54" font-family="Arial, sans-serif" font-size="16" font-weight="700">SCIBASE.AI</text>
+  <text x="72" y="128" fill="#19211e" font-family="Arial, sans-serif" font-size="48" font-weight="700">Scientific Bounty System</text>
+  <text x="72" y="166" fill="#53635b" font-family="Arial, sans-serif" font-size="22">Challenge posting, private submissions, arbitration, prize routing, and IP policies.</text>
+  <line x1="72" y1="210" x2="1208" y2="210" stroke="#d8e0dc"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="72" y="244" width="260" height="116" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="96" y="286" fill="#637169" font-size="15">Readiness</text>
+    <text x="96" y="334" fill="#19211e" font-size="38" font-weight="700">100</text>
+    <rect x="356" y="244" width="260" height="116" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="380" y="286" fill="#637169" font-size="15">Package score</text>
+    <text x="380" y="334" fill="#19211e" font-size="38" font-weight="700">100</text>
+    <rect x="640" y="244" width="260" height="116" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="664" y="286" fill="#637169" font-size="15">Arbitration</text>
+    <text x="664" y="334" fill="#19211e" font-size="38" font-weight="700">90</text>
+    <rect x="924" y="244" width="260" height="116" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="948" y="286" fill="#637169" font-size="15">Final pool</text>
+    <text x="948" y="334" fill="#19211e" font-size="38" font-weight="700">$45,000</text>
+    <rect x="72" y="392" width="260" height="230" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="96" y="430" fill="#19211e" font-size="22" font-weight="700">Challenge</text>
+    <rect x="96" y="454" width="92" height="28" rx="14" fill="#e9f2ee" stroke="#c8ddd2"/>
+    <text x="111" y="474" fill="#245a45" font-size="13" font-weight="700">publishable</text>
+    <text x="96" y="520" fill="#53635b" font-size="16">Model, notebook, dataset,</text>
+    <text x="96" y="546" fill="#53635b" font-size="16">whitepaper, demo</text>
+    <rect x="356" y="392" width="260" height="230" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="380" y="430" fill="#19211e" font-size="22" font-weight="700">Submission</text>
+    <rect x="380" y="454" width="126" height="28" rx="14" fill="#e9f2ee" stroke="#c8ddd2"/>
+    <text x="395" y="474" fill="#245a45" font-size="13" font-weight="700">ready-for-review</text>
+    <text x="380" y="520" fill="#53635b" font-size="16">Private workspace, manifest,</text>
+    <text x="380" y="546" fill="#53635b" font-size="16">audit log, team routing</text>
+    <rect x="640" y="392" width="260" height="230" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="664" y="430" fill="#19211e" font-size="22" font-weight="700">Arbitration</text>
+    <line x1="664" y1="472" x2="664" y2="586" stroke="#2a6f54" stroke-width="3"/>
+    <text x="682" y="486" fill="#19211e" font-size="18" font-weight="700">31/35 Validity</text>
+    <text x="682" y="530" fill="#19211e" font-size="18" font-weight="700">24/25 Reproducibility</text>
+    <text x="682" y="574" fill="#19211e" font-size="18" font-weight="700">35/40 Novelty + translation</text>
+    <rect x="924" y="392" width="260" height="230" rx="8" fill="#ffffff" stroke="#dce5e0"/>
+    <text x="948" y="430" fill="#19211e" font-size="22" font-weight="700">Payouts</text>
+    <rect x="948" y="454" width="180" height="28" rx="14" fill="#e9f2ee" stroke="#c8ddd2"/>
+    <text x="963" y="474" fill="#245a45" font-size="13" font-weight="700">ready-for-sponsor-approval</text>
+    <text x="948" y="520" fill="#53635b" font-size="16">PI $20,250</text>
+    <text x="948" y="546" fill="#53635b" font-size="16">Biologist $15,750</text>
+    <text x="948" y="572" fill="#53635b" font-size="16">Engineer $9,000</text>
+  </g>
+</svg>

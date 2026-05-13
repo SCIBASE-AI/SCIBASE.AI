@@ -1,0 +1,179 @@
+{
+  "generatedAt": "2026-05-13T00:00:00.000Z",
+  "manuscript": {
+    "id": "ms-neuro-climate-2026",
+    "title": "Transfer learning for early neuroinflammation detection from single-cell RNA-seq cohorts",
+    "domain": "biomedicine",
+    "targetAudience": "collaborators and journal editors"
+  },
+  "summaries": {
+    "abstract": {
+      "manuscriptId": "ms-neuro-climate-2026",
+      "mode": "abstract",
+      "summary": "Transfer learning for early neuroinflammation detection from single-cell RNA-seq cohorts. We evaluate a transfer-learning workflow for identifying early neuroinflammation signatures from single-cell RNA-seq cohorts. The approach combines quality-control notebooks, graph-based clustering, and biomarker ranking to improve reproducibility across three public datasets.",
+      "keyFindings": [
+        "We evaluate a transfer-learning workflow for identifying early neuroinflammation signatures from single-cell RNA-seq cohorts.",
+        "The approach combines quality-control notebooks, graph-based clustering, and biomarker ranking to improve reproducibility across three public datasets.",
+        "We test whether a reusable transfer-learning workflow can improve cross-cohort signal detection.",
+        "A preregistered notebook records preprocessing, clustering, and biomarker ranking steps."
+      ],
+      "implications": [
+        "Reusable notebooks can reduce cross-cohort reproducibility friction.",
+        "Transfer learning may improve biomarker ranking when cohorts are small.",
+        "Reviewer trust depends on stronger statistics and release-ready data notes."
+      ],
+      "nextSteps": [
+        "Add confidence intervals for the primary model comparison.",
+        "Publish the de-identified matrices and notebooks once review is complete.",
+        "Link biomarker claims to the recommended citation set."
+      ]
+    },
+    "executive": {
+      "manuscriptId": "ms-neuro-climate-2026",
+      "mode": "executive",
+      "summary": "Transfer learning for early neuroinflammation detection from single-cell RNA-seq cohorts evaluates a reusable workflow for earlier neuroinflammation detection. The main result improves F1 to 0.82, but the draft still needs stronger statistical reporting and data-availability detail before review.",
+      "keyFindings": [
+        "We evaluate a transfer-learning workflow for identifying early neuroinflammation signatures from single-cell RNA-seq cohorts.",
+        "The approach combines quality-control notebooks, graph-based clustering, and biomarker ranking to improve reproducibility across three public datasets.",
+        "We test whether a reusable transfer-learning workflow can improve cross-cohort signal detection.",
+        "A preregistered notebook records preprocessing, clustering, and biomarker ranking steps."
+      ],
+      "implications": [
+        "Reusable notebooks can reduce cross-cohort reproducibility friction.",
+        "Transfer learning may improve biomarker ranking when cohorts are small.",
+        "Reviewer trust depends on stronger statistics and release-ready data notes."
+      ],
+      "nextSteps": [
+        "Add confidence intervals for the primary model comparison.",
+        "Publish the de-identified matrices and notebooks once review is complete.",
+        "Link biomarker claims to the recommended citation set."
+      ]
+    },
+    "layperson": {
+      "manuscriptId": "ms-neuro-climate-2026",
+      "mode": "layperson",
+      "summary": "The draft describes a tool that looks for early warning signs of brain inflammation in single-cell data. It appears promising, but reviewers will need clearer uncertainty ranges and access to the supporting data.",
+      "keyFindings": [
+        "We evaluate a transfer-learning workflow for identifying early neuroinflammation signatures from single-cell RNA-seq cohorts.",
+        "The approach combines quality-control notebooks, graph-based clustering, and biomarker ranking to improve reproducibility across three public datasets.",
+        "We test whether a reusable transfer-learning workflow can improve cross-cohort signal detection.",
+        "A preregistered notebook records preprocessing, clustering, and biomarker ranking steps."
+      ],
+      "implications": [
+        "Reusable notebooks can reduce cross-cohort reproducibility friction.",
+        "Transfer learning may improve biomarker ranking when cohorts are small.",
+        "Reviewer trust depends on stronger statistics and release-ready data notes."
+      ],
+      "nextSteps": [
+        "Add confidence intervals for the primary model comparison.",
+        "Publish the de-identified matrices and notebooks once review is complete.",
+        "Link biomarker claims to the recommended citation set."
+      ]
+    }
+  },
+  "review": {
+    "manuscriptId": "ms-neuro-climate-2026",
+    "template": "biology",
+    "overallRisk": "needs_revision",
+    "diagnostics": [
+      {
+        "id": "statistical_reporting",
+        "severity": "warning",
+        "recommendation": "P-values should be paired with confidence intervals or effect sizes."
+      },
+      {
+        "id": "ethics_statement",
+        "severity": "warning",
+        "recommendation": "Ethics or consent statement is missing."
+      },
+      {
+        "id": "data_availability",
+        "severity": "pass",
+        "recommendation": "Data availability statement should identify timing and repository destination."
+      },
+      {
+        "id": "clarity",
+        "severity": "pass",
+        "recommendation": "0 long sentence(s) may need editing."
+      },
+      {
+        "id": "similarity_risk",
+        "severity": "pass",
+        "recommendation": "No high-risk overlap detected in the local open-access similarity sketch."
+      }
+    ],
+    "suggestedActions": [
+      "P-values should be paired with confidence intervals or effect sizes.",
+      "Ethics or consent statement is missing."
+    ]
+  },
+  "citations": [
+    {
+      "doi": "10.1038/s41592-019-0654-x",
+      "title": "Scanpy: large-scale single-cell gene expression data analysis",
+      "score": 105,
+      "alreadyCited": true,
+      "matchedKeywords": [
+        "Scanpy",
+        "Python"
+      ],
+      "formatted": "Wolf, Angerer, Theis. Scanpy: large-scale single-cell gene expression data analysis. Nature Methods (2018). https://doi.org/10.1038/s41592-019-0654-x"
+    },
+    {
+      "doi": "10.1038/s41586-020-03145-6",
+      "title": "A cell atlas of human neuroinflammation",
+      "score": 91,
+      "alreadyCited": true,
+      "matchedKeywords": [
+        "neuroinflammation",
+        "biomarkers"
+      ],
+      "formatted": "Chen, Rossi, Patel. A cell atlas of human neuroinflammation. Nature (2020). https://doi.org/10.1038/s41586-020-03145-6"
+    },
+    {
+      "doi": "10.7554/elife.12345",
+      "title": "Reporting standards for computational biology workflows",
+      "score": 35,
+      "alreadyCited": false,
+      "matchedKeywords": [
+        "workflow"
+      ],
+      "formatted": "Garcia, Ahmed. Reporting standards for computational biology workflows. eLife (2023). https://doi.org/10.7554/elife.12345"
+    },
+    {
+      "doi": "10.1101/2025.01.08.123456",
+      "title": "Reproducible transfer learning for biomedical discovery",
+      "score": 31,
+      "alreadyCited": false,
+      "matchedKeywords": [
+        "reproducibility"
+      ],
+      "formatted": "Nguyen, Weber. Reproducible transfer learning for biomedical discovery. bioRxiv (2025). https://doi.org/10.1101/2025.01.08.123456"
+    },
+    {
+      "doi": "10.1126/science.abd1234",
+      "title": "Graph models for scientific representation learning",
+      "score": 3,
+      "alreadyCited": false,
+      "matchedKeywords": [],
+      "formatted": "Miller, Sato. Graph models for scientific representation learning. Science (2024). https://doi.org/10.1126/science.abd1234"
+    }
+  ],
+  "similarPapersWidget": [
+    {
+      "title": "Scanpy: large-scale single-cell gene expression data analysis",
+      "doi": "10.1038/s41592-019-0654-x",
+      "reason": "Scanpy, Python"
+    },
+    {
+      "title": "A cell atlas of human neuroinflammation",
+      "doi": "10.1038/s41586-020-03145-6",
+      "reason": "neuroinflammation, biomarkers"
+    },
+    {
+      "title": "Reporting standards for computational biology workflows",
+      "doi": "10.7554/elife.12345",
+      "reason": "workflow"
+    }
+  ]
+}

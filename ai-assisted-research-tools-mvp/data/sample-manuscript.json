@@ -1,0 +1,16 @@
+{
+  "id": "ms-neuro-climate-2026",
+  "title": "Transfer learning for early neuroinflammation detection from single-cell RNA-seq cohorts",
+  "domain": "biomedicine",
+  "abstract": "We evaluate a transfer-learning workflow for identifying early neuroinflammation signatures from single-cell RNA-seq cohorts. The approach combines quality-control notebooks, graph-based clustering, and biomarker ranking to improve reproducibility across three public datasets.",
+  "introduction": "Early detection of neuroinflammation remains difficult because cohorts vary by protocol, sequencing depth, and annotation standards. We test whether a reusable transfer-learning workflow can improve cross-cohort signal detection.",
+  "methods": "We used Python, Scanpy, and PyTorch to normalize three open single-cell RNA-seq datasets. Models were trained on two cohorts and tested on the third. A preregistered notebook records preprocessing, clustering, and biomarker ranking steps.",
+  "results": "The model improved F1 from 0.71 to 0.82 compared with a baseline logistic model. The reported p-value was p = 0.031 for the main comparison, but confidence intervals are not currently included. The top biomarkers were validated against external literature.",
+  "ethicsStatement": "",
+  "dataAvailability": "Processed matrices and notebooks are planned for release after de-identification review.",
+  "references": [
+    "10.1038/s41586-020-03145-6",
+    "10.1038/s41592-019-0654-x"
+  ],
+  "targetAudience": "collaborators and journal editors"
+}

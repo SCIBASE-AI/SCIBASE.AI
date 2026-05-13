@@ -1,0 +1,14 @@
+{
+  "name": "enterprise-research-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/tooling.js && node --check src/sample-data.js && node --check src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

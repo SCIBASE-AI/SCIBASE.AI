@@ -1,0 +1,15 @@
+{
+  "name": "community-reputation-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Community and reputation system milestone for SCIBASE.AI.",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/reputation.js && node --check src/sample-data.js && node --check src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

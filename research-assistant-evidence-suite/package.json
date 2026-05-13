@@ -1,0 +1,15 @@
+{
+  "name": "research-assistant-evidence-suite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-contained SCIBASE.AI research assistant suite for peer review, reproducibility, and gap discovery.",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/assistant.js && node --check src/server.js && node --check src/sample-data.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

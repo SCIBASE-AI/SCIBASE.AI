@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-label="AI Research Copilot Suite dashboard preview">
+  <rect width="1280" height="760" fill="#f6f7f9"/>
+  <text x="72" y="82" fill="#2864b4" font-family="Arial" font-size="18" font-weight="700">SCIBASE.AI</text>
+  <text x="72" y="138" fill="#18202a" font-family="Arial" font-size="48" font-weight="700">AI Research Copilot Suite</text>
+  <text x="72" y="180" fill="#526070" font-family="Arial" font-size="23">Auto peer review, reproducibility checks, and research gap discovery.</text>
+  <g transform="translate(72 230)">
+    <rect width="260" height="96" rx="8" fill="#ffffff" stroke="#dfe4ec"/>
+    <text x="22" y="34" fill="#627083" font-family="Arial" font-size="16">Review score</text>
+    <text x="22" y="75" fill="#18202a" font-family="Arial" font-size="38" font-weight="700">51</text>
+  </g>
+  <g transform="translate(352 230)">
+    <rect width="260" height="96" rx="8" fill="#ffffff" stroke="#dfe4ec"/>
+    <text x="22" y="34" fill="#627083" font-family="Arial" font-size="16">Repro confidence</text>
+    <text x="22" y="75" fill="#18202a" font-family="Arial" font-size="38" font-weight="700">100</text>
+  </g>
+  <g transform="translate(632 230)">
+    <rect width="260" height="96" rx="8" fill="#ffffff" stroke="#dfe4ec"/>
+    <text x="22" y="34" fill="#627083" font-family="Arial" font-size="16">Artifacts</text>
+    <text x="22" y="75" fill="#18202a" font-family="Arial" font-size="38" font-weight="700">4</text>
+  </g>
+  <g transform="translate(912 230)">
+    <rect width="260" height="96" rx="8" fill="#ffffff" stroke="#dfe4ec"/>
+    <text x="22" y="34" fill="#627083" font-family="Arial" font-size="16">Gap opportunities</text>
+    <text x="22" y="75" fill="#18202a" font-family="Arial" font-size="38" font-weight="700">3</text>
+  </g>
+  <g transform="translate(72 365)">
+    <rect width="350" height="300" rx="8" fill="#ffffff" stroke="#dfe4ec"/>
+    <text x="22" y="42" fill="#18202a" font-family="Arial" font-size="24" font-weight="700">Peer Review</text>
+    <rect x="22" y="68" width="4" height="70" fill="#bb3f3f"/>
+    <text x="40" y="92" fill="#18202a" font-family="Arial" font-size="18" font-weight="700">scope alignment</text>
+    <text x="40" y="122" fill="#384657" font-family="Arial" font-size="15">Therapeutic claim stronger than evidence.</text>
+    <rect x="22" y="158" width="4" height="70" fill="#c4912f"/>
+    <text x="40" y="182" fill="#18202a" font-family="Arial" font-size="18" font-weight="700">citation coverage</text>
+    <text x="40" y="212" fill="#384657" font-family="Arial" font-size="15">Results section has no citations.</text>
+  </g>
+  <g transform="translate(465 365)">
+    <rect width="350" height="300" rx="8" fill="#ffffff" stroke="#dfe4ec"/>
+    <text x="22" y="42" fill="#18202a" font-family="Arial" font-size="24" font-weight="700">Reproducibility</text>
+    <text x="22" y="88" fill="#2864b4" font-family="Arial" font-size="26" font-weight="700">ready</text>
+    <text x="22" y="132" fill="#384657" font-family="Arial" font-size="17">2026-04-17: internal-qc - passed</text>
+    <text x="22" y="168" fill="#384657" font-family="Arial" font-size="17">2026-04-26: external-reviewer-a - warning</text>
+  </g>
+  <g transform="translate(858 365)">
+    <rect width="350" height="300" rx="8" fill="#ffffff" stroke="#dfe4ec"/>
+    <text x="22" y="42" fill="#18202a" font-family="Arial" font-size="24" font-weight="700">Research Gaps</text>
+    <text x="22" y="88" fill="#18202a" font-family="Arial" font-size="18" font-weight="700">118 · CRISPR organoid replication</text>
+    <text x="22" y="122" fill="#384657" font-family="Arial" font-size="15">Design a replication-first study.</text>
+    <text x="22" y="172" fill="#18202a" font-family="Arial" font-size="18" font-weight="700">95 · Single-cell QC thresholds</text>
+    <text x="22" y="206" fill="#384657" font-family="Arial" font-size="15">Build a shared benchmark.</text>
+  </g>
+</svg>

@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-05-13T00:00:00.000Z",
+  "stats": {
+    "nodeCount": 41,
+    "edgeCount": 72,
+    "byType": {
+      "author": 4,
+      "concept": 9,
+      "dataset": 3,
+      "doi": 3,
+      "institution": 3,
+      "notebook": 1,
+      "ontology": 5,
+      "paper": 1,
+      "protocol": 5,
+      "tool": 7
+    }
+  },
+  "crisprQuery": {
+    "nodes": [
+      {
+        "id": "concept-crispr",
+        "type": "concept",
+        "label": "CRISPR",
+        "domains": [
+          "biomedicine"
+        ],
+        "citationCount": 84,
+        "reproducibilityScore": 0.91,
+        "source": "extracted-entity",
+        "schemaType": "DefinedTerm"
+      },
+      {
+        "id": "paper-crispr-neuro-2026",
+        "type": "paper",
+        "label": "CRISPR screen links single-cell RNA-seq biomarkers to neuroinflammation",
+        "domain": "biomedicine",
+        "citationCount": 84,
+        "reproducibilityScore": 0.91,
+        "source": "research-object",
+        "schemaType": "ScholarlyArticle",
+        "domains": [
+          "biomedicine"
+        ]
+      },
+      {
+        "id": "protocol-crispr-pooled-screen-protocol",
+        "type": "protocol",
+        "label": "CRISPR pooled screen protocol",
+        "domains": [
+          "biomedicine"
+        ],
+        "citationCount": 84,
+        "reproducibilityScore": 0.91,
+        "source": "extracted-entity",
+        "schemaType": "HowTo"
+      }
+    ],
+    "edges": [
+      {
+        "source": "paper-crispr-neuro-2026",
+        "target": "concept-crispr",
+        "predicate": "mentions",
+        "confidence": 0.88
+      },
+      {
+        "source": "paper-crispr-neuro-2026",
+        "target": "protocol-crispr-pooled-screen-protocol",
+        "predicate": "uses_protocol",
+        "confidence": 0.9
+      }
+    ],
+    "total": 3
+  },
+  "crisprEntityPage": {
+    "id": "concept-crispr",
+    "label": "CRISPR",
+    "type": "concept",
+    "schemaType": "DefinedTerm",
+    "citationReach": 84,
+    "domains": [
+      "biomedicine"
+    ],
+    "usageContexts": [
+      {
+        "documentId": "paper-crispr-neuro-2026",
+        "title": "CRISPR screen links single-cell RNA-seq biomarkers to neuroinflammation",
+        "kind": "paper",
+        "domain": "biomedicine",
+        "reproducibilityScore": 0.91
+      }
+    ],
+    "relationships": [
+      {
+        "predicate": "mentions",
+        "source": "paper-crispr-neuro-2026",
+        "target": "concept-crispr"
+      },
+      {
+        "predicate": "co_occurs_with",
+        "source": "concept-crispr",
+        "target": "concept-single-cell-rna-seq"
+      },
+      {
+        "predicate": "co_occurs_with",
+        "source": "concept-crispr",
+        "target": "concept-biomarker-discovery"
+      },
+      {
+        "predicate": "co_occurs_with",
+        "source": "concept-crispr",
+        "target": "concept-neuroinflammation"
+      },
+      {
+        "predicate": "co_occurs_with",
+        "source": "concept-crispr",
+        "target": "concept-graph-neural-network"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "entityId": "concept-crispr",
+      "label": "CRISPR",
+      "type": "concept",
+      "score": 80,
+      "reason": "Matches a stated research interest."
+    },
+    {
+      "entityId": "concept-reproducibility",
+      "label": "reproducibility",
+      "type": "concept",
+      "score": 76,
+      "reason": "Matches a stated research interest."
+    },
+    {
+      "entityId": "concept-neuroinflammation",
+      "label": "neuroinflammation",
+      "type": "concept",
+      "score": 61,
+      "reason": "Connects to entities used in recent project activity."
+    },
+    {
+      "entityId": "concept-single-cell-rna-seq",
+      "label": "single-cell RNA-seq",
+      "type": "concept",
+      "score": 61,
+      "reason": "Connects to entities used in recent project activity."
+    },
+    {
+      "entityId": "concept-graph-neural-network",
+      "label": "graph neural network",
+      "type": "concept",
+      "score": 60,
+      "reason": "Connects to entities used in recent project activity."
+    }
+  ],
+  "schemaOrgPreview": [
+    {
+      "@id": "https://scibase.ai/kg/author-aisha-patel",
+      "@type": "Person",
+      "name": "Aisha Patel"
+    },
+    {
+      "@id": "https://scibase.ai/kg/author-jonas-weber",
+      "@type": "Person",
+      "name": "Jonas Weber"
+    },
+    {
+      "@id": "https://scibase.ai/kg/author-luca-rossi",
+      "@type": "Person",
+      "name": "Luca Rossi"
+    },
+    {
+      "@id": "https://scibase.ai/kg/author-maya-chen",
+      "@type": "Person",
+      "name": "Maya Chen"
+    },
+    {
+      "@id": "https://scibase.ai/kg/concept-climate-forecasting",
+      "@type": "DefinedTerm",
+      "name": "climate forecasting"
+    },
+    {
+      "@id": "https://scibase.ai/kg/concept-crispr",
+      "@type": "DefinedTerm",
+      "name": "CRISPR"
+    }
+  ]
+}

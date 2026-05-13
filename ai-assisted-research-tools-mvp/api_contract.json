@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "issue": 13,
+  "title": "AI-Assisted Research Tools MVP",
+  "endpoints": [
+    {"method":"POST","path":"/api/ai-assisted-research-tools-mvp/create","description":"Create primary resource"},
+    {"method":"GET","path":"/api/ai-assisted-research-tools-mvp/{id}","description":"Fetch primary resource"},
+    {"method":"POST","path":"/api/ai-assisted-research-tools-mvp/validate","description":"Validate workflow payload"}
+  ]
+}

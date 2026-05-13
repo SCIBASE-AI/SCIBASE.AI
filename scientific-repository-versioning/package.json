@@ -1,0 +1,15 @@
+{
+  "name": "scientific-repository-versioning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Project repository and version-control milestone for SCIBASE.AI.",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/repository.js && node --check src/sample-data.js && node --check src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "collaborative-research-editor-ops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free collaborative research editor milestone for SCIBASE.AI.",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/editor.js && node --check src/sample-data.js && node --check src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

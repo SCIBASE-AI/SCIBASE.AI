@@ -1,0 +1,13 @@
+{
+  "name": "scientific-knowledge-graph-integration",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js",
+    "snapshot": "node scripts/export-demo-snapshot.js",
+    "demo:gif": "python scripts/render-demo-gif.py",
+    "check": "npm test && npm run snapshot && npm run demo:gif"
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scientific Knowledge Graph</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>SCIBASE.AI</p>
+        <h1>Scientific Knowledge Graph</h1>
+        <div id="stats" class="stats"></div>
+      </header>
+
+      <section class="toolbar">
+        <input id="search" value="CRISPR" aria-label="Search graph">
+        <select id="type">
+          <option value="">All node types</option>
+          <option value="concept">Concepts</option>
+          <option value="dataset">Datasets</option>
+          <option value="tool">Tools</option>
+          <option value="protocol">Protocols</option>
+        </select>
+        <button id="run">Search</button>
+      </section>
+
+      <section class="grid">
+        <article>
+          <h2>Navigation Results</h2>
+          <div id="results" class="list"></div>
+        </article>
+        <article>
+          <h2>Entity Page</h2>
+          <div id="entity" class="list"></div>
+        </article>
+        <article>
+          <h2>AI Recommendations</h2>
+          <div id="recommendations" class="list"></div>
+        </article>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

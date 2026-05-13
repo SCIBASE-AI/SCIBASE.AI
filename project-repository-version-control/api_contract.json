@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "issue": 10,
+  "title": "Project Repository and Version Control",
+  "endpoints": [
+    {"method":"POST","path":"/api/project-repository-version-control/create","description":"Create primary resource"},
+    {"method":"GET","path":"/api/project-repository-version-control/{id}","description":"Fetch primary resource"},
+    {"method":"POST","path":"/api/project-repository-version-control/validate","description":"Validate workflow payload"}
+  ]
+}

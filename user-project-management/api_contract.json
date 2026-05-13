@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "issue": 11,
+  "title": "User and Project Management",
+  "endpoints": [
+    {"method":"POST","path":"/api/user-project-management/create","description":"Create primary resource"},
+    {"method":"GET","path":"/api/user-project-management/{id}","description":"Fetch primary resource"},
+    {"method":"POST","path":"/api/user-project-management/validate","description":"Validate workflow payload"}
+  ]
+}

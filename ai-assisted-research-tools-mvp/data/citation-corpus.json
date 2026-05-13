@@ -1,0 +1,47 @@
+[
+  {
+    "doi": "10.1038/s41586-020-03145-6",
+    "title": "A cell atlas of human neuroinflammation",
+    "authors": ["Chen", "Rossi", "Patel"],
+    "year": 2020,
+    "venue": "Nature",
+    "keywords": ["single-cell RNA-seq", "neuroinflammation", "biomarkers"],
+    "citationCount": 420
+  },
+  {
+    "doi": "10.1038/s41592-019-0654-x",
+    "title": "Scanpy: large-scale single-cell gene expression data analysis",
+    "authors": ["Wolf", "Angerer", "Theis"],
+    "year": 2018,
+    "venue": "Nature Methods",
+    "keywords": ["Scanpy", "single-cell RNA-seq", "Python"],
+    "citationCount": 7100
+  },
+  {
+    "doi": "10.1101/2025.01.08.123456",
+    "title": "Reproducible transfer learning for biomedical discovery",
+    "authors": ["Nguyen", "Weber"],
+    "year": 2025,
+    "venue": "bioRxiv",
+    "keywords": ["transfer learning", "reproducibility", "biomedicine"],
+    "citationCount": 36
+  },
+  {
+    "doi": "10.1126/science.abd1234",
+    "title": "Graph models for scientific representation learning",
+    "authors": ["Miller", "Sato"],
+    "year": 2024,
+    "venue": "Science",
+    "keywords": ["graph model", "representation learning", "recommendations"],
+    "citationCount": 128
+  },
+  {
+    "doi": "10.7554/elife.12345",
+    "title": "Reporting standards for computational biology workflows",
+    "authors": ["Garcia", "Ahmed"],
+    "year": 2023,
+    "venue": "eLife",
+    "keywords": ["workflow", "data availability", "ethics", "confidence intervals"],
+    "citationCount": 214
+  }
+]

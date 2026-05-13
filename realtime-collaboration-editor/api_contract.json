@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "issue": 12,
+  "title": "Real-time collaborative editor and interface",
+  "endpoints": [
+    {"method":"POST","path":"/api/realtime-collaboration-editor/create","description":"Create primary resource"},
+    {"method":"GET","path":"/api/realtime-collaboration-editor/{id}","description":"Fetch primary resource"},
+    {"method":"POST","path":"/api/realtime-collaboration-editor/validate","description":"Validate workflow payload"}
+  ]
+}

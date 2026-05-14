@@ -1,0 +1,11 @@
+{
+  "name": "privacy-access-review",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/access-review.js && node --check src/sample-data.js && node --check src/server.js && node --check test/access-review.test.js",
+    "test": "node --test",
+    "start": "node src/server.js"
+  }
+}

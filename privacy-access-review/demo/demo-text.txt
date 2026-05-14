@@ -1,0 +1,13 @@
+SCIBASE Privacy Access Review
+
+Issue #11: User & Project Management
+
+1. Linked identities: email, ORCID, GitHub, SAML, anonymous reviewer mode
+2. Access decisions: roles plus object-level policy and MFA posture
+3. Invitations: external domain, expiry, scope, and download-risk checks
+4. Audit evidence: immutable hashes and access-review campaign findings
+
+Local verification:
+npm run check
+npm test
+curl /api/dashboard /api/access /api/invitation /api/audit

@@ -1,0 +1,15 @@
+{
+  "name": "scibase-revenue-operations-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic revenue infrastructure demo for subscriptions, compute billing, licensing, and institutional invoices.",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "api": "node src/api.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

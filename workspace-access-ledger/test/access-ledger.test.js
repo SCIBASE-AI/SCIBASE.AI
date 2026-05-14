@@ -1,0 +1,191 @@
+"use strict";
+
+const assert = require("assert");
+const sample = require("../data/sample-workspace.json");
+const {
+  appendAuditEvent,
+  buildAccessDashboard,
+  buildCollaboratorOnboardingPlan,
+  buildIdentitySecurityReview,
+  buildProjectLifecycleReport,
+  buildResearcherProfile,
+  buildUnifiedIdentity,
+  buildWorkspaceAccessPacket,
+  createInvitation,
+  evaluateAccess,
+} = require("../src/access-ledger");
+
+function testUnifiedIdentity() {
+  const identity = buildUnifiedIdentity(sample.workspace.users[0]);
+
+  assert.strictEqual(identity.hasOrcid, true);
+  assert.strictEqual(identity.hasInstitutionalSaml, true);
+  assert.strictEqual(identity.mfaEnabled, true);
+}
+
+function testResearcherProfile() {
+  const profile = buildResearcherProfile(
+    sample.workspace.users[0],
+    sample.activityByUser["u-owner"],
+  );
+
+  assert.strictEqual(profile.publicProfile, true);
+  assert.ok(profile.metrics.reputation > 0);
+  assert.strictEqual(profile.syncedFromOrcid, true);
+}
+
+function testAccessDecisions() {
+  const allowed = evaluateAccess(sample.workspace, sample.accessRequests[0]);
+  const denied = evaluateAccess(sample.workspace, sample.accessRequests[1]);
+  const publicRead = evaluateAccess(sample.workspace, sample.accessRequests[2]);
+  const unknownPolicy = evaluateAccess(sample.workspace, {
+    userId: "u-owner",
+    projectId: "project-private",
+    objectType: "unregistered-object",
+    action: "write",
+  });
+  const institutionalWrite = evaluateAccess(
+    {
+      ...sample.workspace,
+      projects: [
+        {
+          id: "institutional-project",
+          visibility: "institutional-only",
+          institutionId: "northstar",
+          members: [],
+          policy: {},
+          objectRules: [],
+        },
+      ],
+    },
+    {
+      userId: "u-owner",
+      projectId: "institutional-project",
+      objectType: "manuscript",
+      action: "write",
+    },
+  );
+
+  assert.strictEqual(allowed.allowed, true);
+  assert.strictEqual(allowed.reason, "object-rule-allow");
+  assert.strictEqual(denied.allowed, false);
+  assert.strictEqual(publicRead.allowed, true);
+  assert.strictEqual(publicRead.reason, "visibility-policy");
+  assert.strictEqual(unknownPolicy.allowed, false);
+  assert.strictEqual(institutionalWrite.allowed, false);
+}
+
+function testInvitationAndAudit() {
+  const invited = createInvitation(sample.workspace, {
+    email: "new@example.edu",
+    projectId: "project-private",
+    role: "viewer",
+    invitedBy: "u-owner",
+    readOnly: true,
+  });
+  const audited = appendAuditEvent(invited, {
+    actorId: "u-owner",
+    projectId: "project-private",
+    action: "invitation.created",
+    target: "new@example.edu",
+  });
+
+  assert.strictEqual(invited.invitations.length, 3);
+  assert.strictEqual(audited.auditLog.length, 4);
+  assert.ok(audited.auditLog[3].eventHash);
+}
+
+function testIdentitySecurityReview() {
+  const ready = buildIdentitySecurityReview(sample.workspace);
+  const risky = buildIdentitySecurityReview({
+    ...sample.workspace,
+    projects: [
+      ...sample.workspace.projects,
+      {
+        id: "risky-project",
+        visibility: "private",
+        members: [
+          { userId: "u-anon", role: "contributor" },
+          { userId: "u-reviewer", role: "admin" },
+        ],
+      },
+    ],
+    users: sample.workspace.users.map((user) =>
+      user.id === "u-reviewer" ? { ...user, mfaEnabled: false } : user,
+    ),
+  });
+
+  assert.strictEqual(ready.status, "ready");
+  assert.strictEqual(risky.status, "needs-action");
+  assert.ok(risky.findings.some((finding) => finding.type === "anonymous-write-access"));
+  assert.ok(risky.findings.some((finding) => finding.type === "privileged-user-without-mfa"));
+}
+
+function testProjectLifecycleReport() {
+  const lifecycle = buildProjectLifecycleReport(sample.workspace);
+  const privateProject = lifecycle.projects.find((project) => project.projectId === "project-private");
+  const publicProject = lifecycle.projects.find((project) => project.projectId === "project-public");
+  const expiredInvite = lifecycle.invitationReview.find((invitation) => invitation.invitationId === "invite-2");
+
+  assert.strictEqual(lifecycle.activeProjects, 1);
+  assert.strictEqual(lifecycle.archivedProjects, 1);
+  assert.strictEqual(privateProject.lifecycleState, "active");
+  assert.deepStrictEqual(privateProject.missingComponents, []);
+  assert.strictEqual(publicProject.lifecycleState, "archived");
+  assert.strictEqual(publicProject.archive.approved, true);
+  assert.strictEqual(publicProject.archive.retentionUntil, "2027-05-08T00:00:00.000Z");
+  assert.strictEqual(expiredInvite.status, "expired");
+  assert.ok(lifecycle.lifecycleHash.length >= 12);
+}
+
+function testCollaboratorOnboardingPlan() {
+  const onboarding = buildCollaboratorOnboardingPlan(sample.workspace);
+  const pendingContributor = onboarding.plans.find((plan) => plan.invitationId === "invite-1");
+  const expiredViewer = onboarding.plans.find((plan) => plan.invitationId === "invite-2");
+
+  assert.strictEqual(onboarding.readyCount, 0);
+  assert.strictEqual(onboarding.blockedCount, 2);
+  assert.deepStrictEqual(pendingContributor.requiredProviders, ["email", "orcid"]);
+  assert.strictEqual(pendingContributor.mfaRequired, true);
+  assert.ok(pendingContributor.blockers.includes("missing-identity-provider"));
+  assert.ok(pendingContributor.blockers.includes("mfa-required"));
+  assert.ok(pendingContributor.acceptanceRoute.includes("/invitations/invite-1/accept"));
+  assert.ok(expiredViewer.blockers.includes("invitation-expired"));
+  assert.ok(onboarding.onboardingHash.length >= 12);
+}
+
+function testDashboard() {
+  const dashboard = buildAccessDashboard(sample.workspace, sample.activityByUser);
+
+  assert.strictEqual(dashboard.identitySummary.users, 3);
+  assert.strictEqual(dashboard.identitySummary.orcidLinked, 2);
+  assert.strictEqual(dashboard.identitySecurity.status, "ready");
+  assert.strictEqual(dashboard.pendingInvitations.length, 1);
+  assert.strictEqual(dashboard.lifecycle.activeProjects, 1);
+  assert.strictEqual(dashboard.onboarding.blockedCount, 2);
+  assert.ok(dashboard.dashboardHash.length >= 12);
+}
+
+function testFullPacket() {
+  const packet = buildWorkspaceAccessPacket(
+    sample.workspace,
+    sample.activityByUser,
+    sample.accessRequests,
+  );
+
+  assert.strictEqual(packet.allowedCount, 2);
+  assert.strictEqual(packet.deniedCount, 1);
+  assert.strictEqual(packet.decisions.length, 3);
+}
+
+testUnifiedIdentity();
+testResearcherProfile();
+testAccessDecisions();
+testInvitationAndAudit();
+testIdentitySecurityReview();
+testProjectLifecycleReport();
+testCollaboratorOnboardingPlan();
+testDashboard();
+testFullPacket();
+
+console.log("workspace-access-ledger tests passed");

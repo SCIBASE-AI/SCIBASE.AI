@@ -1,0 +1,44 @@
+Artifact run governance demo
+
+1. Start the local API:
+   PORT=4369 npm start
+
+2. Inspect storage manifest:
+   curl -fsS http://localhost:4369/api/manifest
+
+   Expected reviewer signal:
+   - artifacts are classified by kind
+   - large objects are flagged
+   - hashes, access levels, sensitivity, licenses, and previews are visible
+
+3. Inspect access gates and version diffs:
+   curl -fsS http://localhost:4369/api/access-gates
+   curl -fsS http://localhost:4369/api/version-diffs
+
+   Expected reviewer signal:
+   - raw human-derived zip is quarantined
+   - model artifact warns about missing model card
+   - dataset diff shows added synergy_score and high impact
+
+4. Inspect execution readiness:
+   curl -fsS http://localhost:4369/api/environment
+   curl -fsS http://localhost:4369/api/compute-triggers
+
+   Expected reviewer signal:
+   - environment needs dependency pinning
+   - reproduce trigger needs review
+   - weekly rerun is blocked because it requires quarantined raw data
+
+5. Inspect export and retention decisions:
+   curl -fsS http://localhost:4369/api/exports
+   curl -fsS http://localhost:4369/api/retention
+
+   Expected reviewer signal:
+   - public ZIP excludes quarantined/restricted artifacts
+   - raw data receives controlled long-term retention
+
+6. Inspect full packet:
+   curl -fsS http://localhost:4369/api/governance-packet
+
+   Expected reviewer signal:
+   - packet combines manifest, gates, diffs, environment, compute, export, retention, and audit hash

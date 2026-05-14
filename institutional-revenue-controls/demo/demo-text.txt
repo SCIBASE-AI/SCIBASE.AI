@@ -1,0 +1,26 @@
+Institutional Revenue Controls Demo
+
+1. Start the local API:
+   PORT=4363 npm start
+
+2. Validate the finance data:
+   curl -fsS http://localhost:4363/api/validate
+
+3. Inspect account controls:
+   curl -fsS http://localhost:4363/api/dashboard
+
+4. Reconcile the draft invoice:
+   curl -fsS 'http://localhost:4363/api/invoice?id=inv-2026-05-draft'
+
+5. Inspect approval routing:
+   curl -fsS 'http://localhost:4363/api/approval-route?id=inv-2026-05-draft'
+
+6. Export audit evidence:
+   curl -fsS http://localhost:4363/api/audit-export
+
+Expected review highlights:
+- The account is valid and configured as an institutional enterprise customer.
+- Usage events are priced deterministically.
+- The draft invoice matches usage lines but is held because one grant budget crosses its hard limit.
+- Approval routing shows pending finance approval.
+- Audit export includes deterministic evidence hashes for finance review.

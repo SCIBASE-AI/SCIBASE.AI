@@ -1,0 +1,11 @@
+{
+  "name": "artifact-run-governance",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/sample-data.js && node --check src/artifact-governance.js && node --check src/server.js && node --check test/artifact-governance.test.js",
+    "test": "node --test",
+    "start": "node src/server.js"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "scibase-scientific-knowledge-graph-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic scientific knowledge graph demo for entity extraction, linked data, graph search, JSON-LD, and recommendations.",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "api": "node src/api.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

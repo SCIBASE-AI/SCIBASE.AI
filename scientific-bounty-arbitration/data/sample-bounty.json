@@ -1,0 +1,168 @@
+{
+  "challenge": {
+    "id": "challenge-climate-forecast",
+    "title": "Regional flood-risk forecasting model",
+    "sponsorId": "sponsor-climate-lab",
+    "problemDescription": "Develop a reproducible model that forecasts regional flood-risk windows using public rainfall and river-gauge data.",
+    "scientificContext": "Climate nonprofits need faster ways to compare model outputs and award teams that produce reproducible forecasts.",
+    "deliverables": [
+      { "id": "model", "title": "Working forecasting model", "required": true },
+      { "id": "dataset", "title": "Cleaned public dataset", "required": true },
+      { "id": "whitepaper", "title": "Methodology whitepaper", "required": true },
+      { "id": "demo", "title": "Short model walkthrough", "required": false }
+    ],
+    "rubric": [
+      { "id": "accuracy", "label": "Forecast accuracy", "weight": 40, "deliverableId": "model" },
+      { "id": "reproducibility", "label": "Reproducibility", "weight": 30, "deliverableId": "dataset" },
+      { "id": "clarity", "label": "Scientific clarity", "weight": 20, "deliverableId": "whitepaper" },
+      { "id": "impact", "label": "Sponsor impact", "weight": 10 }
+    ],
+    "timeline": {
+      "opensAt": "2026-05-01",
+      "prototypeDueAt": "2026-06-01",
+      "finalDueAt": "2026-07-01"
+    },
+    "prize": {
+      "amount": 1000,
+      "currency": "USD",
+      "escrow": {
+        "provider": "algora",
+        "status": "funded",
+        "amount": 1100,
+        "reference": "algora-claim-P5uXJ4HFySs31nVh"
+      },
+      "recognitions": [
+        {
+          "label": "honorable mention",
+          "payeeId": "student-climate-team",
+          "payeeType": "institution",
+          "amount": 100,
+          "reason": "Best open data documentation"
+        }
+      ],
+      "milestones": [
+        { "label": "prototype accepted", "percent": 30 },
+        { "label": "final award", "percent": 70 }
+      ]
+    },
+    "ipPolicy": {
+      "defaultOwner": "solver",
+      "transferOnPayout": true,
+      "licenseBeforePayout": "evaluation-only"
+    },
+    "participation": {
+      "visibility": "public",
+      "anonymousAllowed": true,
+      "ndaRequired": false
+    },
+    "feedbackPolicy": {
+      "responseDueAt": "2026-07-05T17:00:00Z"
+    }
+  },
+  "submission": {
+    "id": "submission-riverwatch",
+    "teamId": "team-riverwatch",
+    "teamMembers": ["researcher-1", "researcher-2"],
+    "anonymous": false,
+    "teamSplits": [
+      { "payeeId": "researcher-1", "percent": 0.6 },
+      { "payeeId": "researcher-2", "percent": 0.4 }
+    ],
+    "milestoneEvidence": [
+      {
+        "label": "prototype accepted",
+        "status": "accepted",
+        "acceptedAt": "2026-06-03T12:00:00Z",
+        "artifactIds": ["artifact-model", "artifact-data"]
+      },
+      {
+        "label": "final award",
+        "status": "accepted",
+        "acceptedAt": "2026-07-02T12:00:00Z",
+        "artifactIds": ["artifact-model", "artifact-data", "artifact-whitepaper"]
+      }
+    ],
+    "feedbackResponses": [
+      {
+        "reviewId": "review-a-final",
+        "status": "accepted",
+        "respondedAt": "2026-07-03T10:15:00Z",
+        "notes": "Added final calibration appendix and linked model cards."
+      },
+      {
+        "reviewId": "review-b-final",
+        "status": "accepted",
+        "respondedAt": "2026-07-03T11:05:00Z",
+        "notes": "Published data dictionary errata and rerun logs."
+      }
+    ],
+    "workspace": {
+      "id": "workspace-submission-riverwatch",
+      "visibility": "private",
+      "accessControl": {
+        "allowedTeamIds": ["team-riverwatch"],
+        "allowedReviewerIds": ["reviewer-a", "reviewer-b"]
+      },
+      "versionControl": {
+        "enabled": true,
+        "provider": "git",
+        "ref": "riverwatch/final-submission@7f4c9b2"
+      }
+    },
+    "artifacts": [
+      { "id": "artifact-model", "deliverableId": "model", "uri": "ipfs://model", "version": "1.0.0" },
+      { "id": "artifact-data", "deliverableId": "dataset", "uri": "ipfs://dataset", "version": "1.0.0" },
+      { "id": "artifact-whitepaper", "deliverableId": "whitepaper", "uri": "ipfs://whitepaper", "version": "1.0.0" }
+    ],
+    "auditTrail": [
+      { "action": "workspace-created", "actor": "researcher-1" },
+      { "action": "artifact-submitted", "actor": "researcher-2" }
+    ]
+  },
+  "reviewers": [
+    {
+      "id": "reviewer-a",
+      "name": "Independent hydrology reviewer",
+      "affiliations": ["university-water-center"],
+      "collaborators": []
+    },
+    {
+      "id": "reviewer-b",
+      "name": "Open data reviewer",
+      "affiliations": ["open-data-lab"],
+      "collaborators": []
+    },
+    {
+      "id": "reviewer-c",
+      "name": "Conflicted sponsor reviewer",
+      "affiliations": ["sponsor-climate-lab"],
+      "collaborators": []
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-a-final",
+      "reviewerId": "reviewer-a",
+      "scores": { "accuracy": 86, "reproducibility": 90, "clarity": 82, "impact": 88 },
+      "recommendation": "award",
+      "comments": "Strong reproducibility package; request final calibration appendix before release.",
+      "requestedChanges": ["attach-calibration-appendix"]
+    },
+    {
+      "id": "review-b-final",
+      "reviewerId": "reviewer-b",
+      "scores": { "accuracy": 84, "reproducibility": 92, "clarity": 85, "impact": 91 },
+      "recommendation": "award",
+      "comments": "Open data quality is high after the final rerun evidence.",
+      "requestedChanges": []
+    },
+    {
+      "id": "review-c-final",
+      "reviewerId": "reviewer-c",
+      "scores": { "accuracy": 100, "reproducibility": 100, "clarity": 100, "impact": 100 },
+      "recommendation": "award",
+      "comments": "Conflicted sponsor score excluded from arbitration.",
+      "requestedChanges": []
+    }
+  ]
+}

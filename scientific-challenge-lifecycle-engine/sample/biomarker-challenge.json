@@ -1,0 +1,114 @@
+{
+  "challenge": {
+    "id": "challenge-biomarker-001",
+    "title": "Identify reproducible biomarkers from single-cell RNA-seq data",
+    "vertical": "biotech",
+    "scientificContext": "A sponsor needs a transparent pipeline for ranking disease-state biomarkers from a public single-cell dataset.",
+    "visibility": "private",
+    "qualification": "prequalified",
+    "ndaRequired": true,
+    "sponsor": {
+      "name": "Helix Research Fund",
+      "affiliations": ["helix-fund"]
+    },
+    "deliverables": [
+      { "id": "d1", "type": "dataset", "phase": "prototype", "description": "Curated input dataset and data dictionary" },
+      { "id": "d2", "type": "model", "phase": "final", "description": "Ranking model with deterministic seed and metrics" },
+      { "id": "d3", "type": "validation-report", "phase": "final", "description": "Independent validation and failure modes" },
+      { "id": "d4", "type": "whitepaper", "phase": "final", "description": "Sponsor-ready scientific write-up" }
+    ],
+    "evaluationCriteria": [
+      { "id": "reproducibility", "name": "Reproducibility", "weight": 35 },
+      { "id": "scientific_value", "name": "Scientific value", "weight": 30 },
+      { "id": "deliverable_quality", "name": "Deliverable quality", "weight": 25 },
+      { "id": "timeline_fit", "name": "Timeline fit", "weight": 10 }
+    ],
+    "acceptanceThreshold": 82,
+    "timeline": {
+      "proposalDue": "2026-06-01",
+      "prototypeDue": "2026-06-15",
+      "finalDue": "2026-07-01"
+    },
+    "prize": {
+      "amount": 100000,
+      "currency": "USD",
+      "escrowed": true,
+      "payoutSchedule": [
+        { "milestone": "prototype", "percent": 25 },
+        { "milestone": "final", "percent": 75 }
+      ]
+    },
+    "ipPolicy": {
+      "mode": "sponsored-transfer",
+      "targetLicense": "sponsor-exclusive-after-payout"
+    }
+  },
+  "submission": {
+    "id": "submission-lab-42",
+    "createdAt": "2026-06-20T12:00:00.000Z",
+    "anonymous": false,
+    "defaultLicense": "solver-retained-until-paid",
+    "sponsorAffiliations": ["helix-fund"],
+    "team": [
+      {
+        "userId": "solver-1",
+        "name": "Dr. Mina Park",
+        "affiliations": ["open-bio-lab"],
+        "role": "principal investigator"
+      },
+      {
+        "userId": "solver-2",
+        "name": "Ari Chen",
+        "affiliations": ["open-bio-lab"],
+        "role": "machine learning lead"
+      }
+    ],
+    "artifacts": [
+      { "id": "artifact-dataset", "type": "dataset", "filename": "curated-cells.parquet", "rows": 120000 },
+      { "id": "artifact-model", "type": "model", "filename": "ranker.ipynb", "seed": 4242 },
+      { "id": "artifact-validation", "type": "validation-report", "filename": "validation.md", "cohort": "external" },
+      { "id": "artifact-whitepaper", "type": "whitepaper", "filename": "biomarker-whitepaper.pdf", "pages": 18 }
+    ],
+    "reproducibility": {
+      "checks": [
+        { "id": "container-build", "status": "passed", "evidence": "sha256:container-plan" },
+        { "id": "notebook-rerun", "status": "passed", "evidence": "all cells deterministic" },
+        { "id": "metric-regression", "status": "passed", "evidence": "AUROC within tolerance" }
+      ]
+    }
+  },
+  "reviewers": [
+    {
+      "userId": "reviewer-1",
+      "affiliations": ["university-review-board"],
+      "collaboratorIds": []
+    },
+    {
+      "userId": "reviewer-2",
+      "affiliations": ["independent-statistics-lab"],
+      "collaboratorIds": []
+    }
+  ],
+  "reviews": [
+    {
+      "reviewerId": "reviewer-1",
+      "weight": 1,
+      "scores": {
+        "reproducibility": 94,
+        "scientific_value": 88,
+        "deliverable_quality": 90,
+        "timeline_fit": 85
+      }
+    },
+    {
+      "reviewerId": "reviewer-2",
+      "weight": 1,
+      "scores": {
+        "reproducibility": 91,
+        "scientific_value": 92,
+        "deliverable_quality": 87,
+        "timeline_fit": 86
+      }
+    }
+  ]
+}

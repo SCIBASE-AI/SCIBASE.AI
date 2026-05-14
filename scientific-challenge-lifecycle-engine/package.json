@@ -1,0 +1,12 @@
+{
+  "name": "scientific-challenge-lifecycle-engine",
+  "version": "0.1.0",
+  "description": "Dependency-free lifecycle engine for scientific bounty challenges, submissions, arbitration, payouts, and IP handoff readiness.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "npm test && npm run demo",
+    "demo": "node src/cli.js",
+    "test": "node --test test/*.test.js"
+  }
+}

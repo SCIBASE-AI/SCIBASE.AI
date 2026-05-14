@@ -1,0 +1,15 @@
+{
+  "name": "research-quality-copilot",
+  "version": "1.0.0",
+  "description": "Deterministic AI-assisted research tools MVP for SCIBASE.AI.",
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/research-tools.js && node --check src/sample-data.js && node --check src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test test/research-tools.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

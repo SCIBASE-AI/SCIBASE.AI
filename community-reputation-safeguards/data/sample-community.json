@@ -1,0 +1,191 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Dr. Lina Ortiz",
+      "domain": "public-health",
+      "region": "North America",
+      "institution": "Metro Research Lab"
+    },
+    {
+      "id": "u2",
+      "name": "Kenji Sato",
+      "domain": "public-health",
+      "region": "Asia-Pacific",
+      "institution": "Open Methods Institute"
+    },
+    {
+      "id": "u3",
+      "name": "Mira Shah",
+      "domain": "climate",
+      "region": "Europe",
+      "institution": "Civic Climate Lab"
+    },
+    {
+      "id": "u4",
+      "name": "Noah Reed",
+      "domain": "public-health",
+      "region": "North America",
+      "institution": "Metro Research Lab"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "projectId": "p1",
+      "reviewerId": "u1",
+      "mode": "public",
+      "scores": {
+        "clarity": 5,
+        "rigor": 5,
+        "novelty": 4,
+        "reproducibility": 5
+      },
+      "summary": "Strong replication package with clear methods, complete evidence links, and a reproducibility runbook that can be followed by an external reviewer.",
+      "createdAt": "2026-05-14T08:00:00Z",
+      "conflictOfInterest": false
+    },
+    {
+      "id": "r2",
+      "projectId": "p2",
+      "reviewerId": "u2",
+      "mode": "anonymous",
+      "scores": {
+        "clarity": 4,
+        "rigor": 4,
+        "novelty": 3,
+        "reproducibility": 4
+      },
+      "summary": "The dataset is useful but should include stronger missingness notes and a clearer data dictionary before public release.",
+      "createdAt": "2026-05-14T08:30:00Z",
+      "conflictOfInterest": false
+    },
+    {
+      "id": "r3",
+      "projectId": "p2",
+      "reviewerId": "u4",
+      "mode": "double-blind",
+      "scores": {
+        "clarity": 2,
+        "rigor": 2,
+        "novelty": 2,
+        "reproducibility": 1
+      },
+      "summary": "Looks fine.",
+      "createdAt": "2026-05-14T09:00:00Z",
+      "conflictOfInterest": true
+    }
+  ],
+  "comments": [
+    {
+      "id": "c1",
+      "reviewId": "r1",
+      "projectId": "p1",
+      "authorId": "u1",
+      "artifactType": "notebook",
+      "artifactId": "analysis-01",
+      "path": "notebooks/analysis.ipynb",
+      "lineRange": "cell 4",
+      "body": "Add the exact package-lock checksum near this reproduction command.",
+      "createdAt": "2026-05-14T08:05:00Z"
+    },
+    {
+      "id": "c2",
+      "reviewId": "r2",
+      "projectId": "p2",
+      "authorId": "u2",
+      "artifactType": "dataset",
+      "artifactId": "heat-survey",
+      "path": "data/heat-survey.csv",
+      "lineRange": "columns 8-12",
+      "body": "These survey fields need missingness definitions before downstream reuse.",
+      "createdAt": "2026-05-14T08:35:00Z"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "g1",
+      "userId": "u1",
+      "projectId": "p1",
+      "artifactId": "analysis-01",
+      "artifactType": "notebook",
+      "roles": ["conceptualization", "formal-analysis", "software", "validation", "writing-review-editing"],
+      "createdAt": "2026-05-13T16:00:00Z"
+    },
+    {
+      "id": "g2",
+      "userId": "u2",
+      "projectId": "p2",
+      "artifactId": "heat-survey",
+      "artifactType": "dataset",
+      "roles": ["data-curation", "methodology", "validation"],
+      "createdAt": "2026-05-13T17:00:00Z"
+    },
+    {
+      "id": "g3",
+      "userId": "u3",
+      "projectId": "p1",
+      "artifactId": "visual-heat-map",
+      "artifactType": "figure",
+      "roles": ["visualization", "software"],
+      "createdAt": "2026-05-13T18:00:00Z"
+    }
+  ],
+  "endorsements": [
+    {
+      "fromUserId": "u2",
+      "toUserId": "u1",
+      "weight": 3
+    },
+    {
+      "fromUserId": "u3",
+      "toUserId": "u1",
+      "weight": 2
+    },
+    {
+      "fromUserId": "u1",
+      "toUserId": "u2",
+      "weight": 2
+    },
+    {
+      "fromUserId": "u2",
+      "toUserId": "u1",
+      "weight": 1
+    },
+    {
+      "fromUserId": "u4",
+      "toUserId": "u4",
+      "weight": 5
+    }
+  ],
+  "metrics": {
+    "u1": {
+      "citations": 72,
+      "forks": 14,
+      "reproducibilityBadges": 2,
+      "bountyCompletions": 3,
+      "challengeWins": 1
+    },
+    "u2": {
+      "citations": 21,
+      "forks": 5,
+      "reproducibilityBadges": 1,
+      "bountyCompletions": 1,
+      "challengeWins": 0
+    },
+    "u3": {
+      "citations": 18,
+      "forks": 8,
+      "reproducibilityBadges": 0,
+      "bountyCompletions": 0,
+      "challengeWins": 1
+    },
+    "u4": {
+      "citations": 7,
+      "forks": 1,
+      "reproducibilityBadges": 0,
+      "bountyCompletions": 0,
+      "challengeWins": 0
+    }
+  }
+}

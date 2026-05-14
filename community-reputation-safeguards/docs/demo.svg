@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Community Reputation Safeguards demo</title>
+  <desc id="desc">A static demo frame showing top contributor, badge, privacy redaction, and abuse signals.</desc>
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="58" y="56" width="1164" height="608" rx="18" fill="#f9fafb"/>
+  <text x="96" y="126" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#111827">SCIBASE Community Reputation Safeguards</text>
+  <text x="96" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#4b5563">Privacy-aware reviews, CRediT attribution, reputation scoring, badges, and leaderboards</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="96" y="232" width="330" height="168" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="126" y="287" font-size="22" fill="#1d4ed8">Top contributor</text>
+    <text x="126" y="342" font-size="32" font-weight="700" fill="#111827">Dr. Lina Ortiz</text>
+    <rect x="466" y="232" width="330" height="168" rx="12" fill="#ecfdf5" stroke="#86efac"/>
+    <text x="496" y="287" font-size="22" fill="#047857">Top badge</text>
+    <text x="496" y="342" font-size="30" font-weight="700" fill="#111827">Open Science Champion</text>
+    <rect x="836" y="232" width="288" height="168" rx="12" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="866" y="287" font-size="22" fill="#c2410c">Abuse signals</text>
+    <text x="866" y="342" font-size="54" font-weight="700" fill="#b91c1c">4</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#111827">
+    <text x="96" y="478" font-weight="700">Safeguard checks</text>
+    <text x="96" y="528">Anonymous review comments keep dataset anchors while hiding reviewer identity.</text>
+    <text x="96" y="574">Self-endorsement, reciprocal loops, conflicts, and shallow reviews are penalized.</text>
+    <text x="96" y="620">Leaderboards segment global trust by domain, region, and institution.</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+AI research tool audit trail demo
+
+1. Start the local API:
+   PORT=4368 npm start
+
+2. Inspect manuscript intake:
+   curl -fsS http://localhost:4368/api/intake
+
+   Expected reviewer signal:
+   - section profiles include keyword and evidence hashes
+   - claims and citation counts are visible
+
+3. Inspect summary modes:
+   curl -fsS 'http://localhost:4368/api/summary?mode=abstract'
+   curl -fsS 'http://localhost:4368/api/summary?mode=executive'
+   curl -fsS 'http://localhost:4368/api/summary?mode=layperson'
+
+   Expected reviewer signal:
+   - each mode returns different audience framing
+   - each summary includes evidence spans and a summary hash
+
+4. Inspect peer review diagnostics:
+   curl -fsS http://localhost:4368/api/claims
+   curl -fsS http://localhost:4368/api/peer-review
+
+   Expected reviewer signal:
+   - missing citation topics are linked to claims
+   - p-value without confidence interval is flagged
+   - missing consent statement is flagged
+
+5. Inspect citation tool and guardrails:
+   curl -fsS 'http://localhost:4368/api/citations?style=Nature'
+   curl -fsS http://localhost:4368/api/guardrail
+
+   Expected reviewer signal:
+   - citation recommendations include scores, formatted references, and insertion plans
+   - guardrail lists blocked outputs and required disclosures
+
+6. Inspect the full audit packet:
+   curl -fsS http://localhost:4368/api/audit-packet
+
+   Expected reviewer signal:
+   - packet combines intake, summaries, peer review, citations, guardrails, and audit hash

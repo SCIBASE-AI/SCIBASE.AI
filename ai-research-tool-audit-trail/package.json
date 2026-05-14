@@ -1,0 +1,11 @@
+{
+  "name": "ai-research-tool-audit-trail",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/sample-data.js && node --check src/research-tool-audit.js && node --check src/server.js && node --check test/research-tool-audit.test.js",
+    "test": "node --test",
+    "start": "node src/server.js"
+  }
+}

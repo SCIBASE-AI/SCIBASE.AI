@@ -1,0 +1,13 @@
+SCIBASE Enterprise Export Pipeline
+
+Issue #19: Enterprise Tooling
+
+1. Targets: repository, preprint, indexed repository, journal, funder portals
+2. Zenodo package: FAIR metadata, code, data, DOI, checksums
+3. NIH evidence: mandates, open access, audit review, retention policy
+4. Journal webhook: signed event plus retry and dead-letter policy
+
+Local verification:
+npm run check
+npm test
+curl /api/targets /api/export /api/compliance /api/webhook

@@ -1,0 +1,25 @@
+Bounty Intake Compliance Gate Demo
+
+1. Start the local API:
+   PORT=4364 npm start
+
+2. Inspect the dashboard:
+   curl -fsS http://localhost:4364/api/dashboard
+
+3. Validate a publish-ready biotech challenge:
+   curl -fsS 'http://localhost:4364/api/validate?id=challenge-biomarker-rna'
+
+4. Inspect a held public climate challenge:
+   curl -fsS 'http://localhost:4364/api/publish-decision?id=challenge-climate-forecast'
+
+5. Score a qualified participant application:
+   curl -fsS 'http://localhost:4364/api/prequalification?challenge=challenge-biomarker-rna&application=app-immune-lab'
+
+6. Export sponsor audit evidence:
+   curl -fsS 'http://localhost:4364/api/audit-packet?id=challenge-biomarker-rna'
+
+Expected review highlights:
+- The biomarker challenge is publish-ready: verified sponsor, funded escrow, complete rubric, NDA, prequalification, and IP protections.
+- The climate challenge is held because it has missing scientific context, an incomplete rubric total, and unfunded escrow.
+- One participant team qualifies and one is blocked until ORCID, institution, conflict disclosure, and NDA are complete.
+- Audit packets include deterministic evidence hashes for sponsor review.

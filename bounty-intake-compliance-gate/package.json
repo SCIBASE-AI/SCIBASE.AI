@@ -1,0 +1,11 @@
+{
+  "name": "bounty-intake-compliance-gate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/sample-data.js && node --check src/intake-gate.js && node --check src/server.js && node --check test/intake-gate.test.js",
+    "test": "node --test",
+    "start": "node src/server.js"
+  }
+}

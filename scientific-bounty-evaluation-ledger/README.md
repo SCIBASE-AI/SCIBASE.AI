@@ -20,6 +20,10 @@ npm test
 npm run demo
 ```
 
+## Demo
+
+![Scientific bounty evaluation ledger demo](./docs/demo.gif)
+
 ## Example
 
 ```js

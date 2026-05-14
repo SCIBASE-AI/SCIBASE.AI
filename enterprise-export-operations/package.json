@@ -1,0 +1,15 @@
+{
+  "name": "scibase-enterprise-export-operations",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Credential-free enterprise export operations demo for admin analytics, compliance manifests, webhooks, and publication pipeline packaging.",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "api": "node src/api.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

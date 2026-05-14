@@ -19,6 +19,10 @@ npm test
 npm run demo
 ```
 
+## Demo
+
+![Evidence-grounded research tools demo](./docs/demo.gif)
+
 ## API Example
 
 ```js

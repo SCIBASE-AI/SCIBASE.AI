@@ -1,0 +1,50 @@
+{
+  "repository": {
+    "id": "project-atlas-001",
+    "title": "Open Cell Atlas Reproducibility Project",
+    "version": "0.9.0",
+    "lfsThreshold": 1000,
+    "authors": [
+      { "name": "Mina Park", "orcid": "0000-0002-0000-0001" },
+      { "name": "Ari Chen", "orcid": "0000-0002-0000-0002" }
+    ],
+    "components": {
+      "manuscript": [{ "path": "manuscript/main.md", "mediaType": "text/markdown", "size": 22000 }],
+      "data": [{ "path": "data/cells.csv", "mediaType": "text/csv", "size": 1500 }],
+      "code": [{ "path": "code/analyze.py", "mediaType": "text/x-python", "size": 8400 }],
+      "notebooks": [{ "path": "notebooks/reproduce.ipynb", "mediaType": "application/x-ipynb+json", "size": 54000 }],
+      "results": [{ "path": "results/figure-1.svg", "mediaType": "image/svg+xml", "size": 7000 }],
+      "protocols": [{ "path": "protocols/sample-prep.md", "mediaType": "text/markdown", "size": 5200 }],
+      "metadata": [{ "path": "metadata.json", "mediaType": "application/json", "size": 2800 }]
+    }
+  },
+  "changeSet": {
+    "author": "Mina Park",
+    "branch": "release/v1",
+    "message": "Prepare v1 reproducibility release",
+    "contributorRole": "maintainer",
+    "files": [
+      { "path": "manuscript/main.md", "action": "modified", "summary": "Added dataset reuse note" },
+      { "path": "metadata.json", "action": "modified", "summary": "Added DataCite DOI metadata" }
+    ]
+  },
+  "releaseOptions": {
+    "version": "v1.0.0",
+    "doi": "10.5555/scibase.atlas.001",
+    "year": 2026,
+    "reproducibilityRun": {
+      "environment": { "dockerfile": "Dockerfile" },
+      "inputs": ["data/cells.csv"],
+      "outputs": ["results/figure-1.svg"],
+      "sandbox": "isolated"
+    }
+  },
+  "datasetBefore": [
+    { "id": "cell-1", "gene": "CXCL8", "score": 0.2 },
+    { "id": "cell-2", "gene": "STAT1", "score": 0.7 }
+  ],
+  "datasetAfter": [
+    { "id": "cell-1", "gene": "CXCL8", "score": 0.3 },
+    { "id": "cell-3", "gene": "ISG15", "score": 0.9 }
+  ]
+}

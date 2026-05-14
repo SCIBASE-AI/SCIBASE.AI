@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific repository release engine demo</title>
+  <desc id="desc">Flow from project components to commit, dataset diff, reproducibility gate, release tag, citation, and export bundle.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0b1020; }
+      .card { fill: #111827; stroke: #38bdf8; stroke-width: 2; rx: 14; }
+      .ok { fill: #10281b; stroke: #22c55e; stroke-width: 2; rx: 14; }
+      .title { fill: #f8fafc; font-family: Arial, sans-serif; font-size: 24px; font-weight: 700; }
+      .text { fill: #e5e7eb; font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; }
+      .small { fill: #cbd5e1; font-family: Arial, sans-serif; font-size: 14px; }
+      .arrow { stroke: #fbbf24; stroke-width: 5; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1080" height="520"/>
+  <text class="title" x="46" y="58">Scientific Repository Release Engine</text>
+  <text class="small" x="46" y="86">Component manifests, commits, dataset diffs, reproducibility gates, DOI citations, and export bundles.</text>
+
+  <rect class="card" x="48" y="130" width="190" height="130"/>
+  <text class="text" x="70" y="166">Manifest</text>
+  <text class="small" x="70" y="196">7 required sections</text>
+  <text class="small" x="70" y="218">Hashes + LFS flags</text>
+  <text class="small" x="70" y="240">Missing blockers</text>
+  <path class="arrow" d="M248 195 C286 195 296 195 334 195"/>
+
+  <rect class="card" x="346" y="130" width="190" height="130"/>
+  <text class="text" x="368" y="166">Commit + Diff</text>
+  <text class="small" x="368" y="196">Parent hash</text>
+  <text class="small" x="368" y="218">Changed files</text>
+  <text class="small" x="368" y="240">Dataset row diff</text>
+  <path class="arrow" d="M546 195 C584 195 594 195 632 195"/>
+
+  <rect class="card" x="644" y="130" width="190" height="130"/>
+  <text class="text" x="666" y="166">Repro Gate</text>
+  <text class="small" x="666" y="196">Environment</text>
+  <text class="small" x="666" y="218">Inputs / outputs</text>
+  <text class="small" x="666" y="240">Sandbox policy</text>
+  <path class="arrow" d="M740 270 C740 305 740 315 740 350"/>
+
+  <rect class="ok" x="606" y="362" width="268" height="105"/>
+  <text class="text" x="630" y="398">Release Ready</text>
+  <text class="small" x="630" y="424">Tag v1.0.0 + DOI citation</text>
+  <text class="small" x="630" y="446">Export bundle + REST routes</text>
+
+  <rect class="card" x="48" y="332" width="380" height="135"/>
+  <text class="text" x="70" y="368">Reviewer Commands</text>
+  <text class="small" x="70" y="398">npm test</text>
+  <text class="small" x="70" y="422">npm run demo</text>
+  <text class="small" x="70" y="446">Outputs release readiness, dataset diff, citation, audit hash</text>
+
+  <rect x="872" y="130" width="160" height="337" rx="14" fill="#0b1220" stroke="#475569" stroke-width="2"/>
+  <text class="text" x="896" y="170">Demo Result</text>
+  <text class="small" x="896" y="206">ready: true</text>
+  <text class="small" x="896" y="232">bundle: zip</text>
+  <text class="small" x="896" y="258">added: cell-3</text>
+  <text class="small" x="896" y="284">removed: cell-2</text>
+  <text class="small" x="896" y="310">changed: cell-1</text>
+</svg>

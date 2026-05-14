@@ -1,0 +1,45 @@
+Knowledge graph link audit demo
+
+1. Start the local API:
+   PORT=4367 npm start
+
+2. Inspect normalized graph nodes:
+   curl -fsS http://localhost:4367/api/entities
+
+   Expected reviewer signal:
+   - concepts, datasets, authors, tools, and protocols have canonical keys
+   - DOI-backed datasets use https://doi.org IDs
+   - nodes include schema.org types
+
+3. Inspect entity merges and relationship audits:
+   curl -fsS http://localhost:4367/api/merges
+   curl -fsS http://localhost:4367/api/relationships
+
+   Expected reviewer signal:
+   - duplicate CRISPR-Cas9 nodes are suggested for merge
+   - stale or weak relationships list required repair actions
+
+4. Inspect DOI/reference freshness:
+   curl -fsS http://localhost:4367/api/references
+
+   Expected reviewer signal:
+   - superseded DOI references include the replacement DOI
+
+5. Inspect graph query and recommendation explanations:
+   curl -fsS 'http://localhost:4367/api/query-explanation?id=query-crispr-scrna'
+   curl -fsS http://localhost:4367/api/recommendations
+
+   Expected reviewer signal:
+   - query terms are normalized before matching
+   - trusted relationships are filtered by evidence score
+   - recommendations include why-signals
+
+6. Inspect remediation and export packets:
+   curl -fsS http://localhost:4367/api/remediation-queue
+   curl -fsS http://localhost:4367/api/jsonld
+   curl -fsS http://localhost:4367/api/audit-packet
+
+   Expected reviewer signal:
+   - remediation queue combines entity merges, relationship repairs, and reference refreshes
+   - JSON-LD export is schema.org compatible
+   - audit packet includes a deterministic audit hash

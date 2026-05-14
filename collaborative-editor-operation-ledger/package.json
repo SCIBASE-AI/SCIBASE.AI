@@ -1,0 +1,15 @@
+{
+  "name": "scibase-collaborative-editor-operation-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic collaborative research editor demo for scientific blocks, operation replay, presence, locks, comments, tasks, and versions.",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "api": "node src/api.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@scibase/community-reputation-system",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "demo": "node ./src/demo.js",
+    "serve": "node ./src/server.js",
+    "test": "node --test"
+  }
+}

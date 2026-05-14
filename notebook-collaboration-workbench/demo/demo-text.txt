@@ -1,0 +1,23 @@
+Notebook Collaboration Workbench Demo
+
+1. Start the local API:
+   PORT=4362 npm start
+
+2. Validate the notebook state:
+   curl -fsS http://localhost:4362/api/validate
+
+3. Inspect execution queue decisions:
+   curl -fsS http://localhost:4362/api/executions
+
+4. Inspect the reviewer dashboard:
+   curl -fsS http://localhost:4362/api/dashboard
+
+5. Export the notebook submission package:
+   curl -fsS http://localhost:4362/api/package
+
+Expected review highlights:
+- Two executable notebook cells are present.
+- Kernel leases and source hashes are checked before execution.
+- One blocker annotation prevents milestone readiness.
+- One review task remains open.
+- The package export contains deterministic cell, kernel, and output evidence.

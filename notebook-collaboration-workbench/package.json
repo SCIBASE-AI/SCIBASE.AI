@@ -1,0 +1,11 @@
+{
+  "name": "notebook-collaboration-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/sample-data.js && node --check src/workbench.js && node --check src/server.js && node --check test/workbench.test.js",
+    "test": "node --test",
+    "start": "node src/server.js"
+  }
+}

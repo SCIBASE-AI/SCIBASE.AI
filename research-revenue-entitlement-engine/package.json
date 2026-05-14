@@ -1,0 +1,12 @@
+{
+  "name": "research-revenue-entitlement-engine",
+  "version": "0.1.0",
+  "description": "Dependency-free revenue entitlement engine for subscriptions, AI compute metering, top-ups, institutional invoices, and anonymized licensing exports.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "npm test && npm run demo",
+    "demo": "node src/cli.js",
+    "test": "node --test test/*.test.js"
+  }
+}

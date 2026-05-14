@@ -1,0 +1,110 @@
+{
+  "id": "proj-microbiome-2026",
+  "title": "Longitudinal microbiome shifts after coastal flooding",
+  "domain": "environmental health",
+  "interests": ["microbiome", "coastal flooding", "public health", "replication"],
+  "manuscript": {
+    "abstract": "We study microbiome shifts after coastal flooding using repeated household samples. The analysis suggests water intrusion changes bacterial diversity and may affect respiratory outcomes.",
+    "methods": "Households were sampled monthly. DNA sequencing was performed and results were normalized by read depth. The current manuscript clearly shows that flooding changes all exposed communities in a way that is obviously relevant to public health but the text still needs more direct evidence links.",
+    "results": "Observed diversity increased in exposed homes and returned toward baseline after remediation. The estimated effect size was larger in homes with persistent moisture.",
+    "limitations": "The pilot cohort is small and future work should replicate findings across more regions."
+  },
+  "claims": [
+    {
+      "id": "claim-1",
+      "text": "Flood exposure increases microbial diversity in sampled homes."
+    },
+    {
+      "id": "claim-2",
+      "text": "Hospital admissions declined after a regional policy intervention."
+    }
+  ],
+  "results": [
+    {
+      "id": "result-1",
+      "summary": "Microbial diversity increased in exposed homes after flooding and moved toward baseline after remediation."
+    },
+    {
+      "id": "result-2",
+      "summary": "Persistent moisture was associated with a larger estimated effect size."
+    }
+  ],
+  "files": [
+    { "name": "README.md" },
+    { "name": "analysis.ipynb" },
+    { "name": "data_dictionary.md" },
+    { "name": "samples.csv" },
+    { "name": "requirements.txt" }
+  ],
+  "dependencies": [
+    { "name": "python", "version": "3.12.3" },
+    { "name": "pandas", "version": "2.2.2" },
+    { "name": "scipy", "version": "1.13.0" }
+  ],
+  "sandboxPolicy": {
+    "image": "python:3.12-slim",
+    "network": "disabled",
+    "cpu": "2",
+    "memory": "4g",
+    "timeoutSeconds": 1800
+  },
+  "executionEvidence": [
+    {
+      "targetId": "run-13846284",
+      "exitCode": 0,
+      "durationSeconds": 142,
+      "outputHashes": ["sha256:diversity-summary-2026", "sha256:moisture-effect-2026"],
+      "logUrl": "https://example.org/reproducibility/proj-microbiome-2026/logs/analysis-ipynb",
+      "generatedArtifacts": ["diversity-summary.csv", "moisture-effect.json"],
+      "reportedArtifacts": ["diversity-summary.csv", "moisture-effect.json"]
+    }
+  ],
+  "workflowPreferences": {
+    "reviewOwner": "Dr. Chen",
+    "reproducibilityOwner": "Replication Desk",
+    "strategyOwner": "Research Strategy",
+    "publicationOwner": "Corresponding Author",
+    "deadline": "2026-05-28"
+  },
+  "reproducibilityAttempts": [
+    {
+      "id": "attempt-2026-04-dry-run",
+      "date": "2026-04-18",
+      "status": "successful",
+      "url": "https://example.org/reproducibility/proj-microbiome-2026/attempt-2026-04-dry-run",
+      "artifactFingerprint": "d584da823d10eaa1",
+      "notes": "Clean-room rerun reproduced reported diversity trends and stored execution logs."
+    },
+    {
+      "id": "attempt-2026-03-pilot",
+      "date": "2026-03-12",
+      "status": "partial",
+      "url": "https://example.org/reproducibility/proj-microbiome-2026/attempt-2026-03-pilot",
+      "artifactFingerprint": "legacy-artifacts",
+      "notes": "Earlier attempt predated dependency pinning and did not include all source data."
+    }
+  ],
+  "corpus": [
+    {
+      "id": "paper-1",
+      "title": "Microbial exposure after hurricane flooding",
+      "abstract": "A pilot study of household microbial exposure after hurricane flooding. Limitations include small sample size and unresolved replication across regions.",
+      "keywords": ["microbiome", "flooding", "indoor exposure"],
+      "replications": 0
+    },
+    {
+      "id": "paper-2",
+      "title": "Respiratory health after household remediation",
+      "abstract": "Remediation studies report mixed respiratory health outcomes and call for future work that links environmental sampling to clinical endpoints.",
+      "keywords": ["respiratory", "remediation", "public health"],
+      "replications": 1
+    },
+    {
+      "id": "paper-3",
+      "title": "Open protocols for environmental sequencing",
+      "abstract": "Protocol standardization improves reproducibility in environmental sequencing projects.",
+      "keywords": ["sequencing", "reproducibility", "protocol"],
+      "replications": 4
+    }
+  ]
+}

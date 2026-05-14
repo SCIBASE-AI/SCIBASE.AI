@@ -1,0 +1,15 @@
+{
+  "name": "scibase-research-assistant-orchestrator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic AI research assistant suite demo for peer-review packets, reproducibility runbooks, and research-gap feeds.",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "api": "node src/api.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

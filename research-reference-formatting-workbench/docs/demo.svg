@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Research reference formatting workbench demo</title>
+  <desc id="desc">A compact reviewer demo showing citation intake, cross-reference validation, and export readiness.</desc>
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="70" y="60" width="1140" height="600" rx="24" fill="#f8fafc"/>
+  <text x="110" y="125" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">Research Reference Formatting Workbench</text>
+  <text x="110" y="170" font-family="Arial, sans-serif" font-size="22" fill="#475569">SCIBASE issue #12 focused slice: citations, cross-references, and publication-ready export checks</text>
+
+  <rect x="110" y="225" width="300" height="300" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="140" y="275" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#075985">1. Import</text>
+  <text x="140" y="325" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">BibTeX records</text>
+  <text x="140" y="360" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Dataset references</text>
+  <text x="140" y="395" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">DOI normalization</text>
+  <text x="140" y="455" font-family="Arial, sans-serif" font-size="20" fill="#0369a1">4 cited references</text>
+
+  <rect x="490" y="225" width="300" height="300" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+  <text x="520" y="275" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#065f46">2. Validate</text>
+  <text x="520" y="325" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Figure markers</text>
+  <text x="520" y="360" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Table markers</text>
+  <text x="520" y="395" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Equation markers</text>
+  <text x="520" y="455" font-family="Arial, sans-serif" font-size="20" fill="#047857">3 resolved links</text>
+
+  <rect x="870" y="225" width="300" height="300" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="900" y="275" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#92400e">3. Export</text>
+  <text x="900" y="325" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Nature bibliography</text>
+  <text x="900" y="360" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Readiness blockers</text>
+  <text x="900" y="395" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Snapshot digest</text>
+  <text x="900" y="455" font-family="Arial, sans-serif" font-size="20" fill="#b45309">Ready for export</text>
+
+  <path d="M420 375 H470" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <path d="M800 375 H850" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <path d="M460 360 L480 375 L460 390" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M840 360 L860 375 L840 390" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="110" y="565" width="1060" height="50" rx="12" fill="#111827"/>
+  <text x="135" y="598" font-family="Menlo, Consolas, monospace" font-size="20" fill="#e5e7eb">npm run check &amp;&amp; npm test &amp;&amp; npm run demo -> ready=true, blockers=0</text>
+</svg>

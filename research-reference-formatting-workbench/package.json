@@ -1,0 +1,18 @@
+{
+  "name": "research-reference-formatting-workbench",
+  "version": "1.0.0",
+  "description": "Dependency-free manuscript citation, cross-reference, and publication-style formatting workbench for SCIBASE issue 12.",
+  "main": "src/reference-workbench.js",
+  "scripts": {
+    "check": "node --check src/reference-workbench.js && node --check scripts/demo.js && node --check test/reference-workbench.test.js",
+    "demo": "node scripts/demo.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "scientific-editor",
+    "bibtex",
+    "citations",
+    "cross-references"
+  ],
+  "license": "MIT"
+}

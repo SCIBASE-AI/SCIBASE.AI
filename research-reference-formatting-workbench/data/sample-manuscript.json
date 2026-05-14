@@ -1,0 +1,53 @@
+{
+  "title": "Reproducible Cytokine Drift Detection in Shared Lab Notebooks",
+  "style": "nature",
+  "template": "scientific-short-report",
+  "abstract": "We combine notebook-derived feature checks with versioned cytokine observations to reduce irreproducible conclusions [@ortiz2025; @park2024].",
+  "bibtex": "@article{ortiz2025,\n  title = {Notebook Provenance for Reproducible Immunology},\n  author = {Ortiz, Lina and Chen, Mara},\n  year = {2025},\n  journal = {Journal of Open Immunology},\n  doi = {10.5555/open-immunology.2025.17}\n}\n\n@article{park2024,\n  title = {Versioned Cytokine Panels in Longitudinal Studies},\n  author = {Min Park and Diego Alvarez},\n  year = {2024},\n  journal = {Computational Lab Methods},\n  doi = {https://doi.org/10.4444/clm.2024.88}\n}\n\n@software{scibase2026,\n  title = {SCIBASE Research Notebook Runtime},\n  author = {SCIBASE Platform Team},\n  year = {2026},\n  journal = {SCIBASE Tool Registry},\n  url = {https://example.org/scibase-runtime}\n}",
+  "references": [
+    {
+      "key": "dataset-immune-7",
+      "type": "dataset",
+      "title": "Immune Cohort 7 Cytokine Panel",
+      "authors": [
+        {
+          "given": "Priya",
+          "family": "Nair"
+        }
+      ],
+      "year": "2025",
+      "journal": "SCIBASE Data Commons",
+      "doi": "10.7777/scibase.dataset.7"
+    }
+  ],
+  "sections": [
+    {
+      "id": "methods",
+      "heading": "Methods",
+      "body": "The editor keeps Markdown, inline LaTeX $y = mx + b$, and code snippets in one manuscript. The data preparation cell cites the dataset [@dataset-immune-7] and runtime \\cite{scibase2026}. See {{fig:pipeline}} and {{eq:drift-score}} for the pipeline contract."
+    },
+    {
+      "id": "results",
+      "heading": "Results",
+      "body": "The reference manager resolves duplicate inline citations without renumbering later sections [@ortiz2025]. The tabular output is summarized in {{tbl:quality-gates}}."
+    }
+  ],
+  "figures": [
+    {
+      "label": "fig:pipeline",
+      "title": "Notebook to citation validation pipeline"
+    }
+  ],
+  "tables": [
+    {
+      "label": "tbl:quality-gates",
+      "title": "Quality gates for manuscript readiness"
+    }
+  ],
+  "equations": [
+    {
+      "label": "eq:drift-score",
+      "title": "Cytokine drift score"
+    }
+  ]
+}

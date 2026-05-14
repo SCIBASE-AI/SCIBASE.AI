@@ -1,0 +1,162 @@
+{
+  "projectId": "urban-heat-health",
+  "title": "Urban Heat Interventions and Emergency Admission Risk",
+  "domain": "clinical-trials",
+  "manuscript": {
+    "abstract": "We evaluate cooling corridors and shaded transit stops as practical interventions for reducing heat-related emergency admissions in dense urban districts. The study compares intervention and control neighborhoods across two summer periods and reports statistically significant differences in admissions and surface temperature.",
+    "methods": "Neighborhoods were matched on age distribution, tree canopy, income, and historic admissions. Intervention areas received cooling corridors, shaded transit stops, and public hydration stations. The analysis uses difference-in-differences with a prespecified endpoint, randomized block assignment for pilot corridors, and sensitivity checks for smoke-event days.",
+    "results": "Intervention districts showed lower mean surface temperature and fewer heat-related emergency admissions during the trial period. The strongest result appears near shaded transit stops. The manuscript currently claims the intervention prevents admissions across all hot days.",
+    "limitations": "The pilot spans two summers and may not generalize to coastal districts. Sensor gaps occurred during one smoke event.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Cooling corridors reduced heat-related emergency admissions in matched neighborhoods.",
+        "evidenceIds": ["e1", "e2"],
+        "citationIds": ["ref1"],
+        "expectedEffect": "lower admissions"
+      },
+      {
+        "id": "c2",
+        "text": "Shaded transit stops prevent admissions across all hot days.",
+        "evidenceIds": [],
+        "citationIds": [],
+        "expectedEffect": "lower admissions"
+      },
+      {
+        "id": "c3",
+        "text": "Hydration stations improved symptom reporting among elderly residents.",
+        "evidenceIds": ["e3"],
+        "citationIds": ["ref2"]
+      }
+    ],
+    "citations": [
+      {
+        "id": "ref1",
+        "title": "Heat Mitigation and Hospital Admissions in Urban Corridors",
+        "year": 2024,
+        "tags": ["heat", "public-health"]
+      },
+      {
+        "id": "ref2",
+        "title": "Elderly Heat Symptom Surveillance",
+        "year": 2023,
+        "tags": ["surveillance", "elderly"]
+      }
+    ],
+    "statistics": [
+      {
+        "name": "difference-in-differences admission reduction",
+        "pValue": 0.03,
+        "effectSize": -0.12,
+        "sampleSize": 84,
+        "claimIds": ["c1"]
+      },
+      {
+        "name": "hydration station symptom report change",
+        "pValue": 0.09,
+        "effectSize": 0.05,
+        "sampleSize": 28,
+        "claimIds": ["c3"]
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "id": "e1",
+      "type": "dataset",
+      "status": "verified",
+      "linkedClaims": ["c1"],
+      "description": "De-identified emergency admissions by district and day."
+    },
+    {
+      "id": "e2",
+      "type": "notebook",
+      "status": "verified",
+      "linkedClaims": ["c1"],
+      "description": "Difference-in-differences notebook with matched districts."
+    },
+    {
+      "id": "e3",
+      "type": "survey",
+      "status": "needs-review",
+      "linkedClaims": ["c3"],
+      "description": "Symptom reporting survey from hydration stations."
+    }
+  ],
+  "reproducibility": {
+    "commands": [
+      "npm test",
+      "node analysis/run-did.js --input data/admissions.csv"
+    ],
+    "datasets": [
+      {
+        "id": "admissions",
+        "raw": true,
+        "license": "restricted-deidentified",
+        "checksum": "sha256:admissions-v4"
+      },
+      {
+        "id": "weather",
+        "raw": true,
+        "license": "open",
+        "checksum": "sha256:weather-v2"
+      }
+    ],
+    "environment": {
+      "lockfile": "package-lock.json",
+      "container": ""
+    },
+    "randomSeeds": [42, 31415],
+    "reportedOutputs": [
+      {
+        "id": "table-2",
+        "command": "node analysis/run-did.js --input data/admissions.csv",
+        "checksum": "sha256:table-2-v3",
+        "deterministic": true
+      }
+    ],
+    "previousAttempts": [
+      {
+        "id": "attempt-2026-05-01",
+        "status": "failed",
+        "reason": "missing weather join"
+      }
+    ]
+  },
+  "corpus": [
+    {
+      "id": "paper-a",
+      "title": "Replication Gaps in Heat-Health Intervention Studies",
+      "topics": ["heat", "public-health", "replication"],
+      "citations": 420,
+      "replications": 1,
+      "limitations": ["few randomized corridor trials"],
+      "negativeResults": ["hydration reminders had mixed effect"],
+      "openQuestions": ["Which interventions work during smoke events?"]
+    },
+    {
+      "id": "paper-b",
+      "title": "Transit Shade and Elderly Heat Symptoms",
+      "topics": ["transit", "elderly", "heat"],
+      "citations": 190,
+      "replications": 0,
+      "limitations": ["small sensor coverage"],
+      "negativeResults": [],
+      "openQuestions": ["Do shaded stops reduce admissions or only symptoms?"]
+    },
+    {
+      "id": "paper-c",
+      "title": "Urban Tree Canopy Remote Sensing Baselines",
+      "topics": ["remote-sensing", "tree-canopy"],
+      "citations": 80,
+      "replications": 3,
+      "limitations": [],
+      "negativeResults": [],
+      "openQuestions": []
+    }
+  ],
+  "researcherProfile": {
+    "interests": ["heat", "public-health", "elderly"],
+    "labCapabilities": ["transit", "difference-in-differences", "remote-sensing"]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "research-quality-gate",
+  "version": "1.0.0",
+  "description": "Deterministic AI research assistant quality gate for peer-review, reproducibility, and research-gap readiness.",
+  "main": "src/quality-gate.js",
+  "scripts": {
+    "check": "node --check src/quality-gate.js && node --check scripts/demo.js && node --check test/quality-gate.test.js",
+    "demo": "node scripts/demo.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "research",
+    "peer-review",
+    "reproducibility",
+    "quality-gate"
+  ],
+  "license": "MIT"
+}

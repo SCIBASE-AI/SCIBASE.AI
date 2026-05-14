@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Research Quality Gate demo</title>
+  <desc id="desc">A static demo frame showing quality gate metrics, top action, and research gap output.</desc>
+  <rect width="1280" height="720" fill="#101820"/>
+  <rect x="56" y="54" width="1168" height="612" rx="18" fill="#f8fbff"/>
+  <text x="96" y="125" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#101820">SCIBASE Research Quality Gate</text>
+  <text x="96" y="174" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#35536b">Pre-submission assistant pass for peer review, reproducibility, and research gaps</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="96" y="230" width="290" height="160" rx="12" fill="#edf6ff" stroke="#9cc7f2"/>
+    <text x="126" y="285" font-size="22" fill="#315f88">Decision</text>
+    <text x="126" y="345" font-size="48" font-weight="700" fill="#b91c1c">hold</text>
+    <rect x="420" y="230" width="290" height="160" rx="12" fill="#f1fff3" stroke="#9dd9a3"/>
+    <text x="450" y="285" font-size="22" fill="#2f6b39">Readiness Score</text>
+    <text x="450" y="345" font-size="48" font-weight="700" fill="#15803d">67</text>
+    <rect x="744" y="230" width="380" height="160" rx="12" fill="#fff6ed" stroke="#f5bd82"/>
+    <text x="774" y="285" font-size="22" fill="#9a4d11">Top Action</text>
+    <text x="774" y="330" font-size="27" font-weight="700" fill="#101820">Add evidence for claim c2</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#101820">
+    <text x="96" y="462" font-weight="700">Reviewer calibration card</text>
+    <text x="96" y="510">Expected finding: Claim c2 has no direct evidence artifact.</text>
+    <text x="96" y="555">Coaching note: Qualify broad language and attach evidence before release.</text>
+    <text x="96" y="620">Top research gap: heat-health studies have high citations and limited replication.</text>
+  </g>
+</svg>

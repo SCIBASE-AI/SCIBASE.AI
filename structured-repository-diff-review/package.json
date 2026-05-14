@@ -1,0 +1,11 @@
+{
+  "name": "structured-repository-diff-review",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/sample-data.js && node --check src/diff-review.js && node --check src/server.js && node --check test/diff-review.test.js",
+    "test": "node --test",
+    "start": "node src/server.js"
+  }
+}

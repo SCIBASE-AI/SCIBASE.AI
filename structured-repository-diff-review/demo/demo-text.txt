@@ -1,0 +1,37 @@
+Structured repository diff review demo
+
+1. Start the local API:
+   PORT=4365 npm start
+
+2. Inspect the repository component manifest:
+   curl -fsS http://localhost:4365/api/manifest
+
+   Expected reviewer signal:
+   - manuscript, data, code, notebooks, results, protocols, and metadata are present
+   - every component has before/after hashes
+   - the binary result figure is flagged as a large object candidate
+
+3. Inspect the structured diff:
+   curl -fsS http://localhost:4365/api/diff
+
+   Expected reviewer signal:
+   - CSV diff shows synergy_score added, one row added, one row removed, and changed cells
+   - JSON metadata diff shows citation-sensitive author, tag, schema, and schema.org changes
+   - notebook diff shows a new synergy cell plus code and output changes
+
+4. Inspect the review packet:
+   curl -fsS http://localhost:4365/api/review
+
+   Expected reviewer signal:
+   - decision is needs-reproducibility-review
+   - required actions include schema approval, notebook rerun, and citation refresh
+   - reproducibility plan warns that the target version has not been rerun
+   - audit hash ties the evidence together
+
+5. Inspect rollback and export evidence:
+   curl -fsS http://localhost:4365/api/rollback
+   curl -fsS http://localhost:4365/api/export
+
+   Expected reviewer signal:
+   - rollback actions include restore hashes and citation badge rebuild
+   - export lists REST routes, CLI commands, and bundled evidence files

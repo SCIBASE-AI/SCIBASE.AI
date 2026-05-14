@@ -1,0 +1,43 @@
+Reputation abuse and appeals guardrails demo
+
+1. Start the local API:
+   PORT=4366 npm start
+
+2. Inspect suspicious activity:
+   curl -fsS http://localhost:4366/api/abuse-report
+
+   Expected reviewer signal:
+   - rapid review burst for user-lin
+   - low-quality review burst for user-lin
+   - reciprocal endorsement rings
+   - anonymous review safety findings
+
+3. Inspect transparent reputation adjustments:
+   curl -fsS http://localhost:4366/api/adjustments
+
+   Expected reviewer signal:
+   - detailed, evidence-backed reviews receive quality bonuses
+   - users tied to high-severity findings receive transparent penalties
+   - each adjustment includes reason codes
+
+4. Inspect badge quarantine:
+   curl -fsS http://localhost:4366/api/badges
+
+   Expected reviewer signal:
+   - badges can be frozen when guardrail thresholds are not met
+   - eligible badges remain visible for transparent review
+
+5. Inspect the appeal packet and moderator queue:
+   curl -fsS 'http://localhost:4366/api/appeal?id=appeal-001'
+   curl -fsS http://localhost:4366/api/moderator-queue
+
+   Expected reviewer signal:
+   - appeal links to relevant findings, adjustment, badge decision, and checklist
+   - moderator queue prioritizes high-severity findings and appeals
+
+6. Inspect public transparency output:
+   curl -fsS http://localhost:4366/api/transparency
+
+   Expected reviewer signal:
+   - public summary includes reviewed users, reviews, endorsements, findings, frozen badges, and open appeals
+   - transparency hash ties the report together

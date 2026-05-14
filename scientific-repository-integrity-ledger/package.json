@@ -1,0 +1,15 @@
+{
+  "name": "scibase-scientific-repository-integrity-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic scientific repository/version-control demo for manifests, hashes, commits, forks, merge reviews, reproducibility checks, and citation exports.",
+  "scripts": {
+    "demo": "node src/demo.js",
+    "api": "node src/api.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -31,7 +31,7 @@ Expected demo shape:
   "challenge": "challenge-biomarker-001",
   "submission": "submission-lab-42",
   "status": "award_ready",
-  "finalScore": 90.25,
+  "finalScore": 90.05,
   "payoutReady": true
 }
 ```
@@ -57,6 +57,7 @@ Expected demo shape:
 - `sample/biomarker-challenge.json` - full challenge, submission, reviewers, and review scores.
 - `test/challenge-lifecycle.test.js` - regression tests for validation, packaging, conflicts, scoring, payout readiness, and IP states.
 - `docs/demo.svg` - lightweight visual walkthrough for PR review.
+- `docs/demo.mp4` - short generated video walkthrough for maintainers who prefer an inline demo artifact.
 
 ## Notes
 

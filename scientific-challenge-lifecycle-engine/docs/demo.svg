@@ -47,7 +47,7 @@
 
   <rect class="panel2" x="660" y="398" width="304" height="112"/>
   <circle class="ok" cx="690" cy="434" r="9"/>
-  <text x="712" y="441" class="small">Award ready: score 90.25</text>
+  <text x="712" y="441" class="small">Award ready: score 90.05</text>
   <circle class="ok" cx="690" cy="466" r="9"/>
   <text x="712" y="473" class="small">Payout: 25% prototype, 75% final</text>
   <circle class="ok" cx="690" cy="498" r="9"/>

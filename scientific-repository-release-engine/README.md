@@ -57,6 +57,7 @@ Expected demo shape:
 - `sample/repository-fixture.json` - sample project, changeset, release, and dataset diff fixtures.
 - `test/repository-release.test.js` - regression tests for manifests, commits, diffs, gates, releases, and exports.
 - `docs/demo.svg` - visual walkthrough for PR review.
+- `docs/demo.mp4` - short generated video walkthrough for maintainers who prefer an inline demo artifact.
 
 ## Notes
 

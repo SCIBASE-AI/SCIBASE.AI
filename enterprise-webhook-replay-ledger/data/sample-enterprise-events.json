@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "enterprise-webhook-ledger.v1",
+  "organization": {
+    "id": "northbridge-university",
+    "name": "Northbridge University Research Office",
+    "timezone": "UTC",
+    "dashboardWindowHours": 24
+  },
+  "destinations": [
+    {
+      "id": "dspace-archive",
+      "name": "DSpace institutional repository",
+      "type": "institutional_repository",
+      "endpoint": "https://repo.example.edu/webhooks/scibase",
+      "signingKeyId": "northbridge-dspace-2026-05",
+      "maxAttempts": 4,
+      "retryBackoffMinutes": [5, 30, 120],
+      "replayRequiresApproval": false,
+      "retentionDays": 30,
+      "acceptedEventTypes": ["project.published", "dataset.exported", "doi.registered"]
+    },
+    {
+      "id": "canvas-lms",
+      "name": "Canvas LMS research course sync",
+      "type": "learning_management_system",
+      "endpoint": "https://canvas.example.edu/scibase/events",
+      "signingKeyId": "northbridge-canvas-2026-05",
+      "maxAttempts": 3,
+      "retryBackoffMinutes": [10, 60],
+      "replayRequiresApproval": true,
+      "retentionDays": 14,
+      "acceptedEventTypes": ["project.created", "review.completed", "publication.submitted"]
+    },
+    {
+      "id": "labnote-eln",
+      "name": "LabNote ELN enrichment",
+      "type": "electronic_lab_notebook",
+      "endpoint": "https://eln.example.edu/integrations/scibase",
+      "signingKeyId": "northbridge-eln-2026-05",
+      "maxAttempts": 5,
+      "retryBackoffMinutes": [5, 20, 60, 240],
+      "replayRequiresApproval": false,
+      "retentionDays": 45,
+      "acceptedEventTypes": ["reproducibility.score.updated", "dataset.exported"]
+    },
+    {
+      "id": "grant-portal",
+      "name": "Funder mandate reporting portal",
+      "type": "funder_portal",
+      "endpoint": "https://funder.example.gov/reporting/scibase",
+      "signingKeyId": "northbridge-grant-2026-05",
+      "maxAttempts": 2,
+      "retryBackoffMinutes": [30],
+      "replayRequiresApproval": true,
+      "retentionDays": 60,
+      "acceptedEventTypes": ["compliance.mandate.failed", "compliance.mandate.passed"]
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-project-published-001",
+      "type": "project.published",
+      "occurredAt": "2026-05-15T08:05:00Z",
+      "projectId": "proj-neuro-organoid-atlas",
+      "actorId": "orcid:0000-0002-1825-0097",
+      "payload": {
+        "repositoryVersion": "preprint-v2.2",
+        "doi": "10.5555/scibase.neuro-organoid-atlas.v2",
+        "visibility": "public"
+      },
+      "deliveries": [
+        {
+          "destinationId": "dspace-archive",
+          "attempts": [
+            {
+              "attemptedAt": "2026-05-15T08:05:30Z",
+              "statusCode": 202,
+              "durationMs": 184,
+              "responseDigest": "sha256:dspace-accepted-001"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evt-review-completed-017",
+      "type": "review.completed",
+      "occurredAt": "2026-05-15T08:12:00Z",
+      "projectId": "proj-organic-sensor-array",
+      "actorId": "reviewer:pseudonym-r42",
+      "payload": {
+        "reviewTemplate": "engineering-design-check",
+        "decision": "changes_requested",
+        "visibility": "course-private"
+      },
+      "deliveries": [
+        {
+          "destinationId": "canvas-lms",
+          "attempts": [
+            {
+              "attemptedAt": "2026-05-15T08:12:30Z",
+              "statusCode": 503,
+              "durationMs": 408,
+              "responseDigest": "sha256:canvas-503-a"
+            },
+            {
+              "attemptedAt": "2026-05-15T08:22:40Z",
+              "statusCode": 503,
+              "durationMs": 390,
+              "responseDigest": "sha256:canvas-503-b"
+            },
+            {
+              "attemptedAt": "2026-05-15T09:23:20Z",
+              "statusCode": 503,
+              "durationMs": 412,
+              "responseDigest": "sha256:canvas-503-c"
+            }
+          ],
+          "approvedForReplayBy": "enterprise-admin:northbridge-research-office",
+          "approvedForReplayAt": "2026-05-15T09:40:00Z"
+        }
+      ]
+    },
+    {
+      "id": "evt-dataset-exported-022",
+      "type": "dataset.exported",
+      "occurredAt": "2026-05-15T09:00:00Z",
+      "projectId": "proj-neuro-organoid-atlas",
+      "actorId": "orcid:0000-0002-1825-0097",
+      "payload": {
+        "exportTarget": "Zenodo",
+        "datasetHash": "sha256:dataset-archive-v4",
+        "license": "CC-BY-4.0"
+      },
+      "deliveries": [
+        {
+          "destinationId": "labnote-eln",
+          "attempts": [
+            {
+              "attemptedAt": "2026-05-15T09:00:20Z",
+              "statusCode": 429,
+              "durationMs": 122,
+              "responseDigest": "sha256:eln-rate-limit"
+            },
+            {
+              "attemptedAt": "2026-05-15T09:05:50Z",
+              "statusCode": 200,
+              "durationMs": 240,
+              "responseDigest": "sha256:eln-delivered"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evt-compliance-failed-006",
+      "type": "compliance.mandate.failed",
+      "occurredAt": "2026-05-15T09:30:00Z",
+      "projectId": "proj-climate-sensor-network",
+      "actorId": "system:compliance-engine",
+      "payload": {
+        "funder": "Horizon EU",
+        "mandate": "open-data-within-30-days",
+        "missingEvidence": ["data-availability-statement", "repository-link"]
+      },
+      "deliveries": [
+        {
+          "destinationId": "grant-portal",
+          "attempts": [
+            {
+              "attemptedAt": "2026-05-15T09:30:20Z",
+              "statusCode": 401,
+              "durationMs": 155,
+              "responseDigest": "sha256:grant-auth-expired"
+            },
+            {
+              "attemptedAt": "2026-05-15T10:01:00Z",
+              "statusCode": 401,
+              "durationMs": 142,
+              "responseDigest": "sha256:grant-auth-expired-repeat"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "evaluationTime": "2026-05-15T10:10:00Z"
+}

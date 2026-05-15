@@ -1,0 +1,12 @@
+{
+  "name": "research-gap-replication-planner",
+  "version": "0.1.0",
+  "description": "Deterministic research gap and replication-priority planner for SCIBASE issue #16.",
+  "type": "module",
+  "scripts": {
+    "demo": "node scripts/demo.js",
+    "test": "node test/planner.test.js",
+    "check": "npm test && npm run demo"
+  },
+  "license": "MIT"
+}

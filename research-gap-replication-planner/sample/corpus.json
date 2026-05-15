@@ -1,0 +1,109 @@
+{
+  "lab": {
+    "name": "Neurogenomics Replication Lab",
+    "interests": ["Alzheimer", "CRISPR", "single-cell", "metabolomics"],
+    "capabilities": ["single-cell", "RNA-seq", "CRISPR perturbation", "metabolomics"],
+    "methods": ["notebook rerun", "containerized workflow"]
+  },
+  "manuscripts": [
+    {
+      "id": "ms-neuro-042",
+      "title": "Perturbation response in single-cell Alzheimer models",
+      "domain": "molecular-biology",
+      "claims": [
+        {
+          "id": "c1",
+          "text": "CRISPR perturbation improves cell viability across all donor lines.",
+          "sampleSize": 18,
+          "pValue": 0.051,
+          "evidenceIds": [],
+          "citationIds": ["doi:10.1000/example-a"]
+        },
+        {
+          "id": "c2",
+          "text": "A subtype-specific response appears in microglia-like cells.",
+          "sampleSize": 64,
+          "pValue": 0.02,
+          "evidenceIds": ["notebook:microglia-response"],
+          "citationIds": []
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "circadian-metabolomics-2026",
+      "title": "Circadian metabolomics benchmark",
+      "dependencyIntegrity": "stale",
+      "outputConsistency": "drifted",
+      "artifacts": {
+        "rawData": true,
+        "cleanPipeline": true,
+        "environmentLock": false,
+        "testSet": false,
+        "reportedResults": true
+      }
+    },
+    {
+      "id": "microglia-rnaseq-2026",
+      "title": "Microglia RNA-seq replication packet",
+      "dependencyIntegrity": "locked",
+      "outputConsistency": "consistent",
+      "artifacts": {
+        "rawData": true,
+        "cleanPipeline": true,
+        "environmentLock": true,
+        "testSet": true,
+        "reportedResults": true
+      }
+    }
+  ],
+  "reproducibilityAttempts": [
+    {
+      "id": "run-031",
+      "projectId": "circadian-metabolomics-2026",
+      "topicId": "finding-crispr-ad",
+      "outcome": "failed",
+      "note": "Pipeline required an unavailable R package version."
+    },
+    {
+      "id": "run-044",
+      "projectId": "microglia-rnaseq-2026",
+      "topicId": "finding-crispr-ad",
+      "outcome": "passed",
+      "note": "Notebook reran with matching summary metrics."
+    }
+  ],
+  "corpusFindings": [
+    {
+      "id": "finding-crispr-ad",
+      "title": "CRISPR perturbation in Alzheimer's single-cell models",
+      "topics": ["CRISPR", "Alzheimer", "single-cell"],
+      "methods": ["RNA-seq", "CRISPR perturbation"],
+      "citations": 126,
+      "activeProjects": 4,
+      "replicationCount": 1,
+      "limitation": "Unresolved donor variability and low replication across single-cell CRISPR Alzheimer studies."
+    },
+    {
+      "id": "finding-sleep-metabolomics",
+      "title": "Sleep disruption metabolomics in aging cohorts",
+      "topics": ["sleep", "metabolomics", "aging"],
+      "methods": ["metabolomics"],
+      "citations": 38,
+      "activeProjects": 2,
+      "replicationCount": 3,
+      "limitation": "Negative results were rarely reported and methods varied across cohorts."
+    },
+    {
+      "id": "finding-protein-folding",
+      "title": "Protein folding benchmark coverage",
+      "topics": ["protein folding", "benchmark"],
+      "methods": ["simulation"],
+      "citations": 14,
+      "activeProjects": 1,
+      "replicationCount": 5,
+      "limitation": "Benchmark appears stable with several successful replications."
+    }
+  ]
+}

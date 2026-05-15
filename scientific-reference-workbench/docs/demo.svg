@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific reference workbench demo</title>
+  <desc id="desc">Dashboard-style summary of citation coverage, cross references, formatting tasks, and export readiness.</desc>
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="56" y="48" width="1168" height="624" rx="18" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="96" y="118" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Scientific Reference Workbench</text>
+  <text x="96" y="158" fill="#94a3b8" font-family="Arial, sans-serif" font-size="24">Citation, figure, table, equation, and publication-style checks</text>
+  <g transform="translate(96 218)">
+    <rect width="250" height="140" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#38bdf8" font-family="Arial, sans-serif" font-size="22" font-weight="700">Citations</text>
+    <text x="24" y="98" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">3 found</text>
+  </g>
+  <g transform="translate(380 218)">
+    <rect width="250" height="140" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#f59e0b" font-family="Arial, sans-serif" font-size="22" font-weight="700">Missing</text>
+    <text x="24" y="98" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">1 key</text>
+  </g>
+  <g transform="translate(664 218)">
+    <rect width="250" height="140" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#a78bfa" font-family="Arial, sans-serif" font-size="22" font-weight="700">Cross refs</text>
+    <text x="24" y="98" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">3 valid</text>
+  </g>
+  <g transform="translate(948 218)">
+    <rect width="236" height="140" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#34d399" font-family="Arial, sans-serif" font-size="22" font-weight="700">Sections</text>
+    <text x="24" y="98" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">passed</text>
+  </g>
+  <g transform="translate(96 430)">
+    <rect width="1088" height="168" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="28" y="48" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="26" font-weight="700">Top formatting task</text>
+    <text x="28" y="96" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">Add bibliography entry for @missing2026</text>
+    <text x="28" y="136" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">Deterministic numbering · export blocked until references are clean</text>
+  </g>
+</svg>

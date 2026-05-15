@@ -1,0 +1,18 @@
+{
+  "name": "review-calibration-bench",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free peer-review calibration and coaching signals for scientific reputation systems.",
+  "scripts": {
+    "check": "node --check src/review-calibration.js && node --check scripts/demo.js && node --check test/review-calibration.test.js",
+    "demo": "node scripts/demo.js",
+    "test": "node test/review-calibration.test.js"
+  },
+  "keywords": [
+    "peer-review",
+    "reputation",
+    "calibration",
+    "review-quality"
+  ],
+  "license": "MIT"
+}

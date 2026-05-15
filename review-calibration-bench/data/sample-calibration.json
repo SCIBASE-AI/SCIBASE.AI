@@ -1,0 +1,171 @@
+{
+  "programId": "community-review-q2-2026",
+  "asOf": "2026-05-15T00:00:00Z",
+  "rubric": {
+    "criteria": [
+      "clarity",
+      "rigor",
+      "novelty",
+      "reproducibility"
+    ],
+    "weights": {
+      "clarity": 0.2,
+      "rigor": 0.3,
+      "novelty": 0.2,
+      "reproducibility": 0.3
+    },
+    "calibrationThreshold": 0.7
+  },
+  "projects": [
+    {
+      "id": "project-organoid-benchmark",
+      "domain": "biology",
+      "consensus": {
+        "clarity": 4,
+        "rigor": 4,
+        "novelty": 3,
+        "reproducibility": 2
+      }
+    },
+    {
+      "id": "project-graph-protocol",
+      "domain": "computational-science",
+      "consensus": {
+        "clarity": 3,
+        "rigor": 5,
+        "novelty": 4,
+        "reproducibility": 4
+      }
+    },
+    {
+      "id": "project-open-dataset-release",
+      "domain": "data-science",
+      "consensus": {
+        "clarity": 5,
+        "rigor": 3,
+        "novelty": 2,
+        "reproducibility": 5
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-ada-1",
+      "reviewerId": "ada",
+      "projectId": "project-organoid-benchmark",
+      "mode": "public",
+      "scores": {
+        "clarity": 4,
+        "rigor": 4,
+        "novelty": 3,
+        "reproducibility": 3
+      },
+      "comments": [
+        "Strong protocol trace, but execution container still needs one replication note."
+      ]
+    },
+    {
+      "id": "review-ada-2",
+      "reviewerId": "ada",
+      "projectId": "project-graph-protocol",
+      "mode": "public",
+      "scores": {
+        "clarity": 3,
+        "rigor": 4,
+        "novelty": 4,
+        "reproducibility": 4
+      },
+      "comments": [
+        "Good evidence paths and adequate reproducibility metadata."
+      ]
+    },
+    {
+      "id": "review-bohr-1",
+      "reviewerId": "bohr",
+      "projectId": "project-organoid-benchmark",
+      "mode": "anonymous",
+      "scores": {
+        "clarity": 5,
+        "rigor": 5,
+        "novelty": 5,
+        "reproducibility": 5
+      },
+      "comments": [
+        "Excellent across all dimensions."
+      ]
+    },
+    {
+      "id": "review-bohr-2",
+      "reviewerId": "bohr",
+      "projectId": "project-open-dataset-release",
+      "mode": "anonymous",
+      "scores": {
+        "clarity": 5,
+        "rigor": 5,
+        "novelty": 4,
+        "reproducibility": 5
+      },
+      "comments": [
+        "Dataset appears ready for reuse."
+      ]
+    },
+    {
+      "id": "review-curie-1",
+      "reviewerId": "curie",
+      "projectId": "project-graph-protocol",
+      "mode": "double-blind",
+      "scores": {
+        "clarity": 2,
+        "rigor": 4,
+        "novelty": 3,
+        "reproducibility": 2
+      },
+      "comments": [
+        "Promising, but missing a complete notebook execution trail."
+      ]
+    },
+    {
+      "id": "review-curie-2",
+      "reviewerId": "curie",
+      "projectId": "project-open-dataset-release",
+      "mode": "double-blind",
+      "scores": {
+        "clarity": 4,
+        "rigor": 3,
+        "novelty": 2,
+        "reproducibility": 3
+      },
+      "comments": [
+        "Good data dictionary, but independent rerun evidence is incomplete."
+      ]
+    }
+  ],
+  "contributors": [
+    {
+      "reviewerId": "ada",
+      "roles": [
+        "review",
+        "validation"
+      ],
+      "completedBounties": 2,
+      "endorsements": 5
+    },
+    {
+      "reviewerId": "bohr",
+      "roles": [
+        "review"
+      ],
+      "completedBounties": 4,
+      "endorsements": 8
+    },
+    {
+      "reviewerId": "curie",
+      "roles": [
+        "review",
+        "reproducibility"
+      ],
+      "completedBounties": 1,
+      "endorsements": 3
+    }
+  ]
+}

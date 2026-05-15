@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Review calibration bench demo</title>
+  <desc id="desc">Dashboard-style summary of peer-review calibration, coaching queue, reviewer quarantine, and trusted reviewer tier.</desc>
+  <rect width="1280" height="720" fill="#101827"/>
+  <rect x="56" y="48" width="1168" height="624" rx="18" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="96" y="118" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Review Calibration Bench</text>
+  <text x="96" y="158" fill="#94a3b8" font-family="Arial, sans-serif" font-size="24">Structured peer-review quality signals before reputation credit</text>
+  <g transform="translate(96 220)">
+    <rect width="320" height="140" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#38bdf8" font-family="Arial, sans-serif" font-size="22" font-weight="700">Reviewers</text>
+    <text x="24" y="98" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">3 calibrated</text>
+  </g>
+  <g transform="translate(480 220)">
+    <rect width="320" height="140" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#f59e0b" font-family="Arial, sans-serif" font-size="22" font-weight="700">Coaching</text>
+    <text x="24" y="98" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">7 actions</text>
+  </g>
+  <g transform="translate(864 220)">
+    <rect width="320" height="140" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#ef4444" font-family="Arial, sans-serif" font-size="22" font-weight="700">Quarantine</text>
+    <text x="24" y="98" fill="#f8fafc" font-family="Arial, sans-serif" font-size="40" font-weight="700">1 reviewer</text>
+  </g>
+  <g transform="translate(96 430)">
+    <rect width="1088" height="168" rx="12" fill="#111827" stroke="#1e293b"/>
+    <text x="28" y="48" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="26" font-weight="700">Top action</text>
+    <text x="28" y="96" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">Review practice set: rigor scores are higher than consensus.</text>
+    <text x="28" y="136" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">Transparent trust adjustment · reproducibility blind spot detected</text>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "name": "research-assistant-protocol-trace",
+  "version": "1.0.0",
+  "description": "Deterministic AI research assistant protocol trace and reproducibility readiness module for SCIBASE issue 16.",
+  "main": "src/protocol-trace.js",
+  "scripts": {
+    "check": "node --check src/protocol-trace.js && node --check demo.js && node --check test.js",
+    "demo": "node demo.js",
+    "test": "node test.js"
+  },
+  "license": "MIT",
+  "private": true
+}

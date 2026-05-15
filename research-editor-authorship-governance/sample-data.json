@@ -1,0 +1,88 @@
+{
+  "now": "2026-05-15T00:00:00.000Z",
+  "manuscript": {
+    "id": "ms-cell-atlas-submission",
+    "title": "Cross-lab validation of a cell atlas workflow",
+    "targetJournal": "Journal of Reproducible Biology",
+    "currentHash": "sha256:8c7f71060072b1a5f135ad78a11a6fcd3cb4000f4028720df6b99592dc401f4c",
+    "blocks": [
+      {
+        "id": "section-methods",
+        "type": "section",
+        "lastEditedBy": ["author-mira", "contrib-dan"]
+      },
+      {
+        "id": "fig-2",
+        "type": "figure",
+        "ownerAuthorId": "author-leo",
+        "lastEditedBy": ["author-leo"]
+      },
+      {
+        "id": "table-1",
+        "type": "table",
+        "ownerAuthorId": "author-mira",
+        "lastEditedBy": ["author-mira"]
+      }
+    ]
+  },
+  "authors": [
+    {
+      "id": "author-mira",
+      "name": "Mira Chen",
+      "creditRoles": ["Conceptualization", "Methodology", "Writing - original draft"],
+      "approvals": [
+        {
+          "manuscriptHash": "sha256:8c7f71060072b1a5f135ad78a11a6fcd3cb4000f4028720df6b99592dc401f4c",
+          "status": "approved",
+          "approvedAt": "2026-05-14T10:00:00.000Z"
+        }
+      ],
+      "coiDisclosure": {
+        "status": "submitted",
+        "submittedAt": "2026-05-14T09:00:00.000Z"
+      },
+      "assetApprovals": ["table-1"]
+    },
+    {
+      "id": "author-leo",
+      "name": "Leo Alvarez",
+      "creditRoles": ["Data curation", "Formal analysis"],
+      "approvals": [
+        {
+          "manuscriptHash": "sha256:old-draft",
+          "status": "approved",
+          "approvedAt": "2026-05-01T10:00:00.000Z"
+        }
+      ],
+      "coiDisclosure": {
+        "status": "missing"
+      },
+      "assetApprovals": []
+    }
+  ],
+  "contributors": [
+    {
+      "id": "contrib-dan",
+      "name": "Dan Reviewer",
+      "acknowledgementStatus": "unresolved"
+    }
+  ],
+  "comments": [
+    {
+      "id": "comment-24",
+      "blockId": "section-methods",
+      "status": "open",
+      "blocking": true,
+      "text": "Clarify preprocessing parameter lock before submission."
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "suggestion-12",
+      "blockId": "fig-2",
+      "status": "open",
+      "requiredBeforeSubmission": true,
+      "text": "Add colorblind-safe legend labels."
+    }
+  ]
+}

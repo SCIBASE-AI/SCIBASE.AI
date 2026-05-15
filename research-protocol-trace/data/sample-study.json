@@ -1,0 +1,159 @@
+{
+  "projectId": "single-cell-neuro-crispr-2026",
+  "title": "CRISPR perturbation signatures in single-cell neurodegeneration models",
+  "domain": "computational biology",
+  "manuscript": {
+    "abstract": "We report that CRISPR perturbation of MAPT reduces inflammatory microglia markers in a single-cell neuronal co-culture model.",
+    "submittedAt": "2026-05-12T14:30:00Z"
+  },
+  "protocol": {
+    "registrationId": "OSF-SCNC-7421",
+    "registeredAt": "2026-02-01T09:00:00Z",
+    "minimumSampleSize": 120,
+    "primaryOutcomes": [
+      {
+        "id": "outcome-inflammatory-score",
+        "label": "Microglia inflammatory score",
+        "expectedDirection": "decrease"
+      },
+      {
+        "id": "outcome-cell-viability",
+        "label": "Cell viability after perturbation",
+        "expectedDirection": "no-worse"
+      }
+    ],
+    "secondaryOutcomes": [
+      {
+        "id": "outcome-pathway-enrichment",
+        "label": "Pathway enrichment for synaptic repair",
+        "expectedDirection": "increase"
+      }
+    ],
+    "plannedAnalyses": [
+      {
+        "id": "analysis-wilcoxon-inflammatory",
+        "outcomeId": "outcome-inflammatory-score",
+        "method": "paired Wilcoxon rank-sum",
+        "alpha": 0.05
+      },
+      {
+        "id": "analysis-viability-noninferiority",
+        "outcomeId": "outcome-cell-viability",
+        "method": "non-inferiority margin",
+        "alpha": 0.025
+      }
+    ]
+  },
+  "claims": [
+    {
+      "id": "claim-inflammatory-drop",
+      "text": "MAPT perturbation lowered microglia inflammatory score by 18%.",
+      "outcomeId": "outcome-inflammatory-score",
+      "analysisId": "analysis-wilcoxon-inflammatory",
+      "reportedDirection": "decrease",
+      "reportedPValue": 0.018,
+      "sampleSize": 132,
+      "evidenceArtifactIds": [
+        "dataset-count-matrix",
+        "notebook-primary-analysis",
+        "figure-inflammatory-score"
+      ],
+      "citationIds": [
+        "doi:10.1038/s41586-021-00001"
+      ]
+    },
+    {
+      "id": "claim-pathway-repair",
+      "text": "Perturbed cells showed a synaptic repair pathway signature.",
+      "outcomeId": "outcome-pathway-enrichment",
+      "analysisId": "analysis-pathway-exploratory",
+      "reportedDirection": "increase",
+      "reportedPValue": 0.047,
+      "sampleSize": 132,
+      "evidenceArtifactIds": [
+        "notebook-secondary-pathway"
+      ],
+      "citationIds": []
+    },
+    {
+      "id": "claim-off-target-low",
+      "text": "No meaningful off-target signature was observed.",
+      "outcomeId": "outcome-off-target-signature",
+      "analysisId": "analysis-off-target-posthoc",
+      "reportedDirection": "no-change",
+      "reportedPValue": 0.051,
+      "sampleSize": 48,
+      "evidenceArtifactIds": [
+        "table-off-target-screen"
+      ],
+      "citationIds": [
+        "doi:10.1101/2024.01.01.000000"
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "dataset-count-matrix",
+      "type": "raw-data",
+      "label": "Filtered single-cell count matrix",
+      "checksum": "sha256:041a0f366c2b81f42f21796fc6e4f211",
+      "generatedAt": "2026-04-10T10:00:00Z"
+    },
+    {
+      "id": "notebook-primary-analysis",
+      "type": "notebook",
+      "label": "Primary inflammatory score notebook",
+      "checksum": "sha256:6afc62240f8e377540c25f27858b6ef0",
+      "generatedAt": "2026-04-11T08:15:00Z"
+    },
+    {
+      "id": "figure-inflammatory-score",
+      "type": "figure",
+      "label": "Figure 2A inflammatory score",
+      "checksum": "sha256:1d9432d1cda0b4ae996eb44c6b0e1c51",
+      "generatedAt": "2026-04-12T16:45:00Z"
+    },
+    {
+      "id": "notebook-secondary-pathway",
+      "type": "notebook",
+      "label": "Exploratory pathway enrichment notebook",
+      "checksum": "sha256:7717165e431dc9e023b90f3f468b5bde",
+      "generatedAt": "2026-04-12T13:20:00Z"
+    },
+    {
+      "id": "table-off-target-screen",
+      "type": "table",
+      "label": "Off-target guide RNA screen",
+      "checksum": "sha256:c12a55f44c71a0328ef9fb8c4b0499a7",
+      "generatedAt": "2026-04-13T11:00:00Z"
+    }
+  ],
+  "reproducibility": {
+    "environmentLocked": true,
+    "randomSeedDocumented": true,
+    "dependencyManifest": "conda-lock.yml",
+    "executionRuns": [
+      {
+        "analysisId": "analysis-wilcoxon-inflammatory",
+        "status": "passed",
+        "checksum": "sha256:6afc62240f8e377540c25f27858b6ef0",
+        "reportedOutput": "effect=-0.18;p=0.018"
+      },
+      {
+        "analysisId": "analysis-pathway-exploratory",
+        "status": "warning",
+        "checksum": "sha256:7717165e431dc9e023b90f3f468b5bde",
+        "reportedOutput": "fdr=0.047;gene_set=synaptic_repair"
+      }
+    ]
+  },
+  "negativeResults": [
+    {
+      "outcomeId": "outcome-cell-viability",
+      "summary": "Viability was 7% lower in perturbed cells and needs a non-inferiority interpretation.",
+      "evidenceArtifactIds": [
+        "dataset-count-matrix"
+      ]
+    }
+  ]
+}

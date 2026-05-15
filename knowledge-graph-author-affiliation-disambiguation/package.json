@@ -1,0 +1,11 @@
+{
+  "name": "knowledge-graph-author-affiliation-disambiguation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check src/author-affiliation-disambiguation.js && node --check test/author-affiliation-disambiguation.test.js && node --check scripts/demo.js",
+    "test": "node --test test/author-affiliation-disambiguation.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

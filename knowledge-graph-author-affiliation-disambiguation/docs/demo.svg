@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Knowledge graph author disambiguation demo">
+  <rect width="960" height="540" fill="#0f172a"/>
+  <text x="48" y="64" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">Author Affiliation Disambiguation</text>
+  <text x="48" y="101" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">Trust layer for scientific knowledge graph author and collaboration nodes</text>
+  <rect x="55" y="175" width="220" height="94" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="82" y="213" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">Maya A. Chen</text>
+  <text x="82" y="242" fill="#93c5fd" font-family="Arial, sans-serif" font-size="15">Stanford Bioengineering</text>
+  <rect x="370" y="125" width="220" height="94" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+  <text x="403" y="163" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">Luis Ortega</text>
+  <text x="403" y="192" fill="#bbf7d0" font-family="Arial, sans-serif" font-size="15">UCSF Computational Bio</text>
+  <rect x="678" y="306" width="220" height="94" rx="10" fill="#1e293b" stroke="#f97316" stroke-width="2"/>
+  <text x="711" y="344" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">Maya Chen</text>
+  <text x="711" y="373" fill="#fed7aa" font-family="Arial, sans-serif" font-size="15">MIT Materials Science</text>
+  <path d="M275 210 C325 185 320 155 370 164" fill="none" stroke="#a7f3d0" stroke-width="5"/>
+  <text x="299" y="184" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="15">collaboration edge</text>
+  <path d="M275 252 C420 348 540 366 678 350" fill="none" stroke="#facc15" stroke-width="4" stroke-dasharray="12 10"/>
+  <text x="412" y="348" fill="#fde68a" font-family="Arial, sans-serif" font-size="15">homonym review guard</text>
+  <rect x="56" y="430" width="844" height="48" rx="8" fill="#111827" stroke="#334155"/>
+  <text x="80" y="461" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="18">Output: author nodes, collaboration edges, schema.org export, curator queue, recommendation suppression guards</text>
+</svg>

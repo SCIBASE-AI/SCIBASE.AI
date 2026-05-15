@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520" role="img" aria-labelledby="title desc">
+  <title id="title">Research revenue entitlement engine demo</title>
+  <desc id="desc">Flow from plan catalog to quote, compute meter, invoice, licensing export, and revenue health snapshot.</desc>
+  <defs>
+    <style>
+      .bg { fill: #08111f; }
+      .card { fill: #111827; stroke: #60a5fa; stroke-width: 2; rx: 14; }
+      .card2 { fill: #10251c; stroke: #34d399; stroke-width: 2; rx: 14; }
+      .title { fill: #f8fafc; font-family: Arial, sans-serif; font-size: 24px; font-weight: 700; }
+      .text { fill: #e5e7eb; font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; }
+      .small { fill: #cbd5e1; font-family: Arial, sans-serif; font-size: 14px; }
+      .arrow { stroke: #f59e0b; stroke-width: 5; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1080" height="520"/>
+  <text class="title" x="46" y="58">Research Revenue Entitlement Engine</text>
+  <text class="small" x="46" y="86">Subscriptions, AI compute metering, top-ups, institutional invoices, licensing exports, and health reporting.</text>
+
+  <rect class="card" x="48" y="130" width="185" height="130"/>
+  <text class="text" x="70" y="166">Plan Catalog</text>
+  <text class="small" x="70" y="196">Monthly / annual</text>
+  <text class="small" x="70" y="218">Seats + discounts</text>
+  <text class="small" x="70" y="240">Entitlements</text>
+  <path class="arrow" d="M242 195 C275 195 285 195 318 195"/>
+
+  <rect class="card" x="330" y="130" width="185" height="130"/>
+  <text class="text" x="352" y="166">Usage Meter</text>
+  <text class="small" x="352" y="196">Included credits</text>
+  <text class="small" x="352" y="218">Top-ups</text>
+  <text class="small" x="352" y="240">Overage cost</text>
+  <path class="arrow" d="M524 195 C557 195 567 195 600 195"/>
+
+  <rect class="card" x="612" y="130" width="185" height="130"/>
+  <text class="text" x="634" y="166">Invoice</text>
+  <text class="small" x="634" y="196">Subscription</text>
+  <text class="small" x="634" y="218">Credit packs</text>
+  <text class="small" x="634" y="240">Compute overage</text>
+  <path class="arrow" d="M705 270 C705 305 705 315 705 350"/>
+
+  <rect class="card2" x="566" y="362" width="280" height="105"/>
+  <text class="text" x="590" y="398">Revenue Health</text>
+  <text class="small" x="590" y="424">MRR, ARR, invoice totals</text>
+  <text class="small" x="590" y="446">Quota alerts + licensing readiness</text>
+
+  <rect class="card" x="48" y="332" width="360" height="135"/>
+  <text class="text" x="70" y="368">Privacy-Safe Licensing</text>
+  <text class="small" x="70" y="398">Allows topic, citations, reuse, reproducibility</text>
+  <text class="small" x="70" y="422">Blocks private project fields</text>
+  <text class="small" x="70" y="446">Classifies export as anonymized metadata only</text>
+
+  <rect x="842" y="130" width="190" height="337" rx="14" fill="#0b1220" stroke="#475569" stroke-width="2"/>
+  <text class="text" x="866" y="170">Reviewer Run</text>
+  <text class="small" x="866" y="206">npm test</text>
+  <text class="small" x="866" y="232">npm run demo</text>
+  <text class="small" x="866" y="274">Outputs:</text>
+  <text class="small" x="866" y="300">invoiceTotal 796.6</text>
+  <text class="small" x="866" y="326">quota over_quota</text>
+  <text class="small" x="866" y="352">licensingReady true</text>
+  <text class="small" x="866" y="378">MRR + ARR snapshot</text>
+</svg>

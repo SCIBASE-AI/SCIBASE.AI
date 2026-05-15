@@ -1,0 +1,87 @@
+{
+  "catalog": {
+    "currency": "USD",
+    "trialDays": 14,
+    "couponRules": [{ "code": "CONSORTIUM20", "rate": 0.2 }],
+    "plans": [
+      {
+        "id": "lab",
+        "name": "Lab",
+        "billingCycle": "monthly",
+        "basePrice": 399,
+        "includedSeats": 8,
+        "extraSeatPrice": 29,
+        "includedAiCredits": 20000,
+        "computeOverageRate": 0.015,
+        "entitlements": ["private-projects", "group-permissions", "priority-support"],
+        "volumeDiscounts": [{ "minSeats": 20, "rate": 0.1 }]
+      },
+      {
+        "id": "institution",
+        "name": "Institution",
+        "billingCycle": "annual",
+        "basePrice": 2400,
+        "includedSeats": 50,
+        "extraSeatPrice": 18,
+        "includedAiCredits": 200000,
+        "computeOverageRate": 0.01,
+        "entitlements": ["saml", "admin-dashboard", "sla", "analytics-api"],
+        "volumeDiscounts": [{ "minSeats": 100, "rate": 0.15 }]
+      }
+    ]
+  },
+  "accounts": [
+    {
+      "id": "account-open-bio-lab",
+      "planId": "lab",
+      "seats": 24,
+      "couponCode": "CONSORTIUM20"
+    },
+    {
+      "id": "account-national-consortium",
+      "planId": "institution",
+      "seats": 120
+    }
+  ],
+  "usageByAccount": {
+    "account-open-bio-lab": {
+      "period": "2026-05",
+      "aiCredits": 31500
+    },
+    "account-national-consortium": {
+      "period": "2026-05",
+      "aiCredits": 160000
+    }
+  },
+  "topUps": [
+    {
+      "accountId": "account-open-bio-lab",
+      "credits": 5000,
+      "amount": 95
+    }
+  ],
+  "licensingExport": {
+    "customerId": "policy-lab-001",
+    "license": "quarterly-research-trends",
+    "minimumRows": 2,
+    "fields": ["topic", "citationCount", "datasetReuseCount", "reproducibilityScore", "institutionRegion"],
+    "rows": [
+      {
+        "topic": "single-cell atlas",
+        "citationCount": 410,
+        "datasetReuseCount": 28,
+        "reproducibilityScore": 0.91,
+        "institutionRegion": "EU",
+        "privateProjectTitle": "redacted"
+      },
+      {
+        "topic": "climate nowcasting",
+        "citationCount": 132,
+        "datasetReuseCount": 14,
+        "reproducibilityScore": 0.84,
+        "institutionRegion": "NA",
+        "privateProjectTitle": "redacted"
+      }
+    ]
+  }
+}

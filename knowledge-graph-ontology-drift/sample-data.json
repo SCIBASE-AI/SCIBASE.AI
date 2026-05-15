@@ -1,0 +1,79 @@
+{
+  "now": "2026-05-15T00:00:00.000Z",
+  "maxEvidenceAgeDays": 540,
+  "ontologyRelease": {
+    "previousVersion": "sci-kg-2026.04",
+    "nextVersion": "sci-kg-2026.06",
+    "concepts": [
+      {
+        "id": "concept:single-cell-rna-seq",
+        "label": "single-cell RNA sequencing",
+        "synonyms": ["scRNA-seq", "single cell transcriptomics"]
+      },
+      {
+        "id": "concept:spatial-transcriptomics",
+        "label": "spatial transcriptomics",
+        "synonyms": ["spatial RNA-seq", "spatial assay"]
+      },
+      {
+        "id": "concept:spatial-rnaseq-panel",
+        "label": "spatial RNA sequencing panel",
+        "synonyms": ["spatial assay"]
+      },
+      {
+        "id": "concept:quality-control-pipeline",
+        "label": "quality control pipeline",
+        "synonyms": ["QC workflow"]
+      }
+    ],
+    "deprecatedConcepts": [
+      {
+        "oldId": "concept:single-cell-old",
+        "replacementId": "concept:single-cell-rna-seq",
+        "reason": "merged into normalized assay method concept"
+      }
+    ]
+  },
+  "graphNodes": [
+    {
+      "id": "paper:10.5555/cell-atlas.2024",
+      "type": "paper",
+      "title": "Cross-lab cell atlas replication",
+      "conceptIds": ["concept:single-cell-old", "concept:quality-control-pipeline"]
+    },
+    {
+      "id": "dataset:atlas-v2",
+      "type": "dataset",
+      "title": "Atlas release v2",
+      "conceptIds": ["concept:single-cell-rna-seq", "concept:spatial-transcriptomics"]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel:paper-method-dataset",
+      "sourceId": "paper:10.5555/cell-atlas.2024",
+      "targetId": "dataset:atlas-v2",
+      "type": "uses-dataset",
+      "conceptIds": ["concept:single-cell-old"],
+      "evidenceDoi": "10.5555/cell-atlas.2024",
+      "evidenceDate": "2024-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "rel:dataset-qc",
+      "sourceId": "dataset:atlas-v2",
+      "targetId": "paper:10.5555/cell-atlas.2024",
+      "type": "validated-by",
+      "conceptIds": ["concept:quality-control-pipeline"],
+      "evidenceDoi": "10.5555/qc-pipeline.2026",
+      "evidenceDate": "2026-04-15T00:00:00.000Z"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec:reuse-atlas-v2",
+      "status": "active",
+      "conceptPath": ["concept:single-cell-old", "concept:quality-control-pipeline"],
+      "reason": "dataset reuse candidate for single-cell analysis"
+    }
+  ]
+}

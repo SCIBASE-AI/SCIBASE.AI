@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "ai-redline-packet.v1",
+  "manuscript": {
+    "id": "ms-neuro-organoid-response",
+    "title": "Transcriptomic Response of Neural Organoids to Microfluidic Oxygen Gradients",
+    "domain": "biology",
+    "targetJournal": "Nature Biomedical Engineering",
+    "stage": "pre-submission",
+    "sections": [
+      {
+        "id": "abstract",
+        "heading": "Abstract",
+        "text": "We report a microfluidic oxygen-gradient platform for neural organoids. Treated organoids showed increased maturation markers and improved viability after seven days."
+      },
+      {
+        "id": "results",
+        "heading": "Results",
+        "text": "Marker GFAP increased by 22 percent after treatment. Organoids had significantly better viability with p = 0.08. The platform eliminates batch effects across all donor lines."
+      },
+      {
+        "id": "methods",
+        "heading": "Methods",
+        "text": "Organoids from three donor lines were cultured in a controlled oxygen gradient. Analysis code and raw count tables were deposited with the project repository."
+      },
+      {
+        "id": "ethics",
+        "heading": "Ethics",
+        "text": "Human induced pluripotent stem cell lines were obtained from a certified biobank."
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-marker-maturation",
+        "text": "GFAP expression increased by 22 percent after seven days of treatment.",
+        "sectionId": "results",
+        "evidenceSpanIds": ["span-gfap-table"],
+        "citationIds": ["smith-2024-organoid-maturation"],
+        "importance": "key-finding"
+      },
+      {
+        "id": "claim-viability-significance",
+        "text": "Treated organoids had significantly better viability.",
+        "sectionId": "results",
+        "evidenceSpanIds": ["span-viability-pvalue"],
+        "citationIds": [],
+        "importance": "key-finding"
+      },
+      {
+        "id": "claim-eliminates-batch-effects",
+        "text": "The platform eliminates batch effects across all donor lines.",
+        "sectionId": "results",
+        "evidenceSpanIds": [],
+        "citationIds": [],
+        "importance": "broad-claim"
+      },
+      {
+        "id": "claim-data-deposited",
+        "text": "Analysis code and raw count tables were deposited with the project repository.",
+        "sectionId": "methods",
+        "evidenceSpanIds": ["span-repository-link"],
+        "citationIds": ["project-repository-v2"],
+        "importance": "reproducibility"
+      }
+    ],
+    "evidenceSpans": [
+      {
+        "id": "span-gfap-table",
+        "sectionId": "results",
+        "quote": "Marker GFAP increased by 22 percent after treatment.",
+        "artifact": "results/gfap-differential-expression.csv",
+        "confidence": 0.91
+      },
+      {
+        "id": "span-viability-pvalue",
+        "sectionId": "results",
+        "quote": "Organoids had significantly better viability with p = 0.08.",
+        "artifact": "results/viability-analysis.json",
+        "confidence": 0.72
+      },
+      {
+        "id": "span-repository-link",
+        "sectionId": "methods",
+        "quote": "Analysis code and raw count tables were deposited with the project repository.",
+        "artifact": "metadata/repository-export.json",
+        "confidence": 0.86
+      }
+    ],
+    "statisticalChecks": [
+      {
+        "id": "stat-viability-pvalue",
+        "claimId": "claim-viability-significance",
+        "metric": "viability",
+        "pValue": 0.08,
+        "claimsSignificant": true,
+        "confidenceInterval": null,
+        "sampleSize": 3
+      },
+      {
+        "id": "stat-gfap-effect",
+        "claimId": "claim-marker-maturation",
+        "metric": "GFAP expression",
+        "pValue": 0.012,
+        "claimsSignificant": true,
+        "confidenceInterval": [0.14, 0.31],
+        "sampleSize": 3
+      }
+    ],
+    "compliance": {
+      "ethicsStatementPresent": true,
+      "irbProtocolId": null,
+      "dataAvailabilityStatementPresent": true,
+      "codeAvailabilityStatementPresent": true,
+      "conflictOfInterestPresent": false,
+      "fundingStatementPresent": true
+    },
+    "citations": [
+      {
+        "id": "smith-2024-organoid-maturation",
+        "title": "Organoid maturation markers under controlled oxygen gradients",
+        "year": 2024,
+        "style": "Nature",
+        "supportsClaimIds": ["claim-marker-maturation"]
+      },
+      {
+        "id": "project-repository-v2",
+        "title": "SCIBASE project repository export preprint-v2",
+        "year": 2026,
+        "style": "DataCite",
+        "supportsClaimIds": ["claim-data-deposited"]
+      }
+    ],
+    "candidateCitations": [
+      {
+        "id": "lee-2025-donor-batch-effects",
+        "title": "Donor-line batch effects in neural organoid transcriptomics",
+        "year": 2025,
+        "reason": "Needed before making a broad batch-effect claim.",
+        "claimIds": ["claim-eliminates-batch-effects"]
+      },
+      {
+        "id": "nguyen-2024-viability-statistics",
+        "title": "Statistical reporting standards for organoid viability assays",
+        "year": 2024,
+        "reason": "Supports corrected viability reporting and confidence intervals.",
+        "claimIds": ["claim-viability-significance"]
+      },
+      {
+        "id": "icmje-2025-ethics-reporting",
+        "title": "Research ethics and disclosure reporting guidance",
+        "year": 2025,
+        "reason": "Helps complete ethics protocol and disclosure statements.",
+        "claimIds": []
+      }
+    ]
+  },
+  "reviewTemplates": [
+    {
+      "id": "biology-pre-submission",
+      "name": "Biology pre-submission review",
+      "requiredTopics": ["evidence", "statistics", "ethics", "data-availability", "citations"]
+    },
+    {
+      "id": "statistical-methods",
+      "name": "Statistical methods review",
+      "requiredTopics": ["statistics", "sample-size", "effect-size"]
+    }
+  ]
+}

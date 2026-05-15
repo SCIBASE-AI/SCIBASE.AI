@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="40" y="38" width="1200" height="644" rx="28" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="70" y="96" fill="#111827" font-family="Arial, sans-serif" font-size="42" font-weight="800">Scientific Knowledge Gap Explorer</text>
+  <text x="70" y="130" fill="#475569" font-family="Arial, sans-serif" font-size="20">Ranks underconnected concept-method-dataset intersections with evidence paths.</text>
+  <g font-family="Arial, sans-serif">
+    <text x="70" y="162" fill="#0f766e" font-size="18" font-weight="700">57 nodes</text>
+    <text x="178" y="162" fill="#0f766e" font-size="18" font-weight="700">418 edges</text>
+    <text x="284" y="162" fill="#0f766e" font-size="18" font-weight="700">6 projects</text>
+
+      <g transform="translate(70 178)">
+        <rect width="1140" height="68" rx="14" fill="#e7f5ff" stroke="#d8dee9"/>
+        <text x="22" y="29" fill="#151515" font-size="24" font-weight="700">kinase inhibition + contrastive embeddings</text>
+        <text x="22" y="54" fill="#4b5563" font-size="17">Dataset: Perturb-seq Kinase Panel | evidence 6 | score 2.558</text>
+        <circle cx="1080" cy="34" r="24" fill="#0f766e"/>
+        <text x="1080" y="41" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">1</text>
+      </g>
+      <g transform="translate(70 270)">
+        <rect width="1140" height="68" rx="14" fill="#f7f7f8" stroke="#d8dee9"/>
+        <text x="22" y="29" fill="#151515" font-size="24" font-weight="700">kinase inhibition + dose-response modeling</text>
+        <text x="22" y="54" fill="#4b5563" font-size="17">Dataset: Perturb-seq Kinase Panel | evidence 6 | score 2.558</text>
+        <circle cx="1080" cy="34" r="24" fill="#334155"/>
+        <text x="1080" y="41" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">2</text>
+      </g>
+      <g transform="translate(70 362)">
+        <rect width="1140" height="68" rx="14" fill="#f7f7f8" stroke="#d8dee9"/>
+        <text x="22" y="29" fill="#151515" font-size="24" font-weight="700">kinase inhibition + graph clustering</text>
+        <text x="22" y="54" fill="#4b5563" font-size="17">Dataset: Organoid Response Bank | evidence 6 | score 2.558</text>
+        <circle cx="1080" cy="34" r="24" fill="#334155"/>
+        <text x="1080" y="41" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">3</text>
+      </g>
+      <g transform="translate(70 454)">
+        <rect width="1140" height="68" rx="14" fill="#f7f7f8" stroke="#d8dee9"/>
+        <text x="22" y="29" fill="#151515" font-size="24" font-weight="700">kinase inhibition + single-cell RNA-seq</text>
+        <text x="22" y="54" fill="#4b5563" font-size="17">Dataset: Organoid Response Bank | evidence 6 | score 2.558</text>
+        <circle cx="1080" cy="34" r="24" fill="#334155"/>
+        <text x="1080" y="41" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700">4</text>
+      </g>
+    <rect x="70" y="566" width="1140" height="72" rx="14" fill="#111827"/>
+    <text x="94" y="596" fill="#f8fafc" font-size="20" font-weight="700">Recommendation digest</text>
+    <text x="94" y="625" fill="#cbd5e1" font-size="17">kinase inhibition + single-cell RNA-seq + Organoid Response Bank</text>
+  </g>
+</svg>

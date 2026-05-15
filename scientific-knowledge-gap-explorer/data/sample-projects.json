@@ -1,0 +1,116 @@
+[
+  {
+    "id": "proj-crispr-atlas",
+    "title": "CRISPR enhancer atlas for neuroimmune signaling",
+    "domain": "neuroscience",
+    "year": 2025,
+    "reproducibilityScore": 0.88,
+    "authors": [
+      { "name": "Maya Chen", "institution": "Northbridge Lab" },
+      { "name": "Ibrahim Rao", "institution": "Northbridge Lab" }
+    ],
+    "concepts": ["CRISPR screening", "microglia activation", "enhancer regulation"],
+    "methods": ["pooled CRISPRi", "single-cell RNA-seq"],
+    "datasets": ["NeuroImmune Atlas"],
+    "tools": ["Scanpy", "Cell Ranger"],
+    "citations": [
+      { "doi": "10.1000/neuro.2024.01", "title": "Microglia enhancer regulation" },
+      { "doi": "10.1000/singlecell.2023.12", "title": "Single-cell perturbation maps" }
+    ]
+  },
+  {
+    "id": "proj-organoid-drug-response",
+    "title": "Organoid drug response maps with interpretable embeddings",
+    "domain": "oncology",
+    "year": 2026,
+    "reproducibilityScore": 0.82,
+    "authors": [
+      { "name": "Noor Patel", "institution": "Helix Institute" },
+      { "name": "Ana Silva", "institution": "Helix Institute" }
+    ],
+    "concepts": ["organoid drug response", "kinase inhibition", "latent phenotypes"],
+    "methods": ["contrastive embeddings", "dose-response modeling"],
+    "datasets": ["Organoid Response Bank"],
+    "tools": ["PyTorch", "UMAP"],
+    "citations": [
+      { "doi": "10.1000/organoid.2025.03", "title": "Organoid response benchmarks" },
+      { "doi": "10.1000/embeddings.2024.05", "title": "Contrastive phenotyping" }
+    ]
+  },
+  {
+    "id": "proj-materials-active-learning",
+    "title": "Active learning for perovskite stability screens",
+    "domain": "materials",
+    "year": 2026,
+    "reproducibilityScore": 0.91,
+    "authors": [
+      { "name": "Lena Ortiz", "institution": "Open Materials Center" },
+      { "name": "Victor Huang", "institution": "Open Materials Center" }
+    ],
+    "concepts": ["perovskite stability", "thin-film degradation", "active learning"],
+    "methods": ["Bayesian optimization", "robotic synthesis"],
+    "datasets": ["Perovskite Aging Registry"],
+    "tools": ["BoTorch", "Ray Tune"],
+    "citations": [
+      { "doi": "10.1000/perovskite.2025.07", "title": "Perovskite aging registry" },
+      { "doi": "10.1000/bayesopt.2024.11", "title": "Closed-loop materials discovery" }
+    ]
+  },
+  {
+    "id": "proj-neuro-contrastive",
+    "title": "Contrastive embeddings for neural calcium imaging",
+    "domain": "neuroscience",
+    "year": 2026,
+    "reproducibilityScore": 0.79,
+    "authors": [
+      { "name": "Maya Chen", "institution": "Northbridge Lab" },
+      { "name": "Sofia Reed", "institution": "Cortex Commons" }
+    ],
+    "concepts": ["neural calcium imaging", "latent phenotypes", "behavioral state"],
+    "methods": ["contrastive embeddings", "graph clustering"],
+    "datasets": ["Open Calcium Commons"],
+    "tools": ["PyTorch", "NetworkX"],
+    "citations": [
+      { "doi": "10.1000/embeddings.2024.05", "title": "Contrastive phenotyping" },
+      { "doi": "10.1000/calcium.2025.02", "title": "Open calcium recordings" }
+    ]
+  },
+  {
+    "id": "proj-rna-drug-repurposing",
+    "title": "Single-cell signatures for kinase inhibitor repurposing",
+    "domain": "oncology",
+    "year": 2025,
+    "reproducibilityScore": 0.76,
+    "authors": [
+      { "name": "Noor Patel", "institution": "Helix Institute" },
+      { "name": "Ibrahim Rao", "institution": "Northbridge Lab" }
+    ],
+    "concepts": ["kinase inhibition", "single-cell signatures", "drug repurposing"],
+    "methods": ["single-cell RNA-seq", "graph clustering"],
+    "datasets": ["Perturb-seq Kinase Panel"],
+    "tools": ["Scanpy", "igraph"],
+    "citations": [
+      { "doi": "10.1000/singlecell.2023.12", "title": "Single-cell perturbation maps" },
+      { "doi": "10.1000/kinase.2024.08", "title": "Kinase inhibitor signatures" }
+    ]
+  },
+  {
+    "id": "proj-climate-protocol-reuse",
+    "title": "Reusable climate sensor calibration protocols",
+    "domain": "climate",
+    "year": 2024,
+    "reproducibilityScore": 0.93,
+    "authors": [
+      { "name": "Priya Nair", "institution": "Field Systems Lab" },
+      { "name": "Lena Ortiz", "institution": "Open Materials Center" }
+    ],
+    "concepts": ["sensor calibration", "field drift", "protocol reuse"],
+    "methods": ["Bayesian optimization", "calibration transfer"],
+    "datasets": ["Open Climate Sensor Drift"],
+    "tools": ["Stan", "Great Expectations"],
+    "citations": [
+      { "doi": "10.1000/bayesopt.2024.11", "title": "Closed-loop materials discovery" },
+      { "doi": "10.1000/calibration.2024.04", "title": "Field sensor calibration" }
+    ]
+  }
+]

@@ -1,0 +1,322 @@
+{
+  "generatedAt": "2026-05-15T00:00:00.000Z",
+  "graphSummary": {
+    "projects": 6,
+    "nodes": 57,
+    "edges": 418,
+    "citations": 9
+  },
+  "topKnowledgeGaps": [
+    {
+      "id": "gap:kinase-inhibition:contrastive-embeddings:perturb-seq-kinase-panel",
+      "concept": {
+        "id": "concept:kinase-inhibition",
+        "type": "concept",
+        "label": "kinase inhibition"
+      },
+      "method": {
+        "id": "method:contrastive-embeddings",
+        "type": "method",
+        "label": "contrastive embeddings"
+      },
+      "dataset": {
+        "id": "dataset:perturb-seq-kinase-panel",
+        "type": "dataset",
+        "label": "Perturb-seq Kinase Panel"
+      },
+      "score": 2.558,
+      "evidenceScore": 6,
+      "averageReproducibility": 0.79,
+      "supportingProjectIds": [
+        "proj-organoid-drug-response",
+        "proj-rna-drug-repurposing"
+      ],
+      "sharedCitationDois": [
+        "10.1000/organoid.2025.03",
+        "10.1000/embeddings.2024.05",
+        "10.1000/singlecell.2023.12",
+        "10.1000/kinase.2024.08"
+      ],
+      "explanation": [
+        "kinase inhibition links to contrastive embeddings through 1 project(s): proj-organoid-drug-response.",
+        "kinase inhibition links to Perturb-seq Kinase Panel through 1 project(s): proj-rna-drug-repurposing.",
+        "contrastive embeddings and Perturb-seq Kinase Panel are not directly linked yet.",
+        "4 shared citation thread(s): 10.1000/organoid.2025.03, 10.1000/embeddings.2024.05, 10.1000/singlecell.2023.12"
+      ],
+      "suggestedAction": "Open a review workspace pairing kinase inhibition with contrastive embeddings on Perturb-seq Kinase Panel; seed it with supporting projects proj-organoid-drug-response, proj-rna-drug-repurposing."
+    },
+    {
+      "id": "gap:kinase-inhibition:dose-response-modeling:perturb-seq-kinase-panel",
+      "concept": {
+        "id": "concept:kinase-inhibition",
+        "type": "concept",
+        "label": "kinase inhibition"
+      },
+      "method": {
+        "id": "method:dose-response-modeling",
+        "type": "method",
+        "label": "dose-response modeling"
+      },
+      "dataset": {
+        "id": "dataset:perturb-seq-kinase-panel",
+        "type": "dataset",
+        "label": "Perturb-seq Kinase Panel"
+      },
+      "score": 2.558,
+      "evidenceScore": 6,
+      "averageReproducibility": 0.79,
+      "supportingProjectIds": [
+        "proj-organoid-drug-response",
+        "proj-rna-drug-repurposing"
+      ],
+      "sharedCitationDois": [
+        "10.1000/organoid.2025.03",
+        "10.1000/embeddings.2024.05",
+        "10.1000/singlecell.2023.12",
+        "10.1000/kinase.2024.08"
+      ],
+      "explanation": [
+        "kinase inhibition links to dose-response modeling through 1 project(s): proj-organoid-drug-response.",
+        "kinase inhibition links to Perturb-seq Kinase Panel through 1 project(s): proj-rna-drug-repurposing.",
+        "dose-response modeling and Perturb-seq Kinase Panel are not directly linked yet.",
+        "4 shared citation thread(s): 10.1000/organoid.2025.03, 10.1000/embeddings.2024.05, 10.1000/singlecell.2023.12"
+      ],
+      "suggestedAction": "Open a review workspace pairing kinase inhibition with dose-response modeling on Perturb-seq Kinase Panel; seed it with supporting projects proj-organoid-drug-response, proj-rna-drug-repurposing."
+    },
+    {
+      "id": "gap:kinase-inhibition:graph-clustering:organoid-response-bank",
+      "concept": {
+        "id": "concept:kinase-inhibition",
+        "type": "concept",
+        "label": "kinase inhibition"
+      },
+      "method": {
+        "id": "method:graph-clustering",
+        "type": "method",
+        "label": "graph clustering"
+      },
+      "dataset": {
+        "id": "dataset:organoid-response-bank",
+        "type": "dataset",
+        "label": "Organoid Response Bank"
+      },
+      "score": 2.558,
+      "evidenceScore": 6,
+      "averageReproducibility": 0.79,
+      "supportingProjectIds": [
+        "proj-rna-drug-repurposing",
+        "proj-organoid-drug-response"
+      ],
+      "sharedCitationDois": [
+        "10.1000/embeddings.2024.05",
+        "10.1000/singlecell.2023.12",
+        "10.1000/kinase.2024.08",
+        "10.1000/organoid.2025.03"
+      ],
+      "explanation": [
+        "kinase inhibition links to graph clustering through 1 project(s): proj-rna-drug-repurposing.",
+        "kinase inhibition links to Organoid Response Bank through 1 project(s): proj-organoid-drug-response.",
+        "graph clustering and Organoid Response Bank are not directly linked yet.",
+        "4 shared citation thread(s): 10.1000/embeddings.2024.05, 10.1000/singlecell.2023.12, 10.1000/kinase.2024.08"
+      ],
+      "suggestedAction": "Open a review workspace pairing kinase inhibition with graph clustering on Organoid Response Bank; seed it with supporting projects proj-rna-drug-repurposing, proj-organoid-drug-response."
+    },
+    {
+      "id": "gap:kinase-inhibition:single-cell-rna-seq:organoid-response-bank",
+      "concept": {
+        "id": "concept:kinase-inhibition",
+        "type": "concept",
+        "label": "kinase inhibition"
+      },
+      "method": {
+        "id": "method:single-cell-rna-seq",
+        "type": "method",
+        "label": "single-cell RNA-seq"
+      },
+      "dataset": {
+        "id": "dataset:organoid-response-bank",
+        "type": "dataset",
+        "label": "Organoid Response Bank"
+      },
+      "score": 2.558,
+      "evidenceScore": 6,
+      "averageReproducibility": 0.79,
+      "supportingProjectIds": [
+        "proj-rna-drug-repurposing",
+        "proj-organoid-drug-response"
+      ],
+      "sharedCitationDois": [
+        "10.1000/singlecell.2023.12",
+        "10.1000/kinase.2024.08",
+        "10.1000/organoid.2025.03",
+        "10.1000/embeddings.2024.05"
+      ],
+      "explanation": [
+        "kinase inhibition links to single-cell RNA-seq through 1 project(s): proj-rna-drug-repurposing.",
+        "kinase inhibition links to Organoid Response Bank through 1 project(s): proj-organoid-drug-response.",
+        "single-cell RNA-seq and Organoid Response Bank are not directly linked yet.",
+        "4 shared citation thread(s): 10.1000/singlecell.2023.12, 10.1000/kinase.2024.08, 10.1000/organoid.2025.03"
+      ],
+      "suggestedAction": "Open a review workspace pairing kinase inhibition with single-cell RNA-seq on Organoid Response Bank; seed it with supporting projects proj-rna-drug-repurposing, proj-organoid-drug-response."
+    },
+    {
+      "id": "gap:behavioral-state:graph-clustering:perturb-seq-kinase-panel",
+      "concept": {
+        "id": "concept:behavioral-state",
+        "type": "concept",
+        "label": "behavioral state"
+      },
+      "method": {
+        "id": "method:graph-clustering",
+        "type": "method",
+        "label": "graph clustering"
+      },
+      "dataset": {
+        "id": "dataset:perturb-seq-kinase-panel",
+        "type": "dataset",
+        "label": "Perturb-seq Kinase Panel"
+      },
+      "score": 2.555,
+      "evidenceScore": 6,
+      "averageReproducibility": 0.775,
+      "supportingProjectIds": [
+        "proj-neuro-contrastive",
+        "proj-rna-drug-repurposing"
+      ],
+      "sharedCitationDois": [
+        "10.1000/embeddings.2024.05",
+        "10.1000/calcium.2025.02",
+        "10.1000/singlecell.2023.12",
+        "10.1000/kinase.2024.08"
+      ],
+      "explanation": [
+        "behavioral state links to graph clustering through 1 project(s): proj-neuro-contrastive.",
+        "behavioral state and Perturb-seq Kinase Panel are not directly linked yet.",
+        "graph clustering links to Perturb-seq Kinase Panel through 1 project(s): proj-rna-drug-repurposing.",
+        "4 shared citation thread(s): 10.1000/embeddings.2024.05, 10.1000/calcium.2025.02, 10.1000/singlecell.2023.12"
+      ],
+      "suggestedAction": "Open a review workspace pairing behavioral state with graph clustering on Perturb-seq Kinase Panel; seed it with supporting projects proj-neuro-contrastive, proj-rna-drug-repurposing."
+    }
+  ],
+  "personalizedDigest": [
+    {
+      "id": "gap:kinase-inhibition:single-cell-rna-seq:organoid-response-bank",
+      "title": "kinase inhibition + single-cell RNA-seq + Organoid Response Bank",
+      "personalizedScore": 2.778,
+      "matchedInterests": [
+        "single-cell RNA-seq"
+      ],
+      "evidence": [
+        "kinase inhibition links to single-cell RNA-seq through 1 project(s): proj-rna-drug-repurposing.",
+        "kinase inhibition links to Organoid Response Bank through 1 project(s): proj-organoid-drug-response.",
+        "single-cell RNA-seq and Organoid Response Bank are not directly linked yet.",
+        "4 shared citation thread(s): 10.1000/singlecell.2023.12, 10.1000/kinase.2024.08, 10.1000/organoid.2025.03"
+      ],
+      "action": "Open a review workspace pairing kinase inhibition with single-cell RNA-seq on Organoid Response Bank; seed it with supporting projects proj-rna-drug-repurposing, proj-organoid-drug-response."
+    },
+    {
+      "id": "gap:latent-phenotypes:graph-clustering:perturb-seq-kinase-panel",
+      "title": "latent phenotypes + graph clustering + Perturb-seq Kinase Panel",
+      "personalizedScore": 2.775,
+      "matchedInterests": [
+        "latent phenotypes"
+      ],
+      "evidence": [
+        "latent phenotypes links to graph clustering through 1 project(s): proj-neuro-contrastive.",
+        "latent phenotypes and Perturb-seq Kinase Panel are not directly linked yet.",
+        "graph clustering links to Perturb-seq Kinase Panel through 1 project(s): proj-rna-drug-repurposing.",
+        "4 shared citation thread(s): 10.1000/embeddings.2024.05, 10.1000/calcium.2025.02, 10.1000/singlecell.2023.12"
+      ],
+      "action": "Open a review workspace pairing latent phenotypes with graph clustering on Perturb-seq Kinase Panel; seed it with supporting projects proj-neuro-contrastive, proj-rna-drug-repurposing."
+    },
+    {
+      "id": "gap:kinase-inhibition:contrastive-embeddings:perturb-seq-kinase-panel",
+      "title": "kinase inhibition + contrastive embeddings + Perturb-seq Kinase Panel",
+      "personalizedScore": 2.558,
+      "matchedInterests": [],
+      "evidence": [
+        "kinase inhibition links to contrastive embeddings through 1 project(s): proj-organoid-drug-response.",
+        "kinase inhibition links to Perturb-seq Kinase Panel through 1 project(s): proj-rna-drug-repurposing.",
+        "contrastive embeddings and Perturb-seq Kinase Panel are not directly linked yet.",
+        "4 shared citation thread(s): 10.1000/organoid.2025.03, 10.1000/embeddings.2024.05, 10.1000/singlecell.2023.12"
+      ],
+      "action": "Open a review workspace pairing kinase inhibition with contrastive embeddings on Perturb-seq Kinase Panel; seed it with supporting projects proj-organoid-drug-response, proj-rna-drug-repurposing."
+    }
+  ],
+  "sampleEntityPage": {
+    "entity": {
+      "id": "concept:crispr-screening",
+      "type": "concept",
+      "label": "CRISPR screening"
+    },
+    "projects": [
+      {
+        "id": "proj-crispr-atlas",
+        "title": "CRISPR enhancer atlas for neuroimmune signaling",
+        "domain": "neuroscience",
+        "year": 2025
+      }
+    ],
+    "relatedEntities": [
+      {
+        "id": "tool:cell-ranger",
+        "type": "tool",
+        "label": "Cell Ranger"
+      },
+      {
+        "id": "concept:enhancer-regulation",
+        "type": "concept",
+        "label": "enhancer regulation"
+      },
+      {
+        "id": "author:ibrahim-rao",
+        "type": "author",
+        "label": "Ibrahim Rao"
+      },
+      {
+        "id": "author:maya-chen",
+        "type": "author",
+        "label": "Maya Chen"
+      },
+      {
+        "id": "concept:microglia-activation",
+        "type": "concept",
+        "label": "microglia activation"
+      },
+      {
+        "id": "dataset:neuroimmune-atlas",
+        "type": "dataset",
+        "label": "NeuroImmune Atlas"
+      },
+      {
+        "id": "domain:neuroscience",
+        "type": "domain",
+        "label": "neuroscience"
+      },
+      {
+        "id": "institution:northbridge-lab",
+        "type": "institution",
+        "label": "Northbridge Lab"
+      },
+      {
+        "id": "method:pooled-crispri",
+        "type": "method",
+        "label": "pooled CRISPRi"
+      },
+      {
+        "id": "tool:scanpy",
+        "type": "tool",
+        "label": "Scanpy"
+      },
+      {
+        "id": "method:single-cell-rna-seq",
+        "type": "method",
+        "label": "single-cell RNA-seq"
+      }
+    ],
+    "citationDois": [
+      "10.1000/neuro.2024.01",
+      "10.1000/singlecell.2023.12"
+    ]
+  }
+}

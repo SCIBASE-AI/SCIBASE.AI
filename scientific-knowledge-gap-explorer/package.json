@@ -1,0 +1,17 @@
+{
+  "name": "scientific-knowledge-gap-explorer",
+  "version": "1.0.0",
+  "description": "Dependency-free scientific knowledge graph gap explorer for SCIBASE.",
+  "main": "src/knowledge-gap-explorer.js",
+  "scripts": {
+    "check": "node scripts/check.js",
+    "test": "node --test test/knowledge-gap-explorer.test.js",
+    "demo": "node scripts/demo.js"
+  },
+  "keywords": [
+    "scientific-knowledge-graph",
+    "recommendations",
+    "research-gaps"
+  ],
+  "license": "MIT"
+}

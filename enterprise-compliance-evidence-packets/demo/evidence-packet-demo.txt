@@ -1,6 +1,21 @@
 SCIBASE Enterprise Compliance Evidence Packets
 
-$ npm run demo -- --project P-1002
+This text file is the source used to generate the short demo video at
+`evidence-packet-demo.mp4`.
+
+The rendered video is a staged terminal-style demo showing:
+
+1. CLI execution for a single project.
+2. Dashboard output.
+3. Export plan and compliance gaps.
+4. JSON webhook envelope output with HMAC signature.
+5. Test-suite success.
+
+Representative command:
+
+```bash
+npm run demo -- --project P-1002
+```
 
 Dashboard
   Total projects: 1

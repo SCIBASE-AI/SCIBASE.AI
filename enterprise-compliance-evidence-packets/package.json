@@ -1,0 +1,16 @@
+{
+  "name": "enterprise-compliance-evidence-packets",
+  "version": "1.0.0",
+  "description": "Deterministic compliance evidence packets for SCIBASE enterprise research exports.",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "demo": "node src/cli.js --input examples/institution-projects.json --format markdown",
+    "demo:json": "node src/cli.js --input examples/institution-projects.json --format json",
+    "test": "node test/run-tests.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "citation-provenance-readiness",
+  "version": "1.0.0",
+  "description": "Dependency-free citation provenance readiness module for SCIBASE AI-assisted research tools.",
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/citation-provenance-readiness.mjs && node --check tests/citation-provenance-readiness.test.mjs && node --check scripts/render-demo.mjs",
+    "test": "node --test tests/citation-provenance-readiness.test.mjs",
+    "demo": "node src/citation-provenance-readiness.mjs examples/project.json",
+    "render-demo": "node scripts/render-demo.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

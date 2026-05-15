@@ -1,0 +1,123 @@
+{
+  "id": "scibase-protocol-screening-demo",
+  "title": "Protocol-Guided Perturbation Screening",
+  "manuscript": {
+    "sections": [
+      {
+        "id": "abstract",
+        "title": "Abstract",
+        "text": "We describe a CRISPR perturbation screen for MAPK stress response signatures and a reproducible notebook workflow for follow-up analysis."
+      },
+      {
+        "id": "methods",
+        "title": "Methods",
+        "text": "The analysis pipeline uses notebooks, a small synthetic dataset, and a protocol checklist to compare perturbation response clusters."
+      },
+      {
+        "id": "results",
+        "title": "Results",
+        "text": "CRISPR perturbation reduced MAPK activation in the treated cohort. The workflow is fully reproducible across all reviewer machines. A secondary endpoint reached p < 0.049 in a small exploratory subset."
+      },
+      {
+        "id": "limitations",
+        "title": "Limitations",
+        "text": "The dataset is synthetic for this demo and should be replaced with controlled-access evidence before external review."
+      }
+    ]
+  },
+  "claims": [
+    {
+      "id": "c1",
+      "sectionId": "results",
+      "text": "CRISPR perturbation reduced MAPK activation in the treated cohort.",
+      "citationKeys": ["doe2024"],
+      "evidenceIds": ["e1"],
+      "tags": ["CRISPR", "MAPK", "single-cell"]
+    },
+    {
+      "id": "c2",
+      "sectionId": "results",
+      "text": "The workflow is fully reproducible across all reviewer machines.",
+      "citationKeys": [],
+      "evidenceIds": ["e2"],
+      "tags": ["reproducibility", "notebook", "workflow"]
+    },
+    {
+      "id": "c3",
+      "sectionId": "results",
+      "text": "A secondary endpoint reached p < 0.049 in a small exploratory subset.",
+      "citationKeys": ["missing2026"],
+      "evidenceIds": [],
+      "tags": ["statistics", "exploratory", "endpoint"]
+    }
+  ],
+  "bibliography": [
+    {
+      "key": "doe2024",
+      "title": "Single-cell perturbation screens for pathway response mapping",
+      "authors": ["Doe, J.", "Ibrahim, S."],
+      "year": 2024,
+      "venue": "Open Molecular Systems",
+      "doi": "10.5555/omols.2024.1001",
+      "url": "https://example.org/omols-2024-1001"
+    }
+  ],
+  "candidateCitations": [
+    {
+      "key": "nguyen2025",
+      "title": "Reproducible notebook capsules for computational biology review",
+      "authors": ["Nguyen, A.", "Patel, R."],
+      "year": 2025,
+      "venue": "Journal of Open Reproducibility",
+      "doi": "10.5555/jor.2025.021",
+      "url": "https://example.org/jor-2025-021",
+      "tags": ["reproducibility", "notebook", "workflow", "review"],
+      "openAccess": true
+    },
+    {
+      "key": "chen2023",
+      "title": "Confidence interval reporting for exploratory omics endpoints",
+      "authors": ["Chen, L.", "Morrison, T."],
+      "year": 2023,
+      "venue": "Statistical Methods in Biology",
+      "doi": "10.5555/smb.2023.44",
+      "url": "https://example.org/smb-2023-44",
+      "tags": ["statistics", "exploratory", "confidence interval", "endpoint"],
+      "openAccess": true
+    },
+    {
+      "key": "alvarez2022",
+      "title": "MAPK pathway annotations in single-cell stress models",
+      "authors": ["Alvarez, M."],
+      "year": 2022,
+      "venue": "Cell Systems Notes",
+      "doi": "",
+      "url": "https://example.org/cell-systems-notes-mapk",
+      "tags": ["MAPK", "single-cell", "stress response"],
+      "openAccess": false
+    }
+  ],
+  "evidenceArtifacts": [
+    {
+      "id": "e1",
+      "label": "Synthetic perturbation response table",
+      "type": "dataset",
+      "checksum": "sha256:2b5cf2c7b8a6d0e5e01b6a5dce0afac0",
+      "access": "reviewer-visible",
+      "supports": ["c1"]
+    },
+    {
+      "id": "e2",
+      "label": "Notebook replay manifest",
+      "type": "notebook-manifest",
+      "checksum": "sha256:7c8e4b1b326b2a4d7efbf2a79d1bb0a5",
+      "access": "reviewer-visible",
+      "supports": ["c2"]
+    }
+  ],
+  "compliance": {
+    "dataAvailability": false,
+    "ethicsStatement": true,
+    "codeAvailability": false
+  }
+}

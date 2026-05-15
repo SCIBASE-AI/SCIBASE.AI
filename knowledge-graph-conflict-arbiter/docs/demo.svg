@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Knowledge graph conflict arbiter demo</title>
+  <desc id="desc">A dashboard-style summary of scientific graph relationship arbitration and recommendation suppression.</desc>
+  <rect width="1280" height="720" fill="#f6f7f2"/>
+  <rect x="58" y="50" width="1164" height="620" rx="18" fill="#fffef9" stroke="#d9ded1" stroke-width="2"/>
+  <text x="96" y="116" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#202124">Scientific Knowledge Graph Conflict Arbiter</text>
+  <text x="96" y="154" font-family="Arial, sans-serif" font-size="18" fill="#5f665c">Contradictory graph edges are quarantined before search, entity pages, or recommendations use them.</text>
+  <rect x="96" y="206" width="250" height="132" rx="12" fill="#e5f4ef" stroke="#12715b"/>
+  <text x="122" y="252" font-family="Arial, sans-serif" font-size="18" fill="#12715b">Relationship groups</text>
+  <text x="122" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#12715b">3</text>
+  <rect x="376" y="206" width="250" height="132" rx="12" fill="#fff0c2" stroke="#946200"/>
+  <text x="402" y="252" font-family="Arial, sans-serif" font-size="18" fill="#946200">Conflicts</text>
+  <text x="402" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#946200">1</text>
+  <rect x="656" y="206" width="250" height="132" rx="12" fill="#fde1da" stroke="#a7352a"/>
+  <text x="682" y="252" font-family="Arial, sans-serif" font-size="18" fill="#a7352a">Quarantined</text>
+  <text x="682" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#a7352a">1</text>
+  <rect x="936" y="206" width="250" height="132" rx="12" fill="#e8f0ff" stroke="#275b9f"/>
+  <text x="962" y="252" font-family="Arial, sans-serif" font-size="18" fill="#275b9f">Suppressed recs</text>
+  <text x="962" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#275b9f">1</text>
+  <rect x="96" y="392" width="1090" height="1" fill="#d9ded1"/>
+  <text x="96" y="444" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">CRISPR prime editing -> improves-model-for -> Parkinsons disease</text>
+  <text x="96" y="484" font-family="Arial, sans-serif" font-size="20" fill="#5f665c">Support and refute evidence are close, so the edge is quarantined for curator review.</text>
+  <text x="96" y="540" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">Recommendation suppressed until curated</text>
+  <text x="96" y="580" font-family="Arial, sans-serif" font-size="20" fill="#5f665c">The recommendation engine receives provenance and a reason instead of silently using conflicting evidence.</text>
+  <text x="96" y="636" font-family="Arial, sans-serif" font-size="20" fill="#5f665c">Audit digest: deterministic SHA-256 arbitration packet hash.</text>
+</svg>

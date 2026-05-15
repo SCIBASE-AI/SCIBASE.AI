@@ -1,0 +1,98 @@
+{
+  "graphId": "kg-crispr-neuro-2026",
+  "freshnessHalfLifeDays": 365,
+  "entities": [
+    { "id": "method-crispr-prime-editing", "type": "method", "label": "CRISPR prime editing" },
+    { "id": "disease-parkinsons", "type": "disease", "label": "Parkinsons disease" },
+    { "id": "dataset-neuro-organoid-q2", "type": "dataset", "label": "Neuro organoid perturbation Q2" },
+    { "id": "protocol-dopamine-neurons", "type": "protocol", "label": "Dopamine neuron differentiation" },
+    { "id": "paper-alpha", "type": "paper", "label": "Alpha lab preprint" },
+    { "id": "paper-beta", "type": "paper", "label": "Beta lab replication note" }
+  ],
+  "relationships": [
+    {
+      "id": "edge-1",
+      "subject": "method-crispr-prime-editing",
+      "predicate": "improves-model-for",
+      "object": "disease-parkinsons",
+      "polarity": "supports",
+      "evidenceType": "replicated-experiment",
+      "confidence": 0.89,
+      "citationCount": 42,
+      "sourceDate": "2026-04-20",
+      "source": "paper-alpha",
+      "extractor": "pubmed-ner-v2",
+      "evidenceSpan": "Prime editing improved dopaminergic neuron rescue in three replicated organoid batches."
+    },
+    {
+      "id": "edge-2",
+      "subject": "method-crispr-prime-editing",
+      "predicate": "improves-model-for",
+      "object": "disease-parkinsons",
+      "polarity": "refutes",
+      "evidenceType": "replication-failure",
+      "confidence": 0.82,
+      "citationCount": 17,
+      "sourceDate": "2026-05-08",
+      "source": "paper-beta",
+      "extractor": "crossref-abstract-v1",
+      "evidenceSpan": "Independent replication did not reproduce rescue after batch correction."
+    },
+    {
+      "id": "edge-3",
+      "subject": "dataset-neuro-organoid-q2",
+      "predicate": "reuses-protocol",
+      "object": "protocol-dopamine-neurons",
+      "polarity": "supports",
+      "evidenceType": "dataset-lineage",
+      "confidence": 0.93,
+      "citationCount": 9,
+      "sourceDate": "2026-05-01",
+      "source": "dataset-neuro-organoid-q2",
+      "extractor": "metadata-parser-v3",
+      "evidenceSpan": "Dataset manifest links batch generation to protocol v3.2."
+    },
+    {
+      "id": "edge-4",
+      "subject": "dataset-neuro-organoid-q2",
+      "predicate": "reuses-protocol",
+      "object": "protocol-dopamine-neurons",
+      "polarity": "supports",
+      "evidenceType": "curator-assertion",
+      "confidence": 0.78,
+      "citationCount": 3,
+      "sourceDate": "2026-04-28",
+      "source": "paper-alpha",
+      "extractor": "manual-curation",
+      "evidenceSpan": "Curator confirmed protocol linkage during import review."
+    },
+    {
+      "id": "edge-5",
+      "subject": "method-crispr-prime-editing",
+      "predicate": "requires-dataset",
+      "object": "dataset-neuro-organoid-q2",
+      "polarity": "supports",
+      "evidenceType": "weak-text-mention",
+      "confidence": 0.47,
+      "citationCount": 1,
+      "sourceDate": "2024-09-10",
+      "source": "paper-alpha",
+      "extractor": "legacy-pdf-ocr",
+      "evidenceSpan": "An OCR mention suggests possible use of organoid data."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-1",
+      "topic": "prime-editing-parkinsons-collaboration",
+      "dependsOnEdges": ["edge-1", "edge-2"],
+      "text": "Recommend collaborators using CRISPR prime editing for Parkinsons disease."
+    },
+    {
+      "id": "rec-2",
+      "topic": "organoid-protocol-reuse",
+      "dependsOnEdges": ["edge-3", "edge-4"],
+      "text": "Recommend projects that reuse the dopamine neuron differentiation protocol."
+    }
+  ]
+}

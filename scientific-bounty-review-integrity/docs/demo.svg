@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific bounty review integrity demo</title>
+  <desc id="desc">Privacy-safe workflow demo showing synthetic scientific bounty data moving through evidence hashing, conflict screening, scoring, payout readiness, and IP handoff.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fafc; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
+      .primary { fill: #0f172a; }
+      .muted { fill: #475569; }
+      .label { font: 700 24px Arial, sans-serif; }
+      .sub { font: 16px Arial, sans-serif; }
+      .tiny { font: 14px Arial, sans-serif; }
+      .code { font: 14px Consolas, monospace; }
+      .pill { fill: #dcfce7; stroke: #16a34a; stroke-width: 1.5; rx: 18; }
+      .warn { fill: #fef3c7; stroke: #d97706; stroke-width: 1.5; rx: 18; }
+      .hash { fill: #e0f2fe; stroke: #0284c7; stroke-width: 1.5; rx: 18; }
+      .line { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 8 8; fill: none; }
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto">
+      <path d="M0,0 L12,5 L0,10 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1120" height="720"/>
+  <text x="56" y="58" class="primary label">Scientific Bounty Review Integrity</text>
+  <text x="56" y="90" class="muted sub">Synthetic demo: no credentials, no live research data, no external services.</text>
+
+  <rect x="56" y="132" width="280" height="156" class="panel"/>
+  <text x="82" y="174" class="primary label">1. Submission</text>
+  <text x="82" y="210" class="muted sub">Whitepaper, dataset, notebook</text>
+  <text x="82" y="238" class="code muted">submissionId: SYN-BIO-42</text>
+  <text x="82" y="264" class="code muted">contributors: 70% / 30%</text>
+
+  <path d="M336 210 H424" class="line"/>
+
+  <rect x="424" y="132" width="280" height="156" class="panel"/>
+  <text x="450" y="174" class="primary label">2. Evidence Manifest</text>
+  <text x="450" y="210" class="muted sub">Deterministic SHA-256 hashes</text>
+  <rect x="450" y="232" width="210" height="36" class="hash"/>
+  <text x="468" y="255" class="code primary">3 artifacts hashed</text>
+
+  <path d="M704 210 H792" class="line"/>
+
+  <rect x="792" y="132" width="272" height="156" class="panel"/>
+  <text x="818" y="174" class="primary label">3. Conflict Screen</text>
+  <text x="818" y="210" class="muted sub">Reviewer team, affiliation, declarations</text>
+  <rect x="818" y="232" width="190" height="36" class="warn"/>
+  <text x="836" y="255" class="code primary">1 review excluded</text>
+
+  <path d="M928 288 V360" class="line"/>
+
+  <rect x="792" y="360" width="272" height="156" class="panel"/>
+  <text x="818" y="402" class="primary label">4. Rubric Score</text>
+  <text x="818" y="438" class="muted sub">Weighted criteria after conflict removal</text>
+  <rect x="818" y="460" width="190" height="36" class="pill"/>
+  <text x="836" y="483" class="code primary">score: 86 / pass</text>
+
+  <path d="M792 438 H704" class="line"/>
+
+  <rect x="424" y="360" width="280" height="156" class="panel"/>
+  <text x="450" y="402" class="primary label">5. Payout Readiness</text>
+  <text x="450" y="438" class="muted sub">No missing deliverables or blockers</text>
+  <rect x="450" y="460" width="220" height="36" class="pill"/>
+  <text x="468" y="483" class="code primary">ready_for_sponsor_approval</text>
+
+  <path d="M424 438 H336" class="line"/>
+
+  <rect x="56" y="360" width="280" height="156" class="panel"/>
+  <text x="82" y="402" class="primary label">6. IP Handoff</text>
+  <text x="82" y="438" class="muted sub">IP is retained until payout readiness</text>
+  <rect x="82" y="460" width="210" height="36" class="pill"/>
+  <text x="100" y="483" class="code primary">eligible_after_payout</text>
+
+  <rect x="56" y="570" width="1008" height="94" class="panel"/>
+  <text x="82" y="608" class="primary label">Audit Result</text>
+  <text x="82" y="642" class="code muted">auditHash: 04edceba36...  |  payoutPlan: milestone split across contributor shares</text>
+  <path d="M78 622 H1042" class="dash"/>
+</svg>

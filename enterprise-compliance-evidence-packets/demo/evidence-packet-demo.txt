@@ -1,0 +1,24 @@
+SCIBASE Enterprise Compliance Evidence Packets
+
+$ npm run demo -- --project P-1002
+
+Dashboard
+  Total projects: 1
+  Ready: 0
+  Needs review: 1
+  Blocked: 0
+
+Project
+  Open catalyst benchmark for low-temperature ammonia
+  Status: needs_review
+  Readiness score: 50
+
+Detected gaps
+  - Reproducibility score is below 80%
+  - ORCID coverage is 67%, below 75%
+  - Preprint export target has no output format
+
+$ node src/cli.js --input examples/institution-projects.json --format json --webhook-secret demo-secret
+
+Result
+  Webhook envelope generated with stable packetDigest and HMAC signature.

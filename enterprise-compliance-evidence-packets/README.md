@@ -33,6 +33,10 @@ For JSON output:
 npm run demo:json
 ```
 
+## Demo Video
+
+The short demo video is available at `demo/evidence-packet-demo.mp4`.
+
 ## Run Tests
 
 ```bash

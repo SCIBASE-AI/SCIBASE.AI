@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-05-15T00:00:00Z",
+  "manuscript": {
+    "id": "ms-crispr-ad-001",
+    "title": "Single-cell CRISPR perturbation markers for early Alzheimer's risk",
+    "claims": [
+      {
+        "id": "claim-primary-biomarker",
+        "text": "CRISPR perturbation of microglia identifies APOE-regulated single-cell biomarkers associated with early Alzheimer's progression.",
+        "resultType": "primary",
+        "direction": "positive",
+        "population": "microglia single-cell cohort"
+      },
+      {
+        "id": "claim-secondary-model",
+        "text": "A reproducible notebook pipeline ranks biomarker candidates with stable confidence across two validation folds.",
+        "resultType": "secondary",
+        "direction": "positive",
+        "population": "validation folds"
+      },
+      {
+        "id": "claim-exploratory-therapy",
+        "text": "The same evidence suggests a therapeutic intervention path for late-stage disease.",
+        "resultType": "exploratory",
+        "direction": "positive",
+        "population": "late-stage patients"
+      }
+    ],
+    "limitations": [
+      "The study has limited replication across independent Alzheimer's cohorts.",
+      "Therapeutic claims require follow-up experiments outside the discovery dataset."
+    ],
+    "sections": {
+      "ethics": "IRB exempt secondary analysis of deidentified public data.",
+      "dataAvailability": "Synthetic fixture data and checksums are included in the export manifest.",
+      "limitations": "Independent cohort replication remains future work."
+    }
+  },
+  "protocol": {
+    "id": "proto-crispr-ad-001",
+    "commitments": [
+      {
+        "id": "commit-primary-biomarker",
+        "question": "Do APOE-regulated CRISPR perturbations identify microglia biomarkers for early Alzheimer's progression?",
+        "endpoint": "ranked biomarker candidates with confidence intervals",
+        "analysisPlan": "Run the preregistered single-cell notebook and compare top markers across validation folds.",
+        "expectedDirection": "positive",
+        "population": "microglia single-cell cohort"
+      },
+      {
+        "id": "commit-validation",
+        "question": "Are biomarker rankings reproducible across two validation folds?",
+        "endpoint": "stable confidence score in both validation folds",
+        "analysisPlan": "Execute deterministic ranking pipeline and compare artifact hashes.",
+        "expectedDirection": "positive",
+        "population": "validation folds"
+      }
+    ]
+  },
+  "evidenceArtifacts": [
+    {
+      "id": "artifact-notebook",
+      "kind": "notebook",
+      "title": "Single-cell CRISPR biomarker ranking notebook",
+      "description": "Runs preregistered APOE microglia perturbation analysis and produces ranked biomarker candidates.",
+      "findings": "APOE-regulated CRISPR perturbation markers remain stable across validation folds.",
+      "path": "notebooks/crispr-biomarker-ranking.ipynb"
+    },
+    {
+      "id": "artifact-dataset",
+      "kind": "dataset",
+      "title": "Microglia single-cell cohort manifest",
+      "description": "Deidentified single-cell input matrix with fold assignment and checksum metadata.",
+      "findings": "Dataset supports early Alzheimer's progression endpoint and validation fold analysis.",
+      "path": "data/microglia-cohort-manifest.json"
+    },
+    {
+      "id": "artifact-results",
+      "kind": "result",
+      "title": "Biomarker confidence table",
+      "description": "Confidence intervals and fold stability for ranked biomarker candidates.",
+      "findings": "Top biomarker confidence remains stable across two validation folds.",
+      "path": "results/biomarker-confidence.csv"
+    }
+  ],
+  "citations": [
+    {
+      "id": "cite-apoe-microglia",
+      "title": "APOE regulation in microglia and Alzheimer's progression",
+      "abstract": "Review of APOE-regulated microglia pathways in Alzheimer's disease.",
+      "keywords": ["APOE", "microglia", "Alzheimer's", "single-cell"],
+      "doi": "10.0000/scibase.apoe.microglia"
+    },
+    {
+      "id": "cite-crispr-screen",
+      "title": "CRISPR perturbation screens for biomarker discovery",
+      "abstract": "Methods for CRISPR perturbation and biomarker ranking in single-cell datasets.",
+      "keywords": ["CRISPR", "biomarker", "single-cell"],
+      "url": "https://example.org/crispr-screen"
+    }
+  ],
+  "reproducibility": {
+    "rawDataAvailable": true,
+    "analysisCommand": "node scripts/run-biomarker-ranking.js --fixture data/microglia-cohort-manifest.json",
+    "lockfile": "package-lock.json",
+    "testDataAvailable": true,
+    "expectedOutputs": [
+      {
+        "path": "results/biomarker-confidence.csv",
+        "sha256": "f0b094bc2bd4d6ddc71b0b172d21b7fd0ff7ea4bece43e7ea2ed3e8f4c95d7f6"
+      },
+      {
+        "path": "results/reproducibility-summary.json",
+        "sha256": "92e9a7fe1e539a906cbb1b8be838cf6f20f3fbdcfa4d061b2e94817adbb3f2b4"
+      }
+    ],
+    "attempts": [
+      {
+        "id": "attempt-001",
+        "status": "passed",
+        "executedAt": "2026-05-14T19:00:00Z",
+        "runner": "local-sandbox"
+      }
+    ]
+  },
+  "researchCorpus": {
+    "topicClusters": [
+      {
+        "topic": "CRISPR microglia Alzheimer's replication cohorts",
+        "openQuestion": "Which independent cohorts can replicate CRISPR-derived microglia biomarkers?",
+        "keywords": ["CRISPR", "microglia", "Alzheimer's", "replication"],
+        "paperCount": 21,
+        "replicationCount": 1
+      },
+      {
+        "topic": "Late-stage Alzheimer's therapeutic intervention studies",
+        "openQuestion": "Which perturbation-derived biomarkers translate into late-stage therapeutic hypotheses?",
+        "keywords": ["Alzheimer's", "therapy", "biomarkers"],
+        "paperCount": 14,
+        "replicationCount": 5
+      },
+      {
+        "topic": "Single-cell negative results in neurodegeneration",
+        "openQuestion": "Where do negative single-cell CRISPR results prevent overclaiming in neurodegeneration?",
+        "keywords": ["single-cell", "negative results", "neurodegeneration"],
+        "paperCount": 8,
+        "replicationCount": 0
+      }
+    ]
+  },
+  "userContext": {
+    "interests": [
+      "single-cell CRISPR biomarker replication",
+      "Alzheimer's microglia reproducibility"
+    ]
+  }
+}

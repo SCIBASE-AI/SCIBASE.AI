@@ -1,0 +1,106 @@
+{
+  "now": "2026-05-15T00:00:00.000Z",
+  "repository": {
+    "id": "repo-neuro-042",
+    "name": "Neurotherapy longitudinal response repository",
+    "steward": "dr.mendez@scibase.ai",
+    "embargoUntil": "2026-07-01T00:00:00.000Z",
+    "citation": {
+      "authors": ["A. Mendez", "J. Shah"],
+      "affiliations": ["SCIBASE Translational Neuroscience"],
+      "funding": ["NIH-R01-SCI-2042"]
+    }
+  },
+  "components": [
+    {
+      "path": "data/raw/cohort.csv",
+      "type": "human_subjects_dataset",
+      "bytes": 318767104,
+      "hash": "sha256:3c45b3a9ff7ebdbe8d8324f6fb52b04cda0d0d1d0bf8db346a04e23b63bbbc2f",
+      "restricted": true,
+      "lfsPointer": false,
+      "license": "DUA-2026-17"
+    },
+    {
+      "path": "notebooks/response-model.ipynb",
+      "type": "analysis_notebook",
+      "bytes": 684512,
+      "hash": "sha256:623db1d2202f2a551a770471cfe01af0267758a19c38694d178287ff98c38d99",
+      "restricted": false,
+      "lfsPointer": false,
+      "license": "MIT"
+    },
+    {
+      "path": "metadata/variables.json",
+      "type": "metadata",
+      "bytes": 18234,
+      "hash": "sha256:1483a0d69c817e45db648a55cc1eca6f18f23f99d20ecb72964ffab03b287d25",
+      "restricted": false,
+      "lfsPointer": false,
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "versions": [
+    {
+      "version": "v2.0.0",
+      "tag": "dataset-baseline",
+      "createdAt": "2026-04-01T12:30:00.000Z",
+      "rollbackSnapshotHash": "sha256:dd338f3433b08fda89ab11da7f54f840b5e832be4a47d1833911b1fb4d4c1dd8"
+    }
+  ],
+  "releaseCandidate": {
+    "version": "v2.1.0",
+    "visibility": "public",
+    "parentVersion": "v2.0.0",
+    "semanticTag": "dataset-minor",
+    "reservedDoi": "10.5281/zenodo.2002042",
+    "embargoUntil": "2026-07-01T00:00:00.000Z",
+    "requiredPipelineIds": [
+      "pipeline:reproduce-figures",
+      "pipeline:privacy-regression"
+    ],
+    "manifest": [
+      {
+        "path": "data/raw/cohort.csv",
+        "restricted": true
+      },
+      {
+        "path": "notebooks/response-model.ipynb",
+        "restricted": false
+      },
+      {
+        "path": "metadata/variables.json",
+        "restricted": false
+      }
+    ],
+    "exportFiles": [
+      "metadata.json",
+      "LICENSE",
+      "CITATION.cff",
+      "manifest.json"
+    ]
+  },
+  "reproducibilityRuns": [
+    {
+      "pipelineId": "pipeline:reproduce-figures",
+      "status": "passed",
+      "completedAt": "2026-05-12T18:10:00.000Z",
+      "outputHash": "sha256:a97eaf103155fd400855d94c0ea50adfb245d51a6d0218736b176f817d4a1433"
+    },
+    {
+      "pipelineId": "pipeline:privacy-regression",
+      "status": "passed",
+      "completedAt": "2026-05-12T18:33:00.000Z",
+      "outputHash": "sha256:3d0ff9fb5821faa229263f965ae6195d103439812c5f48f93ff8082af7c4f016"
+    }
+  ],
+  "accessPolicies": [
+    {
+      "id": "dua-neurotherapy-2026",
+      "status": "active",
+      "steward": "dr.mendez@scibase.ai",
+      "allowedRoles": ["repository-steward", "privacy-reviewer"],
+      "expiresAt": "2026-12-31T23:59:59.000Z"
+    }
+  ]
+}

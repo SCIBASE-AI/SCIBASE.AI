@@ -56,6 +56,7 @@ Expected demo shape:
 - `sample/revenue-fixture.json` - plan catalog, accounts, usage, top-ups, and licensing export request.
 - `test/revenue-entitlement.test.js` - regression tests for plan validation, quote math, compute metering, invoices, licensing exports, and health reporting.
 - `docs/demo.svg` - visual walkthrough for PR review.
+- `docs/demo.mp4` - short generated video walkthrough for maintainers who prefer an inline demo artifact.
 
 ## Notes
 

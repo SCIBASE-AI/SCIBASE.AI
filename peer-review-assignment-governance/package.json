@@ -1,0 +1,13 @@
+{
+  "name": "peer-review-assignment-governance",
+  "version": "1.0.0",
+  "description": "Deterministic peer-review conflict-of-interest and assignment governance module for SCIBASE issue 15.",
+  "main": "src/review-assignment-governance.js",
+  "scripts": {
+    "check": "node --check src/review-assignment-governance.js && node --check demo.js && node --check test.js",
+    "demo": "node demo.js",
+    "test": "node test.js"
+  },
+  "license": "MIT",
+  "private": true
+}

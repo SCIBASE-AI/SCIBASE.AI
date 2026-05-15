@@ -1,0 +1,283 @@
+{
+  "project": {
+    "id": "proj-alz-crispr-042",
+    "title": "CRISPR microglia biomarker atlas",
+    "discipline": "biomedicine",
+    "reviewMode": "double-blind",
+    "requiredReviewers": 3,
+    "priorityTopics": [
+      "CRISPR",
+      "microglia",
+      "Alzheimer disease",
+      "single-cell sequencing",
+      "reproducibility"
+    ],
+    "methods": [
+      "single-cell RNA sequencing",
+      "CRISPR screen",
+      "Bayesian mixed model"
+    ],
+    "artifactScopes": [
+      "manuscript",
+      "dataset",
+      "analysis notebook"
+    ],
+    "authorIds": [
+      "author-nb-01",
+      "author-hu-02"
+    ],
+    "authorInstitutions": [
+      "Northbridge Lab",
+      "Helix University"
+    ],
+    "funders": [
+      "Open Neuro Fund"
+    ]
+  },
+  "reviewers": [
+    {
+      "id": "reviewer-ortiz",
+      "displayName": "Dr. Lena Ortiz",
+      "institution": "Cedar Institute",
+      "discipline": "biomedicine",
+      "topics": [
+        "CRISPR",
+        "microglia",
+        "neuroinflammation",
+        "Alzheimer disease"
+      ],
+      "methods": [
+        "single-cell RNA sequencing",
+        "CRISPR screen"
+      ],
+      "recentCollaboratorIds": [],
+      "recentCoauthorIds": [],
+      "funders": [
+        "Open Tools Grant"
+      ],
+      "activeAssignments": 1,
+      "profile": {
+        "completedReviews": 42,
+        "medianTurnaroundDays": 5,
+        "endorsementScore": 82,
+        "reproducibilityScore": 91,
+        "disputeRate": 0.03,
+        "overdueReviews": 0,
+        "blindReviewTraining": true,
+        "consensusDrift": 0.04
+      }
+    },
+    {
+      "id": "reviewer-shah",
+      "displayName": "Prof. Mina Shah",
+      "institution": "Helix University",
+      "discipline": "biomedicine",
+      "topics": [
+        "microglia",
+        "Alzheimer disease",
+        "disease biomarkers"
+      ],
+      "methods": [
+        "immunostaining",
+        "single-cell RNA sequencing"
+      ],
+      "recentCollaboratorIds": [],
+      "recentCoauthorIds": [],
+      "funders": [
+        "Open Neuro Fund"
+      ],
+      "activeAssignments": 0,
+      "profile": {
+        "completedReviews": 55,
+        "medianTurnaroundDays": 6,
+        "endorsementScore": 89,
+        "reproducibilityScore": 84,
+        "disputeRate": 0.02,
+        "overdueReviews": 0,
+        "blindReviewTraining": true,
+        "consensusDrift": 0.02
+      }
+    },
+    {
+      "id": "reviewer-nolan",
+      "displayName": "Kai Nolan",
+      "institution": "Westport Bioinformatics",
+      "discipline": "computational biology",
+      "topics": [
+        "single-cell sequencing",
+        "knowledge graph",
+        "reproducibility",
+        "notebook audit"
+      ],
+      "methods": [
+        "Bayesian mixed model",
+        "workflow reproducibility",
+        "notebook execution"
+      ],
+      "recentCollaboratorIds": [],
+      "recentCoauthorIds": [],
+      "funders": [
+        "Reproducible Science Trust"
+      ],
+      "activeAssignments": 1,
+      "profile": {
+        "completedReviews": 31,
+        "medianTurnaroundDays": 6,
+        "endorsementScore": 80,
+        "reproducibilityScore": 96,
+        "disputeRate": 0.05,
+        "overdueReviews": 0,
+        "blindReviewTraining": true,
+        "consensusDrift": 0.06
+      }
+    },
+    {
+      "id": "reviewer-patel",
+      "displayName": "Arun Patel",
+      "institution": "Southlake Genomics",
+      "discipline": "biomedicine",
+      "topics": [
+        "CRISPR",
+        "microglia",
+        "cell atlas"
+      ],
+      "methods": [
+        "CRISPR screen",
+        "flow cytometry"
+      ],
+      "recentCollaboratorIds": [
+        "author-nb-01"
+      ],
+      "recentCoauthorIds": [],
+      "funders": [],
+      "activeAssignments": 0,
+      "profile": {
+        "completedReviews": 28,
+        "medianTurnaroundDays": 4,
+        "endorsementScore": 80,
+        "reproducibilityScore": 78,
+        "disputeRate": 0.04,
+        "overdueReviews": 0,
+        "blindReviewTraining": false,
+        "consensusDrift": 0.05
+      }
+    },
+    {
+      "id": "reviewer-chen",
+      "displayName": "Eli Chen",
+      "institution": "Open Methods Lab",
+      "discipline": "statistics",
+      "topics": [
+        "Bayesian modeling",
+        "reproducibility",
+        "p-value audit",
+        "open science"
+      ],
+      "methods": [
+        "Bayesian mixed model",
+        "statistical review",
+        "data validation"
+      ],
+      "recentCollaboratorIds": [],
+      "recentCoauthorIds": [],
+      "funders": [
+        "Methods Commons"
+      ],
+      "activeAssignments": 1,
+      "profile": {
+        "completedReviews": 38,
+        "medianTurnaroundDays": 6,
+        "endorsementScore": 79,
+        "reproducibilityScore": 88,
+        "disputeRate": 0.04,
+        "overdueReviews": 0,
+        "blindReviewTraining": true,
+        "consensusDrift": 0.03
+      }
+    },
+    {
+      "id": "reviewer-okafor",
+      "displayName": "Nora Okafor",
+      "institution": "Metro Data Stewardship Center",
+      "discipline": "data stewardship",
+      "topics": [
+        "dataset curation",
+        "FAIR metadata",
+        "reproducibility",
+        "consent review"
+      ],
+      "methods": [
+        "metadata audit",
+        "notebook execution",
+        "access review"
+      ],
+      "recentCollaboratorIds": [],
+      "recentCoauthorIds": [],
+      "funders": [],
+      "activeAssignments": 5,
+      "profile": {
+        "completedReviews": 44,
+        "medianTurnaroundDays": 11,
+        "endorsementScore": 73,
+        "reproducibilityScore": 93,
+        "disputeRate": 0.08,
+        "overdueReviews": 2,
+        "blindReviewTraining": true,
+        "consensusDrift": 0.13
+      }
+    },
+    {
+      "id": "reviewer-meyer",
+      "displayName": "Sofia Meyer",
+      "institution": "Riverside Neurotech",
+      "discipline": "neuroscience",
+      "topics": [
+        "Alzheimer disease",
+        "biomarkers",
+        "research ethics",
+        "protocol reproducibility"
+      ],
+      "methods": [
+        "protocol review",
+        "ethics checklist",
+        "replication planning"
+      ],
+      "recentCollaboratorIds": [],
+      "recentCoauthorIds": [],
+      "funders": [
+        "Open Neuro Fund"
+      ],
+      "activeAssignments": 0,
+      "profile": {
+        "completedReviews": 24,
+        "medianTurnaroundDays": 8,
+        "endorsementScore": 71,
+        "reproducibilityScore": 82,
+        "disputeRate": 0.06,
+        "overdueReviews": 0,
+        "blindReviewTraining": true,
+        "consensusDrift": 0.07
+      }
+    }
+  ],
+  "disclosures": [
+    {
+      "reviewerId": "reviewer-shah",
+      "type": "current-institution",
+      "severity": "high",
+      "summary": "Reviewer is at an author institution."
+    },
+    {
+      "reviewerId": "reviewer-patel",
+      "type": "recent-collaboration",
+      "severity": "high",
+      "summary": "Reviewer collaborated with the lead author in the last 24 months."
+    },
+    {
+      "reviewerId": "reviewer-meyer",
+      "type": "shared-funder",
+      "severity": "medium",
+      "summary": "Reviewer has a current award from one project funder."
+    }
+  ]
+}

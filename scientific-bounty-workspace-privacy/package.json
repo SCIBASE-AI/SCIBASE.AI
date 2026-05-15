@@ -1,0 +1,19 @@
+{
+  "name": "scientific-bounty-workspace-privacy",
+  "version": "1.0.0",
+  "description": "Dependency-free solver workspace privacy, prequalification, access control, and package-manifest checks for SCIBASE issue 18.",
+  "main": "src/workspace-privacy.js",
+  "scripts": {
+    "check": "node --check src/workspace-privacy.js && node --check scripts/demo.js && node --check test/workspace-privacy.test.js",
+    "demo": "node scripts/demo.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "scientific-bounty",
+    "submission-workspace",
+    "privacy",
+    "prequalification",
+    "artifact-manifest"
+  ],
+  "license": "MIT"
+}

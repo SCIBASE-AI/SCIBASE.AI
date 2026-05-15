@@ -1,0 +1,172 @@
+{
+  "challenge": {
+    "id": "challenge-biomarker-2026",
+    "title": "Single-cell biomarker sprint",
+    "visibility": "private",
+    "phase": "prototype",
+    "anonymousSubmissions": true,
+    "ndaRequired": true,
+    "evaluationUnlockAt": "2026-06-15T12:00:00.000Z",
+    "payoutState": "pending",
+    "ipPolicy": "solver-retains-until-paid",
+    "requiredDeliverables": [
+      "working-model",
+      "validation-dataset",
+      "whitepaper"
+    ],
+    "prequalification": {
+      "allowedDomains": [
+        "single-cell-genomics",
+        "biomarker-discovery",
+        "statistical-genetics"
+      ],
+      "allowedInstitutionTypes": [
+        "university",
+        "independent-lab",
+        "nonprofit"
+      ],
+      "requiresConflictDisclosure": true
+    }
+  },
+  "workspaces": [
+    {
+      "id": "workspace-alpha",
+      "teamName": "Northstar Cell Lab",
+      "participationMode": "anonymous",
+      "status": "draft",
+      "phase": "prototype",
+      "members": [
+        {
+          "id": "user-a1",
+          "name": "Dr. Ada Mercer",
+          "publicAlias": "solver-7f3a",
+          "role": "lead",
+          "institutionType": "university",
+          "domains": [
+            "single-cell-genomics",
+            "biomarker-discovery"
+          ],
+          "ndaSignedAt": "2026-05-20T09:00:00.000Z",
+          "conflictDisclosure": "none"
+        },
+        {
+          "id": "user-a2",
+          "name": "Min Rao",
+          "publicAlias": "solver-915d",
+          "role": "analyst",
+          "institutionType": "university",
+          "domains": [
+            "statistical-genetics"
+          ],
+          "ndaSignedAt": "2026-05-20T09:10:00.000Z",
+          "conflictDisclosure": "none"
+        }
+      ],
+      "reviewers": [
+        {
+          "id": "reviewer-clean",
+          "name": "Peer Reviewer A",
+          "institution": "Neutral Review Cooperative",
+          "conflicts": []
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "artifact-model",
+          "deliverable": "working-model",
+          "title": "Biomarker model notebook",
+          "classification": "confidential",
+          "sha256": "88999e2f93454da82f340d4b6f406859c134b5b7621ec2a18ace8a02aa89e8ff",
+          "createdBy": "user-a1",
+          "phase": "prototype",
+          "license": "solver-retains-until-paid"
+        },
+        {
+          "id": "artifact-dataset",
+          "deliverable": "validation-dataset",
+          "title": "Validation cohort manifest",
+          "classification": "restricted",
+          "sha256": "971d45c8fda47387e1d5ac9db535d4c5d90b9ef3d948c8eb1d4da0d4e53f948a",
+          "createdBy": "user-a2",
+          "phase": "prototype",
+          "license": "solver-retains-until-paid"
+        },
+        {
+          "id": "artifact-summary",
+          "deliverable": "whitepaper",
+          "title": "Anonymous whitepaper preview",
+          "classification": "public-preview",
+          "sha256": "2dc656d3a6706e2bdbbf7e1c60f8c2f184c0eea8f92995afc47df613d62fa64a",
+          "createdBy": "user-a1",
+          "phase": "prototype",
+          "license": "solver-retains-until-paid"
+        }
+      ],
+      "auditEvents": [
+        {
+          "at": "2026-05-20T09:00:00.000Z",
+          "actor": "user-a1",
+          "type": "nda_signed",
+          "target": "challenge-biomarker-2026"
+        },
+        {
+          "at": "2026-05-21T15:30:00.000Z",
+          "actor": "user-a2",
+          "type": "artifact_uploaded",
+          "target": "artifact-dataset"
+        }
+      ]
+    },
+    {
+      "id": "workspace-beta",
+      "teamName": "Helix Industrial R&D",
+      "participationMode": "named",
+      "status": "draft",
+      "phase": "prototype",
+      "members": [
+        {
+          "id": "user-b1",
+          "name": "Chris Vale",
+          "publicAlias": "Chris Vale",
+          "role": "lead",
+          "institutionType": "corporate-rd",
+          "domains": [
+            "biomarker-discovery"
+          ],
+          "ndaSignedAt": "",
+          "conflictDisclosure": "sponsor-supplier"
+        }
+      ],
+      "reviewers": [
+        {
+          "id": "reviewer-conflicted",
+          "name": "Reviewer With Conflict",
+          "institution": "Helix Industrial R&D",
+          "conflicts": [
+            "workspace-beta"
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "artifact-beta-model",
+          "deliverable": "working-model",
+          "title": "Model draft",
+          "classification": "confidential",
+          "sha256": "",
+          "createdBy": "user-b1",
+          "phase": "prototype",
+          "license": "solver-retains-until-paid"
+        }
+      ],
+      "auditEvents": [
+        {
+          "at": "2026-05-21T08:00:00.000Z",
+          "actor": "user-b1",
+          "type": "workspace_created",
+          "target": "workspace-beta"
+        }
+      ]
+    }
+  ]
+}

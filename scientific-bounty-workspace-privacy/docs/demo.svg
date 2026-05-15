@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific bounty workspace privacy demo</title>
+  <desc id="desc">A diagram of prequalification, private workspace artifacts, access decisions, and package manifests for scientific bounty submissions.</desc>
+  <rect width="1280" height="720" fill="#f6f8fb"/>
+  <rect x="72" y="58" width="1136" height="96" rx="0" fill="#172033"/>
+  <text x="112" y="112" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Scientific Bounty Workspace Privacy</text>
+  <text x="112" y="138" font-family="Arial, sans-serif" font-size="18" fill="#c8d4e8">Solver prequalification, anonymous manifests, artifact access gates, and IP-safe release states</text>
+  <rect x="84" y="204" width="248" height="352" rx="0" fill="#ffffff" stroke="#c7d0df"/>
+  <text x="112" y="250" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172033">Prequal Gate</text>
+  <text x="112" y="292" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Domain fit</text>
+  <text x="112" y="326" font-family="Arial, sans-serif" font-size="17" fill="#31415c">NDA signed</text>
+  <text x="112" y="360" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Institution eligibility</text>
+  <text x="112" y="394" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Conflict disclosure</text>
+  <rect x="112" y="452" width="164" height="48" rx="0" fill="#e6f6ef" stroke="#2f9d68"/>
+  <text x="136" y="483" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#19734a">eligible=1</text>
+  <rect x="376" y="204" width="248" height="352" rx="0" fill="#ffffff" stroke="#c7d0df"/>
+  <text x="404" y="250" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172033">Private Workspace</text>
+  <text x="404" y="292" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Anonymous team aliases</text>
+  <text x="404" y="326" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Classified artifacts</text>
+  <text x="404" y="360" font-family="Arial, sans-serif" font-size="17" fill="#31415c">SHA-256 evidence</text>
+  <text x="404" y="394" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Audit event digest</text>
+  <rect x="404" y="452" width="154" height="48" rx="0" fill="#fff3d6" stroke="#c98900"/>
+  <text x="427" y="483" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#8a5d00">hold=1</text>
+  <rect x="668" y="204" width="248" height="352" rx="0" fill="#ffffff" stroke="#c7d0df"/>
+  <text x="696" y="250" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172033">Access Decisions</text>
+  <text x="696" y="292" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Sponsor previews only</text>
+  <text x="696" y="326" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Reviewer timed unlock</text>
+  <text x="696" y="360" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Arbitrator dispute access</text>
+  <text x="696" y="394" font-family="Arial, sans-serif" font-size="17" fill="#31415c">IP release after payout</text>
+  <rect x="696" y="452" width="172" height="48" rx="0" fill="#fce7e7" stroke="#c34242"/>
+  <text x="716" y="483" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#9b2424">sponsor denied</text>
+  <rect x="960" y="204" width="248" height="352" rx="0" fill="#ffffff" stroke="#c7d0df"/>
+  <text x="988" y="250" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#172033">Package Manifest</text>
+  <text x="988" y="292" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Deliverable coverage</text>
+  <text x="988" y="326" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Redacted members</text>
+  <text x="988" y="360" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Artifact hashes</text>
+  <text x="988" y="394" font-family="Arial, sans-serif" font-size="17" fill="#31415c">Deterministic digest</text>
+  <rect x="988" y="452" width="170" height="48" rx="0" fill="#e9f0ff" stroke="#4f72d0"/>
+  <text x="1013" y="483" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2f4c9a">64-char digest</text>
+  <path d="M332 380 H376" stroke="#6b7890" stroke-width="3"/>
+  <path d="M624 380 H668" stroke="#6b7890" stroke-width="3"/>
+  <path d="M916 380 H960" stroke="#6b7890" stroke-width="3"/>
+  <rect x="84" y="594" width="1124" height="54" rx="0" fill="#ffffff" stroke="#c7d0df"/>
+  <text x="112" y="628" font-family="Arial, sans-serif" font-size="18" fill="#31415c">Local verification: npm run check · npm test · npm run demo · ffprobe docs/demo.mp4</text>
+</svg>

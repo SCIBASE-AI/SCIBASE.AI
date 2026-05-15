@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Research gap replication planner demo">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="72" y="70" width="1136" height="580" rx="18" fill="#111827" stroke="#38bdf8" stroke-width="4"/>
+  <text x="116" y="132" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="42" font-weight="700">Research Gap Replication Planner</text>
+  <text x="116" y="190" fill="#93c5fd" font-family="Arial, sans-serif" font-size="28">Issue #16 AI Research Assistant Suite</text>
+  <g font-family="Arial, sans-serif" font-size="30" fill="#f8fafc">
+    <text x="116" y="276">1. Auto peer-review flags unsupported claims</text>
+    <text x="116" y="340">2. Reproducibility confidence scores project artifacts</text>
+    <text x="116" y="404">3. Gap finder ranks under-replicated topic intersections</text>
+    <text x="116" y="468">4. Replication plan lists required artifacts and first actions</text>
+  </g>
+  <rect x="116" y="520" width="628" height="74" rx="12" fill="#164e63"/>
+  <text x="144" y="568" fill="#ecfeff" font-family="Arial, sans-serif" font-size="28">Top: CRISPR + Alzheimer + single-cell</text>
+  <rect x="778" y="520" width="316" height="74" rx="12" fill="#7f1d1d"/>
+  <text x="808" y="568" fill="#fee2e2" font-family="Arial, sans-serif" font-size="28">Decision: prioritize</text>
+</svg>

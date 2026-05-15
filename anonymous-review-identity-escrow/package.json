@@ -1,0 +1,12 @@
+{
+  "name": "anonymous-review-identity-escrow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free anonymous review identity escrow and access audit module for SCIBASE user/project management.",
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check src/identity-escrow.js && node --check scripts/demo.js && node --check test/identity-escrow.test.js",
+    "test": "node test/identity-escrow.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

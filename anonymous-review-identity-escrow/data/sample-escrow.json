@@ -1,0 +1,127 @@
+{
+  "programId": "blind-review-cohort-q3",
+  "policy": {
+    "anonymousMode": true,
+    "requiredAssurance": 70,
+    "deanonymizationQuorum": 2,
+    "allowedDeanonymizationReasons": [
+      "harassment",
+      "data-exfiltration",
+      "research-integrity-investigation"
+    ],
+    "restrictedScopesForAnonymousReviewers": [
+      "raw-data-download",
+      "identity-export",
+      "billing-admin"
+    ]
+  },
+  "participants": [
+    {
+      "id": "reviewer-ada",
+      "displayName": "Ada Chen",
+      "role": "reviewer",
+      "profileMode": "anonymous-review",
+      "linkedIdentities": [
+        { "provider": "orcid", "verified": true, "subject": "0000-0002-1825-0097" },
+        { "provider": "github", "verified": true, "subject": "ada-lab" },
+        { "provider": "saml", "verified": true, "subject": "university.example" }
+      ],
+      "mfaEnabled": true,
+      "institutionVerified": true,
+      "training": {
+        "humanSubjects": "valid",
+        "dataUse": "valid"
+      },
+      "flags": []
+    },
+    {
+      "id": "reviewer-bo",
+      "displayName": "Bo Patel",
+      "role": "reviewer",
+      "profileMode": "anonymous-review",
+      "linkedIdentities": [
+        { "provider": "orcid", "verified": true, "subject": "0000-0003-1111-2222" },
+        { "provider": "github", "verified": false, "subject": "bo-lab" }
+      ],
+      "mfaEnabled": false,
+      "institutionVerified": false,
+      "training": {
+        "humanSubjects": "valid",
+        "dataUse": "expired"
+      },
+      "flags": ["mfa-missing", "data-use-training-expired"]
+    },
+    {
+      "id": "admin-mira",
+      "displayName": "Mira Santos",
+      "role": "admin",
+      "profileMode": "private",
+      "linkedIdentities": [
+        { "provider": "saml", "verified": true, "subject": "research-office.example" },
+        { "provider": "orcid", "verified": true, "subject": "0000-0001-5555-7777" }
+      ],
+      "mfaEnabled": true,
+      "institutionVerified": true,
+      "training": {
+        "humanSubjects": "valid",
+        "dataUse": "valid"
+      },
+      "flags": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-neuro-crispr",
+      "visibility": "invitation-only",
+      "sensitiveScopes": ["raw-data-download", "identity-export"],
+      "objects": [
+        { "id": "manuscript-draft", "kind": "document", "scope": "review-comment" },
+        { "id": "supplemental-raw-cells", "kind": "dataset", "scope": "raw-data-download" },
+        { "id": "author-roster", "kind": "identity", "scope": "identity-export" }
+      ]
+    }
+  ],
+  "accessRequests": [
+    {
+      "id": "grant-1",
+      "participantId": "reviewer-ada",
+      "projectId": "project-neuro-crispr",
+      "objectId": "manuscript-draft",
+      "requestedScope": "review-comment"
+    },
+    {
+      "id": "grant-2",
+      "participantId": "reviewer-ada",
+      "projectId": "project-neuro-crispr",
+      "objectId": "supplemental-raw-cells",
+      "requestedScope": "raw-data-download"
+    },
+    {
+      "id": "grant-3",
+      "participantId": "reviewer-bo",
+      "projectId": "project-neuro-crispr",
+      "objectId": "manuscript-draft",
+      "requestedScope": "review-comment"
+    }
+  ],
+  "deanonymizationRequests": [
+    {
+      "id": "case-1",
+      "requesterId": "admin-mira",
+      "targetParticipantId": "reviewer-bo",
+      "reason": "research-integrity-investigation",
+      "approvals": ["admin-mira", "ethics-chair"],
+      "dueProcessNotice": true,
+      "evidenceFlags": ["data-use-training-expired", "mfa-missing"]
+    },
+    {
+      "id": "case-2",
+      "requesterId": "admin-mira",
+      "targetParticipantId": "reviewer-ada",
+      "reason": "curiosity",
+      "approvals": ["admin-mira"],
+      "dueProcessNotice": false,
+      "evidenceFlags": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Anonymous review identity escrow demo</title>
+  <desc id="desc">A dashboard-style summary showing escrow-ready reviewers, access decisions, and deanonymization controls.</desc>
+  <rect width="1280" height="720" fill="#f7f4ef"/>
+  <rect x="56" y="48" width="1168" height="624" rx="18" fill="#fffdf8" stroke="#dfd7ca" stroke-width="2"/>
+  <text x="96" y="116" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#202124">Anonymous Review Identity Escrow</text>
+  <text x="96" y="154" font-family="Arial, sans-serif" font-size="18" fill="#64605a">Pseudonymous reviewers, redacted identity evidence, access policy, and audited break-glass release.</text>
+  <rect x="96" y="206" width="250" height="132" rx="12" fill="#e7f5ef" stroke="#12715b"/>
+  <text x="122" y="252" font-family="Arial, sans-serif" font-size="18" fill="#12715b">Escrow-ready</text>
+  <text x="122" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#12715b">2 / 3</text>
+  <rect x="376" y="206" width="250" height="132" rx="12" fill="#e9f1ff" stroke="#275b9f"/>
+  <text x="402" y="252" font-family="Arial, sans-serif" font-size="18" fill="#275b9f">Allowed grants</text>
+  <text x="402" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#275b9f">1</text>
+  <rect x="656" y="206" width="250" height="132" rx="12" fill="#fff3c4" stroke="#946200"/>
+  <text x="682" y="252" font-family="Arial, sans-serif" font-size="18" fill="#946200">Denied grants</text>
+  <text x="682" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#946200">2</text>
+  <rect x="936" y="206" width="250" height="132" rx="12" fill="#fde1da" stroke="#a7352a"/>
+  <text x="962" y="252" font-family="Arial, sans-serif" font-size="18" fill="#a7352a">Break-glass releases</text>
+  <text x="962" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#a7352a">1</text>
+  <rect x="96" y="392" width="1090" height="1" fill="#dfd7ca"/>
+  <text x="96" y="444" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">Reviewer anon-23dabcdd5e</text>
+  <text x="96" y="484" font-family="Arial, sans-serif" font-size="20" fill="#64605a">ORCID, GitHub, and SAML verified. Real subjects are redacted from review subjects.</text>
+  <text x="96" y="540" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">Access denied: raw-data-download</text>
+  <text x="96" y="580" font-family="Arial, sans-serif" font-size="20" fill="#64605a">Anonymous reviewers can comment on manuscripts, but cannot export raw data or identities.</text>
+  <text x="96" y="636" font-family="Arial, sans-serif" font-size="20" fill="#64605a">Audit digest: deterministic SHA-256 packet hash for project-level audit logs.</text>
+</svg>

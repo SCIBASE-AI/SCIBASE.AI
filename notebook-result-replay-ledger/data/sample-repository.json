@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "replay-ledger.v1",
+  "repository": {
+    "id": "scibase-neuro-organoid-atlas",
+    "name": "Neuro Organoid Response Atlas",
+    "releaseCandidate": "preprint-v2.2-rc1",
+    "lastStableTag": "preprint-v2.1",
+    "doi": "10.5555/scibase.neuro-organoid-atlas.v2",
+    "citationBadge": "cite-this-project"
+  },
+  "components": [
+    {
+      "id": "data.raw-counts",
+      "kind": "data",
+      "path": "data/raw/organoid-expression.csv",
+      "hash": "sha256:data-raw-counts-v4",
+      "previousHash": "sha256:data-raw-counts-v3",
+      "changedAt": "2026-05-12T10:00:00Z",
+      "lastStableTag": "preprint-v2.1",
+      "largeFile": true
+    },
+    {
+      "id": "data.qc-manifest",
+      "kind": "data",
+      "path": "data/processed/qc-manifest.json",
+      "hash": "sha256:data-qc-manifest-v2",
+      "previousHash": "sha256:data-qc-manifest-v1",
+      "changedAt": "2026-05-12T10:35:00Z",
+      "lastStableTag": "preprint-v2.1"
+    },
+    {
+      "id": "code.normalizer",
+      "kind": "code",
+      "path": "code/analysis/normalize_counts.py",
+      "hash": "sha256:normalizer-v5",
+      "previousHash": "sha256:normalizer-v4",
+      "changedAt": "2026-05-13T08:25:00Z",
+      "lastStableTag": "preprint-v2.1"
+    },
+    {
+      "id": "code.plotter",
+      "kind": "code",
+      "path": "code/analysis/build_figures.py",
+      "hash": "sha256:plotter-v2",
+      "previousHash": "sha256:plotter-v2",
+      "changedAt": "2026-05-10T12:00:00Z",
+      "lastStableTag": "preprint-v2.1"
+    },
+    {
+      "id": "notebook.run-analysis",
+      "kind": "notebook",
+      "path": "notebooks/run_analysis.ipynb",
+      "hash": "sha256:run-analysis-v7",
+      "previousHash": "sha256:run-analysis-v6",
+      "changedAt": "2026-05-13T09:10:00Z",
+      "lastStableTag": "preprint-v2.1"
+    },
+    {
+      "id": "notebook.qc-review",
+      "kind": "notebook",
+      "path": "notebooks/qc_review.ipynb",
+      "hash": "sha256:qc-review-v3",
+      "previousHash": "sha256:qc-review-v3",
+      "changedAt": "2026-05-11T14:00:00Z",
+      "lastStableTag": "preprint-v2.1"
+    },
+    {
+      "id": "env.analysis",
+      "kind": "environment",
+      "path": "environment.yml",
+      "hash": "sha256:conda-analysis-2026-05-14",
+      "previousHash": "sha256:conda-analysis-2026-05-08",
+      "changedAt": "2026-05-14T07:45:00Z",
+      "lastStableTag": "preprint-v2.1"
+    },
+    {
+      "id": "result.figure-1a",
+      "kind": "result",
+      "path": "results/figure-1a.png",
+      "hash": "sha256:figure-1a-before-data-update",
+      "lastReplayedAt": "2026-05-11T16:20:00Z",
+      "status": "passed",
+      "releaseCritical": true,
+      "citationCritical": true,
+      "recordedDependencyHashes": {
+        "data.raw-counts": "sha256:data-raw-counts-v3",
+        "code.normalizer": "sha256:normalizer-v4",
+        "code.plotter": "sha256:plotter-v2",
+        "notebook.run-analysis": "sha256:run-analysis-v6",
+        "env.analysis": "sha256:conda-analysis-2026-05-08"
+      }
+    },
+    {
+      "id": "result.model-metrics",
+      "kind": "result",
+      "path": "results/model-metrics.json",
+      "hash": "sha256:model-metrics-current",
+      "lastReplayedAt": "2026-05-14T09:15:00Z",
+      "status": "passed",
+      "releaseCritical": true,
+      "citationCritical": true,
+      "recordedDependencyHashes": {
+        "data.raw-counts": "sha256:data-raw-counts-v4",
+        "code.normalizer": "sha256:normalizer-v5",
+        "notebook.run-analysis": "sha256:run-analysis-v7",
+        "env.analysis": "sha256:conda-analysis-2026-05-14"
+      }
+    },
+    {
+      "id": "result.qc-table",
+      "kind": "result",
+      "path": "results/qc-table.csv",
+      "hash": "sha256:qc-table-failed-replay",
+      "lastReplayedAt": "2026-05-14T08:05:00Z",
+      "status": "failed",
+      "releaseCritical": true,
+      "citationCritical": false,
+      "failureReason": "Notebook replay stopped after container image changed.",
+      "recordedDependencyHashes": {
+        "data.qc-manifest": "sha256:data-qc-manifest-v2",
+        "notebook.qc-review": "sha256:qc-review-v3",
+        "env.analysis": "sha256:conda-analysis-2026-05-14"
+      }
+    },
+    {
+      "id": "protocol.analysis-plan",
+      "kind": "protocol",
+      "path": "protocols/analysis-plan.md",
+      "hash": "sha256:analysis-plan-v2",
+      "changedAt": "2026-05-09T10:00:00Z",
+      "lastStableTag": "preprint-v2.1"
+    },
+    {
+      "id": "metadata.project",
+      "kind": "metadata",
+      "path": "metadata.json",
+      "hash": "sha256:metadata-v4",
+      "changedAt": "2026-05-14T11:00:00Z",
+      "lastStableTag": "preprint-v2.1"
+    }
+  ],
+  "notebookCells": [
+    {
+      "id": "cell.figure-1a",
+      "notebookId": "notebook.run-analysis",
+      "label": "Generate Figure 1A response heatmap",
+      "inputComponentIds": ["data.raw-counts"],
+      "codeComponentIds": ["code.normalizer", "code.plotter"],
+      "environmentComponentId": "env.analysis",
+      "outputResultIds": ["result.figure-1a"]
+    },
+    {
+      "id": "cell.model-metrics",
+      "notebookId": "notebook.run-analysis",
+      "label": "Recompute classifier metrics",
+      "inputComponentIds": ["data.raw-counts"],
+      "codeComponentIds": ["code.normalizer"],
+      "environmentComponentId": "env.analysis",
+      "outputResultIds": ["result.model-metrics"]
+    },
+    {
+      "id": "cell.qc-table",
+      "notebookId": "notebook.qc-review",
+      "label": "Validate sample quality table",
+      "inputComponentIds": ["data.qc-manifest"],
+      "codeComponentIds": [],
+      "environmentComponentId": "env.analysis",
+      "outputResultIds": ["result.qc-table"]
+    }
+  ],
+  "releaseRules": {
+    "blockOnFailedReplay": true,
+    "blockOnCriticalStaleOutputs": true,
+    "warnOnCitationCriticalStaleOutputs": true
+  }
+}

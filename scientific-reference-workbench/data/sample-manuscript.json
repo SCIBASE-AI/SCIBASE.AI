@@ -1,0 +1,93 @@
+{
+  "manuscriptId": "collab-editor-reference-demo",
+  "title": "Protocol-Guided Perturbation Screening",
+  "style": {
+    "name": "SCIBASE short article",
+    "citationMode": "numeric",
+    "requiredSections": ["abstract", "methods", "results", "data-availability"]
+  },
+  "sections": [
+    {
+      "id": "abstract",
+      "heading": "Abstract",
+      "blocks": [
+        {
+          "id": "abs-1",
+          "type": "markdown",
+          "text": "We combine registered protocols with live analysis notebooks [@nguyen2025] and summarize the reproducibility gates in {{fig:workflow}}."
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "heading": "Methods",
+      "blocks": [
+        {
+          "id": "meth-1",
+          "type": "markdown",
+          "text": "The loss function follows {{eq:weighted-loss}} and the metadata schema extends prior collaborative notebook work [@park2024; @missing2026]."
+        },
+        {
+          "id": "meth-eq-1",
+          "type": "equation",
+          "label": "eq:weighted-loss",
+          "text": "L = alpha * error + beta * drift"
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "heading": "Results",
+      "blocks": [
+        {
+          "id": "res-1",
+          "type": "markdown",
+          "text": "A blinded reviewer can inspect {{tbl:quality-gates}} before accepting a release candidate."
+        },
+        {
+          "id": "res-fig-1",
+          "type": "figure",
+          "label": "fig:workflow",
+          "caption": "Reference-aware collaboration workflow."
+        },
+        {
+          "id": "res-table-1",
+          "type": "table",
+          "label": "tbl:quality-gates",
+          "caption": "Formatting gates for reviewer-ready manuscripts."
+        }
+      ]
+    },
+    {
+      "id": "data-availability",
+      "heading": "Data Availability",
+      "blocks": [
+        {
+          "id": "data-1",
+          "type": "markdown",
+          "text": "Synthetic editor traces and bibliography fixtures are included with this module."
+        }
+      ]
+    }
+  ],
+  "bibliography": [
+    {
+      "key": "nguyen2025",
+      "title": "Live Scientific Editing with Structured Protocols",
+      "authors": ["Nguyen", "Sato"],
+      "year": 2025
+    },
+    {
+      "key": "park2024",
+      "title": "Notebook Review Pipelines for Collaborative Research",
+      "authors": ["Park"],
+      "year": 2024
+    },
+    {
+      "key": "unused2023",
+      "title": "Unused Background Citation",
+      "authors": ["Mendez"],
+      "year": 2023
+    }
+  ]
+}

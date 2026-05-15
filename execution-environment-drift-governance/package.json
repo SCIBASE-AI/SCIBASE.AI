@@ -1,0 +1,15 @@
+{
+  "name": "execution-environment-drift-governance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Executable environment drift and rerun governance for scientific data and code hosting.",
+  "main": "src/index.js",
+  "scripts": {
+    "demo": "node demo.js",
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

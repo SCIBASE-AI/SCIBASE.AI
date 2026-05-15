@@ -1,0 +1,7 @@
+SCIBASE.AI execution drift governance
+
+Artifacts: 3, ready: 2, blocked: 1
+Environment checks: pinned images, dependency drift, GPU, network policy
+Rerun plans: 1 RUN_NOW, 1 BLOCKED with audit reasons
+Output: demo/execution-drift-governance-packet.json
+No credentials, no external services, synthetic data only

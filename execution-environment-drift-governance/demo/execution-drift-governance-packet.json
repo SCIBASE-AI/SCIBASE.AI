@@ -1,0 +1,483 @@
+{
+  "projectId": "scibase-neuro-protein-2026",
+  "generatedAt": "2026-05-15T12:00:00.000Z",
+  "summary": {
+    "artifacts": 3,
+    "environments": 2,
+    "rerunTriggers": 2,
+    "readyArtifacts": 2,
+    "blockedArtifacts": 1,
+    "blockedReruns": 1,
+    "reviewReruns": 0,
+    "runnableNow": 1
+  },
+  "artifacts": [
+    {
+      "artifactId": "artifact:raw-assay-csv",
+      "path": "data/raw/assay-readings.csv",
+      "type": "dataset/csv",
+      "digest": "298d17e6f0b4170815b55951c21690fd65eb7a8c3dc18b9f5523d6f31c694c4c",
+      "preview": "sample-table-preview",
+      "fair": {
+        "score": 1,
+        "checks": [
+          {
+            "name": "unique_identifier",
+            "ok": true
+          },
+          {
+            "name": "title",
+            "ok": true
+          },
+          {
+            "name": "creator",
+            "ok": true
+          },
+          {
+            "name": "license",
+            "ok": true
+          },
+          {
+            "name": "machine_readable_type",
+            "ok": true
+          },
+          {
+            "name": "version",
+            "ok": true
+          },
+          {
+            "name": "tags",
+            "ok": true
+          },
+          {
+            "name": "variable_metadata",
+            "ok": true
+          }
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "identifier": "artifact:raw-assay-csv",
+        "name": "Raw protein folding assay readings",
+        "license": "CC-BY-4.0",
+        "creator": [
+          {
+            "@type": "Person",
+            "identifier": "ORCID:0000-0002-1825-0097"
+          }
+        ],
+        "keywords": [
+          "protein-folding",
+          "assay",
+          "raw"
+        ],
+        "version": "v3",
+        "encodingFormat": "dataset/csv"
+      },
+      "dataCite": {
+        "identifiers": [
+          {
+            "identifier": "artifact:raw-assay-csv",
+            "identifierType": "SCIBASE-ID"
+          }
+        ],
+        "titles": [
+          {
+            "title": "Raw protein folding assay readings"
+          }
+        ],
+        "creators": [
+          {
+            "name": "ORCID:0000-0002-1825-0097"
+          }
+        ],
+        "publisher": "SCIBASE.AI",
+        "publicationYear": 2026,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "resourceType": "dataset/csv"
+        },
+        "rightsList": [
+          {
+            "rights": "CC-BY-4.0"
+          }
+        ]
+      },
+      "status": "READY",
+      "reasons": []
+    },
+    {
+      "artifactId": "artifact:analysis-notebook",
+      "path": "notebooks/folding-analysis.ipynb",
+      "type": "code/notebook",
+      "digest": "173745b46ea44130059ca2c1fd95098de5a3ad74968d221bb5cb5961e093dabf",
+      "preview": "render-notebook",
+      "fair": {
+        "score": 1,
+        "checks": [
+          {
+            "name": "unique_identifier",
+            "ok": true
+          },
+          {
+            "name": "title",
+            "ok": true
+          },
+          {
+            "name": "creator",
+            "ok": true
+          },
+          {
+            "name": "license",
+            "ok": true
+          },
+          {
+            "name": "machine_readable_type",
+            "ok": true
+          },
+          {
+            "name": "version",
+            "ok": true
+          },
+          {
+            "name": "tags",
+            "ok": true
+          },
+          {
+            "name": "variable_metadata",
+            "ok": true
+          }
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "identifier": "artifact:analysis-notebook",
+        "name": "Protein folding analysis notebook",
+        "license": "MIT",
+        "creator": [
+          {
+            "@type": "Person",
+            "identifier": "ORCID:0000-0002-1825-0097"
+          }
+        ],
+        "keywords": [
+          "notebook",
+          "reproducibility",
+          "figure-generation"
+        ],
+        "version": "v5",
+        "encodingFormat": "code/notebook"
+      },
+      "dataCite": {
+        "identifiers": [
+          {
+            "identifier": "artifact:analysis-notebook",
+            "identifierType": "SCIBASE-ID"
+          }
+        ],
+        "titles": [
+          {
+            "title": "Protein folding analysis notebook"
+          }
+        ],
+        "creators": [
+          {
+            "name": "ORCID:0000-0002-1825-0097"
+          }
+        ],
+        "publisher": "SCIBASE.AI",
+        "publicationYear": 2026,
+        "resourceType": {
+          "resourceTypeGeneral": "Software",
+          "resourceType": "code/notebook"
+        },
+        "rightsList": [
+          {
+            "rights": "MIT"
+          }
+        ]
+      },
+      "status": "READY",
+      "reasons": []
+    },
+    {
+      "artifactId": "artifact:clinical-supplement",
+      "path": "supplemental/clinical-cohort.json",
+      "type": "dataset/json",
+      "digest": "d6c5eeb47a61a1fc06ad599fbbc47f4b2ca6f7f4b835c2e8df738f493ce2e01d",
+      "preview": "schema-and-tree-preview",
+      "fair": {
+        "score": 0.88,
+        "checks": [
+          {
+            "name": "unique_identifier",
+            "ok": true
+          },
+          {
+            "name": "title",
+            "ok": true
+          },
+          {
+            "name": "creator",
+            "ok": true
+          },
+          {
+            "name": "license",
+            "ok": false
+          },
+          {
+            "name": "machine_readable_type",
+            "ok": true
+          },
+          {
+            "name": "version",
+            "ok": true
+          },
+          {
+            "name": "tags",
+            "ok": true
+          },
+          {
+            "name": "variable_metadata",
+            "ok": true
+          }
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "identifier": "artifact:clinical-supplement",
+        "name": "Restricted clinical cohort covariates",
+        "license": "UNSPECIFIED",
+        "creator": [
+          {
+            "@type": "Person",
+            "identifier": "ORCID:0000-0002-1825-0097"
+          }
+        ],
+        "keywords": [
+          "clinical",
+          "supplemental",
+          "restricted"
+        ],
+        "version": "v1",
+        "encodingFormat": "dataset/json"
+      },
+      "dataCite": {
+        "identifiers": [
+          {
+            "identifier": "artifact:clinical-supplement",
+            "identifierType": "SCIBASE-ID"
+          }
+        ],
+        "titles": [
+          {
+            "title": "Restricted clinical cohort covariates"
+          }
+        ],
+        "creators": [
+          {
+            "name": "ORCID:0000-0002-1825-0097"
+          }
+        ],
+        "publisher": "SCIBASE.AI",
+        "publicationYear": 2026,
+        "resourceType": {
+          "resourceTypeGeneral": "Dataset",
+          "resourceType": "dataset/json"
+        },
+        "rightsList": []
+      },
+      "status": "BLOCKED",
+      "reasons": [
+        {
+          "type": "restricted_artifact_missing_license",
+          "severity": "block",
+          "detail": "Human-subject or restricted artifacts need explicit reuse/licensing metadata."
+        },
+        {
+          "type": "embargo_requires_export_approval",
+          "severity": "review",
+          "detail": "Embargo active until 2026-08-01."
+        }
+      ]
+    }
+  ],
+  "environments": [
+    {
+      "environmentId": "env:python-analysis",
+      "baselineDigest": "4712d9ad4a010c7f5323eafe6f3954f049d21782c36eb6953e1dd8b211f1abb8",
+      "currentDigest": "4712d9ad4a010c7f5323eafe6f3954f049d21782c36eb6953e1dd8b211f1abb8",
+      "drifted": false,
+      "findings": [],
+      "status": "READY"
+    },
+    {
+      "environmentId": "env:ml-training",
+      "baselineDigest": "5290755b3c117cd6d2b8dc54ffc4c387bc3415d08f6d765a7e21b936b895b7ea",
+      "currentDigest": "045d7fda0aed683a2e54ab1133ae7be6bfe65a138d4ca986c4ba2c4d4487a254",
+      "drifted": true,
+      "findings": [
+        {
+          "type": "base_image_changed",
+          "severity": "block",
+          "baseline": "pytorch/pytorch:2.3.0-cuda12.1-cudnn8-runtime@sha256:demo-old",
+          "current": "pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime"
+        },
+        {
+          "type": "base_image_unpinned",
+          "severity": "block",
+          "current": "pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime"
+        },
+        {
+          "type": "dependency_changed",
+          "severity": "review",
+          "package": "torch",
+          "baseline": "2.3.0",
+          "current": "2.4.1"
+        },
+        {
+          "type": "dependency_changed",
+          "severity": "block",
+          "package": "transformers",
+          "baseline": "4.41.0",
+          "current": "latest"
+        },
+        {
+          "type": "dependency_unpinned",
+          "severity": "block",
+          "package": "transformers",
+          "current": "latest"
+        }
+      ],
+      "status": "BLOCKED"
+    }
+  ],
+  "reruns": [
+    {
+      "triggerId": "trigger:weekly-figures",
+      "name": "Weekly figure regeneration",
+      "action": "RUN_NOW",
+      "due": true,
+      "cadence": "weekly",
+      "inputDigest": "59565e9fcb9896bb0d43f4db51d5b86e9a226b783ba08a9c4df642148f52f607",
+      "environmentDigest": "4712d9ad4a010c7f5323eafe6f3954f049d21782c36eb6953e1dd8b211f1abb8",
+      "estimatedCpuMinutes": 12,
+      "expectedOutputs": [
+        "figures/folding-response.svg",
+        "tables/folding-summary.csv"
+      ],
+      "reasons": []
+    },
+    {
+      "triggerId": "trigger:model-refresh",
+      "name": "Quarterly model training refresh",
+      "action": "BLOCKED",
+      "due": false,
+      "cadence": "quarterly",
+      "inputDigest": "5b7b3d7846b3b82e6845080c7d2e296ebff82b524eb604dcb0c253e72b01c4f0",
+      "environmentDigest": "045d7fda0aed683a2e54ab1133ae7be6bfe65a138d4ca986c4ba2c4d4487a254",
+      "estimatedCpuMinutes": 180,
+      "expectedOutputs": [
+        "models/folding-risk.pt",
+        "reports/model-card.md"
+      ],
+      "reasons": [
+        {
+          "type": "artifact_blocked",
+          "severity": "block",
+          "artifacts": [
+            "artifact:clinical-supplement"
+          ]
+        },
+        {
+          "type": "environment_drift_blocked",
+          "severity": "block",
+          "findings": [
+            {
+              "type": "base_image_changed",
+              "severity": "block",
+              "baseline": "pytorch/pytorch:2.3.0-cuda12.1-cudnn8-runtime@sha256:demo-old",
+              "current": "pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime"
+            },
+            {
+              "type": "base_image_unpinned",
+              "severity": "block",
+              "current": "pytorch/pytorch:2.4.1-cuda12.1-cudnn9-runtime"
+            },
+            {
+              "type": "dependency_changed",
+              "severity": "block",
+              "package": "transformers",
+              "baseline": "4.41.0",
+              "current": "latest"
+            },
+            {
+              "type": "dependency_unpinned",
+              "severity": "block",
+              "package": "transformers",
+              "current": "latest"
+            }
+          ]
+        },
+        {
+          "type": "compute_budget_exceeded",
+          "severity": "review",
+          "estimatedCpuMinutes": 180,
+          "maxCpuMinutes": 120
+        }
+      ]
+    }
+  ],
+  "retentionAndExport": [
+    {
+      "artifactId": "artifact:raw-assay-csv",
+      "retentionDays": 2555,
+      "exportEligible": true,
+      "doiReady": true,
+      "evidenceDigest": "f4f308ba885a319144644ab062d7595b5c37ae497c70e17e401f9623a67d355e"
+    },
+    {
+      "artifactId": "artifact:analysis-notebook",
+      "retentionDays": 2555,
+      "exportEligible": true,
+      "doiReady": true,
+      "evidenceDigest": "59380beeb56d60bc716c471e53ac55a872114fc73da877b00422fd7bfac56595"
+    },
+    {
+      "artifactId": "artifact:clinical-supplement",
+      "retentionDays": 3650,
+      "exportEligible": false,
+      "doiReady": false,
+      "evidenceDigest": "b9d62bb50fd7db2ca29e4b837e8a6406705a2dd3ca8f9fed6cdbad27f9079a18"
+    }
+  ],
+  "requirementMap": [
+    {
+      "requirement": "Scalable storage engine for datasets, code, supplementary files",
+      "evidence": "3 artifact capsules include type detection, content digests, preview policy, and version metadata."
+    },
+    {
+      "requirement": "Metadata-aware previews and version/diff readiness",
+      "evidence": "Each artifact receives a deterministic preview policy and digest suitable for version comparison."
+    },
+    {
+      "requirement": "JSON-LD, DataCite, schema.org, and FAIR compliance",
+      "evidence": "Artifact evaluations emit JSON-LD/DataCite payloads and FAIR score checks with DOI readiness thresholds."
+    },
+    {
+      "requirement": "Executable environments and sandboxed reruns",
+      "evidence": "2 environment capsules are fingerprinted and checked for pinned images, dependencies, GPU, and network policy drift."
+    },
+    {
+      "requirement": "Built-in compute triggers and scheduled reruns",
+      "evidence": "2 rerun plans include due-state, input digests, compute budget checks, expected outputs, and block/review decisions."
+    },
+    {
+      "requirement": "Research artifact export and retention governance",
+      "evidence": "Retention/export evidence records DOI readiness, embargo checks, regulated retention days, and immutable evidence digests."
+    }
+  ]
+}

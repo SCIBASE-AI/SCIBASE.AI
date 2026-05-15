@@ -1,0 +1,154 @@
+{
+  "now": "2026-05-15T12:00:00.000Z",
+  "project": {
+    "id": "proj-neuro-metabolomics",
+    "title": "Neuro Metabolomics Replication Pack"
+  },
+  "policy": {
+    "maxArtifactBytes": 10737418240,
+    "maxInlinePreviewBytes": 10485760,
+    "maxRunCostCents": 5000
+  },
+  "artifacts": [
+    {
+      "id": "art-aggregate-csv",
+      "path": "datasets/aggregate-biomarkers.csv",
+      "hash": "sha256:7b7f5e4f55a1c2b9",
+      "previousHash": "sha256:18bbf31a",
+      "version": "v2",
+      "sizeBytes": 842190,
+      "access": "public",
+      "diffSummary": {
+        "rowsAdded": 18,
+        "rowsRemoved": 2,
+        "columnsChanged": ["batch_id"]
+      },
+      "metadata": {
+        "title": "Aggregate biomarker table",
+        "creators": ["Nguyen Lab"],
+        "publisher": "SCIBASE Demo",
+        "publicationYear": 2026,
+        "resourceType": "Dataset",
+        "license": "CC-BY-4.0",
+        "keywords": ["metabolomics", "replication"],
+        "doi": "10.5555/scibase.aggregate.2",
+        "jsonLd": true,
+        "schemaOrg": true
+      },
+      "scan": {
+        "secretsDetected": 0
+      }
+    },
+    {
+      "id": "art-patient-tsv",
+      "path": "restricted/raw-patient-measurements.tsv",
+      "hash": "sha256:8e9f951bb2df",
+      "version": "v1",
+      "sizeBytes": 2351440,
+      "access": "restricted",
+      "sensitivity": ["human-subjects", "phi"],
+      "deidentificationEvidence": "pending",
+      "metadata": {
+        "title": "Patient-level raw measurements",
+        "creators": ["Nguyen Lab"],
+        "publisher": "SCIBASE Demo",
+        "publicationYear": 2026,
+        "resourceType": "Dataset",
+        "license": "restricted-research-use",
+        "keywords": ["metabolomics", "clinical"],
+        "identifier": "uuid:patient-measurements-v1",
+        "jsonLd": true,
+        "schemaOrg": false
+      },
+      "scan": {
+        "secretsDetected": 0
+      }
+    },
+    {
+      "id": "art-analysis-notebook",
+      "path": "notebooks/reproduce-figures.ipynb",
+      "hash": "sha256:aa013ff77e",
+      "version": "v4",
+      "sizeBytes": 1181120,
+      "access": "project",
+      "metadata": {
+        "title": "Figure reproduction notebook",
+        "creators": ["Nguyen Lab"],
+        "publisher": "SCIBASE Demo",
+        "publicationYear": 2026,
+        "resourceType": "Software",
+        "license": "MIT",
+        "keywords": ["notebook", "figures"],
+        "identifier": "uuid:notebook-v4",
+        "jsonLd": true,
+        "schemaOrg": true
+      },
+      "scan": {
+        "secretsDetected": 0
+      }
+    },
+    {
+      "id": "art-env-secret",
+      "path": "config/.env",
+      "hash": "sha256:deadcafe",
+      "version": "v1",
+      "sizeBytes": 1200,
+      "access": "private",
+      "metadata": {
+        "title": "Local development environment variables",
+        "creators": ["Nguyen Lab"],
+        "publisher": "SCIBASE Demo",
+        "publicationYear": 2026,
+        "resourceType": "Configuration",
+        "license": "internal",
+        "keywords": ["configuration"],
+        "identifier": "uuid:env-secret",
+        "jsonLd": false,
+        "schemaOrg": false
+      },
+      "scan": {
+        "secretsDetected": 2
+      }
+    }
+  ],
+  "environments": [
+    {
+      "id": "env-python-locked",
+      "kind": "docker",
+      "name": "Python 3.12 metabolomics runtime",
+      "image": "ghcr.io/scibase/demo-python:3.12",
+      "imageDigest": "sha256:3bf96c7adf",
+      "networkAccess": false
+    },
+    {
+      "id": "env-r-unpinned",
+      "kind": "conda",
+      "name": "R notebook runtime",
+      "networkAccess": true,
+      "networkJustification": "pending"
+    }
+  ],
+  "computeTriggers": [
+    {
+      "id": "run-reproduce-figures",
+      "environmentId": "env-python-locked",
+      "inputArtifactIds": ["art-aggregate-csv", "art-analysis-notebook"],
+      "command": "python scripts/reproduce_figures.py",
+      "estimatedCostCents": 1400,
+      "schedule": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "run-refresh-clinical-model",
+      "environmentId": "env-r-unpinned",
+      "inputArtifactIds": ["art-patient-tsv", "art-env-secret"],
+      "command": "Rscript models/train.R",
+      "estimatedCostCents": 7200,
+      "schedule": {
+        "enabled": true,
+        "approved": false
+      }
+    }
+  ]
+}

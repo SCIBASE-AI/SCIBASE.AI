@@ -1,0 +1,12 @@
+{
+  "name": "enterprise-audit-signal-router",
+  "version": "0.1.0",
+  "description": "Dependency-free enterprise tooling module for admin dashboards, secure APIs/webhooks, and research export pipelines.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "npm test && npm run demo",
+    "demo": "node src/cli.js",
+    "test": "node --test test/*.test.js"
+  }
+}

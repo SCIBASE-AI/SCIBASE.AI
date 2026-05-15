@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise Audit Signal Router Demo</title>
+  <desc id="desc">Dashboard, signed webhooks, and export packets for SCIBASE enterprise tooling.</desc>
+  <rect width="960" height="540" fill="#101827"/>
+  <text x="48" y="66" fill="#f8fafc" font-family="Inter,Arial" font-size="34" font-weight="700">Enterprise Audit Signal Router</text>
+  <text x="48" y="102" fill="#94a3b8" font-family="Inter,Arial" font-size="18">Admin dashboards • API/webhooks • export pipelines</text>
+  <g transform="translate(48 145)">
+    <rect width="250" height="250" rx="22" fill="#172036" stroke="#38bdf8"/>
+    <text x="24" y="46" fill="#38bdf8" font-family="Inter,Arial" font-size="20" font-weight="700">Admin Dashboard</text>
+    <text x="24" y="88" fill="#f8fafc" font-family="Inter,Arial" font-size="18">2 projects</text>
+    <text x="24" y="124" fill="#f8fafc" font-family="Inter,Arial" font-size="18">50 logins</text>
+    <text x="24" y="160" fill="#f8fafc" font-family="Inter,Arial" font-size="18">19 AI reviews</text>
+    <text x="24" y="196" fill="#facc15" font-family="Inter,Arial" font-size="18">1 compliance risk</text>
+  </g>
+  <g transform="translate(355 145)">
+    <rect width="250" height="250" rx="22" fill="#172036" stroke="#22c55e"/>
+    <text x="24" y="46" fill="#22c55e" font-family="Inter,Arial" font-size="20" font-weight="700">Signed Webhooks</text>
+    <text x="24" y="88" fill="#f8fafc" font-family="Inter,Arial" font-size="18">project.created</text>
+    <text x="24" y="124" fill="#f8fafc" font-family="Inter,Arial" font-size="18">publication.released</text>
+    <text x="24" y="160" fill="#f8fafc" font-family="Inter,Arial" font-size="18">review.completed</text>
+    <text x="24" y="196" fill="#86efac" font-family="Inter,Arial" font-size="18">HMAC + scoped APIs</text>
+  </g>
+  <g transform="translate(662 145)">
+    <rect width="250" height="250" rx="22" fill="#172036" stroke="#a78bfa"/>
+    <text x="24" y="46" fill="#a78bfa" font-family="Inter,Arial" font-size="20" font-weight="700">Export Packets</text>
+    <text x="24" y="88" fill="#f8fafc" font-family="Inter,Arial" font-size="18">arXiv / Zenodo</text>
+    <text x="24" y="124" fill="#f8fafc" font-family="Inter,Arial" font-size="18">PubMed / NIH</text>
+    <text x="24" y="160" fill="#f8fafc" font-family="Inter,Arial" font-size="18">DOI + ORCID</text>
+    <text x="24" y="196" fill="#ddd6fe" font-family="Inter,Arial" font-size="18">version history</text>
+  </g>
+  <rect x="48" y="438" width="864" height="44" rx="12" fill="#0f766e"/>
+  <text x="72" y="467" fill="#ecfeff" font-family="Inter,Arial" font-size="18" font-weight="700">Requirement map: visibility, analytics, usage, productivity, compliance, integrations, webhooks, repository/journal/funder exports.</text>
+</svg>

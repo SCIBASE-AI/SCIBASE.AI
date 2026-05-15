@@ -1,0 +1,63 @@
+{
+  "institution": {
+    "id": "midlands-research-office",
+    "name": "Midlands Research Office",
+    "departments": ["Bioengineering", "Climate Systems", "Materials Lab"],
+    "apiClients": [
+      {"id": "dspace-sync", "system": "DSpace", "scopes": ["projects:read", "exports:write"]},
+      {"id": "canvas-lms", "system": "Canvas", "scopes": ["projects:read", "reviews:read"]},
+      {"id": "orcid-hris", "system": "ORCID-HRIS", "scopes": ["contributors:sync"]}
+    ],
+    "webhookSecret": "institutional-secret"
+  },
+  "contributors": [
+    {"id": "r-ada", "name": "Ada Kim", "department": "Bioengineering", "orcid": "0000-0002-1111-2222", "lab": "Bio-AI", "logins": 22},
+    {"id": "r-linus", "name": "Linus Park", "department": "Climate Systems", "orcid": "0000-0003-3333-4444", "lab": "Climate Risk", "logins": 17},
+    {"id": "r-marie", "name": "Marie Choi", "department": "Materials Lab", "orcid": "0000-0001-5555-6666", "lab": "NanoLab", "logins": 11}
+  ],
+  "projects": [
+    {
+      "id": "proj-open-catalyst",
+      "title": "Open Catalyst Reproducibility",
+      "visibility": "public",
+      "department": "Materials Lab",
+      "lab": "NanoLab",
+      "tags": ["GRANT-TRACKED", "DOCTORAL WORK"],
+      "contributors": ["r-marie", "r-ada"],
+      "storageGb": 184,
+      "computeHours": 96,
+      "submissions": 4,
+      "aiReviews": 8,
+      "peerReviews": 6,
+      "funderMandates": ["NIH data sharing"],
+      "openAccess": true,
+      "reproducibilityScore": 0.91,
+      "doi": "10.5555/scibase.catalyst.2026",
+      "citations": ["Kim A, Choi M. Open catalyst reproducibility. 2026."],
+      "versions": ["v0.1 protocol", "v1.0 preprint"],
+      "events": ["project.created", "review.completed", "publication.released"]
+    },
+    {
+      "id": "proj-private-climate",
+      "title": "Private Climate Model Review",
+      "visibility": "private",
+      "department": "Climate Systems",
+      "lab": "Climate Risk",
+      "tags": ["BUSINESS-UNIT-RD"],
+      "contributors": ["r-linus"],
+      "storageGb": 640,
+      "computeHours": 420,
+      "submissions": 2,
+      "aiReviews": 11,
+      "peerReviews": 1,
+      "funderMandates": ["Horizon EU open data"],
+      "openAccess": false,
+      "reproducibilityScore": 0.68,
+      "doi": null,
+      "citations": ["Park L. Private climate model review. 2026."],
+      "versions": ["internal-draft"],
+      "events": ["project.created", "review.completed"]
+    }
+  ],
+  "usageWindow": "2026-05"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "privacy-safe-licensing-gate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "demo": "node demo.mjs",
+    "test": "node --test tests/privacy-safe-licensing-gate.test.mjs"
+  }
+}

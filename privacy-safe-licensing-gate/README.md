@@ -18,19 +18,25 @@ The goal is to support the revenue stream described in issue `#20` without touch
 - `src/privacy-safe-licensing-gate.mjs` contains the policy engine.
 - `tests/privacy-safe-licensing-gate.test.mjs` covers safe, held, and custom-policy decisions.
 - `demo.mjs` prints a sample readiness report.
+- `docs/demo-transcript.md` and `docs/demo.mp4` show the reviewer demo flow.
 - `requirement-map.md` maps the implementation back to the Revenue Infrastructure bounty.
 
 ## Local Verification
 
-Run the test suite with Node's built-in test runner:
+Run the module checks:
 
 ```bash
-node --test privacy-safe-licensing-gate/tests/privacy-safe-licensing-gate.test.mjs
+cd privacy-safe-licensing-gate
+npm run check
+npm test
+npm run demo
 ```
 
-Run the demo report:
+From the repository root, the same commands are:
 
 ```bash
+node privacy-safe-licensing-gate/scripts/check.mjs
+node --test privacy-safe-licensing-gate/tests/privacy-safe-licensing-gate.test.mjs
 node privacy-safe-licensing-gate/demo.mjs
 ```
 

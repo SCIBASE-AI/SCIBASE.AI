@@ -1,0 +1,147 @@
+{
+  "institution": "Northstar Research Institute",
+  "asOf": "2026-05-14",
+  "policy": {
+    "currency": "USD",
+    "budgetHoldRatio": 0.9,
+    "invoiceTolerance": 1,
+    "approvalThresholds": [
+      { "role": "principal-investigator", "minimumAmount": 0 },
+      { "role": "department-admin", "minimumAmount": 2500 },
+      { "role": "finance-office", "minimumAmount": 10000 }
+    ]
+  },
+  "budgets": [
+    {
+      "id": "grant-ai-2026",
+      "owner": "AI Bioimaging Lab",
+      "amount": 120000,
+      "spentToDate": 94000,
+      "reserved": 8000,
+      "currency": "USD",
+      "expiresOn": "2026-12-31"
+    },
+    {
+      "id": "grant-climate-2026",
+      "owner": "Climate Modeling Group",
+      "amount": 85000,
+      "spentToDate": 61000,
+      "reserved": 5000,
+      "currency": "USD",
+      "expiresOn": "2026-06-30"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "contract-cloud-1",
+      "vendor": "Helio Compute",
+      "status": "active",
+      "slaTier": "research-critical",
+      "dataProcessingTerms": true,
+      "renewsOn": "2026-11-01"
+    },
+    {
+      "id": "contract-storage-2",
+      "vendor": "Cold Archive Co",
+      "status": "active",
+      "slaTier": "",
+      "dataProcessingTerms": false,
+      "renewsOn": "2026-04-15"
+    }
+  ],
+  "purchaseOrders": [
+    {
+      "id": "po-1001",
+      "grantId": "grant-ai-2026",
+      "costCenter": "BIOIMG",
+      "vendor": "Helio Compute",
+      "contractId": "contract-cloud-1",
+      "lineItems": [
+        { "description": "GPU compute block", "quantity": 150, "unitPrice": 42 },
+        { "description": "Secure notebook seats", "quantity": 10, "unitPrice": 110 }
+      ],
+      "approvals": [
+        { "role": "principal-investigator", "approvedBy": "pi-bioimg" },
+        { "role": "department-admin", "approvedBy": "dept-ops" }
+      ]
+    },
+    {
+      "id": "po-1002",
+      "grantId": "grant-climate-2026",
+      "costCenter": "CLIMATE",
+      "vendor": "Cold Archive Co",
+      "contractId": "contract-storage-2",
+      "lineItems": [
+        { "description": "Long-term dataset archive", "quantity": 1, "unitPrice": 11300 }
+      ],
+      "approvals": [
+        { "role": "principal-investigator", "approvedBy": "pi-climate" },
+        { "role": "department-admin", "approvedBy": "dept-ops" }
+      ]
+    },
+    {
+      "id": "po-1003",
+      "grantId": "grant-climate-2026",
+      "costCenter": "CLIMATE",
+      "vendor": "Helio Compute",
+      "contractId": "contract-cloud-1",
+      "lineItems": [
+        { "description": "Burst simulation run", "quantity": 300, "unitPrice": 75 }
+      ],
+      "approvals": [
+        { "role": "principal-investigator", "approvedBy": "pi-climate" },
+        { "role": "department-admin", "approvedBy": "dept-ops" },
+        { "role": "finance-office", "approvedBy": "finance-review" }
+      ]
+    }
+  ],
+  "usageEvents": [
+    {
+      "id": "usage-1",
+      "grantId": "grant-ai-2026",
+      "purchaseOrderId": "po-1001",
+      "service": "gpu-hours",
+      "units": 90,
+      "unitCost": 42,
+      "occurredOn": "2026-05-01"
+    },
+    {
+      "id": "usage-2",
+      "grantId": "grant-ai-2026",
+      "purchaseOrderId": "po-1001",
+      "service": "notebook-seat",
+      "units": 10,
+      "unitCost": 110,
+      "occurredOn": "2026-05-02"
+    },
+    {
+      "id": "usage-3",
+      "grantId": "grant-climate-2026",
+      "purchaseOrderId": "po-1003",
+      "service": "burst-gpu",
+      "units": 40,
+      "unitCost": 38,
+      "occurredOn": "2026-05-08"
+    }
+  ],
+  "invoiceLines": [
+    {
+      "id": "invoice-line-1",
+      "purchaseOrderId": "po-1001",
+      "usageEventIds": ["usage-1", "usage-2"],
+      "amount": 4880
+    },
+    {
+      "id": "invoice-line-2",
+      "purchaseOrderId": "po-1003",
+      "usageEventIds": ["usage-3"],
+      "amount": 1610
+    },
+    {
+      "id": "invoice-line-3",
+      "purchaseOrderId": "po-9999",
+      "usageEventIds": ["missing-usage"],
+      "amount": 99
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "research-procurement-controls",
+  "version": "1.0.0",
+  "description": "Dependency-free institutional procurement, budget hold, invoice reconciliation, and audit export controls for SCIBASE issue 20.",
+  "main": "src/procurement-controls.js",
+  "scripts": {
+    "check": "node --check src/procurement-controls.js && node --check scripts/demo.js && node --check test/procurement-controls.test.js",
+    "demo": "node scripts/demo.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "research-procurement",
+    "revenue-controls",
+    "invoice-reconciliation",
+    "grant-budgets"
+  ],
+  "license": "MIT"
+}

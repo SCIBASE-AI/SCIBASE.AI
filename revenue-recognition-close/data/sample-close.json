@@ -1,0 +1,115 @@
+{
+  "closeId": "scibase-apr-2026-close",
+  "asOf": "2026-04-30T23:59:59Z",
+  "periodStart": "2026-04-01",
+  "periodEnd": "2026-05-01",
+  "currency": "USD",
+  "policies": {
+    "paymentGraceDays": 5,
+    "dunningSteps": [
+      {
+        "afterDays": 5,
+        "action": "send-reminder",
+        "owner": "revenue-ops"
+      },
+      {
+        "afterDays": 15,
+        "action": "finance-review",
+        "owner": "finance"
+      },
+      {
+        "afterDays": 30,
+        "action": "pause-api-access",
+        "owner": "customer-success"
+      }
+    ],
+    "recognitionTolerance": 0.01
+  },
+  "contracts": [
+    {
+      "id": "sub-lab-annual",
+      "customer": "Northstar Systems Lab",
+      "stream": "subscription",
+      "invoiceId": "INV-2026-0410",
+      "invoiceDate": "2026-01-01",
+      "dueDate": "2026-01-15",
+      "paidAt": "2026-01-06T14:20:00Z",
+      "amount": 12000,
+      "serviceStart": "2026-01-01",
+      "serviceEnd": "2027-01-01",
+      "notes": "Annual lab subscription with ratable recognition."
+    },
+    {
+      "id": "compute-foundation-burst",
+      "customer": "Helix BioCompute Group",
+      "stream": "compute",
+      "invoiceId": "INV-2026-0444",
+      "invoiceDate": "2026-04-20",
+      "dueDate": "2026-05-10",
+      "paidAt": null,
+      "amount": 3200,
+      "serviceStart": "2026-04-01",
+      "serviceEnd": "2026-05-01",
+      "usageEvents": [
+        {
+          "id": "gpu-job-7781",
+          "occurredAt": "2026-04-09T11:00:00Z",
+          "units": 42,
+          "unitPrice": 20,
+          "billable": true
+        },
+        {
+          "id": "repro-run-9032",
+          "occurredAt": "2026-04-27T18:45:00Z",
+          "units": 37,
+          "unitPrice": 30,
+          "billable": true
+        },
+        {
+          "id": "may-training-001",
+          "occurredAt": "2026-05-02T08:00:00Z",
+          "units": 50,
+          "unitPrice": 25,
+          "billable": true
+        }
+      ],
+      "notes": "Usage-based compute invoice with unconsumed April capacity deferred."
+    },
+    {
+      "id": "license-policy-api",
+      "customer": "Public Research Policy Office",
+      "stream": "license",
+      "invoiceId": "INV-2026-0391",
+      "invoiceDate": "2026-03-25",
+      "dueDate": "2026-04-15",
+      "paidAt": null,
+      "amount": 9000,
+      "serviceStart": "2026-04-01",
+      "serviceEnd": "2026-06-30",
+      "licenseDeliverables": [
+        {
+          "id": "citation-network-april",
+          "deliveredAt": "2026-04-10T10:30:00Z",
+          "amount": 5000,
+          "accepted": true
+        },
+        {
+          "id": "grant-trend-dashboard",
+          "deliveredAt": "2026-04-28T16:00:00Z",
+          "amount": 4000,
+          "accepted": false
+        }
+      ],
+      "credits": [
+        {
+          "id": "credit-redaction-review",
+          "amount": 500,
+          "requestedAt": "2026-04-29T12:00:00Z",
+          "status": "pending",
+          "reason": "Customer asked finance to review a delayed redaction memo."
+        }
+      ],
+      "notes": "Analytics licensing package with partial acceptance and an open credit review."
+    }
+  ]
+}

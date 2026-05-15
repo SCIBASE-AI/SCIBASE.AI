@@ -1,0 +1,18 @@
+{
+  "name": "revenue-recognition-close",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free revenue recognition close controls for SCIBASE revenue infrastructure.",
+  "scripts": {
+    "check": "node --check src/revenue-close.js && node --check scripts/demo.js && node --check test/revenue-close.test.js",
+    "demo": "node scripts/demo.js",
+    "test": "node test/revenue-close.test.js"
+  },
+  "keywords": [
+    "revenue-recognition",
+    "deferred-revenue",
+    "dunning",
+    "finance-close"
+  ],
+  "license": "MIT"
+}

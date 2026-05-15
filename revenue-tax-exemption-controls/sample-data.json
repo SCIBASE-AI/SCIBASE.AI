@@ -1,0 +1,97 @@
+{
+  "now": "2026-05-15T00:00:00.000Z",
+  "customers": [
+    {
+      "id": "cust-university-lab",
+      "name": "Northbridge University Lab",
+      "taxProfile": {
+        "jurisdiction": "US-CA",
+        "exemptionStatus": "exempt",
+        "reverseCharge": false,
+        "vatId": null,
+        "exemptionCertificate": {
+          "id": "cert-2025-ca-221",
+          "status": "verified",
+          "expiresAt": "2026-04-01T00:00:00.000Z"
+        }
+      }
+    },
+    {
+      "id": "cust-eu-institute",
+      "name": "Helix EU Institute",
+      "taxProfile": {
+        "jurisdiction": "DE",
+        "exemptionStatus": "standard",
+        "reverseCharge": true,
+        "vatId": "",
+        "exemptionCertificate": null
+      }
+    }
+  ],
+  "grantBudgets": [
+    {
+      "id": "grant-nih-atlas-2026",
+      "approvedCents": 300000,
+      "usedCents": 252000,
+      "allowedCategories": ["subscription", "storage"]
+    },
+    {
+      "id": "grant-eu-knowledge-graph",
+      "approvedCents": 220000,
+      "usedCents": 80000,
+      "allowedCategories": ["subscription", "compute", "storage"]
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv-1007",
+      "customerId": "cust-university-lab",
+      "taxJurisdiction": "US-CA",
+      "grantBudgetId": "grant-nih-atlas-2026",
+      "taxCents": 0,
+      "lines": [
+        {
+          "description": "SCIBASE Enterprise workspace",
+          "category": "subscription",
+          "quantity": 1,
+          "unitCents": 42000
+        },
+        {
+          "description": "GPU compute overage",
+          "category": "compute",
+          "quantity": 1,
+          "unitCents": 12000
+        }
+      ]
+    },
+    {
+      "id": "inv-1008",
+      "customerId": "cust-eu-institute",
+      "taxJurisdiction": "DE",
+      "grantBudgetId": "grant-eu-knowledge-graph",
+      "taxCents": 0,
+      "lines": [
+        {
+          "description": "Knowledge graph API seats",
+          "category": "subscription",
+          "quantity": 2,
+          "unitCents": 18000
+        }
+      ]
+    }
+  ],
+  "settlementEvents": [
+    {
+      "invoiceId": "inv-1007",
+      "status": "settled",
+      "amountCents": 51000,
+      "processor": "stripe"
+    },
+    {
+      "invoiceId": "inv-1008",
+      "status": "settled",
+      "amountCents": 36000,
+      "processor": "stripe"
+    }
+  ]
+}

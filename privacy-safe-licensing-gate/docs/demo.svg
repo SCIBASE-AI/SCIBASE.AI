@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Privacy-safe licensing gate demo summary">
+  <rect width="960" height="540" fill="#111827"/>
+  <rect x="40" y="40" width="880" height="460" rx="18" fill="#f8fafc"/>
+  <text x="80" y="105" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Privacy-safe licensing gate</text>
+  <text x="80" y="148" font-family="Arial, sans-serif" font-size="20" fill="#475569">Revenue Infrastructure #20 reviewer demo</text>
+  <rect x="80" y="190" width="245" height="120" rx="14" fill="#dcfce7"/>
+  <text x="105" y="235" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#166534">2</text>
+  <text x="105" y="272" font-family="Arial, sans-serif" font-size="20" fill="#166534">ready packages</text>
+  <rect x="357" y="190" width="245" height="120" rx="14" fill="#fee2e2"/>
+  <text x="382" y="235" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#991b1b">1</text>
+  <text x="382" y="272" font-family="Arial, sans-serif" font-size="20" fill="#991b1b">privacy hold</text>
+  <rect x="635" y="190" width="245" height="120" rx="14" fill="#dbeafe"/>
+  <text x="660" y="235" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#1d4ed8">$6.7K</text>
+  <text x="660" y="272" font-family="Arial, sans-serif" font-size="20" fill="#1d4ed8">eligible monthly revenue</text>
+  <text x="80" y="365" font-family="Arial, sans-serif" font-size="22" fill="#111827">Checks: private content, identifiers, consent, cohorts, institutions, k-anonymity, window, purpose.</text>
+  <text x="80" y="410" font-family="Arial, sans-serif" font-size="22" fill="#111827">Held exports get reviewer actions before any licensed API, dashboard, or white-label delivery.</text>
+  <text x="80" y="455" font-family="Arial, sans-serif" font-size="18" fill="#64748b">No Stripe, PayPal, bank, tax, wallet, identity, customer secret, or private content handling.</text>
+</svg>

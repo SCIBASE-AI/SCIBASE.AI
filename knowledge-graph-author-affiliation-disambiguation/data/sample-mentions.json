@@ -1,0 +1,56 @@
+[
+  {
+    "mentionId": "m1",
+    "documentId": "paper-crispr-01",
+    "name": "Dr. Maya A. Chen",
+    "orcid": "0000-0002-1825-0097",
+    "email": "maya.chen@stanford.edu",
+    "affiliation": "Stanford University, Department of Bioengineering",
+    "concepts": ["CRISPR", "single-cell RNA-seq"],
+    "doi": "10.5555/crispr.01"
+  },
+  {
+    "mentionId": "m2",
+    "documentId": "dataset-crispr-01",
+    "name": "Maya Chen",
+    "email": "mchen@stanford.edu",
+    "affiliation": "Dept. of Bioengineering, Stanford Univ.",
+    "concepts": ["CRISPR", "perturb-seq"],
+    "doi": "10.5555/data.01"
+  },
+  {
+    "mentionId": "m3",
+    "documentId": "protocol-crispr-02",
+    "name": "M. Chen",
+    "affiliation": "Stanford Bioengineering",
+    "concepts": ["CRISPR", "protocol"],
+    "doi": "10.5555/protocol.02"
+  },
+  {
+    "mentionId": "m4",
+    "documentId": "paper-materials-07",
+    "name": "Maya Chen",
+    "email": "maya.chen@mit.edu",
+    "affiliation": "MIT Materials Science and Engineering",
+    "concepts": ["perovskite", "thin films"],
+    "doi": "10.5555/materials.07"
+  },
+  {
+    "mentionId": "m5",
+    "documentId": "paper-crispr-01",
+    "name": "Luis Ortega",
+    "orcid": "0000-0003-1111-2222",
+    "email": "lortega@ucsf.edu",
+    "affiliation": "UCSF Computational Biology",
+    "concepts": ["single-cell RNA-seq", "trajectory inference"],
+    "doi": "10.5555/crispr.01"
+  },
+  {
+    "mentionId": "m6",
+    "documentId": "dataset-crispr-01",
+    "name": "L. Ortega",
+    "affiliation": "University of California San Francisco",
+    "concepts": ["trajectory inference", "perturb-seq"],
+    "doi": "10.5555/data.01"
+  }
+]

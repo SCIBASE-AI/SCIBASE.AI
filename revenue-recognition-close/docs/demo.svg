@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Revenue recognition close demo</title>
+  <desc id="desc">Dashboard-style summary of recognized revenue, deferred revenue, receivables, dunning, and close holds.</desc>
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="56" y="48" width="1168" height="624" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="96" y="118" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="42" font-weight="700">SCIBASE Revenue Close</text>
+  <text x="96" y="158" fill="#94a3b8" font-family="Arial, sans-serif" font-size="24">April 2026 recognition, deferral, receivable, and dunning controls</text>
+  <g transform="translate(96 210)">
+    <rect width="320" height="150" rx="12" fill="#0b1220" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#38bdf8" font-family="Arial, sans-serif" font-size="22" font-weight="700">Recognized</text>
+    <text x="24" y="104" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">$7,936.30</text>
+  </g>
+  <g transform="translate(480 210)">
+    <rect width="320" height="150" rx="12" fill="#0b1220" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#a78bfa" font-family="Arial, sans-serif" font-size="22" font-weight="700">Deferred</text>
+    <text x="24" y="104" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">$13,304.79</text>
+  </g>
+  <g transform="translate(864 210)">
+    <rect width="320" height="150" rx="12" fill="#0b1220" stroke="#1e293b"/>
+    <text x="24" y="48" fill="#f59e0b" font-family="Arial, sans-serif" font-size="22" font-weight="700">Receivable</text>
+    <text x="24" y="104" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">$12,200.00</text>
+  </g>
+  <g transform="translate(96 420)">
+    <rect width="1088" height="176" rx="12" fill="#0b1220" stroke="#1e293b"/>
+    <text x="28" y="48" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="26" font-weight="700">Top close action</text>
+    <text x="28" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">finance-review for INV-2026-0391</text>
+    <text x="28" y="134" fill="#94a3b8" font-family="Arial, sans-serif" font-size="22">1 dunning item · 2 close holds · digest-backed audit packet</text>
+  </g>
+</svg>

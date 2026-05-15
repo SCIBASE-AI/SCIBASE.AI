@@ -1,0 +1,128 @@
+{
+  "now": "2026-05-15T17:30:00.000Z",
+  "manuscript": {
+    "id": "ms-neuro-metabolomics-042",
+    "title": "Metabolomic markers of sleep disruption in shift workers",
+    "domain": "biomedicine",
+    "requiresEthicsStatement": true,
+    "requiresDataAvailability": true
+  },
+  "evidenceCorpus": [
+    {
+      "id": "ev-objective",
+      "sourceType": "manuscript",
+      "title": "Abstract objective",
+      "excerpt": "We evaluated whether plasma metabolomic profiles differed between night-shift and day-shift hospital staff.",
+      "authors": ["Nguyen Lab"],
+      "year": 2026
+    },
+    {
+      "id": "ev-method",
+      "sourceType": "manuscript",
+      "title": "Methods",
+      "excerpt": "The cohort included 184 participants with repeated fasting plasma samples and actigraphy-derived sleep measures.",
+      "authors": ["Nguyen Lab"],
+      "year": 2026
+    },
+    {
+      "id": "ev-result",
+      "sourceType": "manuscript",
+      "title": "Results",
+      "excerpt": "Night-shift workers showed higher kynurenine and lower phosphatidylcholine levels after adjustment for age, sex, caffeine intake, and body mass index.",
+      "authors": ["Nguyen Lab"],
+      "year": 2026
+    },
+    {
+      "id": "ev-stat-risk",
+      "sourceType": "manuscript",
+      "title": "Statistical notes",
+      "excerpt": "The draft describes p = 0.08 as significant for the exploratory lipid panel and omits confidence intervals for the adjusted odds ratio.",
+      "authors": ["Nguyen Lab"],
+      "year": 2026
+    },
+    {
+      "id": "ref-kynurenine",
+      "sourceType": "reference",
+      "title": "Kynurenine pathway changes in circadian disruption",
+      "excerpt": "Prior work links circadian disruption with kynurenine pathway remodeling and inflammatory signaling.",
+      "authors": ["Patel", "Singh"],
+      "year": 2024,
+      "doi": "10.5555/circadian.kynurenine",
+      "openAccess": true
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-kynurenine",
+      "text": "Night-shift work is associated with higher kynurenine concentrations.",
+      "citationRequired": true,
+      "evidenceIds": ["ev-result", "ref-kynurenine"]
+    },
+    {
+      "id": "claim-causal-sleep",
+      "text": "Sleep disruption causes the observed phosphatidylcholine decrease.",
+      "citationRequired": true,
+      "evidenceIds": []
+    }
+  ],
+  "toolOutputs": {
+    "summaries": [
+      {
+        "mode": "abstract",
+        "text": "Objective: evaluate plasma metabolomic profiles in night-shift and day-shift hospital staff. Methods: 184 participants provided repeated fasting plasma samples with actigraphy-derived sleep measures. Results: night-shift workers showed higher kynurenine and lower phosphatidylcholine after adjustment. Conclusion: the data support a metabolomic association with shift work, but causal sleep claims need stronger evidence.",
+        "evidenceIds": ["ev-objective", "ev-method", "ev-result"],
+        "keyFindings": ["Higher kynurenine in night-shift workers"],
+        "implications": ["Metabolomic screening may help prioritize follow-up studies"],
+        "nextSteps": ["Add confidence intervals and avoid causal wording"]
+      },
+      {
+        "mode": "layperson",
+        "text": "This paper says night-shift hospital staff had metabolomic perturbations in kynurenine and phosphatidylcholine.",
+        "evidenceIds": ["ev-result"],
+        "keyFindings": ["Night-shift workers had different blood chemistry"],
+        "implications": ["Work schedules may be linked with health-related chemistry changes"],
+        "nextSteps": ["Explain the result with simpler words"]
+      }
+    ],
+    "peerReview": {
+      "template": "biomedicine",
+      "diagnostics": [
+        {
+          "id": "stat-pvalue-001",
+          "category": "statistics",
+          "severity": "blocker",
+          "message": "The draft calls p = 0.08 significant.",
+          "evidenceIds": ["ev-stat-risk"]
+        },
+        {
+          "id": "clarity-001",
+          "category": "clarity",
+          "severity": "warning",
+          "message": "Lay summary contains domain jargon.",
+          "evidenceIds": ["ev-result"]
+        }
+      ],
+      "similarity": {
+        "score": 0.18,
+        "matchedSources": []
+      },
+      "compliance": {
+        "ethicsStatement": "IRB-2026-041 approved the protocol.",
+        "dataAvailability": "",
+        "fundingStatement": "Supported by institutional pilot funding.",
+        "conflictStatement": "The authors report no conflicts."
+      }
+    },
+    "citations": [
+      {
+        "claimId": "claim-kynurenine",
+        "sourceId": "ref-kynurenine",
+        "style": "APA",
+        "formatted": "Patel, & Singh. (2024). Kynurenine pathway changes in circadian disruption. https://doi.org/10.5555/circadian.kynurenine",
+        "confidence": 0.91,
+        "evidenceIds": ["ev-result", "ref-kynurenine"],
+        "insertAfter": "higher kynurenine concentrations"
+      }
+    ]
+  }
+}

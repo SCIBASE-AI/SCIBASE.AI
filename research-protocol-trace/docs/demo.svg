@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#101820"/>
+  <rect x="72" y="70" width="1136" height="580" rx="20" fill="#f7f9fb"/>
+  <text x="110" y="132" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#17202a">Research Protocol Trace</text>
+  <text x="110" y="178" font-family="Arial, sans-serif" font-size="20" fill="#52616f">Protocol trace for claims, evidence, and reproducibility</text>
+  <rect x="110" y="225" width="310" height="132" rx="14" fill="#e8f6ef"/>
+  <text x="135" y="270" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0b6b44">Score 62</text>
+  <text x="135" y="310" font-family="Arial, sans-serif" font-size="19" fill="#245b46">Decision: hold</text>
+  <rect x="470" y="225" width="310" height="132" rx="14" fill="#fff4dc"/>
+  <text x="495" y="270" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#8a5d00">1 missing outcome</text>
+  <text x="495" y="310" font-family="Arial, sans-serif" font-size="19" fill="#705018">Cell viability needs reporting</text>
+  <rect x="110" y="405" width="1030" height="72" rx="12" fill="#edf2f7"/>
+  <text x="135" y="450" font-family="Arial, sans-serif" font-size="22" fill="#263238">Top reviewer action: review the post-hoc off-target claim.</text>
+  <rect x="110" y="510" width="1030" height="72" rx="12" fill="#edf2f7"/>
+  <text x="135" y="555" font-family="Arial, sans-serif" font-size="22" fill="#263238">Top research gap: resolve the cell-viability protocol gap.</text>
+</svg>

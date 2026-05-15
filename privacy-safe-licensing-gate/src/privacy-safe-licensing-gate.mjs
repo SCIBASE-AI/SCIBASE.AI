@@ -169,6 +169,31 @@ export function buildLicensingReadinessReport(candidatePackages, policyInput = {
   };
 }
 
+export function buildLicensingApiCatalog(candidatePackages, policyInput = {}) {
+  const report = buildLicensingReadinessReport(candidatePackages, policyInput);
+
+  return {
+    generatedAt: report.generatedAt,
+    summary: report.summary,
+    products: report.decisions.map((decision) => ({
+      id: decision.id,
+      name: decision.name,
+      customerSegment: decision.customerSegment,
+      licensingPurpose: decision.licensingPurpose,
+      status: decision.status,
+      revenueRecognition: decision.revenueRecognition,
+      estimatedMonthlyRevenue: decision.estimatedMonthlyRevenue,
+      channels: decision.allowedChannels,
+      checkSummary: decision.checks.map((check) => ({
+        code: check.code,
+        status: check.status,
+        message: check.message,
+      })),
+      holdReasonCount: decision.recommendedHoldActions.length,
+    })),
+  };
+}
+
 export function summarizeNextActions(heldPackages) {
   const actionCounts = new Map();
 

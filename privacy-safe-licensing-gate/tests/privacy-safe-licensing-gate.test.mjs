@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {test} from 'node:test';
 
 import {
+  buildLicensingApiCatalog,
   buildLicensingReadinessReport,
   evaluatePackage,
   samplePackages,
@@ -50,6 +51,20 @@ test('supports stricter institutional licensing policy overrides', () => {
   assert.equal(decision.status, 'hold');
   assert.ok(decision.recommendedHoldActions.some((action) => action.includes('at least 1000 subjects')));
   assert.ok(decision.recommendedHoldActions.some((action) => action.includes('at least 20')));
+});
+
+test('builds a sanitized licensing API catalog without private gating fields', () => {
+  const catalog = buildLicensingApiCatalog(samplePackages);
+  const heldProduct = catalog.products.find((product) => product.id === 'lic-dashboard-private-notes');
+
+  assert.equal(catalog.products.length, 3);
+  assert.equal(catalog.summary.eligibleMonthlyRevenue, 6700);
+  assert.equal(heldProduct.status, 'hold');
+  assert.equal(heldProduct.estimatedMonthlyRevenue, 0);
+  assert.equal(heldProduct.channels.length, 0);
+  assert.equal(heldProduct.holdReasonCount > 0, true);
+  assert.equal(Object.hasOwn(heldProduct, 'blockedFields'), false);
+  assert.equal(Object.hasOwn(heldProduct, 'recommendedHoldActions'), false);
 });
 
 test('summarizes repeated hold actions for reviewer queues', () => {

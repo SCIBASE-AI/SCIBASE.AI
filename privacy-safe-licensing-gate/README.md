@@ -12,11 +12,12 @@ The goal is to support the revenue stream described in issue `#20` without touch
 - produces reviewer-ready hold reasons for exports that are not safe to license
 - estimates eligible monthly licensing revenue only for ready packages
 - emits a compact report that can feed an institutional analytics dashboard or licensing API
+- builds a sanitized licensing API catalog that omits internal hold actions and blocked-field details
 
 ## Files
 
 - `src/privacy-safe-licensing-gate.mjs` contains the policy engine.
-- `tests/privacy-safe-licensing-gate.test.mjs` covers safe, held, and custom-policy decisions.
+- `tests/privacy-safe-licensing-gate.test.mjs` covers safe, held, custom-policy, and API-catalog decisions.
 - `demo.mjs` prints a sample readiness report.
 - `docs/demo-transcript.md` and `docs/demo.mp4` show the reviewer demo flow.
 - `requirement-map.md` maps the implementation back to the Revenue Infrastructure bounty.

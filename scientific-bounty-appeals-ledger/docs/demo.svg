@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#101820"/>
+  <rect x="76" y="76" width="1128" height="568" rx="18" fill="#f8fafc"/>
+  <text x="116" y="138" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#17202a">Bounty Appeals Ledger</text>
+  <text x="116" y="184" font-family="Arial, sans-serif" font-size="20" fill="#52616f">Dispute handling for evidence, payout, and IP guards</text>
+  <rect x="116" y="235" width="300" height="118" rx="12" fill="#fff4dc"/>
+  <text x="140" y="280" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#8a5d00">US$60k held</text>
+  <text x="140" y="318" font-family="Arial, sans-serif" font-size="18" fill="#705018">Eligible open appeal</text>
+  <rect x="458" y="235" width="300" height="118" rx="12" fill="#fbe8eb"/>
+  <text x="482" y="280" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#9f1d35">Conflict review</text>
+  <text x="482" y="318" font-family="Arial, sans-serif" font-size="18" fill="#733141">Sponsor-affiliated reviewer</text>
+  <rect x="116" y="400" width="984" height="72" rx="12" fill="#edf2f7"/>
+  <text x="142" y="445" font-family="Arial, sans-serif" font-size="22" fill="#263238">Top action: assign an independent reviewer.</text>
+  <rect x="116" y="508" width="984" height="72" rx="12" fill="#edf2f7"/>
+  <text x="142" y="553" font-family="Arial, sans-serif" font-size="22" fill="#263238">IP transfer remains blocked while the eligible appeal is open.</text>
+</svg>

@@ -1,0 +1,153 @@
+{
+  "challengeId": "climate-forecasting-2026",
+  "title": "Regional climate forecasting benchmark",
+  "asOf": "2026-05-15T04:00:00Z",
+  "sponsor": {
+    "id": "sponsor-climate-lab",
+    "name": "Open Climate Lab"
+  },
+  "appealPolicy": {
+    "appealWindowHours": 72,
+    "reviewerResponseHours": 24,
+    "acceptedReasons": [
+      "missing-evidence",
+      "rubric-miscalculation",
+      "conflict-of-interest",
+      "payout-split-dispute"
+    ]
+  },
+  "ipPolicy": {
+    "defaultTransfer": "after-payout",
+    "holdDuringAppeal": true
+  },
+  "submissions": [
+    {
+      "id": "sub-aurora",
+      "teamId": "team-aurora",
+      "title": "Aurora probabilistic forecast model",
+      "decision": "awarded",
+      "awardAmount": 60000,
+      "decisionAt": "2026-05-13T10:00:00Z",
+      "solverPayoutRoutes": [
+        {
+          "solverId": "solver-1",
+          "share": 0.65
+        },
+        {
+          "solverId": "solver-2",
+          "share": 0.35
+        }
+      ],
+      "artifactIds": [
+        "artifact-aurora-model",
+        "artifact-aurora-report",
+        "artifact-aurora-dataset"
+      ]
+    },
+    {
+      "id": "sub-boreal",
+      "teamId": "team-boreal",
+      "title": "Boreal analog ensemble",
+      "decision": "honorable-mention",
+      "awardAmount": 10000,
+      "decisionAt": "2026-05-12T12:00:00Z",
+      "solverPayoutRoutes": [
+        {
+          "solverId": "solver-3",
+          "share": 1
+        }
+      ],
+      "artifactIds": [
+        "artifact-boreal-model",
+        "artifact-boreal-report"
+      ]
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "reviewer-stat",
+      "name": "Statistical reviewer",
+      "affiliations": [
+        "Independent"
+      ],
+      "reviewedSubmissionIds": [
+        "sub-aurora",
+        "sub-boreal"
+      ]
+    },
+    {
+      "id": "reviewer-sponsor",
+      "name": "Sponsor domain reviewer",
+      "affiliations": [
+        "Open Climate Lab"
+      ],
+      "reviewedSubmissionIds": [
+        "sub-aurora"
+      ]
+    },
+    {
+      "id": "reviewer-external",
+      "name": "External replication reviewer",
+      "affiliations": [
+        "University Center for Forecasting"
+      ],
+      "reviewedSubmissionIds": []
+    }
+  ],
+  "evidenceSnapshots": [
+    {
+      "id": "snapshot-aurora-decision",
+      "submissionId": "sub-aurora",
+      "lockedAt": "2026-05-13T10:05:00Z",
+      "artifactHashes": {
+        "artifact-aurora-model": "sha256:4c9dc6f02f0c9f8f9a0010e7c8c0221d",
+        "artifact-aurora-report": "sha256:9a78aa4dcb8a9b605e63b10ec31e4f62",
+        "artifact-aurora-dataset": "sha256:f0796207ec9d81a43ff84dc148d873ab"
+      }
+    },
+    {
+      "id": "snapshot-boreal-decision",
+      "submissionId": "sub-boreal",
+      "lockedAt": "2026-05-12T12:10:00Z",
+      "artifactHashes": {
+        "artifact-boreal-model": "sha256:e2e87d98509bb0186ef49b6b37a31a30",
+        "artifact-boreal-report": "sha256:d33a2ad6f1fb4f8421ec13fb935af884"
+      }
+    }
+  ],
+  "appeals": [
+    {
+      "id": "appeal-aurora-conflict",
+      "submissionId": "sub-aurora",
+      "filedBy": {
+        "role": "competing-solver",
+        "teamId": "team-boreal"
+      },
+      "reason": "conflict-of-interest",
+      "filedAt": "2026-05-13T18:00:00Z",
+      "reviewerIds": [
+        "reviewer-sponsor",
+        "reviewer-external"
+      ],
+      "status": "open",
+      "summary": "A sponsor-affiliated reviewer participated in scoring the winning submission."
+    },
+    {
+      "id": "appeal-boreal-split",
+      "submissionId": "sub-boreal",
+      "filedBy": {
+        "role": "solver",
+        "teamId": "team-boreal"
+      },
+      "reason": "payout-split-dispute",
+      "filedAt": "2026-05-13T08:00:00Z",
+      "resolvedAt": "2026-05-14T02:00:00Z",
+      "reviewerIds": [
+        "reviewer-stat"
+      ],
+      "status": "resolved",
+      "resolution": "upheld-original-route",
+      "summary": "Team requested an alternate split, but submitted payout route was confirmed."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "research-assistant-evidence-grounding",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free evidence-grounding assistant module for SCIBASE issue #16.",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node src/cli.js",
+    "check": "npm test && npm run demo"
+  }
+}

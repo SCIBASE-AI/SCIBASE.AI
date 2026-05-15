@@ -1,0 +1,92 @@
+{
+  "projectId": "project-ai-biomarker-002",
+  "domain": "molecular_biology",
+  "researcherInterests": ["single-cell", "alzheimers", "biomarkers"],
+  "labCapabilities": ["single-cell-rna-seq", "mouse-model", "spatial-transcriptomics"],
+  "manuscript": {
+    "title": "Single-cell inflammatory biomarker panel for early Alzheimer's progression",
+    "abstract": "We present a single-cell RNA sequencing analysis of inflammatory signatures associated with early Alzheimer's progression. The study combines a curated cohort, reproducible processing workflow, and pathway enrichment review to prioritize candidate biomarkers for follow-up validation.",
+    "sections": [
+      { "name": "Methods", "text": "Batch-effect controls, differential expression thresholds, and pathway enrichment strategy are described with protocol references." },
+      { "name": "Results", "text": "A three-gene inflammatory panel stratifies early-stage samples and aligns with microglial activation literature." }
+    ],
+    "claims": [
+      {
+        "id": "claim-panel-accuracy",
+        "text": "The three-gene inflammatory panel separates early-stage Alzheimer's samples from controls.",
+        "importance": "high",
+        "expectedEvidence": ["dataset", "statistical-analysis", "protocol"],
+        "artifacts": ["dataset-cohort", "analysis-differential-expression", "protocol-processing"],
+        "citations": ["citation-microglia-review"]
+      },
+      {
+        "id": "claim-pathway-novelty",
+        "text": "The pathway intersection is under-studied in spatial transcriptomics replication cohorts.",
+        "importance": "medium",
+        "expectedEvidence": ["literature-scan"],
+        "artifacts": ["gap-scan-spatial"],
+        "citations": ["citation-negative-results"]
+      },
+      {
+        "id": "claim-clinical-readiness",
+        "text": "The panel is ready for clinical deployment.",
+        "importance": "high",
+        "expectedEvidence": ["clinical-validation", "ethics-approval"],
+        "artifacts": ["analysis-differential-expression"],
+        "citations": []
+      }
+    ]
+  },
+  "evidenceLibrary": [
+    { "id": "dataset-cohort", "type": "dataset", "title": "Curated single-cell cohort", "year": 2026, "checksum": "sha256:cohort", "reproducible": true },
+    { "id": "analysis-differential-expression", "type": "statistical-analysis", "title": "Differential expression notebook", "year": 2026, "checksum": "sha256:analysis", "reproducible": true },
+    { "id": "protocol-processing", "type": "protocol", "title": "Cell filtering and integration protocol", "year": 2025, "peerReviewed": true },
+    { "id": "citation-microglia-review", "type": "literature-scan", "title": "Microglial activation review", "year": 2023, "peerReviewed": true },
+    { "id": "gap-scan-spatial", "type": "literature-scan", "title": "Spatial transcriptomics gap scan", "year": 2026, "reproducible": true },
+    { "id": "citation-negative-results", "type": "literature-scan", "title": "Negative replication signals in neuroinflammation", "year": 2024, "peerReviewed": true }
+  ],
+  "reproducibility": {
+    "environment": { "type": "docker", "lockfile": "renv.lock" },
+    "rawData": { "available": true, "checksum": "sha256:raw" },
+    "pipelineSteps": [
+      { "id": "ingest", "command": "Rscript scripts/ingest.R", "input": "raw/", "output": "derived/cell-matrix.rds" },
+      { "id": "model", "command": "Rscript scripts/model.R", "input": "derived/cell-matrix.rds", "output": "results/panel.json" }
+    ],
+    "reportedResults": [
+      { "metric": "panel_auc", "expected": 0.88, "observed": 0.88 },
+      { "metric": "signature_count", "expected": 3, "observed": 3 }
+    ],
+    "previousAttempts": [
+      { "status": "passed", "url": "https://scibase.example/repro/project-ai-biomarker-002/attempt-1" }
+    ]
+  },
+  "corpus": [
+    {
+      "id": "gap-spatial-microglia",
+      "title": "Spatial replication of microglial inflammatory biomarkers",
+      "tags": ["single-cell", "alzheimers", "spatial-transcriptomics"],
+      "requiredCapabilities": ["spatial-transcriptomics"],
+      "replicationCount": 0,
+      "unresolvedQuestions": ["Do spatial niches preserve the single-cell inflammatory signature?", "Which cell-cell interactions explain false positives?"],
+      "negativeSignals": ["bulk RNA-seq replication was inconsistent"]
+    },
+    {
+      "id": "gap-mouse-model-transfer",
+      "title": "Mouse model transferability of human inflammatory panel",
+      "tags": ["alzheimers", "mouse-model"],
+      "requiredCapabilities": ["mouse-model"],
+      "replicationCount": 1,
+      "unresolvedQuestions": ["Which model captures early-stage microglial state?"],
+      "negativeSignals": []
+    },
+    {
+      "id": "well-covered-proteomics",
+      "title": "Proteomics validation of established amyloid markers",
+      "tags": ["proteomics"],
+      "requiredCapabilities": ["mass-spec"],
+      "replicationCount": 6,
+      "unresolvedQuestions": [],
+      "negativeSignals": []
+    }
+  ]
+}

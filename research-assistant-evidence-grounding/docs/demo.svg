@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Research assistant evidence grounding demo</title>
+  <desc id="desc">Visual walkthrough of claims-to-evidence mapping, peer review, reproducibility scoring, and research gap ranking.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="55%" stop-color="#11203f"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .title { fill: #f8fafc; font: 700 42px system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .subtitle { fill: #bfdbfe; font: 500 22px system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .card { fill: #0f172a; stroke: #38bdf8; stroke-width: 2; rx: 22; }
+      .card2 { fill: #111827; stroke: #a78bfa; stroke-width: 2; rx: 22; }
+      .label { fill: #f1f5f9; font: 700 24px system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .small { fill: #cbd5e1; font: 500 18px system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      .metric { fill: #86efac; font: 800 30px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .warn { fill: #fca5a5; font: 800 24px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .arrow { stroke: #67e8f9; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#67e8f9"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <text x="70" y="78" class="title">SCIBASE AI Research Assistant Suite</text>
+  <text x="70" y="115" class="subtitle">Evidence-grounded review + reproducibility + gap discovery</text>
+
+  <rect x="70" y="165" width="300" height="170" class="card"/>
+  <text x="100" y="215" class="label">1. Evidence Map</text>
+  <text x="100" y="252" class="small">claims ↔ datasets</text>
+  <text x="100" y="282" class="small">citations ↔ protocols</text>
+  <text x="100" y="316" class="metric">coverage 0.667</text>
+
+  <line x1="390" y1="250" x2="475" y2="250" class="arrow"/>
+
+  <rect x="500" y="165" width="300" height="170" class="card2"/>
+  <text x="530" y="215" class="label">2. Peer Review</text>
+  <text x="530" y="252" class="small">clarity + methods</text>
+  <text x="530" y="282" class="small">claims-vs-evidence</text>
+  <text x="530" y="316" class="warn">revise before release</text>
+
+  <line x1="820" y1="250" x2="905" y2="250" class="arrow"/>
+
+  <rect x="930" y="165" width="280" height="170" class="card"/>
+  <text x="960" y="215" class="label">3. Repro Check</text>
+  <text x="960" y="252" class="small">lockfile + raw data</text>
+  <text x="960" y="282" class="small">pipeline + outputs</text>
+  <text x="960" y="316" class="metric">confidence 100</text>
+
+  <rect x="170" y="420" width="420" height="165" class="card2"/>
+  <text x="205" y="470" class="label">4. Gap Finder</text>
+  <text x="205" y="508" class="small">low replication + negative signals</text>
+  <text x="205" y="540" class="small">matches lab capabilities</text>
+  <text x="205" y="570" class="metric">gap-spatial-microglia</text>
+
+  <line x1="610" y1="505" x2="700" y2="505" class="arrow"/>
+
+  <rect x="725" y="420" width="385" height="165" class="card"/>
+  <text x="760" y="470" class="label">Assistant Brief</text>
+  <text x="760" y="508" class="small">status: needs_researcher_attention</text>
+  <text x="760" y="540" class="small">blocker: weak clinical-readiness claim</text>
+  <text x="760" y="570" class="metric">audit-ready JSON</text>
+</svg>

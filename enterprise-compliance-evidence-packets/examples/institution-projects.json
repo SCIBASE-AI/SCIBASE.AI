@@ -1,0 +1,128 @@
+{
+  "institution": "Northbridge Research Office",
+  "generatedAt": "2026-05-15T00:00:00.000Z",
+  "policy": {
+    "minimumReproducibilityScore": 0.8,
+    "requiredOpenAccess": true,
+    "requiredDataAvailability": true,
+    "requiredAiReview": true,
+    "requiredVersionHistory": true,
+    "requiredOrcidCoverage": 0.75,
+    "exportTargets": ["institutional_repository", "funder_report", "preprint"]
+  },
+  "projects": [
+    {
+      "id": "P-1001",
+      "title": "Single-cell markers for early fibrosis detection",
+      "department": "Biomedical Engineering",
+      "tags": ["GRANT-TRACKED", "OPEN-SCIENCE"],
+      "principalInvestigator": "Dr. Lina Patel",
+      "contributors": [
+        { "name": "Lina Patel", "orcid": "0000-0002-1825-0097" },
+        { "name": "Marco Ruiz", "orcid": "0000-0001-5109-3700" },
+        { "name": "Jae Kim", "orcid": "0000-0003-1415-9265" }
+      ],
+      "evidence": {
+        "openAccess": true,
+        "dataAvailability": "public_repository",
+        "reproducibilityScore": 0.92,
+        "aiReviewCompleted": true,
+        "versionHistory": true,
+        "doi": "10.5281/zenodo.1001",
+        "funderMandate": "NIH Public Access",
+        "ethicsApproval": "IRB-2048",
+        "license": "CC-BY-4.0"
+      },
+      "exports": {
+        "institutional_repository": {
+          "enabled": true,
+          "target": "DSpace",
+          "format": "JATS"
+        },
+        "funder_report": {
+          "enabled": true,
+          "target": "NIH RePORTER",
+          "format": "JSON"
+        },
+        "preprint": {
+          "enabled": true,
+          "target": "bioRxiv",
+          "format": "LaTeX"
+        }
+      }
+    },
+    {
+      "id": "P-1002",
+      "title": "Open catalyst benchmark for low-temperature ammonia",
+      "department": "Materials Science",
+      "tags": ["DOCTORAL-WORK"],
+      "principalInvestigator": "Dr. Nora Singh",
+      "contributors": [
+        { "name": "Nora Singh", "orcid": "0000-0002-1111-2222" },
+        { "name": "Eva Morales" },
+        { "name": "Ahmed Hassan", "orcid": "0000-0002-3333-4444" }
+      ],
+      "evidence": {
+        "openAccess": true,
+        "dataAvailability": "controlled_access",
+        "reproducibilityScore": 0.7,
+        "aiReviewCompleted": true,
+        "versionHistory": true,
+        "doi": "",
+        "funderMandate": "Horizon EU",
+        "ethicsApproval": "N/A",
+        "license": "CC-BY-NC-4.0"
+      },
+      "exports": {
+        "institutional_repository": {
+          "enabled": true,
+          "target": "Invenio",
+          "format": "JATS"
+        },
+        "funder_report": {
+          "enabled": true,
+          "target": "Horizon EU Portal",
+          "format": "CSV"
+        },
+        "preprint": {
+          "enabled": true,
+          "target": "ChemRxiv"
+        }
+      }
+    },
+    {
+      "id": "P-1003",
+      "title": "Private industry collaboration on grid demand forecasting",
+      "department": "Climate Systems",
+      "tags": ["INDUSTRY", "PRIVATE"],
+      "principalInvestigator": "Dr. Omar Bell",
+      "contributors": [
+        { "name": "Omar Bell" },
+        { "name": "Iris Chen" }
+      ],
+      "evidence": {
+        "openAccess": false,
+        "dataAvailability": "missing",
+        "reproducibilityScore": 0.64,
+        "aiReviewCompleted": false,
+        "versionHistory": false,
+        "doi": "",
+        "funderMandate": "Internal R&D",
+        "ethicsApproval": "N/A",
+        "license": "Proprietary"
+      },
+      "exports": {
+        "institutional_repository": {
+          "enabled": false,
+          "target": "DSpace",
+          "format": "JATS"
+        },
+        "funder_report": {
+          "enabled": true,
+          "target": "Internal BI",
+          "format": "JSON"
+        }
+      }
+    }
+  ]
+}

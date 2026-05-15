@@ -1,0 +1,203 @@
+{
+  "generatedAt": "2026-05-15T07:45:00.000Z",
+  "challenge": {
+    "id": "challenge-biomarker-2026",
+    "title": "Identify reproducible inflammatory biomarkers from single-cell RNA-seq",
+    "sponsorId": "sponsor-neuro-lab",
+    "prizePoolUsd": 100000,
+    "payoutPolicy": "milestone-and-final-award",
+    "ipPolicy": "solver-retains-until-paid"
+  },
+  "teams": [
+    {
+      "id": "team-atlas",
+      "name": "Atlas Immunology",
+      "members": [
+        {
+          "id": "solver-chen",
+          "name": "Mina Chen",
+          "institution": "Northbridge University"
+        },
+        {
+          "id": "solver-owens",
+          "name": "Tariq Owens",
+          "institution": "Northbridge University"
+        }
+      ]
+    },
+    {
+      "id": "team-lattice",
+      "name": "Lattice Bio",
+      "members": [
+        {
+          "id": "solver-varga",
+          "name": "Elena Varga",
+          "institution": "River City Institute"
+        }
+      ]
+    },
+    {
+      "id": "team-mirror",
+      "name": "Mirror Methods",
+      "members": [
+        {
+          "id": "solver-ramos",
+          "name": "Iris Ramos",
+          "institution": "Northbridge University"
+        }
+      ]
+    },
+    {
+      "id": "team-cascade",
+      "name": "Cascade Genomics",
+      "members": [
+        {
+          "id": "solver-patel",
+          "name": "Dev Patel",
+          "institution": "West Harbor Lab"
+        }
+      ]
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub-atlas",
+      "teamId": "team-atlas",
+      "title": "Microglia inflammatory biomarker atlas with reproducible notebooks",
+      "abstract": "A single-cell RNA-seq workflow identifies microglia markers with confidence intervals and reproducible notebook evidence.",
+      "methodsSummary": "Normalize single-cell RNA sequencing counts, cluster microglia populations, test inflammatory marker enrichment, and validate biomarkers against held-out cohorts.",
+      "deliverableManifest": "Notebook pipeline, biomarker table, confidence interval report, reproducibility container, and summary manuscript.",
+      "submittedAt": "2026-05-15T07:02:00.000Z",
+      "anonymizedNetworkId": "anon-net-17",
+      "artifacts": [
+        {
+          "name": "analysis.ipynb",
+          "hash": "sha256:atlas-notebook-001"
+        },
+        {
+          "name": "biomarkers.csv",
+          "hash": "sha256:atlas-biomarkers-001"
+        }
+      ]
+    },
+    {
+      "id": "sub-lattice",
+      "teamId": "team-lattice",
+      "title": "Independent cytokine response model for biomarker nomination",
+      "abstract": "A graph-guided model ranks cytokine response markers and validates findings against public tissue atlases.",
+      "methodsSummary": "Build a graph model over cytokine pathways, rank candidate biomarkers, test specificity across tissue atlases, and report uncertainty for each marker.",
+      "deliverableManifest": "Graph model code, ranked biomarker JSON, validation summary, uncertainty report, and reproducibility notes.",
+      "submittedAt": "2026-05-15T07:08:00.000Z",
+      "anonymizedNetworkId": "anon-net-41",
+      "artifacts": [
+        {
+          "name": "model.js",
+          "hash": "sha256:lattice-model-201"
+        },
+        {
+          "name": "ranked-biomarkers.json",
+          "hash": "sha256:lattice-ranked-201"
+        }
+      ]
+    },
+    {
+      "id": "sub-mirror",
+      "teamId": "team-mirror",
+      "title": "Microglia inflammatory biomarker atlas with reproducible notebooks",
+      "abstract": "A reproducible single-cell workflow identifies inflammatory microglia markers with confidence intervals and validation cohorts.",
+      "methodsSummary": "Normalize single-cell RNA sequencing counts, cluster microglia populations, test inflammatory marker enrichment, and validate biomarkers against held-out cohorts.",
+      "deliverableManifest": "Notebook pipeline, biomarker table, confidence interval report, reproducibility container, and summary manuscript.",
+      "submittedAt": "2026-05-15T07:10:00.000Z",
+      "anonymizedNetworkId": "anon-net-17",
+      "artifacts": [
+        {
+          "name": "analysis-copy.ipynb",
+          "hash": "sha256:atlas-notebook-001"
+        },
+        {
+          "name": "biomarkers.csv",
+          "hash": "sha256:mirror-biomarkers-002"
+        }
+      ]
+    },
+    {
+      "id": "sub-cascade",
+      "teamId": "team-cascade",
+      "title": "Longitudinal biomarker stability screen for inflammatory disease",
+      "abstract": "A longitudinal validation workflow checks whether nominated markers remain stable across disease stages and instruments.",
+      "methodsSummary": "Estimate biomarker stability across longitudinal cohorts, compare instrument batches, and build a reproducibility score for each marker.",
+      "deliverableManifest": "Stability scoring script, batch comparison report, reproducibility scorecard, and reviewer evidence packet.",
+      "submittedAt": "2026-05-15T07:16:00.000Z",
+      "anonymizedNetworkId": "anon-net-17",
+      "artifacts": [
+        {
+          "name": "stability.js",
+          "hash": "sha256:cascade-stability-503"
+        }
+      ]
+    }
+  ],
+  "reviewers": [
+    {
+      "id": "reviewer-hale",
+      "name": "Dr. Nora Hale",
+      "institutions": [
+        "Northbridge University"
+      ],
+      "priorCollaboratorIds": [
+        "solver-chen"
+      ],
+      "financialSponsorIds": [],
+      "sponsorEmployee": false
+    },
+    {
+      "id": "reviewer-singh",
+      "name": "Dr. Asha Singh",
+      "institutions": [
+        "Independent Review Cooperative"
+      ],
+      "priorCollaboratorIds": [],
+      "financialSponsorIds": [],
+      "sponsorEmployee": false
+    },
+    {
+      "id": "reviewer-miles",
+      "name": "Dr. Owen Miles",
+      "institutions": [
+        "Sponsor Research Group"
+      ],
+      "priorCollaboratorIds": [],
+      "financialSponsorIds": [
+        "sponsor-neuro-lab"
+      ],
+      "sponsorEmployee": true,
+      "employerId": "sponsor-neuro-lab"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "assign-1",
+      "submissionId": "sub-atlas",
+      "reviewerId": "reviewer-hale",
+      "role": "scientific-reviewer"
+    },
+    {
+      "id": "assign-2",
+      "submissionId": "sub-lattice",
+      "reviewerId": "reviewer-singh",
+      "role": "scientific-reviewer"
+    },
+    {
+      "id": "assign-3",
+      "submissionId": "sub-mirror",
+      "reviewerId": "reviewer-miles",
+      "role": "arbitrator"
+    },
+    {
+      "id": "assign-4",
+      "submissionId": "sub-cascade",
+      "reviewerId": "reviewer-singh",
+      "role": "scientific-reviewer"
+    }
+  ]
+}

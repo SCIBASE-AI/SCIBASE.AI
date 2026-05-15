@@ -1,0 +1,13 @@
+{
+  "name": "scientific-bounty-risk-controls",
+  "version": "1.0.0",
+  "description": "Dependency-free anti-collusion and payout hold controls for SCIBASE scientific bounty submissions.",
+  "main": "src/bounty-risk-controls.js",
+  "scripts": {
+    "check": "node --check src/bounty-risk-controls.js && node --check demo.js && node --check test.js",
+    "demo": "node demo.js",
+    "test": "node test.js"
+  },
+  "license": "MIT",
+  "private": true
+}

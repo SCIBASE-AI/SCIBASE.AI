@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Notebook result replay ledger demo</title>
+  <desc id="desc">Dashboard showing release blocked by stale scientific notebook results and failed replay evidence.</desc>
+  <rect width="1280" height="720" fill="#f6f7fb"/>
+  <rect x="48" y="42" width="1184" height="92" rx="8" fill="#102033"/>
+  <text x="78" y="92" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Notebook Result Replay Ledger</text>
+  <text x="78" y="120" font-family="Arial, sans-serif" font-size="17" fill="#c7d7ea">SCIBASE project repository release gate for preprint-v2.2-rc1</text>
+  <rect x="982" y="63" width="210" height="48" rx="6" fill="#f04f4f"/>
+  <text x="1015" y="94" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">BLOCK RELEASE</text>
+
+  <rect x="48" y="166" width="360" height="142" rx="8" fill="#ffffff" stroke="#d4dae7"/>
+  <text x="74" y="205" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#102033">Replay summary</text>
+  <text x="74" y="240" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#f04f4f">2</text>
+  <text x="136" y="236" font-family="Arial, sans-serif" font-size="16" fill="#405064">findings across notebook outputs</text>
+  <text x="74" y="274" font-family="Arial, sans-serif" font-size="15" fill="#405064">2 release-critical artifacts blocked</text>
+  <text x="74" y="295" font-family="Arial, sans-serif" font-size="15" fill="#405064">1 citation badge impact</text>
+
+  <rect x="460" y="166" width="360" height="142" rx="8" fill="#ffffff" stroke="#d4dae7"/>
+  <text x="486" y="205" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#102033">Current digest</text>
+  <text x="486" y="240" font-family="monospace" font-size="18" fill="#1864ab">sha256:dc54...2c76</text>
+  <text x="486" y="272" font-family="Arial, sans-serif" font-size="15" fill="#405064">Current data, code, notebook, and env hashes.</text>
+
+  <rect x="872" y="166" width="360" height="142" rx="8" fill="#ffffff" stroke="#d4dae7"/>
+  <text x="898" y="205" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#102033">Recorded digest</text>
+  <text x="898" y="240" font-family="monospace" font-size="18" fill="#7c4d00">sha256:6168...8361</text>
+  <text x="898" y="272" font-family="Arial, sans-serif" font-size="15" fill="#405064">Stored before upstream data/code changes.</text>
+
+  <rect x="48" y="344" width="1184" height="256" rx="8" fill="#ffffff" stroke="#d4dae7"/>
+  <text x="74" y="384" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#102033">Release-blocking evidence</text>
+  <line x1="74" y1="410" x2="1202" y2="410" stroke="#dfe5ef"/>
+
+  <circle cx="91" cy="452" r="9" fill="#f04f4f"/>
+  <text x="116" y="459" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#102033">results/figure-1a.png</text>
+  <text x="350" y="459" font-family="Arial, sans-serif" font-size="15" fill="#405064">Data, code, notebook, and environment hashes changed after replay.</text>
+  <rect x="1010" y="432" width="164" height="34" rx="5" fill="#feecec"/>
+  <text x="1031" y="455" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#be2525">needs replay</text>
+
+  <circle cx="91" cy="506" r="9" fill="#f04f4f"/>
+  <text x="116" y="513" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#102033">results/qc-table.csv</text>
+  <text x="350" y="513" font-family="Arial, sans-serif" font-size="15" fill="#405064">Notebook replay failed after the container image changed.</text>
+  <rect x="1010" y="486" width="164" height="34" rx="5" fill="#feecec"/>
+  <text x="1038" y="509" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#be2525">failed replay</text>
+
+  <circle cx="91" cy="560" r="9" fill="#2f9e44"/>
+  <text x="116" y="567" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#102033">results/model-metrics.json</text>
+  <text x="350" y="567" font-family="Arial, sans-serif" font-size="15" fill="#405064">Current replay digest matches the release candidate manifest.</text>
+  <rect x="1010" y="540" width="164" height="34" rx="5" fill="#e7f7ec"/>
+  <text x="1055" y="563" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#2f7d3c">clean</text>
+
+  <rect x="48" y="632" width="1184" height="48" rx="8" fill="#e9eef7"/>
+  <text x="74" y="662" font-family="Arial, sans-serif" font-size="16" fill="#26384d">Rollback packet: preprint-v2.1:results/figure-1a.png  |  replay command: scibase replay cell.figure-1a --candidate preprint-v2.2-rc1</text>
+</svg>

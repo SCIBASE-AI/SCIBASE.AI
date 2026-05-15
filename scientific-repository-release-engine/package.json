@@ -1,0 +1,12 @@
+{
+  "name": "scientific-repository-release-engine",
+  "version": "0.1.0",
+  "description": "Dependency-free scientific project repository release engine with component manifests, hashes, dataset diffs, reproducibility gates, citations, and export bundles.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "npm test && npm run demo",
+    "demo": "node src/cli.js",
+    "test": "node --test test/*.test.js"
+  }
+}

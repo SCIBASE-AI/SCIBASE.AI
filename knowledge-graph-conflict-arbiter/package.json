@@ -1,0 +1,12 @@
+{
+  "name": "knowledge-graph-conflict-arbiter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free scientific knowledge graph relationship conflict arbiter for SCIBASE.",
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check src/conflict-arbiter.js && node --check scripts/demo.js && node --check test/conflict-arbiter.test.js",
+    "test": "node test/conflict-arbiter.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

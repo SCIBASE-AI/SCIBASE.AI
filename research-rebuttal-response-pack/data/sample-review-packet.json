@@ -1,0 +1,66 @@
+{
+  "manuscript": {
+    "id": "ms-graph-retrieval-2026",
+    "title": "Graph Retrieval Signals Improve Literature Discovery",
+    "decision": "major-revision",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The graph retrieval ranker improves recall for interdisciplinary literature discovery.",
+        "evidenceIds": ["ev-benchmark", "ev-ablation"]
+      },
+      {
+        "id": "c2",
+        "text": "The method remains robust across biomedical and materials-science corpora.",
+        "evidenceIds": ["ev-benchmark"]
+      },
+      {
+        "id": "c3",
+        "text": "The online prototype can be reproduced from the released scripts.",
+        "evidenceIds": ["ev-scripts"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-benchmark",
+        "kind": "benchmark",
+        "description": "Cross-domain retrieval benchmark with 12,000 labeled query-document pairs.",
+        "status": "available"
+      },
+      {
+        "id": "ev-ablation",
+        "kind": "ablation",
+        "description": "Ablation table comparing graph, citation, and keyword signals.",
+        "status": "available"
+      },
+      {
+        "id": "ev-scripts",
+        "kind": "code",
+        "description": "Prototype reproduction scripts without pinned dependency versions.",
+        "status": "partial"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "reviewer": "R1",
+      "severity": "major",
+      "text": "The core recall claim is interesting, but the manuscript does not show confidence intervals or a statistical test for the benchmark delta."
+    },
+    {
+      "reviewer": "R2",
+      "severity": "major",
+      "text": "The materials-science evaluation appears much smaller than the biomedical corpus. Please explain whether the robustness claim is overgeneralized."
+    },
+    {
+      "reviewer": "R2",
+      "severity": "minor",
+      "text": "The reproduction scripts do not pin package versions, so the prototype is not reliably reproducible."
+    },
+    {
+      "reviewer": "R3",
+      "severity": "major",
+      "text": "The ablation table is useful, but it is unclear which graph features drive the largest performance gains."
+    }
+  ]
+}

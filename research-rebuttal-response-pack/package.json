@@ -1,0 +1,12 @@
+{
+  "name": "research-rebuttal-response-pack",
+  "version": "1.0.0",
+  "description": "Deterministic author rebuttal and revision response planning for SCIBASE AI research assistants.",
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/rebuttal-response-pack.js && node --check scripts/demo.js",
+    "test": "node --test test/rebuttal-response-pack.test.js",
+    "demo": "node scripts/demo.js"
+  },
+  "license": "MIT"
+}

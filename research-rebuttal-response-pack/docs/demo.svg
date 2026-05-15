@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="58" y="54" width="844" height="432" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="90" y="106" font-family="Arial, sans-serif" font-size="28" fill="#1e293b">Research rebuttal response pack</text>
+  <text x="90" y="145" font-family="Arial, sans-serif" font-size="18" fill="#475569">Reviewer findings become author actions, evidence requests, and editor-ready readiness signals.</text>
+  <rect x="90" y="190" width="230" height="170" rx="8" fill="#eef2ff" stroke="#818cf8"/>
+  <text x="116" y="230" font-family="Arial, sans-serif" font-size="20" fill="#312e81">Review findings</text>
+  <text x="116" y="265" font-family="Arial, sans-serif" font-size="16" fill="#4338ca">statistical support</text>
+  <text x="116" y="295" font-family="Arial, sans-serif" font-size="16" fill="#4338ca">scope concern</text>
+  <text x="116" y="325" font-family="Arial, sans-serif" font-size="16" fill="#4338ca">reproducibility gap</text>
+  <rect x="365" y="190" width="230" height="170" rx="8" fill="#ecfdf5" stroke="#34d399"/>
+  <text x="391" y="230" font-family="Arial, sans-serif" font-size="20" fill="#065f46">Response matrix</text>
+  <text x="391" y="265" font-family="Arial, sans-serif" font-size="16" fill="#047857">author strategy</text>
+  <text x="391" y="295" font-family="Arial, sans-serif" font-size="16" fill="#047857">revision tasks</text>
+  <text x="391" y="325" font-family="Arial, sans-serif" font-size="16" fill="#047857">evidence requests</text>
+  <rect x="640" y="190" width="230" height="170" rx="8" fill="#fff7ed" stroke="#fb923c"/>
+  <text x="666" y="230" font-family="Arial, sans-serif" font-size="20" fill="#9a3412">Readiness packet</text>
+  <text x="666" y="265" font-family="Arial, sans-serif" font-size="16" fill="#c2410c">risk blockers</text>
+  <text x="666" y="295" font-family="Arial, sans-serif" font-size="16" fill="#c2410c">editor summary</text>
+  <text x="666" y="325" font-family="Arial, sans-serif" font-size="16" fill="#c2410c">next action</text>
+  <text x="90" y="430" font-family="Arial, sans-serif" font-size="17" fill="#334155">Verification: npm run check, npm test, npm run demo</text>
+</svg>

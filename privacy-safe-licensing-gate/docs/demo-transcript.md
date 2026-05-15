@@ -13,6 +13,7 @@ Expected reviewer flow:
 3. One package is held because it includes private reviewer notes, a blocked `raw_content` field, low consent coverage, too few subjects, too few institutions, low k-anonymity, and too short an aggregation window.
 4. Eligible monthly licensing revenue is counted only for ready packages.
 5. Reviewer next actions are summarized so revenue operations can fix unsafe exports before customer delivery.
+6. A sanitized `licensingApiCatalog` is emitted for dashboard, licensed API, or white-label consumers without exposing blocked-field details or internal hold actions.
 
 Expected summary:
 

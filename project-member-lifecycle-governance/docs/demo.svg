@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="40" y="38" width="1200" height="644" rx="28" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="70" y="96" fill="#111827" font-family="Arial, sans-serif" font-size="42" font-weight="800">Project Member Lifecycle Governance</text>
+  <text x="70" y="130" fill="#475569" font-family="Arial, sans-serif" font-size="20">Offboarding, owner handoff, stale invitation cleanup, and audit evidence for research projects.</text>
+  <g font-family="Arial, sans-serif">
+    <text x="70" y="164" fill="#0f766e" font-size="18" font-weight="700">3 transfer plans</text>
+    <text x="240" y="164" fill="#0f766e" font-size="18" font-weight="700">6 grant revocations</text>
+    <text x="455" y="164" fill="#0f766e" font-size="18" font-weight="700">2 invitation revocations</text>
+
+      <g transform="translate(70 184)">
+        <rect width="1140" height="82" rx="14" fill="#fee2e2" stroke="#cbd5e1"/>
+        <text x="24" y="34" fill="#111827" font-size="25" font-weight="800">Climate Sensor Calibration</text>
+        <text x="24" y="62" fill="#475569" font-size="18">1 transfer plan(s), 1 grant revoke(s), 0 invite revoke(s)</text>
+        <text x="1034" y="50" text-anchor="middle" fill="#111827" font-size="25" font-weight="800">11.9</text>
+        <text x="1034" y="70" text-anchor="middle" fill="#64748b" font-size="13">risk</text>
+        <circle cx="1100" cy="41" r="24" fill="#b91c1c"/>
+        <text x="1100" y="48" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="800">1</text>
+      </g>
+      <g transform="translate(70 292)">
+        <rect width="1140" height="82" rx="14" fill="#fee2e2" stroke="#cbd5e1"/>
+        <text x="24" y="34" fill="#111827" font-size="25" font-weight="800">Organoid Response Map</text>
+        <text x="24" y="62" fill="#475569" font-size="18">1 transfer plan(s), 3 grant revoke(s), 1 invite revoke(s)</text>
+        <text x="1034" y="50" text-anchor="middle" fill="#111827" font-size="25" font-weight="800">9.95</text>
+        <text x="1034" y="70" text-anchor="middle" fill="#64748b" font-size="13">risk</text>
+        <circle cx="1100" cy="41" r="24" fill="#b91c1c"/>
+        <text x="1100" y="48" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="800">2</text>
+      </g>
+      <g transform="translate(70 400)">
+        <rect width="1140" height="82" rx="14" fill="#ecfdf5" stroke="#cbd5e1"/>
+        <text x="24" y="34" fill="#111827" font-size="25" font-weight="800">NeuroImmune Atlas</text>
+        <text x="24" y="62" fill="#475569" font-size="18">1 transfer plan(s), 2 grant revoke(s), 1 invite revoke(s)</text>
+        <text x="1034" y="50" text-anchor="middle" fill="#111827" font-size="25" font-weight="800">2.05</text>
+        <text x="1034" y="70" text-anchor="middle" fill="#64748b" font-size="13">risk</text>
+        <circle cx="1100" cy="41" r="24" fill="#0f766e"/>
+        <text x="1100" y="48" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="800">3</text>
+      </g>
+    <rect x="70" y="560" width="1140" height="80" rx="14" fill="#111827"/>
+    <text x="96" y="592" fill="#f8fafc" font-size="21" font-weight="800">Audit evidence</text>
+    <text x="96" y="622" fill="#cbd5e1" font-size="17">fbf4b5d84d9e9eefba245c4c is a deterministic digest for the first review event.</text>
+  </g>
+</svg>

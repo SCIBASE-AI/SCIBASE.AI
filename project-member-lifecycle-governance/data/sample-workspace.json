@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-05-15T00:00:00.000Z",
+  "users": [
+    {
+      "id": "user-maya",
+      "name": "Maya Chen",
+      "status": "active",
+      "mfaEnabled": true,
+      "anonymousProfile": false,
+      "linkedIdentities": [
+        { "provider": "orcid", "verified": true },
+        { "provider": "github", "verified": true }
+      ]
+    },
+    {
+      "id": "user-ibrahim",
+      "name": "Ibrahim Rao",
+      "status": "departing",
+      "departureDate": "2026-05-20",
+      "mfaEnabled": false,
+      "anonymousProfile": false,
+      "linkedIdentities": [
+        { "provider": "email", "verified": true },
+        { "provider": "github", "verified": false }
+      ]
+    },
+    {
+      "id": "user-noor",
+      "name": "Noor Patel",
+      "status": "active",
+      "mfaEnabled": true,
+      "anonymousProfile": true,
+      "linkedIdentities": [
+        { "provider": "orcid", "verified": true },
+        { "provider": "saml", "verified": true }
+      ]
+    },
+    {
+      "id": "user-victor",
+      "name": "Victor Huang",
+      "status": "inactive",
+      "departureDate": "2026-04-30",
+      "mfaEnabled": true,
+      "anonymousProfile": false,
+      "linkedIdentities": [
+        { "provider": "email", "verified": true }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-neuro-atlas",
+      "name": "NeuroImmune Atlas",
+      "visibility": "private",
+      "members": [
+        { "userId": "user-maya", "role": "owner", "objectGrants": ["dataset:write", "notebook:admin", "review:approve"] },
+        { "userId": "user-ibrahim", "role": "maintainer", "objectGrants": ["dataset:write", "notebook:write"] },
+        { "userId": "user-noor", "role": "reviewer", "objectGrants": ["review:comment"] }
+      ],
+      "invitations": [
+        { "id": "invite-ext-01", "email": "external-reviewer@example.edu", "role": "reviewer", "createdAt": "2026-05-01", "expiresAt": "2026-05-14", "sponsorUserId": "user-ibrahim", "external": true },
+        { "id": "invite-ext-02", "email": "new-postdoc@example.edu", "role": "contributor", "createdAt": "2026-05-13", "expiresAt": "2026-05-30", "sponsorUserId": "user-maya", "external": true }
+      ],
+      "objects": [
+        { "id": "dataset-neuro", "type": "dataset", "sensitivity": "restricted", "ownerUserId": "user-ibrahim" },
+        { "id": "notebook-qc", "type": "notebook", "sensitivity": "internal", "ownerUserId": "user-maya" }
+      ]
+    },
+    {
+      "id": "project-organoid-map",
+      "name": "Organoid Response Map",
+      "visibility": "institutional",
+      "members": [
+        { "userId": "user-ibrahim", "role": "owner", "objectGrants": ["dataset:admin", "billing:approve"] },
+        { "userId": "user-noor", "role": "maintainer", "objectGrants": ["dataset:write", "billing:view"] },
+        { "userId": "user-victor", "role": "contributor", "objectGrants": ["notebook:write"] }
+      ],
+      "invitations": [
+        { "id": "invite-lab-03", "email": "lab-manager@example.edu", "role": "manager", "createdAt": "2026-04-15", "expiresAt": "2026-05-10", "sponsorUserId": "user-victor", "external": false }
+      ],
+      "objects": [
+        { "id": "dataset-organoid", "type": "dataset", "sensitivity": "restricted", "ownerUserId": "user-ibrahim" },
+        { "id": "invoice-export", "type": "billing-report", "sensitivity": "confidential", "ownerUserId": "user-ibrahim" }
+      ]
+    },
+    {
+      "id": "project-climate-sensors",
+      "name": "Climate Sensor Calibration",
+      "visibility": "public",
+      "members": [
+        { "userId": "user-victor", "role": "owner", "objectGrants": ["dataset:admin"] }
+      ],
+      "invitations": [],
+      "objects": [
+        { "id": "dataset-climate", "type": "dataset", "sensitivity": "public", "ownerUserId": "user-victor" }
+      ]
+    }
+  ]
+}

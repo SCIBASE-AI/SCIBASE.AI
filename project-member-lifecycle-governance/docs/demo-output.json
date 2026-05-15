@@ -1,0 +1,528 @@
+{
+  "generatedAt": "2026-05-15T00:00:00.000Z",
+  "summary": {
+    "projectCount": 3,
+    "projectsWithBlockers": 2,
+    "transferPlanCount": 3,
+    "grantRevocationCount": 6,
+    "invitationRevocationCount": 2,
+    "maxLifecycleRisk": 11.9
+  },
+  "users": [
+    {
+      "id": "user-maya",
+      "name": "Maya Chen",
+      "status": "active",
+      "riskScore": 0,
+      "verifiedIdentityCount": 2
+    },
+    {
+      "id": "user-ibrahim",
+      "name": "Ibrahim Rao",
+      "status": "departing",
+      "riskScore": 6,
+      "verifiedIdentityCount": 1
+    },
+    {
+      "id": "user-noor",
+      "name": "Noor Patel",
+      "status": "active",
+      "riskScore": 0.25,
+      "verifiedIdentityCount": 2
+    },
+    {
+      "id": "user-victor",
+      "name": "Victor Huang",
+      "status": "inactive",
+      "riskScore": 4,
+      "verifiedIdentityCount": 1
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-neuro-atlas",
+      "name": "NeuroImmune Atlas",
+      "visibility": "private",
+      "lifecycleRisk": 2.05,
+      "activeOwnerCount": 1,
+      "departingMemberIds": [
+        "user-ibrahim"
+      ],
+      "transferPlans": [
+        {
+          "userId": "user-ibrahim",
+          "userName": "Ibrahim Rao",
+          "reason": "sensitive-grant-handoff",
+          "replacementUserId": "user-maya",
+          "replacementUserName": "Maya Chen",
+          "status": "ready",
+          "actions": [
+            "transfer sensitive object grants",
+            "record immutable access-review evidence",
+            "notify project maintainers"
+          ]
+        }
+      ],
+      "revokedGrants": [
+        {
+          "userId": "user-ibrahim",
+          "grant": "dataset:write",
+          "objectScope": "dataset",
+          "revokeAt": "2026-05-20",
+          "reason": "sensitive-access-offboarding"
+        },
+        {
+          "userId": "user-ibrahim",
+          "grant": "notebook:write",
+          "objectScope": "notebook",
+          "revokeAt": "2026-05-20",
+          "reason": "departing-member-cleanup"
+        }
+      ],
+      "invitationActions": [
+        {
+          "invitationId": "invite-ext-01",
+          "email": "external-reviewer@example.edu",
+          "role": "reviewer",
+          "action": "revoke",
+          "risk": 5,
+          "reasons": [
+            "expired-invitation",
+            "sponsor-unavailable",
+            "external-collaborator"
+          ]
+        },
+        {
+          "invitationId": "invite-ext-02",
+          "email": "new-postdoc@example.edu",
+          "role": "contributor",
+          "action": "keep",
+          "risk": 1,
+          "reasons": [
+            "external-collaborator"
+          ]
+        }
+      ],
+      "objectTransferActions": [
+        {
+          "objectId": "dataset-neuro",
+          "objectType": "dataset",
+          "sensitivity": "restricted",
+          "fromUserId": "user-ibrahim",
+          "toUserId": "user-maya",
+          "action": "transfer-owner"
+        }
+      ],
+      "blockers": [],
+      "auditEvents": [
+        {
+          "type": "transfer-plan",
+          "actor": "system",
+          "target": "project-neuro-atlas:user-ibrahim",
+          "payload": {
+            "userId": "user-ibrahim",
+            "userName": "Ibrahim Rao",
+            "reason": "sensitive-grant-handoff",
+            "replacementUserId": "user-maya",
+            "replacementUserName": "Maya Chen",
+            "status": "ready",
+            "actions": [
+              "transfer sensitive object grants",
+              "record immutable access-review evidence",
+              "notify project maintainers"
+            ]
+          },
+          "digest": "fbf4b5d84d9e9eefba245c4c"
+        },
+        {
+          "type": "grant-revocation",
+          "actor": "system",
+          "target": "project-neuro-atlas:user-ibrahim:dataset:write",
+          "payload": {
+            "userId": "user-ibrahim",
+            "grant": "dataset:write",
+            "objectScope": "dataset",
+            "revokeAt": "2026-05-20",
+            "reason": "sensitive-access-offboarding"
+          },
+          "digest": "5000f8dab128921176fe4a9d"
+        },
+        {
+          "type": "grant-revocation",
+          "actor": "system",
+          "target": "project-neuro-atlas:user-ibrahim:notebook:write",
+          "payload": {
+            "userId": "user-ibrahim",
+            "grant": "notebook:write",
+            "objectScope": "notebook",
+            "revokeAt": "2026-05-20",
+            "reason": "departing-member-cleanup"
+          },
+          "digest": "f2f11b27a8e822cd2f1975e5"
+        },
+        {
+          "type": "invitation-revocation",
+          "actor": "system",
+          "target": "project-neuro-atlas:invite-ext-01",
+          "payload": {
+            "invitationId": "invite-ext-01",
+            "email": "external-reviewer@example.edu",
+            "role": "reviewer",
+            "action": "revoke",
+            "risk": 5,
+            "reasons": [
+              "expired-invitation",
+              "sponsor-unavailable",
+              "external-collaborator"
+            ]
+          },
+          "digest": "65681b9e837d256a1332dee3"
+        },
+        {
+          "type": "object-transfer",
+          "actor": "system",
+          "target": "project-neuro-atlas:dataset-neuro",
+          "payload": {
+            "objectId": "dataset-neuro",
+            "objectType": "dataset",
+            "sensitivity": "restricted",
+            "fromUserId": "user-ibrahim",
+            "toUserId": "user-maya",
+            "action": "transfer-owner"
+          },
+          "digest": "6109e40f8a632b067d8a051f"
+        }
+      ]
+    },
+    {
+      "id": "project-organoid-map",
+      "name": "Organoid Response Map",
+      "visibility": "institutional",
+      "lifecycleRisk": 9.95,
+      "activeOwnerCount": 0,
+      "departingMemberIds": [
+        "user-ibrahim",
+        "user-victor"
+      ],
+      "transferPlans": [
+        {
+          "userId": "user-ibrahim",
+          "userName": "Ibrahim Rao",
+          "reason": "owner-continuity",
+          "replacementUserId": "user-noor",
+          "replacementUserName": "Noor Patel",
+          "status": "ready",
+          "actions": [
+            "assign replacement owner before removing member",
+            "record immutable access-review evidence",
+            "notify project maintainers"
+          ]
+        }
+      ],
+      "revokedGrants": [
+        {
+          "userId": "user-ibrahim",
+          "grant": "dataset:admin",
+          "objectScope": "dataset",
+          "revokeAt": "2026-05-20",
+          "reason": "sensitive-access-offboarding"
+        },
+        {
+          "userId": "user-ibrahim",
+          "grant": "billing:approve",
+          "objectScope": "billing",
+          "revokeAt": "2026-05-20",
+          "reason": "sensitive-access-offboarding"
+        },
+        {
+          "userId": "user-victor",
+          "grant": "notebook:write",
+          "objectScope": "notebook",
+          "revokeAt": "2026-04-30",
+          "reason": "departing-member-cleanup"
+        }
+      ],
+      "invitationActions": [
+        {
+          "invitationId": "invite-lab-03",
+          "email": "lab-manager@example.edu",
+          "role": "manager",
+          "action": "revoke",
+          "risk": 4,
+          "reasons": [
+            "expired-invitation",
+            "sponsor-unavailable"
+          ]
+        }
+      ],
+      "objectTransferActions": [
+        {
+          "objectId": "dataset-organoid",
+          "objectType": "dataset",
+          "sensitivity": "restricted",
+          "fromUserId": "user-ibrahim",
+          "toUserId": "user-noor",
+          "action": "transfer-owner"
+        },
+        {
+          "objectId": "invoice-export",
+          "objectType": "billing-report",
+          "sensitivity": "confidential",
+          "fromUserId": "user-ibrahim",
+          "toUserId": "user-noor",
+          "action": "transfer-owner"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing-active-owner",
+          "severity": "critical",
+          "message": "Organoid Response Map has no active owner."
+        }
+      ],
+      "auditEvents": [
+        {
+          "type": "transfer-plan",
+          "actor": "system",
+          "target": "project-organoid-map:user-ibrahim",
+          "payload": {
+            "userId": "user-ibrahim",
+            "userName": "Ibrahim Rao",
+            "reason": "owner-continuity",
+            "replacementUserId": "user-noor",
+            "replacementUserName": "Noor Patel",
+            "status": "ready",
+            "actions": [
+              "assign replacement owner before removing member",
+              "record immutable access-review evidence",
+              "notify project maintainers"
+            ]
+          },
+          "digest": "adf520926a27359106f91177"
+        },
+        {
+          "type": "grant-revocation",
+          "actor": "system",
+          "target": "project-organoid-map:user-ibrahim:dataset:admin",
+          "payload": {
+            "userId": "user-ibrahim",
+            "grant": "dataset:admin",
+            "objectScope": "dataset",
+            "revokeAt": "2026-05-20",
+            "reason": "sensitive-access-offboarding"
+          },
+          "digest": "52fd4a0b6b5c01ec00b8b963"
+        },
+        {
+          "type": "grant-revocation",
+          "actor": "system",
+          "target": "project-organoid-map:user-ibrahim:billing:approve",
+          "payload": {
+            "userId": "user-ibrahim",
+            "grant": "billing:approve",
+            "objectScope": "billing",
+            "revokeAt": "2026-05-20",
+            "reason": "sensitive-access-offboarding"
+          },
+          "digest": "7e4b516bc7074dde65435194"
+        },
+        {
+          "type": "grant-revocation",
+          "actor": "system",
+          "target": "project-organoid-map:user-victor:notebook:write",
+          "payload": {
+            "userId": "user-victor",
+            "grant": "notebook:write",
+            "objectScope": "notebook",
+            "revokeAt": "2026-04-30",
+            "reason": "departing-member-cleanup"
+          },
+          "digest": "3ed5fa8d1659864fe8f154a2"
+        },
+        {
+          "type": "invitation-revocation",
+          "actor": "system",
+          "target": "project-organoid-map:invite-lab-03",
+          "payload": {
+            "invitationId": "invite-lab-03",
+            "email": "lab-manager@example.edu",
+            "role": "manager",
+            "action": "revoke",
+            "risk": 4,
+            "reasons": [
+              "expired-invitation",
+              "sponsor-unavailable"
+            ]
+          },
+          "digest": "35c3b15b7570401923cc9521"
+        },
+        {
+          "type": "object-transfer",
+          "actor": "system",
+          "target": "project-organoid-map:dataset-organoid",
+          "payload": {
+            "objectId": "dataset-organoid",
+            "objectType": "dataset",
+            "sensitivity": "restricted",
+            "fromUserId": "user-ibrahim",
+            "toUserId": "user-noor",
+            "action": "transfer-owner"
+          },
+          "digest": "02801406e3e97c51d8d050e7"
+        },
+        {
+          "type": "object-transfer",
+          "actor": "system",
+          "target": "project-organoid-map:invoice-export",
+          "payload": {
+            "objectId": "invoice-export",
+            "objectType": "billing-report",
+            "sensitivity": "confidential",
+            "fromUserId": "user-ibrahim",
+            "toUserId": "user-noor",
+            "action": "transfer-owner"
+          },
+          "digest": "eb643c96c5fd8e300e4a6f84"
+        },
+        {
+          "type": "offboarding-blocker",
+          "actor": "system",
+          "target": "project-organoid-map",
+          "payload": {
+            "code": "missing-active-owner",
+            "severity": "critical",
+            "message": "Organoid Response Map has no active owner."
+          },
+          "digest": "6ca93eaf08750393fe4ba3bc"
+        }
+      ]
+    },
+    {
+      "id": "project-climate-sensors",
+      "name": "Climate Sensor Calibration",
+      "visibility": "public",
+      "lifecycleRisk": 11.9,
+      "activeOwnerCount": 0,
+      "departingMemberIds": [
+        "user-victor"
+      ],
+      "transferPlans": [
+        {
+          "userId": "user-victor",
+          "userName": "Victor Huang",
+          "reason": "owner-continuity",
+          "replacementUserId": null,
+          "replacementUserName": null,
+          "status": "blocked",
+          "actions": [
+            "assign replacement owner before removing member",
+            "record immutable access-review evidence",
+            "notify project maintainers"
+          ]
+        }
+      ],
+      "revokedGrants": [
+        {
+          "userId": "user-victor",
+          "grant": "dataset:admin",
+          "objectScope": "dataset",
+          "revokeAt": "2026-04-30",
+          "reason": "sensitive-access-offboarding"
+        }
+      ],
+      "invitationActions": [],
+      "objectTransferActions": [
+        {
+          "objectId": "dataset-climate",
+          "objectType": "dataset",
+          "sensitivity": "public",
+          "fromUserId": "user-victor",
+          "toUserId": null,
+          "action": "quarantine-until-owner-assigned"
+        }
+      ],
+      "blockers": [
+        {
+          "code": "missing-active-owner",
+          "severity": "critical",
+          "message": "Climate Sensor Calibration has no active owner."
+        },
+        {
+          "code": "missing-transfer-recipient",
+          "severity": "high",
+          "message": "Victor Huang cannot be removed until a replacement owner or sensitive-grant recipient is assigned."
+        }
+      ],
+      "auditEvents": [
+        {
+          "type": "transfer-plan",
+          "actor": "system",
+          "target": "project-climate-sensors:user-victor",
+          "payload": {
+            "userId": "user-victor",
+            "userName": "Victor Huang",
+            "reason": "owner-continuity",
+            "replacementUserId": null,
+            "replacementUserName": null,
+            "status": "blocked",
+            "actions": [
+              "assign replacement owner before removing member",
+              "record immutable access-review evidence",
+              "notify project maintainers"
+            ]
+          },
+          "digest": "c6917c945fa16309a9396c58"
+        },
+        {
+          "type": "grant-revocation",
+          "actor": "system",
+          "target": "project-climate-sensors:user-victor:dataset:admin",
+          "payload": {
+            "userId": "user-victor",
+            "grant": "dataset:admin",
+            "objectScope": "dataset",
+            "revokeAt": "2026-04-30",
+            "reason": "sensitive-access-offboarding"
+          },
+          "digest": "20b974ced317c0bf58b8e653"
+        },
+        {
+          "type": "object-transfer",
+          "actor": "system",
+          "target": "project-climate-sensors:dataset-climate",
+          "payload": {
+            "objectId": "dataset-climate",
+            "objectType": "dataset",
+            "sensitivity": "public",
+            "fromUserId": "user-victor",
+            "toUserId": null,
+            "action": "quarantine-until-owner-assigned"
+          },
+          "digest": "e45238c0b2e713f7f6615bfd"
+        },
+        {
+          "type": "offboarding-blocker",
+          "actor": "system",
+          "target": "project-climate-sensors",
+          "payload": {
+            "code": "missing-active-owner",
+            "severity": "critical",
+            "message": "Climate Sensor Calibration has no active owner."
+          },
+          "digest": "aa42a4bc39357604a5e3e080"
+        },
+        {
+          "type": "offboarding-blocker",
+          "actor": "system",
+          "target": "project-climate-sensors",
+          "payload": {
+            "code": "missing-transfer-recipient",
+            "severity": "high",
+            "message": "Victor Huang cannot be removed until a replacement owner or sensitive-grant recipient is assigned."
+          },
+          "digest": "be229a7cecc048bb2a96c12e"
+        }
+      ]
+    }
+  ]
+}

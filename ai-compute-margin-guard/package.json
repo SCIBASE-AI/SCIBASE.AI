@@ -1,0 +1,12 @@
+{
+  "name": "ai-compute-margin-guard",
+  "version": "1.0.0",
+  "description": "Synthetic AI compute margin guard for SCIBASE revenue infrastructure.",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.js",
+    "test": "node --test test/compute-margin-guard.test.js",
+    "demo": "node scripts/demo.js"
+  },
+  "license": "MIT"
+}

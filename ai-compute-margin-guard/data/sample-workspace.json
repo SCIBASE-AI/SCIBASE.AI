@@ -1,0 +1,197 @@
+{
+  "asOfDate": "2026-05-15",
+  "marginPolicy": {
+    "defaultFloorPct": 62,
+    "enterpriseFloorPct": 55,
+    "grantBudgetWarningPct": 85,
+    "quotaBurnWarningPct": 80,
+    "minTopUpMarginPct": 50,
+    "overheadPct": 12
+  },
+  "plans": [
+    {
+      "id": "lab-pro",
+      "name": "Lab Pro",
+      "monthlyFeeUsd": 900,
+      "includedComputeCreditUsd": 260,
+      "includedSeats": 12
+    },
+    {
+      "id": "institution-enterprise",
+      "name": "Institution Enterprise",
+      "monthlyFeeUsd": 6200,
+      "includedComputeCreditUsd": 2100,
+      "includedSeats": 120
+    }
+  ],
+  "providerSkus": [
+    {
+      "id": "openai-frontier-review",
+      "provider": "OpenAI",
+      "capabilities": ["peer-review", "summarization", "metadata-extraction"],
+      "inputPerMillionUsd": 2.5,
+      "outputPerMillionUsd": 10,
+      "gpuHourUsd": 0,
+      "storageGbMonthUsd": 0.02,
+      "reproRunUsd": 0
+    },
+    {
+      "id": "gpu-repro-a100",
+      "provider": "CloudGPU",
+      "capabilities": ["reproducibility-check", "model-training"],
+      "inputPerMillionUsd": 0,
+      "outputPerMillionUsd": 0,
+      "gpuHourUsd": 3.2,
+      "storageGbMonthUsd": 0.09,
+      "reproRunUsd": 1.25
+    },
+    {
+      "id": "gpu-repro-l4",
+      "provider": "CloudGPU",
+      "capabilities": ["reproducibility-check"],
+      "inputPerMillionUsd": 0,
+      "outputPerMillionUsd": 0,
+      "gpuHourUsd": 1.1,
+      "storageGbMonthUsd": 0.08,
+      "reproRunUsd": 1.1
+    }
+  ],
+  "priceBook": [
+    {
+      "capability": "peer-review",
+      "unitPriceUsd": 0.18,
+      "unit": "one-thousand-output-tokens"
+    },
+    {
+      "capability": "summarization",
+      "unitPriceUsd": 0.09,
+      "unit": "one-thousand-output-tokens"
+    },
+    {
+      "capability": "reproducibility-check",
+      "unitPriceUsd": 7.5,
+      "unit": "run"
+    },
+    {
+      "capability": "model-training",
+      "unitPriceUsd": 18,
+      "unit": "gpu-hour"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "acct-northbridge-lab",
+      "name": "Northbridge Lab",
+      "planId": "lab-pro",
+      "accountType": "lab",
+      "recognizedComputeRevenueUsd": 430,
+      "topUps": [
+        {
+          "id": "tu-northbridge-1",
+          "amountUsd": 250,
+          "paid": true
+        }
+      ],
+      "grantBudget": {
+        "id": "grant-nb-ai-2026",
+        "limitUsd": 1800,
+        "spentUsd": 1185
+      }
+    },
+    {
+      "id": "acct-riverbend-institute",
+      "name": "Riverbend Institute",
+      "planId": "institution-enterprise",
+      "accountType": "enterprise",
+      "recognizedComputeRevenueUsd": 220,
+      "topUps": [
+        {
+          "id": "tu-riverbend-1",
+          "amountUsd": 500,
+          "paid": false
+        }
+      ],
+      "grantBudget": {
+        "id": "grant-rb-repro-2026",
+        "limitUsd": 3600,
+        "spentUsd": 3340
+      }
+    },
+    {
+      "id": "acct-civic-bio",
+      "name": "Civic Bio Consortium",
+      "planId": "institution-enterprise",
+      "accountType": "enterprise",
+      "recognizedComputeRevenueUsd": 760,
+      "topUps": [
+        {
+          "id": "tu-civic-1",
+          "amountUsd": 120,
+          "paid": true
+        }
+      ],
+      "grantBudget": {
+        "id": "grant-civic-meta-2026",
+        "limitUsd": 1400,
+        "spentUsd": 980
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-nb-review-1",
+      "accountId": "acct-northbridge-lab",
+      "capability": "peer-review",
+      "providerSkuId": "openai-frontier-review",
+      "inputTokens": 420000,
+      "outputTokens": 92000,
+      "gpuSeconds": 0,
+      "storageGbDays": 1,
+      "reproRuns": 0
+    },
+    {
+      "id": "job-nb-repro-1",
+      "accountId": "acct-northbridge-lab",
+      "capability": "reproducibility-check",
+      "providerSkuId": "gpu-repro-l4",
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "gpuSeconds": 14400,
+      "storageGbDays": 12,
+      "reproRuns": 3
+    },
+    {
+      "id": "job-rb-training-1",
+      "accountId": "acct-riverbend-institute",
+      "capability": "model-training",
+      "providerSkuId": "gpu-repro-a100",
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "gpuSeconds": 176400,
+      "storageGbDays": 80,
+      "reproRuns": 0
+    },
+    {
+      "id": "job-rb-repro-2",
+      "accountId": "acct-riverbend-institute",
+      "capability": "reproducibility-check",
+      "providerSkuId": "gpu-repro-a100",
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "gpuSeconds": 28800,
+      "storageGbDays": 30,
+      "reproRuns": 12
+    },
+    {
+      "id": "job-civic-review-1",
+      "accountId": "acct-civic-bio",
+      "capability": "summarization",
+      "providerSkuId": "unknown-frontier-sku",
+      "inputTokens": 1800000,
+      "outputTokens": 380000,
+      "gpuSeconds": 0,
+      "storageGbDays": 2,
+      "reproRuns": 0
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "asOfDate": "2026-05-15",
+  "totals": {
+    "accountCount": 3,
+    "holdCount": 2,
+    "totalRevenueUsd": 1780,
+    "totalKnownCostUsd": 232.32,
+    "totalGrossMarginPct": 86.9,
+    "unknownSkuCount": 1
+  },
+  "accounts": [
+    {
+      "accountId": "acct-northbridge-lab",
+      "name": "Northbridge Lab",
+      "planId": "lab-pro",
+      "knownCostUsd": 10.87,
+      "meteredRevenueUsd": 39.06,
+      "recognizedRevenueUsd": 680,
+      "unpaidTopUpsUsd": 0,
+      "grossMarginPct": 98.4,
+      "requiredMarginPct": 62,
+      "quotaBurnPct": 15,
+      "grantSpendPct": 66.4,
+      "status": "clear",
+      "holdReasons": [],
+      "jobBreakdown": [
+        {
+          "jobId": "job-nb-review-1",
+          "capability": "peer-review",
+          "providerSkuId": "openai-frontier-review",
+          "costUsd": 2.21,
+          "billableRevenueUsd": 16.56,
+          "holdReasons": []
+        },
+        {
+          "jobId": "job-nb-repro-1",
+          "capability": "reproducibility-check",
+          "providerSkuId": "gpu-repro-l4",
+          "costUsd": 8.66,
+          "billableRevenueUsd": 22.5,
+          "holdReasons": []
+        }
+      ],
+      "auditDigest": "b11f70884ac9dc95060c93e7d2eea43553339734fbdcc0bb75ca4ba4d53d4c85"
+    },
+    {
+      "accountId": "acct-riverbend-institute",
+      "name": "Riverbend Institute",
+      "planId": "institution-enterprise",
+      "knownCostUsd": 221.45,
+      "meteredRevenueUsd": 972,
+      "recognizedRevenueUsd": 220,
+      "unpaidTopUpsUsd": 500,
+      "grossMarginPct": -0.7,
+      "requiredMarginPct": 55,
+      "quotaBurnPct": 46.3,
+      "grantSpendPct": 98.9,
+      "status": "hold",
+      "holdReasons": [
+        "gross-margin-below-floor",
+        "grant-budget-warning",
+        "unpaid-top-up-balance"
+      ],
+      "jobBreakdown": [
+        {
+          "jobId": "job-rb-training-1",
+          "capability": "model-training",
+          "providerSkuId": "gpu-repro-a100",
+          "costUsd": 175.88,
+          "billableRevenueUsd": 882,
+          "holdReasons": []
+        },
+        {
+          "jobId": "job-rb-repro-2",
+          "capability": "reproducibility-check",
+          "providerSkuId": "gpu-repro-a100",
+          "costUsd": 45.57,
+          "billableRevenueUsd": 90,
+          "holdReasons": []
+        }
+      ],
+      "auditDigest": "c7d9e9b16ab2436845da9a78cc9884ace09d92380ba4d44b4a09dd85e281f288"
+    },
+    {
+      "accountId": "acct-civic-bio",
+      "name": "Civic Bio Consortium",
+      "planId": "institution-enterprise",
+      "knownCostUsd": 0,
+      "meteredRevenueUsd": 34.2,
+      "recognizedRevenueUsd": 880,
+      "unpaidTopUpsUsd": 0,
+      "grossMarginPct": 100,
+      "requiredMarginPct": 55,
+      "quotaBurnPct": 1.6,
+      "grantSpendPct": 70,
+      "status": "hold",
+      "holdReasons": [
+        "unknown-provider-sku"
+      ],
+      "jobBreakdown": [
+        {
+          "jobId": "job-civic-review-1",
+          "capability": "summarization",
+          "providerSkuId": "unknown-frontier-sku",
+          "costUsd": null,
+          "billableRevenueUsd": 34.2,
+          "holdReasons": [
+            "unknown-provider-sku"
+          ]
+        }
+      ],
+      "auditDigest": "eb3b1ab7ac260ada4b7d0842a6788664f1e846cd3b4d48b49cf11513180ee9dd"
+    }
+  ],
+  "routeRecommendations": [
+    {
+      "jobId": "job-rb-repro-2",
+      "fromSku": "gpu-repro-a100",
+      "toSku": "gpu-repro-l4",
+      "reason": "cheaper-compatible-provider-sku",
+      "estimatedHourlyDeltaUsd": 2.25
+    }
+  ],
+  "pricingFloorNotes": [
+    {
+      "capability": "peer-review",
+      "currentUnitPriceUsd": 0.18,
+      "unit": "one-thousand-output-tokens",
+      "cheapestCompatibleCostSignalUsd": 0.01,
+      "minTopUpMarginPct": 50
+    },
+    {
+      "capability": "summarization",
+      "currentUnitPriceUsd": 0.09,
+      "unit": "one-thousand-output-tokens",
+      "cheapestCompatibleCostSignalUsd": 0.01,
+      "minTopUpMarginPct": 50
+    },
+    {
+      "capability": "reproducibility-check",
+      "currentUnitPriceUsd": 7.5,
+      "unit": "run",
+      "cheapestCompatibleCostSignalUsd": 1.1,
+      "minTopUpMarginPct": 50
+    },
+    {
+      "capability": "model-training",
+      "currentUnitPriceUsd": 18,
+      "unit": "gpu-hour",
+      "cheapestCompatibleCostSignalUsd": 3.2,
+      "minTopUpMarginPct": 50
+    }
+  ],
+  "reviewerChecklist": [
+    "Review held accounts before approving more AI compute usage.",
+    "Route reproducibility jobs to the cheapest compatible SKU when quality allows.",
+    "Raise top-up package prices when gross margin falls below policy floor.",
+    "Resolve unknown provider SKUs before closing institutional invoices."
+  ],
+  "auditDigest": "c7785d26584a00ea56106652c29a204690d5378ad04bba9220553a58db465745"
+}

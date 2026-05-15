@@ -1,0 +1,12 @@
+{
+  "name": "research-consent-access-broker",
+  "version": "1.0.0",
+  "description": "Consent, DUA, IRB, and object-grant access decisions for SCIBASE user/project management.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node scripts/check.js",
+    "test": "node --test test/consent-access-broker.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

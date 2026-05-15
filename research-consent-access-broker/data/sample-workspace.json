@@ -1,0 +1,146 @@
+{
+  "currentDate": "2026-05-15",
+  "researchers": [
+    {
+      "id": "r-ada",
+      "name": "Ada Researcher",
+      "email": "ada@northbridge.edu",
+      "institution": "Northbridge University",
+      "samlDomain": "northbridge.edu",
+      "orcid": "0000-0002-1111-2222",
+      "identityMode": "verified-researcher",
+      "mfaEnabled": true,
+      "groups": ["principal-investigator", "genomics-lab"]
+    },
+    {
+      "id": "r-bea",
+      "name": "Bea Collaborator",
+      "email": "bea@partnerlab.org",
+      "institution": "Partner Lab",
+      "samlDomain": "partnerlab.org",
+      "orcid": "0000-0002-3333-4444",
+      "identityMode": "external-collaborator",
+      "mfaEnabled": false,
+      "groups": ["external-collaborator"]
+    },
+    {
+      "id": "r-chan",
+      "name": "Anonymous Reviewer C",
+      "email": "reviewer-c@review.scibase.local",
+      "institution": "SCIBASE Review Pool",
+      "identityMode": "anonymous-reviewer",
+      "mfaEnabled": true,
+      "groups": ["blinded-reviewer"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "p-genome",
+      "name": "Rare Disease Genome Atlas",
+      "visibility": "invitation-only",
+      "ownerId": "r-ada"
+    }
+  ],
+  "memberships": [
+    { "projectId": "p-genome", "researcherId": "r-ada", "role": "owner" },
+    { "projectId": "p-genome", "researcherId": "r-bea", "role": "contributor" },
+    { "projectId": "p-genome", "researcherId": "r-chan", "role": "reviewer" }
+  ],
+  "protocols": [
+    {
+      "id": "irb-rare-2026",
+      "name": "Rare Disease Consent Protocol",
+      "status": "approved",
+      "irbExpiresAt": "2026-06-05"
+    }
+  ],
+  "objects": [
+    {
+      "id": "obj-dataset",
+      "projectId": "p-genome",
+      "name": "Identifiable variant table",
+      "sensitivity": "restricted",
+      "protocolId": "irb-rare-2026",
+      "dataCategories": ["genomic", "clinical"],
+      "purpose": "rare-disease-research",
+      "requiresConsent": true,
+      "requiresDua": true,
+      "requiresExport": true,
+      "reviewerOnly": false
+    },
+    {
+      "id": "obj-blinded-manuscript",
+      "projectId": "p-genome",
+      "name": "Blinded manuscript package",
+      "sensitivity": "review",
+      "protocolId": "irb-rare-2026",
+      "dataCategories": ["manuscript"],
+      "purpose": "peer-review",
+      "requiresConsent": false,
+      "requiresDua": true,
+      "requiresExport": false,
+      "reviewerOnly": true
+    }
+  ],
+  "objectGrants": [
+    { "id": "g-1", "objectId": "obj-dataset", "researcherId": "r-ada", "scope": "read-export" },
+    { "id": "g-2", "objectId": "obj-dataset", "researcherId": "r-bea", "scope": "read" },
+    { "id": "g-3", "objectId": "obj-blinded-manuscript", "groups": ["blinded-reviewer"], "scope": "review" },
+    { "id": "g-4", "objectId": "obj-dataset", "researcherId": "r-former", "scope": "read" }
+  ],
+  "consentRecords": [
+    {
+      "id": "consent-ada-rare",
+      "researcherId": "r-ada",
+      "protocolId": "irb-rare-2026",
+      "dataCategories": ["genomic", "clinical"],
+      "allowedPurposes": ["rare-disease-research"]
+    },
+    {
+      "id": "consent-bea-revoked",
+      "researcherId": "r-bea",
+      "protocolId": "irb-rare-2026",
+      "dataCategories": ["genomic", "clinical"],
+      "allowedPurposes": ["rare-disease-research"],
+      "revokedAt": "2026-04-01"
+    }
+  ],
+  "dataUseAgreements": [
+    {
+      "id": "dua-northbridge-rare",
+      "institution": "Northbridge University",
+      "protocolId": "irb-rare-2026",
+      "expiresAt": "2026-06-01",
+      "allowsExport": true,
+      "allowsReviewerAccess": true
+    },
+    {
+      "id": "dua-review-pool-rare",
+      "institution": "SCIBASE Review Pool",
+      "protocolId": "irb-rare-2026",
+      "expiresAt": "2026-07-01",
+      "allowsExport": false,
+      "allowsReviewerAccess": true
+    }
+  ],
+  "invitations": [
+    {
+      "id": "invite-partner-expired",
+      "projectId": "p-genome",
+      "email": "new.member@partnerlab.org",
+      "institution": "Partner Lab",
+      "expectedDomain": "partnerlab.org",
+      "requiresDua": true,
+      "expiresAt": "2026-05-01"
+    },
+    {
+      "id": "invite-northbridge",
+      "projectId": "p-genome",
+      "email": "curator@northbridge.edu",
+      "institution": "Northbridge University",
+      "expectedDomain": "northbridge.edu",
+      "requiresDua": true,
+      "expiresAt": "2026-05-30"
+    }
+  ]
+}

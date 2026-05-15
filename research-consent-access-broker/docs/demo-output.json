@@ -1,0 +1,296 @@
+{
+  "generatedAt": "2026-05-15",
+  "summary": {
+    "projects": 1,
+    "researchers": 3,
+    "objects": 2,
+    "allowed": 2,
+    "held": 4,
+    "invitationHolds": 1,
+    "grantDrift": 1
+  },
+  "decisions": [
+    {
+      "researcherId": "r-ada",
+      "projectId": "p-genome",
+      "objectId": "obj-dataset",
+      "allowed": true,
+      "reasons": [],
+      "warnings": [
+        "irb-renewal-window",
+        "dua-renewal-window"
+      ],
+      "role": "owner",
+      "grant": "read-export",
+      "consentId": "consent-ada-rare",
+      "agreementId": "dua-northbridge-rare"
+    },
+    {
+      "researcherId": "r-bea",
+      "projectId": "p-genome",
+      "objectId": "obj-dataset",
+      "allowed": false,
+      "reasons": [
+        "missing-or-revoked-consent",
+        "missing-or-expired-dua",
+        "mfa-required"
+      ],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "contributor",
+      "grant": "read",
+      "consentId": null,
+      "agreementId": null
+    },
+    {
+      "researcherId": "r-chan",
+      "projectId": "p-genome",
+      "objectId": "obj-dataset",
+      "allowed": false,
+      "reasons": [
+        "no-object-level-grant",
+        "missing-or-revoked-consent",
+        "missing-or-expired-dua",
+        "anonymous-reviewer-private-data-block"
+      ],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "reviewer",
+      "grant": "none",
+      "consentId": null,
+      "agreementId": null
+    },
+    {
+      "researcherId": "r-ada",
+      "projectId": "p-genome",
+      "objectId": "obj-blinded-manuscript",
+      "allowed": false,
+      "reasons": [
+        "no-object-level-grant"
+      ],
+      "warnings": [
+        "irb-renewal-window",
+        "dua-renewal-window"
+      ],
+      "role": "owner",
+      "grant": "none",
+      "consentId": null,
+      "agreementId": "dua-northbridge-rare"
+    },
+    {
+      "researcherId": "r-bea",
+      "projectId": "p-genome",
+      "objectId": "obj-blinded-manuscript",
+      "allowed": false,
+      "reasons": [
+        "no-object-level-grant",
+        "missing-or-expired-dua"
+      ],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "contributor",
+      "grant": "none",
+      "consentId": null,
+      "agreementId": null
+    },
+    {
+      "researcherId": "r-chan",
+      "projectId": "p-genome",
+      "objectId": "obj-blinded-manuscript",
+      "allowed": true,
+      "reasons": [],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "reviewer",
+      "grant": "review",
+      "consentId": null,
+      "agreementId": "dua-review-pool-rare"
+    }
+  ],
+  "invitationActions": [
+    {
+      "invitationId": "invite-partner-expired",
+      "projectId": "p-genome",
+      "email": "new.member@partnerlab.org",
+      "action": "hold",
+      "reasons": [
+        "stale-invitation",
+        "no-active-institution-dua"
+      ]
+    },
+    {
+      "invitationId": "invite-northbridge",
+      "projectId": "p-genome",
+      "email": "curator@northbridge.edu",
+      "action": "send",
+      "reasons": []
+    }
+  ],
+  "grantDrift": [
+    {
+      "grantId": "g-4",
+      "objectId": "obj-dataset",
+      "researcherId": "r-former",
+      "action": "review-grant",
+      "reasons": [
+        "unknown-researcher",
+        "grant-without-project-membership"
+      ]
+    }
+  ],
+  "auditEvents": [
+    {
+      "researcherId": "r-ada",
+      "projectId": "p-genome",
+      "objectId": "obj-dataset",
+      "allowed": true,
+      "reasons": [],
+      "warnings": [
+        "irb-renewal-window",
+        "dua-renewal-window"
+      ],
+      "role": "owner",
+      "grant": "read-export",
+      "consentId": "consent-ada-rare",
+      "agreementId": "dua-northbridge-rare",
+      "digest": "f627dc021b336439"
+    },
+    {
+      "researcherId": "r-chan",
+      "projectId": "p-genome",
+      "objectId": "obj-blinded-manuscript",
+      "allowed": true,
+      "reasons": [],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "reviewer",
+      "grant": "review",
+      "consentId": null,
+      "agreementId": "dua-review-pool-rare",
+      "digest": "35222d7f79d9c0e3"
+    },
+    {
+      "researcherId": "r-bea",
+      "projectId": "p-genome",
+      "objectId": "obj-dataset",
+      "allowed": false,
+      "reasons": [
+        "missing-or-revoked-consent",
+        "missing-or-expired-dua",
+        "mfa-required"
+      ],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "contributor",
+      "grant": "read",
+      "consentId": null,
+      "agreementId": null,
+      "digest": "f1541305dc7b78c6"
+    },
+    {
+      "researcherId": "r-chan",
+      "projectId": "p-genome",
+      "objectId": "obj-dataset",
+      "allowed": false,
+      "reasons": [
+        "no-object-level-grant",
+        "missing-or-revoked-consent",
+        "missing-or-expired-dua",
+        "anonymous-reviewer-private-data-block"
+      ],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "reviewer",
+      "grant": "none",
+      "consentId": null,
+      "agreementId": null,
+      "digest": "c5a8533e9fea675b"
+    },
+    {
+      "researcherId": "r-ada",
+      "projectId": "p-genome",
+      "objectId": "obj-blinded-manuscript",
+      "allowed": false,
+      "reasons": [
+        "no-object-level-grant"
+      ],
+      "warnings": [
+        "irb-renewal-window",
+        "dua-renewal-window"
+      ],
+      "role": "owner",
+      "grant": "none",
+      "consentId": null,
+      "agreementId": "dua-northbridge-rare",
+      "digest": "6b1b261d81cedc30"
+    },
+    {
+      "researcherId": "r-bea",
+      "projectId": "p-genome",
+      "objectId": "obj-blinded-manuscript",
+      "allowed": false,
+      "reasons": [
+        "no-object-level-grant",
+        "missing-or-expired-dua"
+      ],
+      "warnings": [
+        "irb-renewal-window"
+      ],
+      "role": "contributor",
+      "grant": "none",
+      "consentId": null,
+      "agreementId": null,
+      "digest": "10ad71faa5d15eef"
+    },
+    {
+      "invitationId": "invite-partner-expired",
+      "projectId": "p-genome",
+      "email": "new.member@partnerlab.org",
+      "action": "hold",
+      "reasons": [
+        "stale-invitation",
+        "no-active-institution-dua"
+      ],
+      "digest": "0dabac74390d033b"
+    },
+    {
+      "invitationId": "invite-northbridge",
+      "projectId": "p-genome",
+      "email": "curator@northbridge.edu",
+      "action": "send",
+      "reasons": [],
+      "digest": "672e36539268d54b"
+    },
+    {
+      "grantId": "g-4",
+      "objectId": "obj-dataset",
+      "researcherId": "r-former",
+      "action": "review-grant",
+      "reasons": [
+        "unknown-researcher",
+        "grant-without-project-membership"
+      ],
+      "digest": "a0254b18c2d84246"
+    }
+  ],
+  "heldByReason": {
+    "missing-or-revoked-consent": 2,
+    "missing-or-expired-dua": 3,
+    "mfa-required": 1,
+    "no-object-level-grant": 3,
+    "anonymous-reviewer-private-data-block": 1
+  },
+  "reviewerChecklist": [
+    "Review held access before adding users to sensitive project spaces.",
+    "Renew IRB and DUA records before expiry windows close.",
+    "Resolve grant drift before exporting project archives.",
+    "Keep anonymous reviewers restricted to blinded review objects."
+  ]
+}

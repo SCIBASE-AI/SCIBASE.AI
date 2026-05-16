@@ -1,0 +1,136 @@
+{
+  "institution": {
+    "id": "inst-northbridge",
+    "name": "Northbridge Institute for Translational Science",
+    "systems": ["DSpace", "InvenioRDM", "Canvas", "ORCID", "ServiceNow"]
+  },
+  "policies": [
+    {
+      "dataClass": "controlled-dataset",
+      "retainDays": 3650,
+      "clock": "createdAt",
+      "reviewBeforeDays": 365,
+      "owner": "Research Compliance",
+      "requiresLegalReview": true,
+      "exportAllowed": false,
+      "openAccessRequired": false
+    },
+    {
+      "dataClass": "review-transcript",
+      "retainDays": 1095,
+      "clock": "createdAt",
+      "reviewBeforeDays": 90,
+      "owner": "Peer Review Operations",
+      "requiresLegalReview": false,
+      "exportAllowed": false,
+      "openAccessRequired": false
+    },
+    {
+      "dataClass": "grant-report",
+      "retainDays": 1825,
+      "clock": "createdAt",
+      "reviewBeforeDays": 120,
+      "owner": "Funder Compliance",
+      "requiresLegalReview": false,
+      "exportAllowed": true,
+      "openAccessRequired": true
+    },
+    {
+      "dataClass": "manuscript-draft",
+      "retainDays": 2555,
+      "clock": "lastTouchedAt",
+      "reviewBeforeDays": 180,
+      "owner": "Scholarly Communications",
+      "requiresLegalReview": false,
+      "exportAllowed": true,
+      "openAccessRequired": false
+    }
+  ],
+  "records": [
+    {
+      "id": "rec-controlled-genomics-raw",
+      "projectId": "proj-alpha",
+      "projectTitle": "Alpha immune response cohort",
+      "department": "Bioinformatics",
+      "dataClass": "controlled-dataset",
+      "createdAt": "2015-02-01",
+      "lastTouchedAt": "2024-11-04",
+      "funderTags": ["NIH", "GRANT-AI-1042"],
+      "classificationTags": ["PHI", "IRB-RESTRICTED"],
+      "openAccessStatus": "not_applicable",
+      "latestExportId": "exp-zenodo-alpha-019"
+    },
+    {
+      "id": "rec-review-transcript-2022",
+      "projectId": "proj-beta",
+      "projectTitle": "Beta reproducibility review",
+      "department": "Open Science",
+      "dataClass": "review-transcript",
+      "createdAt": "2022-04-10",
+      "lastTouchedAt": "2023-01-18",
+      "funderTags": ["UKRI"],
+      "classificationTags": ["INTERNAL"],
+      "openAccessStatus": "not_applicable"
+    },
+    {
+      "id": "rec-grant-report-eu",
+      "projectId": "proj-gamma",
+      "projectTitle": "Gamma materials repository",
+      "department": "Materials Science",
+      "dataClass": "grant-report",
+      "createdAt": "2021-07-30",
+      "lastTouchedAt": "2025-12-01",
+      "funderTags": ["HORIZON-EU"],
+      "classificationTags": ["PUBLIC-REPORT"],
+      "openAccessStatus": "pending"
+    },
+    {
+      "id": "rec-manuscript-draft-aging",
+      "projectId": "proj-delta",
+      "projectTitle": "Delta aging manuscript",
+      "department": "Clinical Research",
+      "dataClass": "manuscript-draft",
+      "createdAt": "2019-03-02",
+      "lastTouchedAt": "2025-10-22",
+      "funderTags": ["NIH"],
+      "classificationTags": ["DRAFT"],
+      "openAccessStatus": "not_applicable"
+    },
+    {
+      "id": "rec-lab-log-unclassified",
+      "projectId": "proj-epsilon",
+      "projectTitle": "Epsilon sensor calibration",
+      "department": "Engineering Biology",
+      "dataClass": "lab-log",
+      "createdAt": "2020-01-15",
+      "lastTouchedAt": "2025-01-10",
+      "funderTags": ["NSF"],
+      "classificationTags": ["DEVICE-LOG"],
+      "openAccessStatus": "not_applicable"
+    }
+  ],
+  "legalHolds": [
+    {
+      "id": "hold-irb-alpha-2026",
+      "status": "active",
+      "reason": "IRB inquiry for controlled cohort data access",
+      "openedAt": "2026-01-12",
+      "expiresOn": "2026-09-30",
+      "projectIds": ["proj-alpha"],
+      "recordIds": [],
+      "funderTags": [],
+      "owner": "Office of General Counsel"
+    },
+    {
+      "id": "hold-horizon-funder-audit",
+      "status": "active",
+      "reason": "Horizon Europe funder audit evidence preservation",
+      "openedAt": "2026-04-20",
+      "expiresOn": "2026-08-31",
+      "projectIds": [],
+      "recordIds": [],
+      "funderTags": ["HORIZON-EU"],
+      "owner": "Funder Compliance"
+    }
+  ]
+}

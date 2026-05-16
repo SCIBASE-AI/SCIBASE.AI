@@ -1,0 +1,19 @@
+{
+  "name": "collaborative-editor-lock-checkpoint-ledger",
+  "version": "1.0.0",
+  "description": "Section lock and autosave checkpoint recovery controls for real-time scientific editor sessions.",
+  "main": "src/lock-checkpoint-ledger.js",
+  "scripts": {
+    "check": "node --check src/lock-checkpoint-ledger.js && node --check scripts/demo.js && node --check scripts/build-demo-gif.js && node --check test/lock-checkpoint-ledger.test.js",
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:gif": "node scripts/build-demo-gif.js"
+  },
+  "keywords": [
+    "collaborative-editor",
+    "section-locks",
+    "autosave",
+    "version-history"
+  ],
+  "license": "MIT"
+}

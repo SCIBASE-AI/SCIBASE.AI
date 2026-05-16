@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Collaborative editor lock checkpoint demo">
+  <rect width="960" height="540" fill="#f6f8fb"/>
+  <rect x="64" y="56" width="832" height="428" rx="18" fill="#ffffff" stroke="#cdd6e0"/>
+  <text x="96" y="116" fill="#1c2330" font-family="Arial, sans-serif" font-size="32" font-weight="700">Editor Lock + Checkpoint Recovery</text>
+  <text x="96" y="158" fill="#4f5b6e" font-family="Arial, sans-serif" font-size="20">Stale locks, autosave gaps, restore points, blocking work</text>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    <rect x="96" y="214" width="210" height="96" rx="12" fill="#155d48"/>
+    <text x="126" y="272" fill="#ffffff">1 ready</text>
+    <rect x="374" y="214" width="210" height="96" rx="12" fill="#975d0c"/>
+    <text x="404" y="272" fill="#ffffff">1 review</text>
+    <rect x="652" y="214" width="210" height="96" rx="12" fill="#ae322d"/>
+    <text x="682" y="272" fill="#ffffff">1 blocked</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="20">
+    <text x="96" y="372" fill="#1c2330">Top blocker: stale hard lock with edits from a non-owner</text>
+    <text x="96" y="410" fill="#1c2330">Restore plan uses hashed checkpoints and named versions</text>
+  </g>
+</svg>

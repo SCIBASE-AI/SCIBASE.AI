@@ -1,0 +1,226 @@
+{
+  "asOf": "2026-05-16T12:00:00.000Z",
+  "policy": {
+    "staleLockMinutes": 30,
+    "autosaveReviewMinutes": 5,
+    "autosaveBlockerMinutes": 30,
+    "maxUnsyncedOperations": 8
+  },
+  "documents": [
+    {
+      "documentId": "doc-neuro-submission",
+      "title": "Neurofeedback manuscript submission candidate",
+      "status": "finalizing",
+      "lastMajorMilestoneAt": "2026-05-16T10:20:00.000Z",
+      "sections": [
+        {
+          "sectionId": "intro",
+          "kind": "markdown",
+          "lock": {
+            "ownerId": "u-ada",
+            "mode": "soft",
+            "reason": "final copy edit",
+            "lockedAt": "2026-05-16T11:44:00.000Z",
+            "expiresAt": "2026-05-16T12:20:00.000Z"
+          }
+        },
+        {
+          "sectionId": "analysis-code",
+          "kind": "jupyter-cell",
+          "lock": null
+        }
+      ],
+      "presence": [
+        {
+          "userId": "u-ada",
+          "lastSeenAt": "2026-05-16T11:58:00.000Z",
+          "cursorSectionId": "intro"
+        }
+      ],
+      "pendingOperations": [],
+      "localCaches": [
+        {
+          "clientId": "browser-ada",
+          "userId": "u-ada",
+          "lastSyncedAt": "2026-05-16T11:59:00.000Z",
+          "unsyncedOperations": 0
+        }
+      ],
+      "checkpoints": [
+        {
+          "checkpointId": "cp-121",
+          "createdAt": "2026-05-16T11:58:30.000Z",
+          "contentHash": "sha256:doc-neuro-cp121",
+          "operationCount": 420
+        }
+      ],
+      "namedVersions": [
+        {
+          "versionId": "submission-candidate",
+          "name": "Submission candidate",
+          "createdAt": "2026-05-16T11:00:00.000Z",
+          "contentHash": "sha256:doc-neuro-submit"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": "task-abstract-polish",
+          "sectionId": "intro",
+          "status": "done",
+          "blocking": false
+        }
+      ],
+      "comments": []
+    },
+    {
+      "documentId": "doc-figure-appendix",
+      "title": "Figure appendix with locked final panels",
+      "status": "finalizing",
+      "lastMajorMilestoneAt": "2026-05-16T10:30:00.000Z",
+      "sections": [
+        {
+          "sectionId": "figure-2",
+          "kind": "figure",
+          "lock": {
+            "ownerId": "u-ben",
+            "mode": "hard",
+            "reason": "final panel export",
+            "lockedAt": "2026-05-16T09:20:00.000Z",
+            "expiresAt": "2026-05-16T10:00:00.000Z"
+          }
+        },
+        {
+          "sectionId": "caption-2",
+          "kind": "latex",
+          "lock": null
+        }
+      ],
+      "presence": [
+        {
+          "userId": "u-chen",
+          "lastSeenAt": "2026-05-16T11:56:00.000Z",
+          "cursorSectionId": "figure-2"
+        }
+      ],
+      "pendingOperations": [
+        {
+          "operationId": "op-1",
+          "userId": "u-chen",
+          "sectionId": "figure-2",
+          "kind": "replace"
+        },
+        {
+          "operationId": "op-2",
+          "userId": "u-chen",
+          "sectionId": "figure-2",
+          "kind": "insert"
+        }
+      ],
+      "localCaches": [
+        {
+          "clientId": "browser-chen",
+          "userId": "u-chen",
+          "lastSyncedAt": "2026-05-16T09:50:00.000Z",
+          "unsyncedOperations": 9
+        }
+      ],
+      "checkpoints": [
+        {
+          "checkpointId": "cp-088",
+          "createdAt": "2026-05-16T09:45:00.000Z",
+          "contentHash": "",
+          "operationCount": 311
+        }
+      ],
+      "namedVersions": [
+        {
+          "versionId": "draft-with-panels",
+          "name": "Draft with panels",
+          "createdAt": "2026-05-16T09:10:00.000Z",
+          "contentHash": "sha256:figure-draft"
+        }
+      ],
+      "tasks": [
+        {
+          "taskId": "task-panel-qc",
+          "sectionId": "figure-2",
+          "status": "open",
+          "blocking": true
+        }
+      ],
+      "comments": [
+        {
+          "commentId": "comment-scale-bar",
+          "sectionId": "figure-2",
+          "resolved": false,
+          "blocking": true
+        }
+      ]
+    },
+    {
+      "documentId": "doc-methods-draft",
+      "title": "Methods draft with delayed cache sync",
+      "status": "draft",
+      "lastMajorMilestoneAt": "2026-05-16T08:00:00.000Z",
+      "sections": [
+        {
+          "sectionId": "methods",
+          "kind": "markdown",
+          "lock": null
+        },
+        {
+          "sectionId": "supplementary-code",
+          "kind": "code",
+          "lock": {
+            "ownerId": "u-dina",
+            "mode": "soft",
+            "reason": "dependency note",
+            "lockedAt": "2026-05-16T11:46:00.000Z",
+            "expiresAt": "2026-05-16T12:30:00.000Z"
+          }
+        }
+      ],
+      "presence": [
+        {
+          "userId": "u-dina",
+          "lastSeenAt": "2026-05-16T11:57:00.000Z",
+          "cursorSectionId": "supplementary-code"
+        }
+      ],
+      "pendingOperations": [
+        {
+          "operationId": "op-methods-1",
+          "userId": "u-dina",
+          "sectionId": "supplementary-code",
+          "kind": "insert"
+        }
+      ],
+      "localCaches": [
+        {
+          "clientId": "browser-dina",
+          "userId": "u-dina",
+          "lastSyncedAt": "2026-05-16T11:46:00.000Z",
+          "unsyncedOperations": 4
+        }
+      ],
+      "checkpoints": [
+        {
+          "checkpointId": "cp-033",
+          "createdAt": "2026-05-16T11:45:00.000Z",
+          "contentHash": "sha256:methods-cp033",
+          "operationCount": 98
+        }
+      ],
+      "namedVersions": [],
+      "tasks": [
+        {
+          "taskId": "task-runtime-note",
+          "sectionId": "supplementary-code",
+          "status": "open",
+          "blocking": false
+        }
+      ],
+      "comments": []
+    }
+  ]
+}

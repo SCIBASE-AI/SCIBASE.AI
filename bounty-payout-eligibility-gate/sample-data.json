@@ -1,0 +1,55 @@
+{
+  "challenge": {
+    "id": "CH-2026-BIOMARKER-042",
+    "title": "Single-cell biomarker discovery challenge",
+    "bountyAmountUsd": 1000,
+    "settlementFunded": true,
+    "ipPolicy": "solver-retains-until-paid",
+    "sponsor": "Northstar Bioinformatics Lab"
+  },
+  "team": {
+    "id": "TEAM-ALPHA",
+    "name": "Open Reproducibility Alpha",
+    "awardSplits": [
+      {
+        "contributorId": "solver-1",
+        "percent": 70
+      },
+      {
+        "contributorId": "solver-2",
+        "percent": 30
+      }
+    ],
+    "contributors": [
+      {
+        "id": "solver-1",
+        "displayName": "Dr. A. Rivera",
+        "country": "US",
+        "identityAttested": true,
+        "payoutMethodVerified": true,
+        "taxFormStatus": "valid",
+        "institutionRouting": {
+          "required": false,
+          "approved": false
+        },
+        "watchlistStatus": "clear",
+        "ipAssignmentConsent": true
+      },
+      {
+        "id": "solver-2",
+        "displayName": "M. Chen",
+        "country": "CA",
+        "identityAttested": true,
+        "payoutMethodVerified": false,
+        "taxFormStatus": "missing",
+        "institutionRouting": {
+          "required": true,
+          "approved": false,
+          "institution": "Example University"
+        },
+        "watchlistStatus": "clear",
+        "ipAssignmentConsent": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Bounty payout eligibility gate demo</title>
+  <desc id="desc">Diagram showing challenge reward, payout eligibility checks, remediation actions, and signed audit packet.</desc>
+  <rect width="1280" height="720" fill="#f6f7f2"/>
+  <rect x="56" y="52" width="1168" height="616" rx="18" fill="#ffffff" stroke="#20231f" stroke-width="2"/>
+  <text x="96" y="116" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#20231f">Bounty Payout Eligibility Gate</text>
+  <text x="96" y="156" font-family="Arial, sans-serif" font-size="20" fill="#5d6258">Scientific Bounty System payout readiness before settlement release</text>
+
+  <g transform="translate(96 214)">
+    <rect width="260" height="160" rx="14" fill="#eaf2ff" stroke="#214f7a" stroke-width="2"/>
+    <text x="26" y="44" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#173c5f">Reward Decision</text>
+    <text x="26" y="82" font-family="Arial, sans-serif" font-size="18" fill="#173c5f">$1,000 bounty funded</text>
+    <text x="26" y="114" font-family="Arial, sans-serif" font-size="18" fill="#173c5f">Team split: 70 / 30</text>
+  </g>
+
+  <g transform="translate(420 190)">
+    <rect width="360" height="208" rx="14" fill="#fff8df" stroke="#7f6215" stroke-width="2"/>
+    <text x="26" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#584207">Eligibility Checks</text>
+    <text x="26" y="86" font-family="Arial, sans-serif" font-size="18" fill="#584207">Identity attestation</text>
+    <text x="26" y="118" font-family="Arial, sans-serif" font-size="18" fill="#584207">Supported payout country</text>
+    <text x="26" y="150" font-family="Arial, sans-serif" font-size="18" fill="#584207">Tax and institution routing</text>
+    <text x="26" y="182" font-family="Arial, sans-serif" font-size="18" fill="#584207">Watchlist and IP release guards</text>
+  </g>
+
+  <g transform="translate(844 214)">
+    <rect width="300" height="160" rx="14" fill="#ffeceb" stroke="#8c2b21" stroke-width="2"/>
+    <text x="26" y="44" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#681f18">Status: Blocked</text>
+    <text x="26" y="82" font-family="Arial, sans-serif" font-size="18" fill="#681f18">Missing payout method</text>
+    <text x="26" y="114" font-family="Arial, sans-serif" font-size="18" fill="#681f18">Missing tax form</text>
+  </g>
+
+  <path d="M356 294 H420" stroke="#20231f" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M780 294 H844" stroke="#20231f" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(96 456)">
+    <rect width="1048" height="114" rx="14" fill="#edf8ef" stroke="#2f6b3b" stroke-width="2"/>
+    <text x="26" y="42" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#244d2b">Signed Audit Packet</text>
+    <text x="26" y="78" font-family="Arial, sans-serif" font-size="18" fill="#244d2b">Sponsor receives remediation actions, payout plan, IP release status, and deterministic SHA-256 audit digest.</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L7,3 z" fill="#20231f"/>
+    </marker>
+  </defs>
+</svg>

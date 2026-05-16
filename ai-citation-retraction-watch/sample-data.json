@@ -1,0 +1,160 @@
+{
+  "manuscript": {
+    "id": "ms-neuro-bio-42",
+    "title": "Evidence-grounded biomarker discovery with reproducible AI workflows",
+    "domain": "biomedical informatics",
+    "draftVersion": "0.9.3"
+  },
+  "claims": [
+    {
+      "id": "claim-crispr-safety",
+      "text": "A compact CRISPR screen reduced off-target edits in primary-cell assays.",
+      "section": "Related Work",
+      "currentCitationDoi": "10.5555/retracted-crispr-2018",
+      "candidateDois": [
+        "10.5555/retracted-crispr-2018",
+        "10.5555/validated-crispr-2025",
+        "10.5555/crispr-meta-2024"
+      ]
+    },
+    {
+      "id": "claim-reproducible-models",
+      "text": "Model reproducibility improved when benchmark datasets shipped with execution manifests.",
+      "section": "Methods",
+      "currentCitationDoi": "10.5555/eoc-reproducibility-2020",
+      "candidateDois": [
+        "10.5555/eoc-reproducibility-2020",
+        "10.5555/reproducibility-manifest-2025",
+        "10.5555/open-benchmark-2023"
+      ]
+    },
+    {
+      "id": "claim-protein-folding",
+      "text": "Protein-folding benchmarks require explicit reporting of negative controls.",
+      "section": "Discussion",
+      "currentCitationDoi": "10.5555/corrected-folding-2022",
+      "candidateDois": [
+        "10.5555/corrected-folding-2022",
+        "10.5555/folding-controls-2024"
+      ]
+    },
+    {
+      "id": "claim-open-review",
+      "text": "Open peer-review metadata can improve transparency around reviewer expertise.",
+      "section": "Limitations",
+      "currentCitationDoi": "10.5555/open-review-metrics-2024",
+      "candidateDois": [
+        "10.5555/open-review-metrics-2024",
+        "10.5555/reviewer-taxonomy-2023"
+      ]
+    }
+  ],
+  "citationCatalog": [
+    {
+      "doi": "10.5555/retracted-crispr-2018",
+      "title": "Compact CRISPR Safety Screen in Primary Cells",
+      "year": 2018,
+      "venue": "Synthetic Journal of Gene Editing",
+      "evidenceLevel": "single_lab",
+      "keywords": ["crispr", "off-target", "primary-cell", "screen"]
+    },
+    {
+      "doi": "10.5555/validated-crispr-2025",
+      "title": "Multicenter Validation of Compact CRISPR Off-target Controls",
+      "year": 2025,
+      "venue": "Synthetic Translational Biology",
+      "evidenceLevel": "multicenter",
+      "keywords": ["crispr", "off-target", "validation", "primary-cell"]
+    },
+    {
+      "doi": "10.5555/crispr-meta-2024",
+      "title": "Meta-analysis of CRISPR Safety Controls",
+      "year": 2024,
+      "venue": "Synthetic Methods Review",
+      "evidenceLevel": "meta_analysis",
+      "keywords": ["crispr", "safety", "off-target", "meta-analysis"]
+    },
+    {
+      "doi": "10.5555/eoc-reproducibility-2020",
+      "title": "Execution Manifests for Reproducible Models",
+      "year": 2020,
+      "venue": "Synthetic AI Systems",
+      "evidenceLevel": "single_lab",
+      "keywords": ["reproducibility", "manifest", "model", "dataset"]
+    },
+    {
+      "doi": "10.5555/reproducibility-manifest-2025",
+      "title": "Institutional Benchmark Manifests for Reproducible AI",
+      "year": 2025,
+      "venue": "Synthetic Reproducibility Reports",
+      "evidenceLevel": "guideline",
+      "keywords": ["reproducibility", "manifest", "benchmark", "institutional"]
+    },
+    {
+      "doi": "10.5555/open-benchmark-2023",
+      "title": "Open Benchmarks with Execution Receipts",
+      "year": 2023,
+      "venue": "Synthetic Open Science",
+      "evidenceLevel": "cohort",
+      "keywords": ["benchmark", "execution", "dataset", "receipt"]
+    },
+    {
+      "doi": "10.5555/corrected-folding-2022",
+      "title": "Negative Controls in Protein Folding Benchmarks",
+      "year": 2022,
+      "venue": "Synthetic Computational Biology",
+      "evidenceLevel": "cohort",
+      "keywords": ["protein-folding", "negative-controls", "benchmark"]
+    },
+    {
+      "doi": "10.5555/folding-controls-2024",
+      "title": "Reporting Standards for Protein Folding Controls",
+      "year": 2024,
+      "venue": "Synthetic Biology Standards",
+      "evidenceLevel": "guideline",
+      "keywords": ["protein-folding", "negative-controls", "reporting"]
+    },
+    {
+      "doi": "10.5555/open-review-metrics-2024",
+      "title": "Open Review Metadata and Reviewer Expertise Signals",
+      "year": 2024,
+      "venue": "Synthetic Peer Review Quarterly",
+      "evidenceLevel": "cohort",
+      "keywords": ["open-review", "metadata", "reviewer", "expertise"]
+    },
+    {
+      "doi": "10.5555/reviewer-taxonomy-2023",
+      "title": "Reviewer Expertise Taxonomies for Open Science Platforms",
+      "year": 2023,
+      "venue": "Synthetic Scholarly Infrastructure",
+      "evidenceLevel": "guideline",
+      "keywords": ["reviewer", "taxonomy", "open-science", "expertise"]
+    }
+  ],
+  "watchSignals": [
+    {
+      "doi": "10.5555/retracted-crispr-2018",
+      "status": "retracted",
+      "noticeDate": "2024-10-03",
+      "source": "Synthetic Retraction Registry",
+      "reason": "Unverifiable primary-cell assay logs",
+      "replacementDois": ["10.5555/validated-crispr-2025", "10.5555/crispr-meta-2024"]
+    },
+    {
+      "doi": "10.5555/eoc-reproducibility-2020",
+      "status": "expression_of_concern",
+      "noticeDate": "2025-06-17",
+      "source": "Synthetic Publisher Notice",
+      "reason": "Benchmark dataset checksums could not be reproduced",
+      "replacementDois": ["10.5555/reproducibility-manifest-2025", "10.5555/open-benchmark-2023"]
+    },
+    {
+      "doi": "10.5555/corrected-folding-2022",
+      "status": "corrected",
+      "noticeDate": "2023-03-14",
+      "source": "Synthetic Errata Feed",
+      "reason": "Supplementary table label corrected",
+      "correctionDoi": "10.5555/corrected-folding-2022.erratum"
+    }
+  ]
+}

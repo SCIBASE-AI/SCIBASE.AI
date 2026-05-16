@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="64" y="56" width="1152" height="608" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="104" y="118" fill="#e5e7eb" font-family="Menlo, Consolas, monospace" font-size="34" font-weight="700">Enterprise Identity Provisioning Drift</text>
+  <text x="104" y="162" fill="#94a3b8" font-family="Menlo, Consolas, monospace" font-size="20">SCIM / SAML / HRIS / ORCID access governance</text>
+
+  <rect x="104" y="210" width="240" height="112" rx="12" fill="#1e293b"/>
+  <text x="128" y="254" fill="#f8fafc" font-family="Menlo, Consolas, monospace" font-size="42" font-weight="700">11</text>
+  <text x="128" y="292" fill="#cbd5e1" font-family="Menlo, Consolas, monospace" font-size="18">drift findings</text>
+
+  <rect x="384" y="210" width="240" height="112" rx="12" fill="#7f1d1d"/>
+  <text x="408" y="254" fill="#fee2e2" font-family="Menlo, Consolas, monospace" font-size="42" font-weight="700">1</text>
+  <text x="408" y="292" fill="#fecaca" font-family="Menlo, Consolas, monospace" font-size="18">critical identity</text>
+
+  <rect x="664" y="210" width="240" height="112" rx="12" fill="#713f12"/>
+  <text x="688" y="254" fill="#fef3c7" font-family="Menlo, Consolas, monospace" font-size="42" font-weight="700">3</text>
+  <text x="688" y="292" fill="#fde68a" font-family="Menlo, Consolas, monospace" font-size="18">review subjects</text>
+
+  <rect x="944" y="210" width="232" height="112" rx="12" fill="#134e4a"/>
+  <text x="968" y="254" fill="#ccfbf1" font-family="Menlo, Consolas, monospace" font-size="42" font-weight="700">4</text>
+  <text x="968" y="292" fill="#99f6e4" font-family="Menlo, Consolas, monospace" font-size="18">project actions</text>
+
+  <text x="104" y="382" fill="#f8fafc" font-family="Menlo, Consolas, monospace" font-size="23" font-weight="700">Critical remediation</text>
+  <text x="104" y="426" fill="#fee2e2" font-family="Menlo, Consolas, monospace" font-size="20">revoke_now li.chen@northbridge.example on proj-single-cell</text>
+  <text x="104" y="462" fill="#fee2e2" font-family="Menlo, Consolas, monospace" font-size="20">revoke_now li.chen@northbridge.example on proj-climate</text>
+
+  <text x="104" y="530" fill="#f8fafc" font-family="Menlo, Consolas, monospace" font-size="23" font-weight="700">Governance packet</text>
+  <text x="104" y="574" fill="#bfdbfe" font-family="Menlo, Consolas, monospace" font-size="20">identity.drift.detected -> HMAC signed webhook</text>
+  <text x="104" y="610" fill="#bfdbfe" font-family="Menlo, Consolas, monospace" font-size="20">audit digest -> deterministic reviewer evidence</text>
+</svg>

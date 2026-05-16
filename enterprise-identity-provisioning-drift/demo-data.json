@@ -1,0 +1,182 @@
+{
+  "generatedAt": "2026-05-16T07:20:00.000Z",
+  "institution": {
+    "id": "inst-northbridge",
+    "name": "Northbridge Institute of Translational Science",
+    "reviewWindowDays": 30,
+    "webhookSigningSeed": "demo-webhook-signing-seed"
+  },
+  "hrisPeople": [
+    {
+      "employeeId": "E-1001",
+      "email": "ana.ortega@northbridge.example",
+      "displayName": "Ana Ortega",
+      "status": "active",
+      "department": "Genomics",
+      "lab": "Single Cell Systems",
+      "managerEmail": "mira.patel@northbridge.example"
+    },
+    {
+      "employeeId": "E-1002",
+      "email": "li.chen@northbridge.example",
+      "displayName": "Li Chen",
+      "status": "terminated",
+      "department": "Climate Modeling",
+      "lab": "Regional Forecasting",
+      "managerEmail": "mira.patel@northbridge.example",
+      "terminatedAt": "2026-04-21T16:00:00.000Z"
+    },
+    {
+      "employeeId": "E-1003",
+      "email": "mira.patel@northbridge.example",
+      "displayName": "Mira Patel",
+      "status": "active",
+      "department": "Research Office",
+      "lab": "Governance",
+      "managerEmail": null
+    },
+    {
+      "employeeId": "E-1004",
+      "email": "noah.evans@northbridge.example",
+      "displayName": "Noah Evans",
+      "status": "active",
+      "department": "Materials",
+      "lab": "Catalyst Design",
+      "managerEmail": "mira.patel@northbridge.example"
+    }
+  ],
+  "samlSubjects": [
+    {
+      "nameId": "saml-ana",
+      "email": "ana.ortega@northbridge.example",
+      "department": "Genomics",
+      "lastLoginAt": "2026-05-15T18:20:00.000Z",
+      "mfa": true
+    },
+    {
+      "nameId": "saml-li",
+      "email": "li.chen@northbridge.example",
+      "department": "Climate Modeling",
+      "lastLoginAt": "2026-05-14T12:15:00.000Z",
+      "mfa": true
+    },
+    {
+      "nameId": "saml-noah",
+      "email": "noah.evans@northbridge.example",
+      "department": "Chemical Engineering",
+      "lastLoginAt": "2026-05-01T09:30:00.000Z",
+      "mfa": false
+    }
+  ],
+  "scimUsers": [
+    {
+      "externalId": "E-1001",
+      "email": "ana.ortega@northbridge.example",
+      "active": true,
+      "groups": ["Genomics", "Single Cell Systems", "Grant R01-204"]
+    },
+    {
+      "externalId": "E-1002",
+      "email": "li.chen@northbridge.example",
+      "active": true,
+      "groups": ["Climate Modeling", "Regional Forecasting", "Grant NSF-992"]
+    },
+    {
+      "externalId": "E-1004",
+      "email": "noah.evans@northbridge.example",
+      "active": true,
+      "groups": ["Materials", "Catalyst Design"]
+    },
+    {
+      "externalId": "EXT-GUEST-77",
+      "email": "guest.reviewer@external.example",
+      "active": true,
+      "groups": ["External Reviewers"]
+    }
+  ],
+  "orcidProfiles": [
+    {
+      "orcid": "0000-0001-2345-6789",
+      "email": "ana.ortega@northbridge.example",
+      "employmentOrg": "Northbridge Institute of Translational Science",
+      "updatedAt": "2026-05-10T08:00:00.000Z"
+    },
+    {
+      "orcid": "0000-0002-2222-1111",
+      "email": "noah.evans@northbridge.example",
+      "employmentOrg": "Northbridge Institute of Translational Science",
+      "updatedAt": "2026-01-05T08:00:00.000Z"
+    }
+  ],
+  "platformUsers": [
+    {
+      "userId": "usr-ana",
+      "email": "ana.ortega@northbridge.example",
+      "displayName": "Ana Ortega",
+      "status": "active",
+      "role": "researcher",
+      "department": "Genomics",
+      "orcid": "0000-0001-2345-6789",
+      "lastAccessReviewAt": "2026-05-02T09:00:00.000Z"
+    },
+    {
+      "userId": "usr-li",
+      "email": "li.chen@northbridge.example",
+      "displayName": "Li Chen",
+      "status": "active",
+      "role": "project_admin",
+      "department": "Climate Modeling",
+      "orcid": null,
+      "lastAccessReviewAt": "2026-03-18T09:00:00.000Z"
+    },
+    {
+      "userId": "usr-noah",
+      "email": "noah.evans@northbridge.example",
+      "displayName": "Noah Evans",
+      "status": "active",
+      "role": "researcher",
+      "department": "Materials",
+      "orcid": "0000-0002-2222-1111",
+      "lastAccessReviewAt": "2026-04-01T09:00:00.000Z"
+    },
+    {
+      "userId": "usr-guest",
+      "email": "guest.reviewer@external.example",
+      "displayName": "External Reviewer",
+      "status": "active",
+      "role": "viewer",
+      "department": "External Review",
+      "orcid": null,
+      "lastAccessReviewAt": "2026-02-01T09:00:00.000Z"
+    }
+  ],
+  "projectAccess": [
+    {
+      "projectId": "proj-single-cell",
+      "title": "Single Cell Biomarker Atlas",
+      "funderTag": "NIH-R01",
+      "members": [
+        {"email": "ana.ortega@northbridge.example", "access": "admin"},
+        {"email": "li.chen@northbridge.example", "access": "editor"}
+      ]
+    },
+    {
+      "projectId": "proj-climate",
+      "title": "Regional Climate Forecasting Benchmarks",
+      "funderTag": "NSF-992",
+      "members": [
+        {"email": "li.chen@northbridge.example", "access": "admin"},
+        {"email": "guest.reviewer@external.example", "access": "viewer"}
+      ]
+    },
+    {
+      "projectId": "proj-catalyst",
+      "title": "Low-Energy Catalyst Discovery",
+      "funderTag": "DOE-CAT",
+      "members": [
+        {"email": "noah.evans@northbridge.example", "access": "editor"},
+        {"email": "ana.ortega@northbridge.example", "access": "viewer"}
+      ]
+    }
+  ]
+}

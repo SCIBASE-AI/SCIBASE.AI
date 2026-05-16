@@ -1,0 +1,16 @@
+{
+  "name": "enterprise-identity-provisioning-drift",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free enterprise identity provisioning drift checks for SCIBASE institutional tooling.",
+  "main": "src/provisioning-drift.js",
+  "scripts": {
+    "check": "node --check src/provisioning-drift.js && node --check test.js && node --check demo.js",
+    "test": "node test.js",
+    "demo": "node demo.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

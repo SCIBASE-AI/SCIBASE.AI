@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-05-16T12:00:00Z",
+  "windowMinutes": 43200,
+  "tenants": [
+    {
+      "id": "northbridge-university",
+      "name": "Northbridge University Research Office",
+      "contractTier": "enterprise",
+      "defaultSlaTarget": 0.995
+    },
+    {
+      "id": "helios-rd",
+      "name": "Helios R&D Lab",
+      "contractTier": "enterprise-plus",
+      "defaultSlaTarget": 0.999
+    }
+  ],
+  "services": [
+    {
+      "id": "api-core",
+      "name": "SCIBASE API Core",
+      "tenantId": "northbridge-university",
+      "slaTarget": 0.995,
+      "observedChecks": 8640,
+      "failedChecks": 31,
+      "plannedMaintenanceMinutes": 20,
+      "unplannedDowntimeMinutes": 265,
+      "owner": "platform-ops"
+    },
+    {
+      "id": "webhook-dispatcher",
+      "name": "Webhook Dispatcher",
+      "tenantId": "northbridge-university",
+      "slaTarget": 0.995,
+      "observedChecks": 8640,
+      "failedChecks": 12,
+      "plannedMaintenanceMinutes": 30,
+      "unplannedDowntimeMinutes": 180,
+      "owner": "integrations"
+    },
+    {
+      "id": "export-pipeline",
+      "name": "Enterprise Export Pipeline",
+      "tenantId": "helios-rd",
+      "slaTarget": 0.999,
+      "observedChecks": 8640,
+      "failedChecks": 7,
+      "plannedMaintenanceMinutes": 15,
+      "unplannedDowntimeMinutes": 23,
+      "owner": "data-platform"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-1042",
+      "serviceId": "api-core",
+      "tenantId": "northbridge-university",
+      "severity": "sev2",
+      "startedAt": "2026-05-08T11:10:00Z",
+      "resolvedAt": "2026-05-08T13:55:00Z",
+      "customerVisible": true,
+      "rootCause": "database connection pool exhaustion",
+      "followUp": "increase pool alert lead time"
+    },
+    {
+      "id": "INC-1047",
+      "serviceId": "webhook-dispatcher",
+      "tenantId": "northbridge-university",
+      "severity": "sev3",
+      "startedAt": "2026-05-12T09:00:00Z",
+      "resolvedAt": "2026-05-12T10:26:00Z",
+      "customerVisible": true,
+      "rootCause": "downstream retry queue backpressure",
+      "followUp": "add tenant-specific delivery throttle"
+    },
+    {
+      "id": "INC-1051",
+      "serviceId": "export-pipeline",
+      "tenantId": "helios-rd",
+      "severity": "sev4",
+      "startedAt": "2026-05-13T20:00:00Z",
+      "resolvedAt": "2026-05-13T20:23:00Z",
+      "customerVisible": false,
+      "rootCause": "scheduled worker recycle",
+      "followUp": "none"
+    }
+  ],
+  "webhookDeliveries": [
+    {
+      "destinationId": "dspace-sync",
+      "tenantId": "northbridge-university",
+      "serviceId": "webhook-dispatcher",
+      "attempts": 1250,
+      "failures": 38,
+      "lastFailureAt": "2026-05-15T18:42:00Z",
+      "requiresNotice": true
+    },
+    {
+      "destinationId": "orcid-sync",
+      "tenantId": "helios-rd",
+      "serviceId": "export-pipeline",
+      "attempts": 2200,
+      "failures": 3,
+      "lastFailureAt": "2026-05-10T07:15:00Z",
+      "requiresNotice": false
+    }
+  ],
+  "exportJobs": [
+    {
+      "id": "EXP-991",
+      "tenantId": "northbridge-university",
+      "serviceId": "api-core",
+      "target": "institutional-admin-dashboard",
+      "containsSlaEvidence": true,
+      "requestedBy": "research-office-admin"
+    },
+    {
+      "id": "EXP-992",
+      "tenantId": "helios-rd",
+      "serviceId": "export-pipeline",
+      "target": "funder-quarterly-pack",
+      "containsSlaEvidence": true,
+      "requestedBy": "compliance-ops"
+    }
+  ]
+}

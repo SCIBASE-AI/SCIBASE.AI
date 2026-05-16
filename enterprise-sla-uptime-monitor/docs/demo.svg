@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise SLA Uptime Monitor Demo</title>
+  <desc id="desc">Dashboard preview showing one breached service, one watch service, and one healthy export pipeline.</desc>
+  <rect width="960" height="540" fill="#0f172a"/>
+  <text x="48" y="70" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Enterprise SLA Uptime Monitor</text>
+  <text x="48" y="106" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">Issue #19 slice: uptime, error budget, webhook notice, export evidence</text>
+  <g transform="translate(48 150)">
+    <rect width="260" height="150" rx="18" fill="#7f1d1d" stroke="#f87171"/>
+    <text x="22" y="42" fill="#fecaca" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">API Core</text>
+    <text x="22" y="78" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">BREACH</text>
+    <text x="22" y="116" fill="#fecaca" font-family="Inter, Arial, sans-serif" font-size="16">Error budget: -49 min</text>
+  </g>
+  <g transform="translate(350 150)">
+    <rect width="260" height="150" rx="18" fill="#713f12" stroke="#facc15"/>
+    <text x="22" y="42" fill="#fef3c7" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Webhook Dispatcher</text>
+    <text x="22" y="78" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">WATCH</text>
+    <text x="22" y="116" fill="#fef3c7" font-family="Inter, Arial, sans-serif" font-size="16">Notice review queued</text>
+  </g>
+  <g transform="translate(652 150)">
+    <rect width="260" height="150" rx="18" fill="#064e3b" stroke="#34d399"/>
+    <text x="22" y="42" fill="#bbf7d0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Export Pipeline</text>
+    <text x="22" y="78" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">READY</text>
+    <text x="22" y="116" fill="#bbf7d0" font-family="Inter, Arial, sans-serif" font-size="16">Evidence export allowed</text>
+  </g>
+  <g transform="translate(48 350)">
+    <rect width="864" height="112" rx="16" fill="#1e293b" stroke="#334155"/>
+    <text x="24" y="40" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Queued admin actions</text>
+    <text x="24" y="76" fill="#e2e8f0" font-family="Inter, Arial, sans-serif" font-size="16">1. Customer notice · 2. Error-budget watch · 3. Webhook retry review · 4. Evidence export hold</text>
+  </g>
+</svg>

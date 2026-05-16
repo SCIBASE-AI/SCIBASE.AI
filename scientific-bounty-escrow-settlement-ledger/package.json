@@ -1,0 +1,20 @@
+{
+  "name": "scientific-bounty-escrow-settlement-ledger",
+  "version": "1.0.0",
+  "description": "Escrow settlement and payout routing controls for scientific bounty challenges.",
+  "main": "src/escrow-settlement-ledger.js",
+  "scripts": {
+    "check": "node --check src/escrow-settlement-ledger.js && node --check scripts/demo.js && node --check scripts/build-demo-gif.js && node --check test/escrow-settlement-ledger.test.js",
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:gif": "node scripts/build-demo-gif.js"
+  },
+  "keywords": [
+    "scientific-bounties",
+    "escrow",
+    "settlement",
+    "payout-routing",
+    "ip-release"
+  ],
+  "license": "MIT"
+}

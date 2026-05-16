@@ -1,0 +1,202 @@
+{
+  "asOf": "2026-05-16",
+  "marketplace": {
+    "id": "scibase-bounty-market",
+    "name": "SCIBASE Scientific Bounty Market",
+    "currency": "USD"
+  },
+  "sponsors": [
+    {
+      "sponsorId": "sponsor-pharma-nova",
+      "name": "PharmaNova Translational R&D",
+      "accountId": "escrow-pharma-nova",
+      "clearedEscrow": 55000,
+      "pendingDeposits": 5000
+    },
+    {
+      "sponsorId": "sponsor-climate-foundation",
+      "name": "Regional Climate Foundation",
+      "accountId": "escrow-climate-foundation",
+      "clearedEscrow": 9000,
+      "pendingDeposits": 0
+    },
+    {
+      "sponsorId": "sponsor-quantum-startup",
+      "name": "QubitWorks Labs",
+      "accountId": "escrow-qubitworks",
+      "clearedEscrow": 25000,
+      "pendingDeposits": 0
+    }
+  ],
+  "challenges": [
+    {
+      "challengeId": "challenge-biomarker-rna",
+      "title": "Identify resilient biomarkers from synthetic single-cell RNA panels",
+      "sponsorId": "sponsor-pharma-nova",
+      "fundingAccountId": "escrow-pharma-nova",
+      "prizePool": 60000,
+      "ipPolicy": "sponsored-transfer-on-settlement",
+      "appealWindowClosesAt": "2026-05-12",
+      "disputeStatus": "none",
+      "milestones": [
+        {
+          "milestoneId": "proposal",
+          "label": "Proposal shortlist",
+          "awardType": "milestone",
+          "amount": 10000,
+          "decisionStatus": "approved",
+          "approvedAt": "2026-05-08",
+          "settlementStatus": "not_settled",
+          "winningTeamId": "team-cellsmith"
+        },
+        {
+          "milestoneId": "prototype",
+          "label": "Prototype model",
+          "awardType": "milestone",
+          "amount": 20000,
+          "decisionStatus": "approved",
+          "approvedAt": "2026-05-14",
+          "settlementStatus": "not_settled",
+          "winningTeamId": "team-cellsmith"
+        },
+        {
+          "milestoneId": "final",
+          "label": "Final validation package",
+          "awardType": "grand_prize",
+          "amount": 30000,
+          "decisionStatus": "pending_review",
+          "approvedAt": null,
+          "settlementStatus": "not_settled",
+          "winningTeamId": null
+        }
+      ],
+      "teams": [
+        {
+          "teamId": "team-cellsmith",
+          "name": "CellSmith Lab",
+          "institution": "Northbridge Institute",
+          "payoutRoutes": [
+            {
+              "routeId": "route-cellsmith-lab",
+              "payee": "CellSmith Lab institutional account",
+              "routeType": "institution",
+              "shareBps": 1000,
+              "profileStatus": "complete"
+            },
+            {
+              "routeId": "route-mara",
+              "payee": "Mara Okafor",
+              "routeType": "individual",
+              "shareBps": 4500,
+              "profileStatus": "complete"
+            },
+            {
+              "routeId": "route-jin",
+              "payee": "Jin Park",
+              "routeType": "individual",
+              "shareBps": 4500,
+              "profileStatus": "complete"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "challengeId": "challenge-regional-forecast",
+      "title": "Regional climate forecast model for coastal planners",
+      "sponsorId": "sponsor-climate-foundation",
+      "fundingAccountId": "escrow-climate-foundation",
+      "prizePool": 12000,
+      "ipPolicy": "open-after-award",
+      "appealWindowClosesAt": "2026-05-10",
+      "disputeStatus": "none",
+      "milestones": [
+        {
+          "milestoneId": "final",
+          "label": "Final forecast package",
+          "awardType": "grand_prize",
+          "amount": 12000,
+          "decisionStatus": "approved",
+          "approvedAt": "2026-05-13",
+          "settlementStatus": "not_settled",
+          "winningTeamId": "team-harbor"
+        }
+      ],
+      "teams": [
+        {
+          "teamId": "team-harbor",
+          "name": "Harbor Forecast Group",
+          "institution": "Open Climate Cooperative",
+          "payoutRoutes": [
+            {
+              "routeId": "route-harbor-coop",
+              "payee": "Open Climate Cooperative",
+              "routeType": "institution",
+              "shareBps": 2500,
+              "profileStatus": "complete"
+            },
+            {
+              "routeId": "route-ana",
+              "payee": "Ana Silva",
+              "routeType": "individual",
+              "shareBps": 3750,
+              "profileStatus": "complete"
+            },
+            {
+              "routeId": "route-david",
+              "payee": "David Chen",
+              "routeType": "individual",
+              "shareBps": 3750,
+              "profileStatus": "complete"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "challengeId": "challenge-quantum-noise",
+      "title": "Noise reduction for synthetic quantum sensor traces",
+      "sponsorId": "sponsor-quantum-startup",
+      "fundingAccountId": "escrow-qubitworks",
+      "prizePool": 25000,
+      "ipPolicy": "solver-retains-until-paid",
+      "appealWindowClosesAt": "2026-05-22",
+      "disputeStatus": "appeal_open",
+      "milestones": [
+        {
+          "milestoneId": "honorable-mention",
+          "label": "Honorable mention award",
+          "awardType": "honorable_mention",
+          "amount": 2500,
+          "decisionStatus": "approved",
+          "approvedAt": "2026-05-15",
+          "settlementStatus": "not_settled",
+          "winningTeamId": "team-quanta"
+        }
+      ],
+      "teams": [
+        {
+          "teamId": "team-quanta",
+          "name": "Quanta Methods",
+          "institution": "Independent solver team",
+          "payoutRoutes": [
+            {
+              "routeId": "route-imogen",
+              "payee": "Imogen Shaw",
+              "routeType": "individual",
+              "shareBps": 6000,
+              "profileStatus": "complete"
+            },
+            {
+              "routeId": "route-ari",
+              "payee": "Ari Patel",
+              "routeType": "individual",
+              "shareBps": 4000,
+              "profileStatus": "complete"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

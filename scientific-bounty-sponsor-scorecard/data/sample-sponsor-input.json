@@ -1,0 +1,195 @@
+{
+  "portfolioId": "scientific-bounty-sponsor-scorecard-demo",
+  "asOf": "2026-05-16T15:30:00.000Z",
+  "sponsors": [
+    {
+      "sponsorId": "helix-biofund",
+      "displayName": "Helix Biofund",
+      "sector": "biotech",
+      "privateNotes": "Finance lead phone number and internal budget notes are intentionally private.",
+      "bankAccount": "do-not-export",
+      "taxId": "do-not-export",
+      "history": {
+        "completedChallenges": 9,
+        "cancelledAfterStart": 0,
+        "paidAwards": 12,
+        "averagePayoutLagDays": 3,
+        "medianFirstResponseHours": 12,
+        "onTimeReviewRate": 0.94,
+        "materialAmendmentsAfterLaunch": 1,
+        "disputesOpened": 1,
+        "disputesResolvedWithinSla": 1,
+        "participantFeedbackAverage": 4.8
+      },
+      "challengePosts": [
+        {
+          "challengeId": "single-cell-biomarker-2026",
+          "title": "Identify single-cell biomarker candidates",
+          "prizeUsd": 18000,
+          "visibility": "private",
+          "funding": {
+            "status": "escrow_verified",
+            "coverageRatio": 1,
+            "verifiedAt": "2026-05-12T09:00:00.000Z"
+          },
+          "reviewSlaDays": 7,
+          "expectedFirstResponseHours": 24,
+          "rubric": {
+            "criteria": [
+              { "name": "biological plausibility", "weight": 35, "measurable": true },
+              { "name": "model reproducibility", "weight": 30, "measurable": true },
+              { "name": "clinical literature support", "weight": 20, "measurable": true },
+              { "name": "documentation quality", "weight": 15, "measurable": true }
+            ],
+            "evidenceRequirements": ["notebook", "dataset manifest", "model card"],
+            "tieBreakerDefined": true,
+            "judgingProtocolPublished": true
+          },
+          "timeline": {
+            "milestones": 3,
+            "submissionWindowDays": 42,
+            "sponsorReviewWindowDays": 7
+          },
+          "amendmentPolicy": {
+            "materialChangeNoticeDays": 5,
+            "solverWithdrawalProtected": true,
+            "maxMaterialAmendments": 1
+          },
+          "ipTerms": {
+            "solverRetainsUntilPaid": true,
+            "licenseOnPayout": "exclusive field-limited license",
+            "ndaTemplatePublished": true
+          },
+          "disputePolicy": {
+            "responseSlaDays": 5,
+            "neutralReviewerAvailable": true
+          }
+        }
+      ]
+    },
+    {
+      "sponsorId": "aster-climate-lab",
+      "displayName": "Aster Climate Lab",
+      "sector": "climate",
+      "internalContactEmail": "private@example.invalid",
+      "identityDocuments": ["passport-redacted-placeholder"],
+      "history": {
+        "completedChallenges": 4,
+        "cancelledAfterStart": 1,
+        "paidAwards": 5,
+        "averagePayoutLagDays": 14,
+        "medianFirstResponseHours": 38,
+        "onTimeReviewRate": 0.72,
+        "materialAmendmentsAfterLaunch": 3,
+        "disputesOpened": 2,
+        "disputesResolvedWithinSla": 1,
+        "participantFeedbackAverage": 3.9
+      },
+      "challengePosts": [
+        {
+          "challengeId": "regional-forecasting-ensemble",
+          "title": "Regional forecasting ensemble for flood alerts",
+          "prizeUsd": 9000,
+          "visibility": "public",
+          "funding": {
+            "status": "escrow_verified",
+            "coverageRatio": 0.85,
+            "verifiedAt": "2026-05-13T12:00:00.000Z"
+          },
+          "reviewSlaDays": 14,
+          "expectedFirstResponseHours": 48,
+          "rubric": {
+            "criteria": [
+              { "name": "forecast skill", "weight": 45, "measurable": true },
+              { "name": "regional transferability", "weight": 30, "measurable": true },
+              { "name": "operator handoff", "weight": 20, "measurable": true }
+            ],
+            "evidenceRequirements": ["validation report", "deployment notes"],
+            "tieBreakerDefined": false,
+            "judgingProtocolPublished": true
+          },
+          "timeline": {
+            "milestones": 2,
+            "submissionWindowDays": 28,
+            "sponsorReviewWindowDays": 14
+          },
+          "amendmentPolicy": {
+            "materialChangeNoticeDays": 2,
+            "solverWithdrawalProtected": true,
+            "maxMaterialAmendments": 2
+          },
+          "ipTerms": {
+            "solverRetainsUntilPaid": true,
+            "licenseOnPayout": "non-exclusive implementation license",
+            "ndaTemplatePublished": false
+          },
+          "disputePolicy": {
+            "responseSlaDays": 10,
+            "neutralReviewerAvailable": true
+          }
+        }
+      ]
+    },
+    {
+      "sponsorId": "quantum-north",
+      "displayName": "Quantum North",
+      "sector": "quantum",
+      "privateNotes": "Do not show draft acquisition notes to solvers.",
+      "history": {
+        "completedChallenges": 1,
+        "cancelledAfterStart": 2,
+        "paidAwards": 1,
+        "averagePayoutLagDays": 35,
+        "medianFirstResponseHours": 96,
+        "onTimeReviewRate": 0.35,
+        "materialAmendmentsAfterLaunch": 6,
+        "disputesOpened": 3,
+        "disputesResolvedWithinSla": 0,
+        "participantFeedbackAverage": 2.7
+      },
+      "challengePosts": [
+        {
+          "challengeId": "noise-reduction-kernel",
+          "title": "Improve quantum noise-reduction kernel",
+          "prizeUsd": 12000,
+          "visibility": "private",
+          "funding": {
+            "status": "missing",
+            "coverageRatio": 0,
+            "verifiedAt": null
+          },
+          "reviewSlaDays": null,
+          "expectedFirstResponseHours": 120,
+          "rubric": {
+            "criteria": [
+              { "name": "accuracy", "weight": 50, "measurable": false },
+              { "name": "speed", "weight": 25, "measurable": true }
+            ],
+            "evidenceRequirements": [],
+            "tieBreakerDefined": false,
+            "judgingProtocolPublished": false
+          },
+          "timeline": {
+            "milestones": 1,
+            "submissionWindowDays": 14,
+            "sponsorReviewWindowDays": null
+          },
+          "amendmentPolicy": {
+            "materialChangeNoticeDays": 0,
+            "solverWithdrawalProtected": false,
+            "maxMaterialAmendments": 4
+          },
+          "ipTerms": {
+            "solverRetainsUntilPaid": false,
+            "licenseOnPayout": "assignment on submission",
+            "ndaTemplatePublished": false
+          },
+          "disputePolicy": {
+            "responseSlaDays": null,
+            "neutralReviewerAvailable": false
+          }
+        }
+      ]
+    }
+  ]
+}

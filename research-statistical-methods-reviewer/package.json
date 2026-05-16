@@ -1,0 +1,19 @@
+{
+  "name": "research-statistical-methods-reviewer",
+  "version": "1.0.0",
+  "description": "Statistical rigor review assistant for AI-powered research workflows.",
+  "main": "src/statistical-methods-reviewer.js",
+  "scripts": {
+    "check": "node --check src/statistical-methods-reviewer.js && node --check scripts/demo.js && node --check scripts/build-demo-gif.js && node --check test/statistical-methods-reviewer.test.js",
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/demo.js",
+    "demo:gif": "node scripts/build-demo-gif.js"
+  },
+  "keywords": [
+    "research-assistant",
+    "statistics",
+    "peer-review",
+    "reproducibility"
+  ],
+  "license": "MIT"
+}

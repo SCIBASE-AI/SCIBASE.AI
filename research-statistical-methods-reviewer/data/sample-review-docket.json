@@ -1,0 +1,212 @@
+{
+  "asOf": "2026-05-16T00:00:00.000Z",
+  "manuscripts": [
+    {
+      "manuscriptId": "ms-neuro-stim-response",
+      "title": "Closed-loop stimulation improves task accuracy in adaptive neurofeedback",
+      "domain": "neuroscience",
+      "protocol": {
+        "registeredAt": "2026-02-10",
+        "hypotheses": ["H1"],
+        "plannedAnalysisIds": ["primary-accuracy-welch"]
+      },
+      "claims": [
+        {
+          "claimId": "H1",
+          "text": "Closed-loop stimulation improves task accuracy versus sham stimulation.",
+          "analysisId": "primary-accuracy-welch",
+          "evidenceArtifactIds": ["raw-accuracy", "analysis-script", "runtime-lock"],
+          "primary": true
+        },
+        {
+          "claimId": "E1",
+          "text": "The accuracy benefit is stable after adjusting for participant age.",
+          "analysisId": "age-adjusted-model",
+          "evidenceArtifactIds": ["raw-accuracy", "analysis-script", "runtime-lock"],
+          "primary": false
+        }
+      ],
+      "analyses": [
+        {
+          "analysisId": "primary-accuracy-welch",
+          "test": "welch_t_test",
+          "outcomeType": "continuous",
+          "dataDesign": "independent_groups",
+          "groups": 2,
+          "sampleSize": 128,
+          "effectSize": 0.42,
+          "pValue": 0.012,
+          "alpha": 0.05,
+          "comparisons": 1,
+          "correction": "none",
+          "preregistered": true,
+          "power": 0.86,
+          "assumptionChecks": ["normality", "variance"],
+          "missingDataPlan": "multiple_imputation",
+          "outlierPlan": "predefined_winsorization",
+          "reproducibilityEvidence": ["raw-data", "script", "environment", "seed"]
+        },
+        {
+          "analysisId": "age-adjusted-model",
+          "test": "linear_model",
+          "outcomeType": "continuous",
+          "dataDesign": "independent_groups",
+          "groups": 2,
+          "sampleSize": 128,
+          "effectSize": 0.1,
+          "pValue": 0.08,
+          "alpha": 0.05,
+          "comparisons": 3,
+          "correction": "holm",
+          "preregistered": false,
+          "power": 0.64,
+          "assumptionChecks": ["residuals"],
+          "missingDataPlan": "complete_case_with_sensitivity",
+          "outlierPlan": "documented",
+          "reproducibilityEvidence": ["raw-data", "script", "environment", "seed"]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifactId": "raw-accuracy",
+          "kind": "raw-data",
+          "available": true,
+          "contentHash": "sha256:neuro-accuracy-v1"
+        },
+        {
+          "artifactId": "analysis-script",
+          "kind": "script",
+          "available": true,
+          "contentHash": "sha256:neuro-analysis-v3"
+        },
+        {
+          "artifactId": "runtime-lock",
+          "kind": "environment",
+          "available": true,
+          "contentHash": "sha256:neuro-runtime-node20"
+        }
+      ]
+    },
+    {
+      "manuscriptId": "ms-microbiome-signature",
+      "title": "Microbiome pathway signature predicts remission after therapy",
+      "domain": "clinical microbiome",
+      "protocol": {
+        "registeredAt": "2026-01-05",
+        "hypotheses": ["M1"],
+        "plannedAnalysisIds": ["registered-logistic-model"]
+      },
+      "claims": [
+        {
+          "claimId": "M1",
+          "text": "Pathway abundance differs between remission and non-remission groups.",
+          "analysisId": "pathway-screen",
+          "evidenceArtifactIds": ["summary-table"],
+          "primary": true
+        },
+        {
+          "claimId": "M2",
+          "text": "The same signature generalizes to an external cohort.",
+          "analysisId": "external-validation",
+          "evidenceArtifactIds": [],
+          "primary": true
+        }
+      ],
+      "analyses": [
+        {
+          "analysisId": "pathway-screen",
+          "test": "t_test",
+          "outcomeType": "continuous",
+          "dataDesign": "repeated_measures",
+          "groups": 3,
+          "sampleSize": 22,
+          "effectSize": 0.75,
+          "pValue": 0.049,
+          "alpha": 0.05,
+          "comparisons": 24,
+          "correction": "none",
+          "preregistered": false,
+          "power": 0.51,
+          "assumptionChecks": [],
+          "missingDataPlan": "",
+          "outlierPlan": "",
+          "reproducibilityEvidence": ["script"]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifactId": "summary-table",
+          "kind": "derived-table",
+          "available": true,
+          "contentHash": "sha256:microbiome-summary"
+        },
+        {
+          "artifactId": "raw-metagenomics",
+          "kind": "raw-data",
+          "available": false,
+          "contentHash": ""
+        }
+      ]
+    },
+    {
+      "manuscriptId": "ms-climate-replication",
+      "title": "Replicable calibration of regional climate forecast ensembles",
+      "domain": "climate science",
+      "protocol": {
+        "registeredAt": "2025-12-21",
+        "hypotheses": ["C1"],
+        "plannedAnalysisIds": ["forecast-calibration"]
+      },
+      "claims": [
+        {
+          "claimId": "C1",
+          "text": "The calibrated ensemble reduces regional forecast error across held-out stations.",
+          "analysisId": "forecast-calibration",
+          "evidenceArtifactIds": ["station-data", "calibration-notebook", "runtime-lock"],
+          "primary": true
+        }
+      ],
+      "analyses": [
+        {
+          "analysisId": "forecast-calibration",
+          "test": "linear_model",
+          "outcomeType": "continuous",
+          "dataDesign": "longitudinal",
+          "groups": 1,
+          "sampleSize": 360,
+          "effectSize": 0.31,
+          "pValue": 0.031,
+          "alpha": 0.05,
+          "comparisons": 4,
+          "correction": "fdr",
+          "preregistered": true,
+          "power": 0.91,
+          "assumptionChecks": ["residuals", "autocorrelation"],
+          "missingDataPlan": "sensor_dropout_interpolation",
+          "outlierPlan": "predefined_station_qc",
+          "reproducibilityEvidence": ["raw-data", "script", "environment", "seed"]
+        }
+      ],
+      "artifacts": [
+        {
+          "artifactId": "station-data",
+          "kind": "raw-data",
+          "available": true,
+          "contentHash": "sha256:station-panel-v4"
+        },
+        {
+          "artifactId": "calibration-notebook",
+          "kind": "notebook",
+          "available": true,
+          "contentHash": "sha256:calibration-notebook-v2"
+        },
+        {
+          "artifactId": "runtime-lock",
+          "kind": "environment",
+          "available": true,
+          "contentHash": "sha256:climate-runtime"
+        }
+      ]
+    }
+  ]
+}

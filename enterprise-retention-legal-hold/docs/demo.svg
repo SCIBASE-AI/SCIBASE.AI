@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Enterprise retention legal hold demo">
+  <rect width="1280" height="720" fill="#f7f5ee"/>
+  <rect x="72" y="64" width="1136" height="592" rx="16" fill="#ffffff" stroke="#1b3340" stroke-width="3"/>
+  <text x="112" y="130" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18313d">Enterprise Retention and Legal Hold Controls</text>
+  <text x="112" y="178" font-family="Arial, sans-serif" font-size="22" fill="#47616d">Policy evaluation, purge queues, legal hold locks, webhook events, and dashboard metrics.</text>
+  <g transform="translate(112 232)">
+    <rect width="260" height="128" rx="10" fill="#eaf3f1" stroke="#5a8f85"/>
+    <text x="24" y="45" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#153f38">5 records</text>
+    <text x="24" y="82" font-family="Arial, sans-serif" font-size="18" fill="#315851">evaluated with policies</text>
+  </g>
+  <g transform="translate(406 232)">
+    <rect width="260" height="128" rx="10" fill="#fff1db" stroke="#c88321"/>
+    <text x="24" y="45" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#704400">2 legal holds</text>
+    <text x="24" y="82" font-family="Arial, sans-serif" font-size="18" fill="#76511c">block purge/export</text>
+  </g>
+  <g transform="translate(700 232)">
+    <rect width="260" height="128" rx="10" fill="#f2e9f7" stroke="#8b63a2"/>
+    <text x="24" y="45" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#4a2d5a">1 purge due</text>
+    <text x="24" y="82" font-family="Arial, sans-serif" font-size="18" fill="#60486b">safe no-hold queue</text>
+  </g>
+  <g transform="translate(112 420)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#18313d">Review actions</text>
+    <text x="0" y="44" font-family="Arial, sans-serif" font-size="20" fill="#263e49">critical preserve_under_legal_hold -> rec-controlled-genomics-raw</text>
+    <text x="0" y="82" font-family="Arial, sans-serif" font-size="20" fill="#263e49">high purge_due -> rec-review-transcript-2022</text>
+    <text x="0" y="120" font-family="Arial, sans-serif" font-size="20" fill="#263e49">medium open_access_evidence_required -> rec-grant-report-eu</text>
+  </g>
+  <text x="112" y="616" font-family="Arial, sans-serif" font-size="18" fill="#58707a">Demo is synthetic-data-only and credential-free.</text>
+</svg>

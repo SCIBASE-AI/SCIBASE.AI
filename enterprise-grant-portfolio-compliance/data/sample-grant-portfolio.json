@@ -1,0 +1,277 @@
+{
+  "asOf": "2026-05-16",
+  "institution": {
+    "id": "inst-northbridge",
+    "name": "Northbridge Institute of Translational Science",
+    "adminOffice": "Research Integrity and Sponsored Programs",
+    "timezone": "America/New_York"
+  },
+  "grants": [
+    {
+      "grantId": "NIH-R01-NEURO-142",
+      "awardNumber": "R01NS014200",
+      "funder": "National Institutes of Health",
+      "program": "BRAIN Initiative",
+      "principalInvestigator": "Dr. Mara Okafor",
+      "department": "Neuroscience",
+      "tags": ["GRANT-TRACKED", "HUMAN-SUBJECTS"],
+      "mandates": {
+        "openAccess": {
+          "required": true,
+          "deadlineDaysAfterPublication": 30
+        },
+        "dataManagementPlan": {
+          "required": true,
+          "acceptedStatuses": ["approved", "exempt"]
+        },
+        "repositoryDeposit": {
+          "required": true,
+          "allowedRepositories": ["PubMed Central", "Zenodo", "Institutional DSpace"],
+          "deadlineDaysAfterPublication": 30
+        },
+        "persistentIdentifiers": {
+          "doiRequiredFor": ["article", "dataset"],
+          "orcidForContributors": true
+        },
+        "reports": [
+          {
+            "type": "annual-progress",
+            "dueDate": "2026-05-30",
+            "status": "draft"
+          },
+          {
+            "type": "public-access-final",
+            "dueDate": "2026-05-10",
+            "status": "not_started"
+          }
+        ]
+      },
+      "projects": [
+        {
+          "projectId": "proj-neuro-atlas",
+          "title": "Atlas of recovery markers after neural stimulation",
+          "contributors": [
+            {
+              "name": "Mara Okafor",
+              "role": "PI",
+              "orcid": "0000-0002-0182-0097"
+            },
+            {
+              "name": "Jin Park",
+              "role": "Data steward",
+              "orcid": ""
+            }
+          ],
+          "dataManagementPlan": {
+            "status": "missing",
+            "lastReviewedAt": null
+          },
+          "outputs": [
+            {
+              "outputId": "out-neuro-preprint",
+              "kind": "article",
+              "title": "Recovery markers in cortical stimulation cohorts",
+              "publicationDate": "2026-04-01",
+              "doi": "",
+              "openAccess": {
+                "status": "closed",
+                "scheduledDate": null
+              },
+              "repositoryDeposits": []
+            },
+            {
+              "outputId": "out-neuro-signals",
+              "kind": "dataset",
+              "title": "Synthetic cortical signal feature table",
+              "publicationDate": "2026-04-01",
+              "doi": "",
+              "openAccess": {
+                "status": "restricted",
+                "scheduledDate": null
+              },
+              "repositoryDeposits": [
+                {
+                  "repository": "Lab SharePoint",
+                  "status": "internal_only",
+                  "depositedAt": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grantId": "HORIZON-CLIMATE-782",
+      "awardNumber": "HORIZON-RIA-782",
+      "funder": "Horizon Europe",
+      "program": "Climate Resilience Missions",
+      "principalInvestigator": "Dr. Leila Varga",
+      "department": "Earth Systems",
+      "tags": ["GRANT-TRACKED", "EU-FUNDER"],
+      "mandates": {
+        "openAccess": {
+          "required": true,
+          "deadlineDaysAfterPublication": 0
+        },
+        "dataManagementPlan": {
+          "required": true,
+          "acceptedStatuses": ["approved"]
+        },
+        "repositoryDeposit": {
+          "required": true,
+          "allowedRepositories": ["Zenodo", "Institutional DSpace"],
+          "deadlineDaysAfterPublication": 0
+        },
+        "persistentIdentifiers": {
+          "doiRequiredFor": ["article", "dataset", "software"],
+          "orcidForContributors": true
+        },
+        "reports": [
+          {
+            "type": "periodic-technical",
+            "dueDate": "2026-06-30",
+            "status": "submitted"
+          }
+        ]
+      },
+      "projects": [
+        {
+          "projectId": "proj-climate-resilience",
+          "title": "City-scale resilience projections",
+          "contributors": [
+            {
+              "name": "Leila Varga",
+              "role": "PI",
+              "orcid": "0000-0003-2088-7711"
+            },
+            {
+              "name": "Tomas Weber",
+              "role": "Model lead",
+              "orcid": "0000-0001-4455-9304"
+            }
+          ],
+          "dataManagementPlan": {
+            "status": "approved",
+            "lastReviewedAt": "2026-04-20"
+          },
+          "outputs": [
+            {
+              "outputId": "out-climate-model",
+              "kind": "software",
+              "title": "Synthetic flood-risk model package",
+              "publicationDate": "2026-05-01",
+              "doi": "10.5281/zenodo.7821001",
+              "openAccess": {
+                "status": "open",
+                "scheduledDate": "2026-05-01"
+              },
+              "repositoryDeposits": [
+                {
+                  "repository": "Zenodo",
+                  "status": "deposited",
+                  "depositedAt": "2026-05-01"
+                }
+              ]
+            },
+            {
+              "outputId": "out-climate-dataset",
+              "kind": "dataset",
+              "title": "Synthetic urban sensor panel",
+              "publicationDate": "2026-05-01",
+              "doi": "10.5281/zenodo.7821002",
+              "openAccess": {
+                "status": "open",
+                "scheduledDate": "2026-05-01"
+              },
+              "repositoryDeposits": [
+                {
+                  "repository": "Zenodo",
+                  "status": "deposited",
+                  "depositedAt": "2026-05-01"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grantId": "UKRI-QUANTUM-008",
+      "awardNumber": "EP/X008008/1",
+      "funder": "UK Research and Innovation",
+      "program": "Quantum Technologies",
+      "principalInvestigator": "Dr. Imogen Shaw",
+      "department": "Physics",
+      "tags": ["DOCTORAL-WORK", "GRANT-TRACKED"],
+      "mandates": {
+        "openAccess": {
+          "required": true,
+          "deadlineDaysAfterPublication": 90
+        },
+        "dataManagementPlan": {
+          "required": true,
+          "acceptedStatuses": ["approved", "exempt"]
+        },
+        "repositoryDeposit": {
+          "required": true,
+          "allowedRepositories": ["Institutional DSpace", "Zenodo"],
+          "deadlineDaysAfterPublication": 90
+        },
+        "persistentIdentifiers": {
+          "doiRequiredFor": ["article", "dataset"],
+          "orcidForContributors": true
+        },
+        "reports": [
+          {
+            "type": "impact-statement",
+            "dueDate": "2026-05-22",
+            "status": "draft"
+          }
+        ]
+      },
+      "projects": [
+        {
+          "projectId": "proj-quantum-calibration",
+          "title": "Calibration traces for quantum sensor benches",
+          "contributors": [
+            {
+              "name": "Imogen Shaw",
+              "role": "PI",
+              "orcid": "0000-0002-7744-1119"
+            },
+            {
+              "name": "Ari Patel",
+              "role": "Doctoral researcher",
+              "orcid": "0000-0002-1010-4040"
+            }
+          ],
+          "dataManagementPlan": {
+            "status": "approved",
+            "lastReviewedAt": "2026-05-05"
+          },
+          "outputs": [
+            {
+              "outputId": "out-quantum-paper",
+              "kind": "article",
+              "title": "Calibration drift in synthetic quantum sensors",
+              "publicationDate": "2026-05-11",
+              "doi": "10.5555/ukri.quantum.008",
+              "openAccess": {
+                "status": "scheduled",
+                "scheduledDate": "2026-06-15"
+              },
+              "repositoryDeposits": [
+                {
+                  "repository": "Institutional DSpace",
+                  "status": "scheduled",
+                  "depositedAt": "2026-06-15"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

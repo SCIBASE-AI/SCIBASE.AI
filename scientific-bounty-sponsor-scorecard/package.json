@@ -1,0 +1,16 @@
+{
+  "name": "scientific-bounty-sponsor-scorecard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Solver-facing sponsor reliability scorecards for scientific bounty challenges.",
+  "scripts": {
+    "check": "node --check src/sponsor-scorecard.js && node --check scripts/demo.js && node --check test/sponsor-scorecard.test.js",
+    "test": "node --test",
+    "demo": "node scripts/demo.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

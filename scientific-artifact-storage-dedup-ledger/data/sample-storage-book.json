@@ -1,0 +1,151 @@
+{
+  "asOf": "2026-05-16",
+  "storageTiers": {
+    "hot": {
+      "maxBytes": 524288000,
+      "description": "Interactive previews and active notebooks"
+    },
+    "warm": {
+      "maxBytes": 2147483648,
+      "description": "Versioned datasets and reproducibility artifacts"
+    },
+    "cold": {
+      "maxBytes": 10995116277760,
+      "description": "Archived models, raw instrument output, and prior releases"
+    }
+  },
+  "projects": [
+    {
+      "projectId": "proj-neuro-atlas",
+      "title": "Neural Recovery Atlas",
+      "quotaBytes": 1258291200,
+      "retentionPolicy": {
+        "keepLatestVersions": 2,
+        "archiveAfterDays": 90
+      },
+      "artifacts": [
+        {
+          "artifactId": "neuro-cohort-v1",
+          "path": "data/cohort-v1.csv",
+          "kind": "dataset",
+          "version": "1.0.0",
+          "sizeBytes": 314572800,
+          "contentHash": "sha256:cohort-a",
+          "uploadedAt": "2026-03-01",
+          "lastAccessedAt": "2026-05-01",
+          "previewStatus": "valid"
+        },
+        {
+          "artifactId": "neuro-cohort-v2-copy",
+          "path": "data/archive/cohort-v1-copy.csv",
+          "kind": "dataset",
+          "version": "1.1.0",
+          "sizeBytes": 314572800,
+          "contentHash": "sha256:cohort-a",
+          "uploadedAt": "2026-04-01",
+          "lastAccessedAt": "2026-04-10",
+          "previewStatus": "valid"
+        },
+        {
+          "artifactId": "neuro-model",
+          "path": "models/recovery-transformer.bin",
+          "kind": "model",
+          "version": "1.1.0",
+          "sizeBytes": 734003200,
+          "contentHash": "sha256:model-a",
+          "uploadedAt": "2026-04-20",
+          "lastAccessedAt": "2026-05-15",
+          "previewStatus": "not_supported"
+        }
+      ]
+    },
+    {
+      "projectId": "proj-climate-forecast",
+      "title": "Regional Climate Forecast Model",
+      "quotaBytes": 3221225472,
+      "retentionPolicy": {
+        "keepLatestVersions": 3,
+        "archiveAfterDays": 120
+      },
+      "artifacts": [
+        {
+          "artifactId": "climate-panel-v1",
+          "path": "data/panel.parquet",
+          "kind": "dataset",
+          "version": "1.2.0",
+          "sizeBytes": 419430400,
+          "contentHash": "sha256:panel-a",
+          "uploadedAt": "2026-04-01",
+          "lastAccessedAt": "2026-05-12",
+          "previewStatus": "valid"
+        },
+        {
+          "artifactId": "climate-notebook",
+          "path": "notebooks/reproduce.ipynb",
+          "kind": "notebook",
+          "version": "1.2.0",
+          "sizeBytes": 5242880,
+          "contentHash": "sha256:notebook-a",
+          "uploadedAt": "2026-04-05",
+          "lastAccessedAt": "2026-05-14",
+          "previewStatus": "stale"
+        },
+        {
+          "artifactId": "climate-panel-v1-copy",
+          "path": "exports/panel-copy.parquet",
+          "kind": "dataset",
+          "version": "1.2.1",
+          "sizeBytes": 419430400,
+          "contentHash": "sha256:panel-a",
+          "uploadedAt": "2026-05-01",
+          "lastAccessedAt": "2026-05-12",
+          "previewStatus": "valid"
+        }
+      ]
+    },
+    {
+      "projectId": "proj-quantum-traces",
+      "title": "Quantum Sensor Trace Repository",
+      "quotaBytes": 1073741824,
+      "retentionPolicy": {
+        "keepLatestVersions": 1,
+        "archiveAfterDays": 45
+      },
+      "artifacts": [
+        {
+          "artifactId": "quantum-raw-v1",
+          "path": "raw/bench-output-01.tar",
+          "kind": "raw-instrument-output",
+          "version": "0.9.0",
+          "sizeBytes": 629145600,
+          "contentHash": "sha256:raw-a",
+          "uploadedAt": "2026-01-15",
+          "lastAccessedAt": "2026-02-10",
+          "previewStatus": "not_supported"
+        },
+        {
+          "artifactId": "quantum-raw-v2",
+          "path": "raw/bench-output-02.tar",
+          "kind": "raw-instrument-output",
+          "version": "0.9.1",
+          "sizeBytes": 629145600,
+          "contentHash": "sha256:raw-b",
+          "uploadedAt": "2026-02-20",
+          "lastAccessedAt": "2026-03-01",
+          "previewStatus": "not_supported"
+        },
+        {
+          "artifactId": "quantum-notebook",
+          "path": "notebooks/calibration.ipynb",
+          "kind": "notebook",
+          "version": "1.0.0",
+          "sizeBytes": 10485760,
+          "contentHash": "",
+          "uploadedAt": "2026-05-01",
+          "lastAccessedAt": "2026-05-11",
+          "previewStatus": "valid"
+        }
+      ]
+    }
+  ]
+}

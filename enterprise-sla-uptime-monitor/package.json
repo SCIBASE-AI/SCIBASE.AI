@@ -1,0 +1,13 @@
+{
+  "name": "enterprise-sla-uptime-monitor",
+  "version": "1.0.0",
+  "description": "Self-contained enterprise SLA and uptime monitoring slice for SCIBASE Enterprise Tooling.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/sla-uptime-monitor.js && node --check scripts/demo.js && node --check test/sla-uptime-monitor.test.js",
+    "test": "node --test test/sla-uptime-monitor.test.js",
+    "demo": "node scripts/demo.js"
+  },
+  "license": "MIT"
+}

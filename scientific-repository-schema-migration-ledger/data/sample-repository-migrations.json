@@ -1,0 +1,194 @@
+{
+  "asOf": "2026-05-16",
+  "targetSchema": "scibase.repository.metadata.v2",
+  "repositories": [
+    {
+      "repositoryId": "repo-neuro-atlas",
+      "title": "Neural Recovery Atlas",
+      "currentVersion": "1.4.2",
+      "targetVersion": "2.0.0",
+      "currentSchema": "scibase.repository.metadata.v1",
+      "components": [
+        {
+          "path": "metadata.json",
+          "kind": "metadata",
+          "currentHash": "sha256:1a01",
+          "targetHash": "sha256:2a01",
+          "changes": ["schema_org_context_added", "funding_array_normalized", "citation_block_rebuilt"]
+        },
+        {
+          "path": "manuscript/main.md",
+          "kind": "manuscript",
+          "currentHash": "sha256:1b01",
+          "targetHash": "sha256:1b01",
+          "changes": []
+        },
+        {
+          "path": "data/synthetic-cohort.csv",
+          "kind": "data",
+          "currentHash": "sha256:1c01",
+          "targetHash": "sha256:1c01",
+          "changes": []
+        }
+      ],
+      "metadata": {
+        "doi": "",
+        "citation": {
+          "apa": "",
+          "bibtex": ""
+        },
+        "authors": [
+          {
+            "name": "Mara Okafor",
+            "orcid": "0000-0002-0182-0097"
+          },
+          {
+            "name": "Jin Park",
+            "orcid": ""
+          }
+        ],
+        "funding": [],
+        "license": "CC-BY-4.0",
+        "schemaOrgType": "Dataset"
+      },
+      "lineage": {
+        "forkedFrom": "repo-brain-signals",
+        "attributionStatus": "missing"
+      },
+      "releaseIntent": {
+        "tag": "preprint-v2.0",
+        "exportTargets": ["Zenodo", "PubMed Central"],
+        "requiresRollbackPlan": true
+      }
+    },
+    {
+      "repositoryId": "repo-climate-model",
+      "title": "Regional Climate Forecast Model",
+      "currentVersion": "1.2.0",
+      "targetVersion": "1.3.0",
+      "currentSchema": "scibase.repository.metadata.v1",
+      "components": [
+        {
+          "path": "metadata.json",
+          "kind": "metadata",
+          "currentHash": "sha256:2a10",
+          "targetHash": "sha256:2b10",
+          "changes": ["schema_org_context_added", "keywords_normalized"]
+        },
+        {
+          "path": "code/run_model.py",
+          "kind": "code",
+          "currentHash": "sha256:2c10",
+          "targetHash": "sha256:2c10",
+          "changes": []
+        },
+        {
+          "path": "results/forecast-panel.png",
+          "kind": "results",
+          "currentHash": "sha256:2d10",
+          "targetHash": "sha256:2d10",
+          "changes": []
+        }
+      ],
+      "metadata": {
+        "doi": "10.5281/zenodo.1300001",
+        "citation": {
+          "apa": "Varga, L. (2026). Regional Climate Forecast Model. Zenodo.",
+          "bibtex": "@dataset{varga2026climate,title={Regional Climate Forecast Model}}"
+        },
+        "authors": [
+          {
+            "name": "Leila Varga",
+            "orcid": "0000-0003-2088-7711"
+          },
+          {
+            "name": "Tomas Weber",
+            "orcid": "0000-0001-4455-9304"
+          }
+        ],
+        "funding": [
+          {
+            "funder": "Horizon Europe",
+            "award": "HORIZON-RIA-782"
+          }
+        ],
+        "license": "Apache-2.0",
+        "schemaOrgType": "SoftwareSourceCode"
+      },
+      "lineage": {
+        "forkedFrom": null,
+        "attributionStatus": "not_required"
+      },
+      "releaseIntent": {
+        "tag": "v1.3.0",
+        "exportTargets": ["Zenodo"],
+        "requiresRollbackPlan": true
+      }
+    },
+    {
+      "repositoryId": "repo-quantum-traces",
+      "title": "Quantum Sensor Trace Repository",
+      "currentVersion": "0.9.0",
+      "targetVersion": "1.0.0",
+      "currentSchema": "legacy.labbook.v0",
+      "components": [
+        {
+          "path": "metadata.json",
+          "kind": "metadata",
+          "currentHash": "sha256:3a10",
+          "targetHash": "sha256:3b10",
+          "changes": ["schema_org_context_added", "legacy_license_field_removed", "affiliations_expanded"]
+        },
+        {
+          "path": "notebooks/calibration.ipynb",
+          "kind": "notebook",
+          "currentHash": "sha256:3c10",
+          "targetHash": "sha256:3c10",
+          "changes": []
+        },
+        {
+          "path": "protocols/bench.md",
+          "kind": "protocol",
+          "currentHash": "sha256:3d10",
+          "targetHash": "sha256:3d10",
+          "changes": []
+        }
+      ],
+      "metadata": {
+        "doi": "10.5555/quantum.traces.2026",
+        "citation": {
+          "apa": "Shaw, I. (2026). Quantum Sensor Trace Repository.",
+          "bibtex": ""
+        },
+        "authors": [
+          {
+            "name": "Imogen Shaw",
+            "orcid": "0000-0002-7744-1119"
+          },
+          {
+            "name": "Ari Patel",
+            "orcid": "0000-0002-1010-4040"
+          }
+        ],
+        "funding": [
+          {
+            "funder": "UKRI",
+            "award": "EP/X008008/1"
+          }
+        ],
+        "license": "custom-restricted",
+        "schemaOrgType": "Dataset",
+        "deprecatedFields": ["principalInvestigatorEmail"]
+      },
+      "lineage": {
+        "forkedFrom": "repo-sensor-baseline",
+        "attributionStatus": "recorded"
+      },
+      "releaseIntent": {
+        "tag": "v1.0.0",
+        "exportTargets": ["Institutional DSpace"],
+        "requiresRollbackPlan": false
+      }
+    }
+  ]
+}

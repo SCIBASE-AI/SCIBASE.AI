@@ -1,0 +1,12 @@
+{
+  "name": "scientific-artifact-reuse-lineage",
+  "version": "1.0.0",
+  "description": "Dependency-free knowledge graph lineage module for scientific artifact reuse.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build-demo": "node scripts/build-demo-gif.js",
+    "demo": "node scripts/demo.js",
+    "test": "node --test test/*.test.js"
+  }
+}

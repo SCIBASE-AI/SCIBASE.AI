@@ -1,0 +1,194 @@
+{
+  "generatedAt": "2026-05-16T00:00:00.000Z",
+  "referenceDate": "2026-05-16T00:00:00.000Z",
+  "entities": [
+    {
+      "id": "dataset:single-cell-atlas-v2",
+      "type": "dataset",
+      "title": "Single Cell Immune Atlas v2",
+      "keywords": ["single-cell", "immune", "rna-seq", "atlas"],
+      "domain": "biology",
+      "license": "CC-BY-4.0",
+      "doi": "10.5555/scibase.atlas.v2"
+    },
+    {
+      "id": "dataset:climate-sensor-grid",
+      "type": "dataset",
+      "title": "Regional Climate Sensor Grid",
+      "keywords": ["climate", "forecasting", "sensor", "time-series"],
+      "domain": "climate",
+      "license": "CC0-1.0",
+      "doi": "10.5555/scibase.climate.grid"
+    },
+    {
+      "id": "notebook:immune-cell-clustering",
+      "type": "notebook",
+      "title": "Immune Cell Clustering Notebook",
+      "keywords": ["single-cell", "clustering", "scanpy", "notebook"],
+      "domain": "biology",
+      "language": "python"
+    },
+    {
+      "id": "notebook:forecast-residuals",
+      "type": "notebook",
+      "title": "Forecast Residual Analysis Notebook",
+      "keywords": ["forecasting", "residuals", "climate", "notebook"],
+      "domain": "climate",
+      "language": "python"
+    },
+    {
+      "id": "protocol:crispr-screen-qc",
+      "type": "protocol",
+      "title": "CRISPR Screen QC Protocol",
+      "keywords": ["crispr", "quality-control", "screening"],
+      "domain": "biology"
+    },
+    {
+      "id": "project:immune-aging",
+      "type": "project",
+      "title": "Immune Aging Cell-State Map",
+      "keywords": ["single-cell", "immune", "aging", "rna-seq"],
+      "domain": "biology",
+      "owner": "lab:atlas"
+    },
+    {
+      "id": "project:neuro-crispr",
+      "type": "project",
+      "title": "Neurodegeneration CRISPR Screen",
+      "keywords": ["crispr", "neuroscience", "screening"],
+      "domain": "biology",
+      "owner": "lab:neuro"
+    },
+    {
+      "id": "project:regional-forecast",
+      "type": "project",
+      "title": "Regional Climate Forecast Benchmark",
+      "keywords": ["forecasting", "climate", "time-series"],
+      "domain": "climate",
+      "owner": "lab:climate"
+    },
+    {
+      "id": "paper:immune-aging-preprint",
+      "type": "paper",
+      "title": "Immune Aging Cell States Across Tissues",
+      "keywords": ["immune", "aging", "cell-state"],
+      "domain": "biology",
+      "doi": "10.5555/scibase.paper.immune-aging"
+    },
+    {
+      "id": "paper:forecast-benchmark",
+      "type": "paper",
+      "title": "Regional Forecast Reliability Under Sensor Drift",
+      "keywords": ["forecasting", "sensor", "reproducibility"],
+      "domain": "climate",
+      "doi": "10.5555/scibase.paper.forecast"
+    }
+  ],
+  "reuseEvidence": [
+    {
+      "sourceId": "dataset:single-cell-atlas-v2",
+      "targetId": "project:immune-aging",
+      "relation": "reuses",
+      "observedAt": "2026-04-20T12:00:00.000Z",
+      "evidence": {
+        "citation": true,
+        "checksumMatch": true,
+        "metadataOverlap": 0.92,
+        "provenanceRecord": true,
+        "licenseReviewed": true,
+        "freshnessDays": 26
+      }
+    },
+    {
+      "sourceId": "notebook:immune-cell-clustering",
+      "targetId": "project:immune-aging",
+      "relation": "executes",
+      "observedAt": "2026-05-01T10:00:00.000Z",
+      "evidence": {
+        "executionVerified": true,
+        "checksumMatch": true,
+        "metadataOverlap": 0.84,
+        "provenanceRecord": true,
+        "freshnessDays": 15
+      }
+    },
+    {
+      "sourceId": "project:immune-aging",
+      "targetId": "paper:immune-aging-preprint",
+      "relation": "supports",
+      "observedAt": "2026-05-06T10:00:00.000Z",
+      "evidence": {
+        "citation": true,
+        "provenanceRecord": true,
+        "metadataOverlap": 0.88,
+        "freshnessDays": 10
+      }
+    },
+    {
+      "sourceId": "protocol:crispr-screen-qc",
+      "targetId": "project:neuro-crispr",
+      "relation": "usesProtocol",
+      "observedAt": "2025-08-01T10:00:00.000Z",
+      "evidence": {
+        "citation": true,
+        "executionVerified": false,
+        "metadataOverlap": 0.61,
+        "provenanceRecord": false,
+        "freshnessDays": 288
+      }
+    },
+    {
+      "sourceId": "dataset:climate-sensor-grid",
+      "targetId": "project:regional-forecast",
+      "relation": "reuses",
+      "observedAt": "2026-05-08T08:00:00.000Z",
+      "evidence": {
+        "citation": true,
+        "checksumMatch": false,
+        "metadataOverlap": 0.79,
+        "provenanceRecord": true,
+        "licenseReviewed": true,
+        "freshnessDays": 8
+      }
+    },
+    {
+      "sourceId": "notebook:forecast-residuals",
+      "targetId": "project:regional-forecast",
+      "relation": "executes",
+      "observedAt": "2026-05-10T09:30:00.000Z",
+      "evidence": {
+        "executionVerified": true,
+        "checksumMatch": true,
+        "metadataOverlap": 0.86,
+        "provenanceRecord": true,
+        "freshnessDays": 6
+      }
+    },
+    {
+      "sourceId": "project:regional-forecast",
+      "targetId": "paper:forecast-benchmark",
+      "relation": "supports",
+      "observedAt": "2026-05-11T11:00:00.000Z",
+      "evidence": {
+        "citation": true,
+        "provenanceRecord": true,
+        "metadataOverlap": 0.9,
+        "freshnessDays": 5
+      }
+    }
+  ],
+  "recommendationRequests": [
+    {
+      "id": "request:immune-aging-data-reuse",
+      "userId": "researcher:maya",
+      "projectId": "project:immune-aging",
+      "interests": ["single-cell", "immune", "reproducibility"]
+    },
+    {
+      "id": "request:climate-method-reuse",
+      "userId": "researcher:lee",
+      "projectId": "project:regional-forecast",
+      "interests": ["forecasting", "sensor", "time-series"]
+    }
+  ]
+}

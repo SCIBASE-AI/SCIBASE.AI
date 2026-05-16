@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific Artifact Reuse Lineage Demo</title>
+  <desc id="desc">A knowledge graph demo showing datasets and notebooks flowing into projects, papers, recommendations, and curator actions.</desc>
+  <rect width="960" height="540" fill="#0f172a"/>
+  <rect x="40" y="40" width="880" height="460" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="70" y="88" fill="#f8fafc" font-family="Arial, sans-serif" font-size="28" font-weight="700">Artifact Reuse Lineage</text>
+  <text x="70" y="120" fill="#94a3b8" font-family="Arial, sans-serif" font-size="15">Dataset / notebook / protocol evidence paths with confidence, recommendations, and curator actions.</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="172" width="190" height="72" rx="12" fill="#164e63" stroke="#22d3ee"/>
+    <text x="104" y="203" fill="#ecfeff" font-size="16" font-weight="700">Dataset</text>
+    <text x="104" y="226" fill="#bae6fd" font-size="13">Single Cell Atlas v2</text>
+
+    <rect x="80" y="300" width="190" height="72" rx="12" fill="#1e3a8a" stroke="#60a5fa"/>
+    <text x="104" y="331" fill="#eff6ff" font-size="16" font-weight="700">Notebook</text>
+    <text x="104" y="354" fill="#bfdbfe" font-size="13">Immune Cell Clustering</text>
+
+    <rect x="388" y="236" width="196" height="84" rx="12" fill="#14532d" stroke="#4ade80"/>
+    <text x="416" y="270" fill="#f0fdf4" font-size="16" font-weight="700">Project</text>
+    <text x="416" y="294" fill="#bbf7d0" font-size="13">Immune Aging Map</text>
+
+    <rect x="700" y="236" width="178" height="84" rx="12" fill="#581c87" stroke="#c084fc"/>
+    <text x="728" y="270" fill="#faf5ff" font-size="16" font-weight="700">Paper</text>
+    <text x="728" y="294" fill="#e9d5ff" font-size="13">Preprint output</text>
+
+    <path d="M270 208 C320 208, 342 260, 388 268" fill="none" stroke="#22d3ee" stroke-width="4"/>
+    <path d="M270 336 C330 336, 340 300, 388 292" fill="none" stroke="#60a5fa" stroke-width="4"/>
+    <path d="M584 278 C628 278, 656 278, 700 278" fill="none" stroke="#4ade80" stroke-width="4"/>
+
+    <text x="300" y="204" fill="#67e8f9" font-size="13">reuses 0.91</text>
+    <text x="302" y="356" fill="#93c5fd" font-size="13">executes 0.89</text>
+    <text x="620" y="266" fill="#86efac" font-size="13">supports 0.82</text>
+
+    <rect x="80" y="418" width="250" height="48" rx="10" fill="#312e81" stroke="#818cf8"/>
+    <text x="102" y="448" fill="#e0e7ff" font-size="14">Recommendation: cite and reuse atlas</text>
+
+    <rect x="620" y="418" width="258" height="48" rx="10" fill="#7f1d1d" stroke="#fca5a5"/>
+    <text x="642" y="448" fill="#fee2e2" font-size="14">Curator queue: refresh weak lineage</text>
+  </g>
+</svg>

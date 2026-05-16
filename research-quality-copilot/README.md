@@ -28,6 +28,10 @@ curl -fsS http://localhost:4321/api/workflow
 curl -fsS http://localhost:4321/api/dashboard
 ```
 
+## Demo artifact
+
+![Research quality copilot demo](docs/research-quality-copilot-demo.gif)
+
 ## Design notes
 
 The implementation is deterministic by design. It uses transparent scoring and evidence traces instead of a hidden model call, which makes the MVP easy to test and safe to wire behind a later model provider. The exported service functions accept plain project objects and citation libraries, so they can be adapted to repository uploads, manuscript drafts, or reviewer dashboards.

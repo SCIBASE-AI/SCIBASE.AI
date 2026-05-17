@@ -1,0 +1,16 @@
+{
+  "name": "enterprise-api-change-governance",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Enterprise API and webhook contract change governance for institutional SCIBASE integrations.",
+  "scripts": {
+    "check": "node --check src/api-change-governance.js && node --check scripts/demo.js && node --check test/api-change-governance.test.js",
+    "test": "node --test",
+    "demo": "node scripts/demo.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

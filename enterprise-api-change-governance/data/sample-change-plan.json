@@ -1,0 +1,165 @@
+{
+  "portfolioId": "enterprise-api-governance-demo",
+  "asOf": "2026-05-17T02:30:00.000Z",
+  "policy": {
+    "minimumBreakingDeprecationDays": 90,
+    "criticalConsumerNoticeDays": 60,
+    "minimumRollbackDays": 14,
+    "requireOpenApiDiff": true,
+    "requireWebhookSchemaVersion": true,
+    "requireSandboxEvidence": true,
+    "requireDpaForRestrictedExports": true
+  },
+  "integrations": [
+    {
+      "integrationId": "dspace-archive-prod",
+      "institution": "Northbridge University Library",
+      "systemType": "repository",
+      "criticality": "critical",
+      "contactGroup": "library-platforms",
+      "pinnedApiVersions": ["v1"],
+      "subscribedWebhookTypes": ["project.published.v1", "export.completed.v1"],
+      "lastSuccessfulSandboxRun": "2026-05-05",
+      "supportsVersionNegotiation": true,
+      "notificationStatus": "acknowledged",
+      "migrationTicket": "NBUL-4421",
+      "hasDataProcessingAgreement": true
+    },
+    {
+      "integrationId": "canvas-outcomes-sync",
+      "institution": "Westlake Medical School",
+      "systemType": "lms",
+      "criticality": "standard",
+      "contactGroup": "learning-systems",
+      "pinnedApiVersions": ["v2"],
+      "subscribedWebhookTypes": ["review.completed.v1"],
+      "lastSuccessfulSandboxRun": "2026-05-12",
+      "supportsVersionNegotiation": false,
+      "notificationStatus": "acknowledged",
+      "migrationTicket": "WMS-1180",
+      "hasDataProcessingAgreement": true
+    },
+    {
+      "integrationId": "funder-reporter-nightly",
+      "institution": "Horizon Bioinformatics Institute",
+      "systemType": "funder_portal",
+      "criticality": "critical",
+      "contactGroup": "grants-ops",
+      "pinnedApiVersions": ["v1"],
+      "subscribedWebhookTypes": ["compliance.flagged.v1", "export.completed.v1"],
+      "lastSuccessfulSandboxRun": null,
+      "supportsVersionNegotiation": false,
+      "notificationStatus": "missing",
+      "migrationTicket": null,
+      "hasDataProcessingAgreement": false
+    }
+  ],
+  "changes": [
+    {
+      "changeId": "api-project-export-v3",
+      "title": "Introduce v3 project export manifest with versioned metadata blocks",
+      "ownerTeam": "enterprise-integrations",
+      "surface": "rest_api",
+      "changeKind": "additive_version",
+      "currentVersion": "v2",
+      "proposedVersion": "v3",
+      "effectiveDate": "2026-09-01",
+      "affectedRoutes": ["GET /api/projects/{projectId}/exports", "POST /api/projects/{projectId}/exports"],
+      "affectedWebhookTypes": [],
+      "breaking": false,
+      "restrictedResearchData": false,
+      "openApiDiffAttached": true,
+      "rollbackPlanDays": 30,
+      "parallelRunDays": 120,
+      "schemaDiff": {
+        "removedFields": [],
+        "renamedFields": [],
+        "typeChanges": [],
+        "newRequiredFields": [],
+        "newOptionalFields": ["metadata.versionHistory", "metadata.repositoryTargets"]
+      },
+      "webhookEnvelope": {
+        "usesCloudEvents": true,
+        "schemaVersionField": "data.schemaVersion",
+        "idempotencyKeyField": "data.deliveryId",
+        "signatureVersion": "v2"
+      },
+      "sandboxEvidence": {
+        "fixturePack": "exports-v3-2026-05",
+        "passingIntegrations": ["dspace-archive-prod", "canvas-outcomes-sync"],
+        "failingIntegrations": []
+      }
+    },
+    {
+      "changeId": "api-review-score-removal",
+      "title": "Remove legacy peerReview.score field from review completed payloads",
+      "ownerTeam": "peer-review-platform",
+      "surface": "webhook",
+      "changeKind": "breaking_removal",
+      "currentVersion": "review.completed.v1",
+      "proposedVersion": "review.completed.v2",
+      "effectiveDate": "2026-06-15",
+      "affectedRoutes": [],
+      "affectedWebhookTypes": ["review.completed.v1"],
+      "breaking": true,
+      "restrictedResearchData": false,
+      "openApiDiffAttached": false,
+      "rollbackPlanDays": 3,
+      "parallelRunDays": 29,
+      "schemaDiff": {
+        "removedFields": ["peerReview.score"],
+        "renamedFields": ["peerReview.rubric -> peerReview.rubricBreakdown"],
+        "typeChanges": ["peerReview.reviewerCount:number -> string"],
+        "newRequiredFields": ["peerReview.decisionCode"],
+        "newOptionalFields": []
+      },
+      "webhookEnvelope": {
+        "usesCloudEvents": false,
+        "schemaVersionField": null,
+        "idempotencyKeyField": null,
+        "signatureVersion": null
+      },
+      "sandboxEvidence": {
+        "fixturePack": null,
+        "passingIntegrations": [],
+        "failingIntegrations": ["canvas-outcomes-sync"]
+      }
+    },
+    {
+      "changeId": "api-compliance-flag-pii",
+      "title": "Add restricted compliance flag webhook for funder reporting",
+      "ownerTeam": "compliance-ops",
+      "surface": "webhook",
+      "changeKind": "new_event",
+      "currentVersion": null,
+      "proposedVersion": "compliance.flagged.v2",
+      "effectiveDate": "2026-07-20",
+      "affectedRoutes": ["GET /api/compliance/flags"],
+      "affectedWebhookTypes": ["compliance.flagged.v2"],
+      "breaking": false,
+      "restrictedResearchData": true,
+      "openApiDiffAttached": true,
+      "rollbackPlanDays": 21,
+      "parallelRunDays": 90,
+      "schemaDiff": {
+        "removedFields": [],
+        "renamedFields": [],
+        "typeChanges": [],
+        "newRequiredFields": ["flag.category", "flag.evidenceDigest"],
+        "newOptionalFields": ["flag.funderMandateId"]
+      },
+      "webhookEnvelope": {
+        "usesCloudEvents": true,
+        "schemaVersionField": "data.schemaVersion",
+        "idempotencyKeyField": "data.deliveryId",
+        "signatureVersion": "v2"
+      },
+      "sandboxEvidence": {
+        "fixturePack": "compliance-v2-2026-05",
+        "passingIntegrations": ["dspace-archive-prod"],
+        "failingIntegrations": ["funder-reporter-nightly"]
+      }
+    }
+  ],
+  "signingKeyId": "synthetic-key-2026-05"
+}

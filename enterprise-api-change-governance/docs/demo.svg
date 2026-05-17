@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise API Change Governance demo</title>
+  <desc id="desc">Dashboard preview for SCIBASE enterprise API and webhook compatibility review.</desc>
+  <style>
+    .title { font: 700 42px Inter, Arial, sans-serif; fill: #102a43; }
+    .subtitle { font: 500 18px Inter, Arial, sans-serif; fill: #486581; }
+    .metric { font: 700 32px Inter, Arial, sans-serif; fill: #102a43; }
+    .label { font: 600 13px Inter, Arial, sans-serif; fill: #627d98; text-transform: uppercase; letter-spacing: 1px; }
+    .row-title { font: 700 19px Inter, Arial, sans-serif; fill: #102a43; }
+    .muted { font: 500 14px Inter, Arial, sans-serif; fill: #627d98; }
+    .state { font: 800 18px Inter, Arial, sans-serif; }
+  </style>
+  <rect width="1280" height="720" fill="#f5f7fa"/>
+  <circle cx="1112" cy="96" r="92" fill="#d64545" opacity="0.08"/>
+  <circle cx="995" cy="618" r="134" fill="#1992d4" opacity="0.08"/>
+  <text x="72" y="82" class="title">Enterprise API Change Governance</text>
+  <text x="72" y="116" class="subtitle">Versioned REST and webhook contract review for institutional integrations</text>
+  <g transform="translate(72 148)">
+    <rect width="250" height="56" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+    <text x="22" y="23" class="label">Changes</text>
+    <text x="178" y="38" class="metric">3</text>
+  </g>
+  <g transform="translate(344 148)">
+    <rect width="250" height="56" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+    <text x="22" y="23" class="label">Blocked</text>
+    <text x="178" y="38" class="metric">1</text>
+  </g>
+  <g transform="translate(616 148)">
+    <rect width="250" height="56" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+    <text x="22" y="23" class="label">Critical Impacts</text>
+    <text x="178" y="38" class="metric">1</text>
+  </g>
+  <g transform="translate(888 148)">
+    <rect width="300" height="56" rx="12" fill="#ffffff" stroke="#d9e2ec"/>
+    <text x="22" y="23" class="label">Audit Digest</text>
+    <text x="22" y="42" class="muted">793bd6d911b7dfb2499178e3d595bf52</text>
+  </g>
+  
+      <g transform="translate(72 232)">
+        <rect width="1116" height="82" rx="14" fill="#ffffff" stroke="#d9e2ec"/>
+        <rect width="12" height="82" rx="6" fill="#0e9f6e"/>
+        <text x="34" y="30" class="row-title">Introduce v3 project export manifest with versioned metadata blocks</text>
+        <text x="34" y="58" class="muted">api-project-export-v3 - 1 affected integrations - no blockers</text>
+        <text x="980" y="35" class="state" fill="#0e9f6e">READY</text>
+        <text x="980" y="60" class="muted">risk 0</text>
+      </g>
+      <g transform="translate(72 344)">
+        <rect width="1116" height="82" rx="14" fill="#ffffff" stroke="#d9e2ec"/>
+        <rect width="12" height="82" rx="6" fill="#c81e1e"/>
+        <text x="34" y="30" class="row-title">Remove legacy peerReview.score field from review completed payloads</text>
+        <text x="34" y="58" class="muted">api-review-score-removal - 1 affected integrations - breaking-diff, removed-fields</text>
+        <text x="980" y="35" class="state" fill="#c81e1e">BLOCKED</text>
+        <text x="980" y="60" class="muted">risk 100</text>
+      </g>
+      <g transform="translate(72 456)">
+        <rect width="1116" height="82" rx="14" fill="#ffffff" stroke="#d9e2ec"/>
+        <rect width="12" height="82" rx="6" fill="#c2410c"/>
+        <text x="34" y="30" class="row-title">Add restricted compliance flag webhook for funder reporting</text>
+        <text x="34" y="58" class="muted">api-compliance-flag-pii - 1 affected integrations - new-required-fields, consumer-blockers</text>
+        <text x="980" y="35" class="state" fill="#c2410c">HOLD</text>
+        <text x="980" y="60" class="muted">risk 86</text>
+      </g>
+  <text x="72" y="650" class="subtitle">Outputs: admin actions, sandbox gates, migration notices, signed CloudEvents-style webhook evidence, export manifest.</text>
+</svg>

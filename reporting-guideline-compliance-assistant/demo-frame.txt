@@ -1,0 +1,10 @@
+SCIBASE AI Research Assistant
+
+Reporting guideline compliance audit
+
+Guideline: CONSORT
+Readiness: hold_for_revision (70)
+Missing: participant flow, sample size, environment
+
+Validation: node test.js and node demo.js
+Output: reviewer packet, reproducibility score, research-gap signals

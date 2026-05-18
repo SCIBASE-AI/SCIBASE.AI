@@ -1,0 +1,161 @@
+{
+  "guideline": {
+    "id": "CONSORT",
+    "label": "CONSORT clinical trial reporting readiness"
+  },
+  "scores": {
+    "guideline": 64,
+    "reproducibility": 75
+  },
+  "readiness": {
+    "gate": "hold_for_revision",
+    "score": 70,
+    "reason": "High-severity reporting or reproducibility evidence is missing."
+  },
+  "peerReviewFindings": [
+    {
+      "id": "consort-randomization",
+      "guideline": "CONSORT",
+      "label": "Randomization method",
+      "status": "present",
+      "severity": "none",
+      "evidence": "Detected reporting evidence for Randomization method.",
+      "recommendedAction": "Keep this evidence traceable in the final reviewer packet."
+    },
+    {
+      "id": "consort-participant-flow",
+      "guideline": "CONSORT",
+      "label": "Participant flow diagram or accounting",
+      "status": "missing",
+      "severity": "high",
+      "evidence": "No clear CONSORT evidence found for Participant flow diagram or accounting.",
+      "recommendedAction": "Add reporting evidence for Participant flow diagram or accounting."
+    },
+    {
+      "id": "consort-sample-size",
+      "guideline": "CONSORT",
+      "label": "Sample-size rationale",
+      "status": "missing",
+      "severity": "high",
+      "evidence": "No clear CONSORT evidence found for Sample-size rationale.",
+      "recommendedAction": "Add reporting evidence for Sample-size rationale."
+    },
+    {
+      "id": "consort-harms",
+      "guideline": "CONSORT",
+      "label": "Harms or adverse-event reporting",
+      "status": "present",
+      "severity": "none",
+      "evidence": "Detected reporting evidence for Harms or adverse-event reporting.",
+      "recommendedAction": "Keep this evidence traceable in the final reviewer packet."
+    },
+    {
+      "id": "consort-registration",
+      "guideline": "CONSORT",
+      "label": "Trial registration or protocol",
+      "status": "present",
+      "severity": "none",
+      "evidence": "Detected reporting evidence for Trial registration or protocol.",
+      "recommendedAction": "Keep this evidence traceable in the final reviewer packet."
+    }
+  ],
+  "reproducibility": {
+    "score": 75,
+    "present": [
+      "dataset",
+      "analysisCode",
+      "protocol"
+    ],
+    "missing": [
+      "environment"
+    ],
+    "details": [
+      {
+        "id": "dataset",
+        "status": "present",
+        "label": "Dataset or screening evidence is attached."
+      },
+      {
+        "id": "analysisCode",
+        "status": "present",
+        "label": "Analysis code or notebook is attached."
+      },
+      {
+        "id": "environment",
+        "status": "missing",
+        "label": "Execution environment definition is attached."
+      },
+      {
+        "id": "protocol",
+        "status": "present",
+        "label": "Protocol or preregistration evidence is attached."
+      }
+    ]
+  },
+  "researchGapSignals": [
+    {
+      "id": "gap-consort-participant-flow",
+      "sourceFinding": "consort-participant-flow",
+      "type": "reporting_gap",
+      "priority": "high",
+      "recommendedAction": "Add reporting evidence for Participant flow diagram or accounting."
+    },
+    {
+      "id": "gap-consort-sample-size",
+      "sourceFinding": "consort-sample-size",
+      "type": "reporting_gap",
+      "priority": "high",
+      "recommendedAction": "Add reporting evidence for Sample-size rationale."
+    },
+    {
+      "id": "gap-repro-environment",
+      "sourceFinding": "environment",
+      "type": "reproducibility_gap",
+      "priority": "medium",
+      "recommendedAction": "Attach or document environment before public release."
+    }
+  ],
+  "reviewerPacket": {
+    "summary": "CONSORT reporting audit finished with hold_for_revision.",
+    "topFindings": [
+      {
+        "id": "consort-participant-flow",
+        "label": "Participant flow diagram or accounting",
+        "severity": "high"
+      },
+      {
+        "id": "consort-sample-size",
+        "label": "Sample-size rationale",
+        "severity": "high"
+      }
+    ],
+    "revisionActions": [
+      "Add reporting evidence for Participant flow diagram or accounting.",
+      "Add reporting evidence for Sample-size rationale.",
+      "Provide environment to improve reproducibility confidence."
+    ],
+    "researchOpportunities": [
+      {
+        "id": "gap-consort-participant-flow",
+        "sourceFinding": "consort-participant-flow",
+        "type": "reporting_gap",
+        "priority": "high",
+        "recommendedAction": "Add reporting evidence for Participant flow diagram or accounting."
+      },
+      {
+        "id": "gap-consort-sample-size",
+        "sourceFinding": "consort-sample-size",
+        "type": "reporting_gap",
+        "priority": "high",
+        "recommendedAction": "Add reporting evidence for Sample-size rationale."
+      },
+      {
+        "id": "gap-repro-environment",
+        "sourceFinding": "environment",
+        "type": "reproducibility_gap",
+        "priority": "medium",
+        "recommendedAction": "Attach or document environment before public release."
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+SCIBASE Revenue Forecast Scenario Planner
+
+Input:
+- subscription seats and billing cycles
+- AI compute usage against included quota
+- licensing pipeline with confidence weighting
+
+Output:
+- 6 month forecast: $61,437.80
+- exit MRR: $10,559.80
+- exit ARR: $126,717.60
+- finance actions: 5
+
+Actions flagged:
+- compute quota pressure
+- renewal risk
+- licensing confidence gap
+
+Validation:
+node --test revenue-forecast-scenario-planner/test.mjs
+3 tests passing

@@ -1,0 +1,98 @@
+{
+  "packetType": "project-role-delegation-guard",
+  "workspaceId": "project-neuro-catalyst",
+  "generatedAt": "2026-05-20T12:00:00Z",
+  "overallStatus": "hold",
+  "decisions": [
+    {
+      "requestId": "del-publish-2",
+      "action": "publish_release",
+      "delegateId": "delegate-2",
+      "decision": "needs_sponsor",
+      "expiresAt": "2026-06-20T00:00:00Z"
+    },
+    {
+      "requestId": "del-export-7",
+      "action": "restricted_data_export",
+      "delegateId": "delegate-7",
+      "decision": "block",
+      "expiresAt": "2026-06-10T00:00:00Z"
+    },
+    {
+      "requestId": "del-transfer-3",
+      "action": "role_transfer",
+      "delegateId": "delegate-2",
+      "decision": "block",
+      "expiresAt": "2026-06-15T00:00:00Z"
+    },
+    {
+      "requestId": "del-archive-5",
+      "action": "archive_freeze",
+      "delegateId": "delegate-9",
+      "decision": "block",
+      "expiresAt": "2026-06-15T00:00:00Z"
+    }
+  ],
+  "holds": [
+    {
+      "requestId": "del-archive-5",
+      "code": "delegated_scope_exceeds_action",
+      "owner": "delegate-9",
+      "severity": "blocker",
+      "evidence": "del-archive-5 includes excess scope(s): repository:admin.",
+      "requiredAction": "Narrow the object-level delegation scope before approving the action."
+    },
+    {
+      "requestId": "del-export-7",
+      "code": "identity_posture_gap",
+      "owner": "delegate-7",
+      "severity": "blocker",
+      "evidence": "Export Contractor is missing mfa, orcid for restricted_data_export.",
+      "requiredAction": "Block the delegation until MFA, SAML, and ORCID posture requirements are satisfied."
+    },
+    {
+      "requestId": "del-publish-2",
+      "code": "missing_sponsor_approval",
+      "owner": "owner-1",
+      "severity": "blocker",
+      "evidence": "publish_release requires sponsor approval before delegate-2 can act.",
+      "requiredAction": "Record sponsor approval or route the action back to the project owner."
+    },
+    {
+      "requestId": "del-transfer-3",
+      "code": "separation_of_duties_violation",
+      "owner": "delegate-2",
+      "severity": "blocker",
+      "evidence": "delegate-2 cannot both request/delegate and approve role_transfer.",
+      "requiredAction": "Route approval to an independent owner or institutional sponsor."
+    }
+  ],
+  "warnings": [],
+  "approvalChecklist": [
+    {
+      "requestId": "del-archive-5",
+      "owner": "delegate-9",
+      "requiredAction": "Narrow the object-level delegation scope before approving the action.",
+      "evidence": "del-archive-5 includes excess scope(s): repository:admin."
+    },
+    {
+      "requestId": "del-export-7",
+      "owner": "delegate-7",
+      "requiredAction": "Block the delegation until MFA, SAML, and ORCID posture requirements are satisfied.",
+      "evidence": "Export Contractor is missing mfa, orcid for restricted_data_export."
+    },
+    {
+      "requestId": "del-publish-2",
+      "owner": "owner-1",
+      "requiredAction": "Record sponsor approval or route the action back to the project owner.",
+      "evidence": "publish_release requires sponsor approval before delegate-2 can act."
+    },
+    {
+      "requestId": "del-transfer-3",
+      "owner": "delegate-2",
+      "requiredAction": "Route approval to an independent owner or institutional sponsor.",
+      "evidence": "delegate-2 cannot both request/delegate and approve role_transfer."
+    }
+  ],
+  "auditDigest": "eb75b6a2db4222fa1c946655d7ea70920e1685e0ed6e5303d829ea16dc51b0ed"
+}

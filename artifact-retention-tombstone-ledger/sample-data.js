@@ -1,0 +1,108 @@
+const sampleHostingProject = {
+  projectId: 'hosting-cardio-fluid-dynamics',
+  artifacts: [
+    {
+      artifactId: 'raw-trials-2024',
+      title: 'Raw protected waveform trials',
+      artifactType: 'dataset',
+      owner: 'data-steward',
+      license: 'restricted-dua',
+      doi: null,
+      citationCount: 0,
+      retentionUntil: '2027-01-01T00:00:00Z',
+      policyHolds: ['irb-hold'],
+      sha256: '4f8a6c0f6a3e7c85d236d2dd7251c2a6d4c6f5974f4e1a17c95bbf58b9fd0041',
+      tombstoneMetadataComplete: true,
+      disposalRequest: {
+        requested: true,
+        mode: 'tombstone',
+        reason: 'superseded protected dataset',
+      },
+    },
+    {
+      artifactId: 'simulation-cache-v3',
+      title: 'Simulation cache v3',
+      artifactType: 'model-cache',
+      owner: 'compute-admin',
+      license: 'internal',
+      doi: null,
+      citationCount: 0,
+      retentionUntil: '2025-01-01T00:00:00Z',
+      policyHolds: [],
+      sha256: null,
+      tombstoneMetadataComplete: true,
+      disposalRequest: {
+        requested: true,
+        mode: 'delete',
+        reason: 'cache eviction',
+      },
+    },
+    {
+      artifactId: 'derived-public-csv',
+      title: 'Derived public pressure table',
+      artifactType: 'dataset',
+      owner: 'repository-owner',
+      license: 'cc-by-4.0',
+      doi: '10.5555/scibase.derived-pressure',
+      citationCount: 8,
+      retentionUntil: '2025-01-01T00:00:00Z',
+      policyHolds: [],
+      sha256: '9b340ad03e9c4d2fdc1768c374fd898d021a7e11a62f1c812f12792b3e65cf3d',
+      tombstoneMetadataComplete: false,
+      replacementUri: 'https://doi.org/10.5555/scibase.derived-pressure-v2',
+      disposalRequest: {
+        requested: true,
+        mode: 'tombstone',
+        reason: 'replaced by corrected table',
+      },
+    },
+    {
+      artifactId: 'notebook-results-v1',
+      title: 'Notebook results v1',
+      artifactType: 'notebook',
+      owner: 'repository-owner',
+      license: 'cc-by-4.0',
+      doi: '10.5555/scibase.notebook-results-v1',
+      citationCount: 3,
+      retentionUntil: '2025-01-01T00:00:00Z',
+      policyHolds: [],
+      sha256: 'ce8a3b1337fb61e3a0b273a7f085d45f943fda03f852e37caad06cc8215998e6',
+      tombstoneMetadataComplete: true,
+      disposalRequest: {
+        requested: true,
+        mode: 'hard_delete',
+        reason: 'author requested cleanup',
+      },
+    },
+  ],
+};
+
+const disposalReadyProject = {
+  projectId: 'hosting-open-microscopy',
+  artifacts: [
+    {
+      artifactId: 'microscopy-derived-v1',
+      title: 'Microscopy derived masks v1',
+      artifactType: 'dataset',
+      owner: 'repository-owner',
+      license: 'cc-by-4.0',
+      doi: '10.5555/scibase.microscopy-derived-v1',
+      citationCount: 2,
+      retentionUntil: '2025-01-01T00:00:00Z',
+      policyHolds: [],
+      sha256: '01ab8d9e2f7c6f7bd88f32ce2a758aa9f26adbc5bc47d2cece9a9d9ea4b76411',
+      tombstoneMetadataComplete: true,
+      replacementUri: 'https://doi.org/10.5555/scibase.microscopy-derived-v2',
+      disposalRequest: {
+        requested: true,
+        mode: 'tombstone',
+        reason: 'superseded by v2 segmentation masks',
+      },
+    },
+  ],
+};
+
+module.exports = {
+  sampleHostingProject,
+  disposalReadyProject,
+};

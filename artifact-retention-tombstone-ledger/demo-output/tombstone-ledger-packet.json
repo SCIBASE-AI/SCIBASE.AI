@@ -1,0 +1,141 @@
+{
+  "packetType": "artifact-retention-tombstone-ledger",
+  "projectId": "hosting-cardio-fluid-dynamics",
+  "generatedAt": "2026-05-20T12:00:00Z",
+  "overallStatus": "hold",
+  "decisions": [
+    {
+      "artifactId": "raw-trials-2024",
+      "decision": "hold",
+      "tombstoneRequired": false,
+      "retentionUntil": "2027-01-01T00:00:00Z",
+      "disposalMode": "tombstone"
+    },
+    {
+      "artifactId": "simulation-cache-v3",
+      "decision": "hold",
+      "tombstoneRequired": false,
+      "retentionUntil": "2025-01-01T00:00:00Z",
+      "disposalMode": "delete"
+    },
+    {
+      "artifactId": "derived-public-csv",
+      "decision": "tombstone_required",
+      "tombstoneRequired": true,
+      "retentionUntil": "2025-01-01T00:00:00Z",
+      "disposalMode": "tombstone"
+    },
+    {
+      "artifactId": "notebook-results-v1",
+      "decision": "hold",
+      "tombstoneRequired": true,
+      "retentionUntil": "2025-01-01T00:00:00Z",
+      "disposalMode": "hard_delete"
+    }
+  ],
+  "holds": [
+    {
+      "artifactId": "raw-trials-2024",
+      "code": "active_policy_hold",
+      "owner": "data-steward",
+      "severity": "blocker",
+      "evidence": "raw-trials-2024 has active hold(s): irb-hold.",
+      "requiredAction": "Clear or document the legal, IRB, funder, or citation hold before disposal."
+    },
+    {
+      "artifactId": "simulation-cache-v3",
+      "code": "checksum_manifest_missing",
+      "owner": "compute-admin",
+      "severity": "blocker",
+      "evidence": "simulation-cache-v3 is missing a checksum manifest.",
+      "requiredAction": "Generate and preserve SHA-256 evidence before any deletion or tombstone export."
+    },
+    {
+      "artifactId": "derived-public-csv",
+      "code": "citation_tombstone_required",
+      "owner": "repository-owner",
+      "severity": "blocker",
+      "evidence": "derived-public-csv is cited or DOI-backed but lacks complete tombstone metadata.",
+      "requiredAction": "Record DOI, title, type, checksum, license, and replacement URI before disposal."
+    },
+    {
+      "artifactId": "notebook-results-v1",
+      "code": "destructive_delete_not_allowed",
+      "owner": "repository-owner",
+      "severity": "blocker",
+      "evidence": "notebook-results-v1 requested hard delete despite citation dependencies.",
+      "requiredAction": "Use a tombstone-preserving disposal mode for cited scientific artifacts."
+    },
+    {
+      "artifactId": "raw-trials-2024",
+      "code": "retention_window_not_elapsed",
+      "owner": "data-steward",
+      "severity": "blocker",
+      "evidence": "raw-trials-2024 must be retained until 2027-01-01T00:00:00Z.",
+      "requiredAction": "Wait until the retention window elapses or obtain an explicit retention override."
+    }
+  ],
+  "tombstonePlan": [
+    {
+      "artifactId": "raw-trials-2024",
+      "decision": "hold",
+      "requiredMetadata": {
+        "doi": null,
+        "title": "Raw protected waveform trials",
+        "artifactType": "dataset",
+        "sha256": "4f8a6c0f6a3e7c85d236d2dd7251c2a6d4c6f5974f4e1a17c95bbf58b9fd0041",
+        "license": "restricted-dua",
+        "replacementUri": null,
+        "disposalReason": "superseded protected dataset"
+      },
+      "preserveChecksum": true,
+      "publicLandingPage": false
+    },
+    {
+      "artifactId": "simulation-cache-v3",
+      "decision": "hold",
+      "requiredMetadata": {
+        "doi": null,
+        "title": "Simulation cache v3",
+        "artifactType": "model-cache",
+        "sha256": null,
+        "license": "internal",
+        "replacementUri": null,
+        "disposalReason": "cache eviction"
+      },
+      "preserveChecksum": false,
+      "publicLandingPage": false
+    },
+    {
+      "artifactId": "derived-public-csv",
+      "decision": "tombstone_required",
+      "requiredMetadata": {
+        "doi": "10.5555/scibase.derived-pressure",
+        "title": "Derived public pressure table",
+        "artifactType": "dataset",
+        "sha256": "9b340ad03e9c4d2fdc1768c374fd898d021a7e11a62f1c812f12792b3e65cf3d",
+        "license": "cc-by-4.0",
+        "replacementUri": "https://doi.org/10.5555/scibase.derived-pressure-v2",
+        "disposalReason": "replaced by corrected table"
+      },
+      "preserveChecksum": true,
+      "publicLandingPage": true
+    },
+    {
+      "artifactId": "notebook-results-v1",
+      "decision": "hold",
+      "requiredMetadata": {
+        "doi": "10.5555/scibase.notebook-results-v1",
+        "title": "Notebook results v1",
+        "artifactType": "notebook",
+        "sha256": "ce8a3b1337fb61e3a0b273a7f085d45f943fda03f852e37caad06cc8215998e6",
+        "license": "cc-by-4.0",
+        "replacementUri": null,
+        "disposalReason": "author requested cleanup"
+      },
+      "preserveChecksum": true,
+      "publicLandingPage": true
+    }
+  ],
+  "auditDigest": "fa494d5362739c320e1bdcc1764ea662c55944682a87715de046142c29f13568"
+}

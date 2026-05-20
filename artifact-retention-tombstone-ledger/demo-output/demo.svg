@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720">
+  <rect width="1280" height="720" fill="#172554"/>
+  <rect x="70" y="70" width="1140" height="580" rx="18" fill="#f8fafc"/>
+  <text x="110" y="145" font-family="Arial" font-size="45" font-weight="700" fill="#0f172a">Artifact Retention Tombstone Ledger</text>
+  <text x="110" y="205" font-family="Arial" font-size="25" fill="#334155">hosting-cardio-fluid-dynamics</text>
+  <text x="110" y="270" font-family="Arial" font-size="32" font-weight="700" fill="#b91c1c">5 disposal blockers</text>
+  <text x="120" y="310" font-family="Arial" font-size="22" fill="#243b53">1. raw-trials-2024: active_policy_hold</text>
+  <text x="120" y="356" font-family="Arial" font-size="22" fill="#243b53">2. simulation-cache-v3: checksum_manifest_missing</text>
+  <text x="120" y="402" font-family="Arial" font-size="22" fill="#243b53">3. derived-public-csv: citation_tombstone_required</text>
+  <text x="120" y="448" font-family="Arial" font-size="22" fill="#243b53">4. notebook-results-v1: destructive_delete_not_allowed</text>
+  <text x="120" y="494" font-family="Arial" font-size="22" fill="#243b53">5. raw-trials-2024: retention_window_not_elapsed</text>
+  <text x="110" y="620" font-family="Arial" font-size="22" fill="#475569">audit digest: fa494d5362739c320e1bdcc1...</text>
+</svg>

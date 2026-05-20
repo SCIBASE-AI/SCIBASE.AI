@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-05-20T13:00:00.000Z",
+  "documentId": "doc-quantum-12",
+  "title": "Quantum catalyst manuscript",
+  "sectionDecisions": [
+    {
+      "sectionId": "intro",
+      "sectionTitle": "Introduction",
+      "generatedAt": "2026-05-20T13:00:00.000Z",
+      "decision": "ready_to_freeze",
+      "flags": [],
+      "riskScore": 0,
+      "blockingComments": [],
+      "openSuggestions": [],
+      "staleNotebooks": [],
+      "missingApprovals": [],
+      "releaseActions": [
+        "Keep section frozen for publish review"
+      ],
+      "decisionDigest": "crdl_bf687c130eb59eeabd2c84e3"
+    },
+    {
+      "sectionId": "results",
+      "sectionTitle": "Results",
+      "generatedAt": "2026-05-20T13:00:00.000Z",
+      "decision": "hold_publish",
+      "flags": [
+        "BLOCKING_COMMENT_OPEN",
+        "OPEN_SUGGESTION",
+        "NOTEBOOK_OUTPUT_STALE",
+        "APPROVAL_MISSING",
+        "SECTION_UNLOCKED",
+        "DECISION_RECORD_MISSING",
+        "RESTORE_SNAPSHOT_UNSAFE"
+      ],
+      "riskScore": 20,
+      "blockingComments": [
+        "c-7"
+      ],
+      "openSuggestions": [
+        "sg-7"
+      ],
+      "staleNotebooks": [
+        "nb-7"
+      ],
+      "missingApprovals": [
+        "stat-reviewer"
+      ],
+      "releaseActions": [
+        "Resolve 1 blocking comment in Results",
+        "Accept or reject 1 open suggestion in Results",
+        "Refresh 1 stale notebook output before freeze",
+        "Collect approval from stat-reviewer",
+        "Move Results into freeze-window lock mode",
+        "Create restore-ready snapshot for Results"
+      ],
+      "decisionDigest": "crdl_58fa90d9db1ded935bd59ca8"
+    },
+    {
+      "sectionId": "methods",
+      "sectionTitle": "Methods",
+      "generatedAt": "2026-05-20T13:00:00.000Z",
+      "decision": "ready_to_freeze",
+      "flags": [],
+      "riskScore": 0,
+      "blockingComments": [],
+      "openSuggestions": [],
+      "staleNotebooks": [],
+      "missingApprovals": [],
+      "releaseActions": [
+        "Keep section frozen for publish review"
+      ],
+      "decisionDigest": "crdl_ed49826af04eabfc3f989582"
+    }
+  ],
+  "releaseSummary": {
+    "counts": {
+      "sections": 3,
+      "readyToFreeze": 2,
+      "holdPublish": 1,
+      "blockingComments": 1,
+      "staleNotebooks": 1,
+      "missingApprovals": 1
+    },
+    "priorityActions": [
+      "Hold publish: 1 section has unresolved release blockers.",
+      "Resolve 1 blocking comment before freeze.",
+      "Refresh 1 stale notebook output before release.",
+      "Collect 1 missing role approval before publish."
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "protocolId": "NCT-GLUCO-42",
+    "manuscriptTitle": "Glucose Coaching Improves Fatigue in Shift Workers",
+    "readyForReview": false,
+    "riskScore": 145,
+    "flags": [
+      {
+        "code": "PRIMARY_OUTCOME_SWITCH",
+        "severity": "high",
+        "message": "Registered primary outcome missing from manuscript primary endpoints: mean overnight glucose variability.",
+        "evidence": {
+          "source": "manuscript.abstract",
+          "quote": "fatigue was the primary endpoint"
+        },
+        "reviewerPrompt": "Ask the authors to explain whether this is an outcome-switch and to restore the registered primary endpoint."
+      },
+      {
+        "code": "UNREGISTERED_PRIMARY_OUTCOME",
+        "severity": "high",
+        "message": "Manuscript promotes unregistered primary endpoint(s): reported fatigue.",
+        "evidence": {
+          "source": "manuscript.abstract",
+          "quote": "fatigue was the primary endpoint"
+        },
+        "reviewerPrompt": "Require a protocol amendment or downgrade the endpoint to exploratory."
+      },
+      {
+        "code": "ANALYSIS_PLAN_DRIFT",
+        "severity": "medium",
+        "message": "Planned analysis mismatch. Missing: mixed effects model, intention-to-treat; added: per-protocol model.",
+        "evidence": {
+          "source": "manuscript.methods",
+          "quote": "analyzed completers with a per-protocol model"
+        },
+        "reviewerPrompt": "Ask for a transparent deviation note and sensitivity analysis using the registered plan."
+      },
+      {
+        "code": "SAMPLE_SIZE_SHORTFALL",
+        "severity": "medium",
+        "message": "Observed sample size 126 is below the 90% protocol threshold of 162.",
+        "evidence": {
+          "source": "manuscript.methods",
+          "quote": "sampleSize=126"
+        },
+        "reviewerPrompt": "Request recruitment, attrition, and power-impact details."
+      },
+      {
+        "code": "UNPLANNED_EXCLUSION",
+        "severity": "medium",
+        "message": "Methods describe post-randomization exclusions that are not present in the registered exclusion rules.",
+        "evidence": {
+          "source": "manuscript.methods",
+          "quote": "excluded participants after randomization for app non-use"
+        },
+        "reviewerPrompt": "Ask whether the exclusion was pre-specified and require an intention-to-treat sensitivity check."
+      },
+      {
+        "code": "MISSING_PROTOCOL_CITATION",
+        "severity": "low",
+        "message": "The manuscript does not cite the registered protocol or trial registry record.",
+        "evidence": {
+          "source": "manuscript.references",
+          "quote": "RANDOM-WORKPLACE-REVIEW"
+        },
+        "reviewerPrompt": "Add the trial registry/protocol citation before review."
+      }
+    ],
+    "citationRecommendations": [
+      {
+        "citation": {
+          "id": "trial-registry",
+          "title": "Continuous Glucose Coaching for Shift Workers protocol",
+          "authors": [
+            "Mira Shah",
+            "Anton Bell"
+          ],
+          "year": 2025,
+          "doi": "10.5555/gluco-protocol",
+          "url": "https://registry.example/gluco-42"
+        },
+        "reason": "Cite the registered protocol so reviewers can compare planned and reported outcomes.",
+        "apa": "Mira Shah, Anton Bell (2025). Continuous Glucose Coaching for Shift Workers protocol. https://registry.example/gluco-42",
+        "nature": "Shah M.; Bell A. Continuous Glucose Coaching for Shift Workers protocol (2025). doi:10.5555/gluco-protocol"
+      }
+    ],
+    "reviewerTasks": [
+      "Investigate possible outcome-switch against the registry.",
+      "Require a protocol amendment for the new primary endpoint.",
+      "Request a registered-plan sensitivity analysis.",
+      "Check attrition and power impact.",
+      "Audit post-randomization exclusions.",
+      "Add missing protocol citation."
+    ],
+    "digest": "07a0ad193562f273",
+    "summaries": {
+      "abstractStyle": "Primary outcome drift and related protocol deviations were detected for Glucose Coaching Improves Fatigue in Shift Workers.",
+      "executiveSummary": "6 protocol risk flags were found, including 2 high-severity issue(s). First review action: Ask the authors to explain whether this is an outcome-switch and to restore the registered primary endpoint.",
+      "laypersonExplanation": "The manuscript may have changed from the original study plan, so a reviewer should check whether the change is justified.",
+      "evidenceSpans": [
+        {
+          "source": "manuscript.abstract",
+          "quote": "fatigue was the primary endpoint"
+        },
+        {
+          "source": "manuscript.abstract",
+          "quote": "fatigue was the primary endpoint"
+        },
+        {
+          "source": "manuscript.methods",
+          "quote": "analyzed completers with a per-protocol model"
+        },
+        {
+          "source": "manuscript.methods",
+          "quote": "sampleSize=126"
+        },
+        {
+          "source": "manuscript.methods",
+          "quote": "excluded participants after randomization for app non-use"
+        },
+        {
+          "source": "manuscript.references",
+          "quote": "RANDOM-WORKPLACE-REVIEW"
+        }
+      ]
+    }
+  },
+  {
+    "protocolId": "NCT-GLUCO-42",
+    "manuscriptTitle": "Glucose Coaching and Overnight Glucose Variability",
+    "readyForReview": true,
+    "riskScore": 0,
+    "flags": [],
+    "citationRecommendations": [],
+    "reviewerTasks": [],
+    "digest": "3f52a7ec2aa2ed4f",
+    "summaries": {
+      "abstractStyle": "No protocol deviation flags were detected for Glucose Coaching and Overnight Glucose Variability.",
+      "executiveSummary": "The manuscript appears aligned with the registered protocol and can proceed to reviewer triage.",
+      "laypersonExplanation": "The study appears to report what it originally said it would measure.",
+      "evidenceSpans": []
+    }
+  }
+]

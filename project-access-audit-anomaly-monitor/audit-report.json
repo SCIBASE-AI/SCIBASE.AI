@@ -1,0 +1,244 @@
+{
+  "generatedAt": "2026-05-20T10:48:48.620Z",
+  "scoredEvents": [
+    {
+      "eventId": "evt:001",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:ext-lee",
+      "targetUserId": null,
+      "objectId": "object:patient-counts",
+      "type": "restricted_download",
+      "timestamp": "2026-05-20T02:10:00Z",
+      "score": 100,
+      "severity": "critical",
+      "recommendedAction": "freeze_access_and_open_security_review",
+      "reasons": [
+        "MFA not enabled",
+        "ORCID not linked for attribution-sensitive event",
+        "external collaborator access is expired",
+        "restricted object touched",
+        "role reviewer is below required admin",
+        "new-country access compared with user history",
+        "after-hours access"
+      ]
+    },
+    {
+      "eventId": "evt:002",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:ext-lee",
+      "targetUserId": null,
+      "objectId": "object:patient-counts",
+      "type": "bulk_download",
+      "timestamp": "2026-05-20T02:24:00Z",
+      "score": 100,
+      "severity": "critical",
+      "recommendedAction": "freeze_access_and_open_security_review",
+      "reasons": [
+        "MFA not enabled",
+        "external collaborator access is expired",
+        "restricted object touched",
+        "role reviewer is below required admin",
+        "bulk download count 42 exceeds threshold 10",
+        "after-hours access"
+      ]
+    },
+    {
+      "eventId": "evt:005",
+      "projectId": "project:materials-sensor",
+      "actorId": "user:inactive-jo",
+      "targetUserId": null,
+      "objectId": "object:sensor-raw",
+      "type": "data_export",
+      "timestamp": "2026-05-20T03:30:00Z",
+      "score": 100,
+      "severity": "critical",
+      "recommendedAction": "freeze_access_and_open_security_review",
+      "reasons": [
+        "inactive user generated access event",
+        "embargoed object touched",
+        "restricted-license object exported"
+      ]
+    },
+    {
+      "eventId": "evt:006",
+      "projectId": "project:materials-sensor",
+      "actorId": "user:inactive-jo",
+      "targetUserId": null,
+      "objectId": "object:sensor-raw",
+      "type": "api_token_created",
+      "timestamp": "2026-05-20T04:00:00Z",
+      "score": 85,
+      "severity": "critical",
+      "recommendedAction": "freeze_access_and_open_security_review",
+      "reasons": [
+        "inactive user generated access event",
+        "embargoed object touched",
+        "new-country access compared with user history"
+      ]
+    },
+    {
+      "eventId": "evt:004",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:admin-ray",
+      "targetUserId": null,
+      "objectId": "object:patient-counts",
+      "type": "object_permission_drift",
+      "timestamp": "2026-05-20T03:05:00Z",
+      "score": 81,
+      "severity": "high",
+      "recommendedAction": "require_owner_approval_before_next_download",
+      "reasons": [
+        "restricted object touched",
+        "object permission drift exposes extra roles: reviewer, contributor"
+      ]
+    },
+    {
+      "eventId": "evt:003",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:admin-ray",
+      "targetUserId": "user:ext-lee",
+      "objectId": null,
+      "type": "role_change",
+      "timestamp": "2026-05-20T02:31:00Z",
+      "score": 64,
+      "severity": "medium",
+      "recommendedAction": "queue_admin_review",
+      "reasons": [
+        "unknown object referenced by audit event",
+        "external collaborator gained contributor-or-higher role",
+        "role change lacks approval ticket"
+      ]
+    },
+    {
+      "eventId": "evt:007",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:owner-amy",
+      "targetUserId": null,
+      "objectId": null,
+      "type": "project_visibility_change",
+      "timestamp": "2026-05-20T05:00:00Z",
+      "score": 30,
+      "severity": "low",
+      "recommendedAction": "retain_for_audit",
+      "reasons": [
+        "unknown object referenced by audit event"
+      ]
+    }
+  ],
+  "projectPackets": [
+    {
+      "projectId": "project:neuro-alpha",
+      "projectTitle": "Neuro Alpha Collaboration",
+      "institutionId": "inst:western",
+      "maxScore": 100,
+      "severityCounts": {
+        "critical": 2,
+        "high": 1,
+        "medium": 1,
+        "low": 1
+      },
+      "holdExport": true,
+      "ownerQueue": [
+        {
+          "eventId": "evt:001",
+          "severity": "critical",
+          "action": "freeze_access_and_open_security_review",
+          "reasons": [
+            "MFA not enabled",
+            "ORCID not linked for attribution-sensitive event",
+            "external collaborator access is expired",
+            "restricted object touched",
+            "role reviewer is below required admin",
+            "new-country access compared with user history",
+            "after-hours access"
+          ]
+        },
+        {
+          "eventId": "evt:002",
+          "severity": "critical",
+          "action": "freeze_access_and_open_security_review",
+          "reasons": [
+            "MFA not enabled",
+            "external collaborator access is expired",
+            "restricted object touched",
+            "role reviewer is below required admin",
+            "bulk download count 42 exceeds threshold 10",
+            "after-hours access"
+          ]
+        },
+        {
+          "eventId": "evt:004",
+          "severity": "high",
+          "action": "require_owner_approval_before_next_download",
+          "reasons": [
+            "restricted object touched",
+            "object permission drift exposes extra roles: reviewer, contributor"
+          ]
+        }
+      ],
+      "reviewerSummary": "Restricted access should be frozen until owner/admin review completes."
+    },
+    {
+      "projectId": "project:materials-sensor",
+      "projectTitle": "Materials Sensor Working Group",
+      "institutionId": "inst:eastern",
+      "maxScore": 100,
+      "severityCounts": {
+        "critical": 2
+      },
+      "holdExport": true,
+      "ownerQueue": [
+        {
+          "eventId": "evt:005",
+          "severity": "critical",
+          "action": "freeze_access_and_open_security_review",
+          "reasons": [
+            "inactive user generated access event",
+            "embargoed object touched",
+            "restricted-license object exported"
+          ]
+        },
+        {
+          "eventId": "evt:006",
+          "severity": "critical",
+          "action": "freeze_access_and_open_security_review",
+          "reasons": [
+            "inactive user generated access event",
+            "embargoed object touched",
+            "new-country access compared with user history"
+          ]
+        }
+      ],
+      "reviewerSummary": "Restricted access should be frozen until owner/admin review completes."
+    }
+  ],
+  "blockedObjects": [
+    {
+      "objectId": "object:patient-counts",
+      "eventId": "evt:001",
+      "action": "temporary_export_hold"
+    },
+    {
+      "objectId": "object:patient-counts",
+      "eventId": "evt:002",
+      "action": "temporary_export_hold"
+    },
+    {
+      "objectId": "object:sensor-raw",
+      "eventId": "evt:005",
+      "action": "temporary_export_hold"
+    },
+    {
+      "objectId": "object:sensor-raw",
+      "eventId": "evt:006",
+      "action": "temporary_export_hold"
+    }
+  ],
+  "stats": {
+    "projectCount": 2,
+    "eventCount": 7,
+    "criticalCount": 4,
+    "highCount": 1,
+    "heldExportCount": 2
+  }
+}

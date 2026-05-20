@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-05-20T00:00:00.000Z",
+  "decision": "revoked",
+  "summary": {
+    "totalCandidates": 3,
+    "renewed": 1,
+    "needsReview": 0,
+    "expired": 1,
+    "revoked": 1,
+    "blockers": 3,
+    "warnings": 4
+  },
+  "badges": [
+    {
+      "userId": "researcher-ada",
+      "projectId": "project-folding-graph",
+      "badgeId": "badge-reproducible-gold",
+      "decision": "renewed",
+      "passRate": 1,
+      "independentVerifiers": 2,
+      "reputationDelta": 16,
+      "leaderboardHold": false,
+      "digest": "08ad262647574d78ae1075c867f56b21ccd3eaf0fcc9f2dc5c119ef7a3ab5484"
+    },
+    {
+      "userId": "researcher-bohr",
+      "projectId": "project-benchmark-split",
+      "badgeId": "badge-reproducible-silver",
+      "decision": "expired",
+      "passRate": 0.5,
+      "independentVerifiers": 1,
+      "reputationDelta": -8,
+      "leaderboardHold": true,
+      "digest": "0b9009b1e11cff8de2eaa7b4d0353ba5632a2780aa245e723e9d38c8f01c4f96"
+    },
+    {
+      "userId": "researcher-curie",
+      "projectId": "project-wetlab-validation",
+      "badgeId": "badge-reproducible-bronze",
+      "decision": "revoked",
+      "passRate": 1,
+      "independentVerifiers": 2,
+      "reputationDelta": -20,
+      "leaderboardHold": true,
+      "digest": "effa0f96180e8cbc7f8d7482cfdab6d79843091a60f55f808941c70f198696cf"
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "blocker",
+      "code": "rerun_pass_rate_low",
+      "message": "Rerun pass rate is below the reproducibility badge renewal threshold.",
+      "evidence": {
+        "badgeId": "badge-reproducible-silver",
+        "passRate": 0.5,
+        "required": 0.8
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "artifact_hash_drift",
+      "message": "Badge evidence no longer matches current artifact hashes.",
+      "evidence": {
+        "badgeId": "badge-reproducible-silver",
+        "drifted": [
+          "code"
+        ]
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "retraction_notice_present",
+      "message": "A retraction notice blocks reproducibility badge renewal.",
+      "evidence": {
+        "badgeId": "badge-reproducible-bronze",
+        "notice": "Retraction notice on validation dataset."
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "code": "independent_verifiers_insufficient",
+      "message": "Badge renewal lacks enough independent verifier identities.",
+      "evidence": {
+        "badgeId": "badge-reproducible-silver",
+        "independentVerifiers": 1,
+        "required": 2
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "self_verification_detected",
+      "message": "Self-verification cannot count as independent reproducibility evidence.",
+      "evidence": {
+        "badgeId": "badge-reproducible-silver",
+        "rerunId": "rerun-003",
+        "verifierId": "researcher-bohr"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "major_correction_present",
+      "message": "A major correction requires badge reviewer approval before renewal.",
+      "evidence": {
+        "badgeId": "badge-reproducible-silver",
+        "correction": "Correction updates benchmark split generation script."
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "open_badge_appeal",
+      "message": "An open badge appeal should pause automated leaderboard updates.",
+      "evidence": {
+        "badgeId": "badge-reproducible-silver",
+        "appealId": "appeal-778"
+      }
+    }
+  ],
+  "reviewerTasks": [
+    "Revoke badges linked to retracted work and remove them from leaderboards.",
+    "Expire affected badges until fresh independent reruns match current artifacts.",
+    "Route warning-level badge cases to reputation moderators before publishing deltas."
+  ],
+  "leaderboardHold": true,
+  "auditDigest": "e8880027dd298eb0c4c7e78047f0f765280a18d3dc5a1ecc5078b3f0293abf9b"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="38" y="36" width="884" height="468" rx="22" fill="#ffffff" stroke="#dbe4ee"/>
+  <text x="64" y="92" fill="#0f766e" font-family="Arial, sans-serif" font-size="18" font-weight="700">PROJECT REPOSITORY &amp; VERSION CONTROL</text>
+  <text x="64" y="132" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="800">Environment Drift Gate</text>
+  <text x="64" y="162" fill="#64748b" font-family="Arial, sans-serif" font-size="18">quarantine-release · major release impact · digest 843791061afd</text>
+  <g font-family="Arial, sans-serif">
+      <text x="68" y="206" fill="#334155" font-size="22" font-weight="700">Components</text>
+      <rect x="214" y="182" width="352" height="36" rx="9" fill="#0f766e" opacity="0.9"/>
+      <text x="588" y="207" fill="#0f172a" font-size="20" font-weight="700">4</text>
+    
+      <text x="68" y="268" fill="#334155" font-size="22" font-weight="700">Env drift</text>
+      <rect x="214" y="244" width="574" height="36" rx="9" fill="#b45309" opacity="0.9"/>
+      <text x="810" y="269" fill="#0f172a" font-size="20" font-weight="700">7</text>
+    
+      <text x="68" y="330" fill="#334155" font-size="22" font-weight="700">Blockers</text>
+      <rect x="214" y="306" width="352" height="36" rx="9" fill="#be123c" opacity="0.9"/>
+      <text x="588" y="331" fill="#0f172a" font-size="20" font-weight="700">4</text>
+    </g>
+  <rect x="64" y="402" width="832" height="64" rx="16" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="88" y="438" fill="#9a3412" font-family="Arial, sans-serif" font-size="20" font-weight="700">Quarantine until environment hashes, LFS routing, and fresh reruns are resolved.</text>
+</svg>

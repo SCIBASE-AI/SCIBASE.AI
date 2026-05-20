@@ -1,0 +1,322 @@
+{
+  "generatedAt": "2026-05-20T10:53:17.035Z",
+  "decisions": [
+    {
+      "artifactId": "artifact:mzml-002",
+      "fileName": "metabolomics-run.mzml",
+      "rawType": "mzml",
+      "previewKind": "metadata_packet",
+      "decision": "block_preview",
+      "severity": "high",
+      "score": 100,
+      "reasons": [
+        "raw artifact checksum changed",
+        "unit metadata drift: intensity",
+        "calibration drift: mz",
+        "preview transform would expose raw values",
+        "preview transform does not record lineage",
+        "preview transform downsample ratio is too high for safe preview",
+        "restricted_license_requires_metadata_only_preview",
+        "embargoed artifact requires metadata-only preview"
+      ],
+      "datacite": {
+        "identifier": "10.0000/scibase.mzml.002",
+        "creators": [
+          "SCIBASE Metabolomics Core"
+        ],
+        "titles": [
+          {
+            "title": "Embargoed metabolomics peak run"
+          }
+        ],
+        "publisher": "SCIBASE synthetic repository",
+        "publicationYear": 2026,
+        "types": {
+          "resourceTypeGeneral": "Dataset",
+          "resourceType": "Mass spectrometry mzML"
+        },
+        "rightsList": [
+          {
+            "rights": "restricted"
+          }
+        ],
+        "descriptions": [
+          {
+            "descriptionType": "TechnicalInfo",
+            "description": "Preview decision: block_preview; transform: peak-topline"
+          }
+        ]
+      },
+      "schemaOrg": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "identifier": "10.0000/scibase.mzml.002",
+        "name": "Embargoed metabolomics peak run",
+        "measurementTechnique": "Mass spectrometry mzML",
+        "license": "restricted",
+        "encodingFormat": "mzml",
+        "variableMeasured": [
+          "mz",
+          "intensity"
+        ],
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "previewDecision",
+            "value": "block_preview"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "previewKind",
+            "value": "peak_intensity_summary"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "actualChecksum",
+            "value": "sha256:mzml-after"
+          }
+        ]
+      }
+    },
+    {
+      "artifactId": "artifact:h5-004",
+      "fileName": "sensor-sweep.h5",
+      "rawType": "h5",
+      "previewKind": "metadata_packet",
+      "decision": "metadata_only_preview",
+      "severity": "medium",
+      "score": 42,
+      "reasons": [
+        "unit metadata drift: impedance",
+        "calibration drift: impedance"
+      ],
+      "datacite": {
+        "identifier": "artifact:h5-004",
+        "creators": [
+          "SCIBASE Materials Core"
+        ],
+        "titles": [
+          {
+            "title": "Sensor HDF5 sweep bundle"
+          }
+        ],
+        "publisher": "SCIBASE synthetic repository",
+        "publicationYear": 2026,
+        "types": {
+          "resourceTypeGeneral": "Dataset",
+          "resourceType": "Instrument HDF5 bundle"
+        },
+        "rightsList": [
+          {
+            "rights": "CC0-1.0"
+          }
+        ],
+        "descriptions": [
+          {
+            "descriptionType": "TechnicalInfo",
+            "description": "Preview decision: metadata_only_preview; transform: dataset-tree-only"
+          }
+        ]
+      },
+      "schemaOrg": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "identifier": "artifact:h5-004",
+        "name": "Sensor HDF5 sweep bundle",
+        "measurementTechnique": "Instrument HDF5 bundle",
+        "license": "CC0-1.0",
+        "encodingFormat": "h5",
+        "variableMeasured": [
+          "frequency",
+          "impedance"
+        ],
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "previewDecision",
+            "value": "metadata_only_preview"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "previewKind",
+            "value": "dataset_tree_summary"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "actualChecksum",
+            "value": "sha256:h5-stable"
+          }
+        ]
+      }
+    },
+    {
+      "artifactId": "artifact:fcs-001",
+      "fileName": "microglia-panel.fcs",
+      "rawType": "fcs",
+      "previewKind": "gated_scatter_summary",
+      "decision": "allow_safe_preview",
+      "severity": "low",
+      "score": 18,
+      "reasons": [],
+      "datacite": {
+        "identifier": "10.0000/scibase.fcs.001",
+        "creators": [
+          "SCIBASE Flow Core"
+        ],
+        "titles": [
+          {
+            "title": "Microglia cytokine flow panel"
+          }
+        ],
+        "publisher": "SCIBASE synthetic repository",
+        "publicationYear": 2026,
+        "types": {
+          "resourceTypeGeneral": "Dataset",
+          "resourceType": "Flow cytometry standard"
+        },
+        "rightsList": [
+          {
+            "rights": "CC-BY-4.0"
+          }
+        ],
+        "descriptions": [
+          {
+            "descriptionType": "TechnicalInfo",
+            "description": "Preview decision: allow_safe_preview; transform: scatter-density-downsample"
+          }
+        ]
+      },
+      "schemaOrg": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "identifier": "10.0000/scibase.fcs.001",
+        "name": "Microglia cytokine flow panel",
+        "measurementTechnique": "Flow cytometry standard",
+        "license": "CC-BY-4.0",
+        "encodingFormat": "fcs",
+        "variableMeasured": [
+          "FSC",
+          "IL6"
+        ],
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "previewDecision",
+            "value": "allow_safe_preview"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "previewKind",
+            "value": "gated_scatter_summary"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "actualChecksum",
+            "value": "sha256:fcs-original"
+          }
+        ]
+      }
+    },
+    {
+      "artifactId": "artifact:nd2-003",
+      "fileName": "organoid-stack.nd2",
+      "rawType": "nd2",
+      "previewKind": "channel_thumbnail_contact_sheet",
+      "decision": "allow_safe_preview",
+      "severity": "low",
+      "score": 18,
+      "reasons": [],
+      "datacite": {
+        "identifier": "artifact:nd2-003",
+        "creators": [
+          "SCIBASE Imaging Core"
+        ],
+        "titles": [
+          {
+            "title": "Organoid microscopy stack"
+          }
+        ],
+        "publisher": "SCIBASE synthetic repository",
+        "publicationYear": 2026,
+        "types": {
+          "resourceTypeGeneral": "Dataset",
+          "resourceType": "Microscopy ND2 image stack"
+        },
+        "rightsList": [
+          {
+            "rights": "CC-BY-NC-4.0"
+          }
+        ],
+        "descriptions": [
+          {
+            "descriptionType": "TechnicalInfo",
+            "description": "Preview decision: allow_safe_preview; transform: thumbnail-contact-sheet"
+          }
+        ]
+      },
+      "schemaOrg": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "identifier": "artifact:nd2-003",
+        "name": "Organoid microscopy stack",
+        "measurementTechnique": "Microscopy ND2 image stack",
+        "license": "CC-BY-NC-4.0",
+        "encodingFormat": "nd2",
+        "variableMeasured": [
+          "x",
+          "y",
+          "intensity"
+        ],
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "previewDecision",
+            "value": "allow_safe_preview"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "previewKind",
+            "value": "channel_thumbnail_contact_sheet"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "actualChecksum",
+            "value": "sha256:nd2-stable"
+          }
+        ]
+      }
+    }
+  ],
+  "stats": {
+    "artifactCount": 4,
+    "blocked": 1,
+    "metadataOnly": 1,
+    "safePreview": 2
+  },
+  "reviewerQueue": [
+    {
+      "artifactId": "artifact:mzml-002",
+      "fileName": "metabolomics-run.mzml",
+      "decision": "block_preview",
+      "reasons": [
+        "raw artifact checksum changed",
+        "unit metadata drift: intensity",
+        "calibration drift: mz",
+        "preview transform would expose raw values",
+        "preview transform does not record lineage",
+        "preview transform downsample ratio is too high for safe preview",
+        "restricted_license_requires_metadata_only_preview",
+        "embargoed artifact requires metadata-only preview"
+      ]
+    },
+    {
+      "artifactId": "artifact:h5-004",
+      "fileName": "sensor-sweep.h5",
+      "decision": "metadata_only_preview",
+      "reasons": [
+        "unit metadata drift: impedance",
+        "calibration drift: impedance"
+      ]
+    }
+  ]
+}

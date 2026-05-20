@@ -1,0 +1,196 @@
+{
+  "generatedAt": "2026-05-20",
+  "summary": {
+    "total": 5,
+    "renew": 2,
+    "review": 2,
+    "downgrade": 0,
+    "expire": 1
+  },
+  "packets": [
+    {
+      "researcherId": "orcid:0000-0002-1825-0097",
+      "displayName": "Dr. Amina Rios",
+      "badge": "Trusted Reviewer",
+      "decision": "renew",
+      "score": 95,
+      "renewalWindowDays": 120,
+      "evidence": {
+        "reviewCount": 4,
+        "averageReviewQuality": 0.872,
+        "reproducibilityCount": 3,
+        "creditCount": 3,
+        "anonymousReviewCount": 2,
+        "openAppealCount": 0,
+        "oldestRecentEvidenceDays": 118
+      },
+      "findings": [],
+      "requiredActions": [
+        "Record renewal packet and keep badge visible on profile and leaderboard surfaces."
+      ]
+    },
+    {
+      "researcherId": "orcid:0000-0002-1825-0097",
+      "displayName": "Dr. Amina Rios",
+      "badge": "Reproducibility Steward",
+      "decision": "renew",
+      "score": 95,
+      "renewalWindowDays": 150,
+      "evidence": {
+        "reviewCount": 4,
+        "averageReviewQuality": 0.872,
+        "reproducibilityCount": 3,
+        "creditCount": 3,
+        "anonymousReviewCount": 2,
+        "openAppealCount": 0,
+        "oldestRecentEvidenceDays": 118
+      },
+      "findings": [],
+      "requiredActions": [
+        "Record renewal packet and keep badge visible on profile and leaderboard surfaces."
+      ]
+    },
+    {
+      "researcherId": "orcid:0000-0003-1415-9265",
+      "displayName": "Prof. Luc Chen",
+      "badge": "Trusted Reviewer",
+      "decision": "review",
+      "score": 0,
+      "renewalWindowDays": 120,
+      "evidence": {
+        "reviewCount": 0,
+        "averageReviewQuality": 0,
+        "reproducibilityCount": 0,
+        "creditCount": 0,
+        "anonymousReviewCount": 0,
+        "openAppealCount": 1,
+        "oldestRecentEvidenceDays": null
+      },
+      "findings": [
+        {
+          "code": "missing-review-volume",
+          "message": "Needs 4 recent reviews; found 0.",
+          "category": "renewal"
+        },
+        {
+          "code": "review-quality-below-threshold",
+          "message": "Average review quality 0.00 is below 0.82.",
+          "category": "quality"
+        },
+        {
+          "code": "stale-reproducibility-evidence",
+          "message": "Needs 1 recent verified reproducibility events; found 0.",
+          "category": "reproducibility"
+        },
+        {
+          "code": "insufficient-contribution-continuity",
+          "message": "Needs 2 recent contribution credits; found 0.",
+          "category": "credit"
+        },
+        {
+          "code": "open-appeal-hold",
+          "message": "1 open appeal(s) require reviewer action before badge renewal.",
+          "category": "moderation"
+        }
+      ],
+      "requiredActions": [
+        "Complete additional structured peer reviews.",
+        "Request calibration or mentor review before renewal.",
+        "Add recent verified reproducibility evidence.",
+        "Attach recent CRediT contribution evidence.",
+        "Resolve open appeal before public badge renewal."
+      ]
+    },
+    {
+      "researcherId": "orcid:0000-0003-1415-9265",
+      "displayName": "Prof. Luc Chen",
+      "badge": "Open Science Champion",
+      "decision": "review",
+      "score": 0,
+      "renewalWindowDays": 180,
+      "evidence": {
+        "reviewCount": 1,
+        "averageReviewQuality": 0.78,
+        "reproducibilityCount": 0,
+        "creditCount": 1,
+        "anonymousReviewCount": 0,
+        "openAppealCount": 1,
+        "oldestRecentEvidenceDays": 170
+      },
+      "findings": [
+        {
+          "code": "missing-review-volume",
+          "message": "Needs 2 recent reviews; found 1.",
+          "category": "renewal"
+        },
+        {
+          "code": "stale-reproducibility-evidence",
+          "message": "Needs 2 recent verified reproducibility events; found 0.",
+          "category": "reproducibility"
+        },
+        {
+          "code": "insufficient-contribution-continuity",
+          "message": "Needs 4 recent contribution credits; found 1.",
+          "category": "credit"
+        },
+        {
+          "code": "open-appeal-hold",
+          "message": "1 open appeal(s) require reviewer action before badge renewal.",
+          "category": "moderation"
+        }
+      ],
+      "requiredActions": [
+        "Complete additional structured peer reviews.",
+        "Add recent verified reproducibility evidence.",
+        "Attach recent CRediT contribution evidence.",
+        "Resolve open appeal before public badge renewal."
+      ]
+    },
+    {
+      "researcherId": "orcid:0000-0004-9999-1234",
+      "displayName": "Dr. Noor Patel",
+      "badge": "Open Science Champion",
+      "decision": "expire",
+      "score": 0,
+      "renewalWindowDays": 180,
+      "evidence": {
+        "reviewCount": 0,
+        "averageReviewQuality": 0,
+        "reproducibilityCount": 0,
+        "creditCount": 0,
+        "anonymousReviewCount": 0,
+        "openAppealCount": 0,
+        "oldestRecentEvidenceDays": null
+      },
+      "findings": [
+        {
+          "code": "missing-review-volume",
+          "message": "Needs 2 recent reviews; found 0.",
+          "category": "renewal"
+        },
+        {
+          "code": "review-quality-below-threshold",
+          "message": "Average review quality 0.00 is below 0.75.",
+          "category": "quality"
+        },
+        {
+          "code": "stale-reproducibility-evidence",
+          "message": "Needs 2 recent verified reproducibility events; found 0.",
+          "category": "reproducibility"
+        },
+        {
+          "code": "insufficient-contribution-continuity",
+          "message": "Needs 4 recent contribution credits; found 0.",
+          "category": "credit"
+        }
+      ],
+      "requiredActions": [
+        "Complete additional structured peer reviews.",
+        "Request calibration or mentor review before renewal.",
+        "Add recent verified reproducibility evidence.",
+        "Attach recent CRediT contribution evidence.",
+        "Hide badge from public leaderboard surfaces until renewed."
+      ]
+    }
+  ]
+}

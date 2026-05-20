@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-05-20T08:00:00.000Z",
+  "summary": {
+    "approved": 1,
+    "needsApproval": 1,
+    "hold": 2
+  },
+  "results": [
+    {
+      "id": "aim-001",
+      "lab": "neuro-recovery",
+      "modelId": "scibase-local-small",
+      "status": "approved",
+      "holds": [],
+      "missingApprovals": [],
+      "adminQueue": "enable",
+      "allowedScopes": [
+        "summarize",
+        "peer-review-redlines"
+      ],
+      "exportEvidence": {
+        "dataClasses": [
+          "human-subject"
+        ],
+        "integrations": [
+          "dspace"
+        ],
+        "modelBoundary": "internal",
+        "retentionDays": 0
+      }
+    },
+    {
+      "id": "aim-002",
+      "lab": "clinical-imaging",
+      "modelId": "external-frontier-api",
+      "status": "hold",
+      "holds": [
+        "restricted-data-sent-to-external-model",
+        "retention-window-too-long",
+        "missing-vendor-dpa"
+      ],
+      "missingApprovals": [
+        "legal"
+      ],
+      "adminQueue": "privacy-security-review",
+      "allowedScopes": [],
+      "exportEvidence": {
+        "dataClasses": [
+          "clinical",
+          "restricted-ip"
+        ],
+        "integrations": [
+          "eln"
+        ],
+        "modelBoundary": "external",
+        "retentionDays": 30
+      }
+    },
+    {
+      "id": "aim-003",
+      "lab": "materials-platform",
+      "modelId": "lab-finetune-alpha",
+      "status": "hold",
+      "holds": [
+        "model-not-approved",
+        "token-budget-review-needed",
+        "blocked-integration"
+      ],
+      "missingApprovals": [],
+      "adminQueue": "platform-admin-review",
+      "allowedScopes": [],
+      "exportEvidence": {
+        "dataClasses": [
+          "open-science"
+        ],
+        "integrations": [
+          "public-webhook-test-sink"
+        ],
+        "modelBoundary": "internal",
+        "retentionDays": 7
+      }
+    },
+    {
+      "id": "aim-004",
+      "lab": "doctoral-training",
+      "modelId": "scibase-local-small",
+      "status": "needs-approval",
+      "holds": [],
+      "missingApprovals": [
+        "registrar"
+      ],
+      "adminQueue": "department-approval",
+      "allowedScopes": [],
+      "exportEvidence": {
+        "dataClasses": [
+          "student-record"
+        ],
+        "integrations": [
+          "canvas"
+        ],
+        "modelBoundary": "internal",
+        "retentionDays": 0
+      }
+    }
+  ],
+  "webhookEvents": [
+    {
+      "type": "enterprise.ai_model_request.evaluated",
+      "requestId": "aim-001",
+      "status": "approved",
+      "queue": "enable",
+      "signature": "ceeee7e47ef53768"
+    },
+    {
+      "type": "enterprise.ai_model_request.evaluated",
+      "requestId": "aim-002",
+      "status": "hold",
+      "queue": "privacy-security-review",
+      "signature": "5a83eb530085b667"
+    },
+    {
+      "type": "enterprise.ai_model_request.evaluated",
+      "requestId": "aim-003",
+      "status": "hold",
+      "queue": "platform-admin-review",
+      "signature": "56c0bb422da28285"
+    },
+    {
+      "type": "enterprise.ai_model_request.evaluated",
+      "requestId": "aim-004",
+      "status": "needs-approval",
+      "queue": "department-approval",
+      "signature": "adc7a81b701a40ae"
+    }
+  ],
+  "auditDigest": "d5cd791560b4"
+}

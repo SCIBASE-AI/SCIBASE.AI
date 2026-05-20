@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Challenge rubric readiness gate demo">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="96" y="80" width="1088" height="560" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="140" y="150" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Challenge Rubric Readiness Gate</text>
+  <text x="140" y="205" font-family="Arial, sans-serif" font-size="26" fill="#334155">Pre-posting checks for scientific bounty challenges</text>
+  <rect x="140" y="260" width="1000" height="70" rx="6" fill="#e0f2fe"/>
+  <text x="172" y="306" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#075985">READY</text>
+  <text x="320" y="306" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">rubric 100 / prize reconciled / timeline chronological</text>
+  <text x="160" y="400" font-family="Arial, sans-serif" font-size="28" fill="#0f172a">Checks</text>
+  <text x="160" y="452" font-family="Arial, sans-serif" font-size="24" fill="#334155">deliverables include acceptance evidence</text>
+  <text x="160" y="492" font-family="Arial, sans-serif" font-size="24" fill="#334155">rubric criteria are measurable and mapped</text>
+  <text x="160" y="532" font-family="Arial, sans-serif" font-size="24" fill="#334155">private challenge has NDA and prequalification path</text>
+  <text x="160" y="572" font-family="Arial, sans-serif" font-size="24" fill="#334155">audit digest attaches to sponsor review</text>
+</svg>

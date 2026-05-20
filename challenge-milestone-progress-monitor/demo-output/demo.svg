@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="Challenge milestone progress monitor demo">
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #102027; }
+    .subtitle { font: 400 15px Arial, sans-serif; fill: #455a64; }
+    .metric { font: 700 24px Arial, sans-serif; }
+    .label { font: 400 13px Arial, sans-serif; fill: #546e7a; }
+    .team { font: 700 16px Arial, sans-serif; fill: #102027; }
+    .meta { font: 400 13px Arial, sans-serif; fill: #455a64; }
+    .small { font: 400 11px Arial, sans-serif; fill: #607d8b; }
+    .digest { font: 400 10px Consolas, monospace; fill: #607d8b; }
+  </style>
+  <rect width="960" height="520" fill="#f4f7f9"/>
+  <text x="64" y="58" class="title">Challenge Milestone Progress Monitor</text>
+  <text x="64" y="84" class="subtitle">Biomarker discovery challenge - 2026-05-20T12:00:00.000Z</text>
+  <g transform="translate(64 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#0b5fff">3</text>
+    <text x="18" y="45" class="label">Teams</text>
+  </g>
+  <g transform="translate(252 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#1f8a5b">1</text>
+    <text x="18" y="45" class="label">Ready</text>
+  </g>
+  <g transform="translate(440 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#b42318">1</text>
+    <text x="18" y="45" class="label">Escalations</text>
+  </g>
+  <g transform="translate(628 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#ad6f00">1</text>
+    <text x="18" y="45" class="label">Solver action</text>
+  </g>
+  <g transform="translate(64 198)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#b42318"/>
+    <text x="48" y="25" class="team">Aurora Lab</text>
+    <text x="48" y="45" class="meta">Prototype package - Hold For Escalation</text>
+    <text x="360" y="25" class="meta">Risk 13</text>
+    <text x="360" y="45" class="small">MISSING_MILESTONE_EVIDENCE | SPONSOR_FEEDBACK_OVERDUE | SOLVER_IDLE_RISK | RESUBMISSION_WINDOW_EXPIRED | REVIEW_PACKET_INCOMPLETE</text>
+    <text x="742" y="36" class="digest">cmpm_878fb4e07adaa84b4cae08c1</text>
+  </g><g transform="translate(64 280)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#1f8a5b"/>
+    <text x="48" y="25" class="team">Nova Institute</text>
+    <text x="48" y="45" class="meta">Prototype package - Ready For Review</text>
+    <text x="360" y="25" class="meta">Risk 0</text>
+    <text x="360" y="45" class="small">No flags</text>
+    <text x="742" y="36" class="digest">cmpm_8d4e2d1f634b250de91e464d</text>
+  </g><g transform="translate(64 362)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#ad6f00"/>
+    <text x="48" y="25" class="team">Quasar Students</text>
+    <text x="48" y="45" class="meta">Final replication packet - Needs Solver Action</text>
+    <text x="360" y="25" class="meta">Risk 5</text>
+    <text x="360" y="45" class="small">MISSING_MILESTONE_EVIDENCE | REVIEW_PACKET_INCOMPLETE</text>
+    <text x="742" y="36" class="digest">cmpm_6ddb98999ede6078045762d1</text>
+  </g>
+  <text x="64" y="478" class="subtitle">Resolve 1 escalation packet before arbitration.  Request solver updates for 1 milestone packet.  Review 1 complete milestone packet.</text>
+</svg>

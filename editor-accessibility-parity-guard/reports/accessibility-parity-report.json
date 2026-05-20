@@ -1,0 +1,143 @@
+{
+  "documentId": "collab-manuscript-alpha",
+  "title": "Collaborative Protein Folding Review",
+  "decision": "blocked",
+  "summary": {
+    "totalBlocks": 8,
+    "blockedBlocks": 2,
+    "reviewBlocks": 2,
+    "blockers": 2,
+    "warnings": 4
+  },
+  "blocks": [
+    {
+      "id": "h-abstract",
+      "type": "heading",
+      "section": "abstract",
+      "decision": "approved",
+      "exportVisibility": "public",
+      "digest": "8080610040ffea39026598a2a1b386b2b6a85bc6fb4a580ba118002b91ee399e"
+    },
+    {
+      "id": "eq-loss",
+      "type": "equation",
+      "section": "methods",
+      "decision": "approved",
+      "exportVisibility": "public",
+      "digest": "264d07982d90bf0a04d3972ea3a24f8c56a454e6b6a0395b7eb4a1258231d336"
+    },
+    {
+      "id": "fig-fold",
+      "type": "figure",
+      "section": "results",
+      "decision": "approved",
+      "exportVisibility": "public",
+      "digest": "875a2debdaa321004f2327b947d9eca9abcaa61c8cc2fd9299e152f7250c1d11"
+    },
+    {
+      "id": "code-metrics",
+      "type": "code",
+      "section": "analysis",
+      "decision": "approved",
+      "exportVisibility": "public",
+      "digest": "8aa4543b31d76e2d9724ad89b30cd84fd1a7d155918f3ae82743a0ff5a77db31"
+    },
+    {
+      "id": "nb-review",
+      "type": "notebook",
+      "section": "analysis",
+      "decision": "needs_review",
+      "exportVisibility": "public",
+      "digest": "41d709e2dc93e8b8686f6ffb11393b080fe83e2d52fb7eb161d30e20099782ef"
+    },
+    {
+      "id": "eq-unreadable",
+      "type": "equation",
+      "section": "supplement",
+      "decision": "blocked",
+      "exportVisibility": "public",
+      "digest": "9e0955cc58faf198897370973fa2393182a00c8562b2d0fd95936d4121f99746"
+    },
+    {
+      "id": "fig-unlabeled",
+      "type": "figure",
+      "section": "supplement",
+      "decision": "blocked",
+      "exportVisibility": "public",
+      "digest": "50143e58da54ab5135aa2ea367c8c32db7e78bd23bccef4d0cf62979eb6d8248"
+    },
+    {
+      "id": "cite-main",
+      "type": "citation",
+      "section": "introduction",
+      "decision": "needs_review",
+      "exportVisibility": "public",
+      "digest": "ab62317770829a1a721d98ee8085d24e17dd2b3f621a434e99bd68a030e8173a"
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "blocker",
+      "code": "equation_fallback_missing",
+      "message": "Equation block needs fallback text for WYSIWYG and screen-reader parity.",
+      "evidence": {
+        "blockId": "eq-unreadable",
+        "label": "eq:resolution"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "figure_alt_text_missing",
+      "message": "Figure block needs alt text for accessible public export.",
+      "evidence": {
+        "blockId": "fig-unlabeled",
+        "exportVisibility": "public"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "code": "notebook_output_stale",
+      "message": "Notebook output is stale relative to the current source cell.",
+      "evidence": {
+        "blockId": "nb-review",
+        "lastExecutedAt": "2026-05-18T18:00:00.000Z"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "figure_anchor_missing",
+      "message": "Figure is referenced but lacks a stable cross-reference anchor.",
+      "evidence": {
+        "blockId": "fig-unlabeled"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "wysiwyg_preview_missing",
+      "message": "Non-text scientific blocks need a plain-language WYSIWYG preview for non-technical collaborators.",
+      "evidence": {
+        "blockId": "cite-main",
+        "type": "citation"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "citation_preview_missing",
+      "message": "Citation block is missing the formatted preview shown in WYSIWYG mode.",
+      "evidence": {
+        "blockId": "cite-main",
+        "key": "jumper2021highly"
+      }
+    }
+  ],
+  "reviewerTasks": [
+    "Resolve missing alt text and equation fallback text before public export.",
+    "Refresh notebook output summaries and execution metadata before collaborative review.",
+    "Complete WYSIWYG previews and keyboard labels for non-technical collaborators.",
+    "Keep affected blocks in review hold until accessibility blockers are cleared."
+  ],
+  "releaseHold": true,
+  "auditDigest": "1138fa9973912f301288cb49793b5ed149fe3a941115020bbeda930bcf18c2b9"
+}

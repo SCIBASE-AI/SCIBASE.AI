@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" role="img" aria-labelledby="title desc">
+  <title id="title">Editor accessibility parity guard demo</title>
+  <desc id="desc">Accessibility parity report summary for a collaborative scientific editor.</desc>
+  <style>
+    .title { font: 700 34px Arial, sans-serif; fill: #162033; }
+    .label { font: 700 14px Arial, sans-serif; fill: #5e6b82; text-transform: uppercase; letter-spacing: .08em; }
+    .value { font: 700 26px Arial, sans-serif; fill: #162033; }
+    .row-title { font: 700 16px Arial, sans-serif; fill: #162033; }
+    .row { font: 500 16px Arial, sans-serif; fill: #33415c; }
+    .status { font-weight: 700; }
+  </style>
+  <rect width="1000" height="570" fill="#f4f7fb"/>
+  <rect x="36" y="34" width="928" height="500" rx="8" fill="#eef3f8" stroke="#d8dee8"/>
+  <text x="56" y="88" class="title">Editor Accessibility Parity Guard</text>
+  <text x="56" y="126" class="row">Collaborative Protein Folding Review</text>
+  <g>
+    <rect x="56" y="152" width="196" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="72" y="176" class="label">Decision</text>
+    <text x="72" y="201" class="value" fill="#b42318">blocked</text>
+  </g>
+  <g>
+    <rect x="272" y="152" width="196" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="288" y="176" class="label">Blockers</text>
+    <text x="288" y="201" class="value">2</text>
+  </g>
+  <g>
+    <rect x="488" y="152" width="196" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="504" y="176" class="label">Warnings</text>
+    <text x="504" y="201" class="value">4</text>
+  </g>
+  <g>
+    <rect x="704" y="152" width="240" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="720" y="176" class="label">Release Hold</text>
+    <text x="720" y="201" class="value">yes</text>
+  </g>
+  <text x="76" y="238" class="label">Block</text>
+  <text x="352" y="238" class="label">Type</text>
+  <text x="564" y="238" class="label">Section</text>
+  <text x="744" y="238" class="label">Status</text>
+
+      <g>
+        <rect x="56" y="250" width="888" height="34" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="273" class="row-title">h-abstract</text>
+        <text x="352" y="273" class="row">heading</text>
+        <text x="564" y="273" class="row">abstract</text>
+        <text x="744" y="273" class="row status" fill="#0f7f4f">approved</text>
+      </g>
+      <g>
+        <rect x="56" y="296" width="888" height="34" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="319" class="row-title">eq-loss</text>
+        <text x="352" y="319" class="row">equation</text>
+        <text x="564" y="319" class="row">methods</text>
+        <text x="744" y="319" class="row status" fill="#0f7f4f">approved</text>
+      </g>
+      <g>
+        <rect x="56" y="342" width="888" height="34" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="365" class="row-title">fig-fold</text>
+        <text x="352" y="365" class="row">figure</text>
+        <text x="564" y="365" class="row">results</text>
+        <text x="744" y="365" class="row status" fill="#0f7f4f">approved</text>
+      </g>
+      <g>
+        <rect x="56" y="388" width="888" height="34" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="411" class="row-title">code-metrics</text>
+        <text x="352" y="411" class="row">code</text>
+        <text x="564" y="411" class="row">analysis</text>
+        <text x="744" y="411" class="row status" fill="#0f7f4f">approved</text>
+      </g>
+      <g>
+        <rect x="56" y="434" width="888" height="34" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="457" class="row-title">nb-review</text>
+        <text x="352" y="457" class="row">notebook</text>
+        <text x="564" y="457" class="row">analysis</text>
+        <text x="744" y="457" class="row status" fill="#a66500">needs_review</text>
+      </g>
+      <g>
+        <rect x="56" y="480" width="888" height="34" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="503" class="row-title">eq-unreadable</text>
+        <text x="352" y="503" class="row">equation</text>
+        <text x="564" y="503" class="row">supplement</text>
+        <text x="744" y="503" class="row status" fill="#b42318">blocked</text>
+      </g>
+  <text x="56" y="512" class="row">Audit digest: 1138fa9973912f301288cb49793b5ed1...</text>
+</svg>

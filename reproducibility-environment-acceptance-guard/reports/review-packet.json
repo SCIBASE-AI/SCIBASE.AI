@@ -1,0 +1,105 @@
+{
+  "packetId": "repro-env-accept-001",
+  "title": "Reproducibility Environment Acceptance Guard",
+  "context": "Scientific Bounty System",
+  "status": "needs-review",
+  "readyItems": [
+    "env-a"
+  ],
+  "heldItems": [
+    "env-b",
+    "env-c"
+  ],
+  "evaluations": [
+    {
+      "itemId": "env-a",
+      "name": "Docker solver bundle",
+      "type": "environment",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "env-b",
+      "name": "Notebook-only bundle",
+      "type": "environment",
+      "status": "held",
+      "holds": [
+        "missing-lockfile",
+        "missing-seed",
+        "missing-hardware-notes",
+        "rerun-failed",
+        "dependency-risk"
+      ],
+      "holdLabels": [
+        "missing lockfile",
+        "missing deterministic seed",
+        "missing hardware notes",
+        "rerun did not pass",
+        "dependency risk too high"
+      ],
+      "remediation": [
+        "Require lockfile or container digest before acceptance.",
+        "Add deterministic seed and rerun notes.",
+        "Document CPU/GPU/runtime assumptions.",
+        "Block acceptance until independent rerun passes.",
+        "Pin or replace high-risk dependencies."
+      ]
+    },
+    {
+      "itemId": "env-c",
+      "name": "Conda solver bundle",
+      "type": "environment",
+      "status": "held",
+      "holds": [
+        "missing-hardware-notes"
+      ],
+      "holdLabels": [
+        "missing hardware notes"
+      ],
+      "remediation": [
+        "Document CPU/GPU/runtime assumptions."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "missing-lockfile": 1,
+    "missing-seed": 1,
+    "missing-hardware-notes": 2,
+    "rerun-failed": 1,
+    "dependency-risk": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "env-b",
+      "hold": "missing-lockfile",
+      "action": "Require lockfile or container digest before acceptance."
+    },
+    {
+      "itemId": "env-b",
+      "hold": "missing-seed",
+      "action": "Add deterministic seed and rerun notes."
+    },
+    {
+      "itemId": "env-b",
+      "hold": "missing-hardware-notes",
+      "action": "Document CPU/GPU/runtime assumptions."
+    },
+    {
+      "itemId": "env-b",
+      "hold": "rerun-failed",
+      "action": "Block acceptance until independent rerun passes."
+    },
+    {
+      "itemId": "env-b",
+      "hold": "dependency-risk",
+      "action": "Pin or replace high-risk dependencies."
+    },
+    {
+      "itemId": "env-c",
+      "hold": "missing-hardware-notes",
+      "action": "Document CPU/GPU/runtime assumptions."
+    }
+  ]
+}

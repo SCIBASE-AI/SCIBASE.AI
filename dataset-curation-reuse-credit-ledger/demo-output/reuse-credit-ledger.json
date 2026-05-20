@@ -1,0 +1,101 @@
+{
+  "generatedAt": "2026-05-20T13:30:00.000Z",
+  "reusePackets": [
+    {
+      "eventId": "reuse-1",
+      "assetId": "dataset-cell-42",
+      "assetTitle": "Single-cell assay benchmark",
+      "assetType": "dataset",
+      "generatedAt": "2026-05-20T13:30:00.000Z",
+      "decision": "award_credit",
+      "flags": [],
+      "creditAllocations": [
+        {
+          "userId": "u-alina",
+          "assetId": "dataset-cell-42",
+          "points": 21,
+          "reason": "curator reuse credit"
+        },
+        {
+          "userId": "u-minh",
+          "assetId": "dataset-cell-42",
+          "points": 9,
+          "reason": "validator reuse credit"
+        }
+      ],
+      "actions": [
+        "Publish reuse credit to curator profiles"
+      ],
+      "reuseDigest": "dcrcl_c48af1209078c13469ce3a4d"
+    },
+    {
+      "eventId": "reuse-2",
+      "assetId": "dataset-cell-42",
+      "assetTitle": "Single-cell assay benchmark",
+      "assetType": "dataset",
+      "generatedAt": "2026-05-20T13:30:00.000Z",
+      "decision": "quarantine_credit",
+      "flags": [
+        "MISSING_CITATION",
+        "LICENSE_MISMATCH",
+        "SELF_REUSE",
+        "DUPLICATE_EVIDENCE"
+      ],
+      "creditAllocations": [],
+      "actions": [
+        "Add citation evidence for reuse-2",
+        "Resolve CC0 vs CC-BY-4.0 license mismatch",
+        "Require independent reuse evidence before awarding curator reputation",
+        "Deduplicate evidence hash sha256:evidence-1"
+      ],
+      "reuseDigest": "dcrcl_1098b9741d89e72ac0581b45"
+    },
+    {
+      "eventId": "reuse-3",
+      "assetId": "code-qc-7",
+      "assetTitle": "QC pipeline",
+      "assetType": "code",
+      "generatedAt": "2026-05-20T13:30:00.000Z",
+      "decision": "award_credit",
+      "flags": [],
+      "creditAllocations": [
+        {
+          "userId": "u-minh",
+          "assetId": "code-qc-7",
+          "points": 15,
+          "reason": "maintainer reuse credit"
+        }
+      ],
+      "actions": [
+        "Publish reuse credit to curator profiles"
+      ],
+      "reuseDigest": "dcrcl_bca70185e357d2e0deffdc38"
+    }
+  ],
+  "reputationSummary": {
+    "counts": {
+      "reuseEvents": 3,
+      "awarded": 2,
+      "quarantined": 1,
+      "duplicateEvidence": 1,
+      "licenseIssues": 1
+    },
+    "reputationDeltas": [
+      {
+        "userId": "u-alina",
+        "points": 21,
+        "badges": [
+          "dataset_reuse_curator"
+        ]
+      },
+      {
+        "userId": "u-minh",
+        "points": 24,
+        "badges": [
+          "code_reuse_maintainer",
+          "dataset_reuse_validator"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "summary": {
+    "nodeCount": 21,
+    "edgeCount": 27,
+    "claimCount": 3,
+    "replicationSignalCount": 4,
+    "suppressedRecommendations": 1,
+    "cautionRecommendations": 1
+  },
+  "suppressedRecommendations": [
+    {
+      "claimId": "claim:beta-organoid-rescue",
+      "title": "Beta compound rescues organoid viability at low dose",
+      "domain": "organoid-pharmacology",
+      "referenceScore": 0.541,
+      "positiveSupport": 0,
+      "negativePressure": 1.227,
+      "netScore": -0.502,
+      "treatment": "suppress_recommendation",
+      "signals": [
+        {
+          "id": "rep:beta-null-dose",
+          "outcome": "negative_result",
+          "strength": -0.427,
+          "quality": 0.776,
+          "lab": "Organoid Core West",
+          "reportedAt": "2026-04-21"
+        },
+        {
+          "id": "rep:beta-failed-media",
+          "outcome": "failed_replication",
+          "strength": -0.8,
+          "quality": 0.8,
+          "lab": "Consortium Lab 4",
+          "reportedAt": "2026-05-02"
+        }
+      ],
+      "requiredActions": [
+        "open_curator_review",
+        "attach_failed_replication_to_entity_page",
+        "remove_from_ai_recommendation_digest"
+      ]
+    }
+  ],
+  "cautionRecommendations": [
+    {
+      "claimId": "claim:graphene-ultra-sensitive",
+      "title": "Graphene biosensor detects femtomolar protein concentrations",
+      "domain": "materials-biosensing",
+      "referenceScore": 0.671,
+      "positiveSupport": 0,
+      "negativePressure": 0.066,
+      "netScore": 0.615,
+      "treatment": "show_with_replication_caution",
+      "signals": [
+        {
+          "id": "rep:graphene-inconclusive",
+          "outcome": "inconclusive",
+          "strength": -0.066,
+          "quality": 0.439,
+          "lab": "Materials Lab North",
+          "reportedAt": "2026-05-05"
+        }
+      ],
+      "requiredActions": [
+        "request_method_detail_before_digesting"
+      ]
+    }
+  ],
+  "exampleEntityPage": {
+    "id": "claim:beta-organoid-rescue",
+    "title": "Beta compound rescues organoid viability at low dose",
+    "type": "ScientificClaim",
+    "domain": "organoid-pharmacology",
+    "treatment": "suppress_recommendation",
+    "replicationScore": -0.502,
+    "requiredActions": [
+      "open_curator_review",
+      "attach_failed_replication_to_entity_page",
+      "remove_from_ai_recommendation_digest"
+    ],
+    "relationships": [
+      {
+        "id": "signal:rep:beta-null-dose:evaluates_claim:claim:beta-organoid-rescue:5",
+        "from": "signal:rep:beta-null-dose",
+        "to": "claim:beta-organoid-rescue",
+        "type": "evaluates_claim",
+        "evidence": {
+          "outcome": "negative_result",
+          "quality": 0.776,
+          "strength": -0.427
+        }
+      },
+      {
+        "id": "signal:rep:beta-failed-media:evaluates_claim:claim:beta-organoid-rescue:9",
+        "from": "signal:rep:beta-failed-media",
+        "to": "claim:beta-organoid-rescue",
+        "type": "evaluates_claim",
+        "evidence": {
+          "outcome": "failed_replication",
+          "quality": 0.8,
+          "strength": -0.8
+        }
+      },
+      {
+        "id": "paper:beta-2025:asserts_claim:claim:beta-organoid-rescue:21",
+        "from": "paper:beta-2025",
+        "to": "claim:beta-organoid-rescue",
+        "type": "asserts_claim",
+        "evidence": {}
+      },
+      {
+        "id": "claim:beta-organoid-rescue:mentions_concept:concept:organoid-dose-response:22",
+        "from": "claim:beta-organoid-rescue",
+        "to": "concept:organoid-dose-response",
+        "type": "mentions_concept",
+        "evidence": {}
+      },
+      {
+        "id": "claim:beta-organoid-rescue:uses_method:method:live-cell-imaging:23",
+        "from": "claim:beta-organoid-rescue",
+        "to": "method:live-cell-imaging",
+        "type": "uses_method",
+        "evidence": {}
+      },
+      {
+        "id": "claim:beta-organoid-rescue:uses_dataset:dataset:beta-organoid-v2:24",
+        "from": "claim:beta-organoid-rescue",
+        "to": "dataset:beta-organoid-v2",
+        "type": "uses_dataset",
+        "evidence": {}
+      }
+    ],
+    "replicationSignals": [
+      {
+        "id": "signal:rep:beta-null-dose",
+        "type": "replication_signal",
+        "title": "Low-dose beta rescue not observed in blinded run",
+        "outcome": "negative_result",
+        "lab": "Organoid Core West",
+        "reportedAt": "2026-04-21",
+        "quality": 0.776,
+        "strength": -0.427,
+        "tags": [
+          "replication",
+          "negative_result"
+        ]
+      },
+      {
+        "id": "signal:rep:beta-failed-media",
+        "type": "replication_signal",
+        "title": "Beta compound failed replication under matched media",
+        "outcome": "failed_replication",
+        "lab": "Consortium Lab 4",
+        "reportedAt": "2026-05-02",
+        "quality": 0.8,
+        "strength": -0.8,
+        "tags": [
+          "replication",
+          "failed_replication"
+        ]
+      }
+    ],
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "identifier": "claim:beta-organoid-rescue",
+      "headline": "Beta compound rescues organoid viability at low dose",
+      "about": [
+        "concept:organoid-dose-response"
+      ],
+      "isBasedOn": [
+        "dataset:beta-organoid-v2"
+      ],
+      "measurementTechnique": [
+        "method:live-cell-imaging"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "SCIBASE replication treatment",
+          "value": "suppress_recommendation"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "SCIBASE replication score",
+          "value": -0.502
+        }
+      ]
+    }
+  },
+  "recommendationDigest": [
+    {
+      "claimId": "claim:alpha-inflammatory-drop",
+      "title": "Alpha pathway editing lowers IL-6 release in microglia",
+      "treatment": "promote_as_replicated",
+      "netScore": 1,
+      "rationale": "0.832 positive replication support; no negative signal"
+    },
+    {
+      "claimId": "claim:graphene-ultra-sensitive",
+      "title": "Graphene biosensor detects femtomolar protein concentrations",
+      "treatment": "show_with_replication_caution",
+      "netScore": 0.615,
+      "rationale": "0.066 negative replication pressure; 0 positive support"
+    },
+    {
+      "claimId": "claim:beta-organoid-rescue",
+      "title": "Beta compound rescues organoid viability at low dose",
+      "treatment": "suppress_recommendation",
+      "netScore": -0.502,
+      "rationale": "1.227 negative replication pressure; 0 positive support"
+    }
+  ],
+  "publicationBiasAlerts": []
+}

@@ -1,0 +1,320 @@
+{
+  "asOf": "2026-05-20",
+  "portfolio": {
+    "contractCount": 3,
+    "committed": 447000,
+    "consumed": 186100,
+    "projectedFinal": 499777.15,
+    "projectedVariance": 52777.15,
+    "atRisk": 260900,
+    "expansionUpside": 106350.08,
+    "averageRevenueCertaintyScore": 55
+  },
+  "contracts": [
+    {
+      "contractId": "IC-2026-NORTHBRIDGE",
+      "customer": "Northbridge University Consortium",
+      "asOf": "2026-05-20",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31",
+        "totalDays": 365,
+        "elapsedDays": 140,
+        "remainingDays": 225,
+        "elapsedRatio": 0.3836
+      },
+      "totals": {
+        "committed": 265000,
+        "consumed": 119800,
+        "remaining": 145200,
+        "projectedFinal": 312335.71,
+        "projectedVariance": 47335.71
+      },
+      "streamSummaries": [
+        {
+          "stream": "subscription",
+          "committed": 120000,
+          "consumed": 46300,
+          "remaining": 73700,
+          "expectedToDate": 46027.4,
+          "projectedFinal": 120710.71,
+          "projectedVariance": 710.71,
+          "utilization": 0.3858,
+          "paceRatio": 1.0059,
+          "status": "on-track"
+        },
+        {
+          "stream": "compute",
+          "committed": 85000,
+          "consumed": 61200,
+          "remaining": 23800,
+          "expectedToDate": 32602.74,
+          "projectedFinal": 159557.14,
+          "projectedVariance": 74557.14,
+          "utilization": 0.72,
+          "paceRatio": 1.8771,
+          "status": "overage-risk"
+        },
+        {
+          "stream": "analytics",
+          "committed": 60000,
+          "consumed": 12300,
+          "remaining": 47700,
+          "expectedToDate": 23013.7,
+          "projectedFinal": 32067.86,
+          "projectedVariance": -27932.14,
+          "utilization": 0.205,
+          "paceRatio": 0.5345,
+          "status": "under-consumption-risk"
+        }
+      ],
+      "expiringCredits": [
+        {
+          "id": "NB-COMPUTE-SPRING",
+          "stream": "compute",
+          "remainingUsd": 9200,
+          "expiresOn": "2026-06-21",
+          "expiresInDays": 33,
+          "flagged": true
+        }
+      ],
+      "lowMarginUsage": [
+        {
+          "usageId": "NB-COMP-042",
+          "stream": "compute",
+          "amountUsd": 61200,
+          "grossMarginPercent": 36,
+          "floorPercent": 38,
+          "description": "Reproducibility job cluster and model inference"
+        }
+      ],
+      "actions": [
+        {
+          "owner": "customer-success",
+          "priority": "high",
+          "code": "analytics-drawdown-plan",
+          "action": "Create a analytics adoption plan for Northbridge University Consortium.",
+          "evidence": "$47,700 remains against the committed analytics pool."
+        },
+        {
+          "owner": "finance",
+          "priority": "high",
+          "code": "compute-amendment-review",
+          "action": "Prepare a contract amendment for projected compute overage.",
+          "evidence": "Projected final usage is $159,557 against $85,000 committed."
+        },
+        {
+          "owner": "customer-success",
+          "priority": "medium",
+          "code": "credit-expiration-drawdown",
+          "action": "Schedule usage before NB-COMPUTE-SPRING expires.",
+          "evidence": "$9,200 in compute credits expires in 33 days."
+        },
+        {
+          "owner": "finance-ops",
+          "priority": "medium",
+          "code": "margin-floor-review",
+          "action": "Review margin floor for NB-COMP-042.",
+          "evidence": "36% gross margin is below the 38% floor."
+        }
+      ],
+      "revenueCertaintyScore": 50,
+      "recommendation": "prepare-paid-amendment",
+      "status": "amendment-review-needed",
+      "auditDigest": "c7c69a59c92c456dc455d57ea544fc98af7e1ac84262ec2066c304dc35ca9d67"
+    },
+    {
+      "contractId": "IC-2026-HELIX",
+      "customer": "Helix Methods Institute",
+      "asOf": "2026-05-20",
+      "period": {
+        "start": "2026-03-01",
+        "end": "2026-08-31",
+        "totalDays": 184,
+        "elapsedDays": 81,
+        "remainingDays": 103,
+        "elapsedRatio": 0.4402
+      },
+      "totals": {
+        "committed": 82000,
+        "consumed": 32100,
+        "remaining": 49900,
+        "projectedFinal": 72918.51,
+        "projectedVariance": -9081.49
+      },
+      "streamSummaries": [
+        {
+          "stream": "subscription",
+          "committed": 28000,
+          "consumed": 10800,
+          "remaining": 17200,
+          "expectedToDate": 12326.09,
+          "projectedFinal": 24533.33,
+          "projectedVariance": -3466.67,
+          "utilization": 0.3857,
+          "paceRatio": 0.8762,
+          "status": "on-track"
+        },
+        {
+          "stream": "compute",
+          "committed": 22000,
+          "consumed": 18400,
+          "remaining": 3600,
+          "expectedToDate": 9684.78,
+          "projectedFinal": 41797.53,
+          "projectedVariance": 19797.53,
+          "utilization": 0.8364,
+          "paceRatio": 1.8999,
+          "status": "overage-risk"
+        },
+        {
+          "stream": "analytics",
+          "committed": 32000,
+          "consumed": 2900,
+          "remaining": 29100,
+          "expectedToDate": 14086.96,
+          "projectedFinal": 6587.65,
+          "projectedVariance": -25412.35,
+          "utilization": 0.0906,
+          "paceRatio": 0.2059,
+          "status": "under-consumption-risk"
+        }
+      ],
+      "expiringCredits": [
+        {
+          "id": "HX-ANALYTICS-PILOT",
+          "stream": "analytics",
+          "remainingUsd": 14800,
+          "expiresOn": "2026-06-12",
+          "expiresInDays": 24,
+          "flagged": true
+        }
+      ],
+      "lowMarginUsage": [
+        {
+          "usageId": "HX-COMP-007",
+          "stream": "compute",
+          "amountUsd": 18400,
+          "grossMarginPercent": 29,
+          "floorPercent": 42,
+          "description": "GPU-backed peer review batch jobs"
+        }
+      ],
+      "actions": [
+        {
+          "owner": "customer-success",
+          "priority": "high",
+          "code": "analytics-drawdown-plan",
+          "action": "Create a analytics adoption plan for Helix Methods Institute.",
+          "evidence": "$29,100 remains against the committed analytics pool."
+        },
+        {
+          "owner": "finance",
+          "priority": "high",
+          "code": "compute-amendment-review",
+          "action": "Prepare a contract amendment for projected compute overage.",
+          "evidence": "Projected final usage is $41,798 against $22,000 committed."
+        },
+        {
+          "owner": "customer-success",
+          "priority": "medium",
+          "code": "credit-expiration-drawdown",
+          "action": "Schedule usage before HX-ANALYTICS-PILOT expires.",
+          "evidence": "$14,800 in analytics credits expires in 24 days."
+        },
+        {
+          "owner": "finance-ops",
+          "priority": "medium",
+          "code": "margin-floor-review",
+          "action": "Review margin floor for HX-COMP-007.",
+          "evidence": "29% gross margin is below the 42% floor."
+        }
+      ],
+      "revenueCertaintyScore": 50,
+      "recommendation": "prepare-paid-amendment",
+      "status": "amendment-review-needed",
+      "auditDigest": "f5f522b60501143c015cce971c4bba68693e7ba6218ce9c593acacb95779d2fe"
+    },
+    {
+      "contractId": "IC-2026-BIOMESA",
+      "customer": "BioMesa Translational Lab",
+      "asOf": "2026-05-20",
+      "period": {
+        "start": "2026-02-01",
+        "end": "2027-01-31",
+        "totalDays": 365,
+        "elapsedDays": 109,
+        "remainingDays": 256,
+        "elapsedRatio": 0.2986
+      },
+      "totals": {
+        "committed": 100000,
+        "consumed": 34200,
+        "remaining": 65800,
+        "projectedFinal": 114522.93,
+        "projectedVariance": 14522.93
+      },
+      "streamSummaries": [
+        {
+          "stream": "subscription",
+          "committed": 45000,
+          "consumed": 16300,
+          "remaining": 28700,
+          "expectedToDate": 13438.36,
+          "projectedFinal": 54582.57,
+          "projectedVariance": 9582.57,
+          "utilization": 0.3622,
+          "paceRatio": 1.2129,
+          "status": "overage-risk"
+        },
+        {
+          "stream": "compute",
+          "committed": 40000,
+          "consumed": 12700,
+          "remaining": 27300,
+          "expectedToDate": 11945.21,
+          "projectedFinal": 42527.52,
+          "projectedVariance": 2527.52,
+          "utilization": 0.3175,
+          "paceRatio": 1.0632,
+          "status": "on-track"
+        },
+        {
+          "stream": "analytics",
+          "committed": 15000,
+          "consumed": 5200,
+          "remaining": 9800,
+          "expectedToDate": 4479.45,
+          "projectedFinal": 17412.84,
+          "projectedVariance": 2412.84,
+          "utilization": 0.3467,
+          "paceRatio": 1.1609,
+          "status": "overage-risk"
+        }
+      ],
+      "expiringCredits": [],
+      "lowMarginUsage": [],
+      "actions": [
+        {
+          "owner": "finance",
+          "priority": "high",
+          "code": "analytics-amendment-review",
+          "action": "Prepare a contract amendment for projected analytics overage.",
+          "evidence": "Projected final usage is $17,413 against $15,000 committed."
+        },
+        {
+          "owner": "finance",
+          "priority": "high",
+          "code": "subscription-amendment-review",
+          "action": "Prepare a contract amendment for projected subscription overage.",
+          "evidence": "Projected final usage is $54,583 against $45,000 committed."
+        }
+      ],
+      "revenueCertaintyScore": 64,
+      "recommendation": "prepare-paid-amendment",
+      "status": "amendment-review-needed",
+      "auditDigest": "f65d1e19c243fbe1e2b252f759e68d54b40bada5618800eb91bb8ca3d94d2008"
+    }
+  ],
+  "auditDigest": "b5f1bbc6b5248802602f04f04835e6eb6e575c0ccf1befaabdb48d70c7119156"
+}

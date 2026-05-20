@@ -1,0 +1,117 @@
+{
+  "packetType": "enterprise-policy-exception-review-board",
+  "institutionId": "inst-northstar-research",
+  "generatedAt": "2026-05-20T12:00:00Z",
+  "overallStatus": "review_required",
+  "decisions": [
+    {
+      "exceptionId": "exc-restricted-export",
+      "category": "restricted_dataset_export",
+      "ownerId": "owner-export",
+      "decision": "block",
+      "expiresAt": "2026-07-01T00:00:00Z",
+      "controls": [
+        "exportHold",
+        "watermarkedBundle"
+      ]
+    },
+    {
+      "exceptionId": "exc-api-schema",
+      "category": "api_schema_grace_period",
+      "ownerId": "owner-api",
+      "decision": "expire",
+      "expiresAt": "2026-04-01T00:00:00Z",
+      "controls": [
+        "sandboxConsumerAck"
+      ]
+    },
+    {
+      "exceptionId": "exc-compute-vendor",
+      "category": "compute_vendor_exception",
+      "ownerId": "owner-compute",
+      "decision": "block",
+      "expiresAt": "2026-08-01T00:00:00Z",
+      "controls": [
+        "scopedToken"
+      ]
+    },
+    {
+      "exceptionId": "exc-orphaned-integration",
+      "category": "institutional_connector_exception",
+      "ownerId": null,
+      "decision": "block",
+      "expiresAt": "2026-08-15T00:00:00Z",
+      "controls": [
+        "scopedToken"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "exceptionId": "exc-compute-vendor",
+      "code": "compensating_control_gap",
+      "owner": "owner-compute",
+      "severity": "blocker",
+      "evidence": "exc-compute-vendor lacks compensating control(s): auditSampling.",
+      "requiredAction": "Attach compensating controls such as scoped tokens, export hold, audit sampling, or encryption."
+    },
+    {
+      "exceptionId": "exc-api-schema",
+      "code": "expired_exception",
+      "owner": "owner-api",
+      "severity": "blocker",
+      "evidence": "exc-api-schema expired on 2026-04-01T00:00:00Z.",
+      "requiredAction": "Expire the exception and force a new review before the integration or export runs again."
+    },
+    {
+      "exceptionId": "exc-restricted-export",
+      "code": "missing_required_approval",
+      "owner": "owner-export",
+      "severity": "blocker",
+      "evidence": "exc-restricted-export lacks required approval(s): dpa.",
+      "requiredAction": "Collect all required DPA, funder, security, and data-steward approvals before granting the exception."
+    },
+    {
+      "exceptionId": "exc-orphaned-integration",
+      "code": "owner_accountability_missing",
+      "owner": "exception-board",
+      "severity": "blocker",
+      "evidence": "exc-orphaned-integration has no active accountable owner.",
+      "requiredAction": "Assign an active institutional owner before the exception can remain open."
+    }
+  ],
+  "warnings": [],
+  "adminMetrics": {
+    "openExceptions": 4,
+    "blockedExceptions": 3,
+    "expiredExceptions": 1,
+    "renewalWarnings": 0
+  },
+  "webhookEvents": [
+    {
+      "eventType": "policy_exception.finding",
+      "exceptionId": "exc-compute-vendor",
+      "code": "compensating_control_gap",
+      "signatureBase": "inst-northstar-research:exc-compute-vendor:compensating_control_gap:2026-05-20T12:00:00Z"
+    },
+    {
+      "eventType": "policy_exception.finding",
+      "exceptionId": "exc-api-schema",
+      "code": "expired_exception",
+      "signatureBase": "inst-northstar-research:exc-api-schema:expired_exception:2026-05-20T12:00:00Z"
+    },
+    {
+      "eventType": "policy_exception.finding",
+      "exceptionId": "exc-restricted-export",
+      "code": "missing_required_approval",
+      "signatureBase": "inst-northstar-research:exc-restricted-export:missing_required_approval:2026-05-20T12:00:00Z"
+    },
+    {
+      "eventType": "policy_exception.finding",
+      "exceptionId": "exc-orphaned-integration",
+      "code": "owner_accountability_missing",
+      "signatureBase": "inst-northstar-research:exc-orphaned-integration:owner_accountability_missing:2026-05-20T12:00:00Z"
+    }
+  ],
+  "auditDigest": "c83bd392a365a6155ba4fa5b22d88d7d4024beca67d86b300321c360ce0889a1"
+}

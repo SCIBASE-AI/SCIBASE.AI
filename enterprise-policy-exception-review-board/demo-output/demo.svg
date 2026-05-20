@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720">
+  <rect width="1280" height="720" fill="#312e81"/>
+  <rect x="70" y="70" width="1140" height="580" rx="18" fill="#f8fafc"/>
+  <text x="110" y="145" font-family="Arial" font-size="44" font-weight="700" fill="#111827">Enterprise Policy Exception Review Board</text>
+  <text x="110" y="205" font-family="Arial" font-size="25" fill="#475569">inst-northstar-research</text>
+  <text x="110" y="275" font-family="Arial" font-size="33" font-weight="700" fill="#b91c1c">4 exceptions need governance</text>
+  <text x="120" y="315" font-family="Arial" font-size="23" fill="#1f2937">1. exc-compute-vendor: compensating_control_gap</text>
+  <text x="120" y="363" font-family="Arial" font-size="23" fill="#1f2937">2. exc-api-schema: expired_exception</text>
+  <text x="120" y="411" font-family="Arial" font-size="23" fill="#1f2937">3. exc-restricted-export: missing_required_approval</text>
+  <text x="120" y="459" font-family="Arial" font-size="23" fill="#1f2937">4. exc-orphaned-integration: owner_accountability_missing</text>
+  <text x="110" y="620" font-family="Arial" font-size="22" fill="#475569">audit digest: c83bd392a365a6155ba4fa5b...</text>
+</svg>

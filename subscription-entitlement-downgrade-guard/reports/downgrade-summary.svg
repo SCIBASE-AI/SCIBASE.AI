@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420">
+    <rect width="720" height="420" fill="#f8fbfa"/>
+    <rect x="24" y="24" width="672" height="372" rx="14" fill="#fff" stroke="#c7d9d6"/>
+    <text x="48" y="72" font-size="27" font-family="Arial, sans-serif" font-weight="700" fill="#17324d">Entitlement downgrade guard</text>
+    <text x="48" y="104" font-size="16" font-family="Arial, sans-serif" fill="#496272">Enterprise to Team: held-for-finance-review</text>
+    <g font-family="Arial, sans-serif">
+      <text x="48" y="160" font-size="18" fill="#17324d">Seats</text>
+      <rect x="190" y="138" width="260" height="28" rx="6" fill="#dbe7ee"/>
+      <rect x="190" y="138" width="385" height="28" rx="6" fill="#b33f62"/>
+      <text x="480" y="160" font-size="16" fill="#17324d">37 / 25</text>
+
+      <text x="48" y="228" font-size="18" fill="#17324d">Storage GB</text>
+      <rect x="190" y="206" width="260" height="28" rx="6" fill="#dbe7ee"/>
+      <rect x="190" y="206" width="333" height="28" rx="6" fill="#b33f62"/>
+      <text x="480" y="228" font-size="16" fill="#17324d">640 / 500</text>
+
+      <text x="48" y="296" font-size="18" fill="#17324d">Compute h</text>
+      <rect x="190" y="274" width="260" height="28" rx="6" fill="#dbe7ee"/>
+      <rect x="190" y="274" width="322" height="28" rx="6" fill="#b33f62"/>
+      <text x="480" y="296" font-size="16" fill="#17324d">310 / 250</text></g>
+    <text x="48" y="356" font-size="15" font-family="Arial, sans-serif" fill="#496272">Holds: 6; unpaid invoices: 1; commitment days: 73</text>
+  </svg>

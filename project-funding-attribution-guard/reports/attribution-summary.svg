@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="60" y="76" fill="#0f172a" font-size="34" font-family="Arial, sans-serif" font-weight="700">Project Funding Attribution Guard</text>
+  <text x="60" y="120" fill="#334155" font-size="22" font-family="Arial, sans-serif">Readiness: needs-attribution-fixes (20/100)</text>
+  <rect x="60" y="158" width="760" height="34" rx="4" fill="#e2e8f0"/>
+  <rect x="60" y="158" width="152" height="34" rx="4" fill="#2563eb"/>
+  <text x="60" y="244" fill="#0f172a" font-size="22" font-family="Arial, sans-serif">Blocked funding 2 | Attribution issues 2</text>
+  <text x="60" y="286" fill="#334155" font-size="20" font-family="Arial, sans-serif">Reviewer findings</text>
+  <text x="60" y="318" fill="#0f172a" font-size="19">HIGH public-project-funding-blocker</text>
+<text x="60" y="352" fill="#0f172a" font-size="19">MEDIUM affiliation-mismatch</text>
+<text x="60" y="386" fill="#0f172a" font-size="19">LOW citation-metadata-warning</text>
+</svg>

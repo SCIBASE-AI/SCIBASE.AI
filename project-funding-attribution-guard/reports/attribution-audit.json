@@ -1,0 +1,121 @@
+{
+  "projectId": "proj-neuro-air-001",
+  "generatedBy": "project-funding-attribution-guard",
+  "readiness": "needs-attribution-fixes",
+  "readinessScore": 20,
+  "metrics": {
+    "fundingSources": 2,
+    "blockedFundingSources": 2,
+    "collaborators": 3,
+    "collaboratorAttributionIssues": 2,
+    "findings": 3
+  },
+  "funding": [
+    {
+      "fundingSourceId": "grant-clean-cities",
+      "funder": "Clean Cities Health Initiative",
+      "grantId": "CCHI-2026-118",
+      "readiness": "blocked",
+      "blockers": [
+        "DOI required before publication"
+      ],
+      "auditEventIds": [
+        "ae-1"
+      ]
+    },
+    {
+      "fundingSourceId": "grant-pediatric-data",
+      "funder": "Pediatric Data Commons",
+      "grantId": "missing",
+      "readiness": "blocked",
+      "blockers": [
+        "grant id missing",
+        "required acknowledgement missing",
+        "funding link lacks audit evidence"
+      ],
+      "auditEventIds": []
+    }
+  ],
+  "institutions": [
+    {
+      "collaboratorId": "u-ada",
+      "name": "Ada Chen",
+      "role": "owner",
+      "institution": "North Valley University",
+      "readiness": "ready",
+      "blockers": []
+    },
+    {
+      "collaboratorId": "u-luis",
+      "name": "Luis Ortega",
+      "role": "contributor",
+      "institution": "Bridge Children's Hospital",
+      "readiness": "needs-review",
+      "blockers": [
+        "ORCID link missing for attributed contributor"
+      ]
+    },
+    {
+      "collaboratorId": "u-mina",
+      "name": "Mina Patel",
+      "role": "reviewer",
+      "institution": "North Valley University",
+      "readiness": "needs-review",
+      "blockers": [
+        "email domain does not match institution domain"
+      ]
+    }
+  ],
+  "citation": {
+    "readiness": "ready-with-warnings",
+    "blockers": [],
+    "warnings": [
+      "DOI missing for export-ready citation metadata",
+      "citation institutions missing: Bridge Children's Hospital"
+    ]
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "code": "public-project-funding-blocker",
+      "message": "Public project visibility is blocked by incomplete funding attribution.",
+      "evidence": [
+        "grant-clean-cities: DOI required before publication",
+        "grant-pediatric-data: grant id missing; required acknowledgement missing; funding link lacks audit evidence"
+      ],
+      "action": "Complete funding acknowledgements, grant IDs, DOI requirements, and audit evidence before public release."
+    },
+    {
+      "severity": "medium",
+      "code": "affiliation-mismatch",
+      "message": "Some collaborators have institution attribution issues.",
+      "evidence": [
+        "Luis Ortega: ORCID link missing for attributed contributor",
+        "Mina Patel: email domain does not match institution domain"
+      ],
+      "action": "Resolve ORCID and institution-domain mismatches before final attribution."
+    },
+    {
+      "severity": "low",
+      "code": "citation-metadata-warning",
+      "message": "Citation metadata is usable but not export-ready.",
+      "evidence": [
+        "DOI missing for export-ready citation metadata",
+        "citation institutions missing: Bridge Children's Hospital"
+      ],
+      "action": "Resolve citation warnings before repository export or DOI registration."
+    }
+  ],
+  "reviewerActions": [
+    "Complete funding acknowledgements, grant IDs, DOI requirements, and audit evidence before public release.",
+    "Resolve ORCID and institution-domain mismatches before final attribution.",
+    "Resolve citation warnings before repository export or DOI registration."
+  ],
+  "auditDigest": [
+    "2 funding sources evaluated",
+    "2 blocked funding sources",
+    "3 collaborator affiliations evaluated",
+    "2 collaborator attribution issues",
+    "3 reviewer findings"
+  ]
+}

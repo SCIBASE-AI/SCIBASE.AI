@@ -1,0 +1,288 @@
+{
+  "checkedAt": "2026-05-20T00:00:00.000Z",
+  "decision": "not_reproducible",
+  "summary": {
+    "totalProjects": 6,
+    "reproducible": 1,
+    "reproducibleWithControls": 1,
+    "flakyNeedsRerun": 2,
+    "notReproducible": 2,
+    "averageConfidence": 0.51
+  },
+  "projects": [
+    {
+      "projectId": "proj-stable-microscopy",
+      "title": "Open microscopy segmentation benchmark",
+      "decision": "reproducible",
+      "confidence": 0.96,
+      "runCount": 2,
+      "blockers": [],
+      "warnings": [],
+      "runRoot": "ed4578aad9ec42c911bb8908ffa0a92ff0a6f85579e31baf99c3bc75dc073628",
+      "outputHashSets": [
+        {
+          "runId": "stable-run-1",
+          "outputDigest": "1a6f04e7fc4b49a231edb452f397057ce1b230eea782176102f5863334319dfe"
+        },
+        {
+          "runId": "stable-run-2",
+          "outputDigest": "1a6f04e7fc4b49a231edb452f397057ce1b230eea782176102f5863334319dfe"
+        }
+      ],
+      "likelyCause": "stable_reproduction",
+      "authorActions": [
+        "Publish reproducibility confidence packet."
+      ],
+      "reviewerPacketDigest": "fdc210f5c7dd3bf8b6aad10118ad91c38d8b8b3b617c175731b7c93bb275b605"
+    },
+    {
+      "projectId": "proj-seed-warning",
+      "title": "Cell morphology bootstrap interval",
+      "decision": "reproducible_with_controls",
+      "confidence": 0.78,
+      "runCount": 2,
+      "blockers": [],
+      "warnings": [
+        {
+          "severity": "warning",
+          "code": "unseeded_randomness",
+          "message": "Code scan found random calls without a declared seed.",
+          "evidence": {
+            "projectId": "proj-seed-warning",
+            "count": 1
+          }
+        },
+        {
+          "severity": "warning",
+          "code": "wall_clock_dependency",
+          "message": "Run logic reads wall-clock time and may produce time-dependent outputs.",
+          "evidence": {
+            "projectId": "proj-seed-warning",
+            "count": 1
+          }
+        }
+      ],
+      "runRoot": "29ed063989829f5a5edd69673a67e5b9434cbb5641257f809da740ed501d61cb",
+      "outputHashSets": [
+        {
+          "runId": "seed-run-1",
+          "outputDigest": "9951cf47c53d163c535ab3276b60d818628503d65841f855e62f57ccc3a30282"
+        },
+        {
+          "runId": "seed-run-2",
+          "outputDigest": "9951cf47c53d163c535ab3276b60d818628503d65841f855e62f57ccc3a30282"
+        }
+      ],
+      "likelyCause": "nondeterministic_execution",
+      "authorActions": [
+        "Set deterministic seeds and compare repeated output artifact hashes.",
+        "Inject a fixed clock or record timestamp-sensitive outputs separately."
+      ],
+      "reviewerPacketDigest": "729e10f798e76521dac05e919913aee9054fd9210d3c2eab38ba441855612ce2"
+    },
+    {
+      "projectId": "proj-output-drift",
+      "title": "Notebook with stochastic optimizer",
+      "decision": "flaky_needs_rerun",
+      "confidence": 0.48,
+      "runCount": 2,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "output_hash_drift",
+          "message": "Reported output artifact hash changes across repeated runs.",
+          "evidence": {
+            "projectId": "proj-output-drift",
+            "output": "metrics.json",
+            "hashes": [
+              "loss-0.41",
+              "loss-0.53"
+            ]
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "output_hash_drift",
+          "message": "Reported output artifact hash changes across repeated runs.",
+          "evidence": {
+            "projectId": "proj-output-drift",
+            "output": "figure-2.png",
+            "hashes": [
+              "plot-a",
+              "plot-b"
+            ]
+          }
+        }
+      ],
+      "warnings": [
+        {
+          "severity": "warning",
+          "code": "unseeded_randomness",
+          "message": "Code scan found random calls without a declared seed.",
+          "evidence": {
+            "projectId": "proj-output-drift",
+            "count": 3
+          }
+        }
+      ],
+      "runRoot": "4354e0c99e933dc65ae8873006f4ac0218c5893bbbcfe51f21057cc03a25f2c7",
+      "outputHashSets": [
+        {
+          "runId": "drift-run-1",
+          "outputDigest": "f4e774dc8346739d47d841353effe296e4ad2126161d5724dc815678b7d50945"
+        },
+        {
+          "runId": "drift-run-2",
+          "outputDigest": "5943f46352bcf56243cb64fbd8903fd9136e6479c8f3213da4b025020b323419"
+        }
+      ],
+      "likelyCause": "nondeterministic_execution",
+      "authorActions": [
+        "Set deterministic seeds and compare repeated output artifact hashes."
+      ],
+      "reviewerPacketDigest": "a6d65d48eedc9ab106130089990c704bbdce8e7765a9768cefab7a59bad9ab83"
+    },
+    {
+      "projectId": "proj-env-drift",
+      "title": "Single-cell batch correction pipeline",
+      "decision": "not_reproducible",
+      "confidence": 0.18,
+      "runCount": 2,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "environment_drift",
+          "message": "Repeated runs used different environment hashes.",
+          "evidence": {
+            "projectId": "proj-env-drift",
+            "environmentHashes": [
+              "env-r-4.3-lock",
+              "env-r-latest"
+            ]
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "output_hash_drift",
+          "message": "Reported output artifact hash changes across repeated runs.",
+          "evidence": {
+            "projectId": "proj-env-drift",
+            "output": "metrics.json",
+            "hashes": [
+              "env-a",
+              "env-b"
+            ]
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "unpinned_dependencies",
+          "message": "Environment declares unpinned dependencies that can change between runs.",
+          "evidence": {
+            "projectId": "proj-env-drift",
+            "count": 2
+          }
+        }
+      ],
+      "warnings": [],
+      "runRoot": "ad7b38272339edfe7e90c07dd70225a8756e7943a2f3600df99827d91fcb7280",
+      "outputHashSets": [
+        {
+          "runId": "env-run-1",
+          "outputDigest": "5d61634d2bf706c48fc18142fe718ae110ad7721b287326939e043b7086ecfbb"
+        },
+        {
+          "runId": "env-run-2",
+          "outputDigest": "4fd567b7f90eba84abca8c07dbc87b55088f120f3407d4cf5b16a54bb63733a3"
+        }
+      ],
+      "likelyCause": "environment_dependency_drift",
+      "authorActions": [
+        "Lock dependency versions and rerun in a pinned environment.",
+        "Set deterministic seeds and compare repeated output artifact hashes."
+      ],
+      "reviewerPacketDigest": "80c5b030913c07e4da252a606bef8ae57845994e6417d402f21f400ade614eb3"
+    },
+    {
+      "projectId": "proj-network-input",
+      "title": "Literature enrichment notebook",
+      "decision": "flaky_needs_rerun",
+      "confidence": 0.48,
+      "runCount": 2,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "network_dependency",
+          "message": "Reproducibility run depends on network calls that are not captured in artifacts.",
+          "evidence": {
+            "projectId": "proj-network-input",
+            "count": 4
+          }
+        }
+      ],
+      "warnings": [],
+      "runRoot": "4222b41cb7edb293ac82ebf30d060cbcb628151ef1131754067372a7b3b56289",
+      "outputHashSets": [
+        {
+          "runId": "network-run-1",
+          "outputDigest": "98e5b2cb1fa6ea7de1db35f2820498294be9b15bcd72123dc082eae879242b2a"
+        },
+        {
+          "runId": "network-run-2",
+          "outputDigest": "98e5b2cb1fa6ea7de1db35f2820498294be9b15bcd72123dc082eae879242b2a"
+        }
+      ],
+      "likelyCause": "uncaptured_external_dependency",
+      "authorActions": [
+        "Vendor or mock external network inputs inside the reproducibility bundle."
+      ],
+      "reviewerPacketDigest": "5cfb7ec52b90d0f499f3420140f98075d5f830eb59736a53a2f90abda2377082"
+    },
+    {
+      "projectId": "proj-prior-failures",
+      "title": "Clinical trial subgroup analysis",
+      "decision": "not_reproducible",
+      "confidence": 0.18,
+      "runCount": 2,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "prior_failed_reproductions",
+          "message": "Prior independent reproducibility attempts failed repeatedly.",
+          "evidence": {
+            "projectId": "proj-prior-failures",
+            "failedAttemptIds": [
+              "journal-recheck-1",
+              "funder-rerun-2"
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "runRoot": "c49c278c671d91c6e3c600b1b054d9e31aba7593eb1c6773346480ea5cd64f4c",
+      "outputHashSets": [
+        {
+          "runId": "clinical-run-1",
+          "outputDigest": "f50d3cf268dc40891c04b014d9b1df51a89dcb6c441ba7822ccd73abf9a69a11"
+        },
+        {
+          "runId": "clinical-run-2",
+          "outputDigest": "f50d3cf268dc40891c04b014d9b1df51a89dcb6c441ba7822ccd73abf9a69a11"
+        }
+      ],
+      "likelyCause": "independent_failure_history",
+      "authorActions": [
+        "Link prior reproduction logs and resolve discrepancies before public release."
+      ],
+      "reviewerPacketDigest": "09573a3fcbee46a43cf6e9bcf6a6d2f313d1b5d797a3bf2d80135ad56eb59f61"
+    }
+  ],
+  "assistantTasks": [
+    "Prioritize pinned-environment reruns before peer-review release.",
+    "Require captured external inputs or network mocks in reproducibility bundles.",
+    "Open nondeterminism triage for output hash drift and seed sensitivity.",
+    "Escalate projects with repeated failed independent reproductions to editorial review.",
+    "Add fixed-clock controls to time-sensitive project runs."
+  ],
+  "auditDigest": "717211cbf529281d7a9f76599b5fa0ec681869eec38167e70965b60491fa2b57"
+}

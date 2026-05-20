@@ -1,0 +1,97 @@
+{
+  "packetId": "fig-anchor-001",
+  "title": "LaTeX Figure Anchor Lock Guard",
+  "context": "Real-Time Collaborative Editor",
+  "status": "needs-review",
+  "readyItems": [
+    "fig-1"
+  ],
+  "heldItems": [
+    "fig-2",
+    "fig-3"
+  ],
+  "evaluations": [
+    {
+      "itemId": "fig-1",
+      "name": "Kaplan-Meier plot",
+      "type": "figure",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "fig-2",
+      "name": "Pipeline diagram",
+      "type": "figure",
+      "status": "held",
+      "holds": [
+        "anchor-unlocked",
+        "latex-not-escaped",
+        "moved-after-lock"
+      ],
+      "holdLabels": [
+        "figure anchor is unlocked",
+        "LaTeX characters not escaped",
+        "figure moved after lock"
+      ],
+      "remediation": [
+        "Lock figure anchor before export or concurrent review.",
+        "Escape LaTeX-sensitive caption or filename characters.",
+        "Revalidate figure order after collaborative move."
+      ]
+    },
+    {
+      "itemId": "fig-3",
+      "name": "Supplement plot",
+      "type": "figure",
+      "status": "held",
+      "holds": [
+        "caption-unlinked",
+        "missing-asset"
+      ],
+      "holdLabels": [
+        "caption is unlinked",
+        "figure asset missing"
+      ],
+      "remediation": [
+        "Link caption to figure anchor.",
+        "Restore figure asset or remove stale reference."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "anchor-unlocked": 1,
+    "latex-not-escaped": 1,
+    "moved-after-lock": 1,
+    "caption-unlinked": 1,
+    "missing-asset": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "fig-2",
+      "hold": "anchor-unlocked",
+      "action": "Lock figure anchor before export or concurrent review."
+    },
+    {
+      "itemId": "fig-2",
+      "hold": "latex-not-escaped",
+      "action": "Escape LaTeX-sensitive caption or filename characters."
+    },
+    {
+      "itemId": "fig-2",
+      "hold": "moved-after-lock",
+      "action": "Revalidate figure order after collaborative move."
+    },
+    {
+      "itemId": "fig-3",
+      "hold": "caption-unlinked",
+      "action": "Link caption to figure anchor."
+    },
+    {
+      "itemId": "fig-3",
+      "hold": "missing-asset",
+      "action": "Restore figure asset or remove stale reference."
+    }
+  ]
+}

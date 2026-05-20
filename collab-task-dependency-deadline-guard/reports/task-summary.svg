@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="60" y="76" fill="#0f172a" font-size="34" font-family="Arial, sans-serif" font-weight="700">Task Dependency Deadline Guard</text>
+  <text x="60" y="120" fill="#334155" font-size="22" font-family="Arial, sans-serif">Readiness: needs-task-recovery (48/100)</text>
+  <rect x="60" y="158" width="760" height="34" rx="4" fill="#e2e8f0"/>
+  <rect x="60" y="158" width="365" height="34" rx="4" fill="#2563eb"/>
+  <text x="60" y="244" fill="#0f172a" font-size="22" font-family="Arial, sans-serif">Blocked 1 | At risk 2 | Overloaded 2</text>
+  <text x="60" y="286" fill="#334155" font-size="20" font-family="Arial, sans-serif">Task readiness</text>
+  <text x="60" y="318" fill="#0f172a" font-size="19">t-1 ready score 84</text>
+<text x="60" y="352" fill="#0f172a" font-size="19">t-2 at-risk score 64</text>
+<text x="60" y="386" fill="#0f172a" font-size="19">t-3 at-risk score 64</text>
+<text x="60" y="420" fill="#0f172a" font-size="19">t-4 ready score 100</text>
+<text x="60" y="454" fill="#0f172a" font-size="19">t-5 blocked score 28</text>
+</svg>

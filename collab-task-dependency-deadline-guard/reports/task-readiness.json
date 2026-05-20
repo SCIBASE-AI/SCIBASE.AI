@@ -1,0 +1,195 @@
+{
+  "milestoneId": "ms-final-submission",
+  "generatedBy": "collab-task-dependency-deadline-guard",
+  "readiness": "needs-task-recovery",
+  "readinessScore": 48,
+  "metrics": {
+    "totalTasks": 5,
+    "blockedTasks": 1,
+    "atRiskTasks": 2,
+    "readyTasks": 2,
+    "dependencyCycles": 0,
+    "overloadedCollaborators": 2,
+    "missingRequiredSections": 0
+  },
+  "taskEvaluations": [
+    {
+      "taskId": "t-1",
+      "title": "Resolve exclusion criteria wording",
+      "status": "open",
+      "assignee": "Ada",
+      "anchorId": "methods",
+      "anchorType": "section",
+      "daysToDue": 1,
+      "daysToFreeze": 2,
+      "riskScore": 84,
+      "readiness": "ready",
+      "dependencyIds": [],
+      "incompleteDependencyIds": [],
+      "blockingCommentIds": [
+        "c-1"
+      ],
+      "riskReasons": [
+        "blocking comments remain on the anchor"
+      ]
+    },
+    {
+      "taskId": "t-2",
+      "title": "Refresh model-fit notebook output",
+      "status": "open",
+      "assignee": "Mina",
+      "anchorId": "cell-model-fit",
+      "anchorType": "notebook-cell",
+      "daysToDue": 1,
+      "daysToFreeze": 2,
+      "riskScore": 64,
+      "readiness": "at-risk",
+      "dependencyIds": [],
+      "incompleteDependencyIds": [],
+      "blockingCommentIds": [
+        "c-3"
+      ],
+      "riskReasons": [
+        "blocking comments remain on the anchor",
+        "notebook output was generated from an older input hash"
+      ]
+    },
+    {
+      "taskId": "t-3",
+      "title": "Approve Results section text",
+      "status": "open",
+      "assignee": "Luis",
+      "anchorId": "results",
+      "anchorType": "section",
+      "daysToDue": 2,
+      "daysToFreeze": 2,
+      "riskScore": 64,
+      "readiness": "at-risk",
+      "dependencyIds": [
+        "t-1",
+        "t-2"
+      ],
+      "incompleteDependencyIds": [
+        "t-1",
+        "t-2"
+      ],
+      "blockingCommentIds": [],
+      "riskReasons": [
+        "dependency chain is incomplete"
+      ]
+    },
+    {
+      "taskId": "t-4",
+      "title": "Confirm figure lock remains valid",
+      "status": "open",
+      "assignee": "Luis",
+      "anchorId": "figures",
+      "anchorType": "figure",
+      "daysToDue": 0,
+      "daysToFreeze": 2,
+      "riskScore": 100,
+      "readiness": "ready",
+      "dependencyIds": [],
+      "incompleteDependencyIds": [],
+      "blockingCommentIds": [],
+      "riskReasons": []
+    },
+    {
+      "taskId": "t-5",
+      "title": "Package supplementary table",
+      "status": "open",
+      "assignee": "Mina",
+      "anchorId": "supplement",
+      "anchorType": "supplement",
+      "daysToDue": 6,
+      "daysToFreeze": 2,
+      "riskScore": 28,
+      "readiness": "blocked",
+      "dependencyIds": [
+        "t-3"
+      ],
+      "incompleteDependencyIds": [
+        "t-3",
+        "t-1",
+        "t-2"
+      ],
+      "blockingCommentIds": [],
+      "riskReasons": [
+        "task due date is after freeze",
+        "dependency chain is incomplete"
+      ]
+    }
+  ],
+  "collaboratorLoad": [
+    {
+      "collaboratorId": "u-ada",
+      "name": "Ada",
+      "openTasks": 1,
+      "estimatedHours": 2,
+      "maxOpenTasks": 4,
+      "availableHoursBeforeFreeze": 5,
+      "overloaded": false
+    },
+    {
+      "collaboratorId": "u-luis",
+      "name": "Luis",
+      "openTasks": 2,
+      "estimatedHours": 3,
+      "maxOpenTasks": 2,
+      "availableHoursBeforeFreeze": 2,
+      "overloaded": true
+    },
+    {
+      "collaboratorId": "u-mina",
+      "name": "Mina",
+      "openTasks": 2,
+      "estimatedHours": 7,
+      "maxOpenTasks": 3,
+      "availableHoursBeforeFreeze": 6,
+      "overloaded": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "code": "blocked-tasks",
+      "message": "Some inline tasks block milestone readiness.",
+      "evidence": [
+        "t-5: task due date is after freeze; dependency chain is incomplete"
+      ],
+      "action": "Resolve blocked tasks or move the milestone freeze date."
+    },
+    {
+      "severity": "medium",
+      "code": "at-risk-tasks",
+      "message": "Some tasks are still risky but recoverable before freeze.",
+      "evidence": [
+        "t-2: score 64",
+        "t-3: score 64"
+      ],
+      "action": "Assign focused follow-up work and re-run the guard before freezing sections."
+    },
+    {
+      "severity": "medium",
+      "code": "assignee-overload",
+      "message": "Some collaborators are overloaded before the freeze date.",
+      "evidence": [
+        "Luis: 3h/2h",
+        "Mina: 7h/6h"
+      ],
+      "action": "Reassign or reduce task scope before the publication milestone."
+    }
+  ],
+  "reviewerActions": [
+    "Resolve blocked tasks or move the milestone freeze date.",
+    "Assign focused follow-up work and re-run the guard before freezing sections.",
+    "Reassign or reduce task scope before the publication milestone."
+  ],
+  "auditDigest": [
+    "5 inline tasks evaluated",
+    "1 blocked tasks",
+    "2 at-risk tasks",
+    "2 overloaded collaborators",
+    "0 dependency cycles"
+  ]
+}

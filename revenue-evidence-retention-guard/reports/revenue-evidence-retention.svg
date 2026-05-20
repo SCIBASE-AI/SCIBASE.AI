@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Revenue evidence retention guard report">
+  <rect width="960" height="540" fill="#f5f7f6"/>
+  <rect x="36" y="32" width="888" height="476" rx="10" fill="#fffffc" stroke="#cfd8d2"/>
+  <text x="64" y="86" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#1f2a2e">Revenue Evidence Retention Guard</text>
+  <text x="64" y="124" font-family="Arial, sans-serif" font-size="20" fill="#5d6a6b">Subscription, AI compute, and analytics licensing invoice evidence review.</text>
+  <g font-family="Arial, sans-serif">
+<text x="64" y="180" font-size="22" fill="#304044">Release</text>
+<rect x="250" y="158" width="420" height="24" rx="6" fill="#e5ecea"/>
+<rect x="250" y="158" width="210" height="24" rx="6" fill="#2c8f64"/>
+<text x="700" y="180" font-size="22" fill="#2c8f64">1</text>
+<text x="64" y="234" font-size="22" fill="#304044">Controls</text>
+<rect x="250" y="212" width="420" height="24" rx="6" fill="#e5ecea"/>
+<rect x="250" y="212" width="210" height="24" rx="6" fill="#bb7d25"/>
+<text x="700" y="234" font-size="22" fill="#bb7d25">1</text>
+<text x="64" y="288" font-size="22" fill="#304044">Hold</text>
+<rect x="250" y="266" width="420" height="24" rx="6" fill="#e5ecea"/>
+<rect x="250" y="266" width="210" height="24" rx="6" fill="#7856a6"/>
+<text x="700" y="288" font-size="22" fill="#7856a6">1</text>
+<text x="64" y="342" font-size="22" fill="#304044">Quarantine</text>
+<rect x="250" y="320" width="420" height="24" rx="6" fill="#e5ecea"/>
+<rect x="250" y="320" width="420" height="24" rx="6" fill="#b74743"/>
+<text x="700" y="342" font-size="22" fill="#b74743">2</text>
+  </g>
+  <rect x="64" y="420" width="438" height="52" rx="8" fill="#f8dad8" stroke="#cfd8d2"/>
+  <text x="82" y="453" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#b74743">Revenue at risk: $85,600.00</text>
+  <text x="64" y="494" font-family="Arial, sans-serif" font-size="16" fill="#37669b">Digest 2d55e1821c02201cea5efddac806171052bcbfca</text>
+</svg>

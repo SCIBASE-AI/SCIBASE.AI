@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-05-20T00:00:00.000Z",
+  "decision": "unrecoverable",
+  "summary": {
+    "totalSnapshots": 4,
+    "restorable": 1,
+    "needsReview": 1,
+    "quarantined": 1,
+    "unrecoverable": 1,
+    "blockers": 8,
+    "warnings": 5
+  },
+  "snapshots": [
+    {
+      "repositoryId": "repo-protein-sim",
+      "versionId": "v1.4.0",
+      "snapshotId": "snap-protein-140",
+      "decision": "restorable",
+      "action": "approve_restore",
+      "restoreDurationMinutes": 74,
+      "backupCopies": 3,
+      "signedTag": true,
+      "citationDoi": "10.5555/scibase.protein.140",
+      "manifestDigest": "762492fafa9928d13597a2e7e1e27de9705f683c49b52abc25cfc38d0be410b3"
+    },
+    {
+      "repositoryId": "repo-notebook-bench",
+      "versionId": "v0.9.2",
+      "snapshotId": "snap-notebook-092",
+      "decision": "needs_review",
+      "action": "review_before_release",
+      "restoreDurationMinutes": 145,
+      "backupCopies": 2,
+      "signedTag": false,
+      "citationDoi": "10.5555/scibase.notebook.092",
+      "manifestDigest": "7cafc4997000456f7f712c2b3d584ab67065451f2362b07f48432fef5d033c54"
+    },
+    {
+      "repositoryId": "repo-cohort-data",
+      "versionId": "v2.1.0",
+      "snapshotId": "snap-cohort-210",
+      "decision": "quarantined",
+      "action": "quarantine_snapshot",
+      "restoreDurationMinutes": 96,
+      "backupCopies": 2,
+      "signedTag": true,
+      "citationDoi": "10.5555/scibase.cohort.210",
+      "manifestDigest": "0671e7f521f880154b723d4ac0c94394559875cbd3ab31c33e50535ef7cfc7c7"
+    },
+    {
+      "repositoryId": "repo-legacy-model",
+      "versionId": "v0.3.1",
+      "snapshotId": "snap-legacy-031",
+      "decision": "unrecoverable",
+      "action": "mark_unrecoverable",
+      "restoreDurationMinutes": null,
+      "backupCopies": 1,
+      "signedTag": false,
+      "citationDoi": null,
+      "manifestDigest": "86f23927e59094f3fa43393ba6bdfd85fcf3148670e2054e585e79b346c598a9"
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "blocker",
+      "code": "restore_hash_drift",
+      "message": "Restored component hashes do not match the release manifest.",
+      "evidence": {
+        "snapshotId": "snap-cohort-210",
+        "drifted": [
+          "data"
+        ]
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "lfs_object_unavailable",
+      "message": "Large repository artifacts must be available before restore approval.",
+      "evidence": {
+        "snapshotId": "snap-cohort-210",
+        "unavailable": [
+          "lfs-cohort-raw-210"
+        ]
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "restore_drill_failed",
+      "message": "Repository snapshot cannot be promoted without a passing restore drill.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031",
+        "status": "failed"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "restore_component_missing",
+      "message": "Restored snapshot is missing required repository components.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031",
+        "missing": [
+          "manuscript",
+          "code",
+          "data",
+          "results",
+          "environment"
+        ]
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "lfs_object_unavailable",
+      "message": "Large repository artifacts must be available before restore approval.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031",
+        "unavailable": [
+          "lfs-legacy-031"
+        ]
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "backup_key_escrow_missing",
+      "message": "Encrypted repository backup is missing recoverable key escrow evidence.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "backup_retention_expired",
+      "message": "Repository snapshot backup retention has already expired.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031",
+        "retentionExpiresAt": "2026-04-01T00:00:00.000Z"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "citation_target_unavailable",
+      "message": "Restored repository version must preserve an active citation target.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031",
+        "doi": null,
+        "targetStatus": "missing"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "code": "restore_rto_exceeded",
+      "message": "Restore rehearsal exceeded the recovery time objective.",
+      "evidence": {
+        "snapshotId": "snap-notebook-092",
+        "durationMinutes": 145,
+        "limitMinutes": 120
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "release_tag_unsigned",
+      "message": "Restored repository version should point to a signed release tag.",
+      "evidence": {
+        "snapshotId": "snap-notebook-092",
+        "versionId": "v0.9.2"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "fork_lineage_unverified",
+      "message": "Forked repository restore needs lineage evidence before release promotion.",
+      "evidence": {
+        "snapshotId": "snap-notebook-092",
+        "forkedFrom": "repo-benchmark-seed"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "backup_copy_count_low",
+      "message": "Repository snapshot has fewer backup copies than the restore policy requires.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031",
+        "copies": 1,
+        "required": 2
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "release_tag_unsigned",
+      "message": "Restored repository version should point to a signed release tag.",
+      "evidence": {
+        "snapshotId": "snap-legacy-031",
+        "versionId": "v0.3.1"
+      }
+    }
+  ],
+  "reviewerTasks": [
+    "Escalate unrecoverable snapshots to repository owners before release or archive promotion.",
+    "Quarantine snapshots with missing LFS objects or manifest hash drift until replacement backups pass rehearsal.",
+    "Route warning-level restore cases to repository maintainers for release-readiness review."
+  ],
+  "releaseHold": true,
+  "auditDigest": "7490262279f610b8e21054add70a442f50759d18673ab3fcb3f0c1fa6c7ca057"
+}

@@ -1,0 +1,105 @@
+{
+  "packetId": "redaction-gate-001",
+  "title": "Sensitive File Redaction Release Gate",
+  "context": "Scientific Data & Code Hosting",
+  "status": "needs-review",
+  "readyItems": [
+    "artifact-a"
+  ],
+  "heldItems": [
+    "artifact-b",
+    "artifact-c"
+  ],
+  "evaluations": [
+    {
+      "itemId": "artifact-a",
+      "name": "Public analysis notebook",
+      "type": "notebook",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "artifact-b",
+      "name": "Clinical CSV",
+      "type": "dataset",
+      "status": "held",
+      "holds": [
+        "personal-data",
+        "missing-redaction-log"
+      ],
+      "holdLabels": [
+        "personal data detected",
+        "missing redaction log"
+      ],
+      "remediation": [
+        "Apply de-identification or access controls.",
+        "Attach redaction evidence before publication."
+      ]
+    },
+    {
+      "itemId": "artifact-c",
+      "name": "Pipeline env file",
+      "type": "code",
+      "status": "held",
+      "holds": [
+        "secret-pattern",
+        "raw-credential",
+        "missing-redaction-log",
+        "export-blocked"
+      ],
+      "holdLabels": [
+        "secret pattern detected",
+        "raw credential detected",
+        "missing redaction log",
+        "export not allowed"
+      ],
+      "remediation": [
+        "Remove secrets and rotate affected credentials before release.",
+        "Delete credential-bearing artifact and regenerate sanitized file.",
+        "Attach redaction evidence before publication.",
+        "Hold artifact until export policy allows release."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "personal-data": 1,
+    "missing-redaction-log": 2,
+    "secret-pattern": 1,
+    "raw-credential": 1,
+    "export-blocked": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "artifact-b",
+      "hold": "personal-data",
+      "action": "Apply de-identification or access controls."
+    },
+    {
+      "itemId": "artifact-b",
+      "hold": "missing-redaction-log",
+      "action": "Attach redaction evidence before publication."
+    },
+    {
+      "itemId": "artifact-c",
+      "hold": "secret-pattern",
+      "action": "Remove secrets and rotate affected credentials before release."
+    },
+    {
+      "itemId": "artifact-c",
+      "hold": "raw-credential",
+      "action": "Delete credential-bearing artifact and regenerate sanitized file."
+    },
+    {
+      "itemId": "artifact-c",
+      "hold": "missing-redaction-log",
+      "action": "Attach redaction evidence before publication."
+    },
+    {
+      "itemId": "artifact-c",
+      "hold": "export-blocked",
+      "action": "Hold artifact until export policy allows release."
+    }
+  ]
+}

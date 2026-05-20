@@ -1,0 +1,105 @@
+{
+  "packetId": "limitations-001",
+  "title": "Study Limitations Disclosure Assistant",
+  "context": "AI-Powered Research Assistant Suite",
+  "status": "needs-review",
+  "readyItems": [
+    "cohort"
+  ],
+  "heldItems": [
+    "generalizability",
+    "measurement"
+  ],
+  "evaluations": [
+    {
+      "itemId": "cohort",
+      "name": "Cohort limitation",
+      "type": "limitation",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "generalizability",
+      "name": "Generalizability limitation",
+      "type": "limitation",
+      "status": "held",
+      "holds": [
+        "undisclosed",
+        "high-severity",
+        "missing-mitigation",
+        "missing-evidence-link",
+        "overclaim-risk"
+      ],
+      "holdLabels": [
+        "limitation not disclosed",
+        "high-severity limitation",
+        "missing mitigation",
+        "missing evidence link",
+        "overclaim risk"
+      ],
+      "remediation": [
+        "Add limitation text to discussion before assistant marks packet ready.",
+        "Escalate high-severity limitation to reviewer summary.",
+        "Add mitigation or sensitivity analysis.",
+        "Link limitation to data, protocol, or analysis evidence.",
+        "Rewrite claims that exceed limitation evidence."
+      ]
+    },
+    {
+      "itemId": "measurement",
+      "name": "Measurement noise limitation",
+      "type": "limitation",
+      "status": "held",
+      "holds": [
+        "missing-mitigation"
+      ],
+      "holdLabels": [
+        "missing mitigation"
+      ],
+      "remediation": [
+        "Add mitigation or sensitivity analysis."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "undisclosed": 1,
+    "high-severity": 1,
+    "missing-mitigation": 2,
+    "missing-evidence-link": 1,
+    "overclaim-risk": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "generalizability",
+      "hold": "undisclosed",
+      "action": "Add limitation text to discussion before assistant marks packet ready."
+    },
+    {
+      "itemId": "generalizability",
+      "hold": "high-severity",
+      "action": "Escalate high-severity limitation to reviewer summary."
+    },
+    {
+      "itemId": "generalizability",
+      "hold": "missing-mitigation",
+      "action": "Add mitigation or sensitivity analysis."
+    },
+    {
+      "itemId": "generalizability",
+      "hold": "missing-evidence-link",
+      "action": "Link limitation to data, protocol, or analysis evidence."
+    },
+    {
+      "itemId": "generalizability",
+      "hold": "overclaim-risk",
+      "action": "Rewrite claims that exceed limitation evidence."
+    },
+    {
+      "itemId": "measurement",
+      "hold": "missing-mitigation",
+      "action": "Add mitigation or sensitivity analysis."
+    }
+  ]
+}

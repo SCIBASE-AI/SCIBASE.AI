@@ -1,0 +1,590 @@
+{
+  "generatedAt": "2026-05-20T11:30:00.000Z",
+  "module": "solver-prequalification-queue",
+  "summary": {
+    "approved": 2,
+    "needs-review": 1,
+    "blocked": 1,
+    "total": 4,
+    "workspaceGrants": 2
+  },
+  "challengeQueues": [
+    {
+      "challengeId": "CHAL-BIO-042",
+      "title": "Single-cell biomarker shortlist for neurodegeneration",
+      "prizeUsd": 75000,
+      "participationMode": "anonymous",
+      "candidates": [
+        {
+          "teamId": "TEAM-ORCHID",
+          "displayName": "Solver-Aster",
+          "decision": "approved",
+          "workspaceAccess": "grant-private-workspace",
+          "expertiseScore": 100,
+          "findingCodes": []
+        },
+        {
+          "teamId": "TEAM-VECTOR",
+          "displayName": "Solver-Delta",
+          "decision": "needs-review",
+          "workspaceAccess": "hold-for-coordinator-review",
+          "expertiseScore": 72,
+          "findingCodes": [
+            "EXPERTISE_GAP",
+            "AVAILABILITY_GAP"
+          ]
+        }
+      ]
+    },
+    {
+      "challengeId": "CHAL-CLIMATE-017",
+      "title": "Regional heat-risk forecast benchmark",
+      "prizeUsd": 22000,
+      "participationMode": "named",
+      "candidates": [
+        {
+          "teamId": "TEAM-MERIDIAN",
+          "displayName": "Meridian Climate Analytics",
+          "decision": "approved",
+          "workspaceAccess": "grant-private-workspace",
+          "expertiseScore": 100,
+          "findingCodes": []
+        }
+      ]
+    },
+    {
+      "challengeId": "CHAL-QUANT-009",
+      "title": "Noise-reduction protocol for superconducting qubits",
+      "prizeUsd": 120000,
+      "participationMode": "anonymous",
+      "candidates": [
+        {
+          "teamId": "TEAM-PULSE",
+          "displayName": "Solver-Quanta",
+          "decision": "blocked",
+          "workspaceAccess": "deny-until-remediated",
+          "expertiseScore": 100,
+          "findingCodes": [
+            "ACTIVE_SUBMISSION_LIMIT",
+            "IDENTITY_ATTESTATION_MISSING",
+            "NDA_REQUIRED",
+            "SPONSOR_CONFLICT"
+          ]
+        }
+      ]
+    }
+  ],
+  "evaluations": [
+    {
+      "challengeId": "CHAL-BIO-042",
+      "teamId": "TEAM-ORCHID",
+      "displayName": "Solver-Aster",
+      "decision": "approved",
+      "workspaceAccess": "grant-private-workspace",
+      "expertiseScore": 100,
+      "findings": [],
+      "reviewerPacket": {
+        "teamId": "TEAM-ORCHID",
+        "displayName": "Solver-Aster",
+        "identityHash": "da1d548baa0cd279becc1e36f63266c92f67b15eda8375675e94c976e37835c9",
+        "challengeId": "CHAL-BIO-042",
+        "challengeTitle": "Single-cell biomarker shortlist for neurodegeneration",
+        "participationMode": "anonymous",
+        "expertiseFit": {
+          "score": 100,
+          "matched": [
+            {
+              "name": "single-cell-rna",
+              "level": 5,
+              "required": 4
+            },
+            {
+              "name": "biomarker-discovery",
+              "level": 4,
+              "required": 4
+            },
+            {
+              "name": "clinical-statistics",
+              "level": 4,
+              "required": 3
+            },
+            {
+              "name": "privacy-preserving-analysis",
+              "level": 3,
+              "required": 3
+            }
+          ],
+          "missing": []
+        },
+        "availabilityHoursPerWeek": 31,
+        "activeSubmissions": 1,
+        "memberRoles": [
+          {
+            "alias": "member-a",
+            "role": "computational biologist",
+            "identityAttested": true,
+            "ndaVersion": "NDA-2026-04"
+          },
+          {
+            "alias": "member-b",
+            "role": "clinical statistician",
+            "identityAttested": true,
+            "ndaVersion": "NDA-2026-04"
+          }
+        ],
+        "findings": [],
+        "checklist": [
+          {
+            "item": "Required expertise threshold met",
+            "complete": true
+          },
+          {
+            "item": "Availability supports milestone cadence",
+            "complete": true
+          },
+          {
+            "item": "All members completed identity attestation",
+            "complete": true
+          },
+          {
+            "item": "NDA version current when required",
+            "complete": true
+          },
+          {
+            "item": "No recent sponsor conflict detected",
+            "complete": true
+          },
+          {
+            "item": "Team workload under active submission limit",
+            "complete": true
+          }
+        ]
+      },
+      "auditDigest": "97cea0e094699f3c3929982dd6b4a0c6f99fddac94b4238c2c1c18164cd5120c",
+      "signedEvent": {
+        "type": "bounty.solver_prequalification.evaluated",
+        "challengeId": "CHAL-BIO-042",
+        "teamId": "TEAM-ORCHID",
+        "decision": "approved",
+        "workspaceAccess": "grant-private-workspace",
+        "findingCodes": [],
+        "generatedAt": "2026-05-20T11:30:00.000Z",
+        "signature": "sha256=5403e93c8a7e550233bbf567def9e41fbcb53d8557351a2a7e7b65ab5c38d57c"
+      }
+    },
+    {
+      "challengeId": "CHAL-BIO-042",
+      "teamId": "TEAM-VECTOR",
+      "displayName": "Solver-Delta",
+      "decision": "needs-review",
+      "workspaceAccess": "hold-for-coordinator-review",
+      "expertiseScore": 72,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "EXPERTISE_GAP",
+          "message": "Team expertise score is below the challenge threshold.",
+          "evidence": {
+            "score": 72,
+            "threshold": 82,
+            "missing": [
+              "single-cell-rna",
+              "biomarker-discovery",
+              "clinical-statistics",
+              "privacy-preserving-analysis"
+            ]
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "AVAILABILITY_GAP",
+          "message": "Team availability is below the milestone cadence requirement.",
+          "evidence": {
+            "availableHours": 18,
+            "requiredHours": 24
+          }
+        }
+      ],
+      "reviewerPacket": {
+        "teamId": "TEAM-VECTOR",
+        "displayName": "Solver-Delta",
+        "identityHash": "694a95ccefd9a631bfba67871bde17c11e554a55296c8b8441f62c5451ea0091",
+        "challengeId": "CHAL-BIO-042",
+        "challengeTitle": "Single-cell biomarker shortlist for neurodegeneration",
+        "participationMode": "anonymous",
+        "expertiseFit": {
+          "score": 72,
+          "matched": [],
+          "missing": [
+            {
+              "name": "single-cell-rna",
+              "level": 3,
+              "required": 4
+            },
+            {
+              "name": "biomarker-discovery",
+              "level": 3,
+              "required": 4
+            },
+            {
+              "name": "clinical-statistics",
+              "level": 2,
+              "required": 3
+            },
+            {
+              "name": "privacy-preserving-analysis",
+              "level": 2,
+              "required": 3
+            }
+          ]
+        },
+        "availabilityHoursPerWeek": 18,
+        "activeSubmissions": 2,
+        "memberRoles": [
+          {
+            "alias": "member-c",
+            "role": "data scientist",
+            "identityAttested": true,
+            "ndaVersion": "NDA-2026-04"
+          }
+        ],
+        "findings": [
+          {
+            "severity": "high",
+            "code": "EXPERTISE_GAP",
+            "message": "Team expertise score is below the challenge threshold.",
+            "evidence": {
+              "score": 72,
+              "threshold": 82,
+              "missing": [
+                "single-cell-rna",
+                "biomarker-discovery",
+                "clinical-statistics",
+                "privacy-preserving-analysis"
+              ]
+            }
+          },
+          {
+            "severity": "medium",
+            "code": "AVAILABILITY_GAP",
+            "message": "Team availability is below the milestone cadence requirement.",
+            "evidence": {
+              "availableHours": 18,
+              "requiredHours": 24
+            }
+          }
+        ],
+        "checklist": [
+          {
+            "item": "Required expertise threshold met",
+            "complete": false
+          },
+          {
+            "item": "Availability supports milestone cadence",
+            "complete": false
+          },
+          {
+            "item": "All members completed identity attestation",
+            "complete": true
+          },
+          {
+            "item": "NDA version current when required",
+            "complete": true
+          },
+          {
+            "item": "No recent sponsor conflict detected",
+            "complete": true
+          },
+          {
+            "item": "Team workload under active submission limit",
+            "complete": true
+          }
+        ]
+      },
+      "auditDigest": "dd25e0ff26b11483bf92eef746490d9666f0bfb24bf37dc255e7fef041777dec",
+      "signedEvent": {
+        "type": "bounty.solver_prequalification.evaluated",
+        "challengeId": "CHAL-BIO-042",
+        "teamId": "TEAM-VECTOR",
+        "decision": "needs-review",
+        "workspaceAccess": "hold-for-coordinator-review",
+        "findingCodes": [
+          "EXPERTISE_GAP",
+          "AVAILABILITY_GAP"
+        ],
+        "generatedAt": "2026-05-20T11:30:00.000Z",
+        "signature": "sha256=7457f33441d8a3d6ae5715f9dbc3b288116ae4c7c2ade4634f64ab77063d3430"
+      }
+    },
+    {
+      "challengeId": "CHAL-CLIMATE-017",
+      "teamId": "TEAM-MERIDIAN",
+      "displayName": "Meridian Climate Analytics",
+      "decision": "approved",
+      "workspaceAccess": "grant-private-workspace",
+      "expertiseScore": 100,
+      "findings": [],
+      "reviewerPacket": {
+        "teamId": "TEAM-MERIDIAN",
+        "displayName": "Meridian Climate Analytics",
+        "identityHash": "68f8268c0f8c7b9d7d1b13e74965a77cf80db06d20a9e86a91f1bd6a6efa19be",
+        "challengeId": "CHAL-CLIMATE-017",
+        "challengeTitle": "Regional heat-risk forecast benchmark",
+        "participationMode": "named",
+        "expertiseFit": {
+          "score": 100,
+          "matched": [
+            {
+              "name": "forecasting",
+              "level": 5,
+              "required": 4
+            },
+            {
+              "name": "geospatial-analysis",
+              "level": 4,
+              "required": 3
+            },
+            {
+              "name": "model-validation",
+              "level": 4,
+              "required": 3
+            }
+          ],
+          "missing": []
+        },
+        "availabilityHoursPerWeek": 16,
+        "activeSubmissions": 0,
+        "memberRoles": [
+          {
+            "alias": "member-d",
+            "role": "forecast lead",
+            "identityAttested": true,
+            "ndaVersion": null
+          },
+          {
+            "alias": "member-e",
+            "role": "geospatial engineer",
+            "identityAttested": true,
+            "ndaVersion": null
+          }
+        ],
+        "findings": [],
+        "checklist": [
+          {
+            "item": "Required expertise threshold met",
+            "complete": true
+          },
+          {
+            "item": "Availability supports milestone cadence",
+            "complete": true
+          },
+          {
+            "item": "All members completed identity attestation",
+            "complete": true
+          },
+          {
+            "item": "NDA version current when required",
+            "complete": true
+          },
+          {
+            "item": "No recent sponsor conflict detected",
+            "complete": true
+          },
+          {
+            "item": "Team workload under active submission limit",
+            "complete": true
+          }
+        ]
+      },
+      "auditDigest": "d1ed3d787bced3d292032ea924644b61cfac9585d8918b438813f51120c77df8",
+      "signedEvent": {
+        "type": "bounty.solver_prequalification.evaluated",
+        "challengeId": "CHAL-CLIMATE-017",
+        "teamId": "TEAM-MERIDIAN",
+        "decision": "approved",
+        "workspaceAccess": "grant-private-workspace",
+        "findingCodes": [],
+        "generatedAt": "2026-05-20T11:30:00.000Z",
+        "signature": "sha256=73e9b518536421cf74cf0bf3dd3274db7fcaed15d21c275806de656a77bcf5d5"
+      }
+    },
+    {
+      "challengeId": "CHAL-QUANT-009",
+      "teamId": "TEAM-PULSE",
+      "displayName": "Solver-Quanta",
+      "decision": "blocked",
+      "workspaceAccess": "deny-until-remediated",
+      "expertiseScore": 100,
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "ACTIVE_SUBMISSION_LIMIT",
+          "message": "Team is already carrying too many active bounty submissions.",
+          "evidence": {
+            "activeSubmissions": 3,
+            "limit": 3
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "IDENTITY_ATTESTATION_MISSING",
+          "message": "All solver members must complete identity attestation before private challenge access.",
+          "evidence": {
+            "members": [
+              "member-g"
+            ]
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "NDA_REQUIRED",
+          "message": "Challenge requires the current NDA before workspace access.",
+          "evidence": {
+            "requiredVersion": "NDA-2026-04",
+            "members": [
+              "member-g"
+            ]
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "SPONSOR_CONFLICT",
+          "message": "Recent sponsor affiliation creates a conflict for this private challenge.",
+          "evidence": {
+            "sponsorId": "q-lattice",
+            "lookbackMonths": 24
+          }
+        }
+      ],
+      "reviewerPacket": {
+        "teamId": "TEAM-PULSE",
+        "displayName": "Solver-Quanta",
+        "identityHash": "7a15d2a0ad56bbeec94dcacd1e03b6178c4e9e4e2b0f3048ddec6356131f4d80",
+        "challengeId": "CHAL-QUANT-009",
+        "challengeTitle": "Noise-reduction protocol for superconducting qubits",
+        "participationMode": "anonymous",
+        "expertiseFit": {
+          "score": 100,
+          "matched": [
+            {
+              "name": "quantum-error-mitigation",
+              "level": 5,
+              "required": 5
+            },
+            {
+              "name": "python-simulation",
+              "level": 5,
+              "required": 4
+            },
+            {
+              "name": "hardware-calibration",
+              "level": 4,
+              "required": 4
+            }
+          ],
+          "missing": []
+        },
+        "availabilityHoursPerWeek": 38,
+        "activeSubmissions": 3,
+        "memberRoles": [
+          {
+            "alias": "member-f",
+            "role": "quantum algorithms lead",
+            "identityAttested": true,
+            "ndaVersion": "NDA-2026-04"
+          },
+          {
+            "alias": "member-g",
+            "role": "hardware calibration researcher",
+            "identityAttested": false,
+            "ndaVersion": "NDA-2026-03"
+          }
+        ],
+        "findings": [
+          {
+            "severity": "medium",
+            "code": "ACTIVE_SUBMISSION_LIMIT",
+            "message": "Team is already carrying too many active bounty submissions.",
+            "evidence": {
+              "activeSubmissions": 3,
+              "limit": 3
+            }
+          },
+          {
+            "severity": "critical",
+            "code": "IDENTITY_ATTESTATION_MISSING",
+            "message": "All solver members must complete identity attestation before private challenge access.",
+            "evidence": {
+              "members": [
+                "member-g"
+              ]
+            }
+          },
+          {
+            "severity": "critical",
+            "code": "NDA_REQUIRED",
+            "message": "Challenge requires the current NDA before workspace access.",
+            "evidence": {
+              "requiredVersion": "NDA-2026-04",
+              "members": [
+                "member-g"
+              ]
+            }
+          },
+          {
+            "severity": "critical",
+            "code": "SPONSOR_CONFLICT",
+            "message": "Recent sponsor affiliation creates a conflict for this private challenge.",
+            "evidence": {
+              "sponsorId": "q-lattice",
+              "lookbackMonths": 24
+            }
+          }
+        ],
+        "checklist": [
+          {
+            "item": "Required expertise threshold met",
+            "complete": true
+          },
+          {
+            "item": "Availability supports milestone cadence",
+            "complete": true
+          },
+          {
+            "item": "All members completed identity attestation",
+            "complete": false
+          },
+          {
+            "item": "NDA version current when required",
+            "complete": false
+          },
+          {
+            "item": "No recent sponsor conflict detected",
+            "complete": false
+          },
+          {
+            "item": "Team workload under active submission limit",
+            "complete": false
+          }
+        ]
+      },
+      "auditDigest": "58a6030a4fea04819881aafd392d52d54908f1e35a346c8be31d6768d9be5bd8",
+      "signedEvent": {
+        "type": "bounty.solver_prequalification.evaluated",
+        "challengeId": "CHAL-QUANT-009",
+        "teamId": "TEAM-PULSE",
+        "decision": "blocked",
+        "workspaceAccess": "deny-until-remediated",
+        "findingCodes": [
+          "ACTIVE_SUBMISSION_LIMIT",
+          "IDENTITY_ATTESTATION_MISSING",
+          "NDA_REQUIRED",
+          "SPONSOR_CONFLICT"
+        ],
+        "generatedAt": "2026-05-20T11:30:00.000Z",
+        "signature": "sha256=08b1c5ffa3aa515633a07fd685a9fabd515970041fd4c6d74a67923bccfc2b3b"
+      }
+    }
+  ],
+  "auditDigest": "37a61012ad0a658821102702f3fb210345f67828e1ebb90223aaaa9396a8d620"
+}

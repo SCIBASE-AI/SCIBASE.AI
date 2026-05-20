@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430">
+  <rect width="960" height="430" fill="#f8fafc"/>
+  <text x="52" y="62" font-size="34" font-family="Arial" font-weight="700" fill="#111827">Solver Prequalification Queue</text>
+  <text x="52" y="98" font-size="18" font-family="Arial" fill="#4b5563">Approved 2 / Review 1 / Blocked 1</text>
+  
+  <g transform="translate(52 150)">
+    <rect width="24" height="24" rx="5" fill="#2f9e44" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">Solver-Aster - approved</text>
+    <text x="540" y="18" font-size="15" font-family="Arial" fill="#4b5563">clear</text>
+  </g>
+  <g transform="translate(52 202)">
+    <rect width="24" height="24" rx="5" fill="#f08c00" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">Solver-Delta - needs-review</text>
+    <text x="540" y="18" font-size="15" font-family="Arial" fill="#4b5563">EXPERTISE_GAP, AVAILABILITY_GAP</text>
+  </g>
+  <g transform="translate(52 254)">
+    <rect width="24" height="24" rx="5" fill="#2f9e44" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">Meridian Climate Analytics - approved</text>
+    <text x="540" y="18" font-size="15" font-family="Arial" fill="#4b5563">clear</text>
+  </g>
+  <g transform="translate(52 306)">
+    <rect width="24" height="24" rx="5" fill="#c92a2a" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">Solver-Quanta - blocked</text>
+    <text x="540" y="18" font-size="15" font-family="Arial" fill="#4b5563">ACTIVE_SUBMISSION_LIMIT, IDENTITY_ATTESTATION_MISSING, NDA_REQUIRED, SPONSOR_CONFLICT</text>
+  </g>
+  <text x="52" y="390" font-size="14" font-family="Arial" fill="#6b7280">Audit digest: 37a61012ad0a658821102702f3fb2103...</text>
+</svg>

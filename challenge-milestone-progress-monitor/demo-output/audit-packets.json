@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-05-20T12:00:00.000Z",
+  "challengeId": "SCI-BIO-42",
+  "title": "Biomarker discovery challenge",
+  "packets": [
+    {
+      "teamId": "team-aurora",
+      "teamName": "Aurora Lab",
+      "milestoneId": "prototype",
+      "milestoneLabel": "Prototype package",
+      "generatedAt": "2026-05-20T12:00:00.000Z",
+      "decision": "hold_for_escalation",
+      "flags": [
+        "MISSING_MILESTONE_EVIDENCE",
+        "SPONSOR_FEEDBACK_OVERDUE",
+        "SOLVER_IDLE_RISK",
+        "RESUBMISSION_WINDOW_EXPIRED",
+        "REVIEW_PACKET_INCOMPLETE"
+      ],
+      "riskScore": 13,
+      "deadlineState": {
+        "milestoneDueAt": "2026-05-18T12:00:00.000Z",
+        "feedbackSlaHours": 48,
+        "idleHours": 152,
+        "resubmissionHours": 72
+      },
+      "missingEvidence": [
+        "validation-report",
+        "artifact-manifest"
+      ],
+      "overdueFeedbackRequests": [
+        {
+          "milestoneId": "prototype",
+          "requestedAt": "2026-05-17T06:00:00.000Z",
+          "hoursOpen": 78,
+          "slaHours": 48
+        }
+      ],
+      "expiredResubmissionWindows": [
+        {
+          "milestoneId": "prototype",
+          "openedAt": "2026-05-16T00:00:00.000Z",
+          "hoursOpen": 108,
+          "resubmissionHours": 72
+        }
+      ],
+      "missingReviewerPacketItems": [
+        "artifact-manifest",
+        "reproduction-notes"
+      ],
+      "solverActions": [
+        "Submit validation-report, artifact-manifest evidence before milestone review",
+        "Post a solver progress update or request a scoped extension"
+      ],
+      "sponsorActions": [
+        "Resolve overdue sponsor feedback for Prototype package before arbitration",
+        "Decide whether to close or extend Prototype package resubmission window"
+      ],
+      "reviewerTasks": [
+        "Add artifact-manifest, reproduction-notes to reviewer packet before review routing"
+      ],
+      "auditDigest": "cmpm_878fb4e07adaa84b4cae08c1"
+    },
+    {
+      "teamId": "team-nova",
+      "teamName": "Nova Institute",
+      "milestoneId": "prototype",
+      "milestoneLabel": "Prototype package",
+      "generatedAt": "2026-05-20T12:00:00.000Z",
+      "decision": "ready_for_review",
+      "flags": [],
+      "riskScore": 0,
+      "deadlineState": {
+        "milestoneDueAt": "2026-05-18T12:00:00.000Z",
+        "feedbackSlaHours": 48,
+        "idleHours": 4,
+        "resubmissionHours": 72
+      },
+      "missingEvidence": [],
+      "overdueFeedbackRequests": [],
+      "expiredResubmissionWindows": [],
+      "missingReviewerPacketItems": [],
+      "solverActions": [],
+      "sponsorActions": [],
+      "reviewerTasks": [
+        "Route complete milestone packet to reviewers"
+      ],
+      "auditDigest": "cmpm_8d4e2d1f634b250de91e464d"
+    },
+    {
+      "teamId": "team-quasar",
+      "teamName": "Quasar Students",
+      "milestoneId": "final",
+      "milestoneLabel": "Final replication packet",
+      "generatedAt": "2026-05-20T12:00:00.000Z",
+      "decision": "needs_solver_action",
+      "flags": [
+        "MISSING_MILESTONE_EVIDENCE",
+        "REVIEW_PACKET_INCOMPLETE"
+      ],
+      "riskScore": 5,
+      "deadlineState": {
+        "milestoneDueAt": "2026-06-10T12:00:00.000Z",
+        "feedbackSlaHours": 48,
+        "idleHours": 18,
+        "resubmissionHours": 96
+      },
+      "missingEvidence": [
+        "independent-replication"
+      ],
+      "overdueFeedbackRequests": [],
+      "expiredResubmissionWindows": [],
+      "missingReviewerPacketItems": [
+        "replication-log",
+        "sponsor-feedback"
+      ],
+      "solverActions": [
+        "Submit independent-replication evidence before milestone review"
+      ],
+      "sponsorActions": [],
+      "reviewerTasks": [
+        "Add replication-log, sponsor-feedback to reviewer packet before review routing"
+      ],
+      "auditDigest": "cmpm_6ddb98999ede6078045762d1"
+    }
+  ],
+  "summary": {
+    "counts": {
+      "totalTeams": 3,
+      "readyForReview": 1,
+      "needsSolverAction": 1,
+      "escalations": 1,
+      "highRisk": 1
+    },
+    "nextActions": [
+      "Resolve 1 escalation packet before arbitration.",
+      "Request solver updates for 1 milestone packet.",
+      "Review 1 complete milestone packet."
+    ]
+  }
+}

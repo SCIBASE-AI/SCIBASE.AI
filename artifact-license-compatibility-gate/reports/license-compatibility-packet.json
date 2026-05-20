@@ -1,0 +1,94 @@
+{
+  "releaseId": "rel-neuro-imaging-2026-05",
+  "releaseIntent": "public-commercial-reuse",
+  "targetLicense": "Apache-2.0",
+  "releaseStatus": "blocked",
+  "licenseMix": [
+    "Apache-2.0",
+    "CC-BY-4.0",
+    "CC-BY-NC-4.0",
+    "GPL-3.0",
+    "MIT"
+  ],
+  "readyArtifacts": [
+    "data-001",
+    "code-001",
+    "model-001"
+  ],
+  "blockedArtifacts": [
+    "supp-001",
+    "code-002"
+  ],
+  "evaluations": [
+    {
+      "artifactId": "data-001",
+      "name": "curated imaging labels",
+      "type": "dataset",
+      "license": "CC-BY-4.0",
+      "status": "release-ready",
+      "holds": [],
+      "remediation": []
+    },
+    {
+      "artifactId": "code-001",
+      "name": "segmentation pipeline",
+      "type": "code",
+      "license": "MIT",
+      "status": "release-ready",
+      "holds": [],
+      "remediation": []
+    },
+    {
+      "artifactId": "model-001",
+      "name": "baseline weights",
+      "type": "model",
+      "license": "Apache-2.0",
+      "status": "release-ready",
+      "holds": [],
+      "remediation": []
+    },
+    {
+      "artifactId": "supp-001",
+      "name": "reference atlas",
+      "type": "supplement",
+      "license": "CC-BY-NC-4.0",
+      "status": "blocked",
+      "holds": [
+        "commercial-use-blocked",
+        "missing-attribution"
+      ],
+      "remediation": [
+        "Replace, relicense, or exclude non-commercial artifacts from commercial releases.",
+        "Add required attribution before publication."
+      ]
+    },
+    {
+      "artifactId": "code-002",
+      "name": "legacy stats helper",
+      "type": "code",
+      "license": "GPL-3.0",
+      "status": "blocked",
+      "holds": [
+        "copyleft-target-license-conflict"
+      ],
+      "remediation": [
+        "Isolate GPL artifact or align the release target license with copyleft obligations."
+      ]
+    }
+  ],
+  "policyReceipt": {
+    "checkedRules": [
+      "Apache-2.0",
+      "CC-BY-4.0",
+      "CC-BY-NC-4.0",
+      "GPL-3.0",
+      "MIT",
+      "Proprietary"
+    ],
+    "releaseBlockingSignals": [
+      "commercial-use-blocked",
+      "copyleft-target-license-conflict",
+      "missing-attribution"
+    ]
+  }
+}

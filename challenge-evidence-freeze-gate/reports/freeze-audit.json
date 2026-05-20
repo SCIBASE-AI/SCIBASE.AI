@@ -1,0 +1,121 @@
+{
+  "module": "challenge-evidence-freeze-gate",
+  "challenge": {
+    "id": "challenge-cell-atlas-forecast",
+    "title": "Single-cell biomarker forecast challenge",
+    "deadline": "2026-05-18T23:59:59Z",
+    "reviewOpenedAt": "2026-05-19T09:00:00Z"
+  },
+  "submission": {
+    "id": "team-northlake-final",
+    "teamId": "team-northlake"
+  },
+  "summary": {
+    "releaseDecision": "hold-evaluation-and-payout",
+    "blockerCount": 4,
+    "totalDiffs": 6,
+    "countsBySeverity": {
+      "blocker": 4,
+      "medium": 1,
+      "high": 1
+    },
+    "countsByCode": {
+      "checksum-drift": 1,
+      "metric-drift": 2,
+      "metadata-size-drift": 1,
+      "primary-artifact-added-after-deadline": 1,
+      "exception-justification-missing": 1
+    }
+  },
+  "diffs": [
+    {
+      "severity": "blocker",
+      "code": "checksum-drift",
+      "artifactId": "model",
+      "message": "model checksum changed from sha256:model-v1 to sha256:model-v2.",
+      "task": "Freeze evaluation for this artifact and route to arbitration before scoring.",
+      "justification": "retrained after discovering seed typo"
+    },
+    {
+      "severity": "blocker",
+      "code": "metric-drift",
+      "artifactId": "model",
+      "message": "model metric heldout_auc changed from 0.842 to 0.861.",
+      "task": "Require reviewer-visible metric-change explanation and pre-deadline reproduction evidence.",
+      "justification": "retrained after discovering seed typo"
+    },
+    {
+      "severity": "blocker",
+      "code": "metric-drift",
+      "artifactId": "whitepaper",
+      "message": "whitepaper metric page_count changed from 12 to 13.",
+      "task": "Require reviewer-visible metric-change explanation and pre-deadline reproduction evidence.",
+      "justification": "added funding acknowledgement only"
+    },
+    {
+      "severity": "medium",
+      "code": "metadata-size-drift",
+      "artifactId": "whitepaper",
+      "message": "whitepaper size changed while checksum stayed fixed.",
+      "task": "Verify packaging metadata and storage manifest generation.",
+      "justification": "added funding acknowledgement only"
+    },
+    {
+      "severity": "blocker",
+      "code": "primary-artifact-added-after-deadline",
+      "artifactId": "supplement",
+      "message": "supplement was added after the frozen deadline manifest.",
+      "task": "Exclude this artifact from scoring and hold payout/arbitration until reviewed.",
+      "justification": ""
+    },
+    {
+      "severity": "high",
+      "code": "exception-justification-missing",
+      "artifactId": "supplement",
+      "message": "supplement has no reviewer-visible late-addition justification.",
+      "task": "Require a public exception note before sponsor review.",
+      "justification": ""
+    }
+  ],
+  "arbitrationPacket": {
+    "challengeId": "challenge-cell-atlas-forecast",
+    "submissionId": "team-northlake-final",
+    "frozenAt": "2026-05-18T23:58:44Z",
+    "observedAt": "2026-05-19T14:12:00Z",
+    "frozenManifestHash": "sha256:frozen-manifest-001",
+    "currentManifestHash": "sha256:current-manifest-002",
+    "excludedFromScoring": [
+      "model",
+      "model",
+      "whitepaper",
+      "supplement"
+    ],
+    "reviewerTasks": [
+      "Freeze evaluation for this artifact and route to arbitration before scoring.",
+      "Require reviewer-visible metric-change explanation and pre-deadline reproduction evidence.",
+      "Require reviewer-visible metric-change explanation and pre-deadline reproduction evidence.",
+      "Verify packaging metadata and storage manifest generation.",
+      "Exclude this artifact from scoring and hold payout/arbitration until reviewed.",
+      "Require a public exception note before sponsor review."
+    ],
+    "publicExceptionNotes": [
+      {
+        "artifactId": "model",
+        "justification": "retrained after discovering seed typo"
+      },
+      {
+        "artifactId": "model",
+        "justification": "retrained after discovering seed typo"
+      },
+      {
+        "artifactId": "whitepaper",
+        "justification": "added funding acknowledgement only"
+      },
+      {
+        "artifactId": "whitepaper",
+        "justification": "added funding acknowledgement only"
+      }
+    ]
+  },
+  "auditDigest": "f9aacb2b51e4f942d760548b7e4ebcd13705da0243151e2a223c56e2d8333901"
+}

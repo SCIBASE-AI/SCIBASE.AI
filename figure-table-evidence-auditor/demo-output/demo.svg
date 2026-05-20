@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <style>
+    .bg { fill: #f8fafc; }
+    .panel { fill: white; stroke: #cbd5e1; stroke-width: 2; }
+    .h1 { font: 700 34px Arial, sans-serif; fill: #0f172a; }
+    .body { font: 400 18px Arial, sans-serif; fill: #334155; }
+    .title { font: 700 20px Arial, sans-serif; fill: #111827; }
+    .badge { font: 700 18px Arial, sans-serif; fill: white; }
+  </style>
+  <rect class="bg" width="1200" height="420"/>
+  <rect class="panel" x="36" y="36" width="1128" height="348" rx="12"/>
+  <text x="70" y="92" class="h1">Figure/Table Evidence Auditor</text>
+  <text x="70" y="124" class="body">Evidence-linked summaries, peer-review redlines, and citation insert decisions for AI-assisted research tools.</text>
+  <text x="70" y="150" class="title">ms-neuro-042: Closed-loop stimulation improves memory-task recovery</text>
+<text x="70" y="178" class="body">readiness: hold-for-author-fix | high 1 | medium 3 | digest fta-8211b6be</text>
+<rect x="930" y="123" width="190" height="42" rx="6" fill="#b45309"/>
+<text x="954" y="150" class="badge">author fix</text>
+<text x="70" y="238" class="title">ms-climate-117: River heat pulses alter macroinvertebrate recovery</text>
+<text x="70" y="266" class="body">readiness: ready-for-human-review | high 0 | medium 0 | digest fta-803f217a</text>
+<rect x="930" y="211" width="190" height="42" rx="6" fill="#1b8a5a"/>
+<text x="954" y="238" class="badge">review ready</text>
+</svg>

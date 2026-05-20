@@ -1,0 +1,105 @@
+{
+  "packetId": "export-queue-001",
+  "title": "Enterprise Data Export Approval Queue",
+  "context": "Enterprise Tooling",
+  "status": "needs-review",
+  "readyItems": [
+    "export-1"
+  ],
+  "heldItems": [
+    "export-2",
+    "export-3"
+  ],
+  "evaluations": [
+    {
+      "itemId": "export-1",
+      "name": "Open project metrics",
+      "type": "export",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "export-2",
+      "name": "Human subjects extract",
+      "type": "export",
+      "status": "held",
+      "holds": [
+        "missing-admin-approval",
+        "restricted-data",
+        "destination-blocked",
+        "missing-ticket",
+        "large-export"
+      ],
+      "holdLabels": [
+        "missing admin approval",
+        "restricted data requires review",
+        "destination is not allowed",
+        "missing audit ticket",
+        "large export needs sampling review"
+      ],
+      "remediation": [
+        "Require institutional admin approval before export.",
+        "Attach DUA, IRB, or privacy review before export.",
+        "Use an approved destination or request compliance exception.",
+        "Create export audit ticket before queue release.",
+        "Run sampling or minimization review for large exports."
+      ]
+    },
+    {
+      "itemId": "export-3",
+      "name": "Department dashboard CSV",
+      "type": "export",
+      "status": "held",
+      "holds": [
+        "restricted-data"
+      ],
+      "holdLabels": [
+        "restricted data requires review"
+      ],
+      "remediation": [
+        "Attach DUA, IRB, or privacy review before export."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "missing-admin-approval": 1,
+    "restricted-data": 2,
+    "destination-blocked": 1,
+    "missing-ticket": 1,
+    "large-export": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "export-2",
+      "hold": "missing-admin-approval",
+      "action": "Require institutional admin approval before export."
+    },
+    {
+      "itemId": "export-2",
+      "hold": "restricted-data",
+      "action": "Attach DUA, IRB, or privacy review before export."
+    },
+    {
+      "itemId": "export-2",
+      "hold": "destination-blocked",
+      "action": "Use an approved destination or request compliance exception."
+    },
+    {
+      "itemId": "export-2",
+      "hold": "missing-ticket",
+      "action": "Create export audit ticket before queue release."
+    },
+    {
+      "itemId": "export-2",
+      "hold": "large-export",
+      "action": "Run sampling or minimization review for large exports."
+    },
+    {
+      "itemId": "export-3",
+      "hold": "restricted-data",
+      "action": "Attach DUA, IRB, or privacy review before export."
+    }
+  ]
+}

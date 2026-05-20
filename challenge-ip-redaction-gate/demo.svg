@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Challenge IP Redaction Gate demo slide</title>
+  <desc id="desc">Demo summary for sponsor redaction, reviewer packet, settlement unlock, and test validation.</desc>
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="64" y="64" width="1152" height="592" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="96" y="140" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">SCIBASE Scientific Bounty System</text>
+  <text x="96" y="202" fill="#93c5fd" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">Challenge IP Redaction Gate</text>
+  <text x="96" y="304" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="34">Sponsor preview - protected solver IP redacted</text>
+  <text x="96" y="366" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="34">Reviewer packet - NDA access with audit digest</text>
+  <text x="96" y="428" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="34">Funded settlement - IP transfer unlocks</text>
+  <text x="96" y="530" fill="#bbf7d0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Validation - node test.js - 6 tests passed</text>
+  <text x="96" y="590" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="24">Dependency-free, synthetic-data-only, deterministic audit evidence.</text>
+</svg>

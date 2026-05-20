@@ -1,0 +1,105 @@
+{
+  "packetId": "repo-meta-001",
+  "title": "Repository Metadata Release Readiness Gate",
+  "context": "Project Repository & Version Control",
+  "status": "needs-review",
+  "readyItems": [
+    "manuscript"
+  ],
+  "heldItems": [
+    "dataset",
+    "notebook"
+  ],
+  "evaluations": [
+    {
+      "itemId": "manuscript",
+      "name": "Manuscript package",
+      "type": "repository-section",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "dataset",
+      "name": "Dataset package",
+      "type": "repository-section",
+      "status": "held",
+      "holds": [
+        "missing-contributors",
+        "missing-funding"
+      ],
+      "holdLabels": [
+        "missing contributor metadata",
+        "missing funding metadata"
+      ],
+      "remediation": [
+        "Attach contributor and CRediT role metadata.",
+        "Add grant/funder references or mark as not applicable."
+      ]
+    },
+    {
+      "itemId": "notebook",
+      "name": "Notebook package",
+      "type": "repository-section",
+      "status": "held",
+      "holds": [
+        "missing-license",
+        "missing-keywords",
+        "missing-funding",
+        "missing-version"
+      ],
+      "holdLabels": [
+        "missing license metadata",
+        "missing discovery keywords",
+        "missing funding metadata",
+        "missing version metadata"
+      ],
+      "remediation": [
+        "Add section-level license metadata before release.",
+        "Add searchable scientific keywords.",
+        "Add grant/funder references or mark as not applicable.",
+        "Assign immutable release version metadata."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "missing-contributors": 1,
+    "missing-funding": 2,
+    "missing-license": 1,
+    "missing-keywords": 1,
+    "missing-version": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "dataset",
+      "hold": "missing-contributors",
+      "action": "Attach contributor and CRediT role metadata."
+    },
+    {
+      "itemId": "dataset",
+      "hold": "missing-funding",
+      "action": "Add grant/funder references or mark as not applicable."
+    },
+    {
+      "itemId": "notebook",
+      "hold": "missing-license",
+      "action": "Add section-level license metadata before release."
+    },
+    {
+      "itemId": "notebook",
+      "hold": "missing-keywords",
+      "action": "Add searchable scientific keywords."
+    },
+    {
+      "itemId": "notebook",
+      "hold": "missing-funding",
+      "action": "Add grant/funder references or mark as not applicable."
+    },
+    {
+      "itemId": "notebook",
+      "hold": "missing-version",
+      "action": "Assign immutable release version metadata."
+    }
+  ]
+}

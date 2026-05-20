@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Domain Review Template Selector</title>
+  <desc id="desc">A visual summary showing manuscript domain classification, template selection, evidence checks, and review packet routing.</desc>
+  <rect width="1280" height="720" fill="#10201b"/>
+  <rect x="72" y="72" width="1136" height="576" rx="24" fill="#f8fafc"/>
+  <text x="120" y="142" fill="#10201b" font-family="Arial, sans-serif" font-size="46" font-weight="700">Domain Review Template Selector</text>
+  <text x="120" y="188" fill="#475569" font-family="Arial, sans-serif" font-size="24">Adaptive peer-review templates for AI research assistant packets.</text>
+  <g transform="translate(120 250)">
+    <rect width="250" height="130" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+    <text x="24" y="48" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="28" font-weight="700">Classify</text>
+    <text x="24" y="86" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="22">keywords + methods</text>
+  </g>
+  <g transform="translate(405 250)">
+    <rect width="250" height="130" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+    <text x="24" y="48" fill="#14532d" font-family="Arial, sans-serif" font-size="28" font-weight="700">Template</text>
+    <text x="24" y="86" fill="#166534" font-family="Arial, sans-serif" font-size="22">domain-specific sections</text>
+  </g>
+  <g transform="translate(690 250)">
+    <rect width="250" height="130" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="4"/>
+    <text x="24" y="48" fill="#78350f" font-family="Arial, sans-serif" font-size="28" font-weight="700">Check</text>
+    <text x="24" y="86" fill="#92400e" font-family="Arial, sans-serif" font-size="22">evidence + reproducibility</text>
+  </g>
+  <text x="120" y="470" fill="#10201b" font-family="Arial, sans-serif" font-size="28" font-weight="700">Output</text>
+  <text x="120" y="510" fill="#475569" font-family="Arial, sans-serif" font-size="23">template id, review questions, blockers, warnings, reviewer expertise, audit digest</text>
+  <text x="120" y="590" fill="#10201b" font-family="Arial, sans-serif" font-size="24">Clinical, ML, wet-lab biology, materials/chemistry, computational, and general science.</text>
+</svg>

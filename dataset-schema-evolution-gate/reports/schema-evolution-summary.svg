@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="36" y="36" width="1208" height="648" rx="18" fill="#ffffff" stroke="#d0d5dd"/>
+  <style>
+    .title { font: 700 42px Arial, sans-serif; fill: #101828; }
+    .label { font: 700 20px Arial, sans-serif; fill: #344054; }
+    .value { font: 600 28px Arial, sans-serif; fill: #101828; }
+    .row { font: 500 22px Arial, sans-serif; fill: #344054; }
+    .small { font: 500 18px Arial, sans-serif; fill: #667085; }
+  </style>
+  <text x="54" y="104" class="title">Dataset Schema Evolution Gate</text>
+  <text x="54" y="150" class="small">ds-cell-response-042 2026.04 -> 2026.05</text>
+  <rect x="54" y="178" width="330" height="64" rx="10" fill="#b42318"/>
+  <text x="78" y="219" style="font:700 24px Arial,sans-serif;fill:#fff">hold-for-migration</text>
+  <text x="440" y="205" class="label">Score</text>
+  <text x="440" y="238" class="value">44/100</text>
+  <text x="54" y="292" class="label">Top Findings</text>
+  <text x="54" y="235" class="row">WARNING - renamed_field - donor_group</text>
+<text x="54" y="271" class="row">WARNING - renamed_field - dose_mg</text>
+<text x="54" y="307" class="row">WARNING - unit_change - dose_ug</text>
+<text x="54" y="343" class="row">WARNING - type_change - response_score</text>
+<text x="54" y="379" class="row">INFO - added_field - instrument_batch</text>
+  <text x="690" y="292" class="label">Consumer Decisions</text>
+  <text x="690" y="335" class="row">preview-table-v2: review</text>
+<text x="690" y="383" class="row">public-api-normalized-response: hold</text>
+<text x="690" y="431" class="row">notebook-rerun-dose-response: hold</text>
+  <text x="54" y="610" class="small">Generated from synthetic sample data. No secrets, live records, or payment data.</text>
+</svg>

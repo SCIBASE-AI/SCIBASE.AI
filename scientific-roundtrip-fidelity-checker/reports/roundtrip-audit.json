@@ -1,0 +1,190 @@
+{
+  "document": {
+    "id": "collab-ms-127",
+    "title": "Hybrid Bayesian Imaging Biomarkers",
+    "version": "v4.2.0",
+    "publicationStyle": "nature"
+  },
+  "checker": "scientific-roundtrip-fidelity-checker",
+  "summary": {
+    "averageScore": 35,
+    "releaseDecision": "repair-before-submit",
+    "totalFindings": 14,
+    "countsBySeverity": {
+      "medium": 7,
+      "high": 6,
+      "low": 1
+    },
+    "weakestFormats": [
+      {
+        "format": "notebook",
+        "fidelityScore": 10,
+        "decision": "repair-before-submit"
+      },
+      {
+        "format": "latex",
+        "fidelityScore": 36,
+        "decision": "repair-before-submit"
+      },
+      {
+        "format": "markdown",
+        "fidelityScore": 60,
+        "decision": "repair-before-submit"
+      }
+    ]
+  },
+  "formatReports": [
+    {
+      "format": "markdown",
+      "exporter": "collab-md-v2",
+      "importer": "collab-md-v2",
+      "timestamp": "2026-05-20T09:40:00Z",
+      "fidelityScore": 60,
+      "decision": "repair-before-submit",
+      "findingCount": 3,
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "citation-key-lost",
+          "message": "Citation keys missing after round trip for table-cohorts: harmonization-lockfile.",
+          "task": "Preserve citation keys metadata for table-cohorts in this format.",
+          "blockId": "table-cohorts"
+        },
+        {
+          "severity": "medium",
+          "code": "suggestion-lost",
+          "message": "Unresolved suggestions missing after round trip for table-cohorts: add missing data footnote.",
+          "task": "Preserve unresolved suggestions metadata for table-cohorts in this format.",
+          "blockId": "table-cohorts"
+        },
+        {
+          "severity": "high",
+          "code": "cross-reference-lost",
+          "message": "markdown round trip lost produces-summary link cell-harmonize -> table-cohorts.",
+          "task": "Preserve cross-reference cell-harmonize -> table-cohorts during markdown import.",
+          "blockId": "cell-harmonize"
+        }
+      ],
+      "repairedBy": [
+        "Preserve citation keys metadata for table-cohorts in this format.",
+        "Preserve unresolved suggestions metadata for table-cohorts in this format.",
+        "Preserve cross-reference cell-harmonize -> table-cohorts during markdown import."
+      ]
+    },
+    {
+      "format": "latex",
+      "exporter": "collab-tex-v1",
+      "importer": "collab-tex-v1",
+      "timestamp": "2026-05-20T09:42:00Z",
+      "fidelityScore": 36,
+      "decision": "repair-before-submit",
+      "findingCount": 5,
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "citation-key-lost",
+          "message": "Citation keys missing after round trip for intro-eq-1: nguyen2025-imaging.",
+          "task": "Preserve citation keys metadata for intro-eq-1 in this format.",
+          "blockId": "intro-eq-1"
+        },
+        {
+          "severity": "medium",
+          "code": "comment-thread-lost",
+          "message": "Comment threads missing after round trip for intro-eq-1: resolve prior sensitivity note.",
+          "task": "Preserve comment threads metadata for intro-eq-1 in this format.",
+          "blockId": "intro-eq-1"
+        },
+        {
+          "severity": "high",
+          "code": "equation-mutated",
+          "message": "Equation LaTeX changed for intro-eq-1: expected \"p(\\\\theta | y) \\\\propto p(y | \\\\theta)p(\\\\theta)\", got \"p(\\\\theta | y) = p(y | \\\\theta)p(\\\\theta)\".",
+          "task": "Regenerate the export/import adapter so equation latex survives round trip for intro-eq-1.",
+          "blockId": "intro-eq-1"
+        },
+        {
+          "severity": "low",
+          "code": "source-asset-transcoded",
+          "message": "fig-signal source asset changed from figures/signal-panel.svg to figures/signal-panel.pdf.",
+          "task": "Confirm the transcoded figure keeps resolution, accessibility metadata, and citation anchors.",
+          "blockId": "fig-signal"
+        },
+        {
+          "severity": "high",
+          "code": "table-column-lost",
+          "message": "Table columns missing after round trip for table-cohorts: median_age.",
+          "task": "Preserve table columns metadata for table-cohorts in this format.",
+          "blockId": "table-cohorts"
+        }
+      ],
+      "repairedBy": [
+        "Preserve citation keys metadata for intro-eq-1 in this format.",
+        "Preserve comment threads metadata for intro-eq-1 in this format.",
+        "Regenerate the export/import adapter so equation latex survives round trip for intro-eq-1.",
+        "Confirm the transcoded figure keeps resolution, accessibility metadata, and citation anchors.",
+        "Preserve table columns metadata for table-cohorts in this format."
+      ]
+    },
+    {
+      "format": "notebook",
+      "exporter": "collab-ipynb-v3",
+      "importer": "collab-ipynb-v3",
+      "timestamp": "2026-05-20T09:44:00Z",
+      "fidelityScore": 10,
+      "decision": "repair-before-submit",
+      "findingCount": 6,
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "suggestion-lost",
+          "message": "Unresolved suggestions missing after round trip for intro-eq-1: explain weakly informative prior.",
+          "task": "Preserve unresolved suggestions metadata for intro-eq-1 in this format.",
+          "blockId": "intro-eq-1"
+        },
+        {
+          "severity": "medium",
+          "code": "comment-thread-lost",
+          "message": "Comment threads missing after round trip for fig-signal: confirm color-safe palette.",
+          "task": "Preserve comment threads metadata for fig-signal in this format.",
+          "blockId": "fig-signal"
+        },
+        {
+          "severity": "high",
+          "code": "cell-output-mutated",
+          "message": "Notebook output hash changed for cell-harmonize: expected \"sha256:cell-output-harmonize\", got \"sha256:cell-output-stale\".",
+          "task": "Regenerate the export/import adapter so notebook output hash survives round trip for cell-harmonize.",
+          "blockId": "cell-harmonize"
+        },
+        {
+          "severity": "medium",
+          "code": "cell-execution-count-drift",
+          "message": "Execution count changed for cell-harmonize: expected 18, got 12.",
+          "task": "Regenerate the export/import adapter so execution count survives round trip for cell-harmonize.",
+          "blockId": "cell-harmonize"
+        },
+        {
+          "severity": "high",
+          "code": "cross-reference-lost",
+          "message": "notebook round trip lost produces-summary link cell-harmonize -> table-cohorts.",
+          "task": "Preserve cross-reference cell-harmonize -> table-cohorts during notebook import.",
+          "blockId": "cell-harmonize"
+        },
+        {
+          "severity": "high",
+          "code": "cross-reference-lost",
+          "message": "notebook round trip lost shared-cohort link table-cohorts -> fig-signal.",
+          "task": "Preserve cross-reference table-cohorts -> fig-signal during notebook import.",
+          "blockId": "table-cohorts"
+        }
+      ],
+      "repairedBy": [
+        "Preserve unresolved suggestions metadata for intro-eq-1 in this format.",
+        "Preserve comment threads metadata for fig-signal in this format.",
+        "Regenerate the export/import adapter so notebook output hash survives round trip for cell-harmonize.",
+        "Regenerate the export/import adapter so execution count survives round trip for cell-harmonize.",
+        "Preserve cross-reference cell-harmonize -> table-cohorts during notebook import.",
+        "Preserve cross-reference table-cohorts -> fig-signal during notebook import."
+      ]
+    }
+  ],
+  "auditDigest": "da45ce37c71f4a4f7ffcaaca096fc93a959517aaee096c7bc15f3346ed557599"
+}

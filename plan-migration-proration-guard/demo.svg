@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Plan migration proration guard demo summary">
+  <rect width="1280" height="720" fill="#101418"/>
+  <rect x="72" y="64" width="1136" height="592" rx="18" fill="#f7fafc"/>
+  <text x="112" y="128" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#14213d">Plan Migration Proration Guard</text>
+  <text x="112" y="174" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#405261">Revenue Infrastructure control for mid-term upgrades, downgrades, and trial conversions</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="112" y="226" width="314" height="142" rx="10" fill="#e8f4ff" stroke="#9bc8ee"/>
+    <text x="138" y="272" font-size="20" fill="#405261">Ready migrations</text>
+    <text x="138" y="330" font-size="60" font-weight="700" fill="#0f766e">1</text>
+    <rect x="482" y="226" width="314" height="142" rx="10" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="508" y="272" font-size="20" fill="#405261">Held for approval</text>
+    <text x="508" y="330" font-size="60" font-weight="700" fill="#c2410c">1</text>
+    <rect x="852" y="226" width="314" height="142" rx="10" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="878" y="272" font-size="20" fill="#405261">Blocked</text>
+    <text x="878" y="330" font-size="60" font-weight="700" fill="#b91c1c">1</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#14213d">
+    <text x="112" y="438">Checks: signed quote, invoice readiness, seat floor, duplicate invoice, compute carryover cap</text>
+    <text x="112" y="488">Outputs: unused credit, prorated charge, net invoice, credit memo, ARR delta, audit digest</text>
+    <text x="112" y="538">No credentials, payment rails, or live customer data are touched.</text>
+  </g>
+  <rect x="112" y="584" width="1054" height="2" fill="#d7dee8"/>
+  <text x="112" y="624" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#405261">Synthetic demo artifact for SCIBASE.AI issue #20</text>
+</svg>

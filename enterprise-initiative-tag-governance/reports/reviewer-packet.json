@@ -1,0 +1,171 @@
+{
+  "organizationId": "research-office-demo",
+  "evaluatedAt": "2026-05-20T00:00:00.000Z",
+  "status": "blocked",
+  "summary": {
+    "policies": 3,
+    "projects": 2,
+    "assignments": 3,
+    "approved": 2,
+    "needsReview": 0,
+    "held": 1,
+    "blockerCount": 3,
+    "warningCount": 0
+  },
+  "assignmentReports": [
+    {
+      "projectId": "project-atlas",
+      "tagId": "grant-tracked",
+      "label": "Grant tracked",
+      "scope": "biology",
+      "status": "approved",
+      "blockers": [],
+      "warnings": [],
+      "dashboardVisible": true,
+      "event": {
+        "type": "enterprise_tag.approved",
+        "projectId": "project-atlas",
+        "tagId": "grant-tracked",
+        "status": "approved",
+        "blockerCount": 0,
+        "warningCount": 0,
+        "issuedAt": "2026-05-20T00:00:00.000Z",
+        "signature": "0cd50d892226890059543852ffb28317a085118d9f2d8ba7ce29bc45d870db6e"
+      }
+    },
+    {
+      "projectId": "project-atlas",
+      "tagId": "doctoral-work",
+      "label": "Doctoral work",
+      "scope": "biology",
+      "status": "approved",
+      "blockers": [],
+      "warnings": [],
+      "dashboardVisible": true,
+      "event": {
+        "type": "enterprise_tag.approved",
+        "projectId": "project-atlas",
+        "tagId": "doctoral-work",
+        "status": "approved",
+        "blockerCount": 0,
+        "warningCount": 0,
+        "issuedAt": "2026-05-20T00:00:00.000Z",
+        "signature": "67cf892ece6bccbfa50bc3e7f67e8d5e47923b8a7a9db135a5ffab7dbf768c37"
+      }
+    },
+    {
+      "projectId": "project-embargo",
+      "tagId": "public-initiative",
+      "label": "Public initiative",
+      "scope": "organization",
+      "status": "held",
+      "blockers": [
+        "tag public-initiative is missing owner approval",
+        "tag public-initiative expired on 2026-01-01",
+        "tag public-initiative would expose a restricted project in admin dashboard rollups"
+      ],
+      "warnings": [],
+      "dashboardVisible": false,
+      "event": {
+        "type": "enterprise_tag.held",
+        "projectId": "project-embargo",
+        "tagId": "public-initiative",
+        "status": "held",
+        "blockerCount": 3,
+        "warningCount": 0,
+        "issuedAt": "2026-05-20T00:00:00.000Z",
+        "signature": "ad4a314474888e8721c6931dc65e95819ab3c5044df033aa6879d31159dc29a5"
+      }
+    }
+  ],
+  "dashboardRollups": {
+    "byTag": [
+      {
+        "tagId": "doctoral-work",
+        "label": "Doctoral work",
+        "projectCount": 1,
+        "approvedCount": 1,
+        "heldCount": 0,
+        "needsReviewCount": 0,
+        "warningCount": 0,
+        "blockerCount": 0,
+        "departments": [
+          "biology"
+        ]
+      },
+      {
+        "tagId": "grant-tracked",
+        "label": "Grant tracked",
+        "projectCount": 1,
+        "approvedCount": 1,
+        "heldCount": 0,
+        "needsReviewCount": 0,
+        "warningCount": 0,
+        "blockerCount": 0,
+        "departments": [
+          "biology"
+        ]
+      },
+      {
+        "tagId": "public-initiative",
+        "label": "Public initiative",
+        "projectCount": 1,
+        "approvedCount": 0,
+        "heldCount": 1,
+        "needsReviewCount": 0,
+        "warningCount": 0,
+        "blockerCount": 3,
+        "departments": [
+          "oncology"
+        ]
+      }
+    ],
+    "byDepartment": [
+      {
+        "department": "biology",
+        "assignedTags": 2,
+        "dashboardVisibleTags": 2,
+        "heldTags": 0
+      },
+      {
+        "department": "oncology",
+        "assignedTags": 1,
+        "dashboardVisibleTags": 0,
+        "heldTags": 1
+      }
+    ]
+  },
+  "webhookEvents": [
+    {
+      "type": "enterprise_tag.approved",
+      "projectId": "project-atlas",
+      "tagId": "grant-tracked",
+      "status": "approved",
+      "blockerCount": 0,
+      "warningCount": 0,
+      "issuedAt": "2026-05-20T00:00:00.000Z",
+      "signature": "0cd50d892226890059543852ffb28317a085118d9f2d8ba7ce29bc45d870db6e"
+    },
+    {
+      "type": "enterprise_tag.approved",
+      "projectId": "project-atlas",
+      "tagId": "doctoral-work",
+      "status": "approved",
+      "blockerCount": 0,
+      "warningCount": 0,
+      "issuedAt": "2026-05-20T00:00:00.000Z",
+      "signature": "67cf892ece6bccbfa50bc3e7f67e8d5e47923b8a7a9db135a5ffab7dbf768c37"
+    },
+    {
+      "type": "enterprise_tag.held",
+      "projectId": "project-embargo",
+      "tagId": "public-initiative",
+      "status": "held",
+      "blockerCount": 3,
+      "warningCount": 0,
+      "issuedAt": "2026-05-20T00:00:00.000Z",
+      "signature": "ad4a314474888e8721c6931dc65e95819ab3c5044df033aa6879d31159dc29a5"
+    }
+  ],
+  "auditDigest": "ce54335865ff8107bef5be0524ae7bab67d38b5d234f3530b518622759f1e701"
+}

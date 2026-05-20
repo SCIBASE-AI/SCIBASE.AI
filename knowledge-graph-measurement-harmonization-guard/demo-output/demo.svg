@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="70" y="70" width="1140" height="580" rx="18" fill="#f8fafc"/>
+  <text x="110" y="145" font-family="Arial" font-size="43" font-weight="700" fill="#111827">Knowledge Graph Measurement Harmonization</text>
+  <text x="110" y="205" font-family="Arial" font-size="25" fill="#475569">kg-cardio-measurement-review</text>
+  <text x="110" y="275" font-family="Arial" font-size="33" font-weight="700" fill="#b91c1c">4 comparable-edge blockers</text>
+  <text x="120" y="315" font-family="Arial" font-size="23" fill="#1f2937">1. edge-rat-human-pressure: biological_context_mismatch</text>
+  <text x="120" y="363" font-family="Arial" font-size="23" fill="#1f2937">2. edge-low-provenance: provenance_confidence_low</text>
+  <text x="120" y="411" font-family="Arial" font-size="23" fill="#1f2937">3. edge-mean-vs-median: statistical_endpoint_mismatch</text>
+  <text x="120" y="459" font-family="Arial" font-size="23" fill="#1f2937">4. edge-glucose-rfu: unit_not_convertible</text>
+  <text x="110" y="620" font-family="Arial" font-size="22" fill="#475569">audit digest: 6b18c9efd5c2126643baa9b6...</text>
+</svg>

@@ -1,0 +1,290 @@
+{
+  "generatedAt": "2026-05-20T11:02:55.616Z",
+  "credits": [
+    {
+      "eventId": "evt:001",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:amy-orcid",
+      "canonicalResearcherId": "researcher:amy-chen",
+      "type": "dataset_upload",
+      "timestamp": "2026-05-20T02:00:00Z",
+      "rawCredit": 16.8,
+      "dashboardCredit": 16.8,
+      "serviceAccount": false,
+      "duplicateAlias": true,
+      "privateBoundary": false,
+      "labId": "lab:neuro",
+      "collaborationPair": [
+        "lab:neuro",
+        "lab:materials"
+      ]
+    },
+    {
+      "eventId": "evt:002",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:amy-github",
+      "canonicalResearcherId": "researcher:amy-chen",
+      "type": "code_commit",
+      "timestamp": "2026-05-20T02:15:00Z",
+      "rawCredit": 13.2,
+      "dashboardCredit": 13.2,
+      "serviceAccount": false,
+      "duplicateAlias": true,
+      "privateBoundary": false,
+      "labId": "lab:neuro",
+      "collaborationPair": [
+        "lab:neuro",
+        "lab:materials"
+      ]
+    },
+    {
+      "eventId": "evt:003",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:sync-bot",
+      "canonicalResearcherId": "user:sync-bot",
+      "type": "ai_review_generated",
+      "timestamp": "2026-05-20T02:30:00Z",
+      "rawCredit": 30,
+      "dashboardCredit": 0,
+      "serviceAccount": true,
+      "duplicateAlias": false,
+      "privateBoundary": false,
+      "labId": "lab:neuro",
+      "collaborationPair": [
+        "lab:neuro",
+        "lab:materials"
+      ]
+    },
+    {
+      "eventId": "evt:004",
+      "projectId": "project:materials-sensor",
+      "actorId": "user:sync-bot",
+      "canonicalResearcherId": "user:sync-bot",
+      "type": "repository_export",
+      "timestamp": "2026-05-20T02:45:00Z",
+      "rawCredit": 36,
+      "dashboardCredit": 0,
+      "serviceAccount": true,
+      "duplicateAlias": false,
+      "privateBoundary": false,
+      "labId": "lab:materials",
+      "collaborationPair": [
+        "lab:neuro",
+        "lab:materials"
+      ]
+    },
+    {
+      "eventId": "evt:005",
+      "projectId": "project:materials-sensor",
+      "actorId": "user:ben",
+      "canonicalResearcherId": "user:ben",
+      "type": "peer_review_completed",
+      "timestamp": "2026-05-20T03:00:00Z",
+      "rawCredit": 40,
+      "dashboardCredit": 40,
+      "serviceAccount": false,
+      "duplicateAlias": false,
+      "privateBoundary": false,
+      "labId": "lab:materials",
+      "collaborationPair": [
+        "lab:neuro",
+        "lab:materials"
+      ]
+    },
+    {
+      "eventId": "evt:006",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:amy-orcid",
+      "canonicalResearcherId": "researcher:amy-chen",
+      "type": "manuscript_edit",
+      "timestamp": "2026-05-20T03:05:00Z",
+      "rawCredit": 32,
+      "dashboardCredit": 32,
+      "serviceAccount": false,
+      "duplicateAlias": true,
+      "privateBoundary": false,
+      "labId": "lab:neuro",
+      "collaborationPair": [
+        "lab:neuro",
+        "lab:materials"
+      ]
+    },
+    {
+      "eventId": "evt:007",
+      "projectId": "project:neuro-alpha",
+      "actorId": "user:amy-github",
+      "canonicalResearcherId": "researcher:amy-chen",
+      "type": "dataset_upload",
+      "timestamp": "2026-05-20T03:20:00Z",
+      "rawCredit": 49,
+      "dashboardCredit": 49,
+      "serviceAccount": false,
+      "duplicateAlias": true,
+      "privateBoundary": false,
+      "labId": "lab:neuro",
+      "collaborationPair": [
+        "lab:neuro",
+        "lab:materials"
+      ]
+    },
+    {
+      "eventId": "evt:008",
+      "projectId": "project:external-secret",
+      "actorId": "user:external",
+      "canonicalResearcherId": "user:external",
+      "type": "repository_export",
+      "timestamp": "2026-05-20T03:40:00Z",
+      "rawCredit": 18,
+      "dashboardCredit": 18,
+      "serviceAccount": false,
+      "duplicateAlias": false,
+      "privateBoundary": true,
+      "labId": "lab:external",
+      "collaborationPair": null
+    }
+  ],
+  "metrics": {
+    "researcherCredits": [
+      {
+        "researcherId": "researcher:amy-chen",
+        "credit": 111
+      },
+      {
+        "researcherId": "user:ben",
+        "credit": 40
+      },
+      {
+        "researcherId": "user:sync-bot",
+        "credit": 0
+      }
+    ],
+    "labCredits": [
+      {
+        "labId": "lab:neuro",
+        "credit": 111
+      },
+      {
+        "labId": "lab:materials",
+        "credit": 40
+      }
+    ]
+  },
+  "anomalies": [
+    {
+      "kind": "usage_spike",
+      "key": "researcher:amy-chen:2026-05-20",
+      "severity": "high",
+      "score": 111,
+      "reason": "dashboard credit 111 in one day exceeds institutional review threshold"
+    },
+    {
+      "kind": "service_account_credit",
+      "severity": "high",
+      "score": 36,
+      "reason": "service account activity must not count as researcher productivity",
+      "eventIds": [
+        "evt:004"
+      ],
+      "actorId": "user:sync-bot"
+    },
+    {
+      "kind": "service_account_credit",
+      "severity": "high",
+      "score": 30,
+      "reason": "service account activity must not count as researcher productivity",
+      "eventIds": [
+        "evt:003"
+      ],
+      "actorId": "user:sync-bot"
+    },
+    {
+      "kind": "private_project_boundary",
+      "severity": "high",
+      "score": 18,
+      "reason": "admin dashboard row references a project outside visibility boundary",
+      "eventIds": [
+        "evt:008"
+      ],
+      "projectId": "project:external-secret"
+    },
+    {
+      "kind": "duplicate_identity_credit",
+      "canonicalResearcherId": "researcher:amy-chen",
+      "severity": "medium",
+      "score": 111,
+      "reason": "multiple linked identities generated dashboard credit under one researcher",
+      "eventIds": [
+        "evt:001",
+        "evt:002",
+        "evt:006",
+        "evt:007"
+      ]
+    },
+    {
+      "kind": "collaboration_inflation",
+      "severity": "medium",
+      "score": 60,
+      "reason": "same cross-lab collaboration pair appears repeatedly in a short window",
+      "pair": [
+        "lab:materials",
+        "lab:neuro"
+      ],
+      "eventIds": [
+        "evt:001",
+        "evt:002",
+        "evt:005",
+        "evt:006",
+        "evt:007"
+      ]
+    }
+  ],
+  "reviewPacket": {
+    "holdExecutiveDashboard": true,
+    "ownerActions": [
+      {
+        "kind": "usage_spike",
+        "severity": "high",
+        "action": "remove_from_executive_dashboard_until_resolved",
+        "reason": "dashboard credit 111 in one day exceeds institutional review threshold"
+      },
+      {
+        "kind": "service_account_credit",
+        "severity": "high",
+        "action": "remove_from_executive_dashboard_until_resolved",
+        "reason": "service account activity must not count as researcher productivity"
+      },
+      {
+        "kind": "service_account_credit",
+        "severity": "high",
+        "action": "remove_from_executive_dashboard_until_resolved",
+        "reason": "service account activity must not count as researcher productivity"
+      },
+      {
+        "kind": "private_project_boundary",
+        "severity": "high",
+        "action": "remove_from_executive_dashboard_until_resolved",
+        "reason": "admin dashboard row references a project outside visibility boundary"
+      },
+      {
+        "kind": "duplicate_identity_credit",
+        "severity": "medium",
+        "action": "annotate_dashboard_metric_and_request_owner_confirmation",
+        "reason": "multiple linked identities generated dashboard credit under one researcher"
+      },
+      {
+        "kind": "collaboration_inflation",
+        "severity": "medium",
+        "action": "annotate_dashboard_metric_and_request_owner_confirmation",
+        "reason": "same cross-lab collaboration pair appears repeatedly in a short window"
+      }
+    ]
+  },
+  "stats": {
+    "eventCount": 8,
+    "creditedResearcherCount": 2,
+    "anomalyCount": 6,
+    "highSeverityCount": 4,
+    "serviceAccountEvents": 2,
+    "hiddenBoundaryEvents": 1
+  }
+}

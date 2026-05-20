@@ -1,0 +1,156 @@
+{
+  "manuscriptId": "assistant-manuscript-alpha",
+  "title": "Graph-Aware Protein Variant Prioritization",
+  "checkedAt": "2026-05-20T00:00:00.000Z",
+  "decision": "blocked",
+  "summary": {
+    "totalClaims": 3,
+    "monitoredEvents": 4,
+    "blockedClaims": 1,
+    "reviewClaims": 2,
+    "updateQueue": 4,
+    "gapSignals": 1,
+    "blockers": 1,
+    "warnings": 3
+  },
+  "claims": [
+    {
+      "id": "claim-graph-boost",
+      "text": "Knowledge-graph features improve variant prioritization accuracy in rare disease cohorts.",
+      "decision": "needs_review",
+      "relatedEventIds": [
+        "lit-001",
+        "lit-004"
+      ],
+      "evidenceIds": [
+        "ev-kg-2024",
+        "ev-cohort-2025"
+      ],
+      "digest": "a42ce31fbe85a1ca4b165530c2e48ae7c597b77df1a0ab9a6817a8752341e514"
+    },
+    {
+      "id": "claim-small-lab",
+      "text": "The method remains reproducible in small wet-lab validation cohorts.",
+      "decision": "blocked",
+      "relatedEventIds": [
+        "lit-002"
+      ],
+      "evidenceIds": [
+        "ev-lab-2025"
+      ],
+      "digest": "e0f3843041b5d8e180bf1bab7eb65b3f3da6f097be00ae0bcef1dcbfcae074e0"
+    },
+    {
+      "id": "claim-benchmark",
+      "text": "The benchmark split prevents train/test leakage across protein families.",
+      "decision": "needs_review",
+      "relatedEventIds": [
+        "lit-003"
+      ],
+      "evidenceIds": [
+        "ev-benchmark-2024"
+      ],
+      "digest": "ab6252bd9a233b5d4251491a178befddf505f690a7d4d953d4f9d51448a9e8ef"
+    }
+  ],
+  "updateQueue": [
+    {
+      "eventId": "lit-001",
+      "action": "consider_citation_update",
+      "relatedClaimIds": [
+        "claim-graph-boost"
+      ],
+      "priority": "normal",
+      "sourceTitle": "Variant Graph Features Improve Rare Disease Triage"
+    },
+    {
+      "eventId": "lit-002",
+      "action": "revise_claim_or_add_limitation",
+      "relatedClaimIds": [
+        "claim-small-lab"
+      ],
+      "priority": "high",
+      "sourceTitle": "Small-Cohort Validation Fails To Replicate Reported Lift"
+    },
+    {
+      "eventId": "lit-003",
+      "action": "review_context",
+      "relatedClaimIds": [],
+      "priority": "normal",
+      "sourceTitle": "Correction: Protein Family Benchmark Split Metadata"
+    },
+    {
+      "eventId": "lit-004",
+      "action": "review_context",
+      "relatedClaimIds": [
+        "claim-graph-boost"
+      ],
+      "priority": "normal",
+      "sourceTitle": "Null Result for Graph Features in Long-Tail Protein Families"
+    }
+  ],
+  "gapSignals": [
+    {
+      "eventId": "lit-004",
+      "topic": "long-tail protein families",
+      "signal": "negative_or_null_result",
+      "suggestedNextStep": "Open a research-gap task for long-tail family evaluation.",
+      "reproducibilityImpact": "needs_artifacts"
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "blocker",
+      "code": "strong_contradictory_evidence",
+      "message": "New high-strength evidence contradicts this manuscript claim.",
+      "evidence": {
+        "eventId": "lit-002",
+        "eventType": "replication",
+        "claimId": "claim-small-lab",
+        "evidenceStrength": 0.81,
+        "sourceTitle": "Small-Cohort Validation Fails To Replicate Reported Lift"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "code": "high_value_supporting_update",
+      "message": "New strong supporting evidence should be considered for citation updates.",
+      "evidence": {
+        "eventId": "lit-001",
+        "eventType": "new_paper",
+        "claimId": "claim-graph-boost",
+        "evidenceStrength": 0.88,
+        "sourceTitle": "Variant Graph Features Improve Rare Disease Triage"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "claim_review_stale",
+      "message": "Claim has not been checked against the literature within the freshness window.",
+      "evidence": {
+        "claimId": "claim-benchmark",
+        "ageDays": 231,
+        "limitDays": 180
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "cited_evidence_corrected",
+      "message": "A cited evidence item has a correction that should be reviewed before relying on the claim.",
+      "evidence": {
+        "eventId": "lit-003",
+        "eventType": "correction",
+        "claimId": "claim-benchmark"
+      }
+    }
+  ],
+  "reviewerTasks": [
+    "Route contradicted claims to author revision before peer-review packet generation.",
+    "Review citation updates and correction notices before finalizing the assistant report.",
+    "Add research-gap opportunities to the assistant discovery queue."
+  ],
+  "reportHold": true,
+  "auditDigest": "8b8366895d74f5d173819f8900f224e515b9e08e3b56574fcf6686cef362f59a"
+}

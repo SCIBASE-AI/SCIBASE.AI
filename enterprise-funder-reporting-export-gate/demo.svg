@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise funder reporting export gate demo</title>
+  <desc id="desc">A static demo frame showing two ready projects and one blocked project with signed export evidence.</desc>
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="64" y="64" width="1152" height="592" rx="18" fill="#f8fafc"/>
+  <text x="104" y="128" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Enterprise funder reporting export gate</text>
+  <text x="104" y="172" font-family="Arial, sans-serif" font-size="22" fill="#334155">Issue 19 slice: funder mandate evidence, export readiness, and signed webhook events.</text>
+  <rect x="104" y="220" width="320" height="160" rx="14" fill="#dcfce7"/>
+  <text x="134" y="280" font-family="Arial, sans-serif" font-size="70" font-weight="700" fill="#166534">2</text>
+  <text x="134" y="330" font-family="Arial, sans-serif" font-size="28" fill="#166534">ready exports</text>
+  <rect x="480" y="220" width="320" height="160" rx="14" fill="#fee2e2"/>
+  <text x="510" y="280" font-family="Arial, sans-serif" font-size="70" font-weight="700" fill="#991b1b">1</text>
+  <text x="510" y="330" font-family="Arial, sans-serif" font-size="28" fill="#991b1b">blocked export</text>
+  <rect x="856" y="220" width="320" height="160" rx="14" fill="#dbeafe"/>
+  <text x="886" y="280" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#1e40af">sha</text>
+  <text x="886" y="330" font-family="Arial, sans-serif" font-size="28" fill="#1e40af">signed events</text>
+  <rect x="104" y="424" width="1072" height="2" fill="#cbd5e1"/>
+  <text x="104" y="474" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">Checks</text>
+  <text x="104" y="518" font-family="Arial, sans-serif" font-size="22" fill="#334155">Mandate id, open access, reproducibility score, artifact hashes, destination routing.</text>
+  <text x="104" y="562" font-family="Arial, sans-serif" font-size="22" fill="#334155">Outputs portfolio digest, export packet digest, and webhook-ready governance payloads.</text>
+  <text x="104" y="618" font-family="Arial, sans-serif" font-size="18" fill="#64748b">Run: node enterprise-funder-reporting-export-gate/test.js and node enterprise-funder-reporting-export-gate/demo.js</text>
+</svg>

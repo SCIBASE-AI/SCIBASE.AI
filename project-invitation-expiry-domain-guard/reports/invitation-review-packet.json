@@ -1,0 +1,90 @@
+{
+  "projectId": "proj-human-atlas-17",
+  "evaluatedAt": "2026-05-20T12:00:00Z",
+  "readyInvitations": [],
+  "heldInvitations": [
+    "inv-001",
+    "inv-002",
+    "inv-003",
+    "inv-004"
+  ],
+  "evaluations": [
+    {
+      "inviteId": "inv-001",
+      "email": "ana@university.edu",
+      "domain": "university.edu",
+      "role": "commenter",
+      "status": "held-for-review",
+      "holds": [
+        "duplicate-outstanding-invite"
+      ],
+      "remediation": [
+        "Collapse duplicates and keep only the least-privileged active invitation."
+      ]
+    },
+    {
+      "inviteId": "inv-002",
+      "email": "vendor@unknown.ai",
+      "domain": "unknown.ai",
+      "role": "data-exporter",
+      "status": "held-for-review",
+      "holds": [
+        "expired-invitation",
+        "domain-not-allowed",
+        "sensitive-role-requested"
+      ],
+      "remediation": [
+        "Cancel and issue a fresh invitation with a new expiry timestamp.",
+        "Require owner approval or add the institution domain to the project allowlist.",
+        "Downgrade to a guest-safe role or route to role delegation approval."
+      ]
+    },
+    {
+      "inviteId": "inv-003",
+      "email": "ana@university.edu",
+      "domain": "university.edu",
+      "role": "viewer",
+      "status": "held-for-review",
+      "holds": [
+        "inviter-lacks-authority",
+        "duplicate-outstanding-invite"
+      ],
+      "remediation": [
+        "Require owner/admin approval before sending.",
+        "Collapse duplicates and keep only the least-privileged active invitation."
+      ]
+    },
+    {
+      "inviteId": "inv-004",
+      "email": "casey@clinic.org",
+      "domain": "clinic.org",
+      "role": "admin",
+      "status": "held-for-review",
+      "holds": [
+        "sensitive-role-requested",
+        "inactive-inviter"
+      ],
+      "remediation": [
+        "Downgrade to a guest-safe role or route to role delegation approval.",
+        "Require an active owner to re-issue the invitation."
+      ]
+    }
+  ],
+  "policyReceipt": {
+    "allowedDomains": [
+      "university.edu",
+      "clinic.org",
+      "partner-lab.net"
+    ],
+    "allowedGuestRoles": [
+      "viewer",
+      "commenter",
+      "replication-runner"
+    ],
+    "sensitiveRolesRequireApproval": [
+      "admin",
+      "data-exporter",
+      "billing-owner"
+    ]
+  }
+}

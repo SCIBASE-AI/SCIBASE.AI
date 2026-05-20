@@ -34,6 +34,7 @@ The demo writes:
 - `reports/demo-output.json` with the full portfolio evaluation
 - `reports/demo.svg` with a visual portfolio summary
 - `reports/demo.gif` as a short visual walkthrough artifact
+- `reports/demo.mp4` as the H.264 short demo video for bounty review
 
 ## Files
 

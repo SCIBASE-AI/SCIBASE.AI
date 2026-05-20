@@ -32,3 +32,4 @@ Issue #20 asks for revenue infrastructure covering subscription billing, AI comp
 - Synthetic sample contracts only.
 - Regression tests cover overage risk, under-consumption risk, credit expiration, low-margin usage, deterministic digests, and portfolio ordering.
 - Demo output can be regenerated locally with `node committed-revenue-drawdown-guard/demo.js`.
+- The submitted demo bundle includes both a GIF walkthrough and `reports/demo.mp4` encoded as H.264 video for the Algora short-demo requirement.

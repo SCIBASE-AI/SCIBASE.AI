@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Collaborative autosave recovery demo">
+  <rect width="1280" height="720" fill="#111827"/>
+  <text x="72" y="92" fill="#f9fafb" font-family="Arial, sans-serif" font-size="48" font-weight="700">Collaborative Autosave Recovery</text>
+  <text x="72" y="142" fill="#d1d5db" font-family="Arial, sans-serif" font-size="25">SCIBASE issue #12 - real-time collaborative editor</text>
+  <rect x="72" y="205" width="315" height="150" rx="18" fill="#1f2937" stroke="#60a5fa" stroke-width="4"/>
+  <text x="104" y="260" fill="#dbeafe" font-family="Arial, sans-serif" font-size="30" font-weight="700">1. Target</text>
+  <text x="104" y="306" fill="#d1d5db" font-family="Arial, sans-serif" font-size="22">Named version hash</text>
+  <text x="104" y="338" fill="#d1d5db" font-family="Arial, sans-serif" font-size="22">Selected sections</text>
+  <rect x="482" y="205" width="315" height="150" rx="18" fill="#1f2937" stroke="#f97316" stroke-width="4"/>
+  <text x="514" y="260" fill="#ffedd5" font-family="Arial, sans-serif" font-size="30" font-weight="700">2. Check</text>
+  <text x="514" y="306" fill="#d1d5db" font-family="Arial, sans-serif" font-size="22">Autosave conflicts</text>
+  <text x="514" y="338" fill="#d1d5db" font-family="Arial, sans-serif" font-size="22">Locks and local cache</text>
+  <rect x="892" y="205" width="315" height="150" rx="18" fill="#1f2937" stroke="#34d399" stroke-width="4"/>
+  <text x="924" y="260" fill="#d1fae5" font-family="Arial, sans-serif" font-size="30" font-weight="700">3. Restore</text>
+  <text x="924" y="306" fill="#d1d5db" font-family="Arial, sans-serif" font-size="22">Plan branch or in-place</text>
+  <text x="924" y="338" fill="#d1d5db" font-family="Arial, sans-serif" font-size="22">Emit audit event</text>
+  <rect x="72" y="445" width="1136" height="148" rx="18" fill="#0f172a" stroke="#374151" stroke-width="3"/>
+  <text x="104" y="500" fill="#f9fafb" font-family="Arial, sans-serif" font-size="30" font-weight="700">Demo result: HELD</text>
+  <text x="104" y="548" fill="#d1d5db" font-family="Arial, sans-serif" font-size="24">Target: version-submission-draft  |  Local cache: local-intro-cache  |  Conflicts: none</text>
+  <text x="104" y="590" fill="#93c5fd" font-family="Arial, sans-serif" font-size="22">The recovery fingerprint makes restore decisions auditable and repeatable.</text>
+</svg>

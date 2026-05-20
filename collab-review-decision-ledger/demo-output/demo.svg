@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="Collaborative review decision ledger demo">
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #102027; }
+    .subtitle { font: 400 15px Arial, sans-serif; fill: #455a64; }
+    .metric { font: 700 24px Arial, sans-serif; }
+    .label { font: 400 13px Arial, sans-serif; fill: #546e7a; }
+    .team { font: 700 16px Arial, sans-serif; fill: #102027; }
+    .meta { font: 400 13px Arial, sans-serif; fill: #455a64; }
+    .small { font: 400 11px Arial, sans-serif; fill: #607d8b; }
+  </style>
+  <rect width="960" height="520" fill="#f4f7f9"/>
+  <text x="64" y="58" class="title">Collaborative Review Decision Ledger</text>
+  <text x="64" y="84" class="subtitle">Quantum catalyst manuscript - 2026-05-20T13:00:00.000Z</text>
+  <g transform="translate(64 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#0b5fff">3</text>
+    <text x="18" y="45" class="label">Sections</text>
+  </g>
+  <g transform="translate(252 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#1f8a5b">2</text>
+    <text x="18" y="45" class="label">Ready</text>
+  </g>
+  <g transform="translate(440 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#b42318">1</text>
+    <text x="18" y="45" class="label">Hold</text>
+  </g>
+  <g transform="translate(628 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#ad6f00">1</text>
+    <text x="18" y="45" class="label">Comments</text>
+  </g>
+  <g transform="translate(64 196)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#1f8a5b"/>
+    <text x="48" y="25" class="team">Introduction</text>
+    <text x="48" y="45" class="meta">Ready To Freeze - risk 0</text>
+    <text x="330" y="25" class="small">No blockers</text>
+    <text x="330" y="45" class="small">crdl_bf687c130eb59eeabd2c84e3</text>
+  </g><g transform="translate(64 278)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#b42318"/>
+    <text x="48" y="25" class="team">Results</text>
+    <text x="48" y="45" class="meta">Hold Publish - risk 20</text>
+    <text x="330" y="25" class="small">BLOCKING_COMMENT_OPEN | OPEN_SUGGESTION | NOTEBOOK_OUTPUT_STALE | APPROVAL_MISSING | SECTION_UNLOCKED | DECISION_RECORD_MISSING | RESTORE_SNAPSHOT_UNSAFE</text>
+    <text x="330" y="45" class="small">crdl_58fa90d9db1ded935bd59ca8</text>
+  </g><g transform="translate(64 360)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#1f8a5b"/>
+    <text x="48" y="25" class="team">Methods</text>
+    <text x="48" y="45" class="meta">Ready To Freeze - risk 0</text>
+    <text x="330" y="25" class="small">No blockers</text>
+    <text x="330" y="45" class="small">crdl_ed49826af04eabfc3f989582</text>
+  </g>
+  <text x="64" y="478" class="subtitle">Hold publish: 1 section has unresolved release blockers.  Resolve 1 blocking comment before freeze.  Refresh 1 stale notebook output before release.  Collect 1 missing role approval before publish.</text>
+</svg>

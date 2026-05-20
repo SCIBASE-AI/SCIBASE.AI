@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="540" viewBox="0 0 760 540">
+    <rect width="760" height="540" fill="#f6faf9"/>
+    <rect x="24" y="24" width="712" height="492" rx="14" fill="#ffffff" stroke="#c8d8d5"/>
+    <text x="44" y="72" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#17324d">Grant-fit funder alignment</text>
+    <text x="44" y="104" font-size="18" font-family="Arial, sans-serif" fill="#496272">needs-revision for Frontier Open Science Fund</text>
+    <circle cx="650" cy="84" r="42" fill="#247c7a"/>
+    <text x="628" y="95" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#ffffff">77</text>
+    <g font-family="Arial, sans-serif">
+      <text x="44" y="175" font-size="18" fill="#17324d">Priority</text>
+      <rect x="170" y="155" width="420" height="24" rx="5" fill="#dbe7ee"/>
+      <rect x="170" y="155" width="336" height="24" rx="5" fill="#247c7a"/>
+      <text x="610" y="175" font-size="16" fill="#17324d">80%</text>
+
+      <text x="44" y="227" font-size="18" fill="#17324d">Artifacts</text>
+      <rect x="170" y="207" width="420" height="24" rx="5" fill="#dbe7ee"/>
+      <rect x="170" y="207" width="210" height="24" rx="5" fill="#247c7a"/>
+      <text x="610" y="227" font-size="16" fill="#17324d">50%</text>
+
+      <text x="44" y="279" font-size="18" fill="#17324d">Budget</text>
+      <rect x="170" y="259" width="420" height="24" rx="5" fill="#dbe7ee"/>
+      <rect x="170" y="259" width="395" height="24" rx="5" fill="#247c7a"/>
+      <text x="610" y="279" font-size="16" fill="#17324d">94%</text>
+
+      <text x="44" y="331" font-size="18" fill="#17324d">Ethics</text>
+      <rect x="170" y="311" width="420" height="24" rx="5" fill="#dbe7ee"/>
+      <rect x="170" y="311" width="357" height="24" rx="5" fill="#247c7a"/>
+      <text x="610" y="331" font-size="16" fill="#17324d">85%</text>
+
+      <text x="44" y="383" font-size="18" fill="#17324d">Evidence</text>
+      <rect x="170" y="363" width="420" height="24" rx="5" fill="#dbe7ee"/>
+      <rect x="170" y="363" width="280" height="24" rx="5" fill="#247c7a"/>
+      <text x="610" y="383" font-size="16" fill="#17324d">67%</text>
+
+      <text x="44" y="435" font-size="18" fill="#17324d">Impact</text>
+      <rect x="170" y="415" width="420" height="24" rx="5" fill="#dbe7ee"/>
+      <rect x="170" y="415" width="385" height="24" rx="5" fill="#247c7a"/>
+      <text x="610" y="435" font-size="16" fill="#17324d">92%</text></g>
+    <text x="44" y="494" font-size="16" font-family="Arial, sans-serif" fill="#496272">Top action: Add explicit links to funder priorities: capacity building.</text>
+  </svg>

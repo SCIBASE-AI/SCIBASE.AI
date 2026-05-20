@@ -1,0 +1,77 @@
+{
+  "projectTitle": "Open Replication Map for Low-Resource Clinical NLP",
+  "funder": "Frontier Open Science Fund",
+  "status": "needs-revision",
+  "weightedScore": 0.765,
+  "sections": {
+    "priority": {
+      "score": 0.8,
+      "covered": [
+        "open science",
+        "reproducibility",
+        "low-resource settings",
+        "clinical impact"
+      ],
+      "missing": [
+        "capacity building"
+      ]
+    },
+    "artifacts": {
+      "score": 0.5,
+      "readyOpen": [
+        "analysis notebooks",
+        "model cards"
+      ],
+      "blockers": [
+        "de-identification protocol: draft",
+        "replication dashboard: planned"
+      ]
+    },
+    "budget": {
+      "score": 0.94,
+      "total": 185000,
+      "limit": 200000,
+      "overLimit": false,
+      "missingJustification": [
+        "contingency"
+      ]
+    },
+    "ethics": {
+      "score": 0.85,
+      "blockers": [],
+      "advisory": "Clarify the conditions required before award activation."
+    },
+    "evidence": {
+      "score": 0.6666666666666667,
+      "unsupported": [
+        "The dashboard will reduce duplicate evaluation work."
+      ],
+      "missingReferences": []
+    },
+    "impact": {
+      "score": 0.9166666666666666,
+      "termHits": [
+        "improve",
+        "reduce"
+      ],
+      "beneficiaries": [
+        "hospital data teams",
+        "clinical NLP researchers",
+        "local research stewards"
+      ]
+    }
+  },
+  "actionItems": [
+    "Add explicit links to funder priorities: capacity building.",
+    "Move artifact blockers to ready/open status: de-identification protocol: draft; replication dashboard: planned.",
+    "Add budget justification for: contingency.",
+    "Clarify the conditions required before award activation.",
+    "Attach evidence IDs to unsupported claims: The dashboard will reduce duplicate evaluation work.."
+  ],
+  "reviewerSummary": [
+    "Open Replication Map for Low-Resource Clinical NLP is needs-revision for Frontier Open Science Fund.",
+    "Priority coverage: 4/5.",
+    "Open artifact readiness: 2/4.",
+    "Budget request: USD 185,000 of USD 200,000."
+  ]
+}

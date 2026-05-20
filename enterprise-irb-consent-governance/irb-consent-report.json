@@ -1,0 +1,323 @@
+{
+  "generatedAt": "2026-05-20T12:00:00.000Z",
+  "module": "enterprise-irb-consent-governance",
+  "summary": {
+    "projectCount": 4,
+    "approved": 2,
+    "review": 0,
+    "blocked": 2,
+    "topRisks": [
+      {
+        "projectId": "SCI-YOUTH-091",
+        "title": "Youth sleep and learning intervention",
+        "status": "blocked",
+        "riskScore": 230
+      },
+      {
+        "projectId": "SCI-GENOME-204",
+        "title": "Cross-border genomic phenotype atlas",
+        "status": "blocked",
+        "riskScore": 85
+      },
+      {
+        "projectId": "SCI-HEART-042",
+        "title": "Remote cardiac recovery cohort",
+        "status": "approved",
+        "riskScore": 0
+      }
+    ]
+  },
+  "evaluations": [
+    {
+      "projectId": "SCI-HEART-042",
+      "title": "Remote cardiac recovery cohort",
+      "status": "approved",
+      "riskScore": 0,
+      "findings": [],
+      "actionQueue": [],
+      "exportDecision": "allow",
+      "evidenceDigest": "ad13727c41d326b7fdd284621f84817f663f9ec067cfccf4fc0190afd625969c",
+      "webhookEvent": {
+        "type": "enterprise.irb_consent_governance.evaluated",
+        "projectId": "SCI-HEART-042",
+        "status": "approved",
+        "findingCount": 0,
+        "blockingCount": 0,
+        "generatedAt": "2026-05-20T12:00:00.000Z",
+        "signature": "sha256=6e4a990d2f968bfb0bcb63e786434106636e773c330962c803a07389df48d921"
+      }
+    },
+    {
+      "projectId": "SCI-YOUTH-091",
+      "title": "Youth sleep and learning intervention",
+      "status": "blocked",
+      "riskScore": 230,
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "IRB_NOT_APPROVED",
+          "message": "Human-subjects project is missing active IRB approval.",
+          "evidence": {
+            "irb": {
+              "id": "IRB-2025-221",
+              "status": "expired",
+              "expiresAt": "2026-03-10T00:00:00.000Z"
+            }
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "IRB_EXPIRED",
+          "message": "IRB approval has expired.",
+          "evidence": {
+            "expiresAt": "2026-03-10T00:00:00.000Z"
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "IRB_EXPIRY_SOON",
+          "message": "IRB approval is close to expiry.",
+          "evidence": {
+            "expiresAt": "2026-03-10T00:00:00.000Z",
+            "warningDays": 45
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "MINOR_GUARDIAN_CONSENT_MISSING",
+          "message": "Minor participants require guardian consent.",
+          "evidence": {
+            "minors": true
+          }
+        },
+        {
+          "severity": "high",
+          "code": "CONSENT_SCOPE_GAP",
+          "message": "student-surveys uses purposes that are not covered by participant consent.",
+          "evidence": {
+            "dataset": "student-surveys",
+            "missingPurposes": [
+              "publication"
+            ]
+          }
+        },
+        {
+          "severity": "high",
+          "code": "DUA_MISSING",
+          "message": "Controlled data classes require an active data-use agreement.",
+          "evidence": {
+            "controlledClasses": [
+              "PII"
+            ]
+          }
+        },
+        {
+          "severity": "high",
+          "code": "DEIDENTIFICATION_REQUIRED",
+          "message": "student-surveys must be de-identified before export.",
+          "evidence": {
+            "dataset": "student-surveys",
+            "dataClasses": [
+              "PII"
+            ]
+          }
+        },
+        {
+          "severity": "high",
+          "code": "RAW_DATA_EXPORT_BLOCKED",
+          "message": "Target requires anonymized data but project has raw datasets.",
+          "evidence": {
+            "target": "Journal package",
+            "rawDatasets": [
+              "student-surveys"
+            ]
+          }
+        }
+      ],
+      "actionQueue": [
+        {
+          "owner": "irb-office@example.edu",
+          "code": "IRB_NOT_APPROVED",
+          "severity": "critical",
+          "dueInDays": 1,
+          "summary": "Human-subjects project is missing active IRB approval."
+        },
+        {
+          "owner": "irb-office@example.edu",
+          "code": "IRB_EXPIRED",
+          "severity": "critical",
+          "dueInDays": 1,
+          "summary": "IRB approval has expired."
+        },
+        {
+          "owner": "data-steward@example.edu",
+          "code": "IRB_EXPIRY_SOON",
+          "severity": "medium",
+          "dueInDays": 14,
+          "summary": "IRB approval is close to expiry."
+        },
+        {
+          "owner": "consent-review@example.edu",
+          "code": "MINOR_GUARDIAN_CONSENT_MISSING",
+          "severity": "critical",
+          "dueInDays": 1,
+          "summary": "Minor participants require guardian consent."
+        },
+        {
+          "owner": "consent-review@example.edu",
+          "code": "CONSENT_SCOPE_GAP",
+          "severity": "high",
+          "dueInDays": 3,
+          "summary": "student-surveys uses purposes that are not covered by participant consent."
+        },
+        {
+          "owner": "data-steward@example.edu",
+          "code": "DUA_MISSING",
+          "severity": "high",
+          "dueInDays": 3,
+          "summary": "Controlled data classes require an active data-use agreement."
+        },
+        {
+          "owner": "data-steward@example.edu",
+          "code": "DEIDENTIFICATION_REQUIRED",
+          "severity": "high",
+          "dueInDays": 3,
+          "summary": "student-surveys must be de-identified before export."
+        },
+        {
+          "owner": "data-steward@example.edu",
+          "code": "RAW_DATA_EXPORT_BLOCKED",
+          "severity": "high",
+          "dueInDays": 3,
+          "summary": "Target requires anonymized data but project has raw datasets."
+        }
+      ],
+      "exportDecision": "block",
+      "evidenceDigest": "66e66ad186fea077abaa03803793269d1073925d7e29b05066fbc1b3a8f76877",
+      "webhookEvent": {
+        "type": "enterprise.irb_consent_governance.evaluated",
+        "projectId": "SCI-YOUTH-091",
+        "status": "blocked",
+        "findingCount": 8,
+        "blockingCount": 7,
+        "generatedAt": "2026-05-20T12:00:00.000Z",
+        "signature": "sha256=6a420749c91abb8303b7eb745cc67111a95748853a4b3acf70453e577c531880"
+      }
+    },
+    {
+      "projectId": "SCI-GENOME-204",
+      "title": "Cross-border genomic phenotype atlas",
+      "status": "blocked",
+      "riskScore": 85,
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "IRB_EXPIRY_SOON",
+          "message": "IRB approval is close to expiry.",
+          "evidence": {
+            "expiresAt": "2026-06-15T00:00:00.000Z",
+            "warningDays": 45
+          }
+        },
+        {
+          "severity": "high",
+          "code": "CONSENT_SCOPE_GAP",
+          "message": "genotype-table uses purposes that are not covered by participant consent.",
+          "evidence": {
+            "dataset": "genotype-table",
+            "missingPurposes": [
+              "external_ai_training"
+            ]
+          }
+        },
+        {
+          "severity": "high",
+          "code": "EXPORT_TARGET_NOT_ALLOWED",
+          "message": "external_ai_platform is not an allowed enterprise target.",
+          "evidence": {
+            "target": {
+              "name": "Partner analytics platform",
+              "type": "external_ai_platform",
+              "jurisdiction": "SG",
+              "requiresAnonymizedData": true
+            }
+          }
+        },
+        {
+          "severity": "high",
+          "code": "EXPORT_JURISDICTION_BLOCKED",
+          "message": "SG is outside allowed jurisdictions.",
+          "evidence": {
+            "target": {
+              "name": "Partner analytics platform",
+              "type": "external_ai_platform",
+              "jurisdiction": "SG",
+              "requiresAnonymizedData": true
+            }
+          }
+        }
+      ],
+      "actionQueue": [
+        {
+          "owner": "data-steward@example.edu",
+          "code": "IRB_EXPIRY_SOON",
+          "severity": "medium",
+          "dueInDays": 14,
+          "summary": "IRB approval is close to expiry."
+        },
+        {
+          "owner": "consent-review@example.edu",
+          "code": "CONSENT_SCOPE_GAP",
+          "severity": "high",
+          "dueInDays": 3,
+          "summary": "genotype-table uses purposes that are not covered by participant consent."
+        },
+        {
+          "owner": "data-steward@example.edu",
+          "code": "EXPORT_TARGET_NOT_ALLOWED",
+          "severity": "high",
+          "dueInDays": 3,
+          "summary": "external_ai_platform is not an allowed enterprise target."
+        },
+        {
+          "owner": "data-steward@example.edu",
+          "code": "EXPORT_JURISDICTION_BLOCKED",
+          "severity": "high",
+          "dueInDays": 3,
+          "summary": "SG is outside allowed jurisdictions."
+        }
+      ],
+      "exportDecision": "block",
+      "evidenceDigest": "9cc93dbc906bb67df1a0eebe4eb3738745ed0eb36ce8df8b68d0ab70916edd9f",
+      "webhookEvent": {
+        "type": "enterprise.irb_consent_governance.evaluated",
+        "projectId": "SCI-GENOME-204",
+        "status": "blocked",
+        "findingCount": 4,
+        "blockingCount": 3,
+        "generatedAt": "2026-05-20T12:00:00.000Z",
+        "signature": "sha256=d353783744c4f341cf5e98dafca451197fcf9ae9f23f623d25a4d12012115af9"
+      }
+    },
+    {
+      "projectId": "SCI-MATERIALS-018",
+      "title": "Open polymer degradation benchmark",
+      "status": "approved",
+      "riskScore": 0,
+      "findings": [],
+      "actionQueue": [],
+      "exportDecision": "allow",
+      "evidenceDigest": "0f3ddc2559ed1cfcddd519f81964775ff2a73f1fd3877e5b3df993c00e2b58a4",
+      "webhookEvent": {
+        "type": "enterprise.irb_consent_governance.evaluated",
+        "projectId": "SCI-MATERIALS-018",
+        "status": "approved",
+        "findingCount": 0,
+        "blockingCount": 0,
+        "generatedAt": "2026-05-20T12:00:00.000Z",
+        "signature": "sha256=5c0aa458e224c70d9a41135137c7f7604f90d66942a7153f637f5c18e9e425cb"
+      }
+    }
+  ],
+  "auditDigest": "e64e96869e34aecaadf294ed697af075b06b1fd7b755922661f61e0a179f8f80"
+}

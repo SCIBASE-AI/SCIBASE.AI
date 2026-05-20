@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430">
+  <rect width="900" height="430" fill="#f8fafc" />
+  <text x="48" y="62" font-size="34" font-family="Arial" font-weight="700" fill="#111827">Enterprise IRB Consent Governance</text>
+  <text x="48" y="98" font-size="18" font-family="Arial" fill="#4b5563">Approved 2 / Review 0 / Blocked 2</text>
+  
+  <g transform="translate(48 150)">
+    <circle cx="12" cy="12" r="9" fill="#2f9e44" />
+    <text x="34" y="17" font-size="18" font-family="Arial" fill="#17202a">SCI-HEART-042 - approved</text>
+    <text x="520" y="17" font-size="16" font-family="Arial" fill="#4b5563">risk 0</text>
+  </g>
+  <g transform="translate(48 204)">
+    <circle cx="12" cy="12" r="9" fill="#c92a2a" />
+    <text x="34" y="17" font-size="18" font-family="Arial" fill="#17202a">SCI-YOUTH-091 - blocked</text>
+    <text x="520" y="17" font-size="16" font-family="Arial" fill="#4b5563">risk 230</text>
+  </g>
+  <g transform="translate(48 258)">
+    <circle cx="12" cy="12" r="9" fill="#c92a2a" />
+    <text x="34" y="17" font-size="18" font-family="Arial" fill="#17202a">SCI-GENOME-204 - blocked</text>
+    <text x="520" y="17" font-size="16" font-family="Arial" fill="#4b5563">risk 85</text>
+  </g>
+  <g transform="translate(48 312)">
+    <circle cx="12" cy="12" r="9" fill="#2f9e44" />
+    <text x="34" y="17" font-size="18" font-family="Arial" fill="#17202a">SCI-MATERIALS-018 - approved</text>
+    <text x="520" y="17" font-size="16" font-family="Arial" fill="#4b5563">risk 0</text>
+  </g>
+  <text x="48" y="390" font-size="14" font-family="Arial" fill="#6b7280">Audit digest: e64e96869e34aecaadf294ed697af075...</text>
+</svg>

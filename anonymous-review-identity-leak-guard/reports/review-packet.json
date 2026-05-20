@@ -1,0 +1,88 @@
+{
+  "packetId": "anon-review-001",
+  "title": "Anonymous Review Identity Leak Guard",
+  "context": "Community & User Reputation System",
+  "status": "needs-review",
+  "readyItems": [
+    "review-a"
+  ],
+  "heldItems": [
+    "review-b",
+    "review-c"
+  ],
+  "evaluations": [
+    {
+      "itemId": "review-a",
+      "name": "Blind review A",
+      "type": "review",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "review-b",
+      "name": "Blind review B",
+      "type": "review",
+      "status": "held",
+      "holds": [
+        "self-citation-clue",
+        "metadata-leak"
+      ],
+      "holdLabels": [
+        "self-citation identity clue",
+        "document metadata leak"
+      ],
+      "remediation": [
+        "Redact self-identifying citation phrasing.",
+        "Strip author metadata before reputation update."
+      ]
+    },
+    {
+      "itemId": "review-c",
+      "name": "Blind review C",
+      "type": "review",
+      "status": "held",
+      "holds": [
+        "affiliation-hint",
+        "private-comment"
+      ],
+      "holdLabels": [
+        "affiliation hint",
+        "private comment leakage"
+      ],
+      "remediation": [
+        "Remove institutional hints from anonymous review text.",
+        "Keep private notes out of public reputation history."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "self-citation-clue": 1,
+    "metadata-leak": 1,
+    "affiliation-hint": 1,
+    "private-comment": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "review-b",
+      "hold": "self-citation-clue",
+      "action": "Redact self-identifying citation phrasing."
+    },
+    {
+      "itemId": "review-b",
+      "hold": "metadata-leak",
+      "action": "Strip author metadata before reputation update."
+    },
+    {
+      "itemId": "review-c",
+      "hold": "affiliation-hint",
+      "action": "Remove institutional hints from anonymous review text."
+    },
+    {
+      "itemId": "review-c",
+      "hold": "private-comment",
+      "action": "Keep private notes out of public reputation history."
+    }
+  ]
+}

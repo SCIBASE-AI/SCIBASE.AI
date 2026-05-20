@@ -1,0 +1,107 @@
+{
+  "packetType": "repository-access-review-gate",
+  "repositoryId": "repo-sci-artery-flow-042",
+  "releaseTag": "v2.1.0",
+  "releaseStatus": "hold",
+  "generatedAt": "2026-05-20T12:00:00Z",
+  "releaseHolds": [
+    {
+      "code": "external_reviewer_expired",
+      "severity": "blocker",
+      "owner": "u-ext-17",
+      "evidence": "External Reviewer 17 review access expired on 2026-05-01T00:00:00Z",
+      "requiredAction": "Revoke reviewer access or issue a fresh time-boxed invite before release."
+    },
+    {
+      "code": "license_access_mismatch",
+      "severity": "blocker",
+      "owner": "data-steward",
+      "evidence": "data/restricted-waveforms.parquet is restricted-dua but v2.1.0 targets public export.",
+      "requiredAction": "Block public export or replace the artifact with a license-compatible derivative."
+    },
+    {
+      "code": "privileged_role_without_release_scope",
+      "severity": "blocker",
+      "owner": "u-admin-2",
+      "evidence": "Samir Dev is admin but is not approved for v2.1.0.",
+      "requiredAction": "Downgrade the role or record release-scope approval from a repository owner."
+    },
+    {
+      "code": "restricted_dataset_approval_expired",
+      "severity": "blocker",
+      "owner": "u-ext-17",
+      "evidence": "External Reviewer 17 has restricted-data download access with an expired DUA approval.",
+      "requiredAction": "Remove restricted-data access until the data-use approval is renewed."
+    },
+    {
+      "code": "secret_link_exposure",
+      "severity": "blocker",
+      "owner": "security-review",
+      "evidence": "1 artifact link(s) expose secret-bearing URLs in the release packet.",
+      "requiredAction": "Replace secret links with scoped repository object grants before export."
+    }
+  ],
+  "reviewerChecklist": [
+    {
+      "owner": "u-ext-17",
+      "requiredAction": "Revoke reviewer access or issue a fresh time-boxed invite before release.",
+      "evidence": "External Reviewer 17 review access expired on 2026-05-01T00:00:00Z"
+    },
+    {
+      "owner": "data-steward",
+      "requiredAction": "Block public export or replace the artifact with a license-compatible derivative.",
+      "evidence": "data/restricted-waveforms.parquet is restricted-dua but v2.1.0 targets public export."
+    },
+    {
+      "owner": "u-admin-2",
+      "requiredAction": "Downgrade the role or record release-scope approval from a repository owner.",
+      "evidence": "Samir Dev is admin but is not approved for v2.1.0."
+    },
+    {
+      "owner": "u-ext-17",
+      "requiredAction": "Remove restricted-data access until the data-use approval is renewed.",
+      "evidence": "External Reviewer 17 has restricted-data download access with an expired DUA approval."
+    },
+    {
+      "owner": "security-review",
+      "requiredAction": "Replace secret links with scoped repository object grants before export.",
+      "evidence": "1 artifact link(s) expose secret-bearing URLs in the release packet."
+    }
+  ],
+  "accessMatrix": [
+    {
+      "userId": "u-owner-1",
+      "name": "Dr. Amina Park",
+      "role": "owner",
+      "scope": "repository-admin",
+      "releaseApproved": true,
+      "decision": "keep"
+    },
+    {
+      "userId": "u-admin-2",
+      "name": "Samir Dev",
+      "role": "admin",
+      "scope": "all-components",
+      "releaseApproved": false,
+      "decision": "downgrade_before_release"
+    },
+    {
+      "userId": "u-ext-17",
+      "name": "External Reviewer 17",
+      "role": "reviewer",
+      "scope": "manuscript,data",
+      "releaseApproved": true,
+      "decision": "revoke_before_release"
+    },
+    {
+      "userId": "u-analyst-4",
+      "name": "Mina Analyst",
+      "role": "maintainer",
+      "scope": "code,results",
+      "releaseApproved": true,
+      "decision": "keep"
+    }
+  ],
+  "warnings": [],
+  "auditDigest": "8f8ae3250c816f296ba59f67236e29f9ccd8ae375092da4c7dc8dd59c5da9ff3"
+}

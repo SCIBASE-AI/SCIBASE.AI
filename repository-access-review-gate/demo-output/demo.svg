@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="70" y="70" width="1140" height="580" rx="18" fill="#f8fafc"/>
+  <text x="110" y="145" font-family="Arial" font-size="46" font-weight="700" fill="#0f172a">Repository Access Review Gate</text>
+  <text x="110" y="205" font-family="Arial" font-size="25" fill="#334155">repo-sci-artery-flow-042 / v2.1.0</text>
+  <text x="110" y="285" font-family="Arial" font-size="34" font-weight="700" fill="#b91c1c">5 release holds before export</text>
+  <text x="130" y="350" font-family="Arial" font-size="24" fill="#1f2937">1. external_reviewer_expired -> u-ext-17</text>
+  <text x="130" y="395" font-family="Arial" font-size="24" fill="#1f2937">2. license_access_mismatch -> data-steward</text>
+  <text x="130" y="440" font-family="Arial" font-size="24" fill="#1f2937">3. privileged_role_without_release_scope -> u-admin-2</text>
+  <text x="130" y="485" font-family="Arial" font-size="24" fill="#1f2937">4. restricted_dataset_approval_expired -> u-ext-17</text>
+  <text x="130" y="530" font-family="Arial" font-size="24" fill="#1f2937">5. secret_link_exposure -> security-review</text>
+  <text x="110" y="620" font-family="Arial" font-size="22" fill="#475569">audit digest: 8f8ae3250c816f296ba59f67...</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Project archive handoff guard demo">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <text x="72" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="48" font-weight="700">Project Archive Handoff Guard</text>
+  <text x="72" y="142" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25">SCIBASE issue #11 - user and project management</text>
+  <rect x="72" y="205" width="300" height="150" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="4"/>
+  <text x="104" y="260" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="30" font-weight="700">1. Validate</text>
+  <text x="104" y="306" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">Owner/admin request</text>
+  <text x="104" y="338" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">Internal handoff target</text>
+  <rect x="490" y="205" width="300" height="150" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="4"/>
+  <text x="522" y="260" fill="#fef3c7" font-family="Arial, sans-serif" font-size="30" font-weight="700">2. Revoke</text>
+  <text x="522" y="306" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">External write/download</text>
+  <text x="522" y="338" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">grants before archive</text>
+  <rect x="908" y="205" width="300" height="150" rx="18" fill="#1e293b" stroke="#22c55e" stroke-width="4"/>
+  <text x="940" y="260" fill="#dcfce7" font-family="Arial, sans-serif" font-size="30" font-weight="700">3. Freeze</text>
+  <text x="940" y="306" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">Artifacts read-only</text>
+  <text x="940" y="338" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">with citation snapshot</text>
+  <path d="M392 280 H465" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M450 255 L480 280 L450 305" fill="none" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M810 280 H883" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M868 255 L898 280 L868 305" fill="none" stroke="#94a3b8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="72" y="445" width="1136" height="148" rx="18" fill="#111827" stroke="#334155" stroke-width="3"/>
+  <text x="104" y="500" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="700">Demo result: READY</text>
+  <text x="104" y="548" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="24">Next owner: admin-1  |  Revoked: grant-ext-download  |  Audit: project.archive_handoff.evaluated</text>
+  <text x="104" y="590" fill="#93c5fd" font-family="Arial, sans-serif" font-size="22">Policy fingerprint proves the handoff, revocations, and citation snapshot are deterministic.</text>
+</svg>

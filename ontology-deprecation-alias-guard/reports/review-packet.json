@@ -1,0 +1,96 @@
+{
+  "packetId": "onto-deprec-001",
+  "title": "Ontology Deprecation Alias Guard",
+  "context": "Scientific Knowledge Graph Integration",
+  "status": "needs-review",
+  "readyItems": [
+    "mesh:D012345"
+  ],
+  "heldItems": [
+    "pubchem:998",
+    "uniprot:P12345"
+  ],
+  "evaluations": [
+    {
+      "itemId": "mesh:D012345",
+      "name": "Current disease term",
+      "type": "ontology-term",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "pubchem:998",
+      "name": "Compound synonym set",
+      "type": "ontology-term",
+      "status": "held",
+      "holds": [
+        "low-alias-coverage"
+      ],
+      "holdLabels": [
+        "low alias coverage"
+      ],
+      "remediation": [
+        "Add common synonyms before search indexing."
+      ]
+    },
+    {
+      "itemId": "uniprot:P12345",
+      "name": "Protein entity",
+      "type": "ontology-term",
+      "status": "held",
+      "holds": [
+        "deprecated-term",
+        "missing-replacement",
+        "low-alias-coverage",
+        "private-evidence"
+      ],
+      "holdLabels": [
+        "deprecated ontology term",
+        "missing replacement term",
+        "low alias coverage",
+        "private evidence in public alias review"
+      ],
+      "remediation": [
+        "Replace deprecated ontology term or attach curator-approved alias mapping.",
+        "Attach replacement ID before entity publication.",
+        "Add common synonyms before search indexing.",
+        "Suppress private evidence from public entity pages."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "low-alias-coverage": 2,
+    "deprecated-term": 1,
+    "missing-replacement": 1,
+    "private-evidence": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "pubchem:998",
+      "hold": "low-alias-coverage",
+      "action": "Add common synonyms before search indexing."
+    },
+    {
+      "itemId": "uniprot:P12345",
+      "hold": "deprecated-term",
+      "action": "Replace deprecated ontology term or attach curator-approved alias mapping."
+    },
+    {
+      "itemId": "uniprot:P12345",
+      "hold": "missing-replacement",
+      "action": "Attach replacement ID before entity publication."
+    },
+    {
+      "itemId": "uniprot:P12345",
+      "hold": "low-alias-coverage",
+      "action": "Add common synonyms before search indexing."
+    },
+    {
+      "itemId": "uniprot:P12345",
+      "hold": "private-evidence",
+      "action": "Suppress private evidence from public entity pages."
+    }
+  ]
+}

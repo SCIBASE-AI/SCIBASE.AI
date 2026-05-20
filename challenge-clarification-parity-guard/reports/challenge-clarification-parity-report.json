@@ -1,0 +1,178 @@
+{
+  "checkedAt": "2026-05-20T00:00:00.000Z",
+  "decision": "reopen_window",
+  "summary": {
+    "totalChallenges": 6,
+    "publishClarifications": 1,
+    "publishWithControls": 1,
+    "holdEvaluation": 3,
+    "reopenWindow": 1
+  },
+  "challenges": [
+    {
+      "challengeId": "challenge-biomarker-2026",
+      "title": "Single-cell biomarker discovery",
+      "decision": "publish_clarifications",
+      "eligibleTeamCount": 3,
+      "clarificationCount": 2,
+      "blockers": [],
+      "warnings": [],
+      "clarificationRoot": "8b2f64bc4c917e21abf224bdac1742c642e2ef25ef4df7e2659d557dcc1c912c",
+      "reviewerPacketDigest": "2f5107e1f16ec1de26865bbef66005d679c1dce344120c6ba6e0703b00db6e35"
+    },
+    {
+      "challengeId": "challenge-protein-2026",
+      "title": "Protein folding validation",
+      "decision": "publish_with_controls",
+      "eligibleTeamCount": 3,
+      "clarificationCount": 1,
+      "blockers": [],
+      "warnings": [
+        {
+          "severity": "warning",
+          "code": "answer_sla_missed",
+          "message": "Sponsor clarification answer missed the published response SLA.",
+          "evidence": {
+            "challengeId": "challenge-protein-2026",
+            "clarificationId": "qa-late",
+            "elapsedHours": 48,
+            "slaHours": 24
+          }
+        }
+      ],
+      "clarificationRoot": "22da3a994de95a1b7a5f09aa0fcf75e128c2f998dc2950a4d5ea649ee01591c8",
+      "reviewerPacketDigest": "e7791aee8e2ef09825513a53c9323bea48d50f7a805864a55c825ef33c58ea12"
+    },
+    {
+      "challengeId": "challenge-forecast-2026",
+      "title": "Regional climate forecasting model",
+      "decision": "hold_evaluation",
+      "eligibleTeamCount": 3,
+      "clarificationCount": 1,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "material_answer_not_broadcast",
+          "message": "Material sponsor clarification was not broadcast to every eligible team.",
+          "evidence": {
+            "challengeId": "challenge-forecast-2026",
+            "clarificationId": "qa-private-material",
+            "answerVisibility": "requesting_team",
+            "eligibleTeamCount": 3
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "private_attachment_advantage",
+          "message": "Material clarification attachment is not available to all eligible teams.",
+          "evidence": {
+            "challengeId": "challenge-forecast-2026",
+            "clarificationId": "qa-private-material",
+            "attachmentIds": [
+              "private-evaluation-grid"
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "clarificationRoot": "6d1cb91e26e7032f10dfd5897923c7f49a82915679403fce6ffed90d8c3c0d52",
+      "reviewerPacketDigest": "992e4e0909ff695ee32722e3aef1ba0a2f290159eeb91748bed196feb7027413"
+    },
+    {
+      "challengeId": "challenge-materials-2026",
+      "title": "Materials synthesis route optimization",
+      "decision": "hold_evaluation",
+      "eligibleTeamCount": 3,
+      "clarificationCount": 1,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "anonymous_team_identity_leak",
+          "message": "Clarification packet reveals anonymous solver identity.",
+          "evidence": {
+            "challengeId": "challenge-materials-2026",
+            "clarificationId": "qa-leak",
+            "identityReferences": [
+              "team-gamma"
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "clarificationRoot": "8dbcc574ea3d937fa1579946b17621152413e5db58c8301e2d3e9dec706f453c",
+      "reviewerPacketDigest": "400a7875c92d4f597a236f52c9aa2aa03222890b610b827d9eaf3ab8bd72bb5d"
+    },
+    {
+      "challengeId": "challenge-quantum-noise-2026",
+      "title": "Quantum noise reduction benchmark",
+      "decision": "reopen_window",
+      "eligibleTeamCount": 3,
+      "clarificationCount": 1,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "scope_change_missing_amendment",
+          "message": "Scope-changing clarification must link to the amendment consent workflow.",
+          "evidence": {
+            "challengeId": "challenge-quantum-noise-2026",
+            "clarificationId": "qa-scope-change"
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "scope_change_without_submission_extension",
+          "message": "Scope-changing clarification did not reopen or extend the submission window.",
+          "evidence": {
+            "challengeId": "challenge-quantum-noise-2026",
+            "clarificationId": "qa-scope-change"
+          }
+        }
+      ],
+      "warnings": [],
+      "clarificationRoot": "978e662b3d57a499a15eab5b061d06f1722a5b0fc744d9d4a42370f62bd11150",
+      "reviewerPacketDigest": "d0891298f7ef0daefff70be8dc8b374bdcad31e78b0bee2e2adbb6fd0c5a6ec8"
+    },
+    {
+      "challengeId": "challenge-drug-screen-2026",
+      "title": "Drug screen assay deconvolution",
+      "decision": "hold_evaluation",
+      "eligibleTeamCount": 3,
+      "clarificationCount": 1,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "material_answer_not_broadcast",
+          "message": "Material sponsor clarification was not broadcast to every eligible team.",
+          "evidence": {
+            "challengeId": "challenge-drug-screen-2026",
+            "clarificationId": "qa-overdue",
+            "answerVisibility": null,
+            "eligibleTeamCount": 3
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "material_question_unanswered",
+          "message": "Material clarification remains unanswered past the response SLA.",
+          "evidence": {
+            "challengeId": "challenge-drug-screen-2026",
+            "clarificationId": "qa-overdue",
+            "ageHours": 48,
+            "slaHours": 24
+          }
+        }
+      ],
+      "warnings": [],
+      "clarificationRoot": "efc0bd85471dda1238586956f7fb8c29ad02df8eee271291508e5a754d171a54",
+      "reviewerPacketDigest": "1fae09befc157c45f2f5338c17f23755f934e3a247000654e398563413e1a907"
+    }
+  ],
+  "operatorTasks": [
+    "Broadcast material sponsor answers and attachments to every eligible team before evaluation continues.",
+    "Route scope-changing clarifications through amendment consent and reopen the submission window.",
+    "Hold challenge evaluation until overdue material questions are answered.",
+    "Redact team identities from clarification packets before sponsor or reviewer publication.",
+    "Publish missed-SLA notices and extend review windows when late sponsor answers affect solver work."
+  ],
+  "auditDigest": "3cf87cb20414e4eeab7f2ff403b959acfef4588994be54f49a6fd704f91e64d0"
+}

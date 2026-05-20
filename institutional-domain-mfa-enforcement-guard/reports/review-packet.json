@@ -1,0 +1,96 @@
+{
+  "packetId": "domain-mfa-001",
+  "title": "Institutional Domain MFA Enforcement Guard",
+  "context": "User & Project Management",
+  "status": "needs-review",
+  "readyItems": [
+    "user-a"
+  ],
+  "heldItems": [
+    "user-b",
+    "user-c"
+  ],
+  "evaluations": [
+    {
+      "itemId": "user-a",
+      "name": "University owner",
+      "type": "identity",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "user-b",
+      "name": "Hospital collaborator",
+      "type": "identity",
+      "status": "held",
+      "holds": [
+        "missing-mfa",
+        "unverified-recovery"
+      ],
+      "holdLabels": [
+        "MFA not enabled",
+        "recovery method unverified"
+      ],
+      "remediation": [
+        "Require MFA enrollment before access activation.",
+        "Verify recovery method before sensitive project access."
+      ]
+    },
+    {
+      "itemId": "user-c",
+      "name": "External reviewer",
+      "type": "identity",
+      "status": "held",
+      "holds": [
+        "missing-mfa",
+        "missing-oauth-link",
+        "external-guest"
+      ],
+      "holdLabels": [
+        "MFA not enabled",
+        "OAuth/ORCID not linked",
+        "external guest requires owner review"
+      ],
+      "remediation": [
+        "Require MFA enrollment before access activation.",
+        "Link ORCID, Google, GitHub, or institutional identity.",
+        "Route external guests to owner approval."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "missing-mfa": 2,
+    "unverified-recovery": 1,
+    "missing-oauth-link": 1,
+    "external-guest": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "user-b",
+      "hold": "missing-mfa",
+      "action": "Require MFA enrollment before access activation."
+    },
+    {
+      "itemId": "user-b",
+      "hold": "unverified-recovery",
+      "action": "Verify recovery method before sensitive project access."
+    },
+    {
+      "itemId": "user-c",
+      "hold": "missing-mfa",
+      "action": "Require MFA enrollment before access activation."
+    },
+    {
+      "itemId": "user-c",
+      "hold": "missing-oauth-link",
+      "action": "Link ORCID, Google, GitHub, or institutional identity."
+    },
+    {
+      "itemId": "user-c",
+      "hold": "external-guest",
+      "action": "Route external guests to owner approval."
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "asOf": "2026-05-20T00:00:00.000Z",
+  "policy": {
+    "minimumEvidenceScore": 100,
+    "agingRiskDays": 14
+  },
+  "summary": {
+    "count": 5,
+    "totalAmount": 43250,
+    "totalLeakageRisk": 21801,
+    "byReadiness": {
+      "ready_to_invoice": 18950,
+      "needs_review": 4200,
+      "blocked": 20100
+    },
+    "byRevenueStream": {
+      "subscription": 18950,
+      "ai_compute": 4200,
+      "data_license": 12500,
+      "professional_services": 7600
+    }
+  },
+  "rows": [
+    {
+      "accountId": "uni-northstar",
+      "accountName": "Northstar University Consortium",
+      "eventId": "sub-q2-institutional-seat-pack",
+      "revenueStream": "subscription",
+      "amount": 18000,
+      "currency": "USD",
+      "readiness": "ready_to_invoice",
+      "evidenceScore": 100,
+      "eventAgeDays": 5,
+      "leakageRisk": 0,
+      "reasons": [],
+      "evidence": [
+        {
+          "key": "signed-order-form-q2",
+          "status": "approved",
+          "source": "contracts/northstar-q2-order-form.pdf",
+          "owner": "enterprise-sales",
+          "observedAt": "2026-05-06"
+        },
+        {
+          "key": "admin-seat-acceptance",
+          "status": "approved",
+          "source": "customer-portal/seat-acceptance-3912",
+          "owner": "customer-admin",
+          "observedAt": "2026-05-16"
+        }
+      ],
+      "recommendedAction": "Create invoice for sub-q2-institutional-seat-pack and attach the approved acceptance packet."
+    },
+    {
+      "accountId": "uni-northstar",
+      "accountName": "Northstar University Consortium",
+      "eventId": "ai-compute-may-burst",
+      "revenueStream": "ai_compute",
+      "amount": 4200,
+      "currency": "USD",
+      "readiness": "needs_review",
+      "evidenceScore": 50,
+      "eventAgeDays": 10,
+      "leakageRisk": 1701,
+      "reasons": [
+        "pending_acceptance"
+      ],
+      "evidence": [
+        {
+          "key": "signed-order-form-q2",
+          "status": "approved",
+          "source": "contracts/northstar-q2-order-form.pdf",
+          "owner": "enterprise-sales",
+          "observedAt": "2026-05-06"
+        },
+        {
+          "key": "compute-usage-summary",
+          "status": "pending",
+          "source": "usage-meter/may-ai-compute-summary.json",
+          "owner": "finops",
+          "observedAt": "2026-05-19",
+          "note": "Usage digest generated but not approved by lab finance."
+        }
+      ],
+      "recommendedAction": "Escalate pending customer acceptance for ai-compute-may-burst to the named owner."
+    },
+    {
+      "accountId": "gov-polaris",
+      "accountName": "Polaris Research Office",
+      "eventId": "license-export-wave-3",
+      "revenueStream": "data_license",
+      "amount": 12500,
+      "currency": "USD",
+      "readiness": "blocked",
+      "evidenceScore": 50,
+      "eventAgeDays": 19,
+      "leakageRisk": 12500,
+      "reasons": [
+        "rejected_evidence",
+        "evidence_score_below_policy",
+        "aging_unbilled_revenue"
+      ],
+      "evidence": [
+        {
+          "key": "analytics-export-manifest",
+          "status": "approved",
+          "source": "exports/polaris/manifest-2026-05.json",
+          "owner": "data-licensing",
+          "observedAt": "2026-05-12"
+        },
+        {
+          "key": "aggregation-threshold-review",
+          "status": "rejected",
+          "source": "privacy-review/threshold-exception-18",
+          "owner": "privacy",
+          "observedAt": "2026-05-14",
+          "note": "One cohort fails minimum aggregation threshold."
+        }
+      ],
+      "recommendedAction": "Resolve rejected acceptance artifact before invoicing license-export-wave-3."
+    },
+    {
+      "accountId": "lab-kite",
+      "accountName": "Kite Bioinformatics Lab",
+      "eventId": "reproducibility-milestone-2",
+      "revenueStream": "professional_services",
+      "amount": 7600,
+      "currency": "USD",
+      "readiness": "blocked",
+      "evidenceScore": 50,
+      "eventAgeDays": 22,
+      "leakageRisk": 7600,
+      "reasons": [
+        "missing_evidence",
+        "evidence_score_below_policy",
+        "aging_unbilled_revenue"
+      ],
+      "evidence": [
+        {
+          "key": "milestone-demo-recording",
+          "status": "approved",
+          "source": "demos/kite-repro-check-demo.mp4",
+          "owner": "solutions",
+          "observedAt": "2026-05-04"
+        },
+        {
+          "key": "customer-acceptance-email",
+          "status": "missing",
+          "source": null,
+          "owner": "customer-success",
+          "observedAt": null
+        }
+      ],
+      "recommendedAction": "Collect missing customer evidence for reproducibility-milestone-2: milestone-demo-recording, customer-acceptance-email."
+    },
+    {
+      "accountId": "startup-halo",
+      "accountName": "Halo Methods",
+      "eventId": "pro-conversion-first-month",
+      "revenueStream": "subscription",
+      "amount": 950,
+      "currency": "USD",
+      "readiness": "ready_to_invoice",
+      "evidenceScore": 100,
+      "eventAgeDays": 1,
+      "leakageRisk": 0,
+      "reasons": [],
+      "evidence": [
+        {
+          "key": "trial-conversion-order",
+          "status": "approved",
+          "source": "contracts/halo-pro-conversion.pdf",
+          "owner": "sales",
+          "observedAt": "2026-05-18"
+        },
+        {
+          "key": "billing-contact-confirmed",
+          "status": "approved",
+          "source": "crm/halo-billing-contact",
+          "owner": "revops",
+          "observedAt": "2026-05-18"
+        }
+      ],
+      "recommendedAction": "Create invoice for pro-conversion-first-month and attach the approved acceptance packet."
+    }
+  ],
+  "actionQueue": [
+    {
+      "rank": 1,
+      "accountId": "gov-polaris",
+      "eventId": "license-export-wave-3",
+      "readiness": "blocked",
+      "leakageRisk": 12500,
+      "reasons": [
+        "rejected_evidence",
+        "evidence_score_below_policy",
+        "aging_unbilled_revenue"
+      ],
+      "action": "Resolve rejected acceptance artifact before invoicing license-export-wave-3."
+    },
+    {
+      "rank": 2,
+      "accountId": "lab-kite",
+      "eventId": "reproducibility-milestone-2",
+      "readiness": "blocked",
+      "leakageRisk": 7600,
+      "reasons": [
+        "missing_evidence",
+        "evidence_score_below_policy",
+        "aging_unbilled_revenue"
+      ],
+      "action": "Collect missing customer evidence for reproducibility-milestone-2: milestone-demo-recording, customer-acceptance-email."
+    },
+    {
+      "rank": 3,
+      "accountId": "uni-northstar",
+      "eventId": "ai-compute-may-burst",
+      "readiness": "needs_review",
+      "leakageRisk": 1701,
+      "reasons": [
+        "pending_acceptance"
+      ],
+      "action": "Escalate pending customer acceptance for ai-compute-may-burst to the named owner."
+    }
+  ],
+  "auditDigest": "fbeae4fb0d818229"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "invoice-acceptance-evidence-gate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-contained revenue infrastructure control for invoice acceptance evidence.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js"
+  }
+}

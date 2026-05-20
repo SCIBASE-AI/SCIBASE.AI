@@ -1,0 +1,123 @@
+{
+  "packetId": "suppl-ready-001",
+  "title": "Supplementary Material Readiness Assistant",
+  "context": "AI-Assisted Research Tools MVP",
+  "status": "needs-review",
+  "readyItems": [
+    "raw-data",
+    "analysis-code"
+  ],
+  "heldItems": [
+    "data-dictionary",
+    "video-demo"
+  ],
+  "evaluations": [
+    {
+      "itemId": "raw-data",
+      "name": "Raw data archive",
+      "type": "supplement",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "analysis-code",
+      "name": "Analysis code bundle",
+      "type": "code",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "data-dictionary",
+      "name": "Data dictionary",
+      "type": "metadata",
+      "status": "held",
+      "holds": [
+        "not-ready",
+        "missing-readme",
+        "missing-accessibility-notes"
+      ],
+      "holdLabels": [
+        "not marked ready",
+        "missing README",
+        "missing accessibility notes"
+      ],
+      "remediation": [
+        "Complete the supplement or mark it as excluded before submission.",
+        "Add a README describing files, provenance, and expected reviewer actions.",
+        "Add transcript, captions, alt text, or accessible table equivalents."
+      ]
+    },
+    {
+      "itemId": "video-demo",
+      "name": "Protocol video",
+      "type": "media",
+      "status": "held",
+      "holds": [
+        "missing-public-link",
+        "missing-readme",
+        "large-file",
+        "missing-accessibility-notes"
+      ],
+      "holdLabels": [
+        "missing public link",
+        "missing README",
+        "large file needs access note",
+        "missing accessibility notes"
+      ],
+      "remediation": [
+        "Attach a DOI, repository URL, or reviewer-accessible storage link.",
+        "Add a README describing files, provenance, and expected reviewer actions.",
+        "Split the file or document download/runtime expectations.",
+        "Add transcript, captions, alt text, or accessible table equivalents."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "not-ready": 1,
+    "missing-readme": 2,
+    "missing-accessibility-notes": 2,
+    "missing-public-link": 1,
+    "large-file": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "data-dictionary",
+      "hold": "not-ready",
+      "action": "Complete the supplement or mark it as excluded before submission."
+    },
+    {
+      "itemId": "data-dictionary",
+      "hold": "missing-readme",
+      "action": "Add a README describing files, provenance, and expected reviewer actions."
+    },
+    {
+      "itemId": "data-dictionary",
+      "hold": "missing-accessibility-notes",
+      "action": "Add transcript, captions, alt text, or accessible table equivalents."
+    },
+    {
+      "itemId": "video-demo",
+      "hold": "missing-public-link",
+      "action": "Attach a DOI, repository URL, or reviewer-accessible storage link."
+    },
+    {
+      "itemId": "video-demo",
+      "hold": "missing-readme",
+      "action": "Add a README describing files, provenance, and expected reviewer actions."
+    },
+    {
+      "itemId": "video-demo",
+      "hold": "large-file",
+      "action": "Split the file or document download/runtime expectations."
+    },
+    {
+      "itemId": "video-demo",
+      "hold": "missing-accessibility-notes",
+      "action": "Add transcript, captions, alt text, or accessible table equivalents."
+    }
+  ]
+}

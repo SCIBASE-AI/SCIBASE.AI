@@ -1,0 +1,113 @@
+{
+  "packetId": "synonym-dedupe-001",
+  "title": "Cross-Ontology Synonym Dedupe Guard",
+  "context": "Scientific Knowledge Graph Integration",
+  "status": "needs-review",
+  "readyItems": [
+    "entity-1"
+  ],
+  "heldItems": [
+    "entity-2",
+    "entity-3"
+  ],
+  "evaluations": [
+    {
+      "itemId": "entity-1",
+      "name": "ACE2",
+      "type": "entity",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "entity-2",
+      "name": "APOE-e4",
+      "type": "entity",
+      "status": "held",
+      "holds": [
+        "synonym-collision",
+        "ontology-conflict",
+        "low-confidence",
+        "not-reviewed"
+      ],
+      "holdLabels": [
+        "synonym collision",
+        "ontology conflict",
+        "low entity confidence",
+        "not curator reviewed"
+      ],
+      "remediation": [
+        "Create curator task to merge or split collided synonyms.",
+        "Choose canonical ontology namespace before publishing entity.",
+        "Require curator review for low-confidence entity matches.",
+        "Route dedupe decision to graph curator."
+      ]
+    },
+    {
+      "itemId": "entity-3",
+      "name": "CRISPR-Cas9",
+      "type": "entity",
+      "status": "held",
+      "holds": [
+        "synonym-collision",
+        "private-edge",
+        "not-reviewed"
+      ],
+      "holdLabels": [
+        "synonym collision",
+        "private edge exposure",
+        "not curator reviewed"
+      ],
+      "remediation": [
+        "Create curator task to merge or split collided synonyms.",
+        "Hide private graph edges from public dedupe reports.",
+        "Route dedupe decision to graph curator."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "synonym-collision": 2,
+    "ontology-conflict": 1,
+    "low-confidence": 1,
+    "not-reviewed": 2,
+    "private-edge": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "entity-2",
+      "hold": "synonym-collision",
+      "action": "Create curator task to merge or split collided synonyms."
+    },
+    {
+      "itemId": "entity-2",
+      "hold": "ontology-conflict",
+      "action": "Choose canonical ontology namespace before publishing entity."
+    },
+    {
+      "itemId": "entity-2",
+      "hold": "low-confidence",
+      "action": "Require curator review for low-confidence entity matches."
+    },
+    {
+      "itemId": "entity-2",
+      "hold": "not-reviewed",
+      "action": "Route dedupe decision to graph curator."
+    },
+    {
+      "itemId": "entity-3",
+      "hold": "synonym-collision",
+      "action": "Create curator task to merge or split collided synonyms."
+    },
+    {
+      "itemId": "entity-3",
+      "hold": "private-edge",
+      "action": "Hide private graph edges from public dedupe reports."
+    },
+    {
+      "itemId": "entity-3",
+      "hold": "not-reviewed",
+      "action": "Route dedupe decision to graph curator."
+    }
+  ]
+}

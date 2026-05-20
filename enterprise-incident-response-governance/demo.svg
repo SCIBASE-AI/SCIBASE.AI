@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="72" y="72" width="1136" height="576" rx="18" fill="#f8fafc"/>
+  <text x="112" y="135" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">Enterprise Incident Response Governance</text>
+  <text x="112" y="187" font-family="Arial, sans-serif" font-size="24" fill="#475569">Triage privacy, access, export, and integration incidents for institutional admins</text>
+  <rect x="112" y="242" width="300" height="250" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+  <text x="140" y="302" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#991b1b">Breach Clock</text>
+  <text x="140" y="350" font-family="Arial, sans-serif" font-size="21" fill="#7f1d1d">Regulated data</text>
+  <text x="140" y="386" font-family="Arial, sans-serif" font-size="21" fill="#7f1d1d">24h notification window</text>
+  <text x="140" y="422" font-family="Arial, sans-serif" font-size="21" fill="#7f1d1d">Executive bridge</text>
+  <rect x="490" y="242" width="300" height="250" rx="14" fill="#ecfccb" stroke="#65a30d" stroke-width="3"/>
+  <text x="518" y="302" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#365314">Admin Routing</text>
+  <text x="518" y="350" font-family="Arial, sans-serif" font-size="21" fill="#3f6212">Privacy officer</text>
+  <text x="518" y="386" font-family="Arial, sans-serif" font-size="21" fill="#3f6212">Research office</text>
+  <text x="518" y="422" font-family="Arial, sans-serif" font-size="21" fill="#3f6212">Integration owner</text>
+  <rect x="868" y="242" width="300" height="250" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="896" y="302" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1e3a8a">Signed Events</text>
+  <text x="896" y="350" font-family="Arial, sans-serif" font-size="21" fill="#1e40af">Webhook packet</text>
+  <text x="896" y="386" font-family="Arial, sans-serif" font-size="21" fill="#1e40af">Export hold digest</text>
+  <text x="896" y="422" font-family="Arial, sans-serif" font-size="21" fill="#1e40af">Audit evidence</text>
+  <text x="112" y="574" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">Result: institutional admins get severity queues, overdue notifications, held exports, and signed incident evidence.</text>
+</svg>

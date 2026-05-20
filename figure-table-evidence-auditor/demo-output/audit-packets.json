@@ -1,0 +1,140 @@
+[
+  {
+    "manuscriptId": "ms-neuro-042",
+    "title": "Closed-loop stimulation improves memory-task recovery",
+    "summaryModes": {
+      "abstract": "Closed-loop stimulation improves memory-task recovery: 3 evidence artifacts checked; 6 review actions generated.",
+      "executive": "hold-for-author-fix with 1 high and 3 medium priority evidence issues.",
+      "layperson": "Some strong claims point to missing or unclear figures/tables, so the draft should be fixed before review."
+    },
+    "readiness": "hold-for-author-fix",
+    "findings": [
+      {
+        "severity": "medium",
+        "code": "claim-needs-stronger-statistical-context",
+        "message": "Statistical or comparative claim needs confidence interval, sample size, or clearer evidence context.",
+        "sentence": "The biomarker response was significant at p < 0.04 in Table 2.",
+        "action": "Attach the statistic to a specific panel/table cell and include uncertainty where available."
+      },
+      {
+        "severity": "high",
+        "code": "missing-evidence-reference",
+        "message": "Claim references Figure 3 but no matching figure/table is present.",
+        "sentence": "Figure 3 shows device adherence during the home phase.",
+        "action": "Add the missing artifact or rewrite the claim to cite available evidence."
+      },
+      {
+        "severity": "medium",
+        "code": "unused-evidence-artifact",
+        "message": "figure 2 is present but not cited in the manuscript body.",
+        "artifact": "figure 2",
+        "action": "Cite it where it supports a claim, or remove it from the submission packet."
+      },
+      {
+        "severity": "medium",
+        "code": "caption-too-thin",
+        "message": "figure 2 caption is too short for reviewer-ready context.",
+        "artifact": "figure 2",
+        "action": "Expand the caption with measurement, cohort, time window, and unit details."
+      },
+      {
+        "severity": "low",
+        "code": "unit-not-mentioned-in-body",
+        "message": "figure 2 uses unit 'days' but that unit is not mentioned near the manuscript claims.",
+        "artifact": "figure 2",
+        "action": "Mention the unit in the related claim or caption to reduce reviewer ambiguity."
+      },
+      {
+        "severity": "low",
+        "code": "unit-not-mentioned-in-body",
+        "message": "table 2 uses unit 'pg/mL' but that unit is not mentioned near the manuscript claims.",
+        "artifact": "table 2",
+        "action": "Mention the unit in the related claim or caption to reduce reviewer ambiguity."
+      }
+    ],
+    "citationActions": [
+      {
+        "id": "smith-2024-closed-loop",
+        "title": "Closed-loop stimulation and recall recovery",
+        "recommendation": "insert",
+        "reason": "Matches evidence artifact tags or captions."
+      },
+      {
+        "id": "nguyen-2023-single-cell",
+        "title": "Single-cell atlas for immune signaling",
+        "recommendation": "defer",
+        "reason": "No direct figure/table evidence match in this draft packet."
+      }
+    ],
+    "summaryEvidence": [
+      {
+        "id": "figure 1",
+        "caption": "Recall accuracy by cohort over six weeks",
+        "cited": true,
+        "reviewerCue": "Evidence tags: memory recall stimulation cohort"
+      },
+      {
+        "id": "figure 2",
+        "caption": "Adherence",
+        "cited": false,
+        "reviewerCue": "Evidence tags: device adherence home phase"
+      },
+      {
+        "id": "table 2",
+        "caption": "Primary biomarker response with p values",
+        "cited": true,
+        "reviewerCue": "Evidence tags: biomarker p-value confidence interval"
+      }
+    ],
+    "auditDigest": "fta-8211b6be"
+  },
+  {
+    "manuscriptId": "ms-climate-117",
+    "title": "River heat pulses alter macroinvertebrate recovery",
+    "summaryModes": {
+      "abstract": "River heat pulses alter macroinvertebrate recovery: 2 evidence artifacts checked; 2 review actions generated.",
+      "executive": "ready-for-human-review with 0 high and 0 medium priority evidence issues.",
+      "layperson": "The draft mostly connects its claims to supporting figures and tables."
+    },
+    "readiness": "ready-for-human-review",
+    "findings": [
+      {
+        "severity": "low",
+        "code": "unit-not-mentioned-in-body",
+        "message": "figure 1 uses unit 'days' but that unit is not mentioned near the manuscript claims.",
+        "artifact": "figure 1",
+        "action": "Mention the unit in the related claim or caption to reduce reviewer ambiguity."
+      },
+      {
+        "severity": "low",
+        "code": "unit-not-mentioned-in-body",
+        "message": "table 1 uses unit 'uS/cm' but that unit is not mentioned near the manuscript claims.",
+        "artifact": "table 1",
+        "action": "Mention the unit in the related claim or caption to reduce reviewer ambiguity."
+      }
+    ],
+    "citationActions": [
+      {
+        "id": "patel-2022-river-heat",
+        "title": "Freshwater recovery after thermal stress",
+        "recommendation": "insert",
+        "reason": "Matches evidence artifact tags or captions."
+      }
+    ],
+    "summaryEvidence": [
+      {
+        "id": "figure 1",
+        "caption": "Recovery curves for all monitored river sites after heat pulses",
+        "cited": true,
+        "reviewerCue": "Evidence tags: river recovery heat-pulse diversity"
+      },
+      {
+        "id": "table 1",
+        "caption": "Site-level model covariates and confidence intervals",
+        "cited": true,
+        "reviewerCue": "Evidence tags: conductivity flow confidence interval"
+      }
+    ],
+    "auditDigest": "fta-803f217a"
+  }
+]

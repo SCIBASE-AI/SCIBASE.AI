@@ -1,0 +1,153 @@
+{
+  "generatedAt": "2026-05-20T12:00:00Z",
+  "summary": {
+    "total": 6,
+    "fallbackReleases": 4,
+    "findings": 10,
+    "byDecision": {
+      "release_with_fallback": 1,
+      "hold_for_review": 1,
+      "release": 1,
+      "block": 3
+    }
+  },
+  "decisions": [
+    {
+      "invoiceId": "inv-alpha-subscription-001",
+      "accountId": "lab-alpha",
+      "decision": "release_with_fallback",
+      "selectedRail": "institutional_invoice",
+      "fallbackUsed": true,
+      "estimatedSettlementDays": 10,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "primary_rail_unavailable",
+          "message": "Primary payment rail is not ready, so a compatible fallback rail was evaluated.",
+          "primaryRail": "stripe_card",
+          "reasons": [
+            "rail_status_outage",
+            "active_incident_inc-stripe-2026-05-card-auth"
+          ]
+        }
+      ]
+    },
+    {
+      "invoiceId": "inv-eu-compute-topup-002",
+      "accountId": "uni-eu-consortium",
+      "decision": "hold_for_review",
+      "selectedRail": "institutional_invoice",
+      "fallbackUsed": true,
+      "estimatedSettlementDays": 10,
+      "findings": [
+        {
+          "severity": "info",
+          "code": "primary_rail_unavailable",
+          "message": "Primary payment rail is not ready, so a compatible fallback rail was evaluated.",
+          "primaryRail": "stripe_card",
+          "reasons": [
+            "rail_status_outage",
+            "active_incident_inc-stripe-2026-05-card-auth"
+          ]
+        },
+        {
+          "severity": "medium",
+          "code": "missing_fallback_finance_approval",
+          "message": "Fallback release needs finance approval because settlement timing or fees can change."
+        },
+        {
+          "severity": "medium",
+          "code": "missing_customer_notice",
+          "message": "Customer notice is required before moving this invoice to a fallback rail."
+        }
+      ]
+    },
+    {
+      "invoiceId": "inv-gov-license-003",
+      "accountId": "gov-policy-lab",
+      "decision": "release",
+      "selectedRail": "institutional_invoice",
+      "fallbackUsed": false,
+      "estimatedSettlementDays": 10,
+      "findings": []
+    },
+    {
+      "invoiceId": "inv-solo-topup-004",
+      "accountId": "solo-researcher",
+      "decision": "block",
+      "selectedRail": null,
+      "fallbackUsed": false,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "primary_rail_unavailable",
+          "message": "Primary payment rail is not ready for this invoice.",
+          "primaryRail": "stripe_card",
+          "reasons": [
+            "unsupported_region",
+            "rail_status_outage",
+            "active_incident_inc-stripe-2026-05-card-auth"
+          ]
+        },
+        {
+          "severity": "critical",
+          "code": "no_compatible_fallback_rail",
+          "message": "No configured fallback rail can safely process this invoice."
+        }
+      ]
+    },
+    {
+      "invoiceId": "inv-duplicate-a",
+      "accountId": "lab-alpha",
+      "decision": "block",
+      "selectedRail": "institutional_invoice",
+      "fallbackUsed": true,
+      "estimatedSettlementDays": 10,
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "duplicate_idempotency_key",
+          "message": "The same idempotency key appears on more than one invoice.",
+          "idempotencyKey": "dup-risk-2026-05"
+        },
+        {
+          "severity": "info",
+          "code": "primary_rail_unavailable",
+          "message": "Primary payment rail is not ready, so a compatible fallback rail was evaluated.",
+          "primaryRail": "stripe_card",
+          "reasons": [
+            "rail_status_outage",
+            "active_incident_inc-stripe-2026-05-card-auth"
+          ]
+        }
+      ]
+    },
+    {
+      "invoiceId": "inv-duplicate-b",
+      "accountId": "lab-alpha",
+      "decision": "block",
+      "selectedRail": "institutional_invoice",
+      "fallbackUsed": true,
+      "estimatedSettlementDays": 10,
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "duplicate_idempotency_key",
+          "message": "The same idempotency key appears on more than one invoice.",
+          "idempotencyKey": "dup-risk-2026-05"
+        },
+        {
+          "severity": "info",
+          "code": "primary_rail_unavailable",
+          "message": "Primary payment rail is not ready, so a compatible fallback rail was evaluated.",
+          "primaryRail": "stripe_card",
+          "reasons": [
+            "rail_status_outage",
+            "active_incident_inc-stripe-2026-05-card-auth"
+          ]
+        }
+      ]
+    }
+  ],
+  "auditDigest": "94dfda0dfa1a91898345"
+}

@@ -1,0 +1,200 @@
+{
+  "checkedAt": "2026-05-20T00:00:00.000Z",
+  "decision": "quarantine_revenue",
+  "summary": {
+    "totalPackets": 5,
+    "releaseRevenue": 1,
+    "releaseWithControls": 1,
+    "holdRevenue": 1,
+    "quarantineRevenue": 2,
+    "revenueAtRiskCents": 8560000
+  },
+  "packets": [
+    {
+      "invoiceId": "inv-institution-0426",
+      "customerId": "inst-cern-lab",
+      "stream": "subscription",
+      "amountCents": 1800000,
+      "decision": "release_revenue",
+      "requiredEvidence": [
+        "contract",
+        "entitlement_snapshot",
+        "invoice",
+        "payment_or_po"
+      ],
+      "evidenceCount": 4,
+      "retainedUntil": "2031-05-01",
+      "storageLockUntil": "2026-08-15",
+      "evidenceRoot": "3c0e550f6d58914de778f93636e6f7bf039297c55eaa7382e334ae1a82885da0",
+      "blockers": [],
+      "warnings": [],
+      "reviewerPacketDigest": "dd008d0b450a0db04ffe755e4ee62b1e8802dd9045a9af4d4ec858aff71fbc99"
+    },
+    {
+      "invoiceId": "inv-lab-0426",
+      "customerId": "lab-microscopy-core",
+      "stream": "subscription",
+      "amountCents": 420000,
+      "decision": "release_with_controls",
+      "requiredEvidence": [
+        "contract",
+        "entitlement_snapshot",
+        "invoice",
+        "payment_or_po"
+      ],
+      "evidenceCount": 4,
+      "retainedUntil": "2031-05-01",
+      "storageLockUntil": "2026-07-15",
+      "evidenceRoot": "2f57f84b36ad70453e180ed0c319705bfee185d11db821cbdefd115448547edb",
+      "blockers": [],
+      "warnings": [
+        {
+          "severity": "warning",
+          "code": "evidence_replica_count_low",
+          "message": "Evidence has fewer than two storage replicas.",
+          "evidence": {
+            "invoiceId": "inv-lab-0426",
+            "evidenceId": "contract-lab-2026",
+            "replicas": 1
+          }
+        }
+      ],
+      "reviewerPacketDigest": "8769712350d473e423efae19b1f09ffebe18477c48b3c86c832d5551371275e7"
+    },
+    {
+      "invoiceId": "inv-compute-0426",
+      "customerId": "lab-foundation-model",
+      "stream": "ai_compute",
+      "amountCents": 960000,
+      "decision": "hold_revenue",
+      "requiredEvidence": [
+        "job_manifest",
+        "meter_reading",
+        "cost_trace",
+        "customer_usage_summary"
+      ],
+      "evidenceCount": 3,
+      "retainedUntil": "2028-04-30",
+      "storageLockUntil": "2026-06-30",
+      "evidenceRoot": "66cb00ed973cc50192257bdbc1daf2605de517cc540c6813261f4184770ccf28",
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "required_evidence_missing",
+          "message": "Revenue evidence packet is missing required proof types.",
+          "evidence": {
+            "invoiceId": "inv-compute-0426",
+            "stream": "ai_compute",
+            "missing": [
+              "cost_trace"
+            ]
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "retention_window_too_short",
+          "message": "Revenue evidence retention is shorter than policy requires.",
+          "evidence": {
+            "invoiceId": "inv-compute-0426",
+            "retainedUntil": "2028-04-30",
+            "requiredUntil": "2031-04-30",
+            "requiredYears": 5
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "immutability_lock_before_dispute_deadline",
+          "message": "Evidence lock expires before the customer dispute window closes.",
+          "evidence": {
+            "invoiceId": "inv-compute-0426",
+            "storageLockUntil": "2026-06-30",
+            "disputeDeadline": "2026-07-29"
+          }
+        }
+      ],
+      "warnings": [],
+      "reviewerPacketDigest": "e5cb502b3a43d1e4ff609f54ecd056759fbcd25e9469ddbad4b2846f2f3e8fdd"
+    },
+    {
+      "invoiceId": "inv-nih-license-0426",
+      "customerId": "gov-nih-policy",
+      "stream": "analytics_license",
+      "amountCents": 5400000,
+      "decision": "quarantine_revenue",
+      "requiredEvidence": [
+        "license_terms",
+        "export_manifest",
+        "privacy_review",
+        "customer_usage_summary"
+      ],
+      "evidenceCount": 4,
+      "retainedUntil": "2033-05-01",
+      "storageLockUntil": "2026-09-15",
+      "evidenceRoot": "b2ce0a59c9bb366e43a658e7bca7868499eaf91f6b3bd02722280b152fd94a2a",
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "private_content_in_license_export",
+          "message": "Analytics licensing evidence includes private content.",
+          "evidence": {
+            "invoiceId": "inv-nih-license-0426",
+            "evidenceIds": [
+              "export-nih-topic-trends"
+            ]
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "privacy_review_not_approved",
+          "message": "Analytics licensing revenue lacks an approved privacy review.",
+          "evidence": {
+            "invoiceId": "inv-nih-license-0426"
+          }
+        }
+      ],
+      "warnings": [],
+      "reviewerPacketDigest": "1fdffad46df73e90305350a0825cdf639b4a2af45c944efe7c86073e18a98fee"
+    },
+    {
+      "invoiceId": "inv-gov-compute-0426",
+      "customerId": "gov-eu-reproducibility",
+      "stream": "ai_compute",
+      "amountCents": 2200000,
+      "decision": "quarantine_revenue",
+      "requiredEvidence": [
+        "job_manifest",
+        "meter_reading",
+        "cost_trace",
+        "customer_usage_summary"
+      ],
+      "evidenceCount": 4,
+      "retainedUntil": "2033-05-01",
+      "storageLockUntil": "2026-09-15",
+      "evidenceRoot": "78952b45224ce8da811fcdd10b8f4c9cb3bb362ed2ac92d3271bee8f3be5f476",
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "legal_hold_deletion_conflict",
+          "message": "Deletion request conflicts with an active revenue evidence legal hold.",
+          "evidence": {
+            "invoiceId": "inv-gov-compute-0426",
+            "holdUntil": "2033-05-01",
+            "deletionRequestIds": [
+              "erase-eu-44-raw"
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "reviewerPacketDigest": "ce4ced266b8c0d8cf2c6c66ac0db3caa6b73e1bc9e8a2c47088ada5fc7627877"
+    }
+  ],
+  "financeTasks": [
+    "Attach missing contract, usage, cost, invoice, or privacy-review evidence before booking revenue.",
+    "Extend evidence retention and storage lock periods to satisfy customer and audit windows.",
+    "Quarantine analytics licensing exports until privacy approval proves no private content is monetized.",
+    "Block deletion jobs that conflict with revenue evidence legal holds.",
+    "Increase evidence replication for release-with-controls invoices."
+  ],
+  "auditDigest": "2d55e1821c02201cea5efddac806171052bcbfca01611165fe15255c6521b909"
+}

@@ -1,0 +1,261 @@
+{
+  "manuscriptId": "ms-alpha-042",
+  "title": "Federated CRISPR Screen Prioritization With Privacy-Preserving Lab Signals",
+  "domain": "computational biology",
+  "generatedAt": "2026-05-20T09:50:00.000Z",
+  "summaries": {
+    "abstractStyle": "Federated CRISPR Screen Prioritization With Privacy-Preserving Lab Signals was screened for novelty overstatement across 3 claims. 0 high-risk and 1 medium-risk claims require reviewer attention, with 1 adjacent-work citation insertions recommended.",
+    "executiveSummary": "The novelty-overlap auditor found 1 claims that should be softened or supported before peer review. Primary action: add adjacent-work citations and replace absolute-first language with scoped contribution statements.",
+    "laypersonExplanation": "The assistant checked whether the paper says it is more new than the evidence supports. It points reviewers to similar prior work in computational biology and suggests safer wording."
+  },
+  "claimAudits": [
+    {
+      "claimId": "claim-1",
+      "location": "Abstract",
+      "contributionType": "method",
+      "originalText": "This is the first federated CRISPR prioritization method that combines encrypted read-count signals with lab-level reproducibility scores.",
+      "risk": "medium",
+      "usesNoveltyLanguage": true,
+      "evidenceRefs": [
+        "fig-1",
+        "table-2"
+      ],
+      "currentCitations": [
+        "lee-2024-secure-screen"
+      ],
+      "topMatches": [
+        {
+          "workId": "lee-2024-secure-screen",
+          "title": "Secure Aggregation for Multi-Lab CRISPR Screen Ranking",
+          "year": 2024,
+          "doi": "10.5555/secure-crispr.2024.018",
+          "sourceUrl": "https://example.org/secure-crispr-ranking",
+          "sourceStatus": "active",
+          "cited": true,
+          "lexicalOverlap": 0.32,
+          "topicOverlap": 0.2,
+          "methodOverlap": 0.133,
+          "findingOverlap": 0.333,
+          "overlapScore": 0.253,
+          "statusReason": null
+        },
+        {
+          "workId": "nguyen-2025-dropout",
+          "title": "Dropout-Robust Guide Ranking in Distributed Perturbation Screens",
+          "year": 2025,
+          "doi": "10.5555/dropout-guide-ranking.2025.004",
+          "sourceUrl": "https://example.org/dropout-guide-ranking",
+          "sourceStatus": "active",
+          "cited": false,
+          "lexicalOverlap": 0.034,
+          "topicOverlap": 0.063,
+          "methodOverlap": 0,
+          "findingOverlap": 0,
+          "overlapScore": 0.026,
+          "statusReason": null
+        },
+        {
+          "workId": "park-2023-federated-omics",
+          "title": "Federated Omics Model Cards for Cross-Institutional Studies",
+          "year": 2023,
+          "doi": "10.5555/federated-omics-cards.2023.022",
+          "sourceUrl": "https://example.org/federated-omics-cards",
+          "sourceStatus": "active",
+          "cited": false,
+          "lexicalOverlap": 0.033,
+          "topicOverlap": 0.059,
+          "methodOverlap": 0,
+          "findingOverlap": 0,
+          "overlapScore": 0.025,
+          "statusReason": null
+        }
+      ],
+      "citationInsertions": [],
+      "rewrittenClaim": "This is the a scoped federated CRISPR prioritization method that combines encrypted read-count signals with lab-level reproducibility scores.",
+      "reviewerTasks": [
+        {
+          "type": "novelty-language-review",
+          "claimId": "claim-1",
+          "message": "Review absolute novelty wording before manuscript release."
+        }
+      ]
+    },
+    {
+      "claimId": "claim-2",
+      "location": "Results",
+      "contributionType": "evaluation",
+      "originalText": "The ranking model remains stable when one collaborating lab has a 20 percent dropout rate in guide-level observations.",
+      "risk": "low",
+      "usesNoveltyLanguage": false,
+      "evidenceRefs": [
+        "fig-3",
+        "notebook-stability"
+      ],
+      "currentCitations": [
+        "nguyen-2025-dropout"
+      ],
+      "topMatches": [
+        {
+          "workId": "nguyen-2025-dropout",
+          "title": "Dropout-Robust Guide Ranking in Distributed Perturbation Screens",
+          "year": 2025,
+          "doi": "10.5555/dropout-guide-ranking.2025.004",
+          "sourceUrl": "https://example.org/dropout-guide-ranking",
+          "sourceStatus": "active",
+          "cited": true,
+          "lexicalOverlap": 0.107,
+          "topicOverlap": 0.2,
+          "methodOverlap": 0,
+          "findingOverlap": 0.15,
+          "overlapScore": 0.112,
+          "statusReason": null
+        },
+        {
+          "workId": "lee-2024-secure-screen",
+          "title": "Secure Aggregation for Multi-Lab CRISPR Screen Ranking",
+          "year": 2024,
+          "doi": "10.5555/secure-crispr.2024.018",
+          "sourceUrl": "https://example.org/secure-crispr-ranking",
+          "sourceStatus": "active",
+          "cited": false,
+          "lexicalOverlap": 0.063,
+          "topicOverlap": 0.056,
+          "methodOverlap": 0.059,
+          "findingOverlap": 0,
+          "overlapScore": 0.048,
+          "statusReason": null
+        },
+        {
+          "workId": "park-2023-federated-omics",
+          "title": "Federated Omics Model Cards for Cross-Institutional Studies",
+          "year": 2023,
+          "doi": "10.5555/federated-omics-cards.2023.022",
+          "sourceUrl": "https://example.org/federated-omics-cards",
+          "sourceStatus": "active",
+          "cited": false,
+          "lexicalOverlap": 0.032,
+          "topicOverlap": 0.056,
+          "methodOverlap": 0.063,
+          "findingOverlap": 0.042,
+          "overlapScore": 0.046,
+          "statusReason": null
+        }
+      ],
+      "citationInsertions": [],
+      "rewrittenClaim": "The ranking model remains stable when one collaborating lab has a 20 percent dropout rate in guide-level observations.",
+      "reviewerTasks": []
+    },
+    {
+      "claimId": "claim-3",
+      "location": "Discussion",
+      "contributionType": "workflow",
+      "originalText": "Our assistant uses federated omics model-card evidence packets for cross-institutional audits, suggests adjacent papers, and rewrites overbroad novelty language before peer review.",
+      "risk": "low",
+      "usesNoveltyLanguage": false,
+      "evidenceRefs": [
+        "appendix-audit"
+      ],
+      "currentCitations": [],
+      "topMatches": [
+        {
+          "workId": "park-2023-federated-omics",
+          "title": "Federated Omics Model Cards for Cross-Institutional Studies",
+          "year": 2023,
+          "doi": "10.5555/federated-omics-cards.2023.022",
+          "sourceUrl": "https://example.org/federated-omics-cards",
+          "sourceStatus": "active",
+          "cited": false,
+          "lexicalOverlap": 0.226,
+          "topicOverlap": 0.087,
+          "methodOverlap": 0.045,
+          "findingOverlap": 0.192,
+          "overlapScore": 0.147,
+          "statusReason": null
+        },
+        {
+          "workId": "lee-2024-secure-screen",
+          "title": "Secure Aggregation for Multi-Lab CRISPR Screen Ranking",
+          "year": 2024,
+          "doi": "10.5555/secure-crispr.2024.018",
+          "sourceUrl": "https://example.org/secure-crispr-ranking",
+          "sourceStatus": "active",
+          "cited": false,
+          "lexicalOverlap": 0.026,
+          "topicOverlap": 0.042,
+          "methodOverlap": 0,
+          "findingOverlap": 0,
+          "overlapScore": 0.018,
+          "statusReason": null
+        },
+        {
+          "workId": "nguyen-2025-dropout",
+          "title": "Dropout-Robust Guide Ranking in Distributed Perturbation Screens",
+          "year": 2025,
+          "doi": "10.5555/dropout-guide-ranking.2025.004",
+          "sourceUrl": "https://example.org/dropout-guide-ranking",
+          "sourceStatus": "active",
+          "cited": false,
+          "lexicalOverlap": 0,
+          "topicOverlap": 0,
+          "methodOverlap": 0,
+          "findingOverlap": 0,
+          "overlapScore": 0,
+          "statusReason": null
+        }
+      ],
+      "citationInsertions": [
+        {
+          "claimId": "claim-3",
+          "workId": "park-2023-federated-omics",
+          "reason": "overlap score 0.147 with uncited adjacent work"
+        }
+      ],
+      "rewrittenClaim": "Our assistant uses federated omics model-card evidence packets for cross-institutional audits, suggests adjacent papers, and rewrites overbroad novelty language before peer review. Add adjacent-work citation: park-2023-federated-omics.",
+      "reviewerTasks": [
+        {
+          "type": "missing-adjacent-work-citation",
+          "claimId": "claim-3",
+          "message": "Consider citing park-2023-federated-omics because it has the strongest adjacent-work overlap."
+        }
+      ]
+    }
+  ],
+  "reviewerTasks": [
+    {
+      "type": "novelty-language-review",
+      "claimId": "claim-1",
+      "message": "Review absolute novelty wording before manuscript release."
+    },
+    {
+      "type": "missing-adjacent-work-citation",
+      "claimId": "claim-3",
+      "message": "Consider citing park-2023-federated-omics because it has the strongest adjacent-work overlap."
+    }
+  ],
+  "citationInsertions": [
+    {
+      "claimId": "claim-3",
+      "workId": "park-2023-federated-omics",
+      "reason": "overlap score 0.147 with uncited adjacent work"
+    }
+  ],
+  "releaseDecision": "revise-before-release",
+  "requirementCoverage": {
+    "paperSummarizer": [
+      "abstractStyle",
+      "executiveSummary",
+      "laypersonExplanation"
+    ],
+    "peerReviewAid": [
+      "novelty-language-review",
+      "retracted-source-warning",
+      "rewrittenClaim"
+    ],
+    "citationTool": [
+      "citationInsertions",
+      "topMatches",
+      "doi"
+    ]
+  },
+  "auditDigest": "aa08bdc2cce92422262856b08a0a338e82c33c41eae08457878a5cba3e31a4f1"
+}

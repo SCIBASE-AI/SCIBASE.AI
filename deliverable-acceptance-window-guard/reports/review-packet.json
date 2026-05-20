@@ -1,0 +1,97 @@
+{
+  "packetId": "deliverable-window-001",
+  "title": "Deliverable Acceptance Window Guard",
+  "context": "Scientific Bounty System",
+  "status": "needs-review",
+  "readyItems": [
+    "solver-a"
+  ],
+  "heldItems": [
+    "solver-b",
+    "solver-c"
+  ],
+  "evaluations": [
+    {
+      "itemId": "solver-a",
+      "name": "Solver A model bundle",
+      "type": "deliverable",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "solver-b",
+      "name": "Solver B dataset",
+      "type": "deliverable",
+      "status": "held",
+      "holds": [
+        "late-submission",
+        "missing-reviewer",
+        "acceptance-window-risk"
+      ],
+      "holdLabels": [
+        "submitted after deadline",
+        "no reviewer assigned",
+        "acceptance window too long"
+      ],
+      "remediation": [
+        "Route late deliverable to sponsor exception review.",
+        "Assign an expert reviewer before starting acceptance clock.",
+        "Escalate stale acceptance decision to marketplace operations."
+      ]
+    },
+    {
+      "itemId": "solver-c",
+      "name": "Solver C report",
+      "type": "deliverable",
+      "status": "held",
+      "holds": [
+        "missing-evidence",
+        "scope-change"
+      ],
+      "holdLabels": [
+        "incomplete deliverable evidence",
+        "unapproved scope change"
+      ],
+      "remediation": [
+        "Request reproducibility evidence before acceptance.",
+        "Require sponsor and solver consent for changed deliverables."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "late-submission": 1,
+    "missing-reviewer": 1,
+    "acceptance-window-risk": 1,
+    "missing-evidence": 1,
+    "scope-change": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "solver-b",
+      "hold": "late-submission",
+      "action": "Route late deliverable to sponsor exception review."
+    },
+    {
+      "itemId": "solver-b",
+      "hold": "missing-reviewer",
+      "action": "Assign an expert reviewer before starting acceptance clock."
+    },
+    {
+      "itemId": "solver-b",
+      "hold": "acceptance-window-risk",
+      "action": "Escalate stale acceptance decision to marketplace operations."
+    },
+    {
+      "itemId": "solver-c",
+      "hold": "missing-evidence",
+      "action": "Request reproducibility evidence before acceptance."
+    },
+    {
+      "itemId": "solver-c",
+      "hold": "scope-change",
+      "action": "Require sponsor and solver consent for changed deliverables."
+    }
+  ]
+}

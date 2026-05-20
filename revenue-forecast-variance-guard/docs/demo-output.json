@@ -1,0 +1,233 @@
+{
+  "reportId": "scibase-may-2026-forecast",
+  "asOfDate": "2026-05-20",
+  "status": "blocked",
+  "forecastRevenue": 39220,
+  "currentRevenue": 23535,
+  "variance": -15685,
+  "variancePct": -39.99,
+  "criticalCount": 2,
+  "highCount": 5,
+  "subscriptions": [
+    {
+      "accountId": "university-alpha",
+      "plan": "institutional",
+      "forecastMrr": 9200,
+      "actualMrr": 9200,
+      "variance": 0,
+      "variancePct": 0,
+      "seatUtilization": 83.89,
+      "renewalDays": 69,
+      "renewalConfidence": 0.86,
+      "findings": []
+    },
+    {
+      "accountId": "lab-beta",
+      "plan": "research-group",
+      "forecastMrr": 4200,
+      "actualMrr": 3375,
+      "variance": -825,
+      "variancePct": -19.64,
+      "seatUtilization": 52.38,
+      "renewalDays": 29,
+      "renewalConfidence": 0.55,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "subscription_forecast_shortfall",
+          "message": "lab-beta is 19.64% below forecast MRR."
+        },
+        {
+          "severity": "medium",
+          "code": "seat_underutilization",
+          "message": "lab-beta seat utilization is 52.38%."
+        },
+        {
+          "severity": "high",
+          "code": "renewal_forecast_review",
+          "message": "lab-beta renewal is 29 days away with 55% confidence."
+        }
+      ]
+    },
+    {
+      "accountId": "researcher-gamma",
+      "plan": "pro",
+      "forecastMrr": 120,
+      "actualMrr": 120,
+      "variance": 0,
+      "variancePct": 0,
+      "seatUtilization": 100,
+      "renewalDays": 233,
+      "renewalConfidence": 0.93,
+      "findings": []
+    }
+  ],
+  "compute": [
+    {
+      "accountId": "university-alpha",
+      "workload": "reproducibility-checks",
+      "forecastRevenue": 1850,
+      "actualRevenue": 2260,
+      "forecastCost": 515,
+      "actualCost": 740,
+      "grossMarginPct": 67.26,
+      "quotaBurnPct": 93,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "compute_cost_overrun",
+          "message": "university-alpha compute cost is 43.69% above forecast."
+        },
+        {
+          "severity": "medium",
+          "code": "quota_burn_warning",
+          "message": "university-alpha has burned 93% of included compute units."
+        }
+      ]
+    },
+    {
+      "accountId": "lab-beta",
+      "workload": "peer-review-agent",
+      "forecastRevenue": 1250,
+      "actualRevenue": 1380,
+      "forecastCost": 390,
+      "actualCost": 620,
+      "grossMarginPct": 55.07,
+      "quotaBurnPct": 112.4,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "compute_cost_overrun",
+          "message": "lab-beta compute cost is 58.97% above forecast."
+        },
+        {
+          "severity": "critical",
+          "code": "compute_margin_floor_breach",
+          "message": "lab-beta gross margin is 55.07%, below 62%."
+        },
+        {
+          "severity": "medium",
+          "code": "quota_burn_warning",
+          "message": "lab-beta has burned 112.4% of included compute units."
+        }
+      ]
+    }
+  ],
+  "licensing": [
+    {
+      "dealId": "nih-policy-dashboard",
+      "buyerSegment": "government",
+      "weightedForecast": 12600,
+      "recognizedRevenue": 0,
+      "status": "legal-review",
+      "targetCloseDate": "2026-05-03",
+      "daysPastTarget": 17,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "licensing_pipeline_slip",
+          "message": "nih-policy-dashboard is 17 days past target close."
+        }
+      ]
+    },
+    {
+      "dealId": "funding-intel-feed",
+      "buyerSegment": "market-intelligence",
+      "weightedForecast": 3520,
+      "recognizedRevenue": 0,
+      "status": "privacy-review",
+      "targetCloseDate": "2026-05-24",
+      "daysPastTarget": 0,
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "licensing_privacy_hold",
+          "message": "funding-intel-feed must stay out of forecast until privacy and aggregation gates pass."
+        }
+      ]
+    },
+    {
+      "dealId": "consortium-trend-api",
+      "buyerSegment": "academic-consortium",
+      "weightedForecast": 6480,
+      "recognizedRevenue": 7200,
+      "status": "booked",
+      "targetCloseDate": "2026-05-11",
+      "daysPastTarget": 9,
+      "findings": []
+    }
+  ],
+  "actions": [
+    {
+      "owner": "funding-intel-feed",
+      "code": "licensing_privacy_hold",
+      "severity": "critical",
+      "dueInDays": 1,
+      "action": "funding-intel-feed must stay out of forecast until privacy and aggregation gates pass."
+    },
+    {
+      "owner": "lab-beta",
+      "code": "compute_margin_floor_breach",
+      "severity": "critical",
+      "dueInDays": 1,
+      "action": "lab-beta gross margin is 55.07%, below 62%."
+    },
+    {
+      "owner": "lab-beta",
+      "code": "subscription_forecast_shortfall",
+      "severity": "high",
+      "dueInDays": 3,
+      "action": "lab-beta is 19.64% below forecast MRR."
+    },
+    {
+      "owner": "lab-beta",
+      "code": "renewal_forecast_review",
+      "severity": "high",
+      "dueInDays": 3,
+      "action": "lab-beta renewal is 29 days away with 55% confidence."
+    },
+    {
+      "owner": "lab-beta",
+      "code": "compute_cost_overrun",
+      "severity": "high",
+      "dueInDays": 3,
+      "action": "lab-beta compute cost is 58.97% above forecast."
+    },
+    {
+      "owner": "nih-policy-dashboard",
+      "code": "licensing_pipeline_slip",
+      "severity": "high",
+      "dueInDays": 3,
+      "action": "nih-policy-dashboard is 17 days past target close."
+    },
+    {
+      "owner": "university-alpha",
+      "code": "compute_cost_overrun",
+      "severity": "high",
+      "dueInDays": 3,
+      "action": "university-alpha compute cost is 43.69% above forecast."
+    },
+    {
+      "owner": "lab-beta",
+      "code": "seat_underutilization",
+      "severity": "medium",
+      "dueInDays": 7,
+      "action": "lab-beta seat utilization is 52.38%."
+    },
+    {
+      "owner": "lab-beta",
+      "code": "quota_burn_warning",
+      "severity": "medium",
+      "dueInDays": 7,
+      "action": "lab-beta has burned 112.4% of included compute units."
+    },
+    {
+      "owner": "university-alpha",
+      "code": "quota_burn_warning",
+      "severity": "medium",
+      "dueInDays": 7,
+      "action": "university-alpha has burned 93% of included compute units."
+    }
+  ],
+  "auditDigest": "ebcc3a1ca45f897a"
+}

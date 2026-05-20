@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="44" y="44" width="1192" height="632" rx="18" fill="#f8fafc"/>
+  <text x="80" y="100" class="title">SCIBASE Revenue Forecast Variance Guard</text>
+  <text x="80" y="140" class="label">Status</text><text x="360" y="140" class="value">blocked</text>
+<text x="80" y="185" class="label">Forecast revenue</text><text x="360" y="185" class="value">$39,220</text>
+<text x="80" y="230" class="label">Current revenue</text><text x="360" y="230" class="value">$23,535</text>
+<text x="80" y="275" class="label">Variance</text><text x="360" y="275" class="value">-39.99% ($-15,685)</text>
+<text x="80" y="320" class="label">Critical findings</text><text x="360" y="320" class="value">2</text>
+<text x="80" y="365" class="label">High findings</text><text x="360" y="365" class="value">5</text>
+<text x="80" y="410" class="label">Audit digest</text><text x="360" y="410" class="value">ebcc3a1ca45f897a</text>
+  <text x="80" y="465" class="section">Top finance actions</text>
+  <text x="80" y="505" class="finding">CRITICAL funding-intel-feed: licensing_privacy_hold</text>
+<text x="80" y="539" class="finding">CRITICAL lab-beta: compute_margin_floor_breach</text>
+<text x="80" y="573" class="finding">HIGH lab-beta: subscription_forecast_shortfall</text>
+<text x="80" y="607" class="finding">HIGH lab-beta: renewal_forecast_review</text>
+<text x="80" y="641" class="finding">HIGH lab-beta: compute_cost_overrun</text>
+  <style>
+    .title { font: 700 40px Arial, sans-serif; fill: #111827; }
+    .section { font: 700 27px Arial, sans-serif; fill: #111827; }
+    .label { font: 700 25px Arial, sans-serif; fill: #334155; }
+    .value { font: 500 25px Arial, sans-serif; fill: #0f172a; }
+    .finding { font: 500 22px Arial, sans-serif; fill: #7f1d1d; }
+  </style>
+</svg>

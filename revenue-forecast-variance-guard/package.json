@@ -1,0 +1,11 @@
+{
+  "name": "revenue-forecast-variance-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Revenue forecast variance guard for subscription, AI compute, and licensing revenue operations.",
+  "scripts": {
+    "demo": "node demo.js",
+    "test": "node test.js"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-05-20T00:00:00.000Z",
+  "decision": "quarantine",
+  "summary": {
+    "totalWorks": 3,
+    "publish": 1,
+    "annotate": 1,
+    "suppressRecommendation": 0,
+    "quarantine": 1,
+    "blockers": 3,
+    "warnings": 1
+  },
+  "works": [
+    {
+      "workId": "pub-open-microscopy",
+      "label": "Open microscopy benchmark",
+      "decision": "publish",
+      "recommendationVisible": true,
+      "fundingEdgeCount": 1,
+      "largestFunderShare": 1,
+      "disclosureCoverage": 1,
+      "packetDigest": "d6dfbb4250ee5ddcc472c820d8b843ca4b12c0930c35db30d7013368cf996683"
+    },
+    {
+      "workId": "pub-sponsored-assay",
+      "label": "Sponsored assay comparison",
+      "decision": "annotate",
+      "recommendationVisible": true,
+      "fundingEdgeCount": 2,
+      "largestFunderShare": 0.85,
+      "disclosureCoverage": 1,
+      "packetDigest": "2bf813686b372785003c79cf3ec47fd84f3b6c0523bdd5da8aace0ad1ee7390b"
+    },
+    {
+      "workId": "preprint-device-eval",
+      "label": "Device evaluation preprint",
+      "decision": "quarantine",
+      "recommendationVisible": false,
+      "fundingEdgeCount": 1,
+      "largestFunderShare": 1,
+      "disclosureCoverage": 0,
+      "packetDigest": "8cd8d468962cdd39c911084d3b4765872d36b9d0589ca0154fc794e22358a946"
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "blocker",
+      "code": "risky_funding_undisclosed",
+      "message": "Risky funding edge is missing disclosure evidence.",
+      "evidence": {
+        "workId": "preprint-device-eval",
+        "funderId": "funder-vendor",
+        "fundingType": "vendor"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "coi_disclosure_coverage_low",
+      "message": "COI graph edges do not have enough disclosure coverage.",
+      "evidence": {
+        "workId": "preprint-device-eval",
+        "disclosureCoverage": 0,
+        "required": 0.8
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "sponsor_controlled_dataset",
+      "message": "Sponsor-controlled dataset lacks independent access review evidence.",
+      "evidence": {
+        "workId": "preprint-device-eval",
+        "datasetId": "dataset-sponsored",
+        "datasetLabel": "Sponsor controlled assay dataset",
+        "sponsorId": "funder-vendor"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "code": "funder_concentration_high",
+      "message": "One funder dominates the graph evidence for this work.",
+      "evidence": {
+        "workId": "pub-sponsored-assay",
+        "largestShare": 0.85,
+        "limit": 0.5
+      }
+    }
+  ],
+  "curatorTasks": [
+    "Quarantine sponsor-controlled dataset recommendations until independent access review is attached.",
+    "Suppress graph recommendations with undisclosed funding or incomplete COI disclosures.",
+    "Annotate entity pages with funding concentration and author-affiliation overlap warnings."
+  ],
+  "recommendationHold": true,
+  "auditDigest": "df768648c49bc0689c67e78132e92f999aaaf096defbc71128fd74696da5c8a7"
+}

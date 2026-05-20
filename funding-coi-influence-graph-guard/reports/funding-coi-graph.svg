@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Funding and COI influence graph report">
+  <rect width="960" height="540" fill="#f6f8f4"/>
+  <rect x="36" y="32" width="888" height="476" rx="10" fill="#fffffc" stroke="#cfd8d2"/>
+  <text x="64" y="86" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#1f2a2e">Funding COI Influence Graph</text>
+  <text x="64" y="124" font-family="Arial, sans-serif" font-size="20" fill="#5d6a6b">Funder, sponsor, institution, author, dataset, and publication edge review.</text>
+  <g font-family="Arial, sans-serif">
+<text x="64" y="170" font-size="22" fill="#304044">Publish</text>
+<rect x="248" y="148" width="420" height="24" rx="6" fill="#e8eee8"/>
+<rect x="248" y="148" width="420" height="24" rx="6" fill="#2d8f5f"/>
+<text x="696" y="170" font-size="22" fill="#2d8f5f">1</text>
+<text x="64" y="224" font-size="22" fill="#304044">Annotate</text>
+<rect x="248" y="202" width="420" height="24" rx="6" fill="#e8eee8"/>
+<rect x="248" y="202" width="420" height="24" rx="6" fill="#c07f25"/>
+<text x="696" y="224" font-size="22" fill="#c07f25">1</text>
+<text x="64" y="278" font-size="22" fill="#304044">Suppress</text>
+<rect x="248" y="256" width="420" height="24" rx="6" fill="#e8eee8"/>
+<rect x="248" y="256" width="0" height="24" rx="6" fill="#7e4f84"/>
+<text x="696" y="278" font-size="22" fill="#7e4f84">0</text>
+<text x="64" y="332" font-size="22" fill="#304044">Quarantine</text>
+<rect x="248" y="310" width="420" height="24" rx="6" fill="#e8eee8"/>
+<rect x="248" y="310" width="420" height="24" rx="6" fill="#b44343"/>
+<text x="696" y="332" font-size="22" fill="#b44343">1</text>
+  </g>
+  <rect x="64" y="414" width="360" height="52" rx="8" fill="#f8dad8" stroke="#cfd8d2"/>
+  <text x="82" y="447" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#b44343">Recommendation hold: ON</text>
+  <text x="64" y="488" font-family="Arial, sans-serif" font-size="16" fill="#37669b">Digest df768648c49bc0689c67e78132e92f999aaaf096</text>
+</svg>

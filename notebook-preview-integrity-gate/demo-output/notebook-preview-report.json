@@ -1,0 +1,579 @@
+{
+  "generatedAt": "2026-05-20T10:00:00.000Z",
+  "module": "notebook-preview-integrity-gate",
+  "summary": [
+    {
+      "projectId": "sci-preview-clean-001",
+      "title": "Cryo EM Morphology Notebook Preview",
+      "decision": "ready",
+      "score": 100,
+      "fairScore": 99,
+      "digest": "273f93db1c5573e647af2b850c98ec303ea0b707074286aa4a18553d466fad70"
+    },
+    {
+      "projectId": "sci-preview-risk-007",
+      "title": "Unvetted Oncology Biomarker Notebook",
+      "decision": "blocked",
+      "score": 7,
+      "fairScore": 61,
+      "digest": "148e30700c48295458d1f18eb28686caa666bbfff9e8c7096e1dc3b875739fb4"
+    }
+  ],
+  "reports": [
+    {
+      "module": "notebook-preview-integrity-gate",
+      "projectId": "sci-preview-clean-001",
+      "title": "Cryo EM Morphology Notebook Preview",
+      "generatedAt": "2026-05-20T10:00:00.000Z",
+      "decision": "ready",
+      "score": 100,
+      "fairScore": {
+        "findable": 100,
+        "accessible": 95,
+        "interoperable": 100,
+        "reusable": 100,
+        "overall": 99
+      },
+      "digest": "273f93db1c5573e647af2b850c98ec303ea0b707074286aa4a18553d466fad70",
+      "checks": [
+        {
+          "id": "notebook-present",
+          "status": "pass",
+          "severity": "info",
+          "message": "Notebook content is available for preview.",
+          "evidence": {
+            "cellCount": 3
+          }
+        },
+        {
+          "id": "cell-count-budget",
+          "status": "pass",
+          "severity": "info",
+          "message": "3 cells measured against preview limit 150.",
+          "evidence": {
+            "limit": 150,
+            "cellCount": 3
+          }
+        },
+        {
+          "id": "notebook-size-budget",
+          "status": "pass",
+          "severity": "info",
+          "message": "Notebook payload is 704 B.",
+          "evidence": {
+            "limitBytes": 12582912,
+            "notebookBytes": 704
+          }
+        },
+        {
+          "id": "unsafe-preview-content",
+          "status": "pass",
+          "severity": "info",
+          "message": "No secrets or active HTML were detected in previewable content.",
+          "evidence": {
+            "affectedCells": []
+          }
+        },
+        {
+          "id": "inline-output-budget",
+          "status": "pass",
+          "severity": "info",
+          "message": "All inline outputs fit within preview budget.",
+          "evidence": {
+            "limitBytes": 524288,
+            "affectedCells": []
+          }
+        },
+        {
+          "id": "execution-order-coherence",
+          "status": "pass",
+          "severity": "info",
+          "message": "Executed code cells have coherent ordering.",
+          "evidence": {
+            "warnings": []
+          }
+        },
+        {
+          "id": "visual-alt-text",
+          "status": "pass",
+          "severity": "info",
+          "message": "Visual outputs include accessible labels or alt text.",
+          "evidence": {
+            "affectedCells": []
+          }
+        },
+        {
+          "id": "fair-metadata",
+          "status": "pass",
+          "severity": "info",
+          "message": "Required FAIR, DataCite, and schema.org metadata is present.",
+          "evidence": {
+            "missing": [],
+            "present": [
+              "doi",
+              "authors",
+              "license",
+              "keywords",
+              "resourceType",
+              "accessRights",
+              "schemaOrgType"
+            ]
+          }
+        },
+        {
+          "id": "artifact-preview-readiness",
+          "status": "pass",
+          "severity": "info",
+          "message": "Artifacts are previewable and checksum-addressed.",
+          "evidence": {
+            "failures": []
+          }
+        },
+        {
+          "id": "execution-environment-capture",
+          "status": "pass",
+          "severity": "info",
+          "message": "Kernel, runtime, dependency lock, and seed policy are captured.",
+          "evidence": {
+            "missing": []
+          }
+        }
+      ],
+      "previewManifest": [
+        {
+          "cellIndex": 1,
+          "cellType": "markdown",
+          "executionCount": null,
+          "sourceBytes": 81,
+          "outputBytes": 0,
+          "outputCount": 0,
+          "mimeTypes": [],
+          "hasVisualOutput": false,
+          "hasAltText": false,
+          "previewMode": "inline-text",
+          "flags": []
+        },
+        {
+          "cellIndex": 2,
+          "cellType": "code",
+          "executionCount": 1,
+          "sourceBytes": 79,
+          "outputBytes": 78,
+          "outputCount": 1,
+          "mimeTypes": [
+            "text/plain"
+          ],
+          "hasVisualOutput": false,
+          "hasAltText": false,
+          "previewMode": "inline-text",
+          "flags": []
+        },
+        {
+          "cellIndex": 3,
+          "cellType": "code",
+          "executionCount": 2,
+          "sourceBytes": 36,
+          "outputBytes": 112,
+          "outputCount": 1,
+          "mimeTypes": [
+            "image/png"
+          ],
+          "hasVisualOutput": true,
+          "hasAltText": true,
+          "previewMode": "rich-preview",
+          "flags": []
+        }
+      ],
+      "artifactSummary": [
+        {
+          "path": "data/summary.csv",
+          "type": "dataset",
+          "sizeBytes": 18432,
+          "checksum": "sha256:2cb0c8f8b4c131e178e3e2f13c05b36f",
+          "previewGenerated": true,
+          "issues": []
+        },
+        {
+          "path": "results/segmentation-overlay.png",
+          "type": "figure",
+          "sizeBytes": 94421,
+          "checksum": "sha256:7f379b73698a4c81a39f6d1c",
+          "previewGenerated": true,
+          "issues": []
+        }
+      ],
+      "dataciteDraft": {
+        "identifier": "10.5555/scibase.preview.001",
+        "creators": [
+          {
+            "name": "Nora Patel",
+            "affiliation": "Cell Systems Lab",
+            "orcid": "0000-0002-1825-0097"
+          },
+          {
+            "name": "Elijah Chen",
+            "affiliation": "Northbridge Institute",
+            "orcid": null
+          }
+        ],
+        "titles": [
+          {
+            "title": "Cryo EM Morphology Notebook Preview"
+          }
+        ],
+        "publisher": "SCIBASE.AI",
+        "publicationYear": 2026,
+        "resourceType": {
+          "resourceTypeGeneral": "ComputationalNotebook"
+        },
+        "rightsList": [
+          {
+            "rights": "CC-BY-4.0"
+          }
+        ],
+        "subjects": [
+          "cryo-em",
+          "segmentation",
+          "morphology"
+        ]
+      },
+      "schemaOrgDataset": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Cryo EM Morphology Notebook Preview",
+        "identifier": "10.5555/scibase.preview.001",
+        "license": "CC-BY-4.0",
+        "keywords": [
+          "cryo-em",
+          "segmentation",
+          "morphology"
+        ],
+        "creator": [
+          {
+            "@type": "Person",
+            "name": "Nora Patel",
+            "affiliation": "Cell Systems Lab"
+          },
+          {
+            "@type": "Person",
+            "name": "Elijah Chen",
+            "affiliation": "Northbridge Institute"
+          }
+        ],
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "contentUrl": "data/summary.csv",
+            "encodingFormat": "text/csv",
+            "contentSize": "18432",
+            "sha256": "sha256:2cb0c8f8b4c131e178e3e2f13c05b36f"
+          },
+          {
+            "@type": "DataDownload",
+            "contentUrl": "results/segmentation-overlay.png",
+            "encodingFormat": "image/png",
+            "contentSize": "94421",
+            "sha256": "sha256:7f379b73698a4c81a39f6d1c"
+          }
+        ]
+      },
+      "remediationPlan": [],
+      "reviewerPacket": "# Notebook Preview Integrity Packet\n\nProject: Cryo EM Morphology Notebook Preview\nDecision: ready\nPreview score: 100/100\nFAIR score: 99/100\nDigest: 273f93db1c5573e647af2b850c98ec303ea0b707074286aa4a18553d466fad70\n\n## Findings\n\n- No blocking or warning findings.\n\n## Remediation\n\n- Ready for public preview publication.\n\n## Preview Manifest\n\n- Cell 1: markdown, inline-text, 0 B output, flags: none\n- Cell 2: code, inline-text, 78 B output, flags: none\n- Cell 3: code, rich-preview, 112 B output, flags: none"
+    },
+    {
+      "module": "notebook-preview-integrity-gate",
+      "projectId": "sci-preview-risk-007",
+      "title": "Unvetted Oncology Biomarker Notebook",
+      "generatedAt": "2026-05-20T10:00:00.000Z",
+      "decision": "blocked",
+      "score": 7,
+      "fairScore": {
+        "findable": 40,
+        "accessible": 65,
+        "interoperable": 60,
+        "reusable": 77,
+        "overall": 61
+      },
+      "digest": "148e30700c48295458d1f18eb28686caa666bbfff9e8c7096e1dc3b875739fb4",
+      "checks": [
+        {
+          "id": "notebook-present",
+          "status": "pass",
+          "severity": "info",
+          "message": "Notebook content is available for preview.",
+          "evidence": {
+            "cellCount": 3
+          }
+        },
+        {
+          "id": "cell-count-budget",
+          "status": "pass",
+          "severity": "info",
+          "message": "3 cells measured against preview limit 150.",
+          "evidence": {
+            "limit": 150,
+            "cellCount": 3
+          }
+        },
+        {
+          "id": "notebook-size-budget",
+          "status": "pass",
+          "severity": "info",
+          "message": "Notebook payload is 700.5 KB.",
+          "evidence": {
+            "limitBytes": 12582912,
+            "notebookBytes": 717284
+          }
+        },
+        {
+          "id": "unsafe-preview-content",
+          "status": "fail",
+          "severity": "critical",
+          "message": "1 cell(s) need redaction before public preview.",
+          "evidence": {
+            "affectedCells": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "inline-output-budget",
+          "status": "warn",
+          "severity": "medium",
+          "message": "1 output(s) should be externalized before rendering.",
+          "evidence": {
+            "limitBytes": 524288,
+            "affectedCells": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "execution-order-coherence",
+          "status": "warn",
+          "severity": "medium",
+          "message": "Execution counts are missing, duplicated, or out of order.",
+          "evidence": {
+            "warnings": [
+              "execution-counts-out-of-order"
+            ]
+          }
+        },
+        {
+          "id": "visual-alt-text",
+          "status": "warn",
+          "severity": "low",
+          "message": "2 visual output(s) need alt text before publication.",
+          "evidence": {
+            "affectedCells": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "id": "fair-metadata",
+          "status": "warn",
+          "severity": "high",
+          "message": "Missing metadata: doi, license, keywords, resourceType, schemaOrgType.",
+          "evidence": {
+            "missing": [
+              "doi",
+              "license",
+              "keywords",
+              "resourceType",
+              "schemaOrgType"
+            ],
+            "present": [
+              "authors",
+              "accessRights"
+            ]
+          }
+        },
+        {
+          "id": "artifact-preview-readiness",
+          "status": "warn",
+          "severity": "medium",
+          "message": "1 artifact readiness issue(s) detected.",
+          "evidence": {
+            "failures": [
+              {
+                "path": "data/patient-export.csv",
+                "issues": [
+                  "missing-checksum",
+                  "missing-license",
+                  "preview-not-generated"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "execution-environment-capture",
+          "status": "warn",
+          "severity": "medium",
+          "message": "Execution environment gaps: dependency-lock, seed-policy, pinned-dependencies.",
+          "evidence": {
+            "missing": [
+              "dependency-lock",
+              "seed-policy",
+              "pinned-dependencies"
+            ]
+          }
+        }
+      ],
+      "previewManifest": [
+        {
+          "cellIndex": 1,
+          "cellType": "code",
+          "executionCount": 3,
+          "sourceBytes": 84,
+          "outputBytes": 91,
+          "outputCount": 1,
+          "mimeTypes": [
+            "text/html"
+          ],
+          "hasVisualOutput": true,
+          "hasAltText": false,
+          "previewMode": "rich-preview",
+          "flags": [
+            "possible-secret",
+            "active-html",
+            "missing-alt-text"
+          ]
+        },
+        {
+          "cellIndex": 2,
+          "cellType": "code",
+          "executionCount": 2,
+          "sourceBytes": 26,
+          "outputBytes": 716816,
+          "outputCount": 1,
+          "mimeTypes": [
+            "image/png"
+          ],
+          "hasVisualOutput": true,
+          "hasAltText": false,
+          "previewMode": "external-reference",
+          "flags": [
+            "oversized-output",
+            "missing-alt-text"
+          ]
+        },
+        {
+          "cellIndex": 3,
+          "cellType": "markdown",
+          "executionCount": null,
+          "sourceBytes": 38,
+          "outputBytes": 0,
+          "outputCount": 0,
+          "mimeTypes": [],
+          "hasVisualOutput": false,
+          "hasAltText": false,
+          "previewMode": "inline-text",
+          "flags": []
+        }
+      ],
+      "artifactSummary": [
+        {
+          "path": "data/patient-export.csv",
+          "type": "dataset",
+          "sizeBytes": 19000000,
+          "checksum": null,
+          "previewGenerated": false,
+          "issues": [
+            "missing-checksum",
+            "missing-license",
+            "preview-not-generated"
+          ]
+        }
+      ],
+      "dataciteDraft": {
+        "identifier": null,
+        "creators": [
+          {
+            "name": "A. Reviewer",
+            "affiliation": null,
+            "orcid": null
+          }
+        ],
+        "titles": [
+          {
+            "title": "Unvetted Oncology Biomarker Notebook"
+          }
+        ],
+        "publisher": "Translational Oncology Group",
+        "publicationYear": 2026,
+        "resourceType": {
+          "resourceTypeGeneral": "ComputationalNotebook"
+        },
+        "rightsList": [
+          {
+            "rights": "unspecified"
+          }
+        ],
+        "subjects": []
+      },
+      "schemaOrgDataset": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Unvetted Oncology Biomarker Notebook",
+        "identifier": "sci-preview-risk-007",
+        "license": null,
+        "keywords": [],
+        "creator": [
+          {
+            "@type": "Person",
+            "name": "A. Reviewer"
+          }
+        ],
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "contentUrl": "data/patient-export.csv",
+            "encodingFormat": "text/csv",
+            "contentSize": "19000000"
+          }
+        ]
+      },
+      "remediationPlan": [
+        {
+          "checkId": "unsafe-preview-content",
+          "severity": "critical",
+          "action": "Redact credentials, tokens, private keys, and active HTML before publishing the preview."
+        },
+        {
+          "checkId": "inline-output-budget",
+          "severity": "medium",
+          "action": "Externalize heavy outputs to artifact storage and reference them from the preview manifest."
+        },
+        {
+          "checkId": "execution-order-coherence",
+          "severity": "medium",
+          "action": "Re-run the notebook from a clean kernel so execution counts are complete and monotonic."
+        },
+        {
+          "checkId": "visual-alt-text",
+          "severity": "low",
+          "action": "Add alt text or figure descriptions for every visual output."
+        },
+        {
+          "checkId": "fair-metadata",
+          "severity": "high",
+          "action": "Complete DOI, author, license, keyword, access, resource type, and schema.org metadata."
+        },
+        {
+          "checkId": "artifact-preview-readiness",
+          "severity": "medium",
+          "action": "Add checksums, MIME types, licenses, and generated previews for every artifact."
+        },
+        {
+          "checkId": "execution-environment-capture",
+          "severity": "medium",
+          "action": "Capture kernel, language, runtime or container image, lockfile digest, and seed policy."
+        }
+      ],
+      "reviewerPacket": "# Notebook Preview Integrity Packet\n\nProject: Unvetted Oncology Biomarker Notebook\nDecision: blocked\nPreview score: 7/100\nFAIR score: 61/100\nDigest: 148e30700c48295458d1f18eb28686caa666bbfff9e8c7096e1dc3b875739fb4\n\n## Findings\n\n- unsafe-preview-content (critical): 1 cell(s) need redaction before public preview.\n- inline-output-budget (medium): 1 output(s) should be externalized before rendering.\n- execution-order-coherence (medium): Execution counts are missing, duplicated, or out of order.\n- visual-alt-text (low): 2 visual output(s) need alt text before publication.\n- fair-metadata (high): Missing metadata: doi, license, keywords, resourceType, schemaOrgType.\n- artifact-preview-readiness (medium): 1 artifact readiness issue(s) detected.\n- execution-environment-capture (medium): Execution environment gaps: dependency-lock, seed-policy, pinned-dependencies.\n\n## Remediation\n\n- unsafe-preview-content: Redact credentials, tokens, private keys, and active HTML before publishing the preview.\n- inline-output-budget: Externalize heavy outputs to artifact storage and reference them from the preview manifest.\n- execution-order-coherence: Re-run the notebook from a clean kernel so execution counts are complete and monotonic.\n- visual-alt-text: Add alt text or figure descriptions for every visual output.\n- fair-metadata: Complete DOI, author, license, keyword, access, resource type, and schema.org metadata.\n- artifact-preview-readiness: Add checksums, MIME types, licenses, and generated previews for every artifact.\n- execution-environment-capture: Capture kernel, language, runtime or container image, lockfile digest, and seed policy.\n\n## Preview Manifest\n\n- Cell 1: code, rich-preview, 91 B output, flags: possible-secret, active-html, missing-alt-text\n- Cell 2: code, external-reference, 700.0 KB output, flags: oversized-output, missing-alt-text\n- Cell 3: markdown, inline-text, 0 B output, flags: none"
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "manuscript": {
+    "id": "sci-vision-042",
+    "title": "Adaptive Imaging Biomarkers for Early Neuroinflammation",
+    "domain": "clinical-imaging"
+  },
+  "assistant": "figure-claim-consistency-assistant",
+  "summary": {
+    "averageScore": 25,
+    "releaseStatus": "block-release",
+    "totalIssues": 19,
+    "countsBySeverity": {
+      "high": 8,
+      "medium": 9,
+      "low": 1,
+      "blocker": 1
+    },
+    "highestRiskClaims": [
+      {
+        "claimId": "C2",
+        "score": 0,
+        "status": "major-revision"
+      },
+      {
+        "claimId": "C3",
+        "score": 0,
+        "status": "major-revision"
+      },
+      {
+        "claimId": "C4",
+        "score": 0,
+        "status": "block-release"
+      }
+    ]
+  },
+  "claimReports": [
+    {
+      "claimId": "C1",
+      "claim": "The adaptive imaging panel improved lesion detection by 18% across all enrolled cohorts.",
+      "score": 100,
+      "status": "ready-with-notes",
+      "issueCount": 0,
+      "issues": [],
+      "reviewerTasks": []
+    },
+    {
+      "claimId": "C2",
+      "claim": "The model remained stable in the low-signal scanner subgroup.",
+      "score": 0,
+      "status": "major-revision",
+      "issueCount": 9,
+      "issues": [
+        {
+          "severity": "high",
+          "code": "effect-direction-mismatch",
+          "message": "fig-2A shows decrease, but claim C2 says stable.",
+          "task": "Revise the claim language or regenerate the panel from the intended analysis."
+        },
+        {
+          "severity": "medium",
+          "code": "effect-size-drift",
+          "message": "fig-2A effect -0.06 does not match reported claim effect 0.01.",
+          "task": "Update the manuscript effect size or regenerate the plotted estimate."
+        },
+        {
+          "severity": "medium",
+          "code": "sample-size-drift",
+          "message": "fig-2A uses n=47; claim C2 reports n=64.",
+          "task": "Add a sample-size reconciliation note and align the figure/table/manuscript counts."
+        },
+        {
+          "severity": "medium",
+          "code": "caption-caveat-missing-from-claim",
+          "message": "fig-2A caveat \"exploratory subgroup\" is absent from claim C2.",
+          "task": "Carry the figure caveat into the manuscript claim or downgrade the conclusion."
+        },
+        {
+          "severity": "low",
+          "code": "visual-accessibility-risk",
+          "message": "fig-2A uses an unsafe color encoding for review.",
+          "task": "Switch to a redundant encoding or color-safe palette before submission."
+        },
+        {
+          "severity": "medium",
+          "code": "table-effect-size-drift",
+          "message": "table-2 row effect -0.06 does not match claim effect 0.01.",
+          "task": "Reconcile the table value and manuscript claim."
+        },
+        {
+          "severity": "medium",
+          "code": "table-sample-size-drift",
+          "message": "table-2 row uses n=47; claim C2 reports n=64.",
+          "task": "Align table and manuscript denominators."
+        },
+        {
+          "severity": "medium",
+          "code": "multiplicity-adjustment-missing",
+          "message": "table-2 row for claim C2 lacks multiplicity-adjusted significance evidence.",
+          "task": "Add adjusted p-values or downgrade the subgroup conclusion."
+        },
+        {
+          "severity": "high",
+          "code": "required-artifact-missing",
+          "message": "Claim C2 requires public subgroup-manifest, but none is attached.",
+          "task": "Attach a public subgroup-manifest artifact before submission."
+        }
+      ],
+      "reviewerTasks": [
+        "Revise the claim language or regenerate the panel from the intended analysis.",
+        "Update the manuscript effect size or regenerate the plotted estimate.",
+        "Add a sample-size reconciliation note and align the figure/table/manuscript counts.",
+        "Carry the figure caveat into the manuscript claim or downgrade the conclusion.",
+        "Switch to a redundant encoding or color-safe palette before submission.",
+        "Reconcile the table value and manuscript claim.",
+        "Align table and manuscript denominators.",
+        "Add adjusted p-values or downgrade the subgroup conclusion.",
+        "Attach a public subgroup-manifest artifact before submission."
+      ]
+    },
+    {
+      "claimId": "C3",
+      "claim": "Runtime overhead stayed below five minutes per scan.",
+      "score": 0,
+      "status": "major-revision",
+      "issueCount": 6,
+      "issues": [
+        {
+          "severity": "high",
+          "code": "axis-unit-mismatch",
+          "message": "fig-3 uses seconds while claim C3 reports minutes.",
+          "task": "Normalize units in the caption, manuscript claim, and source table."
+        },
+        {
+          "severity": "high",
+          "code": "effect-direction-mismatch",
+          "message": "fig-3A shows above-threshold, but claim C3 says below-threshold.",
+          "task": "Revise the claim language or regenerate the panel from the intended analysis."
+        },
+        {
+          "severity": "medium",
+          "code": "effect-size-drift",
+          "message": "fig-3A effect 7.8 does not match reported claim effect 5.",
+          "task": "Update the manuscript effect size or regenerate the plotted estimate."
+        },
+        {
+          "severity": "medium",
+          "code": "caption-caveat-missing-from-claim",
+          "message": "fig-3A caveat \"GPU queue warm cache\" is absent from claim C3.",
+          "task": "Carry the figure caveat into the manuscript claim or downgrade the conclusion."
+        },
+        {
+          "severity": "high",
+          "code": "missing-analysis-notebook",
+          "message": "fig-3A has no linked analysis notebook.",
+          "task": "Attach the notebook that produces this figure and rerun the assistant."
+        },
+        {
+          "severity": "medium",
+          "code": "table-effect-size-drift",
+          "message": "table-3 row effect 7.8 does not match claim effect 5.",
+          "task": "Reconcile the table value and manuscript claim."
+        }
+      ],
+      "reviewerTasks": [
+        "Normalize units in the caption, manuscript claim, and source table.",
+        "Revise the claim language or regenerate the panel from the intended analysis.",
+        "Update the manuscript effect size or regenerate the plotted estimate.",
+        "Carry the figure caveat into the manuscript claim or downgrade the conclusion.",
+        "Attach the notebook that produces this figure and rerun the assistant.",
+        "Reconcile the table value and manuscript claim."
+      ]
+    },
+    {
+      "claimId": "C4",
+      "claim": "The proposed assistant is ready for multi-site prospective deployment.",
+      "score": 0,
+      "status": "block-release",
+      "issueCount": 4,
+      "issues": [
+        {
+          "severity": "blocker",
+          "code": "missing-figure",
+          "message": "Claim C4 cites a figure that is not present in the packet.",
+          "task": "Attach the referenced figure or remove the unsupported claim before submission."
+        },
+        {
+          "severity": "high",
+          "code": "missing-table",
+          "message": "Claim C4 cites a table that is not present in the packet.",
+          "task": "Attach the referenced table or remove the table citation."
+        },
+        {
+          "severity": "high",
+          "code": "required-artifact-missing",
+          "message": "Claim C4 requires public deployment-protocol, but none is attached.",
+          "task": "Attach a public deployment-protocol artifact before submission."
+        },
+        {
+          "severity": "high",
+          "code": "required-artifact-missing",
+          "message": "Claim C4 requires public monitoring-plan, but none is attached.",
+          "task": "Attach a public monitoring-plan artifact before submission."
+        }
+      ],
+      "reviewerTasks": [
+        "Attach the referenced figure or remove the unsupported claim before submission.",
+        "Attach the referenced table or remove the table citation.",
+        "Attach a public deployment-protocol artifact before submission.",
+        "Attach a public monitoring-plan artifact before submission."
+      ]
+    }
+  ],
+  "gapSignals": [
+    {
+      "claimId": "C2",
+      "opportunity": "Run a targeted follow-up study for C2 before broadening the conclusion.",
+      "rationale": "fig-2A shows decrease, but claim C2 says stable. fig-2A effect -0.06 does not match reported claim effect 0.01.",
+      "priority": "high"
+    },
+    {
+      "claimId": "C3",
+      "opportunity": "Run a targeted follow-up study for C3 before broadening the conclusion.",
+      "rationale": "fig-3 uses seconds while claim C3 reports minutes. fig-3A shows above-threshold, but claim C3 says below-threshold.",
+      "priority": "high"
+    },
+    {
+      "claimId": "C4",
+      "opportunity": "Run a targeted follow-up study for C4 before broadening the conclusion.",
+      "rationale": "Claim C4 cites a figure that is not present in the packet. Claim C4 cites a table that is not present in the packet.",
+      "priority": "high"
+    }
+  ],
+  "auditDigest": "c41b98366bd40d07468f7fc416e0ccd099a84730651cb750d5acc4b15b1715ff"
+}

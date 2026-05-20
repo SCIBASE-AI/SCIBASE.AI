@@ -1,0 +1,110 @@
+{
+  "packetId": "eqref-guard-001",
+  "title": "Equation Cross-Reference Integrity Guard",
+  "context": "Real-Time Collaborative Editor",
+  "status": "needs-review",
+  "readyItems": [
+    "eq-1"
+  ],
+  "heldItems": [
+    "eq-2",
+    "eq-3",
+    "eq-4"
+  ],
+  "evaluations": [
+    {
+      "itemId": "eq-1",
+      "name": "Energy balance equation",
+      "type": "equation",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "eq-2",
+      "name": "Hazard model equation",
+      "type": "equation",
+      "status": "held",
+      "holds": [
+        "unreferenced-equation"
+      ],
+      "holdLabels": [
+        "equation is unreferenced"
+      ],
+      "remediation": [
+        "Reference the equation in text or mark it as supplementary."
+      ]
+    },
+    {
+      "itemId": "eq-3",
+      "name": "Sensitivity equation",
+      "type": "equation",
+      "status": "held",
+      "holds": [
+        "missing-label",
+        "stale-number",
+        "unresolved-citation"
+      ],
+      "holdLabels": [
+        "missing equation label",
+        "stale equation number",
+        "unresolved equation citation"
+      ],
+      "remediation": [
+        "Add stable equation labels before collaborative publishing.",
+        "Recompute equation numbering after collaborative edits.",
+        "Resolve broken equation references before export."
+      ]
+    },
+    {
+      "itemId": "eq-4",
+      "name": "Duplicate posterior equation",
+      "type": "equation",
+      "status": "held",
+      "holds": [
+        "duplicate-label"
+      ],
+      "holdLabels": [
+        "duplicate equation label"
+      ],
+      "remediation": [
+        "Rename duplicate labels and update references."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "unreferenced-equation": 1,
+    "missing-label": 1,
+    "stale-number": 1,
+    "unresolved-citation": 1,
+    "duplicate-label": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "eq-2",
+      "hold": "unreferenced-equation",
+      "action": "Reference the equation in text or mark it as supplementary."
+    },
+    {
+      "itemId": "eq-3",
+      "hold": "missing-label",
+      "action": "Add stable equation labels before collaborative publishing."
+    },
+    {
+      "itemId": "eq-3",
+      "hold": "stale-number",
+      "action": "Recompute equation numbering after collaborative edits."
+    },
+    {
+      "itemId": "eq-3",
+      "hold": "unresolved-citation",
+      "action": "Resolve broken equation references before export."
+    },
+    {
+      "itemId": "eq-4",
+      "hold": "duplicate-label",
+      "action": "Rename duplicate labels and update references."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "accountId": "acct-enterprise-neuro",
+  "fromPlan": "Enterprise",
+  "toPlan": "Team",
+  "status": "held-for-finance-review",
+  "holds": [
+    "seat-limit-exceeded",
+    "storage-limit-exceeded",
+    "compute-commitment-exceeded",
+    "locked-feature-migration-required",
+    "past-due-invoice-review-required",
+    "annual-commitment-active"
+  ],
+  "metrics": {
+    "activeSeats": 37,
+    "requestedSeatLimit": 25,
+    "storageGb": 640,
+    "requestedStorageGb": 500,
+    "committedComputeHours": 310,
+    "requestedComputeHours": 250,
+    "lockedStillInUse": [
+      "saml",
+      "data-room"
+    ],
+    "unpaidInvoiceCount": 1,
+    "commitmentDaysRemaining": 73
+  },
+  "remediation": [
+    "Remove or reassign active seats before downgrade activation.",
+    "Archive or purchase storage add-on before switching plans.",
+    "Wait for committed jobs to finish or buy temporary compute capacity.",
+    "Attach migration plan for features not included in the requested plan.",
+    "Resolve unpaid invoices or route to finance approval.",
+    "Schedule downgrade for commitment end date or approve an exception."
+  ],
+  "policyReceipt": {
+    "requestedAt": "2026-05-20T12:00:00Z",
+    "graceDays": 14,
+    "financeReviewForPastDue": true,
+    "lockedFeaturesRequireMigrationPlan": true
+  }
+}

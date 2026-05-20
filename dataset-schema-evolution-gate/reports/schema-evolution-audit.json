@@ -1,0 +1,167 @@
+{
+  "datasetId": "ds-cell-response-042",
+  "previousVersion": "2026.04",
+  "nextVersion": "2026.05",
+  "decision": "hold-for-migration",
+  "compatibilityScore": 44,
+  "findings": [
+    {
+      "field": "donor_group",
+      "replacement": "cohort",
+      "severity": "warning",
+      "kind": "renamed_field",
+      "message": "donor_group was renamed to cohort; consumers need a migration alias"
+    },
+    {
+      "field": "dose_mg",
+      "replacement": "dose_ug",
+      "severity": "warning",
+      "kind": "renamed_field",
+      "message": "dose_mg was renamed to dose_ug; consumers need a migration alias"
+    },
+    {
+      "field": "dose_ug",
+      "severity": "warning",
+      "kind": "unit_change",
+      "message": "dose_mg unit changed from mg to ug"
+    },
+    {
+      "field": "response_score",
+      "severity": "warning",
+      "kind": "type_change",
+      "message": "numeric narrowing may be acceptable if fractional historical values are absent"
+    },
+    {
+      "field": "instrument_batch",
+      "severity": "info",
+      "kind": "added_field",
+      "message": "instrument_batch was added to the schema"
+    }
+  ],
+  "compatibility": [
+    {
+      "id": "preview-table-v2",
+      "kind": "preview",
+      "description": "Metadata-aware table preview",
+      "decision": "review",
+      "issues": [
+        {
+          "severity": "warning",
+          "field": "response_score",
+          "message": "preview-table-v2 should review schema drift for response_score"
+        }
+      ]
+    },
+    {
+      "id": "public-api-normalized-response",
+      "kind": "api",
+      "description": "Public API endpoint for normalized response scores",
+      "decision": "hold",
+      "issues": [
+        {
+          "severity": "warning",
+          "field": "dose_ug",
+          "message": "public-api-normalized-response should review schema drift for dose_ug"
+        },
+        {
+          "severity": "blocking",
+          "field": "response_score",
+          "message": "public-api-normalized-response expects response_score as number, received integer"
+        },
+        {
+          "severity": "warning",
+          "field": "response_score",
+          "message": "public-api-normalized-response should review schema drift for response_score"
+        }
+      ]
+    },
+    {
+      "id": "notebook-rerun-dose-response",
+      "kind": "rerun",
+      "description": "Notebook rerun for dose response figure regeneration",
+      "decision": "hold",
+      "issues": [
+        {
+          "severity": "warning",
+          "field": "dose_ug",
+          "message": "notebook-rerun-dose-response should review schema drift for dose_ug"
+        },
+        {
+          "severity": "blocking",
+          "field": "response_score",
+          "message": "notebook-rerun-dose-response expects response_score as number, received integer"
+        },
+        {
+          "severity": "warning",
+          "field": "response_score",
+          "message": "notebook-rerun-dose-response should review schema drift for response_score"
+        }
+      ]
+    }
+  ],
+  "metadataUpdates": {
+    "datacite": {
+      "identifier": "10.5555/scibase.cell-response.042",
+      "version": "2026.05",
+      "titles": [
+        {
+          "title": "Cell response assay normalized table"
+        }
+      ],
+      "descriptions": [
+        {
+          "descriptionType": "TechnicalInfo",
+          "description": "Schema evolution review touched 5 field(s): donor_group, dose_mg, dose_ug, response_score, instrument_batch"
+        }
+      ]
+    },
+    "schemaOrg": {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "identifier": "10.5555/scibase.cell-response.042",
+      "version": "2026.05",
+      "name": "Cell response assay normalized table",
+      "license": "CC-BY-4.0",
+      "variableMeasured": [
+        {
+          "name": "sample_id",
+          "propertyID": "identifier",
+          "valueRequired": true
+        },
+        {
+          "name": "cohort",
+          "propertyID": "category",
+          "valueRequired": true
+        },
+        {
+          "name": "dose_ug",
+          "propertyID": "measure",
+          "unitText": "ug",
+          "valueRequired": true
+        },
+        {
+          "name": "response_score",
+          "propertyID": "measure",
+          "unitText": "normalized_score",
+          "valueRequired": true
+        },
+        {
+          "name": "assay_date",
+          "propertyID": "timestamp",
+          "valueRequired": true
+        },
+        {
+          "name": "instrument_batch",
+          "propertyID": "category",
+          "valueRequired": false
+        }
+      ]
+    }
+  },
+  "reviewerActions": [
+    "Hold automatic publication until affected consumers have migration coverage.",
+    "Disable affected consumers before release: public-api-normalized-response, notebook-rerun-dose-response.",
+    "Add migration aliases for renamed fields before API reuse.",
+    "Record unit conversions in metadata and rerun notebooks that depend on changed units."
+  ]
+}

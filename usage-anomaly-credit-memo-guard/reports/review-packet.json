@@ -1,0 +1,97 @@
+{
+  "packetId": "credit-memo-001",
+  "title": "Usage Anomaly Credit Memo Guard",
+  "context": "Revenue Infrastructure",
+  "status": "needs-review",
+  "readyItems": [
+    "memo-3"
+  ],
+  "heldItems": [
+    "memo-1",
+    "memo-2"
+  ],
+  "evaluations": [
+    {
+      "itemId": "memo-1",
+      "name": "Compute retry credit",
+      "type": "credit-memo",
+      "status": "held",
+      "holds": [
+        "low-tier-large-credit"
+      ],
+      "holdLabels": [
+        "low tier credit needs approval"
+      ],
+      "remediation": [
+        "Route lower-tier credit memo to finance approval workflow."
+      ]
+    },
+    {
+      "itemId": "memo-2",
+      "name": "Storage overage reversal",
+      "type": "credit-memo",
+      "status": "held",
+      "holds": [
+        "usage-spike",
+        "past-due-invoice",
+        "duplicate-request",
+        "missing-support-ticket"
+      ],
+      "holdLabels": [
+        "usage spike requires review",
+        "past-due invoice",
+        "duplicate credit request",
+        "missing support ticket"
+      ],
+      "remediation": [
+        "Compare usage logs and contract terms before issuing credit.",
+        "Resolve or approve past-due invoice exception.",
+        "Merge duplicates and keep one finance decision record.",
+        "Attach customer support ticket evidence."
+      ]
+    },
+    {
+      "itemId": "memo-3",
+      "name": "AI review burst credit",
+      "type": "credit-memo",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    }
+  ],
+  "holdCounts": {
+    "low-tier-large-credit": 1,
+    "usage-spike": 1,
+    "past-due-invoice": 1,
+    "duplicate-request": 1,
+    "missing-support-ticket": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "memo-1",
+      "hold": "low-tier-large-credit",
+      "action": "Route lower-tier credit memo to finance approval workflow."
+    },
+    {
+      "itemId": "memo-2",
+      "hold": "usage-spike",
+      "action": "Compare usage logs and contract terms before issuing credit."
+    },
+    {
+      "itemId": "memo-2",
+      "hold": "past-due-invoice",
+      "action": "Resolve or approve past-due invoice exception."
+    },
+    {
+      "itemId": "memo-2",
+      "hold": "duplicate-request",
+      "action": "Merge duplicates and keep one finance decision record."
+    },
+    {
+      "itemId": "memo-2",
+      "hold": "missing-support-ticket",
+      "action": "Attach customer support ticket evidence."
+    }
+  ]
+}

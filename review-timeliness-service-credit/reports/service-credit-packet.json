@@ -1,0 +1,113 @@
+{
+  "projectId": "proj-replication-graph-42",
+  "privacyMode": "double-blind",
+  "scoringWindowDays": 90,
+  "reviewers": [
+    {
+      "reviewerId": "rev-a",
+      "displayName": "Reviewer Alpha",
+      "institution": "North Clinic Lab",
+      "averageCredit": 83.4,
+      "serviceTier": "steady-reviewer",
+      "holds": [],
+      "reviewScores": [
+        {
+          "reviewId": "r-101",
+          "latenessDays": 0,
+          "timelinessScore": 1,
+          "usefulnessScore": 0.84,
+          "privacyScore": 1,
+          "serviceCredit": 94.9,
+          "holds": []
+        },
+        {
+          "reviewId": "r-102",
+          "latenessDays": 4.09,
+          "timelinessScore": 0.667,
+          "usefulnessScore": 0.727,
+          "privacyScore": 1,
+          "serviceCredit": 71.9,
+          "holds": []
+        }
+      ]
+    },
+    {
+      "reviewerId": "rev-b",
+      "displayName": "Reviewer Beta",
+      "institution": "Central Methods Unit",
+      "averageCredit": 52.9,
+      "serviceTier": "needs-service-review",
+      "holds": [
+        "major-overdue-without-extension",
+        "low-actionable-comment-density",
+        "missing-review-evidence-links",
+        "blind-review-privacy-hold"
+      ],
+      "reviewScores": [
+        {
+          "reviewId": "r-201",
+          "latenessDays": 9.04,
+          "timelinessScore": 0,
+          "usefulnessScore": 0.288,
+          "privacyScore": 1,
+          "serviceCredit": 19.2,
+          "holds": [
+            "major-overdue-without-extension",
+            "low-actionable-comment-density",
+            "missing-review-evidence-links"
+          ]
+        },
+        {
+          "reviewId": "r-202",
+          "latenessDays": 0,
+          "timelinessScore": 1,
+          "usefulnessScore": 0.889,
+          "privacyScore": 0,
+          "serviceCredit": 86.5,
+          "holds": [
+            "blind-review-privacy-hold"
+          ]
+        }
+      ]
+    }
+  ],
+  "leaderboardReady": [
+    "rev-a"
+  ],
+  "reviewerActions": [
+    {
+      "reviewerId": "rev-b",
+      "hold": "major-overdue-without-extension",
+      "action": "Route to moderator before granting service-credit boost."
+    },
+    {
+      "reviewerId": "rev-b",
+      "hold": "low-actionable-comment-density",
+      "action": "Request clearer comments tied to manuscript sections or artifacts."
+    },
+    {
+      "reviewerId": "rev-b",
+      "hold": "missing-review-evidence-links",
+      "action": "Ask reviewer to attach evidence links for factual critiques."
+    },
+    {
+      "reviewerId": "rev-b",
+      "hold": "blind-review-privacy-hold",
+      "action": "Hold public reputation changes until privacy breach is reviewed."
+    }
+  ],
+  "transparencyReceipt": {
+    "includedSignals": [
+      "due date adherence",
+      "approved extension grace",
+      "actionable comment density",
+      "evidence link coverage",
+      "blind-review privacy holds"
+    ],
+    "excludedSignals": [
+      "author identity",
+      "institution prestige",
+      "private reviewer notes"
+    ]
+  }
+}

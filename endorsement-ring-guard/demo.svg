@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Endorsement ring guard demo">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="96" y="80" width="1088" height="560" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="140" y="150" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0f172a">Endorsement Ring Guard</text>
+  <text x="140" y="205" font-family="Arial, sans-serif" font-size="26" fill="#334155">Pre-score integrity checks for reputation endorsements</text>
+  <rect x="140" y="260" width="1000" height="70" rx="6" fill="#fef3c7"/>
+  <text x="172" y="306" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#92400e">NEEDS REVIEW</text>
+  <text x="430" y="306" font-family="Arial, sans-serif" font-size="26" fill="#0f172a">reciprocal ring / missing evidence / institution concentration</text>
+  <text x="160" y="400" font-family="Arial, sans-serif" font-size="28" fill="#0f172a">Held Signals</text>
+  <text x="160" y="452" font-family="Arial, sans-serif" font-size="24" fill="#334155">self endorsements cannot score</text>
+  <text x="160" y="492" font-family="Arial, sans-serif" font-size="24" fill="#334155">mutual endorsements require independent evidence</text>
+  <text x="160" y="532" font-family="Arial, sans-serif" font-size="24" fill="#334155">same-institution clusters are routed to review</text>
+  <text x="160" y="572" font-family="Arial, sans-serif" font-size="24" fill="#334155">audit digest attaches to leaderboard update</text>
+</svg>

@@ -1,0 +1,245 @@
+{
+  "manuscriptId": "ms-synbio-urban-health-001",
+  "generatedBy": "citation-diversity-coverage-auditor",
+  "readiness": "needs-revision",
+  "readinessScore": 67,
+  "metrics": {
+    "coverageScore": 1,
+    "openAccessShare": 0.5,
+    "recentShare": 0.67,
+    "seminalShare": 0.17,
+    "topRegionShare": 0.83,
+    "topVenueShare": 0.5,
+    "distinctRegions": 2,
+    "distinctVenues": 4,
+    "coveredDomains": [
+      "digital-health",
+      "respiratory-medicine",
+      "urban-epidemiology"
+    ],
+    "coveredMethods": [
+      "wearable-sensing",
+      "longitudinal-cohort",
+      "bayesian-modeling"
+    ],
+    "coveredPopulations": [
+      "children",
+      "urban-residents",
+      "low-income-households"
+    ]
+  },
+  "coverage": [
+    {
+      "claimId": "C1",
+      "purpose": "support-primary-claim",
+      "coveredNeeds": [
+        "respiratory-medicine",
+        "wearable-sensing",
+        "children"
+      ],
+      "missingNeeds": [],
+      "supportingCitationIds": [
+        "R1",
+        "R2",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "coverageScore": 1
+    },
+    {
+      "claimId": "C2",
+      "purpose": "support-method",
+      "coveredNeeds": [
+        "urban-epidemiology",
+        "longitudinal-cohort",
+        "urban-residents"
+      ],
+      "missingNeeds": [],
+      "supportingCitationIds": [
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "coverageScore": 1
+    },
+    {
+      "claimId": "C3",
+      "purpose": "support-analysis",
+      "coveredNeeds": [
+        "bayesian-modeling",
+        "wearable-sensing"
+      ],
+      "missingNeeds": [],
+      "supportingCitationIds": [
+        "R1",
+        "R2",
+        "R3",
+        "R6"
+      ],
+      "coverageScore": 1
+    },
+    {
+      "claimId": "C4",
+      "purpose": "support-equity",
+      "coveredNeeds": [
+        "low-income-households",
+        "digital-health"
+      ],
+      "missingNeeds": [],
+      "supportingCitationIds": [
+        "R1",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "coverageScore": 1
+    }
+  ],
+  "citationActions": [
+    {
+      "id": "R1",
+      "title": "Wearable Air Quality Sensors in Pediatric Asthma",
+      "score": 69,
+      "action": "keep",
+      "reasons": [
+        "open access",
+        "recent"
+      ]
+    },
+    {
+      "id": "R2",
+      "title": "Urban Exposure Mapping with Mobile Sensors",
+      "score": 50,
+      "action": "review",
+      "reasons": [
+        "closed access",
+        "recent"
+      ]
+    },
+    {
+      "id": "R3",
+      "title": "Bayesian Models for Sparse Longitudinal Health Streams",
+      "score": 58,
+      "action": "review",
+      "reasons": [
+        "open access",
+        "recent"
+      ]
+    },
+    {
+      "id": "R4",
+      "title": "Community Sensor Programs in Asthma Prevention",
+      "score": 52,
+      "action": "review",
+      "reasons": [
+        "closed access",
+        "older",
+        "seminal"
+      ]
+    },
+    {
+      "id": "R5",
+      "title": "Smartphone Symptom Logs for Urban Adults",
+      "score": 23,
+      "action": "review",
+      "reasons": [
+        "closed access",
+        "older"
+      ]
+    },
+    {
+      "id": "R6",
+      "title": "Retracted Analysis of Sensor-Based Asthma Prediction",
+      "score": 32,
+      "action": "block",
+      "reasons": [
+        "open access",
+        "recent",
+        "retracted"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "code": "open-access-shortfall",
+      "message": "The recommended set is too dependent on closed-access papers.",
+      "evidence": [
+        "openAccessShare=0.5"
+      ],
+      "action": "Prefer an open-access replacement when relevance is comparable."
+    },
+    {
+      "severity": "medium",
+      "code": "regional-concentration",
+      "message": "Citation recommendations are concentrated in one region.",
+      "evidence": [
+        "topRegionShare=0.83"
+      ],
+      "action": "Add regionally diverse evidence if the manuscript makes broadly generalizable claims."
+    },
+    {
+      "severity": "low",
+      "code": "venue-concentration",
+      "message": "Many recommendations come from the same venue.",
+      "evidence": [
+        "topVenueShare=0.5"
+      ],
+      "action": "Review whether venue concentration reflects true relevance or retrieval bias."
+    },
+    {
+      "severity": "high",
+      "code": "risky-citation",
+      "message": "One or more recommended citations carry correction or retraction risk.",
+      "evidence": [
+        "R6: retracted"
+      ],
+      "action": "Block risky citations from automatic insertion and suggest safer replacements."
+    }
+  ],
+  "replacementSuggestions": [
+    {
+      "id": "S1",
+      "title": "Low-Cost Air Sensors in Latin American School Networks",
+      "score": 85,
+      "reasons": [
+        "covers risky support-primary-claim slot",
+        "open access",
+        "adds Latin America evidence"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Bayesian Exposure Models for Pediatric Environmental Streams",
+      "score": 74,
+      "reasons": [
+        "open access",
+        "adds Asia-Pacific evidence"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Ethical Deployment of Wearables in Low-Income Urban Clinics",
+      "score": 70,
+      "reasons": [
+        "open access",
+        "adds Africa evidence"
+      ]
+    }
+  ],
+  "reviewerActions": [
+    "Prefer an open-access replacement when relevance is comparable.",
+    "Add regionally diverse evidence if the manuscript makes broadly generalizable claims.",
+    "Review whether venue concentration reflects true relevance or retrieval bias.",
+    "Block risky citations from automatic insertion and suggest safer replacements."
+  ],
+  "auditDigest": [
+    "6 recommendations checked",
+    "3/3 manuscript domains covered",
+    "3/3 methods covered",
+    "3/3 populations covered",
+    "4 findings emitted"
+  ]
+}

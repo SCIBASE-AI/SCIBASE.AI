@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="60" y="76" fill="#0f172a" font-size="34" font-family="Arial, sans-serif" font-weight="700">Citation Diversity Coverage Auditor</text>
+  <text x="60" y="120" fill="#334155" font-size="22" font-family="Arial, sans-serif">Readiness: needs-revision (67/100)</text>
+  <rect x="60" y="158" width="760" height="34" rx="4" fill="#e2e8f0"/>
+  <rect x="60" y="158" width="509" height="34" rx="4" fill="#2563eb"/>
+  <text x="60" y="242" fill="#0f172a" font-size="22" font-family="Arial, sans-serif">Coverage 1 | OA 0.5 | Regions 2 | Venues 4</text>
+  <text x="60" y="286" fill="#334155" font-size="20" font-family="Arial, sans-serif">Reviewer findings</text>
+  <text x="60" y="310" fill="#0f172a" font-size="20">MEDIUM open-access-shortfall</text>
+<text x="60" y="346" fill="#0f172a" font-size="20">MEDIUM regional-concentration</text>
+<text x="60" y="382" fill="#0f172a" font-size="20">LOW venue-concentration</text>
+<text x="60" y="418" fill="#0f172a" font-size="20">HIGH risky-citation</text>
+</svg>

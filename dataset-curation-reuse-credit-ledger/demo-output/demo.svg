@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="Dataset curation reuse credit ledger demo">
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #102027; }
+    .subtitle { font: 400 15px Arial, sans-serif; fill: #455a64; }
+    .metric { font: 700 24px Arial, sans-serif; }
+    .label { font: 400 13px Arial, sans-serif; fill: #546e7a; }
+    .team { font: 700 16px Arial, sans-serif; fill: #102027; }
+    .meta { font: 400 13px Arial, sans-serif; fill: #455a64; }
+    .small { font: 400 11px Arial, sans-serif; fill: #607d8b; }
+  </style>
+  <rect width="960" height="520" fill="#f4f7f9"/>
+  <text x="64" y="58" class="title">Dataset Curation Reuse Credit Ledger</text>
+  <text x="64" y="84" class="subtitle">Community reputation from downstream dataset and code reuse</text>
+  <g transform="translate(64 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#0b5fff">3</text>
+    <text x="18" y="45" class="label">Reuse</text>
+  </g>
+  <g transform="translate(252 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#1f8a5b">2</text>
+    <text x="18" y="45" class="label">Awarded</text>
+  </g>
+  <g transform="translate(440 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#b42318">1</text>
+    <text x="18" y="45" class="label">Quarantine</text>
+  </g>
+  <g transform="translate(628 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#ad6f00">1</text>
+    <text x="18" y="45" class="label">License</text>
+  </g>
+  <g transform="translate(64 196)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#1f8a5b"/>
+    <text x="48" y="25" class="team">reuse-1 - Single-cell assay benchmark</text>
+    <text x="48" y="45" class="meta">Award Credit</text>
+    <text x="330" y="25" class="small">Credit awarded</text>
+    <text x="330" y="45" class="small">dcrcl_c48af1209078c13469ce3a4d</text>
+  </g><g transform="translate(64 278)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#b42318"/>
+    <text x="48" y="25" class="team">reuse-2 - Single-cell assay benchmark</text>
+    <text x="48" y="45" class="meta">Quarantine Credit</text>
+    <text x="330" y="25" class="small">MISSING_CITATION | LICENSE_MISMATCH | SELF_REUSE | DUPLICATE_EVIDENCE</text>
+    <text x="330" y="45" class="small">dcrcl_1098b9741d89e72ac0581b45</text>
+  </g><g transform="translate(64 360)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#1f8a5b"/>
+    <text x="48" y="25" class="team">reuse-3 - QC pipeline</text>
+    <text x="48" y="45" class="meta">Award Credit</text>
+    <text x="330" y="25" class="small">Credit awarded</text>
+    <text x="330" y="45" class="small">dcrcl_bca70185e357d2e0deffdc38</text>
+  </g>
+  <text x="64" y="478" class="subtitle">u-alina +21  u-minh +24</text>
+</svg>

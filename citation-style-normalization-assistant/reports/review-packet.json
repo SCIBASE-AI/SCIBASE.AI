@@ -1,0 +1,105 @@
+{
+  "packetId": "citation-style-001",
+  "title": "Citation Style Normalization Assistant",
+  "context": "AI-Assisted Research Tools MVP",
+  "status": "needs-review",
+  "readyItems": [
+    "ref-1"
+  ],
+  "heldItems": [
+    "ref-2",
+    "ref-3"
+  ],
+  "evaluations": [
+    {
+      "itemId": "ref-1",
+      "name": "Journal article",
+      "type": "reference",
+      "status": "ready",
+      "holds": [],
+      "holdLabels": [],
+      "remediation": []
+    },
+    {
+      "itemId": "ref-2",
+      "name": "Preprint",
+      "type": "reference",
+      "status": "held",
+      "holds": [
+        "missing-doi",
+        "style-mismatch"
+      ],
+      "holdLabels": [
+        "missing DOI",
+        "citation style mismatch"
+      ],
+      "remediation": [
+        "Add DOI or mark source as DOI unavailable.",
+        "Normalize reference to target journal style."
+      ]
+    },
+    {
+      "itemId": "ref-3",
+      "name": "Dataset citation",
+      "type": "reference",
+      "status": "held",
+      "holds": [
+        "style-mismatch",
+        "missing-year",
+        "invalid-author-order",
+        "duplicate-reference"
+      ],
+      "holdLabels": [
+        "citation style mismatch",
+        "missing publication year",
+        "invalid author order",
+        "duplicate reference"
+      ],
+      "remediation": [
+        "Normalize reference to target journal style.",
+        "Add publication year or access date.",
+        "Correct author ordering against source metadata.",
+        "Merge duplicate bibliography entries."
+      ]
+    }
+  ],
+  "holdCounts": {
+    "missing-doi": 1,
+    "style-mismatch": 2,
+    "missing-year": 1,
+    "invalid-author-order": 1,
+    "duplicate-reference": 1
+  },
+  "reviewerActions": [
+    {
+      "itemId": "ref-2",
+      "hold": "missing-doi",
+      "action": "Add DOI or mark source as DOI unavailable."
+    },
+    {
+      "itemId": "ref-2",
+      "hold": "style-mismatch",
+      "action": "Normalize reference to target journal style."
+    },
+    {
+      "itemId": "ref-3",
+      "hold": "style-mismatch",
+      "action": "Normalize reference to target journal style."
+    },
+    {
+      "itemId": "ref-3",
+      "hold": "missing-year",
+      "action": "Add publication year or access date."
+    },
+    {
+      "itemId": "ref-3",
+      "hold": "invalid-author-order",
+      "action": "Correct author ordering against source metadata."
+    },
+    {
+      "itemId": "ref-3",
+      "hold": "duplicate-reference",
+      "action": "Merge duplicate bibliography entries."
+    }
+  ]
+}

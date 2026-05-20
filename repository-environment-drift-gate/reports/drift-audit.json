@@ -1,0 +1,218 @@
+{
+  "baselineId": "repo-v1.4.2",
+  "candidateId": "repo-v1.5.0-rc1",
+  "generatedAt": "2026-05-20T10:00:00.000Z",
+  "componentDiffs": [
+    {
+      "name": "manuscript",
+      "path": "manuscript/main.md",
+      "previousHash": "sha256:ms-v142",
+      "currentHash": "sha256:ms-v150",
+      "changed": true,
+      "sizeMb": null,
+      "lfsRequired": false,
+      "lfsConfigured": false,
+      "largeFileMissingLfs": false
+    },
+    {
+      "name": "data",
+      "path": "data/crispr-screen.parquet",
+      "previousHash": "sha256:data-v142",
+      "currentHash": "sha256:data-v150",
+      "changed": true,
+      "sizeMb": 517,
+      "lfsRequired": true,
+      "lfsConfigured": false,
+      "largeFileMissingLfs": true
+    },
+    {
+      "name": "code",
+      "path": "code/analysis.py",
+      "previousHash": "sha256:code-v142",
+      "currentHash": "sha256:code-v150",
+      "changed": true,
+      "sizeMb": null,
+      "lfsRequired": false,
+      "lfsConfigured": false,
+      "largeFileMissingLfs": false
+    },
+    {
+      "name": "notebook",
+      "path": "notebooks/rerun.ipynb",
+      "previousHash": "sha256:notebook-v142",
+      "currentHash": "sha256:notebook-v150",
+      "changed": true,
+      "sizeMb": null,
+      "lfsRequired": false,
+      "lfsConfigured": false,
+      "largeFileMissingLfs": false
+    },
+    {
+      "name": "results",
+      "path": "results/figures.tar",
+      "previousHash": "sha256:results-v142",
+      "currentHash": "sha256:results-v142",
+      "changed": false,
+      "sizeMb": null,
+      "lfsRequired": false,
+      "lfsConfigured": false,
+      "largeFileMissingLfs": false
+    }
+  ],
+  "environmentDiffs": [
+    {
+      "field": "dockerfileHash",
+      "previous": "sha256:docker-py311-r43",
+      "current": "sha256:docker-py312-r44",
+      "severity": "high"
+    },
+    {
+      "field": "condaLockHash",
+      "previous": "sha256:conda-py311-r43",
+      "current": "sha256:conda-py312-r44",
+      "severity": "high"
+    },
+    {
+      "field": "python",
+      "previous": "3.11.8",
+      "current": "3.12.3",
+      "severity": "medium"
+    },
+    {
+      "field": "r",
+      "previous": "4.3.2",
+      "current": "4.4.0",
+      "severity": "medium"
+    },
+    {
+      "field": "cuda",
+      "previous": "12.2",
+      "current": "12.4",
+      "severity": "medium"
+    },
+    {
+      "field": "notebookKernel",
+      "previous": "python-3.11-scibase",
+      "current": "python-3.12-default",
+      "severity": "high"
+    },
+    {
+      "field": "systemPackages",
+      "previous": [
+        "libxml2=2.11.7",
+        "openssl=3.2.1"
+      ],
+      "current": [
+        "libxml2=2.12.6",
+        "openssl=3.3.0"
+      ],
+      "severity": "medium"
+    }
+  ],
+  "staleRerunDays": 32,
+  "semanticVersionImpact": "major",
+  "releaseDecision": "quarantine-release",
+  "blockers": [
+    "large-file-not-routed-through-lfs",
+    "high-severity-environment-drift",
+    "stale-reproducibility-rerun",
+    "low-reproducibility-confidence"
+  ],
+  "rollbackPlan": [
+    {
+      "action": "tag-current-candidate",
+      "command": "git tag preprint-v1.5.0-rc1 2c91d0e",
+      "required": true
+    },
+    {
+      "action": "preserve-baseline-rollback",
+      "command": "git tag rollback/preprint-v1.4.2 8b7f4aa",
+      "required": true
+    },
+    {
+      "action": "open-quarantine-branch",
+      "command": "git switch -c quarantine/preprint-v1.5.0-rc1",
+      "required": true
+    },
+    {
+      "action": "semantic-version-review",
+      "command": "record release impact as major",
+      "required": true
+    }
+  ],
+  "reviewerTasks": [
+    {
+      "type": "lfs-routing",
+      "target": "data/crispr-screen.parquet",
+      "message": "data/crispr-screen.parquet is 517 MB and must be routed through Git LFS before release."
+    },
+    {
+      "type": "environment-drift",
+      "target": "dockerfileHash",
+      "message": "dockerfileHash changed from sha256:docker-py311-r43 to sha256:docker-py312-r44."
+    },
+    {
+      "type": "environment-drift",
+      "target": "condaLockHash",
+      "message": "condaLockHash changed from sha256:conda-py311-r43 to sha256:conda-py312-r44."
+    },
+    {
+      "type": "environment-drift",
+      "target": "python",
+      "message": "python changed from 3.11.8 to 3.12.3."
+    },
+    {
+      "type": "environment-drift",
+      "target": "r",
+      "message": "r changed from 4.3.2 to 4.4.0."
+    },
+    {
+      "type": "environment-drift",
+      "target": "cuda",
+      "message": "cuda changed from 12.2 to 12.4."
+    },
+    {
+      "type": "environment-drift",
+      "target": "notebookKernel",
+      "message": "notebookKernel changed from python-3.11-scibase to python-3.12-default."
+    },
+    {
+      "type": "environment-drift",
+      "target": "systemPackages",
+      "message": "systemPackages changed from libxml2=2.11.7, openssl=3.2.1 to libxml2=2.12.6, openssl=3.3.0."
+    },
+    {
+      "type": "rerun-required",
+      "target": "sha256:pipeline-v142",
+      "message": "Last reproducibility rerun is 32 days old; rerun raw data to results before tagging."
+    }
+  ],
+  "requirementCoverage": {
+    "fileAndMetadataVersioning": [
+      "componentDiffs",
+      "semanticVersionImpact",
+      "auditDigest"
+    ],
+    "gitCompatibleBackend": [
+      "rollbackPlan",
+      "tag-current-candidate",
+      "quarantine branch"
+    ],
+    "computationAwareReproducibility": [
+      "environmentDiffs",
+      "staleRerunDays",
+      "confidenceScore"
+    ],
+    "containerSupport": [
+      "dockerfileHash",
+      "condaLockHash",
+      "systemPackages"
+    ],
+    "largeFileRouting": [
+      "lfsRequired",
+      "lfsConfigured",
+      "largeFileMissingLfs"
+    ]
+  },
+  "auditDigest": "843791061afd1911e3012e8ca1936caa9c7a7fa63a09df4e5eaacc51eef5fddb"
+}

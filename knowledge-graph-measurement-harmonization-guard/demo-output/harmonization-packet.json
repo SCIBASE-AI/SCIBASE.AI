@@ -1,0 +1,148 @@
+{
+  "packetType": "knowledge-graph-measurement-harmonization-guard",
+  "graphId": "kg-cardio-measurement-review",
+  "overallStatus": "curation_required",
+  "edgeDecisions": [
+    {
+      "edgeId": "edge-rat-pressure-pa",
+      "sourceMeasurementId": "rat-pressure-mmhg",
+      "targetMeasurementId": "rat-pressure-pa",
+      "decision": "allow_comparison",
+      "normalizedSource": {
+        "normalizedValue": 15998.64,
+        "normalizedUnit": "Pa",
+        "conversion": "mmHg_to_Pa"
+      },
+      "normalizedTarget": {
+        "normalizedValue": 15999,
+        "normalizedUnit": "Pa",
+        "conversion": "identity"
+      }
+    },
+    {
+      "edgeId": "edge-rat-human-pressure",
+      "sourceMeasurementId": "rat-pressure-mmhg",
+      "targetMeasurementId": "human-pressure-pa",
+      "decision": "suppress_recommendation",
+      "normalizedSource": {
+        "normalizedValue": 15998.64,
+        "normalizedUnit": "Pa",
+        "conversion": "mmHg_to_Pa"
+      },
+      "normalizedTarget": {
+        "normalizedValue": 15999,
+        "normalizedUnit": "Pa",
+        "conversion": "identity"
+      }
+    },
+    {
+      "edgeId": "edge-glucose-rfu",
+      "sourceMeasurementId": "glucose-mgdl",
+      "targetMeasurementId": "glucose-rfu",
+      "decision": "suppress_recommendation",
+      "normalizedSource": {
+        "normalizedValue": 5.27,
+        "normalizedUnit": "mmol/L",
+        "conversion": "mg_dL_to_mmol_L"
+      },
+      "normalizedTarget": {
+        "normalizedValue": null,
+        "normalizedUnit": null,
+        "conversion": "unsupported"
+      }
+    },
+    {
+      "edgeId": "edge-mean-vs-median",
+      "sourceMeasurementId": "yield-mean",
+      "targetMeasurementId": "yield-median",
+      "decision": "suppress_recommendation",
+      "normalizedSource": {
+        "normalizedValue": 81,
+        "normalizedUnit": "percent",
+        "conversion": "identity"
+      },
+      "normalizedTarget": {
+        "normalizedValue": 79,
+        "normalizedUnit": "percent",
+        "conversion": "identity"
+      }
+    },
+    {
+      "edgeId": "edge-low-provenance",
+      "sourceMeasurementId": "rat-pressure-mmhg",
+      "targetMeasurementId": "rat-pressure-pa",
+      "decision": "suppress_recommendation",
+      "normalizedSource": {
+        "normalizedValue": 15998.64,
+        "normalizedUnit": "Pa",
+        "conversion": "mmHg_to_Pa"
+      },
+      "normalizedTarget": {
+        "normalizedValue": 15999,
+        "normalizedUnit": "Pa",
+        "conversion": "identity"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "edgeId": "edge-rat-human-pressure",
+      "code": "biological_context_mismatch",
+      "severity": "blocker",
+      "evidence": "Context mismatch in species.",
+      "curatorAction": "Split the graph edge or add a cross-context translation model before recommending reuse."
+    },
+    {
+      "edgeId": "edge-low-provenance",
+      "code": "provenance_confidence_low",
+      "severity": "blocker",
+      "evidence": "Evidence confidence 0.42 is below 0.75.",
+      "curatorAction": "Attach DOI, protocol, or dataset provenance before surfacing this recommendation."
+    },
+    {
+      "edgeId": "edge-mean-vs-median",
+      "code": "statistical_endpoint_mismatch",
+      "severity": "blocker",
+      "evidence": "mean cannot be compared directly with median.",
+      "curatorAction": "Normalize the statistical endpoint or require curator approval for the comparison."
+    },
+    {
+      "edgeId": "edge-glucose-rfu",
+      "code": "unit_not_convertible",
+      "severity": "blocker",
+      "evidence": "mg/dL cannot be safely compared with RFU for glucose_concentration.",
+      "curatorAction": "Add an ontology-backed conversion or mark the relationship as non-comparable."
+    }
+  ],
+  "curatorActions": [
+    {
+      "edgeId": "edge-rat-human-pressure",
+      "action": "Split the graph edge or add a cross-context translation model before recommending reuse.",
+      "evidence": "Context mismatch in species."
+    },
+    {
+      "edgeId": "edge-low-provenance",
+      "action": "Attach DOI, protocol, or dataset provenance before surfacing this recommendation.",
+      "evidence": "Evidence confidence 0.42 is below 0.75."
+    },
+    {
+      "edgeId": "edge-mean-vs-median",
+      "action": "Normalize the statistical endpoint or require curator approval for the comparison.",
+      "evidence": "mean cannot be compared directly with median."
+    },
+    {
+      "edgeId": "edge-glucose-rfu",
+      "action": "Add an ontology-backed conversion or mark the relationship as non-comparable.",
+      "evidence": "mg/dL cannot be safely compared with RFU for glucose_concentration."
+    }
+  ],
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "MeasurementHarmonizationReview",
+    "identifier": "kg-cardio-measurement-review",
+    "reviewStatus": "curation_required",
+    "measurementCount": 7,
+    "edgeCount": 5
+  },
+  "auditDigest": "6b18c9efd5c2126643baa9b6c35532fd305fc889aca712635386ff4dcc70a58b"
+}

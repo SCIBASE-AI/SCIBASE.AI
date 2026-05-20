@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="Analysis variable provenance assistant demo">
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #102027; }
+    .subtitle { font: 400 15px Arial, sans-serif; fill: #455a64; }
+    .metric { font: 700 24px Arial, sans-serif; }
+    .label { font: 400 13px Arial, sans-serif; fill: #546e7a; }
+    .team { font: 700 16px Arial, sans-serif; fill: #102027; }
+    .meta { font: 400 13px Arial, sans-serif; fill: #455a64; }
+    .small { font: 400 11px Arial, sans-serif; fill: #607d8b; }
+  </style>
+  <rect width="960" height="520" fill="#f4f7f9"/>
+  <text x="64" y="58" class="title">Analysis Variable Provenance Assistant</text>
+  <text x="64" y="84" class="subtitle">Inflammation and glucose variability in post-acute cohorts - 2026-05-20T12:30:00.000Z</text>
+  <g transform="translate(64 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#0b5fff">3</text>
+    <text x="18" y="45" class="label">Analyses</text>
+  </g>
+  <g transform="translate(252 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#b42318">2</text>
+    <text x="18" y="45" class="label">High risk</text>
+  </g>
+  <g transform="translate(440 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#ad6f00">1</text>
+    <text x="18" y="45" class="label">Undefined vars</text>
+  </g>
+  <g transform="translate(628 112)">
+    <rect width="150" height="58" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <text x="18" y="25" class="metric" fill="#6f42c1">1</text>
+    <text x="18" y="45" class="label">Unit drift</text>
+  </g>
+  <g transform="translate(64 196)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#b42318"/>
+    <text x="48" y="25" class="team">analysis-primary</text>
+    <text x="48" y="45" class="meta">Hold For Provenance Fix - confidence 6</text>
+    <text x="365" y="25" class="small">INCOMPLETE_DERIVATION_LINEAGE | TRANSFORM_HASH_STALE | UNIT_DRIFT | NONDETERMINISTIC_PIPELINE | PIPELINE_TEST_FAILING | FAILED_REPRODUCIBILITY_ATTEMPT</text>
+    <text x="365" y="45" class="small">Inflammation score predicts glucose variability in the post-acute cohort.</text>
+  </g><g transform="translate(64 278)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#b42318"/>
+    <text x="48" y="25" class="team">analysis-secondary</text>
+    <text x="48" y="45" class="meta">Hold For Provenance Fix - confidence 50</text>
+    <text x="365" y="25" class="small">UNDEFINED_VARIABLE | PIPELINE_MISSING</text>
+    <text x="365" y="45" class="small">Sleep fragmentation explains residual glucose variance.</text>
+  </g><g transform="translate(64 360)">
+    <rect width="832" height="60" rx="8" fill="#ffffff" stroke="#cfd8dc"/>
+    <circle cx="26" cy="30" r="10" fill="#1f8a5b"/>
+    <text x="48" y="25" class="team">analysis-sensitivity</text>
+    <text x="48" y="45" class="meta">Ready For Review - confidence 88</text>
+    <text x="365" y="25" class="small">INCOMPLETE_DERIVATION_LINEAGE</text>
+    <text x="365" y="45" class="small">Inflammation score remains stable after excluding medication switchers.</text>
+  </g>
+  <text x="64" y="478" class="subtitle">Resolve 2 high-risk analysis provenance packets before pre-submission review.  Define 1 manuscript variable in the project data dictionary.  Re-run or explain 1 failed reproducibility attempt linked to manuscript analyses.</text>
+</svg>

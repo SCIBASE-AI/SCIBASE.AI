@@ -1,0 +1,180 @@
+{
+  "generatedAt": "2026-05-20T12:30:00.000Z",
+  "projectId": "SCI-GLUCOSE-17",
+  "title": "Inflammation and glucose variability in post-acute cohorts",
+  "domain": "clinical trials",
+  "analysisPackets": [
+    {
+      "analysisId": "analysis-primary",
+      "claim": "Inflammation score predicts glucose variability in the post-acute cohort.",
+      "cohort": "post-acute",
+      "flags": [
+        "INCOMPLETE_DERIVATION_LINEAGE",
+        "TRANSFORM_HASH_STALE",
+        "UNIT_DRIFT",
+        "NONDETERMINISTIC_PIPELINE",
+        "PIPELINE_TEST_FAILING",
+        "FAILED_REPRODUCIBILITY_ATTEMPT"
+      ],
+      "findings": [
+        {
+          "analysisId": "analysis-primary",
+          "variableName": "inflammation_score",
+          "flag": "INCOMPLETE_DERIVATION_LINEAGE",
+          "severity": "medium",
+          "message": "inflammation_score lineage omits il6_pg_ml from transform biomarker-transform.",
+          "reviewerAction": "Add il6_pg_ml to biomarker-transform lineage for inflammation_score.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_dfcd8f323eb93f1e52fcb80c"
+        },
+        {
+          "analysisId": "analysis-primary",
+          "variableName": "inflammation_score",
+          "flag": "TRANSFORM_HASH_STALE",
+          "severity": "medium",
+          "message": "biomarker-transform hash changed from sha256:old-glucose-transform to sha256:biomarker-transform.",
+          "reviewerAction": "Re-run analysis-primary or explain the biomarker-transform hash change.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_326ea81261c504fdae920bd6"
+        },
+        {
+          "analysisId": "analysis-primary",
+          "variableName": "glucose_variability",
+          "flag": "UNIT_DRIFT",
+          "severity": "medium",
+          "message": "glucose_variability is reported as mg/dL but the data dictionary uses mmol/L.",
+          "reviewerAction": "Reconcile glucose_variability units between manuscript and data dictionary.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_bbc1aeaec39194870b243c1e"
+        },
+        {
+          "analysisId": "analysis-primary",
+          "variableName": "glucose_variability",
+          "flag": "TRANSFORM_HASH_STALE",
+          "severity": "medium",
+          "message": "glucose-transform hash changed from sha256:old-glucose-transform to sha256:new-glucose-transform.",
+          "reviewerAction": "Re-run analysis-primary or explain the glucose-transform hash change.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_1fd19d4fc0c424bfb0aa4965"
+        },
+        {
+          "analysisId": "analysis-primary",
+          "variableName": "glucose_variability",
+          "flag": "NONDETERMINISTIC_PIPELINE",
+          "severity": "medium",
+          "message": "glucose-transform is marked non-deterministic.",
+          "reviewerAction": "Stabilize glucose-transform seeds or document accepted variance.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_6c6005f9b02216b7ac7bdd63"
+        },
+        {
+          "analysisId": "analysis-primary",
+          "variableName": "glucose_variability",
+          "flag": "PIPELINE_TEST_FAILING",
+          "severity": "high",
+          "message": "glucose-transform has test status fail.",
+          "reviewerAction": "Fix glucose-transform tests before relying on glucose_variability.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_96929687755e683add74f88d"
+        },
+        {
+          "analysisId": "analysis-primary",
+          "variableName": "*analysis*",
+          "flag": "FAILED_REPRODUCIBILITY_ATTEMPT",
+          "severity": "high",
+          "message": "analysis-primary has a fail reproducibility attempt: Output variance changed after glucose transform rerun.",
+          "reviewerAction": "Re-run or explain failed reproducibility attempt from 2026-05-18T09:00:00.000Z.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_292d6ab7fb77ed68a1dbd6d7"
+        }
+      ],
+      "reviewerActions": [
+        "Add il6_pg_ml to biomarker-transform lineage for inflammation_score.",
+        "Re-run analysis-primary or explain the biomarker-transform hash change.",
+        "Reconcile glucose_variability units between manuscript and data dictionary.",
+        "Re-run analysis-primary or explain the glucose-transform hash change.",
+        "Stabilize glucose-transform seeds or document accepted variance.",
+        "Fix glucose-transform tests before relying on glucose_variability.",
+        "Re-run or explain failed reproducibility attempt from 2026-05-18T09:00:00.000Z."
+      ],
+      "reproducibilityConfidence": 6,
+      "decision": "hold_for_provenance_fix"
+    },
+    {
+      "analysisId": "analysis-secondary",
+      "claim": "Sleep fragmentation explains residual glucose variance.",
+      "cohort": "sleep-substudy",
+      "flags": [
+        "UNDEFINED_VARIABLE",
+        "PIPELINE_MISSING"
+      ],
+      "findings": [
+        {
+          "analysisId": "analysis-secondary",
+          "variableName": "sleep_fragmentation_index",
+          "flag": "UNDEFINED_VARIABLE",
+          "severity": "high",
+          "message": "sleep_fragmentation_index is used in the manuscript but is not defined in the data dictionary.",
+          "reviewerAction": "Define sleep_fragmentation_index in the project data dictionary before review.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_477e32e8eb9040183ed73e71"
+        },
+        {
+          "analysisId": "analysis-secondary",
+          "variableName": "sleep_fragmentation_index",
+          "flag": "PIPELINE_MISSING",
+          "severity": "high",
+          "message": "sleep_fragmentation_index has no producing pipeline transform.",
+          "reviewerAction": "Attach a producing transform or mark sleep_fragmentation_index as externally sourced.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_bdc5a8bd4a299d99d80ab9e9"
+        }
+      ],
+      "reviewerActions": [
+        "Define sleep_fragmentation_index in the project data dictionary before review.",
+        "Attach a producing transform or mark sleep_fragmentation_index as externally sourced."
+      ],
+      "reproducibilityConfidence": 50,
+      "decision": "hold_for_provenance_fix"
+    },
+    {
+      "analysisId": "analysis-sensitivity",
+      "claim": "Inflammation score remains stable after excluding medication switchers.",
+      "cohort": "post-acute",
+      "flags": [
+        "INCOMPLETE_DERIVATION_LINEAGE"
+      ],
+      "findings": [
+        {
+          "analysisId": "analysis-sensitivity",
+          "variableName": "inflammation_score",
+          "flag": "INCOMPLETE_DERIVATION_LINEAGE",
+          "severity": "medium",
+          "message": "inflammation_score lineage omits il6_pg_ml from transform biomarker-transform.",
+          "reviewerAction": "Add il6_pg_ml to biomarker-transform lineage for inflammation_score.",
+          "generatedAt": "2026-05-20T12:30:00.000Z",
+          "digest": "avpa_60080ca167289503d0a3f4a7"
+        }
+      ],
+      "reviewerActions": [
+        "Add il6_pg_ml to biomarker-transform lineage for inflammation_score."
+      ],
+      "reproducibilityConfidence": 88,
+      "decision": "ready_for_review"
+    }
+  ],
+  "reviewerReport": {
+    "counts": {
+      "analyses": 3,
+      "highRiskAnalyses": 2,
+      "undefinedVariables": 1,
+      "unitDriftFindings": 1,
+      "failedReproducibilityLinks": 1
+    },
+    "priorityActions": [
+      "Resolve 2 high-risk analysis provenance packets before pre-submission review.",
+      "Define 1 manuscript variable in the project data dictionary.",
+      "Re-run or explain 1 failed reproducibility attempt linked to manuscript analyses."
+    ]
+  }
+}

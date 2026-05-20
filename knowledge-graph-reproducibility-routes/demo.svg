@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Knowledge graph reproducibility routes demo slide</title>
+  <desc id="desc">Demo summary for reproducibility route ranking and recommendation digest output.</desc>
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="64" y="64" width="1152" height="592" rx="18" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="96" y="138" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">SCIBASE Knowledge Graph</text>
+  <text x="96" y="200" fill="#a5b4fc" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Reproducibility Route Planner</text>
+  <text x="96" y="300" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="33">Ranks concept -> protocol -> dataset -> notebook -> result paths</text>
+  <text x="96" y="358" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="33">Scores evidence strength, freshness, access, and rerun readiness</text>
+  <text x="96" y="416" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="33">Produces sidebar and discovery-mode recommendation digests</text>
+  <text x="96" y="520" fill="#bbf7d0" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Validation - node test.js - 6 tests passed</text>
+  <text x="96" y="580" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="24">Dependency-free, synthetic graph data only, deterministic audit digests.</text>
+</svg>

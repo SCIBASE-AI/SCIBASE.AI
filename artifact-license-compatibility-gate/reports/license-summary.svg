@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430">
+    <rect width="720" height="430" fill="#f8fbfa"/>
+    <rect x="24" y="24" width="672" height="382" rx="14" fill="#fff" stroke="#c7d9d6"/>
+    <text x="48" y="72" font-size="27" font-family="Arial, sans-serif" font-weight="700" fill="#17324d">Artifact license compatibility</text>
+    <text x="48" y="104" font-size="16" font-family="Arial, sans-serif" fill="#496272">Release status: blocked; blocked: 2</text>
+    <g font-family="Arial, sans-serif">
+      <text x="48" y="150" font-size="16" fill="#17324d">data-001</text>
+      <text x="160" y="150" font-size="16" fill="#17324d">CC-BY-4.0</text>
+      <text x="290" y="150" font-size="15" fill="#496272">dataset</text>
+      <rect x="500" y="130" width="170" height="27" rx="6" fill="#247c7a"/>
+      <text x="518" y="150" font-size="14" fill="#fff">release-ready</text>
+
+      <text x="48" y="198" font-size="16" fill="#17324d">code-001</text>
+      <text x="160" y="198" font-size="16" fill="#17324d">MIT</text>
+      <text x="290" y="198" font-size="15" fill="#496272">code</text>
+      <rect x="500" y="178" width="170" height="27" rx="6" fill="#247c7a"/>
+      <text x="518" y="198" font-size="14" fill="#fff">release-ready</text>
+
+      <text x="48" y="246" font-size="16" fill="#17324d">model-001</text>
+      <text x="160" y="246" font-size="16" fill="#17324d">Apache-2.0</text>
+      <text x="290" y="246" font-size="15" fill="#496272">model</text>
+      <rect x="500" y="226" width="170" height="27" rx="6" fill="#247c7a"/>
+      <text x="518" y="246" font-size="14" fill="#fff">release-ready</text>
+
+      <text x="48" y="294" font-size="16" fill="#17324d">supp-001</text>
+      <text x="160" y="294" font-size="16" fill="#17324d">CC-BY-NC-4.0</text>
+      <text x="290" y="294" font-size="15" fill="#496272">supplement</text>
+      <rect x="500" y="274" width="170" height="27" rx="6" fill="#b33f62"/>
+      <text x="518" y="294" font-size="14" fill="#fff">blocked</text>
+
+      <text x="48" y="342" font-size="16" fill="#17324d">code-002</text>
+      <text x="160" y="342" font-size="16" fill="#17324d">GPL-3.0</text>
+      <text x="290" y="342" font-size="15" fill="#496272">code</text>
+      <rect x="500" y="322" width="170" height="27" rx="6" fill="#b33f62"/>
+      <text x="518" y="342" font-size="14" fill="#fff">blocked</text></g>
+  </svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#f8fafc"/>
+  <text x="52" y="62" font-size="34" font-family="Arial" font-weight="700" fill="#111827">Revenue Sanctions Export Gate</text>
+  <text x="52" y="98" font-size="18" font-family="Arial" fill="#4b5563">Release 1 / Review 0 / Block 3</text>
+  
+  <g transform="translate(52 150)">
+    <rect width="24" height="24" rx="5" fill="#2f9e44" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">INV-2026-001 - release</text>
+    <text x="550" y="18" font-size="16" font-family="Arial" fill="#4b5563">$42000</text>
+  </g>
+  <g transform="translate(52 202)">
+    <rect width="24" height="24" rx="5" fill="#c92a2a" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">INV-2026-002 - block</text>
+    <text x="550" y="18" font-size="16" font-family="Arial" fill="#4b5563">$76000</text>
+  </g>
+  <g transform="translate(52 254)">
+    <rect width="24" height="24" rx="5" fill="#c92a2a" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">INV-2026-003 - block</text>
+    <text x="550" y="18" font-size="16" font-family="Arial" fill="#4b5563">$18500</text>
+  </g>
+  <g transform="translate(52 306)">
+    <rect width="24" height="24" rx="5" fill="#c92a2a" />
+    <text x="42" y="18" font-size="18" font-family="Arial" fill="#111827">INV-2026-004 - block</text>
+    <text x="550" y="18" font-size="16" font-family="Arial" fill="#4b5563">$92000</text>
+  </g>
+  <text x="52" y="380" font-size="14" font-family="Arial" fill="#6b7280">Audit digest: 3f2b9069f460a5d4e20558308136f8e2...</text>
+</svg>

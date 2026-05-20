@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2026-05-20T12:30:00.000Z",
+  "module": "revenue-sanctions-export-gate",
+  "summary": {
+    "release": 1,
+    "hold-for-review": 0,
+    "block": 3,
+    "totalRevenue": 228500,
+    "heldRevenue": 186500
+  },
+  "evaluations": [
+    {
+      "invoiceId": "INV-2026-001",
+      "customerId": "CUST-UCL-01",
+      "customerName": "University Clinical Lab",
+      "amountUsd": 42000,
+      "decision": "release",
+      "revenueAction": "recognize",
+      "findings": [],
+      "releaseChecklist": [
+        {
+          "item": "KYB verified",
+          "complete": true
+        },
+        {
+          "item": "No restricted jurisdiction block",
+          "complete": true
+        },
+        {
+          "item": "No denied counterparty match",
+          "complete": true
+        },
+        {
+          "item": "Export evidence present when required",
+          "complete": true
+        },
+        {
+          "item": "Payment rail allowed",
+          "complete": true
+        }
+      ],
+      "auditDigest": "d92cd18ee1be94403fcd1b47affe8d1bae9d0d73919f5216d099c52bc18a3ed6",
+      "signedEvent": {
+        "type": "revenue.sanctions_export_gate.evaluated",
+        "invoiceId": "INV-2026-001",
+        "customerId": "CUST-UCL-01",
+        "decision": "release",
+        "revenueAction": "recognize",
+        "findingCount": 0,
+        "generatedAt": "2026-05-20T12:30:00.000Z",
+        "signature": "sha256=c61a2765dc15d36f17c64ce07c72eacb1241766b7668cf158efca155ccf2f00f"
+      }
+    },
+    {
+      "invoiceId": "INV-2026-002",
+      "customerId": "CUST-HRRB-02",
+      "customerName": "Helix Restricted Research Bureau",
+      "amountUsd": 76000,
+      "decision": "block",
+      "revenueAction": "do-not-invoice",
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "DENIED_COUNTERPARTY",
+          "message": "Customer or parent entity appears on the denied entity policy list.",
+          "evidence": {
+            "customerId": "CUST-HRRB-02",
+            "legalName": "Helix Restricted Research Bureau",
+            "parentEntity": "Helix Restricted Research Bureau"
+          }
+        },
+        {
+          "severity": "high",
+          "code": "KYB_NOT_VERIFIED",
+          "message": "Customer KYB must be verified before invoice release.",
+          "evidence": {
+            "customerId": "CUST-HRRB-02",
+            "kybStatus": "pending"
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "MANUAL_REVIEW_REQUIRED",
+          "message": "Large invoices require a compliance approval reference.",
+          "evidence": {
+            "invoiceId": "INV-2026-002",
+            "amountUsd": 76000,
+            "thresholdUsd": 50000
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "EXPORT_LICENSE_REQUIRED",
+          "message": "Export-controlled AI compute requires license evidence before billing.",
+          "evidence": {
+            "lineId": "line-ai-compute",
+            "modelFamily": "dual-use-foundation-bio"
+          }
+        }
+      ],
+      "releaseChecklist": [
+        {
+          "item": "KYB verified",
+          "complete": false
+        },
+        {
+          "item": "No restricted jurisdiction block",
+          "complete": true
+        },
+        {
+          "item": "No denied counterparty match",
+          "complete": false
+        },
+        {
+          "item": "Export evidence present when required",
+          "complete": false
+        },
+        {
+          "item": "Payment rail allowed",
+          "complete": true
+        }
+      ],
+      "auditDigest": "119fa8c1eb5587c49257178d976c8654f0ab139874559fbf695187cf0ba00f64",
+      "signedEvent": {
+        "type": "revenue.sanctions_export_gate.evaluated",
+        "invoiceId": "INV-2026-002",
+        "customerId": "CUST-HRRB-02",
+        "decision": "block",
+        "revenueAction": "do-not-invoice",
+        "findingCount": 4,
+        "generatedAt": "2026-05-20T12:30:00.000Z",
+        "signature": "sha256=33264bb4e24bb3a234817a25c228ff90f44694b8064db5f07b8cd2841d5b2c61"
+      }
+    },
+    {
+      "invoiceId": "INV-2026-003",
+      "customerId": "CUST-OBS-03",
+      "customerName": "Open Materials Exchange",
+      "amountUsd": 18500,
+      "decision": "block",
+      "revenueAction": "do-not-invoice",
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "EXPORT_LICENSE_REQUIRED",
+          "message": "Analytics licensing destination requires export review or license evidence.",
+          "evidence": {
+            "lineId": "line-license-sg",
+            "destinationCountry": "SG"
+          }
+        }
+      ],
+      "releaseChecklist": [
+        {
+          "item": "KYB verified",
+          "complete": true
+        },
+        {
+          "item": "No restricted jurisdiction block",
+          "complete": true
+        },
+        {
+          "item": "No denied counterparty match",
+          "complete": true
+        },
+        {
+          "item": "Export evidence present when required",
+          "complete": false
+        },
+        {
+          "item": "Payment rail allowed",
+          "complete": true
+        }
+      ],
+      "auditDigest": "eacbfdb4c1acbf5ab6265aca660bec8441dd098a16978f77e8646c208ebd93bc",
+      "signedEvent": {
+        "type": "revenue.sanctions_export_gate.evaluated",
+        "invoiceId": "INV-2026-003",
+        "customerId": "CUST-OBS-03",
+        "decision": "block",
+        "revenueAction": "do-not-invoice",
+        "findingCount": 1,
+        "generatedAt": "2026-05-20T12:30:00.000Z",
+        "signature": "sha256=fe340ba995bc823f06b2f55ead279bf920396bee378e64aea1730e86b78f82e2"
+      }
+    },
+    {
+      "invoiceId": "INV-2026-004",
+      "customerId": "CUST-IR-04",
+      "customerName": "Regional Research Procurement Office",
+      "amountUsd": 92000,
+      "decision": "block",
+      "revenueAction": "do-not-invoice",
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "RESTRICTED_JURISDICTION",
+          "message": "Customer jurisdiction is restricted for revenue processing.",
+          "evidence": {
+            "customerId": "CUST-IR-04",
+            "country": "IR"
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "PROHIBITED_PAYMENT_RAIL",
+          "message": "Payment rail is prohibited for the customer country.",
+          "evidence": {
+            "invoiceId": "INV-2026-004",
+            "paymentRail": "card",
+            "country": "IR"
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "ORDER_FORM_REQUIRED",
+          "message": "Large subscriptions require enterprise order-form evidence.",
+          "evidence": {
+            "lineId": "line-enterprise",
+            "seats": 400
+          }
+        }
+      ],
+      "releaseChecklist": [
+        {
+          "item": "KYB verified",
+          "complete": true
+        },
+        {
+          "item": "No restricted jurisdiction block",
+          "complete": false
+        },
+        {
+          "item": "No denied counterparty match",
+          "complete": true
+        },
+        {
+          "item": "Export evidence present when required",
+          "complete": true
+        },
+        {
+          "item": "Payment rail allowed",
+          "complete": false
+        }
+      ],
+      "auditDigest": "6518a519d28526ce835c2bae85a768b58bccd70d491b796b35c09d58f6069e03",
+      "signedEvent": {
+        "type": "revenue.sanctions_export_gate.evaluated",
+        "invoiceId": "INV-2026-004",
+        "customerId": "CUST-IR-04",
+        "decision": "block",
+        "revenueAction": "do-not-invoice",
+        "findingCount": 3,
+        "generatedAt": "2026-05-20T12:30:00.000Z",
+        "signature": "sha256=4ab9f3d4696ba62fee9a098ae9cbbf136f2e5e961fb04c627575e0ae19eb2990"
+      }
+    }
+  ],
+  "auditDigest": "3f2b9069f460a5d4e20558308136f8e2f6b1da75d28968bc9a3ce9cb68f6dd74"
+}

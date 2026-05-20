@@ -1,0 +1,196 @@
+{
+  "community": {
+    "id": "community-neuro-tools",
+    "domain": "computational-neuroscience",
+    "reviewPeriod": "2026-Q2"
+  },
+  "module": "mentorship-impact-ladder",
+  "summary": {
+    "averageScore": 65,
+    "badgeEligibleCount": 2,
+    "moderatorReviewCount": 1,
+    "totalFindings": 7,
+    "countsByTier": {
+      "open-science-champion": 1,
+      "emerging-mentor": 1,
+      "moderator-review": 1
+    },
+    "countsBySeverity": {
+      "medium": 3,
+      "low": 2,
+      "high": 2
+    }
+  },
+  "pairReports": [
+    {
+      "mentorshipId": "pair-1",
+      "mentor": {
+        "id": "mentor-a",
+        "displayName": "Dr. Mira Chen"
+      },
+      "trainee": {
+        "id": "trainee-a",
+        "displayName": "Lina Gomez"
+      },
+      "score": 100,
+      "tier": "open-science-champion",
+      "traineeGrowth": 18,
+      "mentorDelta": 10,
+      "evidenceCount": 5,
+      "creditedRoles": [
+        "data-curation",
+        "methodology",
+        "review",
+        "software",
+        "supervision",
+        "validation"
+      ],
+      "findings": [],
+      "packetDigest": "5ca41608d183976afc9e1e4a782bcb228ac8560dae5f1c6356aba9abe498ecd5"
+    },
+    {
+      "mentorshipId": "pair-2",
+      "mentor": {
+        "id": "mentor-b",
+        "displayName": "Dr. Omar Patel"
+      },
+      "trainee": {
+        "id": "trainee-b",
+        "displayName": "Kai Smith"
+      },
+      "score": 52,
+      "tier": "emerging-mentor",
+      "traineeGrowth": 5,
+      "mentorDelta": 5,
+      "evidenceCount": 3,
+      "creditedRoles": [
+        "review"
+      ],
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "reproducibility-evidence-missing",
+          "message": "pair-2 lacks reproducibility-linked mentorship evidence.",
+          "task": "Attach a rerun, validation, or artifact verification record."
+        },
+        {
+          "severity": "low",
+          "code": "portfolio-breadth-low",
+          "message": "pair-2 has limited project breadth for a durable mentorship badge.",
+          "task": "Collect one more supervised contribution on a separate project."
+        }
+      ],
+      "packetDigest": "0bfd6ac0d0f517b0495891b1c56b555c147ffb729d1cb9e6da910b9e85e28768"
+    },
+    {
+      "mentorshipId": "pair-3",
+      "mentor": {
+        "id": "mentor-a",
+        "displayName": "Dr. Mira Chen"
+      },
+      "trainee": {
+        "id": "trainee-c",
+        "displayName": "Noah Chen"
+      },
+      "score": 43,
+      "tier": "moderator-review",
+      "traineeGrowth": 0,
+      "mentorDelta": 0,
+      "evidenceCount": 2,
+      "creditedRoles": [
+        "review",
+        "supervision"
+      ],
+      "findings": [
+        {
+          "severity": "high",
+          "code": "trainee-acknowledgement-missing",
+          "message": "Noah Chen has not acknowledged mentorship credit for pair-3.",
+          "task": "Hold badge promotion until the trainee acknowledges the mentorship packet."
+        },
+        {
+          "severity": "high",
+          "code": "relationship-conflict-review-required",
+          "message": "pair-3 has a declared relationship conflict that can bias reputation credit.",
+          "task": "Route this mentorship packet to an independent moderator before assigning badge credit."
+        },
+        {
+          "severity": "medium",
+          "code": "independent-endorsement-missing",
+          "message": "pair-3 has no independent endorsement evidence.",
+          "task": "Request an independent project owner or reviewer endorsement."
+        },
+        {
+          "severity": "medium",
+          "code": "reproducibility-evidence-missing",
+          "message": "pair-3 lacks reproducibility-linked mentorship evidence.",
+          "task": "Attach a rerun, validation, or artifact verification record."
+        },
+        {
+          "severity": "low",
+          "code": "portfolio-breadth-low",
+          "message": "pair-3 has limited project breadth for a durable mentorship badge.",
+          "task": "Collect one more supervised contribution on a separate project."
+        }
+      ],
+      "packetDigest": "fba97b73e812afea2878a2284926d6c8bfeefe9aac3a88bee16a858d384ede97"
+    }
+  ],
+  "institutionPacket": [
+    {
+      "mentorshipId": "pair-1",
+      "mentorId": "mentor-a",
+      "traineeId": "trainee-a",
+      "tier": "open-science-champion",
+      "creditedRoles": [
+        "data-curation",
+        "methodology",
+        "review",
+        "software",
+        "supervision",
+        "validation"
+      ],
+      "traineeGrowth": 18,
+      "mentorDelta": 10,
+      "packetDigest": "5ca41608d183976afc9e1e4a782bcb228ac8560dae5f1c6356aba9abe498ecd5",
+      "actions": []
+    },
+    {
+      "mentorshipId": "pair-2",
+      "mentorId": "mentor-b",
+      "traineeId": "trainee-b",
+      "tier": "emerging-mentor",
+      "creditedRoles": [
+        "review"
+      ],
+      "traineeGrowth": 5,
+      "mentorDelta": 5,
+      "packetDigest": "0bfd6ac0d0f517b0495891b1c56b555c147ffb729d1cb9e6da910b9e85e28768",
+      "actions": [
+        "Attach a rerun, validation, or artifact verification record.",
+        "Collect one more supervised contribution on a separate project."
+      ]
+    },
+    {
+      "mentorshipId": "pair-3",
+      "mentorId": "mentor-a",
+      "traineeId": "trainee-c",
+      "tier": "moderator-review",
+      "creditedRoles": [
+        "review",
+        "supervision"
+      ],
+      "traineeGrowth": 0,
+      "mentorDelta": 0,
+      "packetDigest": "fba97b73e812afea2878a2284926d6c8bfeefe9aac3a88bee16a858d384ede97",
+      "actions": [
+        "Hold badge promotion until the trainee acknowledges the mentorship packet.",
+        "Route this mentorship packet to an independent moderator before assigning badge credit.",
+        "Request an independent project owner or reviewer endorsement.",
+        "Attach a rerun, validation, or artifact verification record.",
+        "Collect one more supervised contribution on a separate project."
+      ]
+    }
+  ],
+  "auditDigest": "5e5b5aeb170d943b0ed87df8174939e9c115c5c71fffb203f341f24cfc5a3d91"
+}

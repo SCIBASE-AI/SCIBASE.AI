@@ -1,0 +1,213 @@
+{
+  "generatedAt": "2026-05-20T10:00:00Z",
+  "summary": {
+    "totalInvoices": 4,
+    "heldInvoices": 2,
+    "approvedInvoices": 2,
+    "totalListAmountUsd": 175500,
+    "totalNetAmountUsd": 140155,
+    "protectedDiscountUsd": 35345,
+    "consortiumNames": [
+      "Open Science North Consortium",
+      "Pacific Open Data Consortium"
+    ]
+  },
+  "packets": [
+    {
+      "invoiceId": "INV-2026-0501",
+      "accountId": "acct-risky-lakeview",
+      "institutionId": "lakeview-bioinformatics",
+      "consortiumId": "consortium-open-science-north",
+      "consortiumName": "Open Science North Consortium",
+      "decision": "hold",
+      "invoiceHold": true,
+      "listAmountUsd": 48000,
+      "netAmountUsd": 34560,
+      "consortiumDiscountPct": 20,
+      "totalDiscountPct": 28,
+      "effectiveCap": 15,
+      "stackingLimit": 24,
+      "flags": [
+        {
+          "code": "CONSORTIUM_MEMBERSHIP_INACTIVE",
+          "severity": "high",
+          "message": "lakeview-bioinformatics is not an active member on 2026-05-01.",
+          "evidence": {
+            "invoiceDate": "2026-05-01",
+            "institutionId": "lakeview-bioinformatics",
+            "activeThrough": "2025-12-31"
+          }
+        },
+        {
+          "code": "DISCOUNT_EXCEEDS_MEMBER_CAP",
+          "severity": "high",
+          "message": "Consortium discount 20% exceeds cap 15%.",
+          "evidence": {
+            "consortiumDiscountPct": 20,
+            "effectiveCap": 15,
+            "memberCap": 15,
+            "consortiumCap": 18
+          }
+        },
+        {
+          "code": "DISCOUNT_STACK_OVER_LIMIT",
+          "severity": "medium",
+          "message": "Stacked discount 28% exceeds stacking limit 24%.",
+          "evidence": {
+            "totalDiscountPct": 28,
+            "stackingLimit": 24,
+            "discounts": [
+              {
+                "type": "consortium",
+                "pct": 20,
+                "source": "sales override"
+              },
+              {
+                "type": "coupon",
+                "pct": 8,
+                "source": "launch coupon"
+              }
+            ]
+          }
+        },
+        {
+          "code": "MISSING_ROSTER_EVIDENCE",
+          "severity": "medium",
+          "message": "Missing dated roster snapshot for consortium eligibility.",
+          "evidence": {
+            "invoiceId": "INV-2026-0501"
+          }
+        },
+        {
+          "code": "MISSING_RENEWAL_NOTICE",
+          "severity": "medium",
+          "message": "Missing renewal notice evidence for preferred consortium pricing.",
+          "evidence": {
+            "invoiceId": "INV-2026-0501"
+          }
+        }
+      ],
+      "reviewerTasks": [
+        "Confirm active consortium membership or remove the consortium discount before invoicing.",
+        "Reduce the consortium discount to the member or contract cap.",
+        "Remove coupon, volume, or manual discounts until total stacking is within policy.",
+        "Attach the dated consortium roster snapshot used for eligibility.",
+        "Attach renewal notice evidence before approving the invoice."
+      ],
+      "digest": "971c9739ab7bdfaa"
+    },
+    {
+      "invoiceId": "INV-2026-0502",
+      "accountId": "acct-clean-northwestern",
+      "institutionId": "northwestern-research",
+      "consortiumId": "consortium-open-science-north",
+      "consortiumName": "Open Science North Consortium",
+      "decision": "approve",
+      "invoiceHold": false,
+      "listAmountUsd": 62000,
+      "netAmountUsd": 52080,
+      "consortiumDiscountPct": 16,
+      "totalDiscountPct": 16,
+      "effectiveCap": 18,
+      "stackingLimit": 24,
+      "flags": [],
+      "reviewerTasks": [],
+      "digest": "f72eb579e0d1fd2d"
+    },
+    {
+      "invoiceId": "INV-2026-0503",
+      "accountId": "acct-risky-prairie",
+      "institutionId": "prairie-methods-lab",
+      "consortiumId": "consortium-open-science-north",
+      "consortiumName": "Open Science North Consortium",
+      "decision": "hold",
+      "invoiceHold": true,
+      "listAmountUsd": 27500,
+      "netAmountUsd": 20075,
+      "consortiumDiscountPct": 13,
+      "totalDiscountPct": 27,
+      "effectiveCap": 12,
+      "stackingLimit": 24,
+      "flags": [
+        {
+          "code": "DISCOUNT_EXCEEDS_MEMBER_CAP",
+          "severity": "high",
+          "message": "Consortium discount 13% exceeds cap 12%.",
+          "evidence": {
+            "consortiumDiscountPct": 13,
+            "effectiveCap": 12,
+            "memberCap": 12,
+            "consortiumCap": 18
+          }
+        },
+        {
+          "code": "DISCOUNT_STACK_OVER_LIMIT",
+          "severity": "medium",
+          "message": "Stacked discount 27% exceeds stacking limit 24%.",
+          "evidence": {
+            "totalDiscountPct": 27,
+            "stackingLimit": 24,
+            "discounts": [
+              {
+                "type": "consortium",
+                "pct": 13,
+                "source": "member agreement"
+              },
+              {
+                "type": "volume",
+                "pct": 9,
+                "source": "annual volume"
+              },
+              {
+                "type": "manual",
+                "pct": 5,
+                "source": "field override"
+              }
+            ]
+          }
+        },
+        {
+          "code": "MISSING_RENEWAL_NOTICE",
+          "severity": "medium",
+          "message": "Missing renewal notice evidence for preferred consortium pricing.",
+          "evidence": {
+            "invoiceId": "INV-2026-0503"
+          }
+        }
+      ],
+      "reviewerTasks": [
+        "Reduce the consortium discount to the member or contract cap.",
+        "Remove coupon, volume, or manual discounts until total stacking is within policy.",
+        "Attach renewal notice evidence before approving the invoice."
+      ],
+      "digest": "97aa88868e84fcbe"
+    },
+    {
+      "invoiceId": "INV-2026-0504",
+      "accountId": "acct-clean-bay",
+      "institutionId": "bay-area-translational",
+      "consortiumId": "consortium-pacific-open-data",
+      "consortiumName": "Pacific Open Data Consortium",
+      "decision": "approve",
+      "invoiceHold": false,
+      "listAmountUsd": 38000,
+      "netAmountUsd": 33440,
+      "consortiumDiscountPct": 12,
+      "totalDiscountPct": 12,
+      "effectiveCap": 14,
+      "stackingLimit": 18,
+      "flags": [],
+      "reviewerTasks": [],
+      "digest": "d036e6c09ec36a72"
+    }
+  ],
+  "heldInvoiceIds": [
+    "INV-2026-0501",
+    "INV-2026-0503"
+  ],
+  "readyInvoiceIds": [
+    "INV-2026-0502",
+    "INV-2026-0504"
+  ],
+  "executiveSummary": "Consortium pricing audit reviewed 4 invoices: 2 held invoices, 2 approved invoices. Gross invoice exposure is $175,500 with $140,155 net booked after preferred pricing. Consortiums reviewed: Open Science North Consortium, Pacific Open Data Consortium."
+}

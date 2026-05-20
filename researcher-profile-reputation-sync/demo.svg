@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Researcher Profile Reputation Sync Demo</title>
+  <desc id="desc">Visual summary of profile, ORCID, affiliation, grant, activity, and reputation checks.</desc>
+  <rect width="1280" height="720" fill="#f6f7f9"/>
+  <rect x="80" y="78" width="1120" height="564" rx="18" fill="#ffffff" stroke="#d7dce3" stroke-width="3"/>
+  <text x="130" y="150" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700" fill="#1f2933">Researcher Profile Reputation Sync</text>
+  <text x="130" y="198" font-family="Inter, Arial, sans-serif" font-size="24" fill="#53606f">Fresh, verified, privacy-safe researcher profile updates</text>
+  <rect x="130" y="250" width="240" height="168" rx="14" fill="#e8f3ff" stroke="#8fc7ff"/>
+  <text x="158" y="304" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#12385f">Identity</text>
+  <text x="158" y="348" font-family="Inter, Arial, sans-serif" font-size="21" fill="#244b70">Email verified</text>
+  <text x="158" y="386" font-family="Inter, Arial, sans-serif" font-size="21" fill="#244b70">ORCID fresh</text>
+  <rect x="405" y="250" width="240" height="168" rx="14" fill="#edf9ef" stroke="#9bd4a5"/>
+  <text x="433" y="304" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#174a25">Affiliation</text>
+  <text x="433" y="348" font-family="Inter, Arial, sans-serif" font-size="21" fill="#2c5b36">Institution proof</text>
+  <text x="433" y="386" font-family="Inter, Arial, sans-serif" font-size="21" fill="#2c5b36">Grant evidence</text>
+  <rect x="680" y="250" width="240" height="168" rx="14" fill="#fff3e0" stroke="#f0bb75"/>
+  <text x="708" y="304" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#66400f">Privacy</text>
+  <text x="708" y="348" font-family="Inter, Arial, sans-serif" font-size="21" fill="#75501b">Feed visibility</text>
+  <text x="708" y="386" font-family="Inter, Arial, sans-serif" font-size="21" fill="#75501b">Anon escrow</text>
+  <rect x="955" y="250" width="195" height="168" rx="14" fill="#f3ecff" stroke="#c8a7ff"/>
+  <text x="983" y="304" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700" fill="#4a247a">Reputation</text>
+  <text x="983" y="348" font-family="Inter, Arial, sans-serif" font-size="21" fill="#5a3781">Metrics</text>
+  <text x="983" y="386" font-family="Inter, Arial, sans-serif" font-size="21" fill="#5a3781">Repro score</text>
+  <path d="M245 480 H1045" fill="none" stroke="#c5ccd3" stroke-width="5"/>
+  <circle cx="245" cy="480" r="17" fill="#2f80ed"/>
+  <circle cx="515" cy="480" r="17" fill="#27ae60"/>
+  <circle cx="785" cy="480" r="17" fill="#f2994a"/>
+  <circle cx="1045" cy="480" r="17" fill="#7b61ff"/>
+  <text x="130" y="552" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#1f2933">Decision Output</text>
+  <text x="130" y="594" font-family="Inter, Arial, sans-serif" font-size="22" fill="#53606f">Ready, held, or blocked with deterministic audit digest and remediation actions</text>
+</svg>

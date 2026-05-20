@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Challenge leaderboard integrity guard demo</title>
+  <desc id="desc">Integrity report summary for a scientific challenge leaderboard.</desc>
+  <style>
+    .title { font: 700 34px Arial, sans-serif; fill: #162033; }
+    .label { font: 700 14px Arial, sans-serif; fill: #5e6b82; text-transform: uppercase; letter-spacing: .08em; }
+    .value { font: 700 26px Arial, sans-serif; fill: #162033; }
+    .row-title { font: 700 17px Arial, sans-serif; fill: #162033; }
+    .row { font: 500 16px Arial, sans-serif; fill: #33415c; }
+    .status { font-weight: 700; }
+  </style>
+  <rect width="1000" height="520" fill="#f4f7fb"/>
+  <rect x="36" y="34" width="928" height="452" rx="8" fill="#eef3f8" stroke="#d8dee8"/>
+  <text x="56" y="88" class="title">Leaderboard Integrity Guard</text>
+  <text x="56" y="126" class="row">Open Materials Yield Prediction Challenge</text>
+  <g>
+    <rect x="56" y="152" width="196" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="72" y="176" class="label">Decision</text>
+    <text x="72" y="201" class="value" fill="#b42318">blocked</text>
+  </g>
+  <g>
+    <rect x="272" y="152" width="196" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="288" y="176" class="label">Blockers</text>
+    <text x="288" y="201" class="value">4</text>
+  </g>
+  <g>
+    <rect x="488" y="152" width="196" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="504" y="176" class="label">Warnings</text>
+    <text x="504" y="201" class="value">3</text>
+  </g>
+  <g>
+    <rect x="704" y="152" width="240" height="58" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+    <text x="720" y="176" class="label">Payout Hold</text>
+    <text x="720" y="201" class="value">yes</text>
+  </g>
+  <text x="76" y="232" class="label">Team</text>
+  <text x="342" y="232" class="label">Submission</text>
+  <text x="592" y="232" class="label">Score</text>
+  <text x="744" y="232" class="label">Status</text>
+
+      <g>
+        <rect x="56" y="235" width="888" height="44" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="262" class="row-title">team-mendeleev</text>
+        <text x="342" y="262" class="row">sub-valid-001</text>
+        <text x="592" y="262" class="row">0.96</text>
+        <text x="744" y="262" class="row status" fill="#0f7f4f">approved</text>
+      </g>
+      <g>
+        <rect x="56" y="293" width="888" height="44" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="320" class="row-title">team-curie</text>
+        <text x="342" y="320" class="row">sub-review-002</text>
+        <text x="592" y="320" class="row">0.94</text>
+        <text x="744" y="320" class="row status" fill="#a66500">needs_review</text>
+      </g>
+      <g>
+        <rect x="56" y="351" width="888" height="44" rx="6" fill="#ffffff" stroke="#d8dee8"/>
+        <text x="76" y="378" class="row-title">team-feynman</text>
+        <text x="342" y="378" class="row">sub-block-003</text>
+        <text x="592" y="378" class="row">0.992</text>
+        <text x="744" y="378" class="row status" fill="#b42318">blocked</text>
+      </g>
+  <text x="56" y="462" class="row">Audit digest: 20cbfe3b30491d2061ed70b279f85778...</text>
+</svg>

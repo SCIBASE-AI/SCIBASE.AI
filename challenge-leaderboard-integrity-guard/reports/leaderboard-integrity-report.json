@@ -1,0 +1,146 @@
+{
+  "challengeId": "sci-benchmark-alpha",
+  "title": "Open Materials Yield Prediction Challenge",
+  "decision": "blocked",
+  "summary": {
+    "totalSubmissions": 3,
+    "approvedOrReviewable": 2,
+    "blockedSubmissions": 1,
+    "blockers": 4,
+    "warnings": 3
+  },
+  "leaderboard": [
+    {
+      "rank": 1,
+      "submissionId": "sub-valid-001",
+      "teamId": "team-mendeleev",
+      "score": 0.96,
+      "decision": "approved",
+      "tieBreakReady": true
+    },
+    {
+      "rank": 2,
+      "submissionId": "sub-review-002",
+      "teamId": "team-curie",
+      "score": 0.94,
+      "decision": "needs_review",
+      "tieBreakReady": true
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub-valid-001",
+      "teamId": "team-mendeleev",
+      "reportedScore": 0.96,
+      "recomputedScore": 0.96,
+      "decision": "approved",
+      "digest": "a324cd7b47726b2035fa3b6fdf829411a836fcd0cba182adf94036dc7d39d85f"
+    },
+    {
+      "id": "sub-review-002",
+      "teamId": "team-curie",
+      "reportedScore": 0.94,
+      "recomputedScore": 0.94,
+      "decision": "needs_review",
+      "digest": "3ab56bb98d092ec23f4d7819670f2891a5c9d360bf3d09291425ba54225811d7"
+    },
+    {
+      "id": "sub-block-003",
+      "teamId": "team-feynman",
+      "reportedScore": 0.992,
+      "recomputedScore": 0.901,
+      "decision": "blocked",
+      "digest": "16ecec6ef0fba2dd5a523a6db4c321764d1a7327ece019978438c3dee125428c"
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "blocker",
+      "code": "metric_recomputation_mismatch",
+      "message": "Reported score does not match the recomputed score within tolerance.",
+      "evidence": {
+        "submissionId": "sub-block-003",
+        "teamId": "team-feynman",
+        "reported": 0.992,
+        "recomputed": 0.901,
+        "delta": 0.091,
+        "tolerance": 0.00001
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "holdout_access_detected",
+      "message": "Submission team accessed holdout data before final scoring.",
+      "evidence": {
+        "submissionId": "sub-block-003",
+        "teamId": "team-feynman",
+        "holdoutRowsViewed": 125,
+        "holdoutDownloaded": true
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "holdout_leakage_score_high",
+      "message": "Leakage detector score is above the block threshold.",
+      "evidence": {
+        "submissionId": "sub-block-003",
+        "teamId": "team-feynman",
+        "leakageScore": 0.72,
+        "threshold": 0.35
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "benchmark_package_mismatch",
+      "message": "Submission was evaluated against a different benchmark package hash.",
+      "evidence": {
+        "submissionId": "sub-block-003",
+        "teamId": "team-feynman",
+        "expected": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "received": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    }
+  ],
+  "warnings": [
+    {
+      "severity": "warning",
+      "code": "submission_limit_exceeded",
+      "message": "Team has exceeded the configured submission limit.",
+      "evidence": {
+        "submissionId": "sub-review-002",
+        "teamId": "team-curie",
+        "previousSubmissions": 3,
+        "limit": 3
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "resubmission_window_violation",
+      "message": "Team resubmitted before the configured cooldown window elapsed.",
+      "evidence": {
+        "submissionId": "sub-review-002",
+        "teamId": "team-curie",
+        "previousSubmissionId": "sub-history-001",
+        "hoursSincePrevious": 12,
+        "requiredHours": 24
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "audit_trail_missing",
+      "message": "Submission lacks an audit trail for ingestion, evaluation, and publication events.",
+      "evidence": {
+        "submissionId": "sub-review-002",
+        "teamId": "team-curie"
+      }
+    }
+  ],
+  "reviewerTasks": [
+    "Freeze payout and rotate holdout credentials before any winner announcement.",
+    "Re-run the scorer from immutable benchmark artifacts and attach the scorer log to the challenge record.",
+    "Review challenge rules for submission abuse and document whether warnings affect prize eligibility.",
+    "Resolve warning-level findings before moving any submission to sponsor approval."
+  ],
+  "payoutHold": true,
+  "auditDigest": "20cbfe3b30491d2061ed70b279f85778e76a3029ac2e6239ef7749694422cd5d"
+}

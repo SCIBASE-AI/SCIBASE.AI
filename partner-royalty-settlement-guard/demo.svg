@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Partner royalty settlement guard demo summary">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="72" y="64" width="1136" height="592" rx="24" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="108" y="128" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Partner Royalty Settlement Guard</text>
+  <text x="108" y="172" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="22">Revenue Infrastructure slice for data-licensing and white-label analytics payouts</text>
+
+  <g transform="translate(108 230)">
+    <rect width="310" height="150" rx="16" fill="#052e16" stroke="#22c55e"/>
+    <text x="28" y="48" fill="#86efac" font-family="Arial, sans-serif" font-size="20" font-weight="700">READY</text>
+    <text x="28" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">$925.00</text>
+    <text x="28" y="124" fill="#bbf7d0" font-family="Arial, sans-serif" font-size="18">release payout lines</text>
+  </g>
+
+  <g transform="translate(485 230)">
+    <rect width="310" height="150" rx="16" fill="#422006" stroke="#f59e0b"/>
+    <text x="28" y="48" fill="#fbbf24" font-family="Arial, sans-serif" font-size="20" font-weight="700">HELD</text>
+    <text x="28" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">$232.56</text>
+    <text x="28" y="124" fill="#fde68a" font-family="Arial, sans-serif" font-size="18">aggregation floor</text>
+  </g>
+
+  <g transform="translate(862 230)">
+    <rect width="310" height="150" rx="16" fill="#450a0a" stroke="#ef4444"/>
+    <text x="28" y="48" fill="#fca5a5" font-family="Arial, sans-serif" font-size="20" font-weight="700">BLOCKED</text>
+    <text x="28" y="92" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">$640.00</text>
+    <text x="28" y="124" fill="#fecaca" font-family="Arial, sans-serif" font-size="18">duplicate + consent</text>
+  </g>
+
+  <rect x="108" y="430" width="1064" height="126" rx="18" fill="#020617" stroke="#1e293b"/>
+  <text x="140" y="474" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="23" font-weight="700">Audit controls</text>
+  <text x="140" y="512" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="20">duplicate invoice protection - split checks - consent gates - reserve recommendations - stable SHA-256 digest</text>
+  <text x="140" y="606" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Validation: node test.js | node demo.js | ffprobe demo.mp4</text>
+</svg>

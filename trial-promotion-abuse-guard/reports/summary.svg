@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#111827"/>
+  <rect x="44" y="44" width="872" height="452" rx="18" fill="#f8fafc"/>
+  <text x="80" y="108" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Trial Promotion Abuse Guard</text>
+  <text x="80" y="152" font-family="Arial, sans-serif" font-size="18" fill="#475569">Revenue control packet 10e4c417b4549c81</text>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    <text x="90" y="230" fill="#15803d">Approved: 2</text>
+    <text x="90" y="282" fill="#b45309">Held: 4</text>
+    <text x="90" y="334" fill="#b91c1c">Rejected: 1</text>
+    <text x="90" y="386" fill="#0f172a">Leakage prevented: $1310.00</text>
+  </g>
+  <rect x="570" y="190" width="260" height="180" rx="14" fill="#dbeafe"/>
+  <text x="602" y="246" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#1d4ed8">Checks</text>
+  <text x="602" y="286" font-family="Arial, sans-serif" font-size="17" fill="#1e3a8a">Trial reuse</text>
+  <text x="602" y="318" font-family="Arial, sans-serif" font-size="17" fill="#1e3a8a">Coupon stacking</text>
+  <text x="602" y="350" font-family="Arial, sans-serif" font-size="17" fill="#1e3a8a">Consortium eligibility</text>
+</svg>

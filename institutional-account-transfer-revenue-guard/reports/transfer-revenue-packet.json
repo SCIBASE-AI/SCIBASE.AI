@@ -1,0 +1,322 @@
+{
+  "generatedAt": "2026-05-21T13:40:00.000Z",
+  "policy": {
+    "maxOutstandingInvoiceCents": 5000,
+    "maxInvoiceAgeDays": 30,
+    "minCreditExpiryDays": 45,
+    "defaultConsortiumDiscountRate": 0.18
+  },
+  "summary": {
+    "totalTransfers": 4,
+    "approved": 1,
+    "conditional": 1,
+    "held": 2,
+    "netTransferInvoiceCents": 68388,
+    "heldComputeCredits": 9400,
+    "financeActions": 13
+  },
+  "decisions": [
+    {
+      "id": "TR-OK-001",
+      "title": "Lab account transfer to central university tenant",
+      "status": "approve",
+      "sourceOrg": "North Campus Neuro Lab",
+      "targetOrg": "North Example University",
+      "effectiveDate": "2026-05-16",
+      "riskScore": 3.1,
+      "blockers": [],
+      "warnings": [],
+      "adjustments": [],
+      "proration": {
+        "billingPeriodStart": "2026-05-01",
+        "billingPeriodEnd": "2026-05-31",
+        "effectiveDate": "2026-05-16",
+        "periodDays": 31,
+        "remainingDays": 16,
+        "sourceCreditCents": 123871,
+        "targetChargeCents": 154839,
+        "netTransferInvoiceCents": 30968
+      },
+      "entitlementTransfer": {
+        "analyticsLicenseId": "LIC-RESEARCH-17",
+        "requestedAnalyticsScope": "campus-analytics",
+        "transferableComputeCredits": 4200,
+        "heldComputeCredits": 0,
+        "sourceSsoDomain": "north.example.edu",
+        "targetSsoDomain": "north.example.edu"
+      },
+      "financeActions": [
+        {
+          "code": "POST_TRANSFER_PRORATION",
+          "owner": "billing-ops",
+          "message": "Post source credit and target charge for the remaining billing period."
+        }
+      ],
+      "auditDigest": "7dece8bd35f72d43bdbbebab06bda53bcfb05596810ca50e8a0db8ef583fa1d1"
+    },
+    {
+      "id": "TR-HOLD-002",
+      "title": "Transfer from grant lab to commercial spinout",
+      "status": "hold",
+      "sourceOrg": "Genome Grant Lab",
+      "targetOrg": "Genome Spinout Inc",
+      "effectiveDate": "2026-05-20",
+      "riskScore": 178.1,
+      "blockers": [
+        {
+          "code": "OUTSTANDING_INVOICE_HOLD",
+          "severity": "blocker",
+          "message": "Resolve open invoices before transferring revenue ownership.",
+          "detail": {
+            "outstandingCents": 82000,
+            "oldestOpenInvoiceDays": 49,
+            "invoiceIds": [
+              "INV-201"
+            ]
+          }
+        },
+        {
+          "code": "PO_TRANSFER_AUTHORITY_MISSING",
+          "severity": "blocker",
+          "message": "The purchase order does not authorize moving billing ownership.",
+          "detail": {
+            "purchaseOrderId": "PO-2026-44"
+          }
+        },
+        {
+          "code": "SSO_DOMAIN_TRANSFER_UNVERIFIED",
+          "severity": "blocker",
+          "message": "Cross-domain SSO transfer needs verified domain claim and admin signoff.",
+          "detail": {
+            "sourceDomain": "grant.example.edu",
+            "targetDomain": "spinout.example.com",
+            "domainClaimVerified": false,
+            "adminSignoff": false
+          }
+        },
+        {
+          "code": "LICENSE_SCOPE_NOT_TRANSFERABLE",
+          "severity": "blocker",
+          "message": "Analytics license does not allow assignment to the target org.",
+          "detail": {
+            "licenseId": "LIC-GRANT-08"
+          }
+        },
+        {
+          "code": "COMPUTE_CREDIT_NOT_TRANSFERABLE",
+          "severity": "blocker",
+          "message": "Credit grant terms do not allow transfer to the target org.",
+          "detail": {
+            "creditId": "CC-204",
+            "remainingCredits": 3000
+          }
+        }
+      ],
+      "warnings": [],
+      "adjustments": [],
+      "proration": {
+        "billingPeriodStart": "2026-05-01",
+        "billingPeriodEnd": "2026-05-31",
+        "effectiveDate": "2026-05-20",
+        "periodDays": 31,
+        "remainingDays": 12,
+        "sourceCreditCents": 69677,
+        "targetChargeCents": 100645,
+        "netTransferInvoiceCents": 30968
+      },
+      "entitlementTransfer": {
+        "analyticsLicenseId": "LIC-GRANT-08",
+        "requestedAnalyticsScope": "commercial-analytics",
+        "transferableComputeCredits": 0,
+        "heldComputeCredits": 3000,
+        "sourceSsoDomain": "grant.example.edu",
+        "targetSsoDomain": "spinout.example.com"
+      },
+      "financeActions": [
+        {
+          "code": "RESOLVE_OUTSTANDING_INVOICE_HOLD",
+          "owner": "finance-ops",
+          "message": "Resolve open invoices before transferring revenue ownership."
+        },
+        {
+          "code": "RESOLVE_PO_TRANSFER_AUTHORITY_MISSING",
+          "owner": "finance-ops",
+          "message": "The purchase order does not authorize moving billing ownership."
+        },
+        {
+          "code": "RESOLVE_SSO_DOMAIN_TRANSFER_UNVERIFIED",
+          "owner": "finance-ops",
+          "message": "Cross-domain SSO transfer needs verified domain claim and admin signoff."
+        },
+        {
+          "code": "RESOLVE_LICENSE_SCOPE_NOT_TRANSFERABLE",
+          "owner": "finance-ops",
+          "message": "Analytics license does not allow assignment to the target org."
+        },
+        {
+          "code": "RESOLVE_COMPUTE_CREDIT_NOT_TRANSFERABLE",
+          "owner": "finance-ops",
+          "message": "Credit grant terms do not allow transfer to the target org."
+        },
+        {
+          "code": "POST_TRANSFER_PRORATION",
+          "owner": "billing-ops",
+          "message": "Post source credit and target charge for the remaining billing period."
+        }
+      ],
+      "auditDigest": "beb3ad4e3bc4b20088f8eea95bf67297cd1a9ad1ea01bacfad9be07564a083b2"
+    },
+    {
+      "id": "TR-COND-003",
+      "title": "Consortium member transfer with discount reset",
+      "status": "conditional",
+      "sourceOrg": "Eastern Bioinformatics Center",
+      "targetOrg": "Metro Research Hospital",
+      "effectiveDate": "2026-05-22",
+      "riskScore": 28.65,
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "SSO_DOMAIN_CHANGED",
+          "severity": "warning",
+          "message": "Cross-domain transfer is verified, but access migration should be reviewed.",
+          "detail": {
+            "sourceDomain": "east.example.edu",
+            "targetDomain": "metro.example.org"
+          }
+        },
+        {
+          "code": "COMPUTE_CREDIT_EXPIRING_SOON",
+          "severity": "warning",
+          "message": "Credit grant expires soon; finance should confirm whether to transfer or settle it.",
+          "detail": {
+            "creditId": "CC-330",
+            "remainingCredits": 850,
+            "expiresAt": "2026-06-10",
+            "expiryDays": 20
+          }
+        }
+      ],
+      "adjustments": [
+        {
+          "code": "CONSORTIUM_DISCOUNT_REDUCED",
+          "severity": "adjustment",
+          "message": "Transferred account needs discount reset to the target consortium cap.",
+          "detail": {
+            "requestedDiscountRate": 0.25,
+            "allowedDiscountRate": 0.12
+          }
+        }
+      ],
+      "proration": {
+        "billingPeriodStart": "2026-05-01",
+        "billingPeriodEnd": "2026-05-31",
+        "effectiveDate": "2026-05-22",
+        "periodDays": 31,
+        "remainingDays": 10,
+        "sourceCreditCents": 51613,
+        "targetChargeCents": 58065,
+        "netTransferInvoiceCents": 6452
+      },
+      "entitlementTransfer": {
+        "analyticsLicenseId": "LIC-META-77",
+        "requestedAnalyticsScope": "clinical-quality",
+        "transferableComputeCredits": 850,
+        "heldComputeCredits": 0,
+        "sourceSsoDomain": "east.example.edu",
+        "targetSsoDomain": "metro.example.org"
+      },
+      "financeActions": [
+        {
+          "code": "REVIEW_SSO_DOMAIN_CHANGED",
+          "owner": "account-admin",
+          "message": "Cross-domain transfer is verified, but access migration should be reviewed."
+        },
+        {
+          "code": "APPLY_CONSORTIUM_DISCOUNT_REDUCED",
+          "owner": "revenue-ops",
+          "message": "Transferred account needs discount reset to the target consortium cap."
+        },
+        {
+          "code": "REVIEW_COMPUTE_CREDIT_EXPIRING_SOON",
+          "owner": "account-admin",
+          "message": "Credit grant expires soon; finance should confirm whether to transfer or settle it."
+        },
+        {
+          "code": "POST_TRANSFER_PRORATION",
+          "owner": "billing-ops",
+          "message": "Post source credit and target charge for the remaining billing period."
+        }
+      ],
+      "auditDigest": "f69e77a2feb61b628686aa3881ac95a58da100a01ec58826e83ca4f67dba16c6"
+    },
+    {
+      "id": "TR-HOLD-004",
+      "title": "Compute-credit grant ownership mismatch",
+      "status": "hold",
+      "sourceOrg": "Microbiome Methods Lab",
+      "targetOrg": "Shared Core Facility",
+      "effectiveDate": "2026-05-12",
+      "riskScore": 45,
+      "blockers": [
+        {
+          "code": "COMPUTE_CREDIT_OWNERSHIP_MISMATCH",
+          "severity": "blocker",
+          "message": "Compute credits are owned by a funder or external org and cannot move automatically.",
+          "detail": {
+            "creditId": "CC-512",
+            "ownerOrgId": "grant-funder-nih",
+            "remainingCredits": 6400
+          }
+        }
+      ],
+      "warnings": [
+        {
+          "code": "SSO_DOMAIN_CHANGED",
+          "severity": "warning",
+          "message": "Cross-domain transfer is verified, but access migration should be reviewed.",
+          "detail": {
+            "sourceDomain": "micro.example.edu",
+            "targetDomain": "core.example.edu"
+          }
+        }
+      ],
+      "adjustments": [],
+      "proration": {
+        "billingPeriodStart": "2026-05-01",
+        "billingPeriodEnd": "2026-05-31",
+        "effectiveDate": "2026-05-12",
+        "periodDays": 31,
+        "remainingDays": 20,
+        "sourceCreditCents": 96774,
+        "targetChargeCents": 96774,
+        "netTransferInvoiceCents": 0
+      },
+      "entitlementTransfer": {
+        "analyticsLicenseId": "LIC-OPEN-12",
+        "requestedAnalyticsScope": "noncommercial-research",
+        "transferableComputeCredits": 0,
+        "heldComputeCredits": 6400,
+        "sourceSsoDomain": "micro.example.edu",
+        "targetSsoDomain": "core.example.edu"
+      },
+      "financeActions": [
+        {
+          "code": "REVIEW_SSO_DOMAIN_CHANGED",
+          "owner": "account-admin",
+          "message": "Cross-domain transfer is verified, but access migration should be reviewed."
+        },
+        {
+          "code": "RESOLVE_COMPUTE_CREDIT_OWNERSHIP_MISMATCH",
+          "owner": "finance-ops",
+          "message": "Compute credits are owned by a funder or external org and cannot move automatically."
+        }
+      ],
+      "auditDigest": "3d21903d49da5b3c0a4ec0056da032cab7ab9d3ea8285d3f9057b0a24b5f499e"
+    }
+  ],
+  "audit": {
+    "digest": "9ce0c3013f4cd71381f0b359a694a99fff2e7deb6aef91680063c97528bbd848",
+    "source": "synthetic-transfer-revenue-review"
+  }
+}

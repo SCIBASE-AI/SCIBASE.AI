@@ -1,0 +1,127 @@
+{
+  "status": "publish_ready",
+  "blockers": [],
+  "warnings": [],
+  "announcement": {
+    "challengeId": "SCI-BIO-042",
+    "title": "Identify reproducible single-cell biomarker panels",
+    "visibility": "private",
+    "awardAnnouncementAt": "2026-06-29T16:00:00.000Z",
+    "sponsor": "North Bridge Translational Fund",
+    "rankedResults": [
+      {
+        "submissionId": "sub-alpha",
+        "displayName": "Northstar Lab",
+        "institution": "Northstar University",
+        "anonymous": false,
+        "rank": 1,
+        "awardUsd": 650,
+        "weightedScore": 91.85,
+        "rationale": "Best validated marker panel with complete reproducibility package.",
+        "ipTransferRequested": true,
+        "payoutStatus": "queued"
+      },
+      {
+        "submissionId": "sub-beta",
+        "displayName": "Private finalist BETA",
+        "institution": "redacted",
+        "anonymous": true,
+        "rank": 2,
+        "awardUsd": 250,
+        "weightedScore": 84.15,
+        "rationale": "Strong exploratory biology with private solver identity retained.",
+        "ipTransferRequested": false,
+        "payoutStatus": "queued"
+      },
+      {
+        "submissionId": "sub-gamma",
+        "displayName": "Cedar Analytics",
+        "institution": "Cedar Analytics LLC",
+        "anonymous": false,
+        "rank": 3,
+        "awardUsd": 100,
+        "weightedScore": 77.85,
+        "rationale": "Useful honorable mention with a clean result package.",
+        "ipTransferRequested": false,
+        "payoutStatus": "queued"
+      }
+    ],
+    "reviewerDisclosures": [
+      {
+        "reviewerId": "rev-methods",
+        "role": "methods reviewer",
+        "conflictStatus": "none",
+        "disclosureSummary": "No sponsor, solver, or institutional conflicts declared."
+      },
+      {
+        "reviewerId": "rev-clinical",
+        "role": "clinical reviewer",
+        "conflictStatus": "managed",
+        "disclosureSummary": "Former collaborator disclosed; recused from Helix Guild clinical utility score."
+      },
+      {
+        "reviewerId": "rev-repro",
+        "role": "reproducibility reviewer",
+        "conflictStatus": "none",
+        "disclosureSummary": "No conflicts declared."
+      }
+    ],
+    "appeals": {
+      "opensAt": "2026-06-26T16:00:00.000Z",
+      "closesAt": "2026-06-29T20:00:00.000Z",
+      "pendingCount": 0,
+      "policyUrl": "https://scibase.example/policies/challenge-appeals"
+    },
+    "escrow": {
+      "clearedUsd": 1000,
+      "plannedAwardUsd": 1000,
+      "remainingEscrowUsd": 0,
+      "currency": "USD"
+    },
+    "publicArtifacts": [
+      {
+        "id": "artifact-alpha-summary",
+        "submissionId": "sub-alpha",
+        "label": "public winner summary",
+        "redacted": false,
+        "digest": "sha256:alpha-summary"
+      },
+      {
+        "id": "artifact-beta-methods-preview",
+        "submissionId": "sub-beta",
+        "label": "redacted private finalist methods preview",
+        "redacted": true,
+        "digest": "sha256:beta-redacted-preview"
+      }
+    ],
+    "ipPolicy": {
+      "default": "solver_retains_until_paid",
+      "transferTrigger": "authorized_payout"
+    }
+  },
+  "solverNotices": [
+    {
+      "submissionId": "sub-alpha",
+      "sentAt": "2026-06-29T14:00:00.000Z",
+      "channel": "platform_and_email",
+      "includesAppealInstructions": true
+    },
+    {
+      "submissionId": "sub-beta",
+      "sentAt": "2026-06-29T14:05:00.000Z",
+      "channel": "platform_and_email",
+      "includesAppealInstructions": true
+    },
+    {
+      "submissionId": "sub-gamma",
+      "sentAt": "2026-06-29T14:10:00.000Z",
+      "channel": "platform_and_email",
+      "includesAppealInstructions": true
+    }
+  ],
+  "requiredActions": [
+    "publish_award_announcement",
+    "queue_payouts_after_appeal_window"
+  ],
+  "auditDigest": "d64116bbd026c818a105c77ca97084f17bc6a7594ebb8b4f0f1b3a3354a6f1e4"
+}

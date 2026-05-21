@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-05-21T00:00:00.000Z",
+  "userContext": {
+    "institutionId": "north-atlas-university",
+    "intendedUse": "cross_project_reuse",
+    "biosafetyClearanceLevel": 1
+  },
+  "decisions": [
+    {
+      "recommendationId": "rec-safe-open-protocol",
+      "title": "Reuse the public microscopy segmentation protocol",
+      "status": "show",
+      "riskScore": 0,
+      "blockers": [],
+      "warnings": [],
+      "curatorActions": [],
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Recommendation",
+        "identifier": "rec-safe-open-protocol",
+        "name": "Reuse the public microscopy segmentation protocol",
+        "description": "Protocol and dataset are public, non-human, non-animal, and low biosafety risk.",
+        "ethicsReview": {
+          "@type": "Review",
+          "reviewBody": "Visible with current ethics provenance.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "100",
+            "bestRating": "100",
+            "worstRating": "0"
+          }
+        },
+        "about": [
+          {
+            "@type": "Protocol",
+            "identifier": "protocol-micro-001",
+            "name": "Open microscopy segmentation workflow"
+          },
+          {
+            "@type": "Dataset",
+            "identifier": "dataset-cells-public",
+            "name": "Public yeast cell image set"
+          }
+        ]
+      }
+    },
+    {
+      "recommendationId": "rec-human-cohort-transfer",
+      "title": "Connect cohort assay data to an external replication notebook",
+      "status": "hold",
+      "riskScore": 55,
+      "blockers": [
+        {
+          "code": "consent_scope_mismatch",
+          "message": "Consent scope for ev-human-consent does not cover cross_project_reuse."
+        },
+        {
+          "code": "restricted_data_without_dua",
+          "message": "Restricted evidence ev-human-consent requires a data-use agreement before recommendation display."
+        }
+      ],
+      "warnings": [],
+      "curatorActions": [
+        {
+          "recommendationId": "rec-human-cohort-transfer",
+          "action": "review_recommendation_path",
+          "code": "consent_scope_mismatch",
+          "message": "Consent scope for ev-human-consent does not cover cross_project_reuse."
+        },
+        {
+          "recommendationId": "rec-human-cohort-transfer",
+          "action": "review_recommendation_path",
+          "code": "restricted_data_without_dua",
+          "message": "Restricted evidence ev-human-consent requires a data-use agreement before recommendation display."
+        }
+      ],
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Recommendation",
+        "identifier": "rec-human-cohort-transfer",
+        "name": "Connect cohort assay data to an external replication notebook",
+        "description": "The graph finds a strong concept-method match, but reuse expands beyond the consent scope.",
+        "ethicsReview": {
+          "@type": "Review",
+          "reviewBody": "Held until ethics provenance gaps are resolved.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "45",
+            "bestRating": "100",
+            "worstRating": "0"
+          }
+        },
+        "about": [
+          {
+            "@type": "Dataset",
+            "identifier": "dataset-human-cohort",
+            "name": "Longitudinal immune response cohort"
+          },
+          {
+            "@type": "Notebook",
+            "identifier": "notebook-replication",
+            "name": "External immune model replication notebook"
+          }
+        ]
+      }
+    },
+    {
+      "recommendationId": "rec-bsl2-protocol",
+      "title": "Suggest BSL-2 viral vector protocol for wet-lab follow-up",
+      "status": "hold",
+      "riskScore": 48,
+      "blockers": [
+        {
+          "code": "biosafety_clearance_gap",
+          "message": "Evidence ev-bsl2-protocol requires BSL-2, user context has BSL-1."
+        }
+      ],
+      "warnings": [
+        {
+          "code": "dual_use_review",
+          "message": "Evidence ev-bsl2-protocol should be reviewed for dual-use context before broad discovery placement."
+        }
+      ],
+      "curatorActions": [
+        {
+          "recommendationId": "rec-bsl2-protocol",
+          "action": "review_recommendation_path",
+          "code": "biosafety_clearance_gap",
+          "message": "Evidence ev-bsl2-protocol requires BSL-2, user context has BSL-1."
+        },
+        {
+          "recommendationId": "rec-bsl2-protocol",
+          "action": "review_recommendation_path",
+          "code": "dual_use_review",
+          "message": "Evidence ev-bsl2-protocol should be reviewed for dual-use context before broad discovery placement."
+        }
+      ],
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Recommendation",
+        "identifier": "rec-bsl2-protocol",
+        "name": "Suggest BSL-2 viral vector protocol for wet-lab follow-up",
+        "description": "The graph route is scientifically relevant, but the user context lacks the required clearance.",
+        "ethicsReview": {
+          "@type": "Review",
+          "reviewBody": "Held until ethics provenance gaps are resolved.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "52",
+            "bestRating": "100",
+            "worstRating": "0"
+          }
+        },
+        "about": [
+          {
+            "@type": "Protocol",
+            "identifier": "protocol-bsl2-vector",
+            "name": "BSL-2 viral vector transduction protocol"
+          }
+        ]
+      }
+    },
+    {
+      "recommendationId": "rec-animal-study",
+      "title": "Recommend animal-model replication path",
+      "status": "hold",
+      "riskScore": 28,
+      "blockers": [
+        {
+          "code": "missing_animal_protocol",
+          "message": "Animal-study evidence ev-animal-care needs IACUC/animal-care protocol evidence."
+        }
+      ],
+      "warnings": [],
+      "curatorActions": [
+        {
+          "recommendationId": "rec-animal-study",
+          "action": "attach_required_ethics_evidence",
+          "code": "missing_animal_protocol",
+          "message": "Animal-study evidence ev-animal-care needs IACUC/animal-care protocol evidence."
+        }
+      ],
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "Recommendation",
+        "identifier": "rec-animal-study",
+        "name": "Recommend animal-model replication path",
+        "description": "The method is reusable only after animal-care protocol evidence is attached.",
+        "ethicsReview": {
+          "@type": "Review",
+          "reviewBody": "Held until ethics provenance gaps are resolved.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "72",
+            "bestRating": "100",
+            "worstRating": "0"
+          }
+        },
+        "about": [
+          {
+            "@type": "Paper",
+            "identifier": "study-animal-model",
+            "name": "Rodent wound healing replication study"
+          }
+        ]
+      }
+    }
+  ],
+  "audit": {
+    "visible": 1,
+    "held": 3,
+    "curatorActions": 5,
+    "digest": "6fb761f774ad91b10067975ce13ce7aa1210586a9a1e34700978e696e2e09b22"
+  }
+}

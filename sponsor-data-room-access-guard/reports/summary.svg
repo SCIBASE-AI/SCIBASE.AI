@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="64" y="64" width="1152" height="592" rx="24" fill="#f8fafc"/>
+  <text x="104" y="132" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">Sponsor Data-Room Access Guard</text>
+  <text x="104" y="184" font-family="Arial, sans-serif" font-size="24" fill="#475569">Identify robust biomarkers from single-cell RNA-seq data</text>
+  <rect x="104" y="236" width="240" height="96" rx="16" fill="#b91c1c"/>
+  <text x="132" y="296" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">HOLD</text>
+  <text x="104" y="396" font-family="Arial, sans-serif" font-size="28" fill="#111827">Grants reviewed: 4</text>
+  <text x="104" y="450" font-family="Arial, sans-serif" font-size="28" fill="#111827">Blockers: 5</text>
+  <text x="104" y="504" font-family="Arial, sans-serif" font-size="28" fill="#111827">Warnings: 3</text>
+  <text x="104" y="558" font-family="Arial, sans-serif" font-size="28" fill="#111827">Audit events: 6</text>
+  <text x="104" y="618" font-family="Arial, sans-serif" font-size="20" fill="#64748b">Synthetic-data-only local demo. No credentials, tokens, or private data.</text>
+</svg>

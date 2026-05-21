@@ -1,0 +1,139 @@
+{
+  "boardId": "bio-open-science-q2-2026",
+  "title": "Q2 Open Science Champions - Computational Biology",
+  "scope": "domain:computational-biology region:global",
+  "visibility": "public",
+  "asOf": "2026-06-30T00:00:00.000Z",
+  "status": "hold",
+  "publishableRanks": [
+    {
+      "userId": "u-ada",
+      "displayName": "Ada Moreno",
+      "institution": "Northstar University",
+      "redacted": false,
+      "rank": 1,
+      "score": 984,
+      "domain": "computational-biology",
+      "region": "EU",
+      "evidenceTypes": [
+        "bounty_completion",
+        "contribution",
+        "dataset_curation",
+        "peer_review",
+        "reproducibility"
+      ],
+      "acceptedEvidenceCount": 5,
+      "reciprocalEndorsementRatio": 0,
+      "blockers": [],
+      "warnings": [],
+      "eligible": true,
+      "publicRank": 1
+    },
+    {
+      "userId": "u-nora",
+      "displayName": "Private reviewer NORA",
+      "institution": "redacted",
+      "redacted": true,
+      "rank": 2,
+      "score": 932,
+      "domain": "computational-biology",
+      "region": "APAC",
+      "evidenceTypes": [
+        "contribution",
+        "mentorship",
+        "peer_review",
+        "reproducibility"
+      ],
+      "acceptedEvidenceCount": 4,
+      "reciprocalEndorsementRatio": 0,
+      "blockers": [],
+      "warnings": [],
+      "eligible": true,
+      "publicRank": 2
+    },
+    {
+      "userId": "u-lee",
+      "displayName": "Lee Hart",
+      "institution": "Ridge Lab",
+      "redacted": false,
+      "rank": 3,
+      "score": 901,
+      "domain": "computational-biology",
+      "region": "NA",
+      "evidenceTypes": [
+        "bounty_completion",
+        "contribution",
+        "dataset_curation",
+        "peer_review"
+      ],
+      "acceptedEvidenceCount": 4,
+      "reciprocalEndorsementRatio": 0,
+      "blockers": [],
+      "warnings": [],
+      "eligible": true,
+      "publicRank": 3
+    }
+  ],
+  "heldCandidates": [
+    {
+      "userId": "u-mika",
+      "displayName": "Private reviewer MIKA",
+      "institution": "redacted",
+      "redacted": true,
+      "rank": 4,
+      "score": 888,
+      "domain": "computational-biology",
+      "region": "EU",
+      "evidenceTypes": [
+        "contribution",
+        "endorsement",
+        "peer_review"
+      ],
+      "acceptedEvidenceCount": 3,
+      "reciprocalEndorsementRatio": 0.667,
+      "blockers": [
+        "insufficient_accepted_evidence",
+        "pending_reputation_appeal",
+        "reciprocal_endorsement_concentration",
+        "anonymous_review_signal_without_public_consent"
+      ],
+      "warnings": [
+        "stale_reproducibility_badge"
+      ],
+      "eligible": false
+    }
+  ],
+  "institutionShare": 0.333,
+  "blockers": [
+    "u-mika_insufficient_accepted_evidence",
+    "u-mika_pending_reputation_appeal",
+    "u-mika_reciprocal_endorsement_concentration",
+    "u-mika_anonymous_review_signal_without_public_consent"
+  ],
+  "warnings": [
+    "u-mika_stale_reproducibility_badge"
+  ],
+  "reviewerActions": [
+    {
+      "userId": "u-mika",
+      "action": "resolve_insufficient_accepted_evidence",
+      "rankHeld": 4
+    },
+    {
+      "userId": "u-mika",
+      "action": "resolve_pending_reputation_appeal",
+      "rankHeld": 4
+    },
+    {
+      "userId": "u-mika",
+      "action": "resolve_reciprocal_endorsement_concentration",
+      "rankHeld": 4
+    },
+    {
+      "userId": "u-mika",
+      "action": "resolve_anonymous_review_signal_without_public_consent",
+      "rankHeld": 4
+    }
+  ],
+  "auditDigest": "6b1884d26e55b267abfb3aa63a6ce3afa2743a6ee6bea45858e4da45ee1c5d7e"
+}

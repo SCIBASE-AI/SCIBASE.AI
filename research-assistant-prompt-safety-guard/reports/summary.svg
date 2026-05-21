@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Research assistant prompt safety summary">
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="72" y="72" width="1136" height="576" rx="24" fill="#f8fafc"/>
+  <text x="112" y="138" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#111827">Research Assistant Prompt Safety Guard</text>
+  <text x="112" y="188" font-family="Arial, sans-serif" font-size="22" fill="#475569">Hypoxic priming improves neuronal organoid recovery after ischemic stress</text>
+  <rect x="112" y="232" width="260" height="120" rx="18" fill="#b91c1c"/>
+  <text x="142" y="304" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">QUARANTINE</text>
+  <text x="112" y="416" font-family="Arial, sans-serif" font-size="28" fill="#111827">Blockers: 6</text>
+  <text x="112" y="466" font-family="Arial, sans-serif" font-size="28" fill="#111827">Warnings: 1</text>
+  <text x="112" y="516" font-family="Arial, sans-serif" font-size="28" fill="#111827">Assistant findings reviewed: 3</text>
+  <text x="112" y="566" font-family="Arial, sans-serif" font-size="28" fill="#111827">Evidence entries indexed: 6</text>
+  <text x="680" y="304" font-family="Arial, sans-serif" font-size="24" fill="#334155">Quarantines malicious manuscript instructions and unsupported AI-generated review claims before a reviewer packet is shown.</text>
+</svg>

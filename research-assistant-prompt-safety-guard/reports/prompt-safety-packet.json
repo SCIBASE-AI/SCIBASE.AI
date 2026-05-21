@@ -1,0 +1,161 @@
+{
+  "manuscriptId": "ms-neuro-oxygen-2026",
+  "manuscriptTitle": "Hypoxic priming improves neuronal organoid recovery after ischemic stress",
+  "generatedAt": "2026-05-21T10:00:00.000Z",
+  "status": "quarantine_assistant_packet",
+  "summary": {
+    "status": "quarantine_assistant_packet",
+    "blockers": [
+      {
+        "sourceId": "ms-neuro-oxygen-2026",
+        "message": "possible prompt-injection instruction matched ignore-prior",
+        "evidence": "ignore previous instructions",
+        "ruleId": "ignore-prior"
+      },
+      {
+        "sourceId": "supp-hidden-reviewer-note",
+        "message": "possible prompt-injection instruction matched system-prompt",
+        "evidence": "system prompt",
+        "ruleId": "system-prompt"
+      },
+      {
+        "sourceId": "supp-hidden-reviewer-note",
+        "message": "hidden or visually suppressed instruction channel detected",
+        "evidence": "display:none",
+        "ruleId": "hidden-instruction-channel"
+      },
+      {
+        "sourceId": "finding-hallucinated-citation",
+        "message": "unknown evidence anchors: citation-phantom-2025",
+        "ruleId": "unsupported-assistant-output"
+      },
+      {
+        "sourceId": "finding-hallucinated-citation",
+        "message": "acceptance recommendation conflicts with unresolved evidence blockers",
+        "ruleId": "unsupported-assistant-output"
+      },
+      {
+        "sourceId": "finding-no-anchor",
+        "message": "finding has no evidence anchors",
+        "ruleId": "unsupported-assistant-output"
+      }
+    ],
+    "warnings": [
+      {
+        "sourceId": "ms-neuro-oxygen-2026",
+        "message": "possible prompt-injection instruction matched reviewer-coercion",
+        "evidence": "give a positive review",
+        "ruleId": "reviewer-coercion"
+      }
+    ],
+    "actions": [
+      {
+        "sourceId": "ms-neuro-oxygen-2026",
+        "action": "quarantine ms-neuro-oxygen-2026 before assistant processing"
+      },
+      {
+        "sourceId": "ms-neuro-oxygen-2026",
+        "action": "quarantine ms-neuro-oxygen-2026 before assistant processing"
+      },
+      {
+        "sourceId": "supp-hidden-reviewer-note",
+        "action": "quarantine supp-hidden-reviewer-note before assistant processing"
+      },
+      {
+        "sourceId": "supp-hidden-reviewer-note",
+        "action": "quarantine supp-hidden-reviewer-note before assistant processing"
+      },
+      {
+        "sourceId": "finding-hallucinated-citation",
+        "action": "replace hallucinated anchors with verified manuscript, artifact, or citation ids"
+      },
+      {
+        "sourceId": "finding-hallucinated-citation",
+        "action": "suppress accept/reject recommendation until blockers are resolved"
+      },
+      {
+        "sourceId": "finding-no-anchor",
+        "action": "attach at least one claim, artifact, or citation id before this review comment is shown"
+      }
+    ]
+  },
+  "inputFindings": [
+    {
+      "sourceId": "ms-neuro-oxygen-2026",
+      "ruleId": "ignore-prior",
+      "severity": "blocker",
+      "evidence": "ignore previous instructions",
+      "message": "possible prompt-injection instruction matched ignore-prior"
+    },
+    {
+      "sourceId": "ms-neuro-oxygen-2026",
+      "ruleId": "reviewer-coercion",
+      "severity": "warning",
+      "evidence": "give a positive review",
+      "message": "possible prompt-injection instruction matched reviewer-coercion"
+    },
+    {
+      "sourceId": "supp-hidden-reviewer-note",
+      "ruleId": "system-prompt",
+      "severity": "blocker",
+      "evidence": "system prompt",
+      "message": "possible prompt-injection instruction matched system-prompt"
+    },
+    {
+      "sourceId": "supp-hidden-reviewer-note",
+      "ruleId": "hidden-instruction-channel",
+      "severity": "blocker",
+      "evidence": "display:none",
+      "message": "hidden or visually suppressed instruction channel detected"
+    }
+  ],
+  "outputReviews": [
+    {
+      "id": "finding-supported-atp",
+      "title": "Endpoint support is visible for ATP recovery",
+      "severity": "medium",
+      "evidenceIds": [
+        "claim-atp-recovery",
+        "fig-2b",
+        "table-s1"
+      ],
+      "supportScore": 0.33,
+      "blockers": [],
+      "warnings": [],
+      "actions": []
+    },
+    {
+      "id": "finding-hallucinated-citation",
+      "title": "Claims cite a nonexistent clinical trial",
+      "severity": "high",
+      "evidenceIds": [
+        "citation-phantom-2025"
+      ],
+      "supportScore": 0,
+      "blockers": [
+        "unknown evidence anchors: citation-phantom-2025",
+        "acceptance recommendation conflicts with unresolved evidence blockers"
+      ],
+      "warnings": [],
+      "actions": [
+        "replace hallucinated anchors with verified manuscript, artifact, or citation ids",
+        "suppress accept/reject recommendation until blockers are resolved"
+      ]
+    },
+    {
+      "id": "finding-no-anchor",
+      "title": "Mechanism claim needs a source",
+      "severity": "medium",
+      "evidenceIds": [],
+      "supportScore": 0,
+      "blockers": [
+        "finding has no evidence anchors"
+      ],
+      "warnings": [],
+      "actions": [
+        "attach at least one claim, artifact, or citation id before this review comment is shown"
+      ]
+    }
+  ],
+  "evidenceIndexSize": 6
+}

@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-05-21T12:13:50.774Z",
+  "summary": {
+    "accountsEvaluated": 4,
+    "invoiceReadyCount": 1,
+    "holdCount": 2,
+    "monitorCount": 1,
+    "monthlyRecoverableUSD": 190.09,
+    "annualizedRecoverableUSD": 2281.08,
+    "unmeteredLeakageUSD": 15.54,
+    "purgeCandidateGB": 82,
+    "deletionHoldConflicts": 1
+  },
+  "accounts": [
+    {
+      "accountID": "acct-lab-atlas",
+      "institution": "Atlas Neuroscience Lab",
+      "plan": "Lab Pro Annual",
+      "billingPeriod": "2026-05",
+      "decision": "invoice_ready",
+      "reasons": [
+        "345 GB private storage over quota",
+        "95 GB reproducibility artifact storage over quota"
+      ],
+      "usage": {
+        "privateMeteredGB": 2145,
+        "privateBillableGB": 2145,
+        "artifactBillableGB": 515,
+        "licensedCacheBillableGB": 90,
+        "unmeteredExternalBucketGB": 0
+      },
+      "overage": {
+        "privateOverageGB": 345,
+        "artifactOverageGB": 95,
+        "licensedCacheOverageGB": 0
+      },
+      "chargesUSD": {
+        "privateStorage": 72.45,
+        "reproducibilityArtifacts": 13.3,
+        "licensedExportCache": 0,
+        "total": 85.75,
+        "annualizedRunRate": 1029,
+        "unmeteredLeakage": 0
+      },
+      "controls": {
+        "staleArtifacts": [],
+        "deletionHoldConflicts": [],
+        "purgeCandidateGB": 0
+      },
+      "recommendedActions": [
+        "prepare 2026-05 storage overage line item for $85.75"
+      ]
+    },
+    {
+      "accountID": "acct-civic-genomics",
+      "institution": "Civic Genomics Institute",
+      "plan": "Institutional Enterprise",
+      "billingPeriod": "2026-05",
+      "decision": "hold_for_ops_review",
+      "reasons": [
+        "120 GB private storage over quota",
+        "255 GB licensed export cache over quota",
+        "1 deletion request(s) blocked by legal hold"
+      ],
+      "usage": {
+        "privateMeteredGB": 5120,
+        "privateBillableGB": 5120,
+        "artifactBillableGB": 990,
+        "licensedCacheBillableGB": 1055,
+        "unmeteredExternalBucketGB": 0
+      },
+      "overage": {
+        "privateOverageGB": 120,
+        "artifactOverageGB": 0,
+        "licensedCacheOverageGB": 255
+      },
+      "chargesUSD": {
+        "privateStorage": 21.6,
+        "reproducibilityArtifacts": 0,
+        "licensedExportCache": 71.4,
+        "total": 93,
+        "annualizedRunRate": 1116,
+        "unmeteredLeakage": 0
+      },
+      "controls": {
+        "staleArtifacts": [],
+        "deletionHoldConflicts": [
+          "artifact-civic-audit-run-22"
+        ],
+        "purgeCandidateGB": 0
+      },
+      "recommendedActions": [
+        "prepare 2026-05 storage overage line item for $93",
+        "route deletion-hold conflict to compliance owner before changing retention state"
+      ]
+    },
+    {
+      "accountID": "acct-northern-lights",
+      "institution": "Northern Lights BioArchive",
+      "plan": "Lab Pro Monthly",
+      "billingPeriod": "2026-05",
+      "decision": "hold_for_ops_review",
+      "reasons": [
+        "54 GB private storage over quota",
+        "74 GB external bucket usage missing billable meter tags",
+        "1 stale artifact(s) past retention grace"
+      ],
+      "usage": {
+        "privateMeteredGB": 880,
+        "privateBillableGB": 954,
+        "artifactBillableGB": 270,
+        "licensedCacheBillableGB": 65,
+        "unmeteredExternalBucketGB": 74
+      },
+      "overage": {
+        "privateOverageGB": 54,
+        "artifactOverageGB": 0,
+        "licensedCacheOverageGB": 0
+      },
+      "chargesUSD": {
+        "privateStorage": 11.34,
+        "reproducibilityArtifacts": 0,
+        "licensedExportCache": 0,
+        "total": 11.34,
+        "annualizedRunRate": 136.08,
+        "unmeteredLeakage": 15.54
+      },
+      "controls": {
+        "staleArtifacts": [
+          "artifact-northern-repro-001"
+        ],
+        "deletionHoldConflicts": [],
+        "purgeCandidateGB": 82
+      },
+      "recommendedActions": [
+        "attach meter tags to external bucket storage before invoice release",
+        "review or purge 82 GB of stale artifacts"
+      ]
+    },
+    {
+      "accountID": "acct-quantum-field",
+      "institution": "Quantum Field Consortium",
+      "plan": "Consortium Standard",
+      "billingPeriod": "2026-05",
+      "decision": "monitor",
+      "reasons": [],
+      "usage": {
+        "privateMeteredGB": 2150,
+        "privateBillableGB": 2150,
+        "artifactBillableGB": 610,
+        "licensedCacheBillableGB": 210,
+        "unmeteredExternalBucketGB": 0
+      },
+      "overage": {
+        "privateOverageGB": 0,
+        "artifactOverageGB": 0,
+        "licensedCacheOverageGB": 0
+      },
+      "chargesUSD": {
+        "privateStorage": 0,
+        "reproducibilityArtifacts": 0,
+        "licensedExportCache": 0,
+        "total": 0,
+        "annualizedRunRate": 0,
+        "unmeteredLeakage": 0
+      },
+      "controls": {
+        "staleArtifacts": [],
+        "deletionHoldConflicts": [],
+        "purgeCandidateGB": 0
+      },
+      "recommendedActions": [
+        "no billing action required this period"
+      ]
+    }
+  ]
+}

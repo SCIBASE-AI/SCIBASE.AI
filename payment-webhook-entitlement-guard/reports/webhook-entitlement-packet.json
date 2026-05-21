@@ -1,0 +1,177 @@
+{
+  "accountId": "lab-account-north-42",
+  "generatedAt": "2026-05-21T09:20:00.000Z",
+  "status": "hold_entitlement_activation",
+  "summary": {
+    "ordersChecked": 2,
+    "eventsChecked": 4,
+    "existingGrantsChecked": 1,
+    "blockers": 11,
+    "warnings": 0,
+    "activationCandidates": 3,
+    "reversals": 1
+  },
+  "revenuePacket": {
+    "blockers": [
+      {
+        "kind": "duplicate_webhook_event_id",
+        "severity": "blocker",
+        "itemId": "evt-paid-100",
+        "message": "Duplicate webhook event IDs must not grant paid entitlements twice.",
+        "evidence": {
+          "duplicateCount": 2
+        }
+      },
+      {
+        "kind": "out_of_order_webhook_lifecycle",
+        "severity": "blocker",
+        "itemId": "evt-paid-100",
+        "message": "Paid webhook arrived before required lifecycle events.",
+        "evidence": {
+          "missingPrerequisites": [
+            "invoice.finalized"
+          ]
+        }
+      },
+      {
+        "kind": "double_credit_entitlement_grant",
+        "severity": "blocker",
+        "itemId": "evt-paid-100",
+        "message": "Order already has an entitlement grant or paid event.",
+        "evidence": {
+          "priorGrantIds": [
+            "grant-existing-100"
+          ]
+        }
+      },
+      {
+        "kind": "duplicate_webhook_event_id",
+        "severity": "blocker",
+        "itemId": "evt-paid-100",
+        "message": "Duplicate webhook event IDs must not grant paid entitlements twice.",
+        "evidence": {
+          "duplicateCount": 2
+        }
+      },
+      {
+        "kind": "out_of_order_webhook_lifecycle",
+        "severity": "blocker",
+        "itemId": "evt-paid-100",
+        "message": "Paid webhook arrived before required lifecycle events.",
+        "evidence": {
+          "missingPrerequisites": [
+            "invoice.finalized"
+          ]
+        }
+      },
+      {
+        "kind": "double_credit_entitlement_grant",
+        "severity": "blocker",
+        "itemId": "evt-paid-100",
+        "message": "Order already has an entitlement grant or paid event.",
+        "evidence": {
+          "priorGrantIds": [
+            "grant-existing-100"
+          ],
+          "priorEventId": "evt-paid-100"
+        }
+      },
+      {
+        "kind": "amount_or_currency_mismatch",
+        "severity": "blocker",
+        "itemId": "evt-paid-200",
+        "message": "Paid webhook amount/currency does not match the order.",
+        "evidence": {
+          "eventAmount": 490000,
+          "orderAmount": 500000,
+          "eventCurrency": "USD",
+          "orderCurrency": "USD"
+        }
+      },
+      {
+        "kind": "out_of_order_webhook_lifecycle",
+        "severity": "blocker",
+        "itemId": "evt-paid-200",
+        "message": "Paid webhook arrived before required lifecycle events.",
+        "evidence": {
+          "missingPrerequisites": [
+            "invoice.approved"
+          ]
+        }
+      },
+      {
+        "kind": "invalid_webhook_signature",
+        "severity": "blocker",
+        "itemId": "evt-refund-200",
+        "message": "Webhook signature failed verification.",
+        "evidence": {}
+      },
+      {
+        "kind": "stale_webhook_signature",
+        "severity": "blocker",
+        "itemId": "evt-refund-200",
+        "message": "Webhook signature is outside the accepted replay window.",
+        "evidence": {
+          "signatureAgeMinutes": 42,
+          "maxSignatureAgeMinutes": 10
+        }
+      },
+      {
+        "kind": "payment_reversal_requires_entitlement_hold",
+        "severity": "blocker",
+        "itemId": "evt-refund-200",
+        "message": "Refund, dispute, or reversal event requires entitlement hold/reconciliation.",
+        "evidence": {
+          "type": "refund.succeeded"
+        }
+      }
+    ],
+    "warnings": [],
+    "activationPlan": [],
+    "blockedActivationPlan": [
+      {
+        "eventId": "evt-paid-100",
+        "orderId": "order-ai-topup-100",
+        "accountId": "lab-account-north-42",
+        "grant": {
+          "plan": "lab-pro",
+          "aiComputeCredits": 250000,
+          "seats": 12
+        },
+        "ready": true
+      },
+      {
+        "eventId": "evt-paid-100",
+        "orderId": "order-ai-topup-100",
+        "accountId": "lab-account-north-42",
+        "grant": {
+          "plan": "lab-pro",
+          "aiComputeCredits": 250000,
+          "seats": 12
+        },
+        "ready": true
+      },
+      {
+        "eventId": "evt-paid-200",
+        "orderId": "order-institution-200",
+        "accountId": "university-enterprise-7",
+        "grant": {
+          "plan": "institutional",
+          "aiComputeCredits": 1400000,
+          "seats": 80
+        },
+        "ready": true
+      }
+    ],
+    "reversals": [
+      {
+        "eventId": "evt-refund-200",
+        "orderId": "order-institution-200",
+        "accountId": "university-enterprise-7",
+        "action": "hold_or_reverse_entitlements",
+        "reason": "refund.succeeded"
+      }
+    ],
+    "recommendation": "Hold activation, reconcile webhooks, and do not grant paid features or AI compute credits."
+  }
+}

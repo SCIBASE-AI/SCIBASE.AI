@@ -1,0 +1,248 @@
+{
+  "generatedAt": "2026-05-21T14:05:00.000Z",
+  "policy": {
+    "targetPower": 0.8,
+    "minPowerCoverageRatio": 0.9,
+    "minDetectableEffectCoverage": 0.75,
+    "maxUndisclosedTests": 8,
+    "alphaByFamily": {
+      "0.05": 1.96,
+      "0.01": 2.58
+    },
+    "zPowerByTarget": {
+      "0.8": 0.84,
+      "0.9": 1.28
+    }
+  },
+  "summary": {
+    "totalClaims": 4,
+    "passed": 1,
+    "revise": 2,
+    "held": 1,
+    "reviewerActions": 11
+  },
+  "decisions": [
+    {
+      "id": "SP-OK-001",
+      "title": "Expected cytokine reduction in randomized pilot cohort",
+      "domain": "molecular-biology",
+      "status": "pass",
+      "manuscriptClaim": "The study is sufficiently powered to detect a moderate cytokine response.",
+      "powerAssessment": {
+        "outcomeType": "continuous",
+        "sampleSizePerGroup": 96,
+        "requiredPerGroup": 41,
+        "coverageRatio": 2.341,
+        "targetPower": 0.8,
+        "alpha": 0.05,
+        "plannedComparisons": 4
+      },
+      "findings": [],
+      "reviewerActions": [
+        {
+          "code": "KEEP_POWER_CLAIM",
+          "owner": "author",
+          "message": "Keep the current power claim with the existing methods disclosure."
+        }
+      ],
+      "auditDigest": "6165acfe2dc281edc3e80032b838c0a27dc29387f53372636c0a6e01df5c9c3b"
+    },
+    {
+      "id": "SP-REV-002",
+      "title": "Behavioral intervention claim with thin recruitment",
+      "domain": "clinical-trials",
+      "status": "revise",
+      "manuscriptClaim": "The intervention is powered for clinically meaningful effects across all behavioral endpoints.",
+      "powerAssessment": {
+        "outcomeType": "continuous",
+        "sampleSizePerGroup": 80,
+        "requiredPerGroup": 128,
+        "coverageRatio": 0.625,
+        "targetPower": 0.8,
+        "alpha": 0.05,
+        "plannedComparisons": 12
+      },
+      "findings": [
+        {
+          "code": "UNDERPOWERED_CLAIM",
+          "severity": "warning",
+          "message": "Claimed effect is not supported by the available sample size.",
+          "detail": {
+            "sampleSizePerGroup": 80,
+            "requiredPerGroup": 128,
+            "coverageRatio": 0.625
+          }
+        },
+        {
+          "code": "MULTIPLE_TESTING_PLAN_MISSING",
+          "severity": "warning",
+          "message": "Large comparison set needs an explicit multiplicity correction plan.",
+          "detail": {
+            "plannedComparisons": 12
+          }
+        },
+        {
+          "code": "OUTCOME_NOT_PREREGISTERED",
+          "severity": "warning",
+          "message": "Primary outcome is not declared in the preregistration metadata.",
+          "detail": {}
+        },
+        {
+          "code": "ANALYSIS_PLAN_NOT_DECLARED",
+          "severity": "warning",
+          "message": "Analysis plan is missing from preregistration metadata.",
+          "detail": {}
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "SOFTEN_OR_REPOWER_CLAIM",
+          "owner": "author",
+          "message": "Revise the claim, increase sample size, or report it as exploratory."
+        },
+        {
+          "code": "ADD_MULTIPLICITY_PLAN",
+          "owner": "statistics-reviewer",
+          "message": "Add correction strategy or clearly label exploratory endpoints."
+        },
+        {
+          "code": "ADDRESS_OUTCOME_NOT_PREREGISTERED",
+          "owner": "author",
+          "message": "Primary outcome is not declared in the preregistration metadata."
+        },
+        {
+          "code": "ADDRESS_ANALYSIS_PLAN_NOT_DECLARED",
+          "owner": "author",
+          "message": "Analysis plan is missing from preregistration metadata."
+        }
+      ],
+      "auditDigest": "8c1ca640efe6f00af92b66996fd8c76464e02882e07b19767a7fd3e25409e2f8"
+    },
+    {
+      "id": "SP-HOLD-003",
+      "title": "Rare adverse event safety claim",
+      "domain": "clinical-safety",
+      "status": "hold",
+      "manuscriptClaim": "The study rules out rare adverse-event differences between arms.",
+      "powerAssessment": {
+        "outcomeType": "binary",
+        "sampleSizePerGroup": 60,
+        "requiredPerGroup": 3414,
+        "coverageRatio": 0.018,
+        "targetPower": 0.9,
+        "alpha": 0.05,
+        "plannedComparisons": 3
+      },
+      "findings": [
+        {
+          "code": "UNDERPOWERED_CLAIM",
+          "severity": "blocker",
+          "message": "Claimed effect is not supported by the available sample size.",
+          "detail": {
+            "sampleSizePerGroup": 60,
+            "requiredPerGroup": 3414,
+            "coverageRatio": 0.018
+          }
+        },
+        {
+          "code": "PREREGISTRATION_MISSING",
+          "severity": "blocker",
+          "message": "Power-sensitive confirmatory claim lacks preregistration evidence.",
+          "detail": {}
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "SOFTEN_OR_REPOWER_CLAIM",
+          "owner": "author",
+          "message": "Revise the claim, increase sample size, or report it as exploratory."
+        },
+        {
+          "code": "ADD_PREREGISTRATION_LIMITATION",
+          "owner": "author",
+          "message": "Add preregistration status and limitation text before submission."
+        }
+      ],
+      "auditDigest": "6e717ea90218666bd51cd517810d75ab036a309c0d210f7e00105c0265bdae90"
+    },
+    {
+      "id": "SP-REV-004",
+      "title": "Exploratory single-cell pathway screen",
+      "domain": "single-cell-rna-seq",
+      "status": "revise",
+      "manuscriptClaim": "The pathway screen identifies robust differential signals across all declared modules.",
+      "powerAssessment": {
+        "outcomeType": "continuous",
+        "sampleSizePerGroup": 90,
+        "requiredPerGroup": 170,
+        "coverageRatio": 0.529,
+        "targetPower": 0.8,
+        "alpha": 0.01,
+        "plannedComparisons": 84
+      },
+      "findings": [
+        {
+          "code": "UNDERPOWERED_CLAIM",
+          "severity": "warning",
+          "message": "Claimed effect is not supported by the available sample size.",
+          "detail": {
+            "sampleSizePerGroup": 90,
+            "requiredPerGroup": 170,
+            "coverageRatio": 0.529
+          }
+        },
+        {
+          "code": "EFFECT_SIZE_TOO_SMALL_FOR_DESIGN",
+          "severity": "warning",
+          "message": "Expected effect is below the design's detectable effect threshold.",
+          "detail": {
+            "expectedEffectSize": 0.52,
+            "minimumDetectableEffect": 0.714,
+            "effectCoverage": 0.729
+          }
+        },
+        {
+          "code": "MULTIPLE_TESTING_PLAN_MISSING",
+          "severity": "warning",
+          "message": "Large comparison set needs an explicit multiplicity correction plan.",
+          "detail": {
+            "plannedComparisons": 84
+          }
+        },
+        {
+          "code": "ANALYSIS_PLAN_NOT_DECLARED",
+          "severity": "warning",
+          "message": "Analysis plan is missing from preregistration metadata.",
+          "detail": {}
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "SOFTEN_OR_REPOWER_CLAIM",
+          "owner": "author",
+          "message": "Revise the claim, increase sample size, or report it as exploratory."
+        },
+        {
+          "code": "ADDRESS_EFFECT_SIZE_TOO_SMALL_FOR_DESIGN",
+          "owner": "author",
+          "message": "Expected effect is below the design's detectable effect threshold."
+        },
+        {
+          "code": "ADD_MULTIPLICITY_PLAN",
+          "owner": "statistics-reviewer",
+          "message": "Add correction strategy or clearly label exploratory endpoints."
+        },
+        {
+          "code": "ADDRESS_ANALYSIS_PLAN_NOT_DECLARED",
+          "owner": "author",
+          "message": "Analysis plan is missing from preregistration metadata."
+        }
+      ],
+      "auditDigest": "24dfd0a5f0a81235e6afa28ee6c7062e4a4542a0e6d5c04bd5fcd62595c080ff"
+    }
+  ],
+  "audit": {
+    "source": "synthetic-study-power-feasibility-review",
+    "digest": "7f58b7da5b188969bb899994be5950262cd7672cccf806638b9f2241c070889a"
+  }
+}

@@ -1,0 +1,98 @@
+const reviewPolicy = {
+  targetPower: 0.8,
+  minPowerCoverageRatio: 0.9,
+  minDetectableEffectCoverage: 0.75,
+  maxUndisclosedTests: 8,
+  alphaByFamily: {
+    "0.05": 1.96,
+    "0.01": 2.58,
+  },
+  zPowerByTarget: {
+    "0.8": 0.84,
+    "0.9": 1.28,
+  },
+}
+
+const studyClaims = [
+  {
+    id: "SP-OK-001",
+    title: "Expected cytokine reduction in randomized pilot cohort",
+    domain: "molecular-biology",
+    outcomeType: "continuous",
+    groups: 2,
+    sampleSizePerGroup: 96,
+    expectedEffectSize: 0.62,
+    observedStandardDeviation: 1.0,
+    alpha: 0.05,
+    targetPower: 0.8,
+    plannedComparisons: 4,
+    preregistration: {
+      present: true,
+      outcomeDeclared: true,
+      analysisPlanDeclared: true,
+    },
+    manuscriptClaim: "The study is sufficiently powered to detect a moderate cytokine response.",
+  },
+  {
+    id: "SP-REV-002",
+    title: "Behavioral intervention claim with thin recruitment",
+    domain: "clinical-trials",
+    outcomeType: "continuous",
+    groups: 2,
+    sampleSizePerGroup: 80,
+    expectedEffectSize: 0.35,
+    observedStandardDeviation: 1.0,
+    alpha: 0.05,
+    targetPower: 0.8,
+    plannedComparisons: 12,
+    preregistration: {
+      present: true,
+      outcomeDeclared: false,
+      analysisPlanDeclared: false,
+    },
+    manuscriptClaim: "The intervention is powered for clinically meaningful effects across all behavioral endpoints.",
+  },
+  {
+    id: "SP-HOLD-003",
+    title: "Rare adverse event safety claim",
+    domain: "clinical-safety",
+    outcomeType: "binary",
+    groups: 2,
+    sampleSizePerGroup: 60,
+    baselineRate: 0.03,
+    expectedRate: 0.018,
+    alpha: 0.05,
+    targetPower: 0.9,
+    plannedComparisons: 3,
+    preregistration: {
+      present: false,
+      outcomeDeclared: false,
+      analysisPlanDeclared: false,
+    },
+    manuscriptClaim: "The study rules out rare adverse-event differences between arms.",
+  },
+  {
+    id: "SP-REV-004",
+    title: "Exploratory single-cell pathway screen",
+    domain: "single-cell-rna-seq",
+    outcomeType: "continuous",
+    groups: 2,
+    sampleSizePerGroup: 90,
+    expectedEffectSize: 0.52,
+    observedStandardDeviation: 1.4,
+    alpha: 0.01,
+    targetPower: 0.8,
+    plannedComparisons: 84,
+    preregistration: {
+      present: true,
+      outcomeDeclared: true,
+      analysisPlanDeclared: false,
+    },
+    manuscriptClaim: "The pathway screen identifies robust differential signals across all declared modules.",
+  },
+]
+
+module.exports = {
+  reviewPolicy,
+  studyClaims,
+}

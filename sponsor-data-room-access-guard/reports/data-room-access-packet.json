@@ -1,0 +1,293 @@
+{
+  "challengeId": "bio-marker-scrna-2026",
+  "challengeTitle": "Identify robust biomarkers from single-cell RNA-seq data",
+  "generatedAt": "2026-05-21T09:00:00.000Z",
+  "status": "hold_data_room",
+  "summary": {
+    "status": "hold_data_room",
+    "grantCount": 4,
+    "blockers": [
+      {
+        "grantId": "grant-solver-team-021",
+        "message": "missing required fields: ndaAcceptedAt"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "message": "prequalification is pending"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "message": "NDA acceptance is missing"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "message": "grant is expired"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "message": "non-sponsor grant has write access"
+      }
+    ],
+    "warnings": [
+      {
+        "grantId": "grant-solver-team-014",
+        "message": "grant expires in 19 hours"
+      },
+      {
+        "grantId": "grant-reviewer-003",
+        "message": "grant unused for 96 hours"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "message": "grant unused for 72 hours"
+      }
+    ],
+    "actions": [
+      {
+        "grantId": "grant-solver-team-014",
+        "action": "notify solver-team-014 and sponsor owner before grant grant-solver-team-014 expires"
+      },
+      {
+        "grantId": "grant-reviewer-003",
+        "action": "rotate or revoke stale access grant grant-reviewer-003"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "action": "complete grant metadata for grant-solver-team-021"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "action": "finish prequalification for solver-team-021"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "action": "collect NDA acceptance before granting solver-team-021 access"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "action": "revoke or renew expired grant grant-solver-team-021"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "action": "downgrade grant-solver-team-021 to read-only until arbitration approves write access"
+      },
+      {
+        "grantId": "grant-solver-team-021",
+        "action": "rotate or revoke stale access grant grant-solver-team-021"
+      }
+    ],
+    "auditEvents": [
+      {
+        "type": "stale_access_review",
+        "grantId": "grant-reviewer-003",
+        "holderId": "external-reviewer-003",
+        "holderRole": "reviewer",
+        "artifactId": "analysis-notebook-template",
+        "artifactClass": "notebook",
+        "details": {
+          "idleHours": 96
+        }
+      },
+      {
+        "type": "prequalification_hold",
+        "grantId": "grant-solver-team-021",
+        "holderId": "solver-team-021",
+        "holderRole": "solver",
+        "artifactId": "sponsor-protocol-v2",
+        "artifactClass": "protocol",
+        "details": {
+          "status": "pending"
+        }
+      },
+      {
+        "type": "nda_hold",
+        "grantId": "grant-solver-team-021",
+        "holderId": "solver-team-021",
+        "holderRole": "solver",
+        "artifactId": "sponsor-protocol-v2",
+        "artifactClass": "protocol",
+        "details": {}
+      },
+      {
+        "type": "revocation_required",
+        "grantId": "grant-solver-team-021",
+        "holderId": "solver-team-021",
+        "holderRole": "solver",
+        "artifactId": "sponsor-protocol-v2",
+        "artifactClass": "protocol",
+        "details": {
+          "reason": "expired",
+          "expiredHoursAgo": 48
+        }
+      },
+      {
+        "type": "least_privilege_violation",
+        "grantId": "grant-solver-team-021",
+        "holderId": "solver-team-021",
+        "holderRole": "solver",
+        "artifactId": "sponsor-protocol-v2",
+        "artifactClass": "protocol",
+        "details": {
+          "currentScope": "write",
+          "requiredScope": "read"
+        }
+      },
+      {
+        "type": "stale_access_review",
+        "grantId": "grant-solver-team-021",
+        "holderId": "solver-team-021",
+        "holderRole": "solver",
+        "artifactId": "sponsor-protocol-v2",
+        "artifactClass": "protocol",
+        "details": {
+          "idleHours": 72
+        }
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "grantId": "grant-sponsor-owner-001",
+      "holderId": "sponsor-data-owner",
+      "holderRole": "sponsor",
+      "artifactId": "raw-count-matrix-v3",
+      "artifactClass": "dataset",
+      "scope": "write",
+      "expiresInHours": 192,
+      "blockers": [],
+      "warnings": [],
+      "actions": [],
+      "auditEvents": []
+    },
+    {
+      "grantId": "grant-solver-team-014",
+      "holderId": "solver-team-014",
+      "holderRole": "solver",
+      "artifactId": "raw-count-matrix-v3",
+      "artifactClass": "dataset",
+      "scope": "read",
+      "expiresInHours": 19,
+      "blockers": [],
+      "warnings": [
+        "grant expires in 19 hours"
+      ],
+      "actions": [
+        "notify solver-team-014 and sponsor owner before grant grant-solver-team-014 expires"
+      ],
+      "auditEvents": []
+    },
+    {
+      "grantId": "grant-reviewer-003",
+      "holderId": "external-reviewer-003",
+      "holderRole": "reviewer",
+      "artifactId": "analysis-notebook-template",
+      "artifactClass": "notebook",
+      "scope": "read",
+      "expiresInHours": 72,
+      "blockers": [],
+      "warnings": [
+        "grant unused for 96 hours"
+      ],
+      "actions": [
+        "rotate or revoke stale access grant grant-reviewer-003"
+      ],
+      "auditEvents": [
+        {
+          "type": "stale_access_review",
+          "grantId": "grant-reviewer-003",
+          "holderId": "external-reviewer-003",
+          "holderRole": "reviewer",
+          "artifactId": "analysis-notebook-template",
+          "artifactClass": "notebook",
+          "details": {
+            "idleHours": 96
+          }
+        }
+      ]
+    },
+    {
+      "grantId": "grant-solver-team-021",
+      "holderId": "solver-team-021",
+      "holderRole": "solver",
+      "artifactId": "sponsor-protocol-v2",
+      "artifactClass": "protocol",
+      "scope": "write",
+      "expiresInHours": -48,
+      "blockers": [
+        "missing required fields: ndaAcceptedAt",
+        "prequalification is pending",
+        "NDA acceptance is missing",
+        "grant is expired",
+        "non-sponsor grant has write access"
+      ],
+      "warnings": [
+        "grant unused for 72 hours"
+      ],
+      "actions": [
+        "complete grant metadata for grant-solver-team-021",
+        "finish prequalification for solver-team-021",
+        "collect NDA acceptance before granting solver-team-021 access",
+        "revoke or renew expired grant grant-solver-team-021",
+        "downgrade grant-solver-team-021 to read-only until arbitration approves write access",
+        "rotate or revoke stale access grant grant-solver-team-021"
+      ],
+      "auditEvents": [
+        {
+          "type": "prequalification_hold",
+          "grantId": "grant-solver-team-021",
+          "holderId": "solver-team-021",
+          "holderRole": "solver",
+          "artifactId": "sponsor-protocol-v2",
+          "artifactClass": "protocol",
+          "details": {
+            "status": "pending"
+          }
+        },
+        {
+          "type": "nda_hold",
+          "grantId": "grant-solver-team-021",
+          "holderId": "solver-team-021",
+          "holderRole": "solver",
+          "artifactId": "sponsor-protocol-v2",
+          "artifactClass": "protocol",
+          "details": {}
+        },
+        {
+          "type": "revocation_required",
+          "grantId": "grant-solver-team-021",
+          "holderId": "solver-team-021",
+          "holderRole": "solver",
+          "artifactId": "sponsor-protocol-v2",
+          "artifactClass": "protocol",
+          "details": {
+            "reason": "expired",
+            "expiredHoursAgo": 48
+          }
+        },
+        {
+          "type": "least_privilege_violation",
+          "grantId": "grant-solver-team-021",
+          "holderId": "solver-team-021",
+          "holderRole": "solver",
+          "artifactId": "sponsor-protocol-v2",
+          "artifactClass": "protocol",
+          "details": {
+            "currentScope": "write",
+            "requiredScope": "read"
+          }
+        },
+        {
+          "type": "stale_access_review",
+          "grantId": "grant-solver-team-021",
+          "holderId": "solver-team-021",
+          "holderRole": "solver",
+          "artifactId": "sponsor-protocol-v2",
+          "artifactClass": "protocol",
+          "details": {
+            "idleHours": 72
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f7fafc"/>
+  <rect x="48" y="44" width="1184" height="632" rx="16" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="72" y="104" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#101828">Payment Webhook Entitlement Guard</text>
+  <text x="72" y="143" font-family="Arial, sans-serif" font-size="22" fill="#475467">Revenue activation packet for lab-account-north-42</text>
+  <rect x="855" y="82" width="330" height="48" rx="10" fill="#b42318"/>
+  <text x="875" y="114" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">hold_entitlement_activation</text>
+  <g font-family="Arial, sans-serif">
+        <text x="72" y="188" font-size="21" fill="#18202f">Orders</text>
+        <rect x="220" y="165" width="560" height="28" rx="6" fill="#edf2f7"/>
+        <rect x="220" y="165" width="95" height="28" rx="6" fill="#2563eb"/>
+        <text x="802" y="187" font-size="21" fill="#18202f">2</text>
+      
+        <text x="72" y="236" font-size="21" fill="#18202f">Events</text>
+        <rect x="220" y="213" width="560" height="28" rx="6" fill="#edf2f7"/>
+        <rect x="220" y="213" width="189" height="28" rx="6" fill="#0f766e"/>
+        <text x="802" y="235" font-size="21" fill="#18202f">4</text>
+      
+        <text x="72" y="284" font-size="21" fill="#18202f">Blockers</text>
+        <rect x="220" y="261" width="560" height="28" rx="6" fill="#edf2f7"/>
+        <rect x="220" y="261" width="520" height="28" rx="6" fill="#b42318"/>
+        <text x="802" y="283" font-size="21" fill="#18202f">11</text>
+      
+        <text x="72" y="332" font-size="21" fill="#18202f">Warnings</text>
+        <rect x="220" y="309" width="560" height="28" rx="6" fill="#edf2f7"/>
+        <rect x="220" y="309" width="8" height="28" rx="6" fill="#b26b00"/>
+        <text x="802" y="331" font-size="21" fill="#18202f">0</text>
+      
+        <text x="72" y="380" font-size="21" fill="#18202f">Candidates</text>
+        <rect x="220" y="357" width="560" height="28" rx="6" fill="#edf2f7"/>
+        <rect x="220" y="357" width="142" height="28" rx="6" fill="#7c3aed"/>
+        <text x="802" y="379" font-size="21" fill="#18202f">3</text>
+      
+        <text x="72" y="428" font-size="21" fill="#18202f">Reversals</text>
+        <rect x="220" y="405" width="560" height="28" rx="6" fill="#edf2f7"/>
+        <rect x="220" y="405" width="47" height="28" rx="6" fill="#475467"/>
+        <text x="802" y="427" font-size="21" fill="#18202f">1</text>
+      </g>
+  <text x="72" y="510" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#101828">Finance decision</text>
+  <text x="72" y="550" font-family="Arial, sans-serif" font-size="22" fill="#344054">Hold activation, reconcile webhooks, and do not grant paid features or AI compute credits.</text>
+  <text x="72" y="620" font-family="Arial, sans-serif" font-size="18" fill="#667085">Synthetic data only. No live payment credentials. Deterministic local demo.</text>
+</svg>

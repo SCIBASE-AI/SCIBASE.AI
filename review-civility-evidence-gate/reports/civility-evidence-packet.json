@@ -1,0 +1,250 @@
+{
+  "projectId": "scibase-neuro-open-review-42",
+  "generatedAt": "2026-05-21T09:00:00.000Z",
+  "status": "hold_review_publication",
+  "summary": {
+    "reviewsChecked": 3,
+    "commentsChecked": 3,
+    "blockers": 4,
+    "warnings": 1,
+    "redactions": 2,
+    "withheldItems": 3
+  },
+  "moderationPacket": {
+    "blockers": [
+      {
+        "kind": "harassment_or_personal_attack",
+        "severity": "blocker",
+        "itemId": "review-toxic-001",
+        "message": "Review contains language that should be held before publication.",
+        "evidence": {
+          "terms": [
+            "fraud",
+            "fake scientist",
+            "career is over"
+          ]
+        }
+      },
+      {
+        "kind": "unsupported_reputation_damaging_score",
+        "severity": "blocker",
+        "itemId": "review-toxic-001",
+        "message": "Low structured scores must cite evidence before affecting public reputation.",
+        "evidence": {
+          "scores": [
+            {
+              "name": "rigor",
+              "value": 1
+            },
+            {
+              "name": "reproducibility",
+              "value": 1
+            }
+          ]
+        }
+      },
+      {
+        "kind": "anonymous_reviewer_identity_leak",
+        "severity": "blocker",
+        "itemId": "review-blind-leak-002",
+        "message": "Anonymous review text appears to reveal reviewer identity.",
+        "evidence": {
+          "hints": [
+            "Prof. Elena Moor",
+            "Lakeview Institute"
+          ]
+        }
+      },
+      {
+        "kind": "protected_identity_disclosure",
+        "severity": "blocker",
+        "itemId": "comment-private-001",
+        "message": "Inline comment may expose personal or protected identity information.",
+        "evidence": {
+          "terms": [
+            "personal email",
+            "visa status"
+          ]
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "kind": "missing_inline_anchor",
+        "severity": "warning",
+        "itemId": "comment-anchor-002",
+        "message": "Inline comments need an artifact anchor for project timelines.",
+        "evidence": {}
+      }
+    ],
+    "redactions": [
+      {
+        "itemId": "review-blind-leak-002",
+        "terms": [
+          "Prof. Elena Moor",
+          "Lakeview Institute"
+        ]
+      },
+      {
+        "itemId": "comment-private-001",
+        "terms": [
+          "personal email",
+          "visa status"
+        ]
+      }
+    ],
+    "withheldItems": [
+      "review-toxic-001",
+      "review-blind-leak-002",
+      "comment-private-001"
+    ],
+    "recommendation": "Hold publication and prevent reputation impact until moderator review."
+  },
+  "decisions": [
+    {
+      "id": "review-toxic-001",
+      "type": "review",
+      "mode": "public",
+      "evidenceAnchored": false,
+      "issues": [
+        {
+          "kind": "harassment_or_personal_attack",
+          "severity": "blocker",
+          "itemId": "review-toxic-001",
+          "message": "Review contains language that should be held before publication.",
+          "evidence": {
+            "terms": [
+              "fraud",
+              "fake scientist",
+              "career is over"
+            ]
+          }
+        },
+        {
+          "kind": "unsupported_reputation_damaging_score",
+          "severity": "blocker",
+          "itemId": "review-toxic-001",
+          "message": "Low structured scores must cite evidence before affecting public reputation.",
+          "evidence": {
+            "scores": [
+              {
+                "name": "rigor",
+                "value": 1
+              },
+              {
+                "name": "reproducibility",
+                "value": 1
+              }
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "redactions": [],
+      "allowProfileImpact": false
+    },
+    {
+      "id": "review-blind-leak-002",
+      "type": "review",
+      "mode": "double_blind",
+      "evidenceAnchored": true,
+      "issues": [
+        {
+          "kind": "anonymous_reviewer_identity_leak",
+          "severity": "blocker",
+          "itemId": "review-blind-leak-002",
+          "message": "Anonymous review text appears to reveal reviewer identity.",
+          "evidence": {
+            "hints": [
+              "Prof. Elena Moor",
+              "Lakeview Institute"
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "redactions": [
+        {
+          "itemId": "review-blind-leak-002",
+          "terms": [
+            "Prof. Elena Moor",
+            "Lakeview Institute"
+          ]
+        }
+      ],
+      "allowProfileImpact": false
+    },
+    {
+      "id": "review-clean-003",
+      "type": "review",
+      "mode": "semi_private",
+      "evidenceAnchored": true,
+      "issues": [],
+      "warnings": [],
+      "redactions": [],
+      "allowProfileImpact": true
+    },
+    {
+      "id": "comment-private-001",
+      "type": "comment",
+      "anchor": {
+        "artifactId": "dataset-cleaning-log",
+        "line": 88
+      },
+      "issues": [
+        {
+          "kind": "protected_identity_disclosure",
+          "severity": "blocker",
+          "itemId": "comment-private-001",
+          "message": "Inline comment may expose personal or protected identity information.",
+          "evidence": {
+            "terms": [
+              "personal email",
+              "visa status"
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "redactions": [
+        {
+          "itemId": "comment-private-001",
+          "terms": [
+            "personal email",
+            "visa status"
+          ]
+        }
+      ],
+      "allowTimelinePublication": false
+    },
+    {
+      "id": "comment-anchor-002",
+      "type": "comment",
+      "anchor": null,
+      "issues": [],
+      "warnings": [
+        {
+          "kind": "missing_inline_anchor",
+          "severity": "warning",
+          "itemId": "comment-anchor-002",
+          "message": "Inline comments need an artifact anchor for project timelines.",
+          "evidence": {}
+        }
+      ],
+      "redactions": [],
+      "allowTimelinePublication": true
+    },
+    {
+      "id": "comment-clean-003",
+      "type": "comment",
+      "anchor": {
+        "artifactId": "analysis-notebook",
+        "cell": "C12"
+      },
+      "issues": [],
+      "warnings": [],
+      "redactions": [],
+      "allowTimelinePublication": true
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "room": {
+    "id": "room-editor-12",
+    "title": "Manuscript v2 collaborative editing room"
+  },
+  "status": "hold",
+  "blockedBroadcasts": 5,
+  "warningBroadcasts": 0,
+  "safeBroadcasts": 0,
+  "blockers": [
+    "u-viewer_u-owner_viewer_lacks_section_access",
+    "u-viewer_u-owner_locked_sensitive_section_cursor",
+    "u-viewer_u-reviewer_viewer_lacks_section_access",
+    "u-viewer_u-reviewer_anonymous_identity_leak",
+    "u-viewer_u-collab_viewer_lacks_section_access",
+    "u-viewer_u-collab_locked_sensitive_section_cursor",
+    "u-collab_u-owner_viewer_lacks_section_access",
+    "u-collab_u-owner_locked_sensitive_section_cursor",
+    "u-collab_u-reviewer_viewer_lacks_section_access",
+    "u-collab_u-reviewer_anonymous_identity_leak"
+  ],
+  "warnings": [
+    "u-viewer_u-collab_stale_presence"
+  ],
+  "reviewerActions": [
+    "u-viewer_u-owner_suppress_cursor_location_for_viewer",
+    "u-viewer_u-owner_redact_locked_section_cursor_anchor",
+    "u-viewer_u-reviewer_suppress_cursor_location_for_viewer",
+    "u-viewer_u-reviewer_replace_display_name_with_alias",
+    "u-viewer_u-collab_expire_stale_presence_session",
+    "u-viewer_u-collab_suppress_cursor_location_for_viewer",
+    "u-viewer_u-collab_redact_locked_section_cursor_anchor",
+    "u-collab_u-owner_suppress_cursor_location_for_viewer",
+    "u-collab_u-owner_redact_locked_section_cursor_anchor",
+    "u-collab_u-reviewer_suppress_cursor_location_for_viewer",
+    "u-collab_u-reviewer_replace_display_name_with_alias"
+  ],
+  "evaluations": [
+    {
+      "userId": "u-owner",
+      "displayName": "Ada Moreno",
+      "originalDisplayName": "Ada Moreno",
+      "viewerId": "u-viewer",
+      "status": "blocked",
+      "sanitizedLocation": {
+        "visible": false,
+        "sectionId": "",
+        "sectionTitle": "Restricted section",
+        "cursorAnchor": "",
+        "reason": "viewer_lacks_section_access"
+      },
+      "blockers": [
+        "viewer_lacks_section_access",
+        "locked_sensitive_section_cursor"
+      ],
+      "warnings": [],
+      "actions": [
+        "suppress_cursor_location_for_viewer",
+        "redact_locked_section_cursor_anchor"
+      ]
+    },
+    {
+      "userId": "u-reviewer",
+      "displayName": "Anonymous reviewer A",
+      "originalDisplayName": "Dr. Hidden Reviewer",
+      "viewerId": "u-viewer",
+      "status": "blocked",
+      "sanitizedLocation": {
+        "visible": false,
+        "sectionId": "",
+        "sectionTitle": "Restricted section",
+        "cursorAnchor": "",
+        "reason": "viewer_lacks_section_access"
+      },
+      "blockers": [
+        "viewer_lacks_section_access",
+        "anonymous_identity_leak"
+      ],
+      "warnings": [],
+      "actions": [
+        "suppress_cursor_location_for_viewer",
+        "replace_display_name_with_alias"
+      ]
+    },
+    {
+      "userId": "u-collab",
+      "displayName": "Lee Hart",
+      "originalDisplayName": "Lee Hart",
+      "viewerId": "u-viewer",
+      "status": "blocked",
+      "sanitizedLocation": {
+        "visible": false,
+        "sectionId": "",
+        "sectionTitle": "Restricted section",
+        "cursorAnchor": "",
+        "reason": "viewer_lacks_section_access"
+      },
+      "blockers": [
+        "viewer_lacks_section_access",
+        "locked_sensitive_section_cursor"
+      ],
+      "warnings": [
+        "stale_presence"
+      ],
+      "actions": [
+        "expire_stale_presence_session",
+        "suppress_cursor_location_for_viewer",
+        "redact_locked_section_cursor_anchor"
+      ]
+    },
+    {
+      "userId": "u-owner",
+      "displayName": "Ada Moreno",
+      "originalDisplayName": "Ada Moreno",
+      "viewerId": "u-collab",
+      "status": "blocked",
+      "sanitizedLocation": {
+        "visible": false,
+        "sectionId": "",
+        "sectionTitle": "Restricted section",
+        "cursorAnchor": "",
+        "reason": "viewer_lacks_section_access"
+      },
+      "blockers": [
+        "viewer_lacks_section_access",
+        "locked_sensitive_section_cursor"
+      ],
+      "warnings": [],
+      "actions": [
+        "suppress_cursor_location_for_viewer",
+        "redact_locked_section_cursor_anchor"
+      ]
+    },
+    {
+      "userId": "u-reviewer",
+      "displayName": "Anonymous reviewer A",
+      "originalDisplayName": "Dr. Hidden Reviewer",
+      "viewerId": "u-collab",
+      "status": "blocked",
+      "sanitizedLocation": {
+        "visible": false,
+        "sectionId": "",
+        "sectionTitle": "Restricted section",
+        "cursorAnchor": "",
+        "reason": "viewer_lacks_section_access"
+      },
+      "blockers": [
+        "viewer_lacks_section_access",
+        "anonymous_identity_leak"
+      ],
+      "warnings": [],
+      "actions": [
+        "suppress_cursor_location_for_viewer",
+        "replace_display_name_with_alias"
+      ]
+    }
+  ],
+  "sanitizedSnapshots": [
+    {
+      "viewerId": "u-viewer",
+      "entries": [
+        {
+          "userId": "u-owner",
+          "displayName": "Ada Moreno",
+          "status": "blocked",
+          "location": {
+            "visible": false,
+            "sectionId": "",
+            "sectionTitle": "Restricted section",
+            "cursorAnchor": "",
+            "reason": "viewer_lacks_section_access"
+          }
+        },
+        {
+          "userId": "u-reviewer",
+          "displayName": "Anonymous reviewer A",
+          "status": "blocked",
+          "location": {
+            "visible": false,
+            "sectionId": "",
+            "sectionTitle": "Restricted section",
+            "cursorAnchor": "",
+            "reason": "viewer_lacks_section_access"
+          }
+        },
+        {
+          "userId": "u-collab",
+          "displayName": "Lee Hart",
+          "status": "blocked",
+          "location": {
+            "visible": false,
+            "sectionId": "",
+            "sectionTitle": "Restricted section",
+            "cursorAnchor": "",
+            "reason": "viewer_lacks_section_access"
+          }
+        }
+      ]
+    },
+    {
+      "viewerId": "u-collab",
+      "entries": [
+        {
+          "userId": "u-owner",
+          "displayName": "Ada Moreno",
+          "status": "blocked",
+          "location": {
+            "visible": false,
+            "sectionId": "",
+            "sectionTitle": "Restricted section",
+            "cursorAnchor": "",
+            "reason": "viewer_lacks_section_access"
+          }
+        },
+        {
+          "userId": "u-reviewer",
+          "displayName": "Anonymous reviewer A",
+          "status": "blocked",
+          "location": {
+            "visible": false,
+            "sectionId": "",
+            "sectionTitle": "Restricted section",
+            "cursorAnchor": "",
+            "reason": "viewer_lacks_section_access"
+          }
+        }
+      ]
+    }
+  ],
+  "auditDigest": "0295bdd6cf55dba2613a9b3b27c3ec85dd597c30da2e64a0784fe5b938d0d978"
+}

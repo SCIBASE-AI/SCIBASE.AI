@@ -1,0 +1,283 @@
+{
+  "generatedAt": "2026-05-21T14:45:00.000Z",
+  "policy": {
+    "maxTokenAgeAfterTerminationHours": 2,
+    "maxSeatGraceHours": 24,
+    "protectedRoles": [
+      "org-admin",
+      "billing-admin",
+      "export-admin",
+      "publication-owner"
+    ],
+    "exportSystems": [
+      "DSpace",
+      "Invenio",
+      "Zenodo",
+      "PubMed Central"
+    ]
+  },
+  "summary": {
+    "totalIdentities": 4,
+    "clear": 1,
+    "review": 1,
+    "revoke": 2,
+    "adminActions": 12,
+    "activeTokensAtRisk": 3
+  },
+  "decisions": [
+    {
+      "id": "USR-OK-001",
+      "email": "active.researcher@example.edu",
+      "status": "clear",
+      "hrisStatus": "active",
+      "scimActive": true,
+      "protectedRoles": [],
+      "activeTokens": [
+        "tok-active-1"
+      ],
+      "activeExportConnectors": [],
+      "findings": [],
+      "adminActions": [
+        {
+          "code": "NO_DEPROVISIONING_ACTION",
+          "owner": "enterprise-admin",
+          "message": "Identity is aligned with HRIS and SCIM state."
+        }
+      ],
+      "auditDigest": "a644ae0d2bdd261061797f7735943cd603e3e03ecacd5d1ba127c1ee42e54aa7"
+    },
+    {
+      "id": "USR-REVOKE-002",
+      "email": "departed.admin@example.edu",
+      "status": "revoke",
+      "hrisStatus": "terminated",
+      "scimActive": false,
+      "protectedRoles": [
+        "org-admin",
+        "export-admin"
+      ],
+      "activeTokens": [
+        "tok-admin-9"
+      ],
+      "activeExportConnectors": [
+        "exp-zenodo-4"
+      ],
+      "findings": [
+        {
+          "code": "PROTECTED_ROLE_NOT_REVOKED",
+          "severity": "blocker",
+          "message": "Leaver still has protected enterprise roles.",
+          "detail": {
+            "roles": [
+              "org-admin",
+              "export-admin"
+            ]
+          }
+        },
+        {
+          "code": "ACTIVE_API_TOKEN_AFTER_TERMINATION",
+          "severity": "blocker",
+          "message": "Active API tokens remain past the termination grace window.",
+          "detail": {
+            "tokenIds": [
+              "tok-admin-9"
+            ],
+            "hoursSinceTermination": 8.8
+          }
+        },
+        {
+          "code": "EXPORT_CONNECTOR_OWNER_REVIEW",
+          "severity": "blocker",
+          "message": "External export connector ownership needs reassignment or approval.",
+          "detail": {
+            "connectors": [
+              {
+                "id": "exp-zenodo-4",
+                "system": "Zenodo"
+              }
+            ]
+          }
+        },
+        {
+          "code": "COMPUTE_QUOTA_REASSIGNMENT_NEEDED",
+          "severity": "blocker",
+          "message": "Active compute quota must be reclaimed or moved to a new accountable owner.",
+          "detail": {
+            "remainingHours": 180
+          }
+        },
+        {
+          "code": "PUBLICATION_OWNER_TRANSFER_NEEDED",
+          "severity": "warning",
+          "message": "Pending publications need a replacement accountable owner before export.",
+          "detail": {
+            "publicationIds": [
+              "PUB-77"
+            ]
+          }
+        }
+      ],
+      "adminActions": [
+        {
+          "code": "REMOVE_PROTECTED_ROLES",
+          "owner": "enterprise-admin",
+          "message": "Remove protected enterprise roles or transfer them to an approved owner."
+        },
+        {
+          "code": "REVOKE_API_TOKENS",
+          "owner": "security-admin",
+          "message": "Revoke active API tokens tied to the leaver account."
+        },
+        {
+          "code": "TRANSFER_EXPORT_CONNECTOR_OWNER",
+          "owner": "integration-admin",
+          "message": "Assign export connector ownership to an active accountable owner."
+        },
+        {
+          "code": "RECLAIM_COMPUTE_QUOTA",
+          "owner": "finance-ops",
+          "message": "Reclaim or reassign compute quota before further usage."
+        },
+        {
+          "code": "TRANSFER_PUBLICATION_OWNER",
+          "owner": "research-office",
+          "message": "Assign replacement owner for pending publication exports."
+        }
+      ],
+      "auditDigest": "c85083d04b614b592dfd77a2a30e481818aba87f9b55211b1a53e412eff57d7c"
+    },
+    {
+      "id": "USR-REVIEW-003",
+      "email": "visiting.scholar@example.edu",
+      "status": "revoke",
+      "hrisStatus": "contract-ended",
+      "scimActive": true,
+      "protectedRoles": [
+        "publication-owner"
+      ],
+      "activeTokens": [],
+      "activeExportConnectors": [],
+      "findings": [
+        {
+          "code": "SCIM_ACCOUNT_STILL_ACTIVE",
+          "severity": "blocker",
+          "message": "SCIM account remains active after HRIS leaver event.",
+          "detail": {
+            "hrisStatus": "contract-ended",
+            "hoursSinceEvent": 20.8
+          }
+        },
+        {
+          "code": "PROTECTED_ROLE_NOT_REVOKED",
+          "severity": "blocker",
+          "message": "Leaver still has protected enterprise roles.",
+          "detail": {
+            "roles": [
+              "publication-owner"
+            ]
+          }
+        },
+        {
+          "code": "PUBLICATION_OWNER_TRANSFER_NEEDED",
+          "severity": "warning",
+          "message": "Pending publications need a replacement accountable owner before export.",
+          "detail": {
+            "publicationIds": [
+              "PUB-91"
+            ]
+          }
+        }
+      ],
+      "adminActions": [
+        {
+          "code": "DISABLE_SCIM_ACCOUNT",
+          "owner": "identity-admin",
+          "message": "Disable the SCIM account and sync downstream roles."
+        },
+        {
+          "code": "REMOVE_PROTECTED_ROLES",
+          "owner": "enterprise-admin",
+          "message": "Remove protected enterprise roles or transfer them to an approved owner."
+        },
+        {
+          "code": "TRANSFER_PUBLICATION_OWNER",
+          "owner": "research-office",
+          "message": "Assign replacement owner for pending publication exports."
+        }
+      ],
+      "auditDigest": "722a1355cd1c4eeb2bbe5af51c9c5832e64dae024e27096f6667a5fd0d3ff17c"
+    },
+    {
+      "id": "USR-RECLAIM-004",
+      "email": "transferred.pi@example.edu",
+      "status": "review",
+      "hrisStatus": "department-transfer",
+      "scimActive": true,
+      "protectedRoles": [
+        "billing-admin"
+      ],
+      "activeTokens": [
+        "tok-pi-3"
+      ],
+      "activeExportConnectors": [
+        "exp-dspace-2"
+      ],
+      "findings": [
+        {
+          "code": "EXPORT_CONNECTOR_OWNER_REVIEW",
+          "severity": "warning",
+          "message": "External export connector ownership needs reassignment or approval.",
+          "detail": {
+            "connectors": [
+              {
+                "id": "exp-dspace-2",
+                "system": "DSpace"
+              }
+            ]
+          }
+        },
+        {
+          "code": "COMPUTE_QUOTA_REASSIGNMENT_NEEDED",
+          "severity": "warning",
+          "message": "Active compute quota must be reclaimed or moved to a new accountable owner.",
+          "detail": {
+            "remainingHours": 75
+          }
+        },
+        {
+          "code": "TRANSFER_PROTECTED_ROLE_REVIEW",
+          "severity": "warning",
+          "message": "Department transfer should review elevated enterprise roles.",
+          "detail": {
+            "roles": [
+              "billing-admin"
+            ],
+            "department": "Physics"
+          }
+        }
+      ],
+      "adminActions": [
+        {
+          "code": "TRANSFER_EXPORT_CONNECTOR_OWNER",
+          "owner": "integration-admin",
+          "message": "Assign export connector ownership to an active accountable owner."
+        },
+        {
+          "code": "RECLAIM_COMPUTE_QUOTA",
+          "owner": "finance-ops",
+          "message": "Reclaim or reassign compute quota before further usage."
+        },
+        {
+          "code": "ADDRESS_TRANSFER_PROTECTED_ROLE_REVIEW",
+          "owner": "enterprise-admin",
+          "message": "Department transfer should review elevated enterprise roles."
+        }
+      ],
+      "auditDigest": "2dba2522918fbfa407fce1466a9620beb625594f1a49f158c0230cb8de01502e"
+    }
+  ],
+  "audit": {
+    "source": "synthetic-enterprise-scim-deprovisioning-review",
+    "digest": "7f833ceb0c632024edc5186016ec5b327b5a6e3c5a735ef15f806390f04746e1"
+  }
+}

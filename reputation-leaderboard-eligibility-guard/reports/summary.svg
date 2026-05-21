@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="48" width="1184" height="624" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="72" y="128" class="title">Reputation Leaderboard Eligibility Guard</text>
+  <text x="72" y="184" class="subtitle">Q2 Open Science Champions - Computational Biology</text>
+  <rect x="72" y="216" width="300" height="52" rx="12" fill="#b42318"/>
+  <text x="94" y="250" class="status">hold</text>
+  <text x="420" y="250" class="metric">Eligible: 3  Held: 1</text>
+  <text x="72" y="304" class="row">#1 Ada Moreno - 984 pts</text>
+  <text x="72" y="352" class="row">#2 Private reviewer NORA - 932 pts</text>
+  <text x="72" y="400" class="row">#3 Lee Hart - 901 pts</text>
+  <text x="72" y="560" class="metric">Institution share 0.333; blockers 4</text>
+  <text x="72" y="612" class="digest">Audit 6b1884d26e55b267abfb3aa63a6ce3af</text>
+  <style>
+    .title { font: 700 42px Arial, sans-serif; fill: #0f172a; }
+    .subtitle { font: 400 24px Arial, sans-serif; fill: #475569; }
+    .status { font: 700 26px Arial, sans-serif; fill: white; text-transform: uppercase; }
+    .metric { font: 600 24px Arial, sans-serif; fill: #334155; }
+    .row { font: 500 26px Arial, sans-serif; fill: #1e293b; }
+    .digest { font: 400 20px monospace; fill: #64748b; }
+  </style>
+</svg>

@@ -1,0 +1,229 @@
+{
+  "generatedAt": "2026-05-21T14:25:00.000Z",
+  "policy": {
+    "freezeWindowHours": 48,
+    "minHoldoutHashLength": 16,
+    "allowedReleaseChannels": [
+      "scoring-service",
+      "sealed-evaluator"
+    ],
+    "publicChannels": [
+      "public-baseline",
+      "documentation",
+      "discussion-thread"
+    ]
+  },
+  "summary": {
+    "totalChallenges": 4,
+    "score": 1,
+    "review": 1,
+    "quarantine": 2,
+    "scoringActions": 11
+  },
+  "decisions": [
+    {
+      "id": "CH-SAFE-001",
+      "title": "Protein stability private holdout scoring",
+      "status": "score",
+      "holdoutArtifacts": 1,
+      "releaseEvents": 1,
+      "solverWorkspaceGrants": 1,
+      "publicBaselines": 1,
+      "submissions": 1,
+      "findings": [],
+      "scoringActions": [
+        {
+          "code": "RELEASE_TO_SCORING",
+          "owner": "scoring-admin",
+          "message": "Proceed with sealed evaluator scoring."
+        }
+      ],
+      "auditDigest": "db3398dc5bbe2a1fa4442274984e4fe7822f939e6c5302683486243143ff830e"
+    },
+    {
+      "id": "CH-LEAK-002",
+      "title": "Climate forecast benchmark with accidental public release",
+      "status": "quarantine",
+      "holdoutArtifacts": 1,
+      "releaseEvents": 2,
+      "solverWorkspaceGrants": 1,
+      "publicBaselines": 1,
+      "submissions": 1,
+      "findings": [
+        {
+          "code": "HOLDOUT_RELEASED_TO_PUBLIC_CHANNEL",
+          "severity": "blocker",
+          "message": "Holdout artifact was released through a non-scoring channel.",
+          "detail": {
+            "artifactId": "HOLD-CF-7",
+            "channel": "documentation",
+            "at": "2026-06-03T14:00:00Z",
+            "actor": "sponsor-editor"
+          }
+        },
+        {
+          "code": "HOLDOUT_RELEASED_BEFORE_DEADLINE",
+          "severity": "blocker",
+          "message": "Holdout release happened before the submission deadline.",
+          "detail": {
+            "artifactId": "HOLD-CF-7",
+            "channel": "documentation",
+            "at": "2026-06-03T14:00:00Z",
+            "submissionDeadline": "2026-06-05T23:59:00Z"
+          }
+        },
+        {
+          "code": "SOLVER_WORKSPACE_HOLDOUT_GRANT",
+          "severity": "blocker",
+          "message": "Solver workspace received holdout paths before the deadline.",
+          "detail": {
+            "solverId": "team-beta",
+            "leakedPaths": [
+              "sealed/climate/region-7-holdout.parquet"
+            ],
+            "grantedAt": "2026-06-02T08:00:00Z"
+          }
+        },
+        {
+          "code": "PUBLIC_BASELINE_HASH_OVERLAP",
+          "severity": "blocker",
+          "message": "A public baseline artifact matches the sealed holdout hash.",
+          "detail": {
+            "baselineId": "BASE-CF-2",
+            "channel": "public-baseline",
+            "hash": "ff00aa7711cc884422dd"
+          }
+        },
+        {
+          "code": "UNAPPROVED_SPONSOR_EXCEPTION",
+          "severity": "warning",
+          "message": "Sponsor exception was logged but not approved before scoring.",
+          "detail": {
+            "exceptionId": "EXC-44",
+            "artifactId": "HOLD-CF-7",
+            "reason": "Sponsor preview request after freeze"
+          }
+        },
+        {
+          "code": "SUBMISSION_CONTAINS_HOLDOUT_HASH",
+          "severity": "blocker",
+          "message": "Submission package contains an artifact hash matching the sealed holdout.",
+          "detail": {
+            "solverId": "team-beta",
+            "submittedAt": "2026-06-05T22:30:00Z",
+            "overlappingHashes": [
+              "ff00aa7711cc884422dd"
+            ]
+          }
+        }
+      ],
+      "scoringActions": [
+        {
+          "code": "QUARANTINE_HOLDOUT_RELEASED_TO_PUBLIC_CHANNEL",
+          "owner": "challenge-ops",
+          "message": "Holdout artifact was released through a non-scoring channel."
+        },
+        {
+          "code": "QUARANTINE_HOLDOUT_RELEASED_BEFORE_DEADLINE",
+          "owner": "challenge-ops",
+          "message": "Holdout release happened before the submission deadline."
+        },
+        {
+          "code": "QUARANTINE_SOLVER_WORKSPACE_HOLDOUT_GRANT",
+          "owner": "challenge-ops",
+          "message": "Solver workspace received holdout paths before the deadline."
+        },
+        {
+          "code": "QUARANTINE_PUBLIC_BASELINE_HASH_OVERLAP",
+          "owner": "challenge-ops",
+          "message": "A public baseline artifact matches the sealed holdout hash."
+        },
+        {
+          "code": "REVIEW_UNAPPROVED_SPONSOR_EXCEPTION",
+          "owner": "sponsor-reviewer",
+          "message": "Sponsor exception was logged but not approved before scoring."
+        },
+        {
+          "code": "QUARANTINE_SUBMISSION_CONTAINS_HOLDOUT_HASH",
+          "owner": "challenge-ops",
+          "message": "Submission package contains an artifact hash matching the sealed holdout."
+        },
+        {
+          "code": "FREEZE_LEADERBOARD",
+          "owner": "challenge-ops",
+          "message": "Freeze leaderboard publication until leakage review is resolved."
+        }
+      ],
+      "auditDigest": "b888af59d5efac733046439117172c204d9d596cb7cb10ea0794b0ed293dda70"
+    },
+    {
+      "id": "CH-REVIEW-003",
+      "title": "Materials challenge with late sponsor exception",
+      "status": "review",
+      "holdoutArtifacts": 1,
+      "releaseEvents": 1,
+      "solverWorkspaceGrants": 1,
+      "publicBaselines": 1,
+      "submissions": 1,
+      "findings": [
+        {
+          "code": "LATE_SPONSOR_EXCEPTION_REVIEW",
+          "severity": "warning",
+          "message": "Approved sponsor exception landed inside the benchmark freeze window.",
+          "detail": {
+            "exceptionId": "EXC-80",
+            "artifactId": "HOLD-MAT-3",
+            "approvedAt": "2026-06-30T18:00:00Z",
+            "freezeWindowHours": 48
+          }
+        }
+      ],
+      "scoringActions": [
+        {
+          "code": "REVIEW_LATE_SPONSOR_EXCEPTION_REVIEW",
+          "owner": "sponsor-reviewer",
+          "message": "Approved sponsor exception landed inside the benchmark freeze window."
+        }
+      ],
+      "auditDigest": "8d06de6a09c1c7703b7d7467031f5fa9fb75a8562fec7dbd973da040e7762c08"
+    },
+    {
+      "id": "CH-HOLD-004",
+      "title": "Chemistry optimization challenge missing holdout hash",
+      "status": "quarantine",
+      "holdoutArtifacts": 1,
+      "releaseEvents": 1,
+      "solverWorkspaceGrants": 0,
+      "publicBaselines": 0,
+      "submissions": 0,
+      "findings": [
+        {
+          "code": "HOLDOUT_HASH_MISSING",
+          "severity": "blocker",
+          "message": "Holdout artifact needs a stable hash before scoring can start.",
+          "detail": {
+            "artifactId": "HOLD-CHEM-9",
+            "path": "sealed/chemistry/holdout.sdf"
+          }
+        }
+      ],
+      "scoringActions": [
+        {
+          "code": "QUARANTINE_HOLDOUT_HASH_MISSING",
+          "owner": "challenge-ops",
+          "message": "Holdout artifact needs a stable hash before scoring can start."
+        },
+        {
+          "code": "FREEZE_LEADERBOARD",
+          "owner": "challenge-ops",
+          "message": "Freeze leaderboard publication until leakage review is resolved."
+        }
+      ],
+      "auditDigest": "c72d2b706f728e9eae2e3e78183c65a2722a4b6e446614095d797b8de1ce62ba"
+    }
+  ],
+  "audit": {
+    "source": "synthetic-challenge-benchmark-leakage-review",
+    "digest": "9c448b358c70c46e32658642098d06c1a80886a70b95771c253ad9185f563723"
+  }
+}

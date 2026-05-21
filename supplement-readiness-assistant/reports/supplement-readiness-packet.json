@@ -1,0 +1,225 @@
+{
+  "manuscript": {
+    "id": "ms-supp-042",
+    "title": "Adaptive single-cell perturbation screens reveal durable stress programs",
+    "domain": "computational biology"
+  },
+  "supplementPackage": {
+    "id": "supp-v3-review",
+    "version": "3.0-review",
+    "accessMode": "public"
+  },
+  "status": "hold",
+  "readinessScore": 88,
+  "coverage": {
+    "claimsTotal": 3,
+    "claimsReady": 1,
+    "claimsBlocked": 2,
+    "artifactsTotal": 6,
+    "artifactsPassing": 0,
+    "missingRequiredKinds": []
+  },
+  "blockers": [
+    "claim-main-effect_rerun_prerequisites_incomplete",
+    "claim-appendix_rerun_prerequisites_incomplete",
+    "dataset-counts_checksum_mismatch",
+    "code-analysis_missing_license",
+    "notebook-main_notebook_not_rerunnable",
+    "supplement-table-s4_missing_path",
+    "supplement-table-s4_missing_checksum",
+    "raw-screening-notes_human_data_not_deidentified"
+  ],
+  "warnings": [
+    "claim-appendix_figure_appendix_support_not_linked",
+    "dataset-counts_stale_checksum",
+    "protocol-stimulation_protocol_version_missing",
+    "raw-screening-notes_orphan_artifact"
+  ],
+  "reviewerActions": [
+    "claim-main-effect_connect_dataset_code_and_rerunnable_notebook",
+    "claim-appendix_connect_dataset_code_and_rerunnable_notebook",
+    "claim-appendix_link_figure_or_table_appendix_support",
+    "dataset-counts_regenerate_or_correct_checksum",
+    "dataset-counts_refresh_checksum",
+    "code-analysis_add_license_metadata",
+    "notebook-main_provide_rerun_environment",
+    "protocol-stimulation_add_protocol_version",
+    "supplement-table-s4_add_artifact_path",
+    "supplement-table-s4_add_checksum",
+    "raw-screening-notes_redact_or_restrict_human_data",
+    "raw-screening-notes_link_artifact_to_claim"
+  ],
+  "claimResults": [
+    {
+      "id": "claim-main-effect",
+      "text": "The adaptive perturbation arm increased durable stress-program detection by 18 percent.",
+      "type": "statistical",
+      "status": "block",
+      "requiredArtifacts": [
+        "dataset-counts",
+        "code-analysis",
+        "notebook-main"
+      ],
+      "missingArtifacts": [],
+      "linkedArtifacts": [
+        "dataset-counts",
+        "code-analysis",
+        "notebook-main"
+      ],
+      "blockers": [
+        "rerun_prerequisites_incomplete"
+      ],
+      "warnings": [],
+      "actions": [
+        "connect_dataset_code_and_rerunnable_notebook"
+      ]
+    },
+    {
+      "id": "claim-protocol",
+      "text": "Cells were processed with the public v2.1 stimulation protocol.",
+      "type": "method",
+      "status": "pass",
+      "requiredArtifacts": [
+        "protocol-stimulation"
+      ],
+      "missingArtifacts": [],
+      "linkedArtifacts": [
+        "protocol-stimulation"
+      ],
+      "blockers": [],
+      "warnings": [],
+      "actions": []
+    },
+    {
+      "id": "claim-appendix",
+      "text": "Supplementary table S4 supports the exclusion analysis shown in Figure 4.",
+      "type": "figure",
+      "status": "block",
+      "requiredArtifacts": [
+        "supplement-table-s4",
+        "notebook-main"
+      ],
+      "missingArtifacts": [],
+      "linkedArtifacts": [
+        "supplement-table-s4",
+        "notebook-main"
+      ],
+      "blockers": [
+        "rerun_prerequisites_incomplete"
+      ],
+      "warnings": [
+        "figure_appendix_support_not_linked"
+      ],
+      "actions": [
+        "connect_dataset_code_and_rerunnable_notebook",
+        "link_figure_or_table_appendix_support"
+      ]
+    }
+  ],
+  "artifactResults": [
+    {
+      "id": "dataset-counts",
+      "label": "Single-cell counts matrix",
+      "kind": "dataset",
+      "status": "block",
+      "linkedClaims": [
+        "claim-main-effect"
+      ],
+      "blockers": [
+        "checksum_mismatch"
+      ],
+      "warnings": [
+        "stale_checksum"
+      ],
+      "actions": [
+        "regenerate_or_correct_checksum",
+        "refresh_checksum"
+      ]
+    },
+    {
+      "id": "code-analysis",
+      "label": "Analysis scripts",
+      "kind": "code",
+      "status": "block",
+      "linkedClaims": [
+        "claim-main-effect"
+      ],
+      "blockers": [
+        "missing_license"
+      ],
+      "warnings": [],
+      "actions": [
+        "add_license_metadata"
+      ]
+    },
+    {
+      "id": "notebook-main",
+      "label": "Main reproducibility notebook",
+      "kind": "notebook",
+      "status": "block",
+      "linkedClaims": [
+        "claim-main-effect",
+        "claim-appendix"
+      ],
+      "blockers": [
+        "notebook_not_rerunnable"
+      ],
+      "warnings": [],
+      "actions": [
+        "provide_rerun_environment"
+      ]
+    },
+    {
+      "id": "protocol-stimulation",
+      "label": "Stimulation protocol",
+      "kind": "protocol",
+      "status": "warn",
+      "linkedClaims": [
+        "claim-protocol"
+      ],
+      "blockers": [],
+      "warnings": [
+        "protocol_version_missing"
+      ],
+      "actions": [
+        "add_protocol_version"
+      ]
+    },
+    {
+      "id": "supplement-table-s4",
+      "label": "Supplementary table S4",
+      "kind": "table",
+      "status": "block",
+      "linkedClaims": [
+        "claim-appendix"
+      ],
+      "blockers": [
+        "missing_path",
+        "missing_checksum"
+      ],
+      "warnings": [],
+      "actions": [
+        "add_artifact_path",
+        "add_checksum"
+      ]
+    },
+    {
+      "id": "raw-screening-notes",
+      "label": "Raw screening notes",
+      "kind": "dataset",
+      "status": "block",
+      "linkedClaims": [],
+      "blockers": [
+        "human_data_not_deidentified"
+      ],
+      "warnings": [
+        "orphan_artifact"
+      ],
+      "actions": [
+        "redact_or_restrict_human_data",
+        "link_artifact_to_claim"
+      ]
+    }
+  ],
+  "auditDigest": "7818896003d6e0a8f0c1e816ed885d21144523f54239bc61bbca7388ed64fbb8"
+}

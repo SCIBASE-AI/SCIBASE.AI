@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="48" y="42" width="864" height="456" rx="20" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="70" y="92" font-size="30" font-family="Arial" font-weight="700" fill="#0F172A">Storage Overage Billing Guard</text>
+  <text x="70" y="126" font-size="18" font-family="Arial" fill="#475569">Monthly recoverable: $190.09 · Annualized: $2,281.08</text>
+  <text x="70" y="152" font-size="16" font-family="Arial" fill="#475569">Holds: 2 · Unmetered leakage: $15.54 · Purge candidates: 82 GB</text>
+  <text x="70" y="175" font-size="18" font-family="Arial" fill="#111827">Atlas Neuroscience Lab</text>
+<rect x="70" y="185" width="479" height="24" rx="6" fill="#0E7490" />
+<text x="569" y="203" font-size="16" font-family="Arial" fill="#111827">$85.75 · invoice_ready</text>
+<text x="70" y="251" font-size="18" font-family="Arial" fill="#111827">Civic Genomics Institute</text>
+<rect x="70" y="261" width="520" height="24" rx="6" fill="#D97706" />
+<text x="610" y="279" font-size="16" font-family="Arial" fill="#111827">$93.00 · hold_for_ops_review</text>
+<text x="70" y="327" font-size="18" font-family="Arial" fill="#111827">Northern Lights BioArchive</text>
+<rect x="70" y="337" width="63" height="24" rx="6" fill="#D97706" />
+<text x="153" y="355" font-size="16" font-family="Arial" fill="#111827">$11.34 · hold_for_ops_review</text>
+<text x="70" y="403" font-size="18" font-family="Arial" fill="#111827">Quantum Field Consortium</text>
+<rect x="70" y="413" width="12" height="24" rx="6" fill="#64748B" />
+<text x="102" y="431" font-size="16" font-family="Arial" fill="#111827">$0.00 · monitor</text>
+</svg>

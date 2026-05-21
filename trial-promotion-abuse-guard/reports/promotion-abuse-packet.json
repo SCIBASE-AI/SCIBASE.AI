@@ -1,0 +1,162 @@
+{
+  "generatedAt": "2026-05-21T12:00:00Z",
+  "control": "trial-promotion-abuse-guard",
+  "metrics": {
+    "totalEvents": 7,
+    "approvedEvents": 2,
+    "heldEvents": 4,
+    "rejectedEvents": 1,
+    "reviewedEvents": 0,
+    "discountLeakagePreventedCents": 131000,
+    "requestedDiscountCents": 416800,
+    "approvedDiscountCents": 285800
+  },
+  "decisions": [
+    {
+      "eventId": "evt-alpha-trial",
+      "eventType": "trial_started",
+      "accountId": "acct-alpha",
+      "accountName": "Alpha Neuro Lab",
+      "invoiceId": null,
+      "timestamp": "2026-05-01T09:30:00Z",
+      "status": "approved",
+      "reasons": []
+    },
+    {
+      "eventId": "evt-alpha-shadow-trial",
+      "eventType": "trial_started",
+      "accountId": "acct-alpha-shadow",
+      "accountName": "Alpha Neuro Lab Sandbox",
+      "invoiceId": null,
+      "timestamp": "2026-05-19T10:00:00Z",
+      "status": "hold",
+      "reasons": [
+        {
+          "severity": "hold",
+          "code": "domain_trial_reuse",
+          "message": "Domain alpha-university.edu already has 1 trial workspace."
+        },
+        {
+          "severity": "hold",
+          "code": "payment_trial_reuse",
+          "message": "Payment fingerprint was already used for a previous trial."
+        }
+      ]
+    },
+    {
+      "eventId": "evt-temp-trial",
+      "eventType": "trial_started",
+      "accountId": "acct-temp",
+      "accountName": "Temporary Trial Workspace",
+      "invoiceId": null,
+      "timestamp": "2026-05-20T08:00:00Z",
+      "status": "rejected",
+      "reasons": [
+        {
+          "severity": "reject",
+          "code": "disposable_domain",
+          "message": "Trial uses a disposable or non-institutional email domain."
+        }
+      ]
+    },
+    {
+      "eventId": "evt-alpha-stack",
+      "eventType": "promotion_applied",
+      "accountId": "acct-alpha-shadow",
+      "accountName": "Alpha Neuro Lab Sandbox",
+      "invoiceId": "inv-stack",
+      "timestamp": "2026-05-20T10:15:00Z",
+      "status": "hold",
+      "reasons": [
+        {
+          "severity": "hold",
+          "code": "coupon_stack_exceeds_policy",
+          "message": "2 coupons were stacked; policy allows 1."
+        },
+        {
+          "severity": "hold",
+          "code": "requires_paid_plan",
+          "message": "COMPUTE-TOPUP-15 can only be used by active paid accounts."
+        },
+        {
+          "severity": "hold",
+          "code": "discount_cap_exceeded",
+          "message": "Requested discount 35% exceeds 20% policy cap."
+        }
+      ],
+      "requestedDiscountPct": 35,
+      "approvedDiscountPct": 20,
+      "requestedDiscountCents": 84000,
+      "approvedDiscountCents": 48000,
+      "discountLeakagePreventedCents": 36000
+    },
+    {
+      "eventId": "evt-consortium-expired",
+      "eventType": "promotion_applied",
+      "accountId": "acct-consortium-expired",
+      "accountName": "Northern Consortium Pilot",
+      "invoiceId": "inv-consortium",
+      "timestamp": "2026-05-20T10:30:00Z",
+      "status": "hold",
+      "reasons": [
+        {
+          "severity": "hold",
+          "code": "consortium_roster_not_active",
+          "message": "CONSORTIUM-30 requires an active consortium roster entry."
+        },
+        {
+          "severity": "hold",
+          "code": "discount_cap_exceeded",
+          "message": "Requested discount 30% exceeds 20% policy cap."
+        }
+      ],
+      "requestedDiscountPct": 30,
+      "approvedDiscountPct": 20,
+      "requestedDiscountCents": 285000,
+      "approvedDiscountCents": 190000,
+      "discountLeakagePreventedCents": 95000
+    },
+    {
+      "eventId": "evt-convert-missing-payment",
+      "eventType": "trial_conversion",
+      "accountId": "acct-convert",
+      "accountName": "Vector Bio Trial",
+      "invoiceId": "inv-convert",
+      "timestamp": "2026-05-20T11:00:00Z",
+      "status": "hold",
+      "reasons": [
+        {
+          "severity": "hold",
+          "code": "payment_not_verified",
+          "message": "LAB-LAUNCH-20 requires a verified payment method."
+        },
+        {
+          "severity": "hold",
+          "code": "conversion_payment_missing",
+          "message": "Trial cannot convert until a verified payment method is present."
+        }
+      ],
+      "requestedDiscountPct": 20,
+      "approvedDiscountPct": 20,
+      "requestedDiscountCents": 11800,
+      "approvedDiscountCents": 11800,
+      "discountLeakagePreventedCents": 0
+    },
+    {
+      "eventId": "evt-clean-lab-discount",
+      "eventType": "promotion_applied",
+      "accountId": "acct-clean",
+      "accountName": "Harbor Methods Lab",
+      "invoiceId": "inv-clean",
+      "timestamp": "2026-05-20T11:15:00Z",
+      "status": "approved",
+      "reasons": [],
+      "requestedDiscountPct": 20,
+      "approvedDiscountPct": 20,
+      "requestedDiscountCents": 36000,
+      "approvedDiscountCents": 36000,
+      "discountLeakagePreventedCents": 0
+    }
+  ],
+  "digest": "10e4c417b4549c81935ca8a9687f675c88c7d0672e5a65bb87e151835bc15122"
+}

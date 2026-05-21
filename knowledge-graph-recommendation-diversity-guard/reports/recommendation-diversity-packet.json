@@ -1,0 +1,172 @@
+{
+  "set": {
+    "id": "kg-rec-astro-bio-2026-05",
+    "title": "Discovery mode recommendations for CRISPR stress-screen projects",
+    "audience": "computational biology researchers"
+  },
+  "status": "hold",
+  "showableRecommendations": 2,
+  "totalRecommendations": 5,
+  "concentrationChecks": [
+    {
+      "metric": "institution",
+      "result": {
+        "field": "institution",
+        "value": "Stanford",
+        "count": 3,
+        "share": 0.6
+      },
+      "limit": 0.5
+    },
+    {
+      "metric": "funder",
+      "result": {
+        "field": "funder",
+        "value": "Funder A",
+        "count": 3,
+        "share": 0.6
+      },
+      "limit": 0.5
+    },
+    {
+      "metric": "domain",
+      "result": {
+        "field": "domain",
+        "value": "single-cell biology",
+        "count": 4,
+        "share": 0.8
+      },
+      "limit": 0.7
+    },
+    {
+      "metric": "method",
+      "result": {
+        "field": "method",
+        "value": "CRISPR screen",
+        "count": 4,
+        "share": 0.8
+      },
+      "limit": 0.5
+    }
+  ],
+  "citationHerd": {
+    "id": "rec-1",
+    "citations": 920,
+    "share": 0.495
+  },
+  "staleEvidenceShare": 0.6,
+  "blockers": [
+    "too_few_showable_recommendations",
+    "institution_concentration",
+    "funder_concentration",
+    "domain_concentration",
+    "method_concentration",
+    "stale_evidence_dominance",
+    "rec-1_insufficient_rationale_edges",
+    "rec-2_insufficient_rationale_edges",
+    "rec-3_insufficient_rationale_edges"
+  ],
+  "warnings": [
+    "rec-1_stale_evidence",
+    "rec-2_stale_evidence",
+    "rec-3_stale_evidence"
+  ],
+  "curatorActions": [
+    "add_more_diverse_candidates",
+    "rebalance_institution_mix",
+    "rebalance_funder_mix",
+    "rebalance_domain_mix",
+    "rebalance_method_mix",
+    "refresh_recommendation_evidence",
+    "rec-1_add_explainable_graph_path",
+    "rec-1_refresh_or_label_evidence_age",
+    "rec-2_add_explainable_graph_path",
+    "rec-2_refresh_or_label_evidence_age",
+    "rec-3_add_explainable_graph_path",
+    "rec-3_refresh_or_label_evidence_age"
+  ],
+  "itemResults": [
+    {
+      "id": "rec-1",
+      "title": "Stanford CRISPR stress atlas",
+      "domain": "single-cell biology",
+      "institution": "Stanford",
+      "funder": "Funder A",
+      "method": "CRISPR screen",
+      "status": "hold",
+      "blockers": [
+        "insufficient_rationale_edges"
+      ],
+      "warnings": [
+        "stale_evidence"
+      ],
+      "actions": [
+        "add_explainable_graph_path",
+        "refresh_or_label_evidence_age"
+      ]
+    },
+    {
+      "id": "rec-2",
+      "title": "Stanford perturbation notebook",
+      "domain": "single-cell biology",
+      "institution": "Stanford",
+      "funder": "Funder A",
+      "method": "CRISPR screen",
+      "status": "hold",
+      "blockers": [
+        "insufficient_rationale_edges"
+      ],
+      "warnings": [
+        "stale_evidence"
+      ],
+      "actions": [
+        "add_explainable_graph_path",
+        "refresh_or_label_evidence_age"
+      ]
+    },
+    {
+      "id": "rec-3",
+      "title": "Stanford follow-up protocol",
+      "domain": "single-cell biology",
+      "institution": "Stanford",
+      "funder": "Funder A",
+      "method": "CRISPR screen",
+      "status": "hold",
+      "blockers": [
+        "insufficient_rationale_edges"
+      ],
+      "warnings": [
+        "stale_evidence"
+      ],
+      "actions": [
+        "add_explainable_graph_path",
+        "refresh_or_label_evidence_age"
+      ]
+    },
+    {
+      "id": "rec-4",
+      "title": "Cambridge replication dataset",
+      "domain": "single-cell biology",
+      "institution": "Cambridge",
+      "funder": "Funder B",
+      "method": "CRISPR screen",
+      "status": "show",
+      "blockers": [],
+      "warnings": [],
+      "actions": []
+    },
+    {
+      "id": "rec-5",
+      "title": "Tokyo microscopy validation",
+      "domain": "cell imaging",
+      "institution": "Tokyo BioLab",
+      "funder": "Funder C",
+      "method": "confocal imaging",
+      "status": "show",
+      "blockers": [],
+      "warnings": [],
+      "actions": []
+    }
+  ],
+  "auditDigest": "4b0b52688d9e49051fa43f68ab9a914134dc767e5a1fd0c945096bcbda1fd5df"
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="48" width="1184" height="624" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="72" y="128" class="title">Challenge Award Transparency Guard</text>
+  <text x="72" y="184" class="subtitle">Identify reproducible single-cell biomarker panels</text>
+  <rect x="72" y="216" width="320" height="52" rx="12" fill="#0f766e"/>
+  <text x="94" y="250" class="status">publish_ready</text>
+  <text x="440" y="250" class="metric">Blockers: 0  Warnings: 0</text>
+  <text x="72" y="300" class="row">#1 Northstar Lab - $650 - score 91.85</text>
+  <text x="72" y="348" class="row">#2 Private finalist BETA - $250 - score 84.15</text>
+  <text x="72" y="396" class="row">#3 Cedar Analytics - $100 - score 77.85</text>
+  <text x="72" y="560" class="metric">Escrow $1000 / awards $1000</text>
+  <text x="72" y="612" class="digest">Audit d64116bbd026c818a105c77ca97084f1</text>
+  <style>
+    .title { font: 700 44px Arial, sans-serif; fill: #0f172a; }
+    .subtitle { font: 400 24px Arial, sans-serif; fill: #475569; }
+    .status { font: 700 26px Arial, sans-serif; fill: white; text-transform: uppercase; }
+    .metric { font: 600 24px Arial, sans-serif; fill: #334155; }
+    .row { font: 500 26px Arial, sans-serif; fill: #1e293b; }
+    .digest { font: 400 20px monospace; fill: #64748b; }
+  </style>
+</svg>

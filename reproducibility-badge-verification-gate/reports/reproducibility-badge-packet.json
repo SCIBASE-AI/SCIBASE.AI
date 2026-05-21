@@ -1,0 +1,495 @@
+{
+  "generatedAt": "2026-05-21T18:35:00.000Z",
+  "policy": {
+    "badgeLevels": [
+      "bronze",
+      "silver",
+      "gold"
+    ],
+    "minIndependentRunsByBadge": {
+      "bronze": 1,
+      "silver": 2,
+      "gold": 3
+    },
+    "allowedReproducerRoles": [
+      "independent-reproducer",
+      "community-reviewer",
+      "external-methods-reviewer"
+    ],
+    "minArtifactCoverage": 1,
+    "minInstitutionsForMultiRunBadge": 2,
+    "maxRunAgeDays": 90,
+    "allowLowerBadgeRecommendation": true
+  },
+  "summary": {
+    "totalProjects": 4,
+    "passed": 1,
+    "revise": 1,
+    "held": 2,
+    "requestedBadges": {
+      "silver": 2,
+      "bronze": 2
+    },
+    "validIndependentRuns": 3
+  },
+  "decisions": [
+    {
+      "id": "RB-PASS-001",
+      "title": "Open enzyme model reproducibility packet",
+      "status": "pass",
+      "requestedBadge": "silver",
+      "recommendedBadge": "silver",
+      "evidence": {
+        "artifacts": 3,
+        "requiredArtifacts": 3,
+        "environments": 1,
+        "reproductionRuns": 2,
+        "validIndependentRuns": 2,
+        "uniqueValidInstitutions": 2
+      },
+      "findings": [],
+      "runDecisions": [
+        {
+          "id": "run-a",
+          "reproducerId": "rep-101",
+          "role": "independent-reproducer",
+          "institution": "West Methods Institute",
+          "independent": true,
+          "findings": [],
+          "auditDigest": "46f3325378dfe3912b446873ff880984625efb9e12df3fc55fa665ac3fee7c35"
+        },
+        {
+          "id": "run-b",
+          "reproducerId": "rep-202",
+          "role": "external-methods-reviewer",
+          "institution": "South Reproducibility Center",
+          "independent": true,
+          "findings": [],
+          "auditDigest": "161ce2532a735ae4f596046cbb699342d919b7dc2c7c4fea52ad5f7f1e563822"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "ISSUE_REPRODUCIBILITY_BADGE",
+          "owner": "community-moderator",
+          "message": "Issue the requested silver reproducibility badge."
+        }
+      ],
+      "auditDigest": "f881891e8522aeb763ddf20fa922fc8202633e494b3a22073d4bf94817d5f2df"
+    },
+    {
+      "id": "RB-REV-002",
+      "title": "Ecology sampling reproducibility packet",
+      "status": "revise",
+      "requestedBadge": "silver",
+      "recommendedBadge": "bronze",
+      "evidence": {
+        "artifacts": 2,
+        "requiredArtifacts": 2,
+        "environments": 1,
+        "reproductionRuns": 1,
+        "validIndependentRuns": 1,
+        "uniqueValidInstitutions": 1
+      },
+      "findings": [
+        {
+          "code": "INDEPENDENT_RUNS_BELOW_BADGE_THRESHOLD",
+          "severity": "blocker",
+          "message": "Not enough independent successful reproduction runs for the requested badge.",
+          "detail": {
+            "requestedBadge": "silver",
+            "validRuns": 1,
+            "requiredRuns": 2
+          }
+        }
+      ],
+      "runDecisions": [
+        {
+          "id": "run-c",
+          "reproducerId": "rep-303",
+          "role": "independent-reproducer",
+          "institution": "Mountain Stats Lab",
+          "independent": true,
+          "findings": [],
+          "auditDigest": "a89b1d90aac1a0eef6d8af771bfc5ccc908953bf35d29821c7005cf35098fd8e"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "ISSUE_LOWER_BADGE_OR_COLLECT_EVIDENCE",
+          "owner": "community-moderator",
+          "message": "Requested silver badge is not fully supported; consider bronze or collect more evidence."
+        }
+      ],
+      "auditDigest": "99c8cfb891f9d1fda3a3ade460ec19de7a2f98226ae8a1caffa5323d8382aa2e"
+    },
+    {
+      "id": "RB-HOLD-003",
+      "title": "Conflicted review badge packet",
+      "status": "hold",
+      "requestedBadge": "bronze",
+      "recommendedBadge": "none",
+      "evidence": {
+        "artifacts": 2,
+        "requiredArtifacts": 2,
+        "environments": 1,
+        "reproductionRuns": 2,
+        "validIndependentRuns": 0,
+        "uniqueValidInstitutions": 0
+      },
+      "findings": [
+        {
+          "code": "REPRODUCER_AUTHOR_CONFLICT",
+          "severity": "blocker",
+          "message": "Badge verification run is not independent from project authors.",
+          "detail": {
+            "runId": "run-d",
+            "reproducerId": "author-d",
+            "relatedAuthorIds": [
+              "author-d"
+            ]
+          }
+        },
+        {
+          "code": "SAME_INSTITUTION_REVIEW",
+          "severity": "warning",
+          "message": "Same-institution reproduction should be disclosed and normally paired with another independent run.",
+          "detail": {
+            "runId": "run-d",
+            "institution": "North Lab"
+          }
+        },
+        {
+          "code": "RECENT_COLLABORATOR_CONFLICT",
+          "severity": "blocker",
+          "message": "Recent collaborator cannot count as an independent badge reproducer.",
+          "detail": {
+            "runId": "run-e",
+            "relatedAuthorIds": [
+              "author-e"
+            ]
+          }
+        },
+        {
+          "code": "FUNDER_RELATIONSHIP_DISCLOSURE",
+          "severity": "warning",
+          "message": "Funding relationship should be disclosed before counting reputation credit.",
+          "detail": {
+            "runId": "run-e"
+          }
+        },
+        {
+          "code": "INDEPENDENT_RUNS_BELOW_BADGE_THRESHOLD",
+          "severity": "blocker",
+          "message": "Not enough independent successful reproduction runs for the requested badge.",
+          "detail": {
+            "requestedBadge": "bronze",
+            "validRuns": 0,
+            "requiredRuns": 1
+          }
+        }
+      ],
+      "runDecisions": [
+        {
+          "id": "run-d",
+          "reproducerId": "author-d",
+          "role": "community-reviewer",
+          "institution": "North Lab",
+          "independent": false,
+          "findings": [
+            {
+              "code": "REPRODUCER_AUTHOR_CONFLICT",
+              "severity": "blocker",
+              "message": "Badge verification run is not independent from project authors.",
+              "detail": {
+                "runId": "run-d",
+                "reproducerId": "author-d",
+                "relatedAuthorIds": [
+                  "author-d"
+                ]
+              }
+            },
+            {
+              "code": "SAME_INSTITUTION_REVIEW",
+              "severity": "warning",
+              "message": "Same-institution reproduction should be disclosed and normally paired with another independent run.",
+              "detail": {
+                "runId": "run-d",
+                "institution": "North Lab"
+              }
+            }
+          ],
+          "auditDigest": "5b7339d275f8ab1301dd54989742e3f24a94017b03086184e6450003ef4bfe7a"
+        },
+        {
+          "id": "run-e",
+          "reproducerId": "rep-404",
+          "role": "independent-reproducer",
+          "institution": "East Review Lab",
+          "independent": false,
+          "findings": [
+            {
+              "code": "RECENT_COLLABORATOR_CONFLICT",
+              "severity": "blocker",
+              "message": "Recent collaborator cannot count as an independent badge reproducer.",
+              "detail": {
+                "runId": "run-e",
+                "relatedAuthorIds": [
+                  "author-e"
+                ]
+              }
+            },
+            {
+              "code": "FUNDER_RELATIONSHIP_DISCLOSURE",
+              "severity": "warning",
+              "message": "Funding relationship should be disclosed before counting reputation credit.",
+              "detail": {
+                "runId": "run-e"
+              }
+            }
+          ],
+          "auditDigest": "4579095ccfed8d9dfa683b188b1d8c80add9e75c6a2bb84be59eaf52eb3d3b17"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "REPLACE_CONFLICTED_REPRODUCER",
+          "owner": "community-moderator",
+          "message": "Request a new independent reproducer before issuing reputation credit."
+        },
+        {
+          "code": "ADDRESS_SAME_INSTITUTION_REVIEW",
+          "owner": "community-moderator",
+          "message": "Same-institution reproduction should be disclosed and normally paired with another independent run."
+        },
+        {
+          "code": "ADDRESS_FUNDER_RELATIONSHIP_DISCLOSURE",
+          "owner": "community-moderator",
+          "message": "Funding relationship should be disclosed before counting reputation credit."
+        },
+        {
+          "code": "ADDRESS_INDEPENDENT_RUNS_BELOW_BADGE_THRESHOLD",
+          "owner": "community-moderator",
+          "message": "Not enough independent successful reproduction runs for the requested badge."
+        }
+      ],
+      "auditDigest": "c8259682193af6c1006544adcc20be9acc2aead0d3c1ca590a8c118e3a4c7943"
+    },
+    {
+      "id": "RB-HOLD-004",
+      "title": "Artifact mismatch badge packet",
+      "status": "hold",
+      "requestedBadge": "bronze",
+      "recommendedBadge": "none",
+      "evidence": {
+        "artifacts": 3,
+        "requiredArtifacts": 3,
+        "environments": 1,
+        "reproductionRuns": 1,
+        "validIndependentRuns": 0,
+        "uniqueValidInstitutions": 0
+      },
+      "findings": [
+        {
+          "code": "ARTIFACT_CHECKSUM_MISSING",
+          "severity": "blocker",
+          "message": "Required reproducibility artifact is missing a stable checksum.",
+          "detail": {
+            "artifactId": "dataset"
+          }
+        },
+        {
+          "code": "ARTIFACT_VERSION_MISSING",
+          "severity": "warning",
+          "message": "Required artifact should include a version or release tag.",
+          "detail": {
+            "artifactId": "results"
+          }
+        },
+        {
+          "code": "ENVIRONMENT_DIGEST_MISSING",
+          "severity": "blocker",
+          "message": "Executable environment is missing a reproducible digest.",
+          "detail": {
+            "environmentId": "container"
+          }
+        },
+        {
+          "code": "LOCKFILE_CHECKSUM_MISSING",
+          "severity": "warning",
+          "message": "Environment lockfile checksum is missing.",
+          "detail": {
+            "environmentId": "container"
+          }
+        },
+        {
+          "code": "ARTIFACT_COVERAGE_INCOMPLETE",
+          "severity": "blocker",
+          "message": "Reproduction run did not verify all required artifacts.",
+          "detail": {
+            "runId": "run-f",
+            "coverageRatio": 0.333
+          }
+        },
+        {
+          "code": "ENVIRONMENT_DIGEST_MISMATCH",
+          "severity": "blocker",
+          "message": "Reproduction run used an environment digest that does not match the badge manifest.",
+          "detail": {
+            "runId": "run-f"
+          }
+        },
+        {
+          "code": "OUTPUT_DIGEST_MISMATCH",
+          "severity": "blocker",
+          "message": "Reproduced outputs do not match the submitted result digest.",
+          "detail": {
+            "runId": "run-f"
+          }
+        },
+        {
+          "code": "REPRODUCTION_TESTS_FAILED",
+          "severity": "blocker",
+          "message": "Reproduction tests failed for the submitted project.",
+          "detail": {
+            "runId": "run-f"
+          }
+        },
+        {
+          "code": "RUN_LOG_CHECKSUM_MISSING",
+          "severity": "warning",
+          "message": "Reproduction run log should include a checksum for auditability.",
+          "detail": {
+            "runId": "run-f"
+          }
+        },
+        {
+          "code": "REPRODUCER_DISCLOSURE_MISSING",
+          "severity": "blocker",
+          "message": "Independent reproducer must sign the conflict and method disclosure.",
+          "detail": {
+            "runId": "run-f"
+          }
+        },
+        {
+          "code": "INDEPENDENT_RUNS_BELOW_BADGE_THRESHOLD",
+          "severity": "blocker",
+          "message": "Not enough independent successful reproduction runs for the requested badge.",
+          "detail": {
+            "requestedBadge": "bronze",
+            "validRuns": 0,
+            "requiredRuns": 1
+          }
+        }
+      ],
+      "runDecisions": [
+        {
+          "id": "run-f",
+          "reproducerId": "rep-505",
+          "role": "independent-reproducer",
+          "institution": "Open Repro Guild",
+          "independent": false,
+          "findings": [
+            {
+              "code": "ARTIFACT_COVERAGE_INCOMPLETE",
+              "severity": "blocker",
+              "message": "Reproduction run did not verify all required artifacts.",
+              "detail": {
+                "runId": "run-f",
+                "coverageRatio": 0.333
+              }
+            },
+            {
+              "code": "ENVIRONMENT_DIGEST_MISMATCH",
+              "severity": "blocker",
+              "message": "Reproduction run used an environment digest that does not match the badge manifest.",
+              "detail": {
+                "runId": "run-f"
+              }
+            },
+            {
+              "code": "OUTPUT_DIGEST_MISMATCH",
+              "severity": "blocker",
+              "message": "Reproduced outputs do not match the submitted result digest.",
+              "detail": {
+                "runId": "run-f"
+              }
+            },
+            {
+              "code": "REPRODUCTION_TESTS_FAILED",
+              "severity": "blocker",
+              "message": "Reproduction tests failed for the submitted project.",
+              "detail": {
+                "runId": "run-f"
+              }
+            },
+            {
+              "code": "RUN_LOG_CHECKSUM_MISSING",
+              "severity": "warning",
+              "message": "Reproduction run log should include a checksum for auditability.",
+              "detail": {
+                "runId": "run-f"
+              }
+            },
+            {
+              "code": "REPRODUCER_DISCLOSURE_MISSING",
+              "severity": "blocker",
+              "message": "Independent reproducer must sign the conflict and method disclosure.",
+              "detail": {
+                "runId": "run-f"
+              }
+            }
+          ],
+          "auditDigest": "8442560d2273b8b135c84accdb6ea401efd7a18d36d5eda60bc9f29a6f8fe24e"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "FIX_REPRODUCIBILITY_MANIFEST",
+          "owner": "project-author",
+          "message": "Complete artifact checksums and coverage before badge review."
+        },
+        {
+          "code": "ADDRESS_ARTIFACT_VERSION_MISSING",
+          "owner": "community-moderator",
+          "message": "Required artifact should include a version or release tag."
+        },
+        {
+          "code": "ADDRESS_ENVIRONMENT_DIGEST_MISSING",
+          "owner": "community-moderator",
+          "message": "Executable environment is missing a reproducible digest."
+        },
+        {
+          "code": "ADDRESS_LOCKFILE_CHECKSUM_MISSING",
+          "owner": "community-moderator",
+          "message": "Environment lockfile checksum is missing."
+        },
+        {
+          "code": "RERUN_REPRODUCTION_EVIDENCE",
+          "owner": "independent-reproducer",
+          "message": "Re-run reproduction until environment, outputs, and tests match the submitted evidence."
+        },
+        {
+          "code": "ADDRESS_RUN_LOG_CHECKSUM_MISSING",
+          "owner": "community-moderator",
+          "message": "Reproduction run log should include a checksum for auditability."
+        },
+        {
+          "code": "COLLECT_REPRODUCER_DISCLOSURE",
+          "owner": "community-moderator",
+          "message": "Collect conflict and method disclosure before counting the run."
+        },
+        {
+          "code": "ADDRESS_INDEPENDENT_RUNS_BELOW_BADGE_THRESHOLD",
+          "owner": "community-moderator",
+          "message": "Not enough independent successful reproduction runs for the requested badge."
+        }
+      ],
+      "auditDigest": "0e2d116123f71255b2c9bb7cc54903f668742091be4e300579a88e13eea4f8ae"
+    }
+  ],
+  "audit": {
+    "source": "synthetic-reproducibility-badge-verification-gate",
+    "digest": "69aff17fd9e907aac7ecdc9f497360367824bc4ee0dd07a4d418e8f0b0f473f2"
+  }
+}

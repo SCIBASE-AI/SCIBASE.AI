@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#111827"/>
+  <text x="48" y="78" fill="#f9fafb" font-family="Arial" font-size="34" font-weight="700">Reproducibility Badge Verification</text>
+  <text x="48" y="124" fill="#cbd5e1" font-family="Arial" font-size="18">Independent evidence packet for SCIBASE community reputation issue #15</text>
+  <rect x="48" y="170" width="250" height="150" rx="14" fill="#15803d"/>
+  <text x="78" y="230" fill="#f0fdf4" font-family="Arial" font-size="56" font-weight="700">1</text>
+  <text x="78" y="270" fill="#dcfce7" font-family="Arial" font-size="22">issue badge</text>
+  <rect x="355" y="170" width="250" height="150" rx="14" fill="#b45309"/>
+  <text x="385" y="230" fill="#fffbeb" font-family="Arial" font-size="56" font-weight="700">1</text>
+  <text x="385" y="270" fill="#fef3c7" font-family="Arial" font-size="22">revise evidence</text>
+  <rect x="662" y="170" width="250" height="150" rx="14" fill="#be123c"/>
+  <text x="692" y="230" fill="#fff1f2" font-family="Arial" font-size="56" font-weight="700">2</text>
+  <text x="692" y="270" fill="#ffe4e6" font-family="Arial" font-size="22">hold badge</text>
+  <text x="48" y="390" fill="#e5e7eb" font-family="Arial" font-size="20">Checks: independent runs, artifact hashes, environment digest, output match, test pass, disclosures, conflicts.</text>
+  <text x="48" y="430" fill="#9ca3af" font-family="Arial" font-size="16">Digest 69aff17fd9e907aac7ecdc9f...</text>
+</svg>

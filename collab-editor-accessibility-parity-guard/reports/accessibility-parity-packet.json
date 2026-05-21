@@ -1,0 +1,176 @@
+{
+  "documentId": "ms-collab-editor-demo",
+  "documentTitle": "Shared CRISPR off-target analysis manuscript",
+  "generatedAt": "2026-05-21T10:45:00.000Z",
+  "status": "hold_accessibility_release",
+  "modePolicy": [
+    "markdown",
+    "wysiwyg"
+  ],
+  "summary": {
+    "status": "hold_accessibility_release",
+    "blockers": [
+      {
+        "controlId": "equation-effect-size",
+        "message": "equation block has no accessible text"
+      },
+      {
+        "controlId": "notebook-cell-analysis-01",
+        "message": "notebook visual output has no alt text"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "message": "interactive control has no aria label"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "message": "interactive control is not keyboard reachable"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "message": "review annotation has no document anchor"
+      },
+      {
+        "controlId": "focus-order",
+        "message": "focus order references unknown control missing-control"
+      }
+    ],
+    "warnings": [
+      {
+        "controlId": "notebook-cell-analysis-01",
+        "message": "control is not available in both Markdown and WYSIWYG modes"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "message": "control is not available in both Markdown and WYSIWYG modes"
+      },
+      {
+        "controlId": "section-lock-final-figures",
+        "message": "section lock does not announce state changes"
+      }
+    ],
+    "actions": [
+      {
+        "controlId": "equation-effect-size",
+        "action": "add spoken math text for equation-effect-size"
+      },
+      {
+        "controlId": "notebook-cell-analysis-01",
+        "action": "add mode parity for notebook-cell-analysis-01"
+      },
+      {
+        "controlId": "notebook-cell-analysis-01",
+        "action": "add output alt text for notebook cell notebook-cell-analysis-01"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "action": "add an aria label to suggestion-results-01"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "action": "make suggestion-results-01 reachable by tab order or shortcut"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "action": "add mode parity for suggestion-results-01"
+      },
+      {
+        "controlId": "suggestion-results-01",
+        "action": "anchor suggestion-results-01 to a manuscript block or notebook cell"
+      },
+      {
+        "controlId": "section-lock-final-figures",
+        "action": "add lock/unlock announcement text for section-lock-final-figures"
+      },
+      {
+        "controlId": "focus-order",
+        "action": "remove or define focus target missing-control"
+      }
+    ]
+  },
+  "controlReviews": [
+    {
+      "id": "toolbar-insert-equation",
+      "type": "toolbar",
+      "label": "Insert equation",
+      "blockers": [],
+      "warnings": [],
+      "actions": []
+    },
+    {
+      "id": "equation-effect-size",
+      "type": "equation",
+      "label": "Effect size equation",
+      "blockers": [
+        "equation block has no accessible text"
+      ],
+      "warnings": [],
+      "actions": [
+        "add spoken math text for equation-effect-size"
+      ]
+    },
+    {
+      "id": "notebook-cell-analysis-01",
+      "type": "notebook-cell",
+      "label": "Off-target summary plot cell",
+      "blockers": [
+        "notebook visual output has no alt text"
+      ],
+      "warnings": [
+        "control is not available in both Markdown and WYSIWYG modes"
+      ],
+      "actions": [
+        "add mode parity for notebook-cell-analysis-01",
+        "add output alt text for notebook cell notebook-cell-analysis-01"
+      ]
+    },
+    {
+      "id": "comment-methods-01",
+      "type": "comment",
+      "label": "Methods reviewer comment",
+      "blockers": [],
+      "warnings": [],
+      "actions": []
+    },
+    {
+      "id": "suggestion-results-01",
+      "type": "suggestion",
+      "label": "Results wording suggestion",
+      "blockers": [
+        "interactive control has no aria label",
+        "interactive control is not keyboard reachable",
+        "review annotation has no document anchor"
+      ],
+      "warnings": [
+        "control is not available in both Markdown and WYSIWYG modes"
+      ],
+      "actions": [
+        "add an aria label to suggestion-results-01",
+        "make suggestion-results-01 reachable by tab order or shortcut",
+        "add mode parity for suggestion-results-01",
+        "anchor suggestion-results-01 to a manuscript block or notebook cell"
+      ]
+    },
+    {
+      "id": "section-lock-final-figures",
+      "type": "lock",
+      "label": "Final figures section lock",
+      "blockers": [],
+      "warnings": [
+        "section lock does not announce state changes"
+      ],
+      "actions": [
+        "add lock/unlock announcement text for section-lock-final-figures"
+      ]
+    }
+  ],
+  "focusReview": {
+    "blockers": [
+      "focus order references unknown control missing-control"
+    ],
+    "warnings": [],
+    "actions": [
+      "remove or define focus target missing-control"
+    ]
+  }
+}

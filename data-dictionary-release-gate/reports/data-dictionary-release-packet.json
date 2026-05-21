@@ -1,0 +1,346 @@
+{
+  "generatedAt": "2026-05-21T18:05:00.000Z",
+  "policy": {
+    "minDatasetDescriptionLength": 80,
+    "minVariableDescriptionLength": 36,
+    "minSemanticTagsPerVariable": 2,
+    "maxMissingnessWithoutReason": 0.05,
+    "blockingMissingnessWithoutReason": 0.2,
+    "approvedLicenses": [
+      "CC-BY-4.0",
+      "CC0-1.0",
+      "MIT"
+    ],
+    "approvedAccessPolicies": [
+      "open",
+      "embargoed-open",
+      "controlled"
+    ],
+    "blockedSensitivityClasses": [
+      "direct-identifier",
+      "protected-health-information",
+      "credential"
+    ],
+    "approvedUnitsByKind": {
+      "concentration": [
+        "mg/L",
+        "ng/mL",
+        "umol/L"
+      ],
+      "duration": [
+        "s",
+        "min",
+        "h",
+        "day"
+      ],
+      "temperature": [
+        "C",
+        "K"
+      ],
+      "velocity": [
+        "umol/min",
+        "mm/s"
+      ],
+      "voltage": [
+        "V",
+        "mV"
+      ],
+      "pressure": [
+        "kPa",
+        "Pa"
+      ],
+      "proportion": [
+        "%",
+        "ratio"
+      ],
+      "count": [
+        "count"
+      ],
+      "mass": [
+        "kg",
+        "g",
+        "mg"
+      ]
+    }
+  },
+  "summary": {
+    "totalDatasets": 4,
+    "passed": 1,
+    "revise": 1,
+    "held": 2,
+    "blockers": 7,
+    "warnings": 7
+  },
+  "decisions": [
+    {
+      "id": "DD-PASS-001",
+      "title": "Enzyme kinetics reference release",
+      "status": "pass",
+      "releaseTarget": "public DOI package",
+      "manifest": {
+        "files": 1,
+        "columns": 5,
+        "dictionaryEntries": 5,
+        "license": "CC-BY-4.0",
+        "accessPolicy": "open",
+        "persistentIdentifier": "doi:10.5555/scibase.enzyme.001"
+      },
+      "findings": [],
+      "reviewerActions": [
+        {
+          "code": "APPROVE_DATA_DICTIONARY_RELEASE",
+          "owner": "data-steward",
+          "message": "Approve dataset release with the current dictionary and metadata packet."
+        }
+      ],
+      "auditDigest": "37d8fcbd230a374890f81f3365d03594c8b544041a7b910ad1a9e6f60532df7d"
+    },
+    {
+      "id": "DD-REV-002",
+      "title": "Field ecology observation release",
+      "status": "revise",
+      "releaseTarget": "embargoed public dataset",
+      "manifest": {
+        "files": 1,
+        "columns": 4,
+        "dictionaryEntries": 4,
+        "license": "CC-BY-4.0",
+        "accessPolicy": "embargoed-open",
+        "persistentIdentifier": "pending"
+      },
+      "findings": [
+        {
+          "code": "PERSISTENT_IDENTIFIER_MISSING",
+          "severity": "warning",
+          "message": "Release metadata should include a DOI, ARK, or planned persistent identifier.",
+          "detail": {}
+        },
+        {
+          "code": "DISCOVERY_METADATA_INCOMPLETE",
+          "severity": "warning",
+          "message": "schema.org and DataCite metadata are incomplete.",
+          "detail": {}
+        },
+        {
+          "code": "SEMANTIC_TAGS_INCOMPLETE",
+          "severity": "warning",
+          "message": "Variable needs richer semantic tags for FAIR discovery.",
+          "detail": {
+            "variable": "species_code"
+          }
+        },
+        {
+          "code": "UNIT_STANDARD_MISSING",
+          "severity": "warning",
+          "message": "Measurement variable should cite UCUM, SI, or another unit authority.",
+          "detail": {
+            "variable": "coverage_pct"
+          }
+        },
+        {
+          "code": "MISSINGNESS_REASON_RECOMMENDED",
+          "severity": "warning",
+          "message": "Variable has unexplained missingness above the policy threshold.",
+          "detail": {
+            "variable": "coverage_pct",
+            "missingnessRate": 0.11
+          }
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "ADDRESS_PERSISTENT_IDENTIFIER_MISSING",
+          "owner": "data-steward",
+          "message": "Release metadata should include a DOI, ARK, or planned persistent identifier."
+        },
+        {
+          "code": "ADDRESS_DISCOVERY_METADATA_INCOMPLETE",
+          "owner": "data-steward",
+          "message": "schema.org and DataCite metadata are incomplete."
+        },
+        {
+          "code": "ADDRESS_SEMANTIC_TAGS_INCOMPLETE",
+          "owner": "data-steward",
+          "message": "Variable needs richer semantic tags for FAIR discovery."
+        },
+        {
+          "code": "ADDRESS_UNIT_STANDARD_MISSING",
+          "owner": "data-steward",
+          "message": "Measurement variable should cite UCUM, SI, or another unit authority."
+        },
+        {
+          "code": "ADDRESS_MISSINGNESS_REASON_RECOMMENDED",
+          "owner": "data-steward",
+          "message": "Variable has unexplained missingness above the policy threshold."
+        }
+      ],
+      "auditDigest": "1efee295e65e7a7dc73a56ffff3b751de5cbbdd10c40a8bd3c2477ba6cb78507"
+    },
+    {
+      "id": "DD-HOLD-003",
+      "title": "Pressure chamber telemetry",
+      "status": "hold",
+      "releaseTarget": "instrument telemetry archive",
+      "manifest": {
+        "files": 1,
+        "columns": 4,
+        "dictionaryEntries": 4,
+        "license": "CC0-1.0",
+        "accessPolicy": "open",
+        "persistentIdentifier": "doi:10.5555/scibase.telemetry.003"
+      },
+      "findings": [
+        {
+          "code": "FILE_CHECKSUM_MISSING",
+          "severity": "blocker",
+          "message": "Every released file needs a stable checksum.",
+          "detail": {
+            "file": "data/pressure_chamber.csv"
+          }
+        },
+        {
+          "code": "UNDOCUMENTED_COLUMNS",
+          "severity": "blocker",
+          "message": "Release files contain columns missing from the data dictionary.",
+          "detail": {
+            "columns": [
+              "calibration_secret"
+            ]
+          }
+        },
+        {
+          "code": "ORPHAN_DICTIONARY_ENTRIES",
+          "severity": "warning",
+          "message": "Data dictionary contains entries not present in the release files.",
+          "detail": {
+            "variables": [
+              "humidity_pct"
+            ]
+          }
+        },
+        {
+          "code": "MEASUREMENT_UNIT_MISSING",
+          "severity": "blocker",
+          "message": "Measurement variable is missing units.",
+          "detail": {
+            "variable": "pressure_raw",
+            "measurementKind": "pressure"
+          }
+        },
+        {
+          "code": "UNIT_STANDARD_MISSING",
+          "severity": "warning",
+          "message": "Measurement variable should cite UCUM, SI, or another unit authority.",
+          "detail": {
+            "variable": "pressure_raw"
+          }
+        },
+        {
+          "code": "MEASUREMENT_UNIT_NOT_STANDARD",
+          "severity": "blocker",
+          "message": "Measurement unit is not approved for this variable kind.",
+          "detail": {
+            "variable": "voltage_reading",
+            "unit": "watts",
+            "approvedUnits": [
+              "V",
+              "mV"
+            ]
+          }
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "ADD_FILE_CHECKSUMS",
+          "owner": "release-engineer",
+          "message": "Add stable checksums for every release artifact."
+        },
+        {
+          "code": "DOCUMENT_ALL_RELEASE_COLUMNS",
+          "owner": "data-steward",
+          "message": "Add dictionary entries for every released column before DOI/export."
+        },
+        {
+          "code": "ADDRESS_ORPHAN_DICTIONARY_ENTRIES",
+          "owner": "data-steward",
+          "message": "Data dictionary contains entries not present in the release files."
+        },
+        {
+          "code": "FIX_MEASUREMENT_UNITS",
+          "owner": "domain-reviewer",
+          "message": "Add standard units and unit authority for measurement variables."
+        },
+        {
+          "code": "ADDRESS_UNIT_STANDARD_MISSING",
+          "owner": "data-steward",
+          "message": "Measurement variable should cite UCUM, SI, or another unit authority."
+        }
+      ],
+      "auditDigest": "84e1dbfe96fe76548ab187cab4582d7299d313369f3d68a64d3e2030c0fcf1e3"
+    },
+    {
+      "id": "DD-HOLD-004",
+      "title": "Clinical biomarker supplement",
+      "status": "hold",
+      "releaseTarget": "controlled clinical supplement",
+      "manifest": {
+        "files": 1,
+        "columns": 4,
+        "dictionaryEntries": 4,
+        "license": "all-rights-reserved",
+        "accessPolicy": "controlled",
+        "persistentIdentifier": "doi:10.5555/scibase.clinical.004"
+      },
+      "findings": [
+        {
+          "code": "LICENSE_NOT_RELEASE_READY",
+          "severity": "blocker",
+          "message": "Dataset license is missing or not approved for public release.",
+          "detail": {
+            "license": "all-rights-reserved"
+          }
+        },
+        {
+          "code": "SENSITIVE_VARIABLE_RELEASED",
+          "severity": "blocker",
+          "message": "Sensitive or identifying variable is marked for release without exclusion or de-identification.",
+          "detail": {
+            "variable": "patient_name",
+            "sensitivity": "direct-identifier"
+          }
+        },
+        {
+          "code": "MISSINGNESS_REASON_REQUIRED",
+          "severity": "blocker",
+          "message": "Variable has unexplained missingness above the policy threshold.",
+          "detail": {
+            "variable": "biomarker_ng_ml",
+            "missingnessRate": 0.27
+          }
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "RESOLVE_LICENSE_BEFORE_RELEASE",
+          "owner": "project-admin",
+          "message": "Select an approved release license before publishing."
+        },
+        {
+          "code": "REMOVE_OR_DEIDENTIFY_SENSITIVE_FIELDS",
+          "owner": "privacy-reviewer",
+          "message": "Exclude or de-identify sensitive variables before public release."
+        },
+        {
+          "code": "ADDRESS_MISSINGNESS_REASON_REQUIRED",
+          "owner": "data-steward",
+          "message": "Variable has unexplained missingness above the policy threshold."
+        }
+      ],
+      "auditDigest": "2e017d00b107e2b60c281dd255a0f4d673b2751395c220dec081d32b9ada231f"
+    }
+  ],
+  "audit": {
+    "source": "synthetic-data-dictionary-release-gate",
+    "digest": "becb8461629192c9024d4711c90bd0b7aa8faadad20d919312afdba2ef2a8447"
+  }
+}

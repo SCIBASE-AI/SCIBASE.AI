@@ -1,0 +1,197 @@
+{
+  "graphId": "pubmed-crispr-neuro-graph",
+  "generatedAt": "2026-05-21T09:50:00.000Z",
+  "status": "hold_claim_edges",
+  "summary": {
+    "edgesChecked": 3,
+    "blockers": 3,
+    "warnings": 3,
+    "heldEdges": 2,
+    "publishableEdges": 1
+  },
+  "curatorPacket": {
+    "blockers": [
+      {
+        "kind": "causal_overclaim_from_association",
+        "severity": "blocker",
+        "edgeId": "edge-overclaim-001",
+        "message": "Associational evidence cannot publish as a causal graph edge.",
+        "evidence": {
+          "predicate": "causes",
+          "evidenceType": "observational_cooccurrence",
+          "associationHits": [
+            "associated with"
+          ]
+        }
+      },
+      {
+        "kind": "unsupported_recommendation_language",
+        "severity": "blocker",
+        "edgeId": "edge-overclaim-001",
+        "message": "Recommendation text is stronger than the linked evidence supports.",
+        "evidence": {
+          "recommendationText": "Use this to prove CRISPR inhibition causes neuronal repair."
+        }
+      },
+      {
+        "kind": "missing_negative_result_polarity",
+        "severity": "blocker",
+        "edgeId": "edge-negative-002",
+        "message": "Negative or inconclusive evidence needs explicit graph-edge polarity.",
+        "evidence": {
+          "negativeHits": [
+            "no significant",
+            "failed to reproduce"
+          ],
+          "qualifier": "positive"
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "kind": "causal_edge_without_experimental_evidence",
+        "severity": "warning",
+        "edgeId": "edge-overclaim-001",
+        "message": "Causal-looking edge should be downgraded or curator-reviewed without experimental evidence.",
+        "evidence": {
+          "predicate": "causes",
+          "evidenceType": "observational_cooccurrence"
+        }
+      },
+      {
+        "kind": "missing_experimental_context",
+        "severity": "warning",
+        "edgeId": "edge-overclaim-001",
+        "message": "Graph edge is missing context needed for entity pages and recommendation filters.",
+        "evidence": {
+          "missing": [
+            "assay"
+          ]
+        }
+      },
+      {
+        "kind": "causal_edge_without_experimental_evidence",
+        "severity": "warning",
+        "edgeId": "edge-negative-002",
+        "message": "Causal-looking edge should be downgraded or curator-reviewed without experimental evidence.",
+        "evidence": {
+          "predicate": "increases",
+          "evidenceType": "replication_failure"
+        }
+      }
+    ],
+    "heldEdges": [
+      "edge-overclaim-001",
+      "edge-negative-002"
+    ],
+    "publishableEdges": [
+      "edge-ready-003"
+    ],
+    "recommendation": "Hold unsafe graph edges and downgrade or qualify claims before publication."
+  },
+  "decisions": [
+    {
+      "id": "edge-overclaim-001",
+      "subject": "CRISPR inhibition protocol",
+      "predicate": "causes",
+      "object": "improved neuronal repair",
+      "qualifier": "positive",
+      "evidenceType": "observational_cooccurrence",
+      "blockers": [
+        {
+          "kind": "causal_overclaim_from_association",
+          "severity": "blocker",
+          "edgeId": "edge-overclaim-001",
+          "message": "Associational evidence cannot publish as a causal graph edge.",
+          "evidence": {
+            "predicate": "causes",
+            "evidenceType": "observational_cooccurrence",
+            "associationHits": [
+              "associated with"
+            ]
+          }
+        },
+        {
+          "kind": "unsupported_recommendation_language",
+          "severity": "blocker",
+          "edgeId": "edge-overclaim-001",
+          "message": "Recommendation text is stronger than the linked evidence supports.",
+          "evidence": {
+            "recommendationText": "Use this to prove CRISPR inhibition causes neuronal repair."
+          }
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "causal_edge_without_experimental_evidence",
+          "severity": "warning",
+          "edgeId": "edge-overclaim-001",
+          "message": "Causal-looking edge should be downgraded or curator-reviewed without experimental evidence.",
+          "evidence": {
+            "predicate": "causes",
+            "evidenceType": "observational_cooccurrence"
+          }
+        },
+        {
+          "kind": "missing_experimental_context",
+          "severity": "warning",
+          "edgeId": "edge-overclaim-001",
+          "message": "Graph edge is missing context needed for entity pages and recommendation filters.",
+          "evidence": {
+            "missing": [
+              "assay"
+            ]
+          }
+        }
+      ],
+      "publishable": false
+    },
+    {
+      "id": "edge-negative-002",
+      "subject": "Method X",
+      "predicate": "increases",
+      "object": "reproducibility score",
+      "qualifier": "positive",
+      "evidenceType": "replication_failure",
+      "blockers": [
+        {
+          "kind": "missing_negative_result_polarity",
+          "severity": "blocker",
+          "edgeId": "edge-negative-002",
+          "message": "Negative or inconclusive evidence needs explicit graph-edge polarity.",
+          "evidence": {
+            "negativeHits": [
+              "no significant",
+              "failed to reproduce"
+            ],
+            "qualifier": "positive"
+          }
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "causal_edge_without_experimental_evidence",
+          "severity": "warning",
+          "edgeId": "edge-negative-002",
+          "message": "Causal-looking edge should be downgraded or curator-reviewed without experimental evidence.",
+          "evidence": {
+            "predicate": "increases",
+            "evidenceType": "replication_failure"
+          }
+        }
+      ],
+      "publishable": false
+    },
+    {
+      "id": "edge-ready-003",
+      "subject": "Assay calibration protocol",
+      "predicate": "improves",
+      "object": "measurement consistency",
+      "qualifier": "context_limited_positive",
+      "evidenceType": "controlled_experiment",
+      "blockers": [],
+      "warnings": [],
+      "publishable": true
+    }
+  ]
+}

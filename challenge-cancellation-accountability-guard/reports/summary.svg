@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#172033"/>
+  <rect x="58" y="54" width="1164" height="612" rx="20" fill="#f8fafc"/>
+  <text x="96" y="126" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#101827">Challenge Cancellation Accountability Guard</text>
+  <text x="96" y="174" font-family="Arial, sans-serif" font-size="23" fill="#334155">Status: hold_cancellation_close</text>
+  <g font-family="Arial, sans-serif" font-size="24" fill="#101827">
+    <text x="96" y="254">Challenges reviewed: 3</text>
+    <text x="96" y="300">Held challenges: 1</text>
+    <text x="96" y="346">Ready challenges: 2</text>
+    <text x="96" y="392">Solver teams affected: 5</text>
+    <text x="96" y="438">Compensation shortfall: $1,800</text>
+    <text x="96" y="484">Critical findings: 4</text>
+  </g>
+  <rect x="690" y="236" width="438" height="248" rx="14" fill="#ecfeff" stroke="#0891b2" stroke-width="3"/>
+  <text x="724" y="290" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#155e75">Controls covered</text>
+  <text x="724" y="340" font-family="Arial, sans-serif" font-size="21" fill="#155e75">Cancellation reason evidence</text>
+  <text x="724" y="381" font-family="Arial, sans-serif" font-size="21" fill="#155e75">Solver notice and appeal window</text>
+  <text x="724" y="422" font-family="Arial, sans-serif" font-size="21" fill="#155e75">Escrow refund and compensation hold</text>
+  <text x="724" y="463" font-family="Arial, sans-serif" font-size="21" fill="#155e75">Solver IP retention before settlement</text>
+  <text x="96" y="594" font-family="Arial, sans-serif" font-size="18" fill="#475569">Audit digest: c7c35bb08c9f054b9d2aa0cb12106eb627f7fa4d58473b66...</text>
+</svg>

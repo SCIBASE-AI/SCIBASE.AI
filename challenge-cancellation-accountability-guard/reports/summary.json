@@ -1,0 +1,132 @@
+{
+  "status": "hold_cancellation_close",
+  "totals": {
+    "challenges": 3,
+    "heldChallenges": 1,
+    "readyChallenges": 2,
+    "solverTeams": 5,
+    "totalFundedCents": 5100000,
+    "compensationShortfallCents": 180000,
+    "criticalCount": 4,
+    "warningCount": 2
+  },
+  "challengeSummaries": [
+    {
+      "id": "sci-bio-forecast-2026",
+      "title": "Biomarker forecast challenge",
+      "decision": "hold_cancellation",
+      "solverCount": 2,
+      "notifiedCount": 1,
+      "reviewedCount": 0,
+      "ipSafeCount": 1,
+      "fundedCents": 1200000,
+      "compensationReleasedCents": 0,
+      "compensationShortfallCents": 180000,
+      "appealWindowDays": 2,
+      "blockerCodes": [
+        "missing_cancellation_reason_evidence",
+        "solver_notification_gap",
+        "refund_requested_before_appeal_window",
+        "solver_ip_not_retained"
+      ],
+      "warningCodes": [
+        "partial_work_compensation_shortfall",
+        "appeal_window_too_short"
+      ]
+    },
+    {
+      "id": "quantum-noise-round",
+      "title": "Quantum noise reduction prototype",
+      "decision": "ready_for_close",
+      "solverCount": 2,
+      "notifiedCount": 2,
+      "reviewedCount": 2,
+      "ipSafeCount": 2,
+      "fundedCents": 3000000,
+      "compensationReleasedCents": 600000,
+      "compensationShortfallCents": 0,
+      "appealWindowDays": 12,
+      "blockerCodes": [],
+      "warningCodes": []
+    },
+    {
+      "id": "materials-screening",
+      "title": "Materials screening holdout model",
+      "decision": "ready_for_close",
+      "solverCount": 1,
+      "notifiedCount": 1,
+      "reviewedCount": 1,
+      "ipSafeCount": 1,
+      "fundedCents": 900000,
+      "compensationReleasedCents": 180000,
+      "compensationShortfallCents": 0,
+      "appealWindowDays": 11,
+      "blockerCodes": [],
+      "warningCodes": []
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "code": "missing_cancellation_reason_evidence",
+      "challengeId": "sci-bio-forecast-2026",
+      "message": "Cancellation/no-award decision is missing required sponsor, review, or finance evidence.",
+      "evidence": {
+        "missingReasonEvidence": [
+          "review_minutes"
+        ]
+      }
+    },
+    {
+      "severity": "critical",
+      "code": "refund_requested_before_appeal_window",
+      "challengeId": "sci-bio-forecast-2026",
+      "message": "Sponsor refund is requested before the minimum appeal window has elapsed.",
+      "evidence": {
+        "appealWindowDays": 2,
+        "refundRequestedCents": 900000
+      }
+    },
+    {
+      "severity": "critical",
+      "code": "solver_ip_not_retained",
+      "challengeId": "sci-bio-forecast-2026",
+      "message": "Solver IP is exposed or transferred before settlement and cancellation close.",
+      "evidence": {
+        "solverCount": 2,
+        "ipSafeCount": 1
+      }
+    },
+    {
+      "severity": "critical",
+      "code": "solver_notification_gap",
+      "challengeId": "sci-bio-forecast-2026",
+      "message": "Not every solver team has a cancellation/no-award notice before escrow or IP decisions.",
+      "evidence": {
+        "solverCount": 2,
+        "notifiedCount": 1
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "appeal_window_too_short",
+      "challengeId": "sci-bio-forecast-2026",
+      "message": "Appeal window is shorter than the configured minimum.",
+      "evidence": {
+        "appealWindowDays": 2,
+        "minimumAppealWindowDays": 7
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "partial_work_compensation_shortfall",
+      "challengeId": "sci-bio-forecast-2026",
+      "message": "Released compensation is below the configured floor for started solver work.",
+      "evidence": {
+        "minimumCompensationCents": 180000,
+        "releasedCents": 0
+      }
+    }
+  ],
+  "auditDigest": "c7c35bb08c9f054b9d2aa0cb12106eb627f7fa4d58473b6629c70eeb9afe2c92"
+}

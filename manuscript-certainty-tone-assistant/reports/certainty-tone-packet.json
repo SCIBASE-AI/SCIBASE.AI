@@ -1,0 +1,332 @@
+{
+  "generatedAt": "2026-05-22T20:00:00.000Z",
+  "assistant": "manuscript-certainty-tone-assistant",
+  "issue": "SCIBASE-AI/SCIBASE.AI#13",
+  "summary": {
+    "totalManuscripts": 4,
+    "pass": 1,
+    "revise": 1,
+    "hold": 2,
+    "totalClaims": 4,
+    "totalBlockers": 5,
+    "totalWarnings": 9
+  },
+  "decisions": [
+    {
+      "id": "MT-PASS-001",
+      "title": "Calibrated language for randomized medication adherence trial",
+      "field": "clinical informatics",
+      "status": "pass",
+      "summary": {
+        "claims": 1,
+        "passedClaims": 1,
+        "claimsNeedingRevision": 0,
+        "heldClaims": 0,
+        "blockers": 0,
+        "warnings": 0
+      },
+      "claimDecisions": [
+        {
+          "id": "CLM-1",
+          "section": "Results",
+          "intent": "causal",
+          "text": "The intervention may reduce missed medication reminders in this cohort.",
+          "status": "pass",
+          "suggestedTone": "The intervention may reduce missed medication reminders in this cohort.",
+          "evidenceStrengths": [
+            "randomized-controlled",
+            "controlled-experiment"
+          ],
+          "findings": [],
+          "auditDigest": "dbeb684bb327150322ab80d9160f35275fd581ccc1a085656999beaa1bde7f59"
+        }
+      ],
+      "reviewerActions": [],
+      "auditDigest": "7c41cd3da852392ef2c662b75f5ff99d4b991f269db9894877bbc2db21581579"
+    },
+    {
+      "id": "MT-HOLD-002",
+      "title": "Observational nutrition dashboard draft",
+      "field": "public health",
+      "status": "hold",
+      "summary": {
+        "claims": 1,
+        "passedClaims": 0,
+        "claimsNeedingRevision": 0,
+        "heldClaims": 1,
+        "blockers": 3,
+        "warnings": 4
+      },
+      "claimDecisions": [
+        {
+          "id": "CLM-2",
+          "section": "Abstract",
+          "intent": "causal",
+          "text": "The dashboard proves the intervention eliminates readmission risk for all patients.",
+          "status": "hold",
+          "suggestedTone": "The dashboard is associated with the intervention may reduce readmission risk for all patients.",
+          "evidenceStrengths": [
+            "observational"
+          ],
+          "findings": [
+            {
+              "code": "CAUSAL_LANGUAGE_UNDERPOWERED",
+              "severity": "blocker",
+              "message": "Causal language is stronger than the linked study design supports.",
+              "detail": {
+                "claimId": "CLM-2",
+                "evidenceKinds": [
+                  "observational"
+                ],
+                "requiredRank": 5
+              }
+            },
+            {
+              "code": "DEFINITIVE_TONE_UNSUPPORTED",
+              "severity": "blocker",
+              "message": "Definitive manuscript wording is not supported by high-strength evidence.",
+              "detail": {
+                "claimId": "CLM-2",
+                "evidenceKinds": [
+                  "observational"
+                ]
+              }
+            },
+            {
+              "code": "UNIVERSAL_SCOPE_NOT_REPLICATED",
+              "severity": "warning",
+              "message": "Universal or population-wide wording needs more replication context.",
+              "detail": {
+                "claimId": "CLM-2",
+                "contexts": [
+                  "single-hospital"
+                ]
+              }
+            },
+            {
+              "code": "BROAD_SCOPE_SAMPLE_TOO_SMALL",
+              "severity": "warning",
+              "message": "Broad population wording is not matched by the sample size.",
+              "detail": {
+                "claimId": "CLM-2",
+                "sampleSize": 47,
+                "requiredSample": 120
+              }
+            },
+            {
+              "code": "SIGNIFICANCE_LANGUAGE_CONFLICT",
+              "severity": "blocker",
+              "message": "Manuscript says the result is significant but the p-value is not below the policy alpha.",
+              "detail": {
+                "claimId": "CLM-2",
+                "pValue": 0.08,
+                "alpha": 0.05
+              }
+            },
+            {
+              "code": "UNCERTAINTY_LANGUAGE_MISSING",
+              "severity": "warning",
+              "message": "Lower-strength evidence should use calibrated uncertainty language.",
+              "detail": {
+                "claimId": "CLM-2",
+                "evidenceKinds": [
+                  "observational"
+                ]
+              }
+            },
+            {
+              "code": "LIMITATION_LINK_MISSING",
+              "severity": "warning",
+              "message": "Strongly worded claim should link to a limitation or boundary note.",
+              "detail": {
+                "claimId": "CLM-2"
+              }
+            }
+          ],
+          "auditDigest": "1f6ee76f1b5f405fd53e1901c5b2fc0b2d9ad28983d58179fd1debfb909426ef"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "CALIBRATE_STRONG_CLAIMS",
+          "owner": "author",
+          "message": "Rewrite causal or definitive statements to match the study design and evidence strength."
+        },
+        {
+          "code": "REPAIR_STATISTICAL_TONE",
+          "owner": "statistics-reviewer",
+          "message": "Align significance language with reported tests, alpha threshold, and uncertainty intervals."
+        },
+        {
+          "code": "NARROW_POPULATION_SCOPE",
+          "owner": "domain-reviewer",
+          "message": "Limit population-wide language to the studied cohort or add replication evidence."
+        },
+        {
+          "code": "ADD_LIMITATIONS_AND_HEDGING",
+          "owner": "author",
+          "message": "Add limitation anchors and calibrated uncertainty language for lower-strength evidence."
+        }
+      ],
+      "auditDigest": "29968f13189fb1e1beb70e589da8df9a7fb35cf286f6fabc6fe094ace033cb7c"
+    },
+    {
+      "id": "MT-REV-003",
+      "title": "Pilot assay automation manuscript",
+      "field": "bioengineering",
+      "status": "revise",
+      "summary": {
+        "claims": 1,
+        "passedClaims": 0,
+        "claimsNeedingRevision": 1,
+        "heldClaims": 0,
+        "blockers": 0,
+        "warnings": 2
+      },
+      "claimDecisions": [
+        {
+          "id": "CLM-3",
+          "section": "Discussion",
+          "intent": "associational",
+          "text": "The workflow shows a significant improvement in calibration throughput for researchers.",
+          "status": "revise",
+          "suggestedTone": "The workflow shows a significant improvement in calibration throughput for researchers. Boundary: this statement should be limited to the studied cohort and replication settings.",
+          "evidenceStrengths": [
+            "controlled-experiment"
+          ],
+          "findings": [
+            {
+              "code": "BROAD_SCOPE_SAMPLE_TOO_SMALL",
+              "severity": "warning",
+              "message": "Broad population wording is not matched by the sample size.",
+              "detail": {
+                "claimId": "CLM-3",
+                "sampleSize": 32,
+                "requiredSample": 120
+              }
+            },
+            {
+              "code": "UNCERTAINTY_INTERVAL_MISSING",
+              "severity": "warning",
+              "message": "Significance wording should include a confidence or credible interval for calibration.",
+              "detail": {
+                "claimId": "CLM-3"
+              }
+            }
+          ],
+          "auditDigest": "01449394f0202dbf0a877b514280e0bc1401995a50dbfe5a5164513b49c015af"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "REPAIR_STATISTICAL_TONE",
+          "owner": "statistics-reviewer",
+          "message": "Align significance language with reported tests, alpha threshold, and uncertainty intervals."
+        },
+        {
+          "code": "NARROW_POPULATION_SCOPE",
+          "owner": "domain-reviewer",
+          "message": "Limit population-wide language to the studied cohort or add replication evidence."
+        }
+      ],
+      "auditDigest": "5797f1a5b24209e619a96f3a0fa58ec43c06a2d4047336cd5f74753988672687"
+    },
+    {
+      "id": "MT-HOLD-004",
+      "title": "Citation-free AI literature overview",
+      "field": "machine learning",
+      "status": "hold",
+      "summary": {
+        "claims": 1,
+        "passedClaims": 0,
+        "claimsNeedingRevision": 0,
+        "heldClaims": 1,
+        "blockers": 2,
+        "warnings": 3
+      },
+      "claimDecisions": [
+        {
+          "id": "CLM-4",
+          "section": "Key findings",
+          "intent": "summative",
+          "text": "The method definitively settles benchmark uncertainty across every model family.",
+          "status": "hold",
+          "suggestedTone": "The method with current evidence settles benchmark uncertainty across every model family.",
+          "evidenceStrengths": [],
+          "findings": [
+            {
+              "code": "CLAIM_EVIDENCE_MISSING",
+              "severity": "blocker",
+              "message": "Claim has no linked evidence span.",
+              "detail": {
+                "claimId": "CLM-4"
+              }
+            },
+            {
+              "code": "DEFINITIVE_TONE_UNSUPPORTED",
+              "severity": "blocker",
+              "message": "Definitive manuscript wording is not supported by high-strength evidence.",
+              "detail": {
+                "claimId": "CLM-4",
+                "evidenceKinds": []
+              }
+            },
+            {
+              "code": "UNIVERSAL_SCOPE_NOT_REPLICATED",
+              "severity": "warning",
+              "message": "Universal or population-wide wording needs more replication context.",
+              "detail": {
+                "claimId": "CLM-4",
+                "contexts": []
+              }
+            },
+            {
+              "code": "UNCERTAINTY_LANGUAGE_MISSING",
+              "severity": "warning",
+              "message": "Lower-strength evidence should use calibrated uncertainty language.",
+              "detail": {
+                "claimId": "CLM-4",
+                "evidenceKinds": []
+              }
+            },
+            {
+              "code": "LIMITATION_LINK_MISSING",
+              "severity": "warning",
+              "message": "Strongly worded claim should link to a limitation or boundary note.",
+              "detail": {
+                "claimId": "CLM-4"
+              }
+            }
+          ],
+          "auditDigest": "74b6bf15fae267a68055929ec490e66bac8f0b322801d64c40e714026a51f3fc"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "code": "ADD_EVIDENCE_ANCHORS",
+          "owner": "author",
+          "message": "Link every strong manuscript claim to source evidence spans before AI review signoff."
+        },
+        {
+          "code": "CALIBRATE_STRONG_CLAIMS",
+          "owner": "author",
+          "message": "Rewrite causal or definitive statements to match the study design and evidence strength."
+        },
+        {
+          "code": "NARROW_POPULATION_SCOPE",
+          "owner": "domain-reviewer",
+          "message": "Limit population-wide language to the studied cohort or add replication evidence."
+        },
+        {
+          "code": "ADD_LIMITATIONS_AND_HEDGING",
+          "owner": "author",
+          "message": "Add limitation anchors and calibrated uncertainty language for lower-strength evidence."
+        }
+      ],
+      "auditDigest": "7ab033902bc2057a65ee8fa87dafda7238cb623f3466d1486a02ce47bf8cb0d7"
+    }
+  ],
+  "audit": {
+    "digest": "c7c97bc2d4fd068a989c3d30c82a0858f42d97d7ea3a51b6829d7064e8f76a1a"
+  }
+}

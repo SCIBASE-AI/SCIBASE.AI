@@ -1,0 +1,41 @@
+const assert = require("node:assert/strict")
+const { evaluateManuscript, evaluatePortfolio } = require("./index")
+const { manuscripts, tonePolicy } = require("./sample-data")
+
+const packet = evaluatePortfolio({ manuscripts, policy: tonePolicy })
+
+assert.equal(packet.summary.totalManuscripts, 4)
+assert.equal(packet.summary.pass, 1)
+assert.equal(packet.summary.revise, 1)
+assert.equal(packet.summary.hold, 2)
+assert.equal(packet.summary.totalClaims, 4)
+assert.equal(packet.summary.totalBlockers, 5)
+assert.equal(packet.summary.totalWarnings, 9)
+assert.match(packet.audit.digest, /^[a-f0-9]{64}$/)
+
+const pass = packet.decisions.find((decision) => decision.id === "MT-PASS-001")
+assert.equal(pass.status, "pass")
+assert.equal(pass.summary.passedClaims, 1)
+assert.equal(pass.reviewerActions.length, 0)
+
+const overclaim = evaluateManuscript(manuscripts.find((item) => item.id === "MT-HOLD-002"), tonePolicy)
+assert.equal(overclaim.status, "hold")
+assert.ok(overclaim.claimDecisions[0].findings.some((finding) => finding.code === "CAUSAL_LANGUAGE_UNDERPOWERED"))
+assert.ok(overclaim.claimDecisions[0].findings.some((finding) => finding.code === "DEFINITIVE_TONE_UNSUPPORTED"))
+assert.ok(overclaim.claimDecisions[0].findings.some((finding) => finding.code === "SIGNIFICANCE_LANGUAGE_CONFLICT"))
+assert.ok(overclaim.claimDecisions[0].findings.some((finding) => finding.code === "BROAD_SCOPE_SAMPLE_TOO_SMALL"))
+assert.ok(overclaim.reviewerActions.some((action) => action.code === "CALIBRATE_STRONG_CLAIMS"))
+
+const pilot = packet.decisions.find((decision) => decision.id === "MT-REV-003")
+assert.equal(pilot.status, "revise")
+assert.ok(pilot.claimDecisions[0].findings.some((finding) => finding.code === "UNCERTAINTY_INTERVAL_MISSING"))
+assert.ok(pilot.claimDecisions[0].findings.some((finding) => finding.code === "BROAD_SCOPE_SAMPLE_TOO_SMALL"))
+assert.equal(pilot.reviewerActions[0].code, "REPAIR_STATISTICAL_TONE")
+
+const unsupported = packet.decisions.find((decision) => decision.id === "MT-HOLD-004")
+assert.equal(unsupported.status, "hold")
+assert.ok(unsupported.claimDecisions[0].findings.some((finding) => finding.code === "CLAIM_EVIDENCE_MISSING"))
+assert.ok(unsupported.claimDecisions[0].findings.some((finding) => finding.code === "DEFINITIVE_TONE_UNSUPPORTED"))
+assert.ok(unsupported.reviewerActions.some((action) => action.code === "ADD_EVIDENCE_ANCHORS"))
+
+console.log("manuscript-certainty-tone-assistant tests passed")

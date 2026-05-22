@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <style>
+    .bg{fill:#111827}
+    .panel{fill:#f8fafc}
+    .title{font:700 34px Arial,sans-serif;fill:#0f172a}
+    .meta{font:400 18px Arial,sans-serif;fill:#475569}
+    .label{font:600 20px Arial,sans-serif;fill:#1e293b}
+    .value{font:700 20px Arial,sans-serif;fill:#0f172a}
+    .bar{fill:#10b981}
+    .digest{font:400 15px monospace;fill:#334155}
+  </style>
+  <rect class="bg" width="960" height="540"/>
+  <rect class="panel" x="28" y="28" width="904" height="484" rx="16"/>
+  <text x="58" y="82" class="title">Analytics API License Usage Guard</text>
+  <text x="58" y="116" class="meta">Requests 7 | Billable units 120</text>
+  <text x="58" y="177" class="label">allow</text>
+  <rect x="256" y="154" width="92" height="28" rx="5" class="bar"/>
+  <text x="360" y="176" class="value">1</text>
+  <text x="58" y="223" class="label">block</text>
+  <rect x="256" y="200" width="368" height="28" rx="5" class="bar"/>
+  <text x="636" y="222" class="value">4</text>
+  <text x="58" y="269" class="label">throttle</text>
+  <rect x="256" y="246" width="184" height="28" rx="5" class="bar"/>
+  <text x="452" y="268" class="value">2</text>
+  <text x="58" y="482" class="digest">audit 56f75fde23be7ba664e9e122c1c43530a39beeb8dc3bb96d</text>
+</svg>

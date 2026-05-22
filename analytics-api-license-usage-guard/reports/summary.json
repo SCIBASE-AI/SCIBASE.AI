@@ -1,0 +1,131 @@
+{
+  "asOf": "2026-05-22T12:00:00.000Z",
+  "totals": {
+    "totalRequests": 7,
+    "billableUnits": 120,
+    "byStatus": {
+      "allow": 1,
+      "block": 4,
+      "throttle": 2
+    }
+  },
+  "decisions": [
+    {
+      "id": "query-001",
+      "customerId": "cust-nih-policy",
+      "dataset": "citation_networks",
+      "topic": "public_health",
+      "queryUnits": 120,
+      "billableUnits": 120,
+      "status": "allow",
+      "reasons": [
+        "query is inside license, privacy, quota, and burst limits"
+      ],
+      "actions": [
+        "Serve anonymized analytics response",
+        "Record billable usage units"
+      ]
+    },
+    {
+      "id": "query-002",
+      "customerId": "cust-market-intel",
+      "dataset": "dataset_reuse",
+      "topic": "biotech",
+      "queryUnits": 70,
+      "billableUnits": 0,
+      "status": "block",
+      "reasons": [
+        "dataset is not included in the licensed analytics package"
+      ],
+      "actions": [
+        "Block analytics response",
+        "Log revenue and privacy audit event",
+        "Show permitted datasets, topics, and anonymization requirements"
+      ]
+    },
+    {
+      "id": "query-003",
+      "customerId": "cust-market-intel",
+      "dataset": "topic_trends",
+      "topic": "biotech",
+      "queryUnits": 60,
+      "billableUnits": 0,
+      "status": "block",
+      "reasons": [
+        "cohort size is below anonymization threshold"
+      ],
+      "actions": [
+        "Block analytics response",
+        "Log revenue and privacy audit event",
+        "Show permitted datasets, topics, and anonymization requirements"
+      ]
+    },
+    {
+      "id": "query-004",
+      "customerId": "cust-market-intel",
+      "dataset": "method_usage",
+      "topic": "materials",
+      "queryUnits": 40,
+      "billableUnits": 0,
+      "status": "throttle",
+      "reasons": [
+        "request burst exceeds licensed per-minute API limit"
+      ],
+      "actions": [
+        "Throttle query before execution",
+        "Preserve request for API usage dashboard"
+      ]
+    },
+    {
+      "id": "query-005",
+      "customerId": "cust-market-intel",
+      "dataset": "method_usage",
+      "topic": "materials",
+      "queryUnits": 75,
+      "billableUnits": 0,
+      "status": "throttle",
+      "reasons": [
+        "monthly query quota would be exceeded and overage is not authorized"
+      ],
+      "actions": [
+        "Throttle query until renewal or account approval",
+        "Offer overage authorization workflow"
+      ]
+    },
+    {
+      "id": "query-006",
+      "customerId": "cust-expired-consortium",
+      "dataset": "citation_networks",
+      "topic": "open_science",
+      "queryUnits": 35,
+      "billableUnits": 0,
+      "status": "block",
+      "reasons": [
+        "analytics API license is inactive"
+      ],
+      "actions": [
+        "Block analytics response",
+        "Log revenue and privacy audit event",
+        "Show permitted datasets, topics, and anonymization requirements"
+      ]
+    },
+    {
+      "id": "query-007",
+      "customerId": "cust-nih-policy",
+      "dataset": "dataset_reuse",
+      "topic": "grant_outcomes",
+      "queryUnits": 130,
+      "billableUnits": 0,
+      "status": "block",
+      "reasons": [
+        "query attempts to access private content rather than anonymized metadata"
+      ],
+      "actions": [
+        "Block analytics response",
+        "Log revenue and privacy audit event",
+        "Show permitted datasets, topics, and anonymization requirements"
+      ]
+    }
+  ],
+  "auditDigest": "56f75fde23be7ba664e9e122c1c43530a39beeb8dc3bb96db3981a20cff230f5"
+}

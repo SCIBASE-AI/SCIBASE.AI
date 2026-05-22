@@ -1,0 +1,11 @@
+{
+  "name": "reporting-guideline-compliance-assistant",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check demo.js && node --check test.js",
+    "test": "node --test test.js",
+    "demo": "node demo.js"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "averageScore": 54,
+  "readyCount": 0,
+  "packets": [
+    {
+      "manuscriptId": "trial-omega-sleep",
+      "title": "Omega Sleep Digital Coaching for Insomnia: A Randomized Trial",
+      "studyDesign": "clinical-trial",
+      "readinessScore": 62,
+      "readiness": "needs-guideline-rework",
+      "summaries": {
+        "abstract": "A mobile coaching intervention improved sleep scores in adults with insomnia. The manuscript reports the primary endpoint and adverse event monitoring. Reporting-guideline readiness score: 62/100.",
+        "executive": "The draft needs targeted reporting updates before submission: consort-allocation, data-availability.",
+        "layperson": "The draft is missing some checklist details that help readers trust how the study was planned, analyzed, and reported."
+      },
+      "findings": [
+        {
+          "id": "consort-allocation",
+          "guideline": "CONSORT",
+          "section": "methods",
+          "severity": "high",
+          "status": "fail",
+          "matchedTerms": [],
+          "message": "Describe allocation concealment so readers can assess selection-bias risk.",
+          "reviewerAction": "Describe allocation concealment so readers can assess selection-bias risk.",
+          "citationRecommendation": {
+            "key": "consort-2010",
+            "guideline": "CONSORT",
+            "apa": "Schulz KF, Altman DG, Moher D (2010). CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials. https://www.consort-statement.org/",
+            "nature": "Schulz KF, Altman DG, Moher D. CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials. (2010)."
+          }
+        },
+        {
+          "id": "consort-flow",
+          "guideline": "CONSORT",
+          "section": "results",
+          "severity": "medium",
+          "status": "pass",
+          "matchedTerms": [
+            "flow diagram",
+            "participant flow"
+          ],
+          "message": "Add participant flow counts or a flow diagram.",
+          "reviewerAction": "Keep results language for consort-flow explicit.",
+          "citationRecommendation": {
+            "key": "consort-2010",
+            "guideline": "CONSORT",
+            "apa": "Schulz KF, Altman DG, Moher D (2010). CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials. https://www.consort-statement.org/",
+            "nature": "Schulz KF, Altman DG, Moher D. CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials. (2010)."
+          }
+        },
+        {
+          "id": "registration",
+          "guideline": "cross-guideline",
+          "section": "methods",
+          "severity": "high",
+          "status": "pass",
+          "matchedTerms": [
+            "registry",
+            "nct"
+          ],
+          "message": "Add a registry identifier or explain why registration was not applicable.",
+          "reviewerAction": "Keep methods language for registration explicit.",
+          "citationRecommendation": null
+        },
+        {
+          "id": "data-availability",
+          "guideline": "cross-guideline",
+          "section": "discussion",
+          "severity": "medium",
+          "status": "fail",
+          "matchedTerms": [],
+          "message": "Add data and code availability language before submission.",
+          "reviewerAction": "Add data and code availability language before submission.",
+          "citationRecommendation": null
+        }
+      ],
+      "citationRecommendations": [
+        {
+          "key": "consort-2010",
+          "guideline": "CONSORT",
+          "apa": "Schulz KF, Altman DG, Moher D (2010). CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials. https://www.consort-statement.org/",
+          "nature": "Schulz KF, Altman DG, Moher D. CONSORT 2010 Statement: updated guidelines for reporting parallel group randomised trials. (2010)."
+        }
+      ]
+    },
+    {
+      "manuscriptId": "review-cardio-ai",
+      "title": "AI Triage for Cardiology Referrals: A Systematic Review",
+      "studyDesign": "systematic-review",
+      "readinessScore": 38,
+      "readiness": "needs-guideline-rework",
+      "summaries": {
+        "abstract": "This review summarizes diagnostic triage models for cardiology referrals and compares reported performance across clinical settings. Reporting-guideline readiness score: 38/100.",
+        "executive": "The draft needs targeted reporting updates before submission: prisma-screening, registration, data-availability.",
+        "layperson": "The draft is missing some checklist details that help readers trust how the study was planned, analyzed, and reported."
+      },
+      "findings": [
+        {
+          "id": "prisma-search",
+          "guideline": "PRISMA",
+          "section": "methods",
+          "severity": "high",
+          "status": "pass",
+          "matchedTerms": [
+            "search",
+            "searched"
+          ],
+          "message": "Report complete search sources, dates, and query details.",
+          "reviewerAction": "Keep methods language for prisma-search explicit.",
+          "citationRecommendation": {
+            "key": "prisma-2020",
+            "guideline": "PRISMA",
+            "apa": "Page MJ, McKenzie JE, Bossuyt PM (2021). PRISMA 2020 statement: an updated guideline for reporting systematic reviews. https://www.prisma-statement.org/",
+            "nature": "Page MJ, McKenzie JE, Bossuyt PM. PRISMA 2020 statement: an updated guideline for reporting systematic reviews. (2021)."
+          }
+        },
+        {
+          "id": "prisma-screening",
+          "guideline": "PRISMA",
+          "section": "results",
+          "severity": "high",
+          "status": "fail",
+          "matchedTerms": [],
+          "message": "Report screening counts for records identified, excluded, and included.",
+          "reviewerAction": "Report screening counts for records identified, excluded, and included.",
+          "citationRecommendation": {
+            "key": "prisma-2020",
+            "guideline": "PRISMA",
+            "apa": "Page MJ, McKenzie JE, Bossuyt PM (2021). PRISMA 2020 statement: an updated guideline for reporting systematic reviews. https://www.prisma-statement.org/",
+            "nature": "Page MJ, McKenzie JE, Bossuyt PM. PRISMA 2020 statement: an updated guideline for reporting systematic reviews. (2021)."
+          }
+        },
+        {
+          "id": "registration",
+          "guideline": "cross-guideline",
+          "section": "methods",
+          "severity": "high",
+          "status": "fail",
+          "matchedTerms": [],
+          "message": "Add a registry identifier or explain why registration was not applicable.",
+          "reviewerAction": "Add a registry identifier or explain why registration was not applicable.",
+          "citationRecommendation": null
+        },
+        {
+          "id": "data-availability",
+          "guideline": "cross-guideline",
+          "section": "discussion",
+          "severity": "medium",
+          "status": "fail",
+          "matchedTerms": [],
+          "message": "Add data and code availability language before submission.",
+          "reviewerAction": "Add data and code availability language before submission.",
+          "citationRecommendation": null
+        }
+      ],
+      "citationRecommendations": [
+        {
+          "key": "prisma-2020",
+          "guideline": "PRISMA",
+          "apa": "Page MJ, McKenzie JE, Bossuyt PM (2021). PRISMA 2020 statement: an updated guideline for reporting systematic reviews. https://www.prisma-statement.org/",
+          "nature": "Page MJ, McKenzie JE, Bossuyt PM. PRISMA 2020 statement: an updated guideline for reporting systematic reviews. (2021)."
+        }
+      ]
+    },
+    {
+      "manuscriptId": "cohort-lab-glucose",
+      "title": "Continuous Glucose Monitoring Alerts in Primary Care: A Cohort Study",
+      "studyDesign": "observational",
+      "readinessScore": 62,
+      "readiness": "needs-guideline-rework",
+      "summaries": {
+        "abstract": "A retrospective cohort study compared alert burden and follow-up testing after continuous glucose monitoring deployment. Reporting-guideline readiness score: 62/100.",
+        "executive": "The draft needs targeted reporting updates before submission: strobe-confounders, data-availability.",
+        "layperson": "The draft is missing some checklist details that help readers trust how the study was planned, analyzed, and reported."
+      },
+      "findings": [
+        {
+          "id": "strobe-setting",
+          "guideline": "STROBE",
+          "section": "methods",
+          "severity": "medium",
+          "status": "pass",
+          "matchedTerms": [
+            "clinic",
+            "eligibility"
+          ],
+          "message": "Describe setting, location, eligibility, and relevant dates.",
+          "reviewerAction": "Keep methods language for strobe-setting explicit.",
+          "citationRecommendation": {
+            "key": "strobe-2007",
+            "guideline": "STROBE",
+            "apa": "von Elm E, Altman DG, Egger M (2007). The STROBE statement: guidelines for reporting observational studies. https://www.strobe-statement.org/",
+            "nature": "von Elm E, Altman DG, Egger M. The STROBE statement: guidelines for reporting observational studies. (2007)."
+          }
+        },
+        {
+          "id": "strobe-confounders",
+          "guideline": "STROBE",
+          "section": "methods",
+          "severity": "high",
+          "status": "fail",
+          "matchedTerms": [],
+          "message": "Define confounders and adjustment variables before interpreting associations.",
+          "reviewerAction": "Define confounders and adjustment variables before interpreting associations.",
+          "citationRecommendation": {
+            "key": "strobe-2007",
+            "guideline": "STROBE",
+            "apa": "von Elm E, Altman DG, Egger M (2007). The STROBE statement: guidelines for reporting observational studies. https://www.strobe-statement.org/",
+            "nature": "von Elm E, Altman DG, Egger M. The STROBE statement: guidelines for reporting observational studies. (2007)."
+          }
+        },
+        {
+          "id": "data-availability",
+          "guideline": "cross-guideline",
+          "section": "discussion",
+          "severity": "medium",
+          "status": "fail",
+          "matchedTerms": [],
+          "message": "Add data and code availability language before submission.",
+          "reviewerAction": "Add data and code availability language before submission.",
+          "citationRecommendation": null
+        }
+      ],
+      "citationRecommendations": [
+        {
+          "key": "strobe-2007",
+          "guideline": "STROBE",
+          "apa": "von Elm E, Altman DG, Egger M (2007). The STROBE statement: guidelines for reporting observational studies. https://www.strobe-statement.org/",
+          "nature": "von Elm E, Altman DG, Egger M. The STROBE statement: guidelines for reporting observational studies. (2007)."
+        }
+      ]
+    }
+  ]
+}

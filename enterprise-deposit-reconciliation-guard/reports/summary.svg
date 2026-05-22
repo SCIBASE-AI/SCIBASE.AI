@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise repository deposit reconciliation summary</title>
+  <desc id="desc">Summary of repository deposit reconciliation outcomes for enterprise exports.</desc>
+  <rect width="920" height="520" fill="#f7f4ee"/>
+  <rect x="40" y="40" width="840" height="440" rx="8" fill="#ffffff" stroke="#24292f" stroke-width="2"/>
+  <text x="80" y="105" fill="#24292f" font-size="31" font-family="Arial, sans-serif" font-weight="700">Repository deposit reconciliation</text>
+  <text x="80" y="145" fill="#9f2f2f" font-size="22" font-family="Arial, sans-serif" font-weight="700">hold_repository_reconciliation</text>
+  <rect x="80" y="169" width="210" height="92" rx="6" fill="#f8fafc" stroke="#d0d7de"/>
+  <text x="100" y="205" fill="#57606a" font-size="17" font-family="Arial, sans-serif">Targets</text>
+  <text x="100" y="243" fill="#24292f" font-size="35" font-family="Arial, sans-serif" font-weight="700">3</text>
+  <rect x="345" y="169" width="210" height="92" rx="6" fill="#f8fafc" stroke="#d0d7de"/>
+  <text x="365" y="205" fill="#57606a" font-size="17" font-family="Arial, sans-serif">Verified</text>
+  <text x="365" y="243" fill="#24292f" font-size="35" font-family="Arial, sans-serif" font-weight="700">1</text>
+  <rect x="610" y="169" width="210" height="92" rx="6" fill="#f8fafc" stroke="#d0d7de"/>
+  <text x="630" y="205" fill="#57606a" font-size="17" font-family="Arial, sans-serif">Follow up</text>
+  <text x="630" y="243" fill="#24292f" font-size="35" font-family="Arial, sans-serif" font-weight="700">1</text>
+  <rect x="80" y="299" width="210" height="92" rx="6" fill="#f8fafc" stroke="#d0d7de"/>
+  <text x="100" y="335" fill="#57606a" font-size="17" font-family="Arial, sans-serif">Held</text>
+  <text x="100" y="373" fill="#24292f" font-size="35" font-family="Arial, sans-serif" font-weight="700">1</text>
+  <rect x="345" y="299" width="210" height="92" rx="6" fill="#f8fafc" stroke="#d0d7de"/>
+  <text x="365" y="335" fill="#57606a" font-size="17" font-family="Arial, sans-serif">Critical</text>
+  <text x="365" y="373" fill="#24292f" font-size="35" font-family="Arial, sans-serif" font-weight="700">9</text>
+  <rect x="610" y="299" width="210" height="92" rx="6" fill="#f8fafc" stroke="#d0d7de"/>
+  <text x="630" y="335" fill="#57606a" font-size="17" font-family="Arial, sans-serif">Warnings</text>
+  <text x="630" y="373" fill="#24292f" font-size="35" font-family="Arial, sans-serif" font-weight="700">6</text>
+  <text x="80" y="438" fill="#57606a" font-size="15" font-family="Arial, sans-serif">Audit digest: bf3fb0f7d89935063a9a3c9d</text>
+</svg>

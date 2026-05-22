@@ -1,0 +1,448 @@
+{
+  "summary": {
+    "status": "hold_repository_reconciliation",
+    "generatedAt": "2026-05-21T12:00:00.000Z",
+    "packagesReviewed": 2,
+    "depositTargetsReviewed": 3,
+    "verifiedTargets": 1,
+    "followUpTargets": 1,
+    "heldTargets": 1,
+    "criticalFindings": 9,
+    "warningFindings": 6
+  },
+  "packages": [
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "title": "Single-cell Atlas Reanalysis",
+      "institution": "Northbridge University",
+      "version": "v3.2.0",
+      "status": "hold_repository_reconciliation",
+      "targets": [
+        {
+          "targetId": "zenodo-cell-atlas",
+          "repository": "Zenodo",
+          "receiptId": "zenodo-rcpt-8812",
+          "persistentId": "10.5281/zenodo.998877",
+          "indexedAt": "2026-05-20T14:08:00.000Z",
+          "status": "verified",
+          "findings": []
+        },
+        {
+          "targetId": "dspace-cell-atlas",
+          "repository": "DSpace Institutional Repository",
+          "receiptId": "dspace-rcpt-5520",
+          "persistentId": "hdl:10022/cell-atlas/draft",
+          "indexedAt": "2026-05-20T15:20:00.000Z",
+          "status": "hold",
+          "findings": [
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "persistent_identifier_mismatch",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository returned a DOI/handle/accession that does not match the export request.",
+              "evidence": {
+                "expected": "hdl:10022/cell-atlas/v3.2.0",
+                "received": "hdl:10022/cell-atlas/draft",
+                "receiptId": "dspace-rcpt-5520"
+              },
+              "action": "Do not mark the export complete until the repository record points at the intended identifier."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "repository_version_mismatch",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository indexed a different project version than the submitted package.",
+              "evidence": {
+                "submittedVersion": "v3.2.0",
+                "repositoryVersion": "v3.1.0"
+              },
+              "action": "Reconcile the repository record or redeposit the exact version before reporting compliance."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "artifact_checksum_mismatch",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository received a file whose checksum differs from the submitted package.",
+              "evidence": {
+                "path": "code/reproduce.py",
+                "expectedSha256": "38df9b77b79f84425dd3d18a31b5420bcb2a58cf747b4b91f9f867df36d82068",
+                "receivedSha256": "00009b77b79f84425dd3d18a31b5420bcb2a58cf747b4b91f9f867df36d82068"
+              },
+              "action": "Hold publication credit until the repository file is replaced or the package version is corrected."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "required_artifact_missing_from_deposit",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository receipt is missing a required artifact.",
+              "evidence": {
+                "path": "manuscript/supplement.pdf",
+                "expectedSha256": "ea7e2b4fd1488dacbbd210f0cd340796551ab192acb62e806ca14181483664cf"
+              },
+              "action": "Re-run the export package and verify that every required artifact appears in the deposit manifest."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "credit_role_missing",
+              "severity": "warning",
+              "message": "DSpace Institutional Repository preserved the contributor but dropped one or more CRediT roles.",
+              "evidence": {
+                "contributor": "Ada Park",
+                "missingRoles": [
+                  "Formal analysis"
+                ]
+              },
+              "action": "Patch the repository metadata so contributor credit remains auditable."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "contributor_orcid_missing",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository did not preserve a required contributor ORCID.",
+              "evidence": {
+                "contributor": "Luis Moreno",
+                "orcid": "0000-0003-3333-4444"
+              },
+              "action": "Update repository metadata before the institutional profile or ORCID sync is marked complete."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "license_metadata_mismatch",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository metadata does not preserve the submitted license.",
+              "evidence": {
+                "expected": "CC-BY-4.0",
+                "received": "CC-BY-NC-4.0"
+              },
+              "action": "Correct the repository license field before downstream reuse or compliance export."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "access_policy_mismatch",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository access status does not match the institutional export policy.",
+              "evidence": {
+                "expected": "public",
+                "received": "restricted"
+              },
+              "action": "Do not certify the export until access, embargo, or restricted-data policy is reconciled."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "funder_open_access_deadline_missed",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository embargo ends after the funder open-access deadline.",
+              "evidence": {
+                "funder": "NIH",
+                "openAccessBy": "2026-06-30",
+                "repositoryEmbargoEnd": "2026-08-15"
+              },
+              "action": "Escalate to the institutional compliance owner before reporting funder compliance."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "metadata_standard_missing",
+              "severity": "warning",
+              "message": "DSpace Institutional Repository is missing required metadata standards for enterprise export reconciliation.",
+              "evidence": {
+                "missingMetadata": [
+                  "schemaOrg"
+                ]
+              },
+              "action": "Patch the repository metadata before syncing the record to institutional dashboards."
+            },
+            {
+              "packageId": "pkg-cell-atlas-2026",
+              "targetId": "dspace-cell-atlas",
+              "code": "webhook_signature_invalid",
+              "severity": "critical",
+              "message": "DSpace Institutional Repository webhook acknowledgement failed signature validation.",
+              "evidence": {
+                "expectedTopic": "repository.deposit.indexed",
+                "deliveredAt": "2026-05-20T15:21:00.000Z",
+                "statusCode": 200
+              },
+              "action": "Treat the acknowledgement as untrusted and require a signed replay or API poll."
+            }
+          ]
+        }
+      ],
+      "criticalFindings": 9,
+      "warningFindings": 2
+    },
+    {
+      "packageId": "pkg-crop-resilience-preprint",
+      "title": "Crop Resilience Preprint Package",
+      "institution": "Westlake Plant Science Institute",
+      "version": "v1.0.0",
+      "status": "needs_repository_follow_up",
+      "targets": [
+        {
+          "targetId": "invenio-crop",
+          "repository": "InvenioRDM",
+          "receiptId": "invenio-rcpt-2041",
+          "persistentId": "10.1234/wpsi.crop.2026.1",
+          "indexedAt": null,
+          "status": "follow_up",
+          "findings": [
+            {
+              "packageId": "pkg-crop-resilience-preprint",
+              "targetId": "invenio-crop",
+              "code": "repository_not_indexed",
+              "severity": "warning",
+              "message": "InvenioRDM accepted the package but has not confirmed indexing yet.",
+              "evidence": {
+                "receiptId": "invenio-rcpt-2041",
+                "status": "accepted"
+              },
+              "action": "Keep the export in follow-up until the indexing webhook or poll result arrives."
+            },
+            {
+              "packageId": "pkg-crop-resilience-preprint",
+              "targetId": "invenio-crop",
+              "code": "credit_role_missing",
+              "severity": "warning",
+              "message": "InvenioRDM preserved the contributor but dropped one or more CRediT roles.",
+              "evidence": {
+                "contributor": "Mira Chen",
+                "missingRoles": [
+                  "Writing - original draft"
+                ]
+              },
+              "action": "Patch the repository metadata so contributor credit remains auditable."
+            },
+            {
+              "packageId": "pkg-crop-resilience-preprint",
+              "targetId": "invenio-crop",
+              "code": "metadata_standard_missing",
+              "severity": "warning",
+              "message": "InvenioRDM is missing required metadata standards for enterprise export reconciliation.",
+              "evidence": {
+                "missingMetadata": [
+                  "schemaOrg"
+                ]
+              },
+              "action": "Patch the repository metadata before syncing the record to institutional dashboards."
+            },
+            {
+              "packageId": "pkg-crop-resilience-preprint",
+              "targetId": "invenio-crop",
+              "code": "webhook_acknowledgement_missing",
+              "severity": "warning",
+              "message": "InvenioRDM has no webhook acknowledgement for the expected export event.",
+              "evidence": {
+                "expectedTopic": "repository.deposit.indexed"
+              },
+              "action": "Poll the repository or replay the webhook before closing the enterprise export task."
+            }
+          ]
+        }
+      ],
+      "criticalFindings": 0,
+      "warningFindings": 4
+    }
+  ],
+  "reviewerActions": [
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "access_policy_mismatch",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository access status does not match the institutional export policy.",
+      "evidence": {
+        "expected": "public",
+        "received": "restricted"
+      },
+      "action": "Do not certify the export until access, embargo, or restricted-data policy is reconciled."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "artifact_checksum_mismatch",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository received a file whose checksum differs from the submitted package.",
+      "evidence": {
+        "path": "code/reproduce.py",
+        "expectedSha256": "38df9b77b79f84425dd3d18a31b5420bcb2a58cf747b4b91f9f867df36d82068",
+        "receivedSha256": "00009b77b79f84425dd3d18a31b5420bcb2a58cf747b4b91f9f867df36d82068"
+      },
+      "action": "Hold publication credit until the repository file is replaced or the package version is corrected."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "contributor_orcid_missing",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository did not preserve a required contributor ORCID.",
+      "evidence": {
+        "contributor": "Luis Moreno",
+        "orcid": "0000-0003-3333-4444"
+      },
+      "action": "Update repository metadata before the institutional profile or ORCID sync is marked complete."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "funder_open_access_deadline_missed",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository embargo ends after the funder open-access deadline.",
+      "evidence": {
+        "funder": "NIH",
+        "openAccessBy": "2026-06-30",
+        "repositoryEmbargoEnd": "2026-08-15"
+      },
+      "action": "Escalate to the institutional compliance owner before reporting funder compliance."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "license_metadata_mismatch",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository metadata does not preserve the submitted license.",
+      "evidence": {
+        "expected": "CC-BY-4.0",
+        "received": "CC-BY-NC-4.0"
+      },
+      "action": "Correct the repository license field before downstream reuse or compliance export."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "persistent_identifier_mismatch",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository returned a DOI/handle/accession that does not match the export request.",
+      "evidence": {
+        "expected": "hdl:10022/cell-atlas/v3.2.0",
+        "received": "hdl:10022/cell-atlas/draft",
+        "receiptId": "dspace-rcpt-5520"
+      },
+      "action": "Do not mark the export complete until the repository record points at the intended identifier."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "repository_version_mismatch",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository indexed a different project version than the submitted package.",
+      "evidence": {
+        "submittedVersion": "v3.2.0",
+        "repositoryVersion": "v3.1.0"
+      },
+      "action": "Reconcile the repository record or redeposit the exact version before reporting compliance."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "required_artifact_missing_from_deposit",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository receipt is missing a required artifact.",
+      "evidence": {
+        "path": "manuscript/supplement.pdf",
+        "expectedSha256": "ea7e2b4fd1488dacbbd210f0cd340796551ab192acb62e806ca14181483664cf"
+      },
+      "action": "Re-run the export package and verify that every required artifact appears in the deposit manifest."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "webhook_signature_invalid",
+      "severity": "critical",
+      "message": "DSpace Institutional Repository webhook acknowledgement failed signature validation.",
+      "evidence": {
+        "expectedTopic": "repository.deposit.indexed",
+        "deliveredAt": "2026-05-20T15:21:00.000Z",
+        "statusCode": 200
+      },
+      "action": "Treat the acknowledgement as untrusted and require a signed replay or API poll."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "credit_role_missing",
+      "severity": "warning",
+      "message": "DSpace Institutional Repository preserved the contributor but dropped one or more CRediT roles.",
+      "evidence": {
+        "contributor": "Ada Park",
+        "missingRoles": [
+          "Formal analysis"
+        ]
+      },
+      "action": "Patch the repository metadata so contributor credit remains auditable."
+    },
+    {
+      "packageId": "pkg-cell-atlas-2026",
+      "targetId": "dspace-cell-atlas",
+      "code": "metadata_standard_missing",
+      "severity": "warning",
+      "message": "DSpace Institutional Repository is missing required metadata standards for enterprise export reconciliation.",
+      "evidence": {
+        "missingMetadata": [
+          "schemaOrg"
+        ]
+      },
+      "action": "Patch the repository metadata before syncing the record to institutional dashboards."
+    },
+    {
+      "packageId": "pkg-crop-resilience-preprint",
+      "targetId": "invenio-crop",
+      "code": "credit_role_missing",
+      "severity": "warning",
+      "message": "InvenioRDM preserved the contributor but dropped one or more CRediT roles.",
+      "evidence": {
+        "contributor": "Mira Chen",
+        "missingRoles": [
+          "Writing - original draft"
+        ]
+      },
+      "action": "Patch the repository metadata so contributor credit remains auditable."
+    },
+    {
+      "packageId": "pkg-crop-resilience-preprint",
+      "targetId": "invenio-crop",
+      "code": "metadata_standard_missing",
+      "severity": "warning",
+      "message": "InvenioRDM is missing required metadata standards for enterprise export reconciliation.",
+      "evidence": {
+        "missingMetadata": [
+          "schemaOrg"
+        ]
+      },
+      "action": "Patch the repository metadata before syncing the record to institutional dashboards."
+    },
+    {
+      "packageId": "pkg-crop-resilience-preprint",
+      "targetId": "invenio-crop",
+      "code": "repository_not_indexed",
+      "severity": "warning",
+      "message": "InvenioRDM accepted the package but has not confirmed indexing yet.",
+      "evidence": {
+        "receiptId": "invenio-rcpt-2041",
+        "status": "accepted"
+      },
+      "action": "Keep the export in follow-up until the indexing webhook or poll result arrives."
+    },
+    {
+      "packageId": "pkg-crop-resilience-preprint",
+      "targetId": "invenio-crop",
+      "code": "webhook_acknowledgement_missing",
+      "severity": "warning",
+      "message": "InvenioRDM has no webhook acknowledgement for the expected export event.",
+      "evidence": {
+        "expectedTopic": "repository.deposit.indexed"
+      },
+      "action": "Poll the repository or replay the webhook before closing the enterprise export task."
+    }
+  ],
+  "nextPollDate": "2026-05-22",
+  "auditDigest": "bf3fb0f7d89935063a9a3c9d7767d569ee1565655f9ee4290c53aefa3e8e5450"
+}

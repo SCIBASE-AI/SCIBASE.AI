@@ -1,0 +1,520 @@
+{
+  "asOf": "2026-05-23T00:00:00.000Z",
+  "organization": {
+    "id": "northbridge-research",
+    "name": "Northbridge Research Institute",
+    "adminTenant": "enterprise-demo"
+  },
+  "summary": {
+    "totalWidgets": 4,
+    "totalRows": 8,
+    "suppressedRows": 1,
+    "maskedRows": 3,
+    "criticalFindings": 3,
+    "warningFindings": 8,
+    "ready": 0,
+    "masked_ready": 3,
+    "hold_for_privacy_review": 1,
+    "adminActionCount": 4,
+    "blockedRawExports": 1
+  },
+  "dashboards": [
+    {
+      "id": "contributor-heatmap",
+      "title": "Contributor Activity Heatmap",
+      "metricKind": "named_contributor_heatmap",
+      "audience": "department_admins",
+      "exportTargets": [
+        "dashboard",
+        "csv",
+        "external_bi"
+      ],
+      "status": "hold_for_privacy_review",
+      "reviewedRows": 2,
+      "suppressedRows": 1,
+      "maskedRows": 0,
+      "findings": [
+        {
+          "code": "small_cohort",
+          "severity": "critical",
+          "rowId": "heatmap-private-oncology",
+          "message": "Cohort size 4 is below the minimum 7.",
+          "remediation": "Suppress this row or roll it into a larger department-level aggregate."
+        },
+        {
+          "code": "named_contributor_reidentification",
+          "severity": "critical",
+          "rowId": "heatmap-private-oncology",
+          "message": "Named contributor count 3 is below the minimum 5.",
+          "remediation": "Replace named cells with anonymous activity buckets before dashboard release."
+        },
+        {
+          "code": "private_project_mask_required",
+          "severity": "warning",
+          "rowId": "heatmap-private-oncology",
+          "message": "Visibility private requires project and lab labels to be masked.",
+          "remediation": "Replace project names with privacy-safe aliases and omit direct project links."
+        },
+        {
+          "code": "direct_identifier_block",
+          "severity": "critical",
+          "rowId": "heatmap-private-oncology",
+          "message": "The dashboard row includes direct identifiers.",
+          "remediation": "Remove names, emails, handles, employee IDs, and direct project URLs before export."
+        },
+        {
+          "code": "recent_activity_window",
+          "severity": "warning",
+          "rowId": "heatmap-private-oncology",
+          "message": "Recent 12h activity can reveal individual behavior in this cohort.",
+          "remediation": "Use a weekly or monthly window for small groups."
+        },
+        {
+          "code": "sensitive_tag_exposure",
+          "severity": "warning",
+          "rowId": "heatmap-private-oncology",
+          "message": "Sensitive tags present: DOCTORAL_WORK, HUMAN_SUBJECTS.",
+          "remediation": "Display only approved initiative aliases in institutional dashboards."
+        }
+      ],
+      "rowDecisions": [
+        {
+          "rowId": "heatmap-public-ai-lab",
+          "label": "AI Methods Lab weekly activity",
+          "cohortSize": 18,
+          "contributorCount": 11,
+          "labCount": 1,
+          "departmentCount": 1,
+          "projectVisibility": "public",
+          "action": "publish",
+          "exportDecision": "allow_sanitized_export",
+          "publicLabel": "AI Methods Lab weekly activity",
+          "publicValue": 184,
+          "findings": []
+        },
+        {
+          "rowId": "heatmap-private-oncology",
+          "label": "Oncology pilot named contributors",
+          "cohortSize": 4,
+          "contributorCount": 3,
+          "labCount": 1,
+          "departmentCount": 1,
+          "projectVisibility": "private",
+          "action": "suppress",
+          "exportDecision": "block_raw_export",
+          "publicLabel": "Suppressed small cohort",
+          "publicValue": null,
+          "findings": [
+            {
+              "code": "small_cohort",
+              "severity": "critical",
+              "rowId": "heatmap-private-oncology",
+              "message": "Cohort size 4 is below the minimum 7.",
+              "remediation": "Suppress this row or roll it into a larger department-level aggregate."
+            },
+            {
+              "code": "named_contributor_reidentification",
+              "severity": "critical",
+              "rowId": "heatmap-private-oncology",
+              "message": "Named contributor count 3 is below the minimum 5.",
+              "remediation": "Replace named cells with anonymous activity buckets before dashboard release."
+            },
+            {
+              "code": "private_project_mask_required",
+              "severity": "warning",
+              "rowId": "heatmap-private-oncology",
+              "message": "Visibility private requires project and lab labels to be masked.",
+              "remediation": "Replace project names with privacy-safe aliases and omit direct project links."
+            },
+            {
+              "code": "direct_identifier_block",
+              "severity": "critical",
+              "rowId": "heatmap-private-oncology",
+              "message": "The dashboard row includes direct identifiers.",
+              "remediation": "Remove names, emails, handles, employee IDs, and direct project URLs before export."
+            },
+            {
+              "code": "recent_activity_window",
+              "severity": "warning",
+              "rowId": "heatmap-private-oncology",
+              "message": "Recent 12h activity can reveal individual behavior in this cohort.",
+              "remediation": "Use a weekly or monthly window for small groups."
+            },
+            {
+              "code": "sensitive_tag_exposure",
+              "severity": "warning",
+              "rowId": "heatmap-private-oncology",
+              "message": "Sensitive tags present: DOCTORAL_WORK, HUMAN_SUBJECTS.",
+              "remediation": "Display only approved initiative aliases in institutional dashboards."
+            }
+          ]
+        }
+      ],
+      "reviewerNotes": [
+        "1 row(s) are held because they fall below k=7 or expose direct identifiers."
+      ]
+    },
+    {
+      "id": "cross-lab-collaboration",
+      "title": "Cross-Lab Collaboration Index",
+      "metricKind": "cross_lab_collaboration",
+      "audience": "institution_admins",
+      "exportTargets": [
+        "dashboard",
+        "webhook"
+      ],
+      "status": "masked_ready",
+      "reviewedRows": 2,
+      "suppressedRows": 0,
+      "maskedRows": 1,
+      "findings": [
+        {
+          "code": "cross_lab_rollup_needed",
+          "severity": "warning",
+          "rowId": "collab-materials-bio",
+          "message": "Only 2 lab(s) contribute to this collaboration metric.",
+          "remediation": "Roll the row up to a broader initiative or institution-level collaboration metric."
+        },
+        {
+          "code": "private_project_mask_required",
+          "severity": "warning",
+          "rowId": "collab-materials-bio",
+          "message": "Visibility institutional-only requires project and lab labels to be masked.",
+          "remediation": "Replace project names with privacy-safe aliases and omit direct project links."
+        }
+      ],
+      "rowDecisions": [
+        {
+          "rowId": "collab-materials-bio",
+          "label": "Materials x Bioengineering collaboration",
+          "cohortSize": 13,
+          "contributorCount": 9,
+          "labCount": 2,
+          "departmentCount": 2,
+          "projectVisibility": "institutional-only",
+          "action": "roll_up",
+          "exportDecision": "allow_sanitized_export",
+          "publicLabel": "Institution collaboration aggregate",
+          "publicValue": 0.72,
+          "findings": [
+            {
+              "code": "cross_lab_rollup_needed",
+              "severity": "warning",
+              "rowId": "collab-materials-bio",
+              "message": "Only 2 lab(s) contribute to this collaboration metric.",
+              "remediation": "Roll the row up to a broader initiative or institution-level collaboration metric."
+            },
+            {
+              "code": "private_project_mask_required",
+              "severity": "warning",
+              "rowId": "collab-materials-bio",
+              "message": "Visibility institutional-only requires project and lab labels to be masked.",
+              "remediation": "Replace project names with privacy-safe aliases and omit direct project links."
+            }
+          ]
+        },
+        {
+          "rowId": "collab-open-science",
+          "label": "Open Science network",
+          "cohortSize": 46,
+          "contributorCount": 28,
+          "labCount": 6,
+          "departmentCount": 4,
+          "projectVisibility": "public",
+          "action": "publish",
+          "exportDecision": "allow_sanitized_export",
+          "publicLabel": "Open Science network",
+          "publicValue": 0.88,
+          "findings": []
+        }
+      ],
+      "reviewerNotes": [
+        "1 row(s) need broader aggregation before dashboard release."
+      ]
+    },
+    {
+      "id": "compliance-open-access",
+      "title": "Open Access Compliance",
+      "metricKind": "institution_rollup",
+      "audience": "research_office",
+      "exportTargets": [
+        "dashboard",
+        "csv",
+        "webhook"
+      ],
+      "status": "masked_ready",
+      "reviewedRows": 2,
+      "suppressedRows": 0,
+      "maskedRows": 1,
+      "findings": [
+        {
+          "code": "department_rollup_too_narrow",
+          "severity": "warning",
+          "rowId": "oa-small-department",
+          "message": "Only 1 department(s) appear in an institution-wide rollup.",
+          "remediation": "Aggregate with another department or hide the department label."
+        }
+      ],
+      "rowDecisions": [
+        {
+          "rowId": "oa-institution-total",
+          "label": "Institution open access readiness",
+          "cohortSize": 91,
+          "contributorCount": 61,
+          "labCount": 13,
+          "departmentCount": 5,
+          "projectVisibility": "public",
+          "action": "publish",
+          "exportDecision": "allow_sanitized_export",
+          "publicLabel": "Institution open access readiness",
+          "publicValue": 0.91,
+          "findings": []
+        },
+        {
+          "rowId": "oa-small-department",
+          "label": "Small clinical translation unit",
+          "cohortSize": 9,
+          "contributorCount": 7,
+          "labCount": 2,
+          "departmentCount": 1,
+          "projectVisibility": "public",
+          "action": "roll_up",
+          "exportDecision": "allow_sanitized_export",
+          "publicLabel": "Institution aggregate",
+          "publicValue": 0.67,
+          "findings": [
+            {
+              "code": "department_rollup_too_narrow",
+              "severity": "warning",
+              "rowId": "oa-small-department",
+              "message": "Only 1 department(s) appear in an institution-wide rollup.",
+              "remediation": "Aggregate with another department or hide the department label."
+            }
+          ]
+        }
+      ],
+      "reviewerNotes": [
+        "1 row(s) need broader aggregation before dashboard release."
+      ]
+    },
+    {
+      "id": "storage-compute-usage",
+      "title": "Storage and Compute Usage",
+      "metricKind": "resource_usage",
+      "audience": "enterprise_admins",
+      "exportTargets": [
+        "dashboard",
+        "csv"
+      ],
+      "status": "masked_ready",
+      "reviewedRows": 2,
+      "suppressedRows": 0,
+      "maskedRows": 1,
+      "findings": [
+        {
+          "code": "private_project_mask_required",
+          "severity": "warning",
+          "rowId": "usage-invitation-only",
+          "message": "Visibility invitation-only requires project and lab labels to be masked.",
+          "remediation": "Replace project names with privacy-safe aliases and omit direct project links."
+        },
+        {
+          "code": "sensitive_tag_exposure",
+          "severity": "warning",
+          "rowId": "usage-invitation-only",
+          "message": "Sensitive tags present: GRANT_TRACKED.",
+          "remediation": "Display only approved initiative aliases in institutional dashboards."
+        }
+      ],
+      "rowDecisions": [
+        {
+          "rowId": "usage-public-core",
+          "label": "Shared core facilities",
+          "cohortSize": 37,
+          "contributorCount": 20,
+          "labCount": 5,
+          "departmentCount": 3,
+          "projectVisibility": "public",
+          "action": "publish",
+          "exportDecision": "allow_sanitized_export",
+          "publicLabel": "Shared core facilities",
+          "publicValue": 1290,
+          "findings": []
+        },
+        {
+          "rowId": "usage-invitation-only",
+          "label": "Invitation-only translational storage",
+          "cohortSize": 15,
+          "contributorCount": 8,
+          "labCount": 2,
+          "departmentCount": 2,
+          "projectVisibility": "invitation-only",
+          "action": "mask",
+          "exportDecision": "allow_sanitized_export",
+          "publicLabel": "Restricted translational storage",
+          "publicValue": 480,
+          "findings": [
+            {
+              "code": "private_project_mask_required",
+              "severity": "warning",
+              "rowId": "usage-invitation-only",
+              "message": "Visibility invitation-only requires project and lab labels to be masked.",
+              "remediation": "Replace project names with privacy-safe aliases and omit direct project links."
+            },
+            {
+              "code": "sensitive_tag_exposure",
+              "severity": "warning",
+              "rowId": "usage-invitation-only",
+              "message": "Sensitive tags present: GRANT_TRACKED.",
+              "remediation": "Display only approved initiative aliases in institutional dashboards."
+            }
+          ]
+        }
+      ],
+      "reviewerNotes": [
+        "1 row(s) can be shown after project/lab labels and sensitive tags are masked."
+      ]
+    }
+  ],
+  "adminActions": [
+    {
+      "dashboardId": "contributor-heatmap",
+      "rowId": "heatmap-private-oncology",
+      "action": "block_raw_export_and_rebuild_aggregate",
+      "severity": "critical",
+      "reasons": [
+        "small_cohort",
+        "named_contributor_reidentification",
+        "private_project_mask_required",
+        "direct_identifier_block",
+        "recent_activity_window",
+        "sensitive_tag_exposure"
+      ]
+    },
+    {
+      "dashboardId": "cross-lab-collaboration",
+      "rowId": "collab-materials-bio",
+      "action": "roll_up_before_release",
+      "severity": "warning",
+      "reasons": [
+        "cross_lab_rollup_needed",
+        "private_project_mask_required"
+      ]
+    },
+    {
+      "dashboardId": "compliance-open-access",
+      "rowId": "oa-small-department",
+      "action": "roll_up_before_release",
+      "severity": "warning",
+      "reasons": [
+        "department_rollup_too_narrow"
+      ]
+    },
+    {
+      "dashboardId": "storage-compute-usage",
+      "rowId": "usage-invitation-only",
+      "action": "mask_labels_before_release",
+      "severity": "warning",
+      "reasons": [
+        "private_project_mask_required",
+        "sensitive_tag_exposure"
+      ]
+    }
+  ],
+  "exportManifest": [
+    {
+      "dashboardId": "contributor-heatmap",
+      "status": "raw_export_blocked",
+      "allowedTargets": [
+        "dashboard"
+      ],
+      "blockedRows": [
+        "heatmap-private-oncology"
+      ],
+      "sanitizedRows": [
+        {
+          "rowId": "heatmap-public-ai-lab",
+          "label": "AI Methods Lab weekly activity",
+          "value": 184,
+          "action": "publish"
+        }
+      ]
+    },
+    {
+      "dashboardId": "cross-lab-collaboration",
+      "status": "sanitized_export_ready",
+      "allowedTargets": [
+        "dashboard",
+        "webhook"
+      ],
+      "blockedRows": [],
+      "sanitizedRows": [
+        {
+          "rowId": "collab-materials-bio",
+          "label": "Institution collaboration aggregate",
+          "value": 0.72,
+          "action": "roll_up"
+        },
+        {
+          "rowId": "collab-open-science",
+          "label": "Open Science network",
+          "value": 0.88,
+          "action": "publish"
+        }
+      ]
+    },
+    {
+      "dashboardId": "compliance-open-access",
+      "status": "sanitized_export_ready",
+      "allowedTargets": [
+        "dashboard",
+        "csv",
+        "webhook"
+      ],
+      "blockedRows": [],
+      "sanitizedRows": [
+        {
+          "rowId": "oa-institution-total",
+          "label": "Institution open access readiness",
+          "value": 0.91,
+          "action": "publish"
+        },
+        {
+          "rowId": "oa-small-department",
+          "label": "Institution aggregate",
+          "value": 0.67,
+          "action": "roll_up"
+        }
+      ]
+    },
+    {
+      "dashboardId": "storage-compute-usage",
+      "status": "sanitized_export_ready",
+      "allowedTargets": [
+        "dashboard",
+        "csv"
+      ],
+      "blockedRows": [],
+      "sanitizedRows": [
+        {
+          "rowId": "usage-public-core",
+          "label": "Shared core facilities",
+          "value": 1290,
+          "action": "publish"
+        },
+        {
+          "rowId": "usage-invitation-only",
+          "label": "Restricted translational storage",
+          "value": 480,
+          "action": "mask"
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "a767494fae0607e1c2211dd5218888859ffd8eb7615b3a3bfc097c0c0797c3bb",
+    "reviewedAt": "2026-05-23T00:00:00.000Z",
+    "policyVersion": "dashboard-cohort-privacy-v1"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "asOf": "2026-05-22T12:00:00.000Z",
+  "totals": {
+    "totalRequests": 5,
+    "temporaryAccessGrants": 3,
+    "blockedOrReviewRequests": 2,
+    "byStatus": {
+      "approve_with_review": 1,
+      "steward_review": 2,
+      "approved": 2
+    }
+  },
+  "decisions": [
+    {
+      "id": "bg-001",
+      "projectId": "project-sepsis-lockdown",
+      "requesterId": "admin-noor",
+      "requesterRole": "Admin",
+      "reasonCode": "incident_response",
+      "requestedScopes": [
+        "manuscript/results:write",
+        "discussion/incident:write"
+      ],
+      "requestedDataClasses": [
+        "derived_results"
+      ],
+      "expiresInMinutes": 90,
+      "status": "approve_with_review",
+      "reasons": [
+        "after-hours emergency access can proceed with mandatory owner review"
+      ],
+      "actions": [
+        "Grant temporary scoped access",
+        "Queue owner review within 24 hours",
+        "Auto-expire access and attach audit receipt"
+      ]
+    },
+    {
+      "id": "bg-002",
+      "projectId": "project-sepsis-lockdown",
+      "requesterId": "viewer-eli",
+      "requesterRole": "Viewer",
+      "reasonCode": "manual_fix",
+      "requestedScopes": [
+        "dataset/raw:download"
+      ],
+      "requestedDataClasses": [
+        "human_subjects"
+      ],
+      "expiresInMinutes": 1440,
+      "status": "steward_review",
+      "reasons": [
+        "requester role is not allowed to initiate break-glass access",
+        "reason code is not recognized for emergency access",
+        "requested scopes are missing or not least-privilege read/write scopes",
+        "MFA verification is stale for emergency access",
+        "break-glass expiry must be positive and no longer than 120 minutes",
+        "immutable audit receipt is missing",
+        "post-access review is missing or due more than 24 hours later",
+        "request touches protected project data classes",
+        "missing owner sponsor approval or after-hours justification"
+      ],
+      "actions": [
+        "Route to steward review before any access is granted",
+        "Notify project owner and institutional admin",
+        "Require corrected scope, MFA, expiry, evidence, or sponsorship"
+      ]
+    },
+    {
+      "id": "bg-003",
+      "projectId": "project-climate-preprint",
+      "requesterId": "owner-mei",
+      "requesterRole": "Owner",
+      "reasonCode": "submission_deadline",
+      "requestedScopes": [
+        "preprint/submission:write"
+      ],
+      "requestedDataClasses": [
+        "public_metadata"
+      ],
+      "expiresInMinutes": 60,
+      "status": "approved",
+      "reasons": [
+        "break-glass request satisfies role, MFA, scope, expiry, evidence, and review gates"
+      ],
+      "actions": [
+        "Grant temporary scoped access",
+        "Auto-expire access at requested expiry",
+        "Preserve immutable audit receipt and post-access review task"
+      ]
+    },
+    {
+      "id": "bg-004",
+      "projectId": "project-climate-preprint",
+      "requesterId": "admin-ravi",
+      "requesterRole": "Admin",
+      "reasonCode": "submission_deadline",
+      "requestedScopes": [
+        "notebooks/final-run:write",
+        "results/figures:write"
+      ],
+      "requestedDataClasses": [
+        "embargoed_partner_data"
+      ],
+      "expiresInMinutes": 480,
+      "status": "steward_review",
+      "reasons": [
+        "break-glass expiry must be positive and no longer than 120 minutes",
+        "post-access review is missing or due more than 24 hours later",
+        "request touches protected project data classes"
+      ],
+      "actions": [
+        "Route to steward review before any access is granted",
+        "Notify project owner and institutional admin",
+        "Require corrected scope, MFA, expiry, evidence, or sponsorship"
+      ]
+    },
+    {
+      "id": "bg-005",
+      "projectId": "project-climate-preprint",
+      "requesterId": "admin-ravi",
+      "requesterRole": "Admin",
+      "reasonCode": "incident_response",
+      "requestedScopes": [
+        "notebooks/final-run:write"
+      ],
+      "requestedDataClasses": [
+        "derived_results"
+      ],
+      "expiresInMinutes": 45,
+      "status": "approved",
+      "reasons": [
+        "break-glass request satisfies role, MFA, scope, expiry, evidence, and review gates"
+      ],
+      "actions": [
+        "Grant temporary scoped access",
+        "Auto-expire access at requested expiry",
+        "Preserve immutable audit receipt and post-access review task"
+      ]
+    }
+  ],
+  "auditDigest": "e0e335c11209ce7c1812438f76265bb0adffcfbaee4cc16b489e5d2aebefad03"
+}

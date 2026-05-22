@@ -1,0 +1,305 @@
+{
+  "project": {
+    "id": "scibase-rncs-demo",
+    "title": "Single-cell CRISPR screens for neuroinflammation modifier discovery",
+    "domain": "computational biology",
+    "manuscriptVersion": "2026.05-preprint"
+  },
+  "checkedAt": "2026-05-22T00:00:00.000Z",
+  "releaseGate": {
+    "status": "hold",
+    "reason": "Retracted or primary-notice evidence blocks one or more dependent claims.",
+    "nextAction": "Do not show claim C-101 in author-facing acceptance language until REF-CRISPR-RETRACTED is replaced."
+  },
+  "summary": {
+    "score": 0,
+    "referencesChecked": 6,
+    "claimsChecked": 4,
+    "blockers": 1,
+    "high": 1,
+    "medium": 2,
+    "noticeTypes": {
+      "retracted": 1,
+      "expression_of_concern": 1,
+      "major_correction": 1,
+      "superseded_preprint": 1,
+      "active": 2
+    },
+    "quarantinedClaims": 1,
+    "revisionClaims": 3
+  },
+  "referenceFindings": [
+    {
+      "referenceId": "REF-CRISPR-RETRACTED",
+      "title": "High-throughput off-target CRISPR editing in activated microglia",
+      "doi": "10.5555/synthetic.crispr.2024.018",
+      "noticeType": "retracted",
+      "noticeDate": "2026-02-14",
+      "noticeSource": "Synthetic Retraction Registry",
+      "noticeReason": "Synthetic notice: unverifiable cell-line provenance and duplicated image panels.",
+      "severity": "blocker",
+      "gate": "quarantine",
+      "evidenceRole": "primary",
+      "impactedClaimIds": [
+        "C-101"
+      ],
+      "impactSummary": "1 claim depend on primary evidence with notice type retracted.",
+      "replacement": null,
+      "assertedEffect": null,
+      "correctedEffect": null,
+      "remediation": "Replace or remove the citation before this claim is included in reviewer packets. Mark dependent claims as blocked until independent evidence is attached."
+    },
+    {
+      "referenceId": "REF-ATLAS-CONCERN",
+      "title": "Immune-cell atlas of perturbation recovery after inflammatory challenge",
+      "doi": "10.5555/synthetic.atlas.2025.044",
+      "noticeType": "expression_of_concern",
+      "noticeDate": "2026-04-06",
+      "noticeSource": "Synthetic Publisher Notice Feed",
+      "noticeReason": "Synthetic notice: unresolved batch-label audit for a public single-cell dataset.",
+      "severity": "high",
+      "gate": "review",
+      "evidenceRole": "supporting",
+      "impactedClaimIds": [
+        "C-204"
+      ],
+      "impactSummary": "1 claim depend on supporting evidence with notice type expression_of_concern.",
+      "replacement": null,
+      "assertedEffect": null,
+      "correctedEffect": null,
+      "remediation": "Add a reviewer-visible caveat and find an independent supporting source."
+    },
+    {
+      "referenceId": "REF-EFFECT-CORRECTED",
+      "title": "Replication effect sizes for CRISPR perturbation recovery",
+      "doi": "10.5555/synthetic.replication.2025.071",
+      "noticeType": "major_correction",
+      "noticeDate": "2026-01-25",
+      "noticeSource": "Synthetic Correction Feed",
+      "noticeReason": "Synthetic notice: duplicate cohort rows changed the reported effect size.",
+      "severity": "medium",
+      "gate": "revise",
+      "evidenceRole": "primary",
+      "impactedClaimIds": [
+        "C-318"
+      ],
+      "impactSummary": "1 claim depend on primary evidence with a corrected effect: 0.08 standardized mean difference after cohort deduplication.",
+      "replacement": null,
+      "assertedEffect": "0.42 standardized mean difference",
+      "correctedEffect": "0.08 standardized mean difference after cohort deduplication",
+      "remediation": "Update the claim text and evidence summary to reflect the corrected record. Require reviewer signoff before retaining this primary evidence. Revise any quantitative wording to 0.08 standardized mean difference after cohort deduplication."
+    },
+    {
+      "referenceId": "REF-PREPRINT-SUPERSEDED",
+      "title": "Benchmark split proposal for perturbation recovery models",
+      "doi": "10.5555/synthetic.preprint.2024.102",
+      "noticeType": "superseded_preprint",
+      "noticeDate": "2026-03-11",
+      "noticeSource": "Synthetic Cross-Publication Linker",
+      "noticeReason": "Synthetic notice: final publication changed exclusion criteria and benchmark folds.",
+      "severity": "medium",
+      "gate": "revise",
+      "evidenceRole": "supporting",
+      "impactedClaimIds": [
+        "C-402"
+      ],
+      "impactSummary": "1 claim cite supporting evidence superseded by 10.5555/synthetic.benchmark.2026.009.",
+      "replacement": {
+        "doi": "10.5555/synthetic.benchmark.2026.009",
+        "title": "Final benchmark split for perturbation recovery models",
+        "date": "2026-03-11"
+      },
+      "assertedEffect": null,
+      "correctedEffect": null,
+      "remediation": "Cite the final publication or explain why the older preprint remains necessary. Review replacement record 10.5555/synthetic.benchmark.2026.009."
+    },
+    {
+      "referenceId": "REF-ATLAS-ACTIVE",
+      "title": "Microglia enhancer atlas with validated perturbation controls",
+      "doi": "10.5555/synthetic.atlas.2025.011",
+      "noticeType": "active",
+      "noticeDate": null,
+      "noticeSource": null,
+      "noticeReason": null,
+      "severity": "info",
+      "gate": "pass",
+      "evidenceRole": "supporting",
+      "impactedClaimIds": [
+        "C-101"
+      ],
+      "impactSummary": "No publication notice found for cited evidence.",
+      "replacement": null,
+      "assertedEffect": null,
+      "correctedEffect": null,
+      "remediation": "No publication-notice action required."
+    },
+    {
+      "referenceId": "REF-PIPELINE-ACTIVE",
+      "title": "Reproducible notebooks for perturbation recovery pipelines",
+      "doi": "10.5555/synthetic.pipeline.2025.033",
+      "noticeType": "active",
+      "noticeDate": null,
+      "noticeSource": null,
+      "noticeReason": null,
+      "severity": "info",
+      "gate": "pass",
+      "evidenceRole": "supporting",
+      "impactedClaimIds": [
+        "C-204"
+      ],
+      "impactSummary": "No publication notice found for cited evidence.",
+      "replacement": null,
+      "assertedEffect": null,
+      "correctedEffect": null,
+      "remediation": "No publication-notice action required."
+    }
+  ],
+  "claimDecisions": [
+    {
+      "claimId": "C-101",
+      "section": "Abstract",
+      "text": "The perturbation panel reduces off-target edits by 41 percent across microglia cell lines.",
+      "releaseImpact": "headline claim",
+      "status": "quarantine",
+      "topRisk": "retracted",
+      "citedReferenceIds": [
+        "REF-ATLAS-ACTIVE",
+        "REF-CRISPR-RETRACTED"
+      ],
+      "blockedByReferenceIds": [
+        "REF-CRISPR-RETRACTED"
+      ],
+      "warningReferenceIds": [],
+      "assistantInstruction": "Do not show claim C-101 in author-facing acceptance language until REF-CRISPR-RETRACTED is replaced."
+    },
+    {
+      "claimId": "C-204",
+      "section": "Results",
+      "text": "The immune-cell atlas fully resolves cell-state drift after perturbation.",
+      "releaseImpact": "mechanistic interpretation",
+      "status": "revise",
+      "topRisk": "expression_of_concern",
+      "citedReferenceIds": [
+        "REF-ATLAS-CONCERN",
+        "REF-PIPELINE-ACTIVE"
+      ],
+      "blockedByReferenceIds": [],
+      "warningReferenceIds": [
+        "REF-ATLAS-CONCERN"
+      ],
+      "assistantInstruction": "Show claim C-204 with reviewer-visible caveats for REF-ATLAS-CONCERN."
+    },
+    {
+      "claimId": "C-318",
+      "section": "Discussion",
+      "text": "Prior replication work confirms a large 0.42 effect size in independent cohorts.",
+      "releaseImpact": "replication strength",
+      "status": "revise",
+      "topRisk": "major_correction",
+      "citedReferenceIds": [
+        "REF-EFFECT-CORRECTED"
+      ],
+      "blockedByReferenceIds": [],
+      "warningReferenceIds": [
+        "REF-EFFECT-CORRECTED"
+      ],
+      "assistantInstruction": "Show claim C-318 with reviewer-visible caveats for REF-EFFECT-CORRECTED."
+    },
+    {
+      "claimId": "C-402",
+      "section": "Methods",
+      "text": "The manuscript follows the latest public benchmark split for perturbation recovery.",
+      "releaseImpact": "benchmark comparability",
+      "status": "revise",
+      "topRisk": "superseded_preprint",
+      "citedReferenceIds": [
+        "REF-PREPRINT-SUPERSEDED"
+      ],
+      "blockedByReferenceIds": [],
+      "warningReferenceIds": [
+        "REF-PREPRINT-SUPERSEDED"
+      ],
+      "assistantInstruction": "Show claim C-402 with reviewer-visible caveats for REF-PREPRINT-SUPERSEDED."
+    }
+  ],
+  "reviewerActions": [
+    {
+      "priority": "blocker",
+      "referenceId": null,
+      "claimIds": [
+        "C-101"
+      ],
+      "title": "Quarantine dependent claim C-101",
+      "action": "Do not show claim C-101 in author-facing acceptance language until REF-CRISPR-RETRACTED is replaced."
+    },
+    {
+      "priority": "blocker",
+      "referenceId": "REF-CRISPR-RETRACTED",
+      "claimIds": [
+        "C-101"
+      ],
+      "title": "Retracted evidence: REF-CRISPR-RETRACTED",
+      "action": "Replace or remove the citation before this claim is included in reviewer packets. Mark dependent claims as blocked until independent evidence is attached."
+    },
+    {
+      "priority": "high",
+      "referenceId": "REF-ATLAS-CONCERN",
+      "claimIds": [
+        "C-204"
+      ],
+      "title": "Expression of concern: REF-ATLAS-CONCERN",
+      "action": "Add a reviewer-visible caveat and find an independent supporting source."
+    },
+    {
+      "priority": "medium",
+      "referenceId": "REF-EFFECT-CORRECTED",
+      "claimIds": [
+        "C-318"
+      ],
+      "title": "Major correction: REF-EFFECT-CORRECTED",
+      "action": "Update the claim text and evidence summary to reflect the corrected record. Require reviewer signoff before retaining this primary evidence. Revise any quantitative wording to 0.08 standardized mean difference after cohort deduplication."
+    },
+    {
+      "priority": "medium",
+      "referenceId": "REF-PREPRINT-SUPERSEDED",
+      "claimIds": [
+        "C-402"
+      ],
+      "title": "Superseded preprint: REF-PREPRINT-SUPERSEDED",
+      "action": "Cite the final publication or explain why the older preprint remains necessary. Review replacement record 10.5555/synthetic.benchmark.2026.009."
+    }
+  ],
+  "researchGaps": [
+    {
+      "type": "replacement_evidence",
+      "priority": "blocker",
+      "prompt": "Find independent, non-retracted evidence for C-101.",
+      "sourceReferenceId": "REF-CRISPR-RETRACTED"
+    },
+    {
+      "type": "claim_release_blocker",
+      "priority": "blocker",
+      "prompt": "Hold C-101 until publication-notice remediation is complete.",
+      "sourceReferenceId": "REF-CRISPR-RETRACTED"
+    },
+    {
+      "type": "independent_replication",
+      "priority": "high",
+      "prompt": "Replicate or cross-check claims affected by REF-ATLAS-CONCERN before release.",
+      "sourceReferenceId": "REF-ATLAS-CONCERN"
+    },
+    {
+      "type": "corrected_effect_review",
+      "priority": "medium",
+      "prompt": "Re-run claim wording against corrected effect metadata for REF-EFFECT-CORRECTED.",
+      "sourceReferenceId": "REF-EFFECT-CORRECTED"
+    }
+  ],
+  "reproducibilityContext": {
+    "dataPolicy": "synthetic fixture only",
+    "noticeRegistryFingerprint": "98ad908abacb8b338ac01f17bda1c7619e15dfe63dc9eb33a44518de87eaf084",
+    "deterministic": true,
+    "externalNetworkCalls": 0
+  },
+  "auditDigest": "79ff41591bbed0731febdfc13d9464446391c01bcad0d86c074de84f54fb894b"
+}

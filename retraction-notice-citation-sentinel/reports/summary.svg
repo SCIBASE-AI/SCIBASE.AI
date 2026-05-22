@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-label="Retraction notice citation sentinel summary">
+<rect width="1100" height="620" fill="#f8fafc"/>
+<rect x="48" y="44" width="1004" height="532" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="80" y="112" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#0f172a">Retraction Notice Citation Sentinel</text>
+<text x="80" y="160" font-family="Arial, sans-serif" font-size="24" fill="#334155">Gate: HOLD | Score: 0 | Digest: 79ff41591bbed073</text>
+<text x="80" y="230" font-family="Arial, sans-serif" font-size="26" fill="#172554">Blockers</text>
+<rect x="260" y="202" width="540" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="202" width="173" height="36" rx="4" fill="#b91c1c"/>
+<text x="825" y="230" font-family="Arial, sans-serif" font-size="26" fill="#111827">1</text>
+<text x="80" y="300" font-family="Arial, sans-serif" font-size="26" fill="#172554">Warnings</text>
+<rect x="260" y="272" width="540" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="272" width="520" height="36" rx="4" fill="#b45309"/>
+<text x="825" y="300" font-family="Arial, sans-serif" font-size="26" fill="#111827">3</text>
+<text x="80" y="370" font-family="Arial, sans-serif" font-size="26" fill="#172554">Quarantined</text>
+<rect x="260" y="342" width="540" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="342" width="173" height="36" rx="4" fill="#7f1d1d"/>
+<text x="825" y="370" font-family="Arial, sans-serif" font-size="26" fill="#111827">1</text>
+<text x="80" y="440" font-family="Arial, sans-serif" font-size="26" fill="#172554">Revisions</text>
+<rect x="260" y="412" width="540" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="412" width="520" height="36" rx="4" fill="#1d4ed8"/>
+<text x="825" y="440" font-family="Arial, sans-serif" font-size="26" fill="#111827">3</text>
+<text x="80" y="548" font-family="Arial, sans-serif" font-size="22" fill="#475569">Synthetic-data demo. No external citation databases, credentials, or network calls.</text>
+</svg>

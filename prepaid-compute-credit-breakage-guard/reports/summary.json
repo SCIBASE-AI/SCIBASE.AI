@@ -1,0 +1,163 @@
+{
+  "asOf": "2026-05-22T12:00:00.000Z",
+  "expiringSoonDays": 30,
+  "totals": {
+    "openBalanceCents": 790000,
+    "breakageEligibleCents": 125000,
+    "noticeDueCents": 180000,
+    "refundLiabilityCents": 50000,
+    "financeHoldCents": 245000,
+    "protectedBalanceCents": 110000,
+    "usableBalanceCents": 80000
+  },
+  "lots": [
+    {
+      "id": "lot-expired-eligible",
+      "customerName": "North Valley Lab",
+      "creditType": "ai_compute_top_up",
+      "issuedAt": "2025-11-15T00:00:00.000Z",
+      "expiresAt": "2026-04-15T00:00:00.000Z",
+      "balanceCents": 125000,
+      "daysUntilExpiry": -37,
+      "recognizableBreakageCents": 125000,
+      "refundLiabilityCents": 0,
+      "protectedBalanceCents": 0,
+      "reasons": [
+        "credit expired",
+        "terms allow breakage recognition",
+        "notice and refund closure evidence are present"
+      ],
+      "actions": [
+        "Recognize breakage after finance approval",
+        "Attach customer notice and terms evidence",
+        "Record audit digest in revenue close packet"
+      ],
+      "status": "breakage_ready"
+    },
+    {
+      "id": "lot-expired-no-notice",
+      "customerName": "Bioinformatics Core",
+      "creditType": "ai_compute_top_up",
+      "issuedAt": "2025-10-01T00:00:00.000Z",
+      "expiresAt": "2026-04-20T00:00:00.000Z",
+      "balanceCents": 95000,
+      "daysUntilExpiry": -32,
+      "recognizableBreakageCents": 0,
+      "refundLiabilityCents": 0,
+      "protectedBalanceCents": 0,
+      "reasons": [
+        "customer notice evidence is missing"
+      ],
+      "actions": [
+        "Hold balance out of recognized revenue",
+        "Send final notice or collect missing evidence",
+        "Route to finance review before close"
+      ],
+      "status": "finance_hold"
+    },
+    {
+      "id": "lot-refund-window-open",
+      "customerName": "Quantum Methods Group",
+      "creditType": "ai_compute_top_up",
+      "issuedAt": "2026-01-10T00:00:00.000Z",
+      "expiresAt": "2026-04-01T00:00:00.000Z",
+      "balanceCents": 50000,
+      "daysUntilExpiry": -51,
+      "recognizableBreakageCents": 0,
+      "refundLiabilityCents": 50000,
+      "protectedBalanceCents": 0,
+      "reasons": [
+        "refund window remains open"
+      ],
+      "actions": [
+        "Reserve as refund liability",
+        "Do not recognize breakage until refund rights close",
+        "Route to finance review"
+      ],
+      "status": "refund_liability"
+    },
+    {
+      "id": "lot-expiring-soon",
+      "customerName": "Genomics Pilot Program",
+      "creditType": "ai_compute_top_up",
+      "issuedAt": "2026-02-01T00:00:00.000Z",
+      "expiresAt": "2026-06-02T00:00:00.000Z",
+      "balanceCents": 180000,
+      "daysUntilExpiry": 11,
+      "recognizableBreakageCents": 0,
+      "refundLiabilityCents": 0,
+      "protectedBalanceCents": 0,
+      "reasons": [
+        "credit lot is approaching expiration"
+      ],
+      "actions": [
+        "Send expiration notice before recognizing any breakage",
+        "Keep credits usable through the expiration deadline"
+      ],
+      "status": "notice_due"
+    },
+    {
+      "id": "lot-grant-no-expiry",
+      "customerName": "NIH Shared Instrumentation Award",
+      "creditType": "grant_compute_credit",
+      "issuedAt": "2025-12-01T00:00:00.000Z",
+      "expiresAt": "2026-05-01T00:00:00.000Z",
+      "balanceCents": 110000,
+      "daysUntilExpiry": -21,
+      "recognizableBreakageCents": 0,
+      "refundLiabilityCents": 0,
+      "protectedBalanceCents": 110000,
+      "reasons": [
+        "grant or contract terms prohibit expiration"
+      ],
+      "actions": [
+        "Carry balance forward",
+        "Exclude from automated breakage recognition",
+        "Attach grant or customer contract evidence"
+      ],
+      "status": "protected"
+    },
+    {
+      "id": "lot-active-future",
+      "customerName": "Climate Modeling Center",
+      "creditType": "ai_compute_top_up",
+      "issuedAt": "2026-05-01T00:00:00.000Z",
+      "expiresAt": "2026-08-30T00:00:00.000Z",
+      "balanceCents": 80000,
+      "daysUntilExpiry": 100,
+      "recognizableBreakageCents": 0,
+      "refundLiabilityCents": 0,
+      "protectedBalanceCents": 0,
+      "reasons": [
+        "credit lot remains active"
+      ],
+      "actions": [
+        "Keep credits usable",
+        "Monitor drawdown before the next close cycle"
+      ],
+      "status": "usable"
+    },
+    {
+      "id": "lot-dispute-hold",
+      "customerName": "Materials Discovery Consortium",
+      "creditType": "ai_compute_top_up",
+      "issuedAt": "2025-09-15T00:00:00.000Z",
+      "expiresAt": "2026-04-10T00:00:00.000Z",
+      "balanceCents": 150000,
+      "daysUntilExpiry": -42,
+      "recognizableBreakageCents": 0,
+      "refundLiabilityCents": 0,
+      "protectedBalanceCents": 0,
+      "reasons": [
+        "active dispute prevents revenue close"
+      ],
+      "actions": [
+        "Hold balance out of recognized revenue",
+        "Send final notice or collect missing evidence",
+        "Route to finance review before close"
+      ],
+      "status": "finance_hold"
+    }
+  ],
+  "auditDigest": "efffbafb34aec9e909ee2113672b18b88840ae580c37ef37207a2c7c8308a015"
+}

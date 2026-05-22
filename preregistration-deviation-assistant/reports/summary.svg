@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="72" y="64" width="1136" height="592" rx="24" fill="#f9fafb"/>
+  <text x="112" y="128" fill="#111827" font-family="Arial, sans-serif" font-size="42" font-weight="700">Preregistration Deviation Assistant</text>
+  <text x="112" y="174" fill="#4b5563" font-family="Arial, sans-serif" font-size="22">SCIBASE AI-Powered Research Assistant Suite - issue #16</text>
+  <rect x="112" y="226" width="220" height="86" rx="18" fill="#dc2626"/>
+  <text x="142" y="281" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">HOLD</text>
+  <text x="112" y="374" fill="#111827" font-family="Arial, sans-serif" font-size="28">Primary blockers: 8</text>
+  <text x="112" y="420" fill="#111827" font-family="Arial, sans-serif" font-size="28">Manuscripts checked: 3</text>
+  <text x="112" y="466" fill="#111827" font-family="Arial, sans-serif" font-size="28">Decision: hold_confirmatory_review</text>
+  <text x="112" y="538" fill="#374151" font-family="Arial, sans-serif" font-size="20">Checks: primary outcomes, hierarchy, model, covariates, sample size, exclusions, subgroups, timing.</text>
+  <text x="112" y="584" fill="#6b7280" font-family="Arial, sans-serif" font-size="17">Digest: MS-HOLD-771:OSF-HOLD-771:hold:B=ANALYSIS_MODEL_DEVIATION|MULTIPLE_TESTING_CORRECTION_MISSING|POST_HOC_EXCLUSION_CRITERIA|PRIMARY_OUTCOME_SWITCH|REGISTERED_EXCLUSION_CRITERIA_OMITTED|RETROSPECTIVE_REGISTRATION|SECONDARY_OUTCOME_PROMOTED|UNREGISTERED_SUBGROUP_CONFIRMATORY_CLAIM:W=EXPLORATORY_LABELING_INCOMPLETE|POST_UNBLINDING_AMENDMENT|SAMPLE_SIZE_DEVIATION|UNREGISTERED_COVARIATES_ADDED</text>
+  <text x="112" y="620" fill="#6b7280" font-family="Arial, sans-serif" font-size="17">Synthetic data only. No model calls. No registry network access.</text>
+</svg>

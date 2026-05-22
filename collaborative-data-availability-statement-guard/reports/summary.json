@@ -1,0 +1,188 @@
+{
+  "guard": "collaborative-data-availability-statement-guard",
+  "issue": "SCIBASE-AI/SCIBASE.AI#12",
+  "manuscriptId": "ms-collab-astro-042",
+  "title": "Joint Galaxy Morphology Review",
+  "targetJournal": "Synthetic Journal of Open Science",
+  "asOfDate": "2026-05-22",
+  "decision": "block-export-until-availability-evidence-is-clean",
+  "score": 0,
+  "severitySummary": {
+    "critical": 2,
+    "high": 5,
+    "medium": 2,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "rule": "embargo-release-lags-export",
+      "message": "Processed synthetic tables releases 11 days after the manuscript export deadline.",
+      "action": "Confirm the target journal accepts this availability timing before final export.",
+      "refs": [
+        "repo-data-processed",
+        "2026-06-05"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "reviewer-link-expires-before-review-window",
+      "message": "Processed synthetic tables reviewer access expires in 1 days.",
+      "action": "Refresh reviewer-only links before export so peer reviewers can inspect restricted artifacts.",
+      "refs": [
+        "repo-data-processed",
+        "2026-05-23"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "repository-accession-missing",
+      "message": "Reviewer note extracts has no stable accession or repository identifier.",
+      "action": "Attach a stable repository accession or mark the material as non-distributable with reviewer evidence.",
+      "refs": [
+        "repo-data-raw"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "dataset-license-missing-or-unaccepted",
+      "message": "Reviewer note extracts has dataset license none.",
+      "action": "Add an accepted dataset license or document why restricted access is required.",
+      "refs": [
+        "repo-data-raw"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "human-derived-data-without-deidentification-evidence",
+      "message": "Reviewer note extracts contains human-derived material without de-identification evidence.",
+      "action": "Block export until the data steward links de-identification or restriction evidence.",
+      "refs": [
+        "repo-data-raw"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "reviewer-link-expires-before-review-window",
+      "message": "Reviewer note extracts reviewer access expires in -3 days.",
+      "action": "Refresh reviewer-only links before export so peer reviewers can inspect restricted artifacts.",
+      "refs": [
+        "repo-data-raw",
+        "2026-05-19"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "required-availability-approver-missing",
+      "message": "Required data-steward approval is not complete.",
+      "action": "Hold export until all role-based collaborators approve the availability statement.",
+      "refs": [
+        "data-steward"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "blocking-availability-comment-open",
+      "message": "Blocking comment comment-17 remains open on data-availability.",
+      "action": "Resolve blocking availability comments before final manuscript export.",
+      "refs": [
+        "comment-17",
+        "data-availability"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "availability-change-unmerged",
+      "message": "Pending change change-9 in data-availability has not been merged.",
+      "action": "Merge, reject, or explicitly defer the collaborative availability edit before export.",
+      "refs": [
+        "change-9",
+        "data-availability"
+      ]
+    }
+  ],
+  "reviewerActions": [
+    {
+      "priority": "review",
+      "rule": "embargo-release-lags-export",
+      "action": "Confirm the target journal accepts this availability timing before final export.",
+      "refs": [
+        "repo-data-processed",
+        "2026-06-05"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "reviewer-link-expires-before-review-window",
+      "action": "Refresh reviewer-only links before export so peer reviewers can inspect restricted artifacts.",
+      "refs": [
+        "repo-data-processed",
+        "2026-05-23"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "repository-accession-missing",
+      "action": "Attach a stable repository accession or mark the material as non-distributable with reviewer evidence.",
+      "refs": [
+        "repo-data-raw"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "dataset-license-missing-or-unaccepted",
+      "action": "Add an accepted dataset license or document why restricted access is required.",
+      "refs": [
+        "repo-data-raw"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "human-derived-data-without-deidentification-evidence",
+      "action": "Block export until the data steward links de-identification or restriction evidence.",
+      "refs": [
+        "repo-data-raw"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "reviewer-link-expires-before-review-window",
+      "action": "Refresh reviewer-only links before export so peer reviewers can inspect restricted artifacts.",
+      "refs": [
+        "repo-data-raw",
+        "2026-05-19"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "required-availability-approver-missing",
+      "action": "Hold export until all role-based collaborators approve the availability statement.",
+      "refs": [
+        "data-steward"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "blocking-availability-comment-open",
+      "action": "Resolve blocking availability comments before final manuscript export.",
+      "refs": [
+        "comment-17",
+        "data-availability"
+      ]
+    },
+    {
+      "priority": "review",
+      "rule": "availability-change-unmerged",
+      "action": "Merge, reject, or explicitly defer the collaborative availability edit before export.",
+      "refs": [
+        "change-9",
+        "data-availability"
+      ]
+    }
+  ],
+  "safety": [
+    "Synthetic manuscript, repository, collaborator, and review data only",
+    "No GitHub, Zenodo, journal, identity, storage, or email network calls",
+    "No private manuscript content, human-subject records, credentials, or live export mutations"
+  ]
+}

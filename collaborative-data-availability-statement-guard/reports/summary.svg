@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Collaborative data availability statement guard summary">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="48" y="66" font-family="Arial" font-size="34" font-weight="700" fill="#111827">Data Availability Statement Guard</text>
+  <text x="48" y="104" font-family="Arial" font-size="18" fill="#475569">Joint Galaxy Morphology Review</text>
+  <rect x="48" y="142" width="864" height="94" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="76" y="181" font-family="Arial" font-size="21" font-weight="700" fill="#b91c1c">block-export-until-availability-evidence-is-clean</text>
+  <text x="76" y="213" font-family="Arial" font-size="17" fill="#334155">Findings 9 | Critical 2 | High 5</text>
+  <rect x="48" y="274" width="864" height="76" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="76" y="307" font-family="Arial" font-size="18" fill="#334155">Export readiness score</text>
+  <rect x="76" y="324" width="760" height="14" rx="7" fill="#e5e7eb"/>
+  <rect x="76" y="324" width="44" height="14" rx="7" fill="#2563eb"/>
+  <text x="852" y="339" font-family="Arial" font-size="16" text-anchor="end" fill="#111827">0/100</text>
+  <rect x="48" y="390" width="864" height="76" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="76" y="423" font-family="Arial" font-size="18" font-weight="700" fill="#1e3a8a">Collaborative editor export checkpoint</text>
+  <text x="76" y="451" font-family="Arial" font-size="16" fill="#1e3a8a">Validates sections, repository IDs, licenses, reviewer links, approvals, comments, and pending edits.</text>
+</svg>

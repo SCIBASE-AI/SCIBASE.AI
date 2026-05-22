@@ -1,0 +1,202 @@
+{
+  "asOfDate": "2026-05-22",
+  "alertCount": 4,
+  "findingCount": 8,
+  "escalatedAlerts": [
+    "ALERT-COMPLIANCE-001",
+    "ALERT-WEBHOOK-022"
+  ],
+  "byAction": {
+    "deliver_now_and_escalate": 1,
+    "hold_digest_and_route_owner_fallback": 1,
+    "warn_and_repair_delivery_path": 1,
+    "allow_digest_or_standard_delivery": 1
+  },
+  "bySeverity": {
+    "critical": 1,
+    "high": 1,
+    "medium": 1,
+    "low": 1
+  },
+  "packets": [
+    {
+      "alertId": "ALERT-COMPLIANCE-001",
+      "category": "compliance_deadline",
+      "severity": "critical",
+      "dueInHours": 18,
+      "urgent": true,
+      "action": "deliver_now_and_escalate",
+      "decisionSeverity": "critical",
+      "reason": "urgent enterprise alert would otherwise be muted, delayed, or hidden",
+      "ownerId": "research-office-primary",
+      "routedChannels": [
+        "admin_digest"
+      ],
+      "webhookRequired": true,
+      "findingCount": 6,
+      "findings": [
+        {
+          "code": "urgent_alert_delayed_by_digest",
+          "severity": "critical",
+          "message": "ALERT-COMPLIANCE-001 is urgent but digest delay is 12 hours",
+          "remediation": "bypass digest and deliver immediately to primary plus escalation owners"
+        },
+        {
+          "code": "urgent_alert_muted",
+          "severity": "critical",
+          "message": "ALERT-COMPLIANCE-001 is urgent but owner preferences mute the route",
+          "remediation": "override mute for compliance-critical alert and log preference bypass"
+        },
+        {
+          "code": "quiet_hours_override_required",
+          "severity": "critical",
+          "message": "ALERT-COMPLIANCE-001 falls in quiet hours but severity is critical",
+          "remediation": "use emergency channel and record quiet-hours override justification"
+        },
+        {
+          "code": "inactive_owner_route",
+          "severity": "high",
+          "message": "ALERT-COMPLIANCE-001 is routed to inactive or unavailable owner research-office-primary",
+          "remediation": "route to delegated owner group and update dashboard ownership metadata"
+        },
+        {
+          "code": "webhook_health_fallback_required",
+          "severity": "high",
+          "message": "ALERT-COMPLIANCE-001 webhook failure rate 32.0% exceeds policy",
+          "remediation": "fallback to admin inbox and include webhook repair action in the packet"
+        },
+        {
+          "code": "duplicate_suppression_near_deadline",
+          "severity": "high",
+          "message": "ALERT-COMPLIANCE-001 is deduplicated with 18 hours before deadline",
+          "remediation": "show one canonical alert and keep deadline badge visible until acknowledged"
+        }
+      ],
+      "dashboardBadges": [
+        "bypass-digest",
+        "owner-fallback",
+        "webhook-fallback",
+        "deadline-visible"
+      ],
+      "webhookEvent": {
+        "eventType": "enterprise.alert.routing.reviewed",
+        "alertId": "ALERT-COMPLIANCE-001",
+        "action": "deliver_now_and_escalate",
+        "findingCodes": [
+          "urgent_alert_delayed_by_digest",
+          "urgent_alert_muted",
+          "quiet_hours_override_required",
+          "inactive_owner_route",
+          "webhook_health_fallback_required",
+          "duplicate_suppression_near_deadline"
+        ],
+        "requiresAcknowledgement": true,
+        "eventDigest": "699c9912707d495d6a9b34fd099859ed00df5a8ced1cbd78fa74d1b738caa1f5"
+      },
+      "auditDigest": "0e910b57e1e875b89e998e647ee6871aa620caabc4422ee34f80d1b170e48f4d"
+    },
+    {
+      "alertId": "ALERT-WEBHOOK-022",
+      "category": "security_integration",
+      "severity": "high",
+      "dueInHours": 57,
+      "urgent": true,
+      "action": "hold_digest_and_route_owner_fallback",
+      "decisionSeverity": "high",
+      "reason": "alert requires owner fallback or visible escalation before digesting",
+      "ownerId": "integration-admin",
+      "routedChannels": [
+        "slack",
+        "admin_inbox"
+      ],
+      "webhookRequired": true,
+      "findingCount": 1,
+      "findings": [
+        {
+          "code": "webhook_health_fallback_required",
+          "severity": "high",
+          "message": "ALERT-WEBHOOK-022 webhook failure rate 24.0% exceeds policy",
+          "remediation": "fallback to admin inbox and include webhook repair action in the packet"
+        }
+      ],
+      "dashboardBadges": [
+        "webhook-fallback"
+      ],
+      "webhookEvent": {
+        "eventType": "enterprise.alert.routing.reviewed",
+        "alertId": "ALERT-WEBHOOK-022",
+        "action": "hold_digest_and_route_owner_fallback",
+        "findingCodes": [
+          "webhook_health_fallback_required"
+        ],
+        "requiresAcknowledgement": true,
+        "eventDigest": "851c86c5b4962302b9f916a8dcbf79812b6bd3a7b0e102f3d0830635e11f0940"
+      },
+      "auditDigest": "3b59e442a407076677b3e19f2b7a9332da97a5f637707eeaf4e22b461ac7fe7a"
+    },
+    {
+      "alertId": "ALERT-DASHBOARD-077",
+      "category": "usage_anomaly",
+      "severity": "medium",
+      "dueInHours": 180,
+      "urgent": false,
+      "action": "warn_and_repair_delivery_path",
+      "decisionSeverity": "medium",
+      "reason": "delivery path should be repaired while alert remains visible",
+      "ownerId": "department-chair",
+      "routedChannels": [],
+      "webhookRequired": false,
+      "findingCount": 1,
+      "findings": [
+        {
+          "code": "missing_delivery_channel",
+          "severity": "medium",
+          "message": "ALERT-DASHBOARD-077 has no delivery channel",
+          "remediation": "assign admin inbox channel and require owner acknowledgement"
+        }
+      ],
+      "dashboardBadges": [],
+      "webhookEvent": {
+        "eventType": "enterprise.alert.routing.reviewed",
+        "alertId": "ALERT-DASHBOARD-077",
+        "action": "warn_and_repair_delivery_path",
+        "findingCodes": [
+          "missing_delivery_channel"
+        ],
+        "requiresAcknowledgement": false,
+        "eventDigest": "6d6746d55dc430be4bc450358fc95d10cab304a7959aa2160d26c5151fdf7da2"
+      },
+      "auditDigest": "61e2358f2125cb99be6c435441e7613b1b264faff6bad4b94f899e46e26b798f"
+    },
+    {
+      "alertId": "ALERT-INFO-100",
+      "category": "weekly_summary",
+      "severity": "low",
+      "dueInHours": 348,
+      "urgent": false,
+      "action": "allow_digest_or_standard_delivery",
+      "decisionSeverity": "low",
+      "reason": "alert routing satisfies admin notification policy",
+      "ownerId": "research-ops",
+      "routedChannels": [
+        "admin_digest"
+      ],
+      "webhookRequired": false,
+      "findingCount": 0,
+      "findings": [],
+      "dashboardBadges": [
+        "standard-delivery"
+      ],
+      "webhookEvent": {
+        "eventType": "enterprise.alert.routing.reviewed",
+        "alertId": "ALERT-INFO-100",
+        "action": "allow_digest_or_standard_delivery",
+        "findingCodes": [],
+        "requiresAcknowledgement": false,
+        "eventDigest": "04a40a820e3ad0ed259e8c05153cdb1c53b3e4aec11230d167095bf898da5f02"
+      },
+      "auditDigest": "d50f57932c5a1a13a3ce187053be1b8a88b57cf8546250db2ed605a27ab009c7"
+    }
+  ],
+  "auditDigest": "828b10bdaf88976168cd68d7b4b5506a0565b681bfd2d5d0f25395bfcb4254bc"
+}

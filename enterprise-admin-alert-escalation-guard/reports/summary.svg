@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise admin alert escalation guard summary</title>
+  <desc id="desc">Synthetic enterprise alert delivery and escalation decisions.</desc>
+  <rect width="1280" height="720" fill="#233142"/>
+  <rect x="70" y="70" width="1140" height="580" rx="8" fill="#f8fafc"/>
+  <text x="110" y="140" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">Enterprise admin alert escalation guard</text>
+  <text x="110" y="194" font-family="Arial, sans-serif" font-size="25" fill="#334155">Mute, digest, owner, webhook, and quiet-hours routing checks</text>
+  <rect x="110" y="246" width="310" height="148" rx="8" fill="#dbeafe"/>
+  <text x="135" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1e3a8a">4 alerts</text>
+  <text x="135" y="350" font-family="Arial, sans-serif" font-size="25" fill="#1e40af">admin routing</text>
+  <rect x="465" y="246" width="310" height="148" rx="8" fill="#fee2e2"/>
+  <text x="490" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#7f1d1d">2 escalated</text>
+  <text x="490" y="350" font-family="Arial, sans-serif" font-size="25" fill="#991b1b">mute bypass</text>
+  <rect x="820" y="246" width="310" height="148" rx="8" fill="#dcfce7"/>
+  <text x="845" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#14532d">8 findings</text>
+  <text x="845" y="350" font-family="Arial, sans-serif" font-size="25" fill="#166534">review packets</text>
+  <text x="110" y="465" font-family="Arial, sans-serif" font-size="22" fill="#111827">Actions: deliver_now_and_escalate (1) / hold_digest_and_route_owner_fallback (1) / warn_and_repair_delivery_path (1) / allow_digest_or_standard_delivery (1)</text>
+  <text x="110" y="590" font-family="Arial, sans-serif" font-size="20" fill="#475569">Digest: 828b10bdaf88976168cd68d7b4b5506a...</text>
+</svg>

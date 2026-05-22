@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <style>
+    .bg{fill:#111827}
+    .panel{fill:#f8fafc}
+    .title{font:700 34px Arial,sans-serif;fill:#0f172a}
+    .meta{font:400 18px Arial,sans-serif;fill:#475569}
+    .label{font:600 20px Arial,sans-serif;fill:#1e293b}
+    .value{font:700 20px Arial,sans-serif;fill:#0f172a}
+    .bar{fill:#6366f1}
+    .digest{font:400 15px monospace;fill:#334155}
+  </style>
+  <rect class="bg" width="960" height="540"/>
+  <rect class="panel" x="28" y="28" width="904" height="484" rx="16"/>
+  <text x="58" y="82" class="title">Project Break-Glass Access Guard</text>
+  <text x="58" y="116" class="meta">Grants 3 | Blocked/review 2</text>
+  <text x="58" y="177" class="label">approve_with_review</text>
+  <rect x="292" y="154" width="92" height="28" rx="5" class="bar"/>
+  <text x="396" y="176" class="value">1</text>
+  <text x="58" y="223" class="label">approved</text>
+  <rect x="292" y="200" width="184" height="28" rx="5" class="bar"/>
+  <text x="488" y="222" class="value">2</text>
+  <text x="58" y="269" class="label">steward_review</text>
+  <rect x="292" y="246" width="184" height="28" rx="5" class="bar"/>
+  <text x="488" y="268" class="value">2</text>
+  <text x="58" y="482" class="digest">audit e0e335c11209ce7c1812438f76265bb0adffcfbaee4cc16b</text>
+</svg>

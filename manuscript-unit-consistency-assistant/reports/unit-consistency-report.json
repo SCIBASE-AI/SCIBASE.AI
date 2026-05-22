@@ -1,0 +1,364 @@
+{
+  "tool": "manuscript-unit-consistency-assistant",
+  "version": "1.0.0",
+  "summary": {
+    "manuscriptId": "SCIBASE-MUCA-001",
+    "title": "Metabolic rescue assay draft with unit hygiene risks",
+    "sectionsReviewed": 2,
+    "tablesReviewed": 1,
+    "measurementsReviewed": 15,
+    "findingsBySeverity": {
+      "high": 2,
+      "medium": 4,
+      "low": 2
+    },
+    "readinessScore": 2,
+    "readiness": "block-before-submission"
+  },
+  "findings": [
+    {
+      "id": "muca_36cf703a9346e39d",
+      "type": "range-outlier",
+      "severity": "high",
+      "sourceId": "results-cytokines",
+      "message": "370 C is outside a plausible wet-lab manuscript temperature range.",
+      "evidence": "A draft assay note says the plate was heated to 370 C for 15 min.",
+      "recommendation": "Confirm whether this is a typo, a specialized protocol condition, or a missing decimal point."
+    },
+    {
+      "id": "muca_95dbbfcb578262ba",
+      "type": "unit-family-conflict",
+      "severity": "high",
+      "sourceId": "methods-cell-culture,methods-cell-culture",
+      "message": "metformin uses both molar and mass concentration units.",
+      "evidence": "methods-cell-culture: 5 mM; methods-cell-culture: 2 mg/mL",
+      "recommendation": "Add a molecular-weight conversion note or standardize the manuscript to one concentration basis."
+    },
+    {
+      "id": "muca_3de684898a98c8d2",
+      "type": "missing-unit",
+      "severity": "medium",
+      "sourceId": "methods-cell-culture",
+      "message": "Numeric value \"12,000\" appears without an adjacent unit in Methods: cell culture and dosing.",
+      "evidence": "Pellets were centrifuged at 12,000 for 10 min before lysis.",
+      "recommendation": "Add the intended unit or rewrite the sentence so the quantity is unambiguous."
+    },
+    {
+      "id": "muca_590da22e9ab0ee41",
+      "type": "table-unit-drift",
+      "severity": "medium",
+      "sourceId": "table-cytokines",
+      "message": "TNF-alpha cell unit ng/mL does not match header unit pg/mL.",
+      "evidence": "Table 1. Inflammation marker summary, row 1, column \"TNF-alpha (pg/mL)\": 0.09 ng/mL",
+      "recommendation": "Convert the cell value to the header unit or split the column by unit."
+    },
+    {
+      "id": "muca_95dc9c8a07b00576",
+      "type": "table-unit-drift",
+      "severity": "medium",
+      "sourceId": "table-cytokines",
+      "message": "IL-6 cell unit ng/mL does not match header unit pg/mL.",
+      "evidence": "Table 1. Inflammation marker summary, row 2, column \"IL-6 (pg/mL)\": 0.21 ng/mL",
+      "recommendation": "Convert the cell value to the header unit or split the column by unit."
+    },
+    {
+      "id": "muca_de3ee2dfeed34533",
+      "type": "missing-unit",
+      "severity": "medium",
+      "sourceId": "results-cytokines",
+      "message": "Numeric value \"35\" appears without an adjacent unit in Results: cytokine response.",
+      "evidence": "ATP increased by 35 compared with vehicle control.",
+      "recommendation": "Add the intended unit or rewrite the sentence so the quantity is unambiguous."
+    },
+    {
+      "id": "muca_9c165b65e67621cb",
+      "type": "unit-scale-drift",
+      "severity": "low",
+      "sourceId": "results-cytokines,results-cytokines,table-cytokines,table-cytokines",
+      "message": "IL-6 is reported in multiple unit scales: pg/mL, ng/mL.",
+      "evidence": "results-cytokines: 180 pg/mL; results-cytokines: 0.22 ng/mL; table-cytokines: 180 pg/mL; table-cytokines: 0.21 ng/mL",
+      "recommendation": "Keep the source units if scientifically useful, but include a normalized value for reviewer comparison."
+    },
+    {
+      "id": "muca_fcdbfc1cf13921d3",
+      "type": "unit-scale-drift",
+      "severity": "low",
+      "sourceId": "table-cytokines,table-cytokines",
+      "message": "TNF-alpha is reported in multiple unit scales: ng/mL, pg/mL.",
+      "evidence": "table-cytokines: 0.09 ng/mL; table-cytokines: 70 pg/mL",
+      "recommendation": "Keep the source units if scientifically useful, but include a normalized value for reviewer comparison."
+    }
+  ],
+  "reviewerActions": [
+    {
+      "id": "muca_67af617354794f83",
+      "priority": 1,
+      "label": "Action 1",
+      "action": "Confirm whether this is a typo, a specialized protocol condition, or a missing decimal point.",
+      "sourceId": "results-cytokines",
+      "blocksSubmission": true
+    },
+    {
+      "id": "muca_529ad118a3551d22",
+      "priority": 1,
+      "label": "Action 2",
+      "action": "Add a molecular-weight conversion note or standardize the manuscript to one concentration basis.",
+      "sourceId": "methods-cell-culture,methods-cell-culture",
+      "blocksSubmission": true
+    },
+    {
+      "id": "muca_e8ecfa112c107bd2",
+      "priority": 2,
+      "label": "Action 3",
+      "action": "Add the intended unit or rewrite the sentence so the quantity is unambiguous.",
+      "sourceId": "methods-cell-culture",
+      "blocksSubmission": false
+    },
+    {
+      "id": "muca_a9d04f4c8bb5dfff",
+      "priority": 2,
+      "label": "Action 4",
+      "action": "Convert the cell value to the header unit or split the column by unit.",
+      "sourceId": "table-cytokines",
+      "blocksSubmission": false
+    },
+    {
+      "id": "muca_02a1bc61ed8e1db8",
+      "priority": 2,
+      "label": "Action 5",
+      "action": "Convert the cell value to the header unit or split the column by unit.",
+      "sourceId": "table-cytokines",
+      "blocksSubmission": false
+    },
+    {
+      "id": "muca_649892c2608f0908",
+      "priority": 2,
+      "label": "Action 6",
+      "action": "Add the intended unit or rewrite the sentence so the quantity is unambiguous.",
+      "sourceId": "results-cytokines",
+      "blocksSubmission": false
+    },
+    {
+      "id": "muca_1754df244fe5958e",
+      "priority": 3,
+      "label": "Action 7",
+      "action": "Keep the source units if scientifically useful, but include a normalized value for reviewer comparison.",
+      "sourceId": "results-cytokines,results-cytokines,table-cytokines,table-cytokines",
+      "blocksSubmission": false
+    },
+    {
+      "id": "muca_19a1cbf17ba36129",
+      "priority": 3,
+      "label": "Action 8",
+      "action": "Keep the source units if scientifically useful, but include a normalized value for reviewer comparison.",
+      "sourceId": "table-cytokines,table-cytokines",
+      "blocksSubmission": false
+    }
+  ],
+  "measurementInventory": [
+    {
+      "id": "muca_f1ceb42ef6a4fdcd",
+      "sourceType": "section",
+      "sourceId": "methods-cell-culture",
+      "sourceTitle": "Methods: cell culture and dosing",
+      "raw": "20,000 cells/well",
+      "value": 20000,
+      "unit": "cells/well",
+      "unitFamily": "count_density",
+      "normalizedValue": 20000,
+      "subject": "cells/well 96-well",
+      "context": "Cells were seeded at 20,000 cells/well in 96-well plates."
+    },
+    {
+      "id": "muca_83deff953b23b592",
+      "sourceType": "section",
+      "sourceId": "methods-cell-culture",
+      "sourceTitle": "Methods: cell culture and dosing",
+      "raw": "5 mM",
+      "value": 5,
+      "unit": "mM",
+      "unitFamily": "molar_concentration",
+      "normalizedValue": 0.005,
+      "subject": "metformin",
+      "context": "Metformin was added at 5 mM for 24 h, while a later paragraph lists metformin at 2 mg/mL without a conversion note."
+    },
+    {
+      "id": "muca_65f1949766dc7ed5",
+      "sourceType": "section",
+      "sourceId": "methods-cell-culture",
+      "sourceTitle": "Methods: cell culture and dosing",
+      "raw": "24 h",
+      "value": 24,
+      "unit": "h",
+      "unitFamily": "time",
+      "normalizedValue": 86400,
+      "subject": "metformin",
+      "context": "Metformin was added at 5 mM for 24 h, while a later paragraph lists metformin at 2 mg/mL without a conversion note."
+    },
+    {
+      "id": "muca_5cd9802ef78a680d",
+      "sourceType": "section",
+      "sourceId": "methods-cell-culture",
+      "sourceTitle": "Methods: cell culture and dosing",
+      "raw": "2 mg/mL",
+      "value": 2,
+      "unit": "mg/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 2,
+      "subject": "metformin",
+      "context": "Metformin was added at 5 mM for 24 h, while a later paragraph lists metformin at 2 mg/mL without a conversion note."
+    },
+    {
+      "id": "muca_be3f9e06763987aa",
+      "sourceType": "section",
+      "sourceId": "methods-cell-culture",
+      "sourceTitle": "Methods: cell culture and dosing",
+      "raw": "5 mg/mL",
+      "value": 5,
+      "unit": "mg/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 5,
+      "subject": "glucose",
+      "context": "The glucose rescue arm used 5 mg/mL glucose for 6 h."
+    },
+    {
+      "id": "muca_6beb8d48a5431704",
+      "sourceType": "section",
+      "sourceId": "methods-cell-culture",
+      "sourceTitle": "Methods: cell culture and dosing",
+      "raw": "6 h",
+      "value": 6,
+      "unit": "h",
+      "unitFamily": "time",
+      "normalizedValue": 21600,
+      "subject": "glucose",
+      "context": "The glucose rescue arm used 5 mg/mL glucose for 6 h."
+    },
+    {
+      "id": "muca_a10aee8c7490683f",
+      "sourceType": "section",
+      "sourceId": "methods-cell-culture",
+      "sourceTitle": "Methods: cell culture and dosing",
+      "raw": "10 min",
+      "value": 10,
+      "unit": "min",
+      "unitFamily": "time",
+      "normalizedValue": 600,
+      "subject": "min before",
+      "context": "Pellets were centrifuged at 12,000 for 10 min before lysis."
+    },
+    {
+      "id": "muca_efb584083c3872b7",
+      "sourceType": "section",
+      "sourceId": "results-cytokines",
+      "sourceTitle": "Results: cytokine response",
+      "raw": "180 pg/mL",
+      "value": 180,
+      "unit": "pg/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 1.8e-7,
+      "subject": "IL-6",
+      "context": "IL-6 fell from 180 pg/mL to 0."
+    },
+    {
+      "id": "muca_1eb0057f96d8c3bb",
+      "sourceType": "section",
+      "sourceId": "results-cytokines",
+      "sourceTitle": "Results: cytokine response",
+      "raw": "0.22 ng/mL",
+      "value": 0.22,
+      "unit": "ng/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 2.2e-7,
+      "subject": "IL-6",
+      "context": "IL-6 fell from 180 pg/mL to 0."
+    },
+    {
+      "id": "muca_641e34b0de754de6",
+      "sourceType": "section",
+      "sourceId": "results-cytokines",
+      "sourceTitle": "Results: cytokine response",
+      "raw": "370 C",
+      "value": 370,
+      "unit": "C",
+      "unitFamily": "temperature",
+      "normalizedValue": 370,
+      "subject": "heated C",
+      "context": "A draft assay note says the plate was heated to 370 C for 15 min."
+    },
+    {
+      "id": "muca_45c1f8badcdb8e47",
+      "sourceType": "section",
+      "sourceId": "results-cytokines",
+      "sourceTitle": "Results: cytokine response",
+      "raw": "15 min",
+      "value": 15,
+      "unit": "min",
+      "unitFamily": "time",
+      "normalizedValue": 900,
+      "subject": "heated C",
+      "context": "A draft assay note says the plate was heated to 370 C for 15 min."
+    },
+    {
+      "id": "muca_08c2f7c0f74b65bd",
+      "sourceType": "table",
+      "sourceId": "table-cytokines",
+      "sourceTitle": "Table 1. Inflammation marker summary",
+      "row": 1,
+      "column": "IL-6 (pg/mL)",
+      "raw": "180 pg/mL",
+      "value": 180,
+      "unit": "pg/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 1.8e-7,
+      "subject": "IL-6",
+      "context": "Table 1. Inflammation marker summary: IL-6 (pg/mL) = 180 pg/mL"
+    },
+    {
+      "id": "muca_47badfa8f8f83d5d",
+      "sourceType": "table",
+      "sourceId": "table-cytokines",
+      "sourceTitle": "Table 1. Inflammation marker summary",
+      "row": 1,
+      "column": "TNF-alpha (pg/mL)",
+      "raw": "0.09 ng/mL",
+      "value": 0.09,
+      "unit": "ng/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 9e-8,
+      "subject": "TNF-alpha",
+      "context": "Table 1. Inflammation marker summary: TNF-alpha (pg/mL) = 0.09 ng/mL"
+    },
+    {
+      "id": "muca_8364cd567101eae3",
+      "sourceType": "table",
+      "sourceId": "table-cytokines",
+      "sourceTitle": "Table 1. Inflammation marker summary",
+      "row": 2,
+      "column": "IL-6 (pg/mL)",
+      "raw": "0.21 ng/mL",
+      "value": 0.21,
+      "unit": "ng/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 2.1e-7,
+      "subject": "IL-6",
+      "context": "Table 1. Inflammation marker summary: IL-6 (pg/mL) = 0.21 ng/mL"
+    },
+    {
+      "id": "muca_4484e92c7a32c632",
+      "sourceType": "table",
+      "sourceId": "table-cytokines",
+      "sourceTitle": "Table 1. Inflammation marker summary",
+      "row": 2,
+      "column": "TNF-alpha (pg/mL)",
+      "raw": "70 pg/mL",
+      "value": 70,
+      "unit": "pg/mL",
+      "unitFamily": "mass_concentration",
+      "normalizedValue": 7e-8,
+      "subject": "TNF-alpha",
+      "context": "Table 1. Inflammation marker summary: TNF-alpha (pg/mL) = 70 pg/mL"
+    }
+  ],
+  "auditDigest": "66b689128bf18282"
+}

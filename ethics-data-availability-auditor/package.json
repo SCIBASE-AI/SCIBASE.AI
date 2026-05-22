@@ -1,0 +1,11 @@
+{
+  "name": "ethics-data-availability-auditor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check index.js && node --check demo.js && node --check test.js && node --check sample-data.js",
+    "test": "node test.js",
+    "demo": "node demo.js"
+  }
+}

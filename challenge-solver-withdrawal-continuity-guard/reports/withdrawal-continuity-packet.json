@@ -1,0 +1,178 @@
+[
+  {
+    "scenario": "broken-quorum-and-unrevoked-access",
+    "challengeId": "challenge-protein-folding",
+    "generatedAt": "2026-05-22T15:20:00Z",
+    "decision": "hold-workspace-continuity",
+    "summary": {
+      "teams": 1,
+      "affectedTeams": 1,
+      "withdrawingSolvers": 1,
+      "replacementsReady": 0,
+      "requiredActions": 7,
+      "critical": 3,
+      "high": 2,
+      "medium": 2
+    },
+    "findings": [
+      {
+        "type": "missing-withdrawal-notice",
+        "severity": "critical",
+        "target": "solver-1",
+        "teamId": "team-alpha",
+        "message": "solver-1 is withdrawing without a dated notice record."
+      },
+      {
+        "type": "access-revocation-missing",
+        "severity": "critical",
+        "target": "solver-1",
+        "teamId": "team-alpha",
+        "message": "solver-1 still needs workspace access revocation evidence."
+      },
+      {
+        "type": "ip-return-missing",
+        "severity": "high",
+        "target": "solver-1",
+        "teamId": "team-alpha",
+        "message": "solver-1 lacks IP return, retention, or destruction confirmation."
+      },
+      {
+        "type": "team-quorum-broken",
+        "severity": "critical",
+        "target": "team-alpha",
+        "activeContinuityMembers": 1,
+        "minActiveMembers": 2,
+        "message": "team-alpha falls below required active solver quorum after withdrawal."
+      },
+      {
+        "type": "artifact-custody-gap",
+        "severity": "high",
+        "target": "team-alpha",
+        "artifactIds": [
+          "model-checkpoint"
+        ],
+        "message": "team-alpha has withdrawing-solver artifacts without custody confirmation."
+      },
+      {
+        "type": "milestone-continuity-risk",
+        "severity": "medium",
+        "target": "team-alpha",
+        "dueAt": "2026-05-25T00:00:00Z",
+        "message": "team-alpha has a milestone due within 7 days of a withdrawal event."
+      },
+      {
+        "type": "stakeholder-notification-gap",
+        "severity": "medium",
+        "target": "team-alpha",
+        "missingAudiences": [
+          "sponsor",
+          "reviewers"
+        ],
+        "message": "team-alpha has incomplete sponsor or reviewer withdrawal notifications."
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "record_withdrawal_notice",
+        "target": "solver-1",
+        "reason": "challenge coordinators need a dated notice before changing solver team state"
+      },
+      {
+        "type": "revoke_workspace_access",
+        "target": "solver-1",
+        "reason": "private challenge data and submission workspaces must be protected after withdrawal"
+      },
+      {
+        "type": "confirm_ip_return_duties",
+        "target": "solver-1",
+        "reason": "solver-owned and sponsor-confidential materials need explicit custody status"
+      },
+      {
+        "type": "restore_team_quorum",
+        "target": "team-alpha",
+        "reason": "challenge fairness requires enough active or eligible replacement solvers before work continues"
+      },
+      {
+        "type": "confirm_artifact_custody",
+        "target": "team-alpha",
+        "reason": "submission artifacts need owner handoff before sponsor review or scoring continues"
+      },
+      {
+        "type": "review_milestone_extension",
+        "target": "team-alpha",
+        "reason": "near-term milestones may need sponsor-approved extension or partial-credit handling"
+      },
+      {
+        "type": "notify_stakeholders",
+        "target": "team-alpha",
+        "reason": "sponsors and reviewers need synchronized withdrawal state before judging or deadlines change"
+      }
+    ]
+  },
+  {
+    "scenario": "replacement-ready-but-custody-gap",
+    "challengeId": "challenge-materials-screen",
+    "generatedAt": "2026-05-22T15:20:00Z",
+    "decision": "coordinator-review",
+    "summary": {
+      "teams": 1,
+      "affectedTeams": 1,
+      "withdrawingSolvers": 1,
+      "replacementsReady": 1,
+      "requiredActions": 2,
+      "critical": 0,
+      "high": 1,
+      "medium": 1
+    },
+    "findings": [
+      {
+        "type": "artifact-custody-gap",
+        "severity": "high",
+        "target": "team-beta",
+        "artifactIds": [
+          "screening-notebook"
+        ],
+        "message": "team-beta has withdrawing-solver artifacts without custody confirmation."
+      },
+      {
+        "type": "stakeholder-notification-gap",
+        "severity": "medium",
+        "target": "team-beta",
+        "missingAudiences": [
+          "reviewers"
+        ],
+        "message": "team-beta has incomplete sponsor or reviewer withdrawal notifications."
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "confirm_artifact_custody",
+        "target": "team-beta",
+        "reason": "submission artifacts need owner handoff before sponsor review or scoring continues"
+      },
+      {
+        "type": "notify_stakeholders",
+        "target": "team-beta",
+        "reason": "sponsors and reviewers need synchronized withdrawal state before judging or deadlines change"
+      }
+    ]
+  },
+  {
+    "scenario": "clean-continuity-handoff",
+    "challengeId": "challenge-climate-nowcast",
+    "generatedAt": "2026-05-22T15:20:00Z",
+    "decision": "continuity-ready",
+    "summary": {
+      "teams": 1,
+      "affectedTeams": 1,
+      "withdrawingSolvers": 1,
+      "replacementsReady": 1,
+      "requiredActions": 0,
+      "critical": 0,
+      "high": 0,
+      "medium": 0
+    },
+    "findings": [],
+    "requiredActions": []
+  }
+]

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#101827"/>
+  <rect x="72" y="64" width="1136" height="592" rx="24" fill="#f8fafc"/>
+  <text x="112" y="128" fill="#0f172a" font-family="Arial, sans-serif" font-size="42" font-weight="700">Human Subjects Compliance Guard</text>
+  <text x="112" y="174" fill="#475569" font-family="Arial, sans-serif" font-size="22">SCIBASE Scientific Bounty System - issue #18</text>
+  <rect x="112" y="226" width="220" height="86" rx="18" fill="#dc2626"/>
+  <text x="142" y="281" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">HOLD</text>
+  <text x="112" y="374" fill="#0f172a" font-family="Arial, sans-serif" font-size="28">Primary blockers: 16</text>
+  <text x="112" y="420" fill="#0f172a" font-family="Arial, sans-serif" font-size="28">Submissions checked: 3</text>
+  <text x="112" y="466" fill="#0f172a" font-family="Arial, sans-serif" font-size="28">Decision: hold_submission</text>
+  <text x="112" y="538" fill="#334155" font-family="Arial, sans-serif" font-size="20">Checks: IRB or exemption, consent scope, de-identification, DUA, reviewer training, payout/IP hold.</text>
+  <text x="112" y="584" fill="#64748b" font-family="Arial, sans-serif" font-size="17">Digest: CH-HUMAN-042:SUB-TEAM-17:hold:B=CONSENT_GROUP_GAP|CONSENT_USE_MISMATCH|DATA_USE_AGREEMENT_MISSING|DIRECT_IDENTIFIERS_PRESENT|ETHICS_APPROVAL_NOT_ACTIVE|GDPR_LAWFUL_BASIS_MISSING|GDPR_TRANSFER_MECHANISM_MISSING|HIGH_REIDENTIFICATION_RISK|HIPAA_MINIMUM_NECESSARY_MISSING|IP_RELEASE_BEFORE_COMPLIANCE|MISSING_ARTIFACT_CHECKSUM|PAYOUT_BEFORE_COMPLIANCE|RAW_DATA_ACCESS_OUTSIDE_PRIVATE_CHALLENGE|REVIEWER_CONFLICT_DECLARATION_MISSING|REVIEWER_TRAINING_MISSING|UNSUPPORTED_PRIVACY_LEVEL:W=MISSING_PRIVACY_CONTACT|MISSING_PROTOCOL_ID|REVIEWER_ACCESS_EXPIRES_BEFORE_EVALUATION_END|SPONSOR_HOLD_ACK_MISSING|WITHDRAWAL_WINDOW_OPEN</text>
+  <text x="112" y="620" fill="#64748b" font-family="Arial, sans-serif" font-size="17">Synthetic data only. No external APIs. No private participant records.</text>
+</svg>

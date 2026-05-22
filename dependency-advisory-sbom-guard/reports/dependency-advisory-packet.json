@@ -1,0 +1,249 @@
+{
+  "asOfDate": "2026-05-22",
+  "artifactCount": 5,
+  "findingCount": 3,
+  "byAction": {
+    "quarantine_execution_surfaces": 2,
+    "refresh_lockfile_before_rerun": 1,
+    "hold_missing_lockfile": 1,
+    "allow_preview_rerun_export": 1
+  },
+  "bySeverity": {
+    "critical": 2,
+    "medium": 1,
+    "high": 1,
+    "low": 1
+  },
+  "blockedArtifacts": [
+    "ART-NB-440",
+    "ART-MODEL-880",
+    "ART-NB-510"
+  ],
+  "packets": [
+    {
+      "artifactId": "ART-NB-440",
+      "artifactType": "notebook",
+      "language": "python",
+      "action": "quarantine_execution_surfaces",
+      "severity": "critical",
+      "reason": "critical or high runtime advisory affects executable preview/rerun/export surfaces",
+      "executionSurfaces": [
+        "preview",
+        "reproduce_button"
+      ],
+      "lockfilePresent": true,
+      "lockfileAgeDays": 12,
+      "lockfileFresh": true,
+      "sbomComponentCount": 2,
+      "findingCount": 1,
+      "findings": [
+        {
+          "component": "pandas",
+          "version": "2.1.4",
+          "scope": "notebook",
+          "advisoryId": "ADV-PANDAS-001",
+          "severity": "high",
+          "cve": "CVE-2026-1001",
+          "affectedRange": "<2.2.2",
+          "fixedVersion": "2.2.2",
+          "exploitMaturity": "public_poc",
+          "runtime": true,
+          "treatment": "quarantine_execution",
+          "rationale": "high severity; runtime component; exploit maturity requires quarantine; artifact has executable surfaces; fixed in 2.2.2"
+        }
+      ],
+      "reviewerActions": [
+        "quarantine executable surfaces until fixed versions are pinned",
+        "notify artifact owner with affected components and fixed versions"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "lockfileFreshnessDays": 90,
+        "criticalSeverities": [
+          "critical",
+          "high"
+        ],
+        "exploitMaturityBlocklist": [
+          "weaponized",
+          "public_poc",
+          "known_exploited"
+        ]
+      },
+      "auditDigest": "7899c01f1fd0932aa0d4db9c03629bc6e96b5b5a982cac04c601f0e314a402da"
+    },
+    {
+      "artifactId": "ART-MODEL-880",
+      "artifactType": "model-training-code",
+      "language": "python",
+      "action": "quarantine_execution_surfaces",
+      "severity": "critical",
+      "reason": "critical or high runtime advisory affects executable preview/rerun/export surfaces",
+      "executionSurfaces": [
+        "scheduled_rerun",
+        "export_bundle"
+      ],
+      "lockfilePresent": true,
+      "lockfileAgeDays": 22,
+      "lockfileFresh": true,
+      "sbomComponentCount": 2,
+      "findingCount": 1,
+      "findings": [
+        {
+          "component": "torch",
+          "version": "2.2.1",
+          "scope": "model-serving",
+          "advisoryId": "ADV-TORCH-002",
+          "severity": "critical",
+          "cve": "CVE-2026-2400",
+          "affectedRange": "<2.4.0",
+          "fixedVersion": "2.4.0",
+          "exploitMaturity": "known_exploited",
+          "runtime": true,
+          "treatment": "quarantine_execution",
+          "rationale": "critical severity; runtime component; exploit maturity requires quarantine; artifact has executable surfaces; fixed in 2.4.0"
+        }
+      ],
+      "reviewerActions": [
+        "quarantine executable surfaces until fixed versions are pinned",
+        "notify artifact owner with affected components and fixed versions"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "lockfileFreshnessDays": 90,
+        "criticalSeverities": [
+          "critical",
+          "high"
+        ],
+        "exploitMaturityBlocklist": [
+          "weaponized",
+          "public_poc",
+          "known_exploited"
+        ]
+      },
+      "auditDigest": "7e256c7872d99ba1a511698f6cfc683fb75e2641b19ca4d0b0c65d033b43e2d6"
+    },
+    {
+      "artifactId": "ART-CODE-120",
+      "artifactType": "code",
+      "language": "javascript",
+      "action": "refresh_lockfile_before_rerun",
+      "severity": "medium",
+      "reason": "lockfile freshness exceeds policy window",
+      "executionSurfaces": [
+        "export_bundle"
+      ],
+      "lockfilePresent": true,
+      "lockfileAgeDays": 172,
+      "lockfileFresh": false,
+      "sbomComponentCount": 1,
+      "findingCount": 1,
+      "findings": [
+        {
+          "component": "plotly",
+          "version": "5.18.0",
+          "scope": "dev",
+          "advisoryId": "ADV-PLOTLY-003",
+          "severity": "medium",
+          "cve": "CVE-2026-2002",
+          "affectedRange": "<5.20.0",
+          "fixedVersion": "5.20.0",
+          "exploitMaturity": "theoretical",
+          "runtime": false,
+          "treatment": "warn_remediate",
+          "rationale": "medium severity; artifact has executable surfaces; lockfile is missing or stale; fixed in 5.20.0"
+        }
+      ],
+      "reviewerActions": [
+        "regenerate lockfile/SBOM and rerun advisory matching",
+        "hold scheduled reruns until fresh dependency evidence is attached"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "lockfileFreshnessDays": 90,
+        "criticalSeverities": [
+          "critical",
+          "high"
+        ],
+        "exploitMaturityBlocklist": [
+          "weaponized",
+          "public_poc",
+          "known_exploited"
+        ]
+      },
+      "auditDigest": "d5a1d9680e1e5b13ca52af43dadfb39416f6eb63eb46f91779056b4b0707bfa6"
+    },
+    {
+      "artifactId": "ART-NB-510",
+      "artifactType": "notebook",
+      "language": "r",
+      "action": "hold_missing_lockfile",
+      "severity": "high",
+      "reason": "executable artifact has no lockfile/SBOM freshness evidence",
+      "executionSurfaces": [
+        "preview"
+      ],
+      "lockfilePresent": false,
+      "lockfileAgeDays": null,
+      "lockfileFresh": false,
+      "sbomComponentCount": 0,
+      "findingCount": 0,
+      "findings": [],
+      "reviewerActions": [
+        "attach generated SBOM and lockfile digest before enabling execution",
+        "disable preview, reproduce button, scheduled rerun, and export bundle"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "lockfileFreshnessDays": 90,
+        "criticalSeverities": [
+          "critical",
+          "high"
+        ],
+        "exploitMaturityBlocklist": [
+          "weaponized",
+          "public_poc",
+          "known_exploited"
+        ]
+      },
+      "auditDigest": "7c4f96d317eeb3c8f5b0f1644d6417be79ad7af7124fb880dda79eb5108c4f20"
+    },
+    {
+      "artifactId": "ART-NB-700",
+      "artifactType": "notebook",
+      "language": "python",
+      "action": "allow_preview_rerun_export",
+      "severity": "low",
+      "reason": "no matching advisories and lockfile evidence satisfies policy",
+      "executionSurfaces": [
+        "preview",
+        "reproduce_button",
+        "export_bundle"
+      ],
+      "lockfilePresent": true,
+      "lockfileAgeDays": 10,
+      "lockfileFresh": true,
+      "sbomComponentCount": 2,
+      "findingCount": 0,
+      "findings": [],
+      "reviewerActions": [
+        "allow previews, reproduce actions, reruns, and export bundle",
+        "preserve advisory audit digest for reviewer packet"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "lockfileFreshnessDays": 90,
+        "criticalSeverities": [
+          "critical",
+          "high"
+        ],
+        "exploitMaturityBlocklist": [
+          "weaponized",
+          "public_poc",
+          "known_exploited"
+        ]
+      },
+      "auditDigest": "26620f93dae6ed3eefb8239f73b5c73d646092682f1b9e402503360474c94579"
+    }
+  ],
+  "auditDigest": "afeb093df56a72feaaae7c6225929330bacd368c5b4b9790161ad4a2abc5e355"
+}

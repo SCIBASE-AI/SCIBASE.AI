@@ -1,0 +1,170 @@
+{
+  "status": "finance_review_required",
+  "generatedAt": "2026-05-20T20:30:00.000Z",
+  "totals": {
+    "rawEvents": 10,
+    "idempotencyGroups": 3,
+    "heldRows": 1,
+    "collapsedRows": 2,
+    "billableCents": 3.59,
+    "avoidedOverbillCents": 94.46,
+    "invoiceCents": 0.44,
+    "heldInvoiceAccounts": 1
+  },
+  "accountSummaries": [
+    {
+      "accountId": "institute-helix",
+      "status": "ready",
+      "billableCents": 1.44,
+      "avoidedOverbillCents": 1,
+      "meterRows": 1,
+      "criticalFindings": 0,
+      "plan": "Institutional License",
+      "paymentRail": "institutional_invoice",
+      "includedUsageAppliedCents": 1,
+      "topUpAppliedCents": 0,
+      "invoiceCents": 0.44,
+      "quotaRemainingCents": 0,
+      "topUpRemainingCents": 0,
+      "billingDecision": "invoice_overage",
+      "financeAction": "Release the reconciled overage after raw-vs-attributed review."
+    },
+    {
+      "accountId": "lab-northbridge",
+      "status": "ready",
+      "billableCents": 2.15,
+      "avoidedOverbillCents": 2.96,
+      "meterRows": 1,
+      "criticalFindings": 0,
+      "plan": "Lab Pro",
+      "paymentRail": "card_subscription",
+      "includedUsageAppliedCents": 2,
+      "topUpAppliedCents": 0.15,
+      "invoiceCents": 0,
+      "quotaRemainingCents": 0,
+      "topUpRemainingCents": 14.85,
+      "billingDecision": "covered_by_subscription_or_topup",
+      "financeAction": "Post usage against included quota or prepaid top-up without issuing a new overage invoice."
+    },
+    {
+      "accountId": "lab-westlake",
+      "status": "hold",
+      "billableCents": 0,
+      "avoidedOverbillCents": 90.5,
+      "meterRows": 1,
+      "criticalFindings": 2,
+      "plan": "Reproducibility Pack",
+      "paymentRail": "institutional_invoice",
+      "includedUsageAppliedCents": 0,
+      "topUpAppliedCents": 0,
+      "invoiceCents": 0,
+      "quotaRemainingCents": 25,
+      "topUpRemainingCents": 100,
+      "billingDecision": "hold_invoice",
+      "financeAction": "Do not release invoice-facing AI compute revenue until critical billing findings are resolved."
+    }
+  ],
+  "meterRows": [
+    {
+      "idempotencyKey": "d56f73f30529ce559ab6cd28284c569f9301e469c670eae2732d2a698385d5d5",
+      "accountId": "lab-northbridge",
+      "operation": "literature_summary",
+      "eventIds": [
+        "evt-001",
+        "evt-002",
+        "evt-003"
+      ],
+      "retainedEventId": "evt-003",
+      "action": "collapse",
+      "reason": "content_hash_retry_collapse",
+      "rawCents": 5.11,
+      "billableCents": 2.15,
+      "avoidedOverbillCents": 2.96
+    },
+    {
+      "idempotencyKey": "bf191a425a484f58e991c7bdf508864f1843a19701e9e20aeaebab84e0e94228",
+      "accountId": "lab-westlake",
+      "operation": "reproducibility_check",
+      "eventIds": [
+        "evt-004",
+        "evt-005"
+      ],
+      "retainedEventId": null,
+      "action": "hold",
+      "reason": "rerun_scope_undefined",
+      "rawCents": 90.5,
+      "billableCents": 0,
+      "avoidedOverbillCents": 90.5
+    },
+    {
+      "idempotencyKey": "b2a37a068d268a32963d17c546ca1fb7dccc7382f41e03eadcebef8d8066a78c",
+      "accountId": "institute-helix",
+      "operation": "peer_review_triage",
+      "eventIds": [
+        "evt-006",
+        "evt-007",
+        "evt-008",
+        "evt-009",
+        "evt-010"
+      ],
+      "retainedEventId": "evt-006",
+      "action": "collapse",
+      "reason": "content_hash_retry_collapse",
+      "rawCents": 2.44,
+      "billableCents": 1.44,
+      "avoidedOverbillCents": 1
+    }
+  ],
+  "findings": [
+    {
+      "accountId": "lab-northbridge",
+      "severity": "info",
+      "code": "content_hash_retry_collapse",
+      "idempotencyKey": "d56f73f30529ce559ab6cd28284c569f9301e469c670eae2732d2a698385d5d5",
+      "message": "2 retry or duplicate rows collapsed behind one content-hash meter row."
+    },
+    {
+      "accountId": "lab-westlake",
+      "severity": "critical",
+      "code": "rerun_scope_undefined",
+      "idempotencyKey": "bf191a425a484f58e991c7bdf508864f1843a19701e9e20aeaebab84e0e94228",
+      "message": "Nondeterministic reproducibility events share an undefined billing scope. Hold the invoice row until finance defines run-vs-verified-output responsibility."
+    },
+    {
+      "accountId": "institute-helix",
+      "severity": "info",
+      "code": "content_hash_retry_collapse",
+      "idempotencyKey": "b2a37a068d268a32963d17c546ca1fb7dccc7382f41e03eadcebef8d8066a78c",
+      "message": "4 retry or duplicate rows collapsed behind one content-hash meter row."
+    },
+    {
+      "accountId": "lab-northbridge",
+      "severity": "high",
+      "code": "raw_count_inflation",
+      "rawCount": 3,
+      "distinctCount": 1,
+      "ratio": 3,
+      "message": "Raw compute events materially exceed distinct account/source/day attribution. Review before invoicing usage counts."
+    },
+    {
+      "accountId": "institute-helix",
+      "severity": "high",
+      "code": "raw_count_inflation",
+      "rawCount": 5,
+      "distinctCount": 1,
+      "ratio": 5,
+      "message": "Raw compute events materially exceed distinct account/source/day attribution. Review before invoicing usage counts."
+    },
+    {
+      "accountId": "lab-westlake",
+      "severity": "critical",
+      "code": "rerun_scope_undefined",
+      "eventIds": [
+        "evt-004",
+        "evt-005"
+      ],
+      "message": "Nondeterministic reproducibility reruns lack a billing-scope policy. Hold charges until run-vs-verified-output responsibility is defined."
+    }
+  ],
+  "auditDigest": "d99fba495e098133aee15d4f6192b93a85f85257ee5e0a78084c0ef45302b3c8"
+}

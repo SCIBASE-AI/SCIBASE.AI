@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="56" y="54" width="1168" height="612" rx="22" fill="#f8fafc"/>
+  <text x="96" y="128" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#111827">AI Compute Idempotency Meter Guard</text>
+  <text x="96" y="178" font-family="Arial, sans-serif" font-size="22" fill="#334155">Finance review status: finance_review_required</text>
+  <g font-family="Arial, sans-serif" font-size="24" fill="#111827">
+    <text x="96" y="260">Raw events: 10</text>
+    <text x="96" y="305">Idempotency groups: 3</text>
+    <text x="96" y="350">Collapsed retry rows: 2</text>
+    <text x="96" y="395">Held rows: 1</text>
+    <text x="96" y="440">Avoided overbill: 94.46 cents</text>
+    <text x="96" y="485">Invoice overage: 0.44 cents</text>
+  </g>
+  <rect x="700" y="230" width="430" height="248" rx="14" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="732" y="286" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#075985">Controls covered</text>
+  <text x="732" y="336" font-family="Arial, sans-serif" font-size="22" fill="#075985">Content-hash retry collapse</text>
+  <text x="732" y="378" font-family="Arial, sans-serif" font-size="22" fill="#075985">Raw vs attributed count guard</text>
+  <text x="732" y="420" font-family="Arial, sans-serif" font-size="22" fill="#075985">Rerun-scope billing hold</text>
+  <text x="96" y="590" font-family="Arial, sans-serif" font-size="18" fill="#475569">Audit digest: d99fba495e098133aee15d4f6192b93a85f85257ee5e0a78...</text>
+</svg>

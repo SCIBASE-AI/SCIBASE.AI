@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <style>
+    .bg{fill:#111827}
+    .panel{fill:#f8fafc}
+    .title{font:700 34px Arial,sans-serif;fill:#0f172a}
+    .meta{font:400 18px Arial,sans-serif;fill:#475569}
+    .label{font:600 20px Arial,sans-serif;fill:#1e293b}
+    .value{font:700 20px Arial,sans-serif;fill:#0f172a}
+    .bar{fill:#38bdf8}
+    .digest{font:400 15px monospace;fill:#334155}
+  </style>
+  <rect class="bg" width="960" height="540"/>
+  <rect class="panel" x="28" y="28" width="904" height="484" rx="16"/>
+  <text x="58" y="82" class="title">Enterprise Usage Cost Allocation Guard</text>
+  <text x="58" y="116" class="meta">Approved $715.00 / Held $940.00 / Reallocate $310.00</text>
+  <text x="58" y="183" class="label">approved</text>
+  <rect x="285" y="160" width="184" height="28" rx="5" class="bar"/>
+  <text x="481" y="182" class="value">2</text>
+  <text x="58" y="229" class="label">hold</text>
+  <rect x="285" y="206" width="184" height="28" rx="5" class="bar"/>
+  <text x="481" y="228" class="value">2</text>
+  <text x="58" y="275" class="label">private_review</text>
+  <rect x="285" y="252" width="184" height="28" rx="5" class="bar"/>
+  <text x="481" y="274" class="value">2</text>
+  <text x="58" y="321" class="label">reallocate</text>
+  <rect x="285" y="298" width="92" height="28" rx="5" class="bar"/>
+  <text x="389" y="320" class="value">1</text>
+  <text x="58" y="482" class="digest">audit d5139452c6df2c02f396578ad66c0441c4a3238307cf3146</text>
+</svg>

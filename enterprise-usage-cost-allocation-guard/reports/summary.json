@@ -1,0 +1,175 @@
+{
+  "asOf": "2026-05-22T12:00:00.000Z",
+  "totals": {
+    "totalRecords": 7,
+    "totalAmountUsd": 1965,
+    "approvedAmountUsd": 715,
+    "heldAmountUsd": 940,
+    "reallocatedAmountUsd": 310,
+    "byStatus": {
+      "approved": 2,
+      "private_review": 2,
+      "reallocate": 1,
+      "hold": 2
+    }
+  },
+  "decisions": [
+    {
+      "id": "usage-001",
+      "labId": "lab-neuro",
+      "projectId": "proj-vision-atlas",
+      "projectVisibility": "institutional",
+      "usageType": "compute",
+      "amountUsd": 620,
+      "costCenterId": "cc-neuro-grant",
+      "grantId": "grant-nih-r01-vision",
+      "ownerId": "owner-ada",
+      "approvedAmountUsd": 620,
+      "heldAmountUsd": 0,
+      "reallocatedAmountUsd": 0,
+      "reasons": [
+        "usage evidence, grant window, cost center, usage type, and owner all match"
+      ],
+      "actions": [
+        "Publish in admin dashboard allocation",
+        "Include in grant chargeback export packet"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "usage-002",
+      "labId": "lab-neuro",
+      "projectId": "proj-retina-review",
+      "projectVisibility": "private",
+      "usageType": "ai_review",
+      "amountUsd": 260,
+      "costCenterId": "cc-neuro-grant",
+      "grantId": "grant-nih-r01-vision",
+      "ownerId": "owner-omar",
+      "approvedAmountUsd": 0,
+      "heldAmountUsd": 260,
+      "reallocatedAmountUsd": 0,
+      "reasons": [
+        "private or restricted project usage needs admin visibility review before chargeback"
+      ],
+      "actions": [
+        "Show aggregate spend only",
+        "Suppress project title from department dashboard",
+        "Require admin approval before grant closeout export"
+      ],
+      "status": "private_review"
+    },
+    {
+      "id": "usage-003",
+      "labId": "lab-climate",
+      "projectId": "proj-carbon-sim",
+      "projectVisibility": "public",
+      "usageType": "compute",
+      "amountUsd": 95,
+      "costCenterId": "cc-climate-hpc",
+      "grantId": "grant-nsf-climate-open",
+      "ownerId": "owner-mei",
+      "approvedAmountUsd": 95,
+      "heldAmountUsd": 0,
+      "reallocatedAmountUsd": 0,
+      "reasons": [
+        "usage evidence, grant window, cost center, usage type, and owner all match"
+      ],
+      "actions": [
+        "Publish in admin dashboard allocation",
+        "Include in grant chargeback export packet"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "usage-004",
+      "labId": "lab-climate",
+      "projectId": "proj-carbon-sim",
+      "projectVisibility": "public",
+      "usageType": "submission",
+      "amountUsd": 310,
+      "costCenterId": "cc-climate-core",
+      "grantId": "grant-nsf-climate-open",
+      "ownerId": "owner-mei",
+      "approvedAmountUsd": 0,
+      "heldAmountUsd": 0,
+      "reallocatedAmountUsd": 310,
+      "reasons": [
+        "grant does not permit this cost center or usage type"
+      ],
+      "actions": [
+        "Remove from grant spend until reallocated",
+        "Suggest a permitted lab cost center before dashboard publication"
+      ],
+      "status": "reallocate"
+    },
+    {
+      "id": "usage-005",
+      "labId": "lab-neuro",
+      "projectId": "proj-old-retina",
+      "projectVisibility": "institutional",
+      "usageType": "storage",
+      "amountUsd": 420,
+      "costCenterId": "cc-neuro-grant",
+      "grantId": "grant-nih-r01-vision",
+      "ownerId": "owner-ada",
+      "approvedAmountUsd": 0,
+      "heldAmountUsd": 420,
+      "reallocatedAmountUsd": 0,
+      "reasons": [
+        "usage occurred outside the grant funding window"
+      ],
+      "actions": [
+        "Exclude from automated grant chargeback",
+        "Route to enterprise finance review"
+      ],
+      "status": "hold"
+    },
+    {
+      "id": "usage-006",
+      "labId": "lab-climate",
+      "projectId": "proj-ocean-private",
+      "projectVisibility": "private",
+      "usageType": "storage",
+      "amountUsd": 180,
+      "costCenterId": "cc-climate-hpc",
+      "grantId": "grant-nsf-climate-open",
+      "ownerId": "owner-mei",
+      "approvedAmountUsd": 0,
+      "heldAmountUsd": 180,
+      "reallocatedAmountUsd": 0,
+      "reasons": [
+        "private or restricted project usage needs admin visibility review before chargeback"
+      ],
+      "actions": [
+        "Show aggregate spend only",
+        "Suppress project title from department dashboard",
+        "Require admin approval before grant closeout export"
+      ],
+      "status": "private_review"
+    },
+    {
+      "id": "usage-007",
+      "labId": "lab-neuro",
+      "projectId": "proj-vision-atlas",
+      "projectVisibility": "public",
+      "usageType": "ai_review",
+      "amountUsd": 80,
+      "costCenterId": "cc-neuro-grant",
+      "grantId": "grant-nih-r01-vision",
+      "ownerId": "owner-ada",
+      "approvedAmountUsd": 0,
+      "heldAmountUsd": 80,
+      "reallocatedAmountUsd": 0,
+      "reasons": [
+        "usage record has no immutable job/export evidence"
+      ],
+      "actions": [
+        "Hold chargeback from dashboard totals",
+        "Request missing lab, grant, amount, or evidence mapping"
+      ],
+      "status": "hold"
+    }
+  ],
+  "auditDigest": "d5139452c6df2c02f396578ad66c0441c4a3238307cf314683161bba42b25da7"
+}

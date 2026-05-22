@@ -1,0 +1,75 @@
+[
+  {
+    "scenario": "legal-hold-delete-block",
+    "repositoryId": "repo-climate-ice-core",
+    "requestedAction": "delete-export-bundle",
+    "taggedVersion": "v2.1.0",
+    "generatedAt": "2026-05-22T12:00:00Z",
+    "decision": "blocked",
+    "blockers": [
+      "Active legal hold hold-ethics-review prevents delete-export-bundle"
+    ],
+    "requiredActions": [
+      {
+        "type": "preserve_legal_hold_scope",
+        "target": "hold-ethics-review",
+        "reason": "ethics review pending"
+      }
+    ],
+    "activeLegalHoldCount": 1,
+    "coverage": {
+      "componentCount": 3,
+      "archivedCount": 3,
+      "archiveCoverage": 1,
+      "exportBundleCount": 1
+    }
+  },
+  {
+    "scenario": "release-needs-archive-evidence",
+    "repositoryId": "repo-open-assay",
+    "requestedAction": "publish-version",
+    "taggedVersion": "v1.0.0",
+    "generatedAt": "2026-05-22T12:00:00Z",
+    "decision": "needs-remediation",
+    "blockers": [
+      "data/assay.csv lacks archive evidence",
+      "bundle-v1.0.0 lacks a manifest hash"
+    ],
+    "requiredActions": [
+      {
+        "type": "archive_component",
+        "target": "data/assay.csv",
+        "reason": "version release requires durable archive evidence"
+      },
+      {
+        "type": "record_bundle_manifest_hash",
+        "target": "bundle-v1.0.0",
+        "reason": "export bundles need reproducible manifest integrity"
+      }
+    ],
+    "activeLegalHoldCount": 0,
+    "coverage": {
+      "componentCount": 3,
+      "archivedCount": 2,
+      "archiveCoverage": 0.6666666666666666,
+      "exportBundleCount": 1
+    }
+  },
+  {
+    "scenario": "approved-release",
+    "repositoryId": "repo-compliant-release",
+    "requestedAction": "publish-version",
+    "taggedVersion": "v3.0.0",
+    "generatedAt": "2026-05-22T12:00:00Z",
+    "decision": "approved",
+    "blockers": [],
+    "requiredActions": [],
+    "activeLegalHoldCount": 0,
+    "coverage": {
+      "componentCount": 4,
+      "archivedCount": 4,
+      "archiveCoverage": 1,
+      "exportBundleCount": 1
+    }
+  }
+]

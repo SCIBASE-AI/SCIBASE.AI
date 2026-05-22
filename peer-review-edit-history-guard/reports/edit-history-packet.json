@@ -1,0 +1,218 @@
+{
+  "batch": {
+    "id": "scibase-prehg-demo",
+    "projectId": "project-microglia-atlas"
+  },
+  "checkedAt": "2026-05-22T00:00:00.000Z",
+  "policy": {
+    "editWindowHours": 24,
+    "maxScoreDeltaWithoutSteward": 1,
+    "freezeAfterAuthorResponse": true,
+    "requireReasonForReputationImpact": true
+  },
+  "releaseGate": {
+    "status": "hold",
+    "reason": "One or more review histories have non-reviewer edits or immutable-version violations.",
+    "nextAction": "Freeze reputation on the last trusted reviewer-authored version. Version 2 was edited by project-owner, not the original reviewer."
+  },
+  "summary": {
+    "score": 30,
+    "reviewsChecked": 4,
+    "blockers": 1,
+    "high": 2,
+    "medium": 0,
+    "frozenReviews": 1,
+    "stewardReviews": 2,
+    "receiptRevisions": 0,
+    "appliedLatest": 1
+  },
+  "reviewDecisions": [
+    {
+      "reviewId": "review-101",
+      "reviewerRef": "reviewer-a",
+      "visibility": "public",
+      "versionCount": 2,
+      "originalScore": 3.75,
+      "latestScore": 4,
+      "scoreDelta": 0.25,
+      "latestVersion": 2,
+      "severity": "info",
+      "reputationDecision": {
+        "status": "apply_latest",
+        "scoreForReputation": 4,
+        "timelineVersion": 2,
+        "reason": "Latest version is safe for reputation and timeline updates."
+      },
+      "immutableVersionDigest": "dd0c9b299e645f246f3e0b723ffa7cc5e8f725cf4841fec5e36dbb8a9f4f9237",
+      "findings": [
+        {
+          "type": "edit_history_valid",
+          "severity": "info",
+          "version": 2,
+          "message": "Review edit history is safe for automatic reputation update."
+        }
+      ]
+    },
+    {
+      "reviewId": "review-202",
+      "reviewerRef": "anon_75e49384ed",
+      "visibility": "double_blind",
+      "versionCount": 2,
+      "originalScore": 3.25,
+      "latestScore": 5,
+      "scoreDelta": 1.75,
+      "latestVersion": 2,
+      "severity": "high",
+      "reputationDecision": {
+        "status": "steward_review",
+        "scoreForReputation": 3.25,
+        "timelineVersion": 1,
+        "reason": "Steward review required: edit_window_expired, post_author_response_edit, large_score_delta."
+      },
+      "immutableVersionDigest": "6a3eba2f605c6d9a1306f2b5f2fad29d5e941e6587869201a43f44d97fcadadf",
+      "findings": [
+        {
+          "type": "edit_window_expired",
+          "severity": "high",
+          "version": 2,
+          "message": "Latest edit landed 73.5 hours after submission."
+        },
+        {
+          "type": "post_author_response_edit",
+          "severity": "high",
+          "version": 2,
+          "message": "Latest edit occurred after an author response, so reputation deltas should not silently mutate."
+        },
+        {
+          "type": "large_score_delta",
+          "severity": "high",
+          "version": 2,
+          "message": "Score changed by 1.75, above the steward-review threshold."
+        }
+      ]
+    },
+    {
+      "reviewId": "review-303",
+      "reviewerRef": "anon_fbfc201a41",
+      "visibility": "semi_private",
+      "versionCount": 2,
+      "originalScore": 4.25,
+      "latestScore": 4.25,
+      "scoreDelta": 0,
+      "latestVersion": 2,
+      "severity": "high",
+      "reputationDecision": {
+        "status": "steward_review",
+        "scoreForReputation": 4.25,
+        "timelineVersion": 1,
+        "reason": "Steward review required: identity_leak_in_edit."
+      },
+      "immutableVersionDigest": "74186ca451c73b7ad36dcb525cd3b2c1ccc9a0a440992a86733dcdb6a6ea6fc8",
+      "findings": [
+        {
+          "type": "identity_leak_in_edit",
+          "severity": "high",
+          "version": 2,
+          "message": "Version 2 may reveal reviewer identity in semi_private mode."
+        },
+        {
+          "type": "missing_edit_reason",
+          "severity": "medium",
+          "version": 2,
+          "message": "Version 2 has no edit reason for an auditable reputation timeline."
+        }
+      ]
+    },
+    {
+      "reviewId": "comment-404",
+      "reviewerRef": "anon_d2f6ef8828",
+      "visibility": "anonymous",
+      "versionCount": 2,
+      "originalScore": 4,
+      "latestScore": 4,
+      "scoreDelta": 0,
+      "latestVersion": 2,
+      "severity": "blocker",
+      "reputationDecision": {
+        "status": "freeze",
+        "scoreForReputation": 4,
+        "timelineVersion": 1,
+        "reason": "Freeze reputation on the last trusted reviewer-authored version."
+      },
+      "immutableVersionDigest": "303c906dc8644fc7a7e41b27b0441aebfb146528e94427a6ff829a260c86696e",
+      "findings": [
+        {
+          "type": "non_reviewer_edit",
+          "severity": "blocker",
+          "version": 2,
+          "message": "Version 2 was edited by project-owner, not the original reviewer."
+        }
+      ]
+    }
+  ],
+  "profileDeltas": [
+    {
+      "reviewId": "review-101",
+      "reviewerRef": "reviewer-a",
+      "status": "apply_latest",
+      "timelineVersion": 2,
+      "scoreForReputation": 4,
+      "delta": 1,
+      "digest": "dd0c9b299e645f24"
+    },
+    {
+      "reviewId": "review-202",
+      "reviewerRef": "anon_75e49384ed",
+      "status": "steward_review",
+      "timelineVersion": 1,
+      "scoreForReputation": 3.25,
+      "delta": 0.25,
+      "digest": "6a3eba2f605c6d9a"
+    },
+    {
+      "reviewId": "review-303",
+      "reviewerRef": "anon_fbfc201a41",
+      "status": "steward_review",
+      "timelineVersion": 1,
+      "scoreForReputation": 4.25,
+      "delta": 1.25,
+      "digest": "74186ca451c73b7a"
+    },
+    {
+      "reviewId": "comment-404",
+      "reviewerRef": "anon_d2f6ef8828",
+      "status": "freeze",
+      "timelineVersion": 1,
+      "scoreForReputation": 4,
+      "delta": 1,
+      "digest": "303c906dc8644fc7"
+    }
+  ],
+  "actions": [
+    {
+      "priority": "blocker",
+      "reviewId": "comment-404",
+      "title": "FREEZE comment-404",
+      "action": "Freeze reputation on the last trusted reviewer-authored version. Version 2 was edited by project-owner, not the original reviewer."
+    },
+    {
+      "priority": "high",
+      "reviewId": "review-202",
+      "title": "STEWARD_REVIEW review-202",
+      "action": "Steward review required: edit_window_expired, post_author_response_edit, large_score_delta. Latest edit landed 73.5 hours after submission. Latest edit occurred after an author response, so reputation deltas should not silently mutate. Score changed by 1.75, above the steward-review threshold."
+    },
+    {
+      "priority": "high",
+      "reviewId": "review-303",
+      "title": "STEWARD_REVIEW review-303",
+      "action": "Steward review required: identity_leak_in_edit. Version 2 may reveal reviewer identity in semi_private mode. Version 2 has no edit reason for an auditable reputation timeline."
+    }
+  ],
+  "reproducibilityContext": {
+    "dataPolicy": "synthetic fixture only",
+    "reviewVersionFingerprint": "9ccbccd14c3b6f725852a546c69d81b645a258db9cdacfca98d824f3687c1298",
+    "deterministic": true,
+    "externalNetworkCalls": 0
+  },
+  "auditDigest": "f0214a044abda81b77b62e13102d7951b33b0c37a19807e0fd73533a140a311c"
+}

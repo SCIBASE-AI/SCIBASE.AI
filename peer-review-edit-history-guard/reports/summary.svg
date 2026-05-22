@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-label="Peer review edit history guard summary">
+<rect width="1100" height="620" fill="#f8fafc"/>
+<rect x="48" y="44" width="1004" height="532" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="80" y="112" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#0f172a">Peer Review Edit History Guard</text>
+<text x="80" y="160" font-family="Arial, sans-serif" font-size="24" fill="#334155">Gate: HOLD | Score: 30 | Digest: f0214a044abda81b</text>
+<text x="80" y="230" font-family="Arial, sans-serif" font-size="26" fill="#172554">Frozen</text>
+<rect x="260" y="202" width="560" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="202" width="18" height="36" rx="4" fill="#b91c1c"/>
+<text x="845" y="230" font-family="Arial, sans-serif" font-size="26" fill="#111827">1</text>
+<text x="80" y="300" font-family="Arial, sans-serif" font-size="26" fill="#172554">Steward</text>
+<rect x="260" y="272" width="560" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="272" width="36" height="36" rx="4" fill="#b45309"/>
+<text x="845" y="300" font-family="Arial, sans-serif" font-size="26" fill="#111827">2</text>
+<text x="80" y="370" font-family="Arial, sans-serif" font-size="26" fill="#172554">Revisions</text>
+<rect x="260" y="342" width="560" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="342" width="0" height="36" rx="4" fill="#1d4ed8"/>
+<text x="845" y="370" font-family="Arial, sans-serif" font-size="26" fill="#111827">0</text>
+<text x="80" y="440" font-family="Arial, sans-serif" font-size="26" fill="#172554">Score</text>
+<rect x="260" y="412" width="560" height="36" rx="4" fill="#e5e7eb"/>
+<rect x="260" y="412" width="540" height="36" rx="4" fill="#047857"/>
+<text x="845" y="440" font-family="Arial, sans-serif" font-size="26" fill="#111827">30</text>
+<text x="80" y="548" font-family="Arial, sans-serif" font-size="22" fill="#475569">Synthetic review history only. No user data, credentials, or network calls.</text>
+</svg>

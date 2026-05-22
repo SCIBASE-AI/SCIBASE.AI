@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#111827"/>
+  <text x="48" y="70" fill="#f8fafc" font-family="Arial, sans-serif" font-size="32" font-weight="700">Solver Withdrawal Continuity Guard</text>
+  <text x="48" y="110" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="18">Challenge continuity packet for solver withdrawals, replacements, and artifact custody</text>
+  <g transform="translate(48 156)">
+    <rect width="260" height="148" rx="8" fill="#7f1d1d"/>
+    <text x="24" y="46" fill="#fee2e2" font-family="Arial, sans-serif" font-size="20" font-weight="700">Workspace Hold</text>
+    <text x="24" y="108" fill="#fef2f2" font-family="Arial, sans-serif" font-size="56" font-weight="700">1</text>
+  </g>
+  <g transform="translate(350 156)">
+    <rect width="260" height="148" rx="8" fill="#92400e"/>
+    <text x="24" y="46" fill="#fef3c7" font-family="Arial, sans-serif" font-size="20" font-weight="700">Coordinator Review</text>
+    <text x="24" y="108" fill="#fffbeb" font-family="Arial, sans-serif" font-size="56" font-weight="700">1</text>
+  </g>
+  <g transform="translate(652 156)">
+    <rect width="260" height="148" rx="8" fill="#166534"/>
+    <text x="24" y="46" fill="#dcfce7" font-family="Arial, sans-serif" font-size="20" font-weight="700">Continuity Ready</text>
+    <text x="24" y="108" fill="#f0fdf4" font-family="Arial, sans-serif" font-size="56" font-weight="700">1</text>
+  </g>
+  <text x="48" y="372" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="22">Affected teams: 3 | Ready replacements: 2 | Findings: 9</text>
+  <text x="48" y="416" fill="#d1d5db" font-family="Arial, sans-serif" font-size="18">Checks: notice, access revocation, IP return, team quorum, artifact custody, milestone risk, notifications</text>
+  <text x="48" y="470" fill="#9ca3af" font-family="Arial, sans-serif" font-size="16">Synthetic data only. No credentials, private challenge files, payout actions, KYC, bank, or live workspace calls.</text>
+</svg>

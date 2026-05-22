@@ -1,0 +1,148 @@
+[
+  {
+    "scenario": "duplicate-panel-hold",
+    "manuscriptId": "ms-neuron-organoid",
+    "generatedAt": "2026-05-22T13:00:00Z",
+    "decision": "hold-for-review",
+    "integrityScore": 65,
+    "findings": [
+      {
+        "type": "duplicate-panel",
+        "severity": "critical",
+        "panels": [
+          "figure-1:1A",
+          "figure-3:3C"
+        ],
+        "perceptualHash": "phash:001122aa",
+        "message": "Panels share perceptual hash phash:001122aa"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "verify_panel_uniqueness",
+        "target": "figure-1:1A, figure-3:3C",
+        "reason": "duplicated image panels need raw-data review before peer-review release"
+      }
+    ],
+    "summary": {
+      "figureCount": 2,
+      "panelCount": 2,
+      "rawImageCount": 2,
+      "processingLogCount": 2,
+      "duplicatePanelGroups": 1,
+      "missingRawProvenance": 0,
+      "missingProcessingLogs": 0,
+      "scaleBarMismatches": 0,
+      "severityCounts": {
+        "critical": 1
+      }
+    }
+  },
+  {
+    "scenario": "missing-provenance-hold",
+    "manuscriptId": "ms-missing-provenance",
+    "generatedAt": "2026-05-22T13:00:00Z",
+    "decision": "hold-for-review",
+    "integrityScore": 30,
+    "findings": [
+      {
+        "type": "missing-raw-provenance",
+        "severity": "critical",
+        "panel": "figure-2:2B",
+        "rawImageId": "raw-missing",
+        "message": "figure-2:2B lacks linked raw image provenance"
+      },
+      {
+        "type": "missing-processing-log",
+        "severity": "critical",
+        "panel": "figure-2:2B",
+        "processingLogId": "log-missing",
+        "message": "figure-2:2B lacks a linked processing history"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "attach_raw_image_provenance",
+        "target": "figure-2:2B",
+        "reason": "reviewers need raw-image checksum, capture time, and pixel-size metadata"
+      },
+      {
+        "type": "attach_processing_log",
+        "target": "figure-2:2B",
+        "reason": "reviewers need auditable crop, contrast, and adjustment history"
+      }
+    ],
+    "summary": {
+      "figureCount": 1,
+      "panelCount": 1,
+      "rawImageCount": 0,
+      "processingLogCount": 0,
+      "duplicatePanelGroups": 0,
+      "missingRawProvenance": 1,
+      "missingProcessingLogs": 1,
+      "scaleBarMismatches": 0,
+      "severityCounts": {
+        "critical": 2
+      }
+    }
+  },
+  {
+    "scenario": "scale-bar-response",
+    "manuscriptId": "ms-scale-bar-risk",
+    "generatedAt": "2026-05-22T13:00:00Z",
+    "decision": "needs-author-response",
+    "integrityScore": 80,
+    "findings": [
+      {
+        "type": "scale-bar-mismatch",
+        "severity": "major",
+        "panel": "figure-4:4D",
+        "expectedMicrometers": 25,
+        "declaredMicrometers": 50,
+        "pixelSizeMicrometers": 0.25,
+        "scaleBarPixels": 100,
+        "message": "figure-4:4D declares 50 um but metadata implies 25 um"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "reconcile_scale_bar_metadata",
+        "target": "figure-4:4D",
+        "reason": "declared scale bar must match raw pixel-size metadata before reviewer approval"
+      }
+    ],
+    "summary": {
+      "figureCount": 1,
+      "panelCount": 1,
+      "rawImageCount": 1,
+      "processingLogCount": 1,
+      "duplicatePanelGroups": 0,
+      "missingRawProvenance": 0,
+      "missingProcessingLogs": 0,
+      "scaleBarMismatches": 1,
+      "severityCounts": {
+        "major": 1
+      }
+    }
+  },
+  {
+    "scenario": "clean-image-packet",
+    "manuscriptId": "ms-clean-image-packet",
+    "generatedAt": "2026-05-22T13:00:00Z",
+    "decision": "approved",
+    "integrityScore": 100,
+    "findings": [],
+    "requiredActions": [],
+    "summary": {
+      "figureCount": 1,
+      "panelCount": 2,
+      "rawImageCount": 2,
+      "processingLogCount": 2,
+      "duplicatePanelGroups": 0,
+      "missingRawProvenance": 0,
+      "missingProcessingLogs": 0,
+      "scaleBarMismatches": 0,
+      "severityCounts": {}
+    }
+  }
+]

@@ -1,0 +1,467 @@
+{
+  "asOfDate": "2026-05-22",
+  "bundleCount": 4,
+  "findingCount": 7,
+  "heldCommits": [
+    "syn-commit-a1"
+  ],
+  "byAction": {
+    "reject_bundle_and_require_history_rewrite": 1,
+    "require_repository_hygiene_fix": 2,
+    "allow_merge_tag_export": 1
+  },
+  "bySeverity": {
+    "critical": 1,
+    "medium": 2,
+    "low": 1
+  },
+  "packets": [
+    {
+      "asOfDate": "2026-05-22",
+      "repositoryId": "repo-immunology-preprint",
+      "branch": "release/preprint-v2",
+      "targetSurface": "doi_snapshot",
+      "commitId": "syn-commit-a1",
+      "action": "reject_bundle_and_require_history_rewrite",
+      "severity": "critical",
+      "reason": "commit bundle contains critical sensitive artifact exposure",
+      "artifactCount": 3,
+      "findingCount": 5,
+      "heldPaths": [
+        "notebooks/immune-response-analysis.ipynb",
+        "data/raw-participant-table.csv"
+      ],
+      "byAction": {
+        "reject_commit_and_quarantine_export": 2,
+        "allow_commit_tag_export": 1
+      },
+      "bySeverity": {
+        "critical": 2,
+        "low": 1
+      },
+      "artifacts": [
+        {
+          "path": "notebooks/immune-response-analysis.ipynb",
+          "component": "notebooks",
+          "kind": "notebook",
+          "visibility": "doi_snapshot",
+          "dataClass": "controlled",
+          "sizeBytes": 420000,
+          "lfsPointer": false,
+          "publicExposure": true,
+          "action": "reject_commit_and_quarantine_export",
+          "severity": "critical",
+          "reason": "critical sensitive artifact exposure is present in a release surface",
+          "findingCount": 2,
+          "findings": [
+            {
+              "code": "notebook_output_leak",
+              "severity": "high",
+              "message": "notebooks/immune-response-analysis.ipynb contains notebook output leak evidence",
+              "remediation": "redact or replace the artifact before creating a public snapshot"
+            },
+            {
+              "code": "credential_marker",
+              "severity": "critical",
+              "message": "notebooks/immune-response-analysis.ipynb contains credential marker evidence",
+              "remediation": "remove artifact from public/tag/export surfaces and rewrite the commit before merge"
+            }
+          ],
+          "auditDigest": "220204068bbc84a2b447c1c16cbd18a963d47a6fa01e08ac06add1e211d32ac4"
+        },
+        {
+          "path": "data/raw-participant-table.csv",
+          "component": "data",
+          "kind": "dataset",
+          "visibility": "doi_snapshot",
+          "dataClass": "restricted",
+          "sizeBytes": 3100000,
+          "lfsPointer": true,
+          "publicExposure": true,
+          "action": "reject_commit_and_quarantine_export",
+          "severity": "critical",
+          "reason": "critical sensitive artifact exposure is present in a release surface",
+          "findingCount": 3,
+          "findings": [
+            {
+              "code": "raw_patient_identifier",
+              "severity": "critical",
+              "message": "data/raw-participant-table.csv contains raw patient identifier evidence",
+              "remediation": "remove artifact from public/tag/export surfaces and rewrite the commit before merge"
+            },
+            {
+              "code": "human_subjects_column",
+              "severity": "high",
+              "message": "data/raw-participant-table.csv contains human subjects column evidence",
+              "remediation": "redact or replace the artifact before creating a public snapshot"
+            },
+            {
+              "code": "restricted_data_public_export",
+              "severity": "critical",
+              "message": "data/raw-participant-table.csv is restricted but is included in a public release surface",
+              "remediation": "block public export and create a restricted-access manifest entry"
+            }
+          ],
+          "auditDigest": "3313b25881330eb53b3353c89819ca949859cd917342fe1e9eec11393914a5ed"
+        },
+        {
+          "path": "metadata.json",
+          "component": "metadata",
+          "kind": "metadata",
+          "visibility": "doi_snapshot",
+          "dataClass": "public",
+          "sizeBytes": 9000,
+          "lfsPointer": false,
+          "publicExposure": true,
+          "action": "allow_commit_tag_export",
+          "severity": "low",
+          "reason": "artifact satisfies sensitive-data and LFS policy",
+          "findingCount": 0,
+          "findings": [],
+          "auditDigest": "02cdf3814edd4569cadf8bef8e934a4146358c5916f868f2783c70fd2bc594a7"
+        }
+      ],
+      "rollbackPacket": {
+        "commitId": "syn-commit-a1",
+        "branch": "release/preprint-v2",
+        "decision": "reject_bundle_and_require_history_rewrite",
+        "rewriteRequired": true,
+        "releaseHoldRequired": true,
+        "heldPaths": [
+          "notebooks/immune-response-analysis.ipynb",
+          "data/raw-participant-table.csv"
+        ],
+        "lfsPaths": [],
+        "remediationActions": [
+          {
+            "path": "notebooks/immune-response-analysis.ipynb",
+            "code": "notebook_output_leak",
+            "action": "redact or replace the artifact before creating a public snapshot"
+          },
+          {
+            "path": "notebooks/immune-response-analysis.ipynb",
+            "code": "credential_marker",
+            "action": "remove artifact from public/tag/export surfaces and rewrite the commit before merge"
+          },
+          {
+            "path": "data/raw-participant-table.csv",
+            "code": "raw_patient_identifier",
+            "action": "remove artifact from public/tag/export surfaces and rewrite the commit before merge"
+          },
+          {
+            "path": "data/raw-participant-table.csv",
+            "code": "human_subjects_column",
+            "action": "redact or replace the artifact before creating a public snapshot"
+          },
+          {
+            "path": "data/raw-participant-table.csv",
+            "code": "restricted_data_public_export",
+            "action": "block public export and create a restricted-access manifest entry"
+          }
+        ],
+        "rollbackDigest": "2d361cb08289483349152f81801f8a51b8781c397b909d7ee79beca05affcc61"
+      },
+      "policySnapshot": {
+        "largeFileBytes": 26214400,
+        "releaseSurfaces": [
+          "tag",
+          "merge_request",
+          "export_bundle",
+          "doi_snapshot"
+        ],
+        "publicExposureVisibilities": [
+          "public",
+          "preprint_export",
+          "doi_snapshot"
+        ]
+      },
+      "auditDigest": "424383e3c6a982552096818218e1e28e5c698d40382e2a7f5d7a0fd61b16eb33"
+    },
+    {
+      "asOfDate": "2026-05-22",
+      "repositoryId": "repo-vision-model",
+      "branch": "experiment/model-card",
+      "targetSurface": "merge_request",
+      "commitId": "syn-commit-b2",
+      "action": "require_repository_hygiene_fix",
+      "severity": "medium",
+      "reason": "commit bundle needs LFS routing or redaction before merge",
+      "artifactCount": 2,
+      "findingCount": 1,
+      "heldPaths": [],
+      "byAction": {
+        "require_lfs_or_redaction_before_merge": 1,
+        "allow_commit_tag_export": 1
+      },
+      "bySeverity": {
+        "medium": 1,
+        "low": 1
+      },
+      "artifacts": [
+        {
+          "path": "results/model-weights.bin",
+          "component": "results",
+          "kind": "model_weights",
+          "visibility": "private",
+          "dataClass": "internal",
+          "sizeBytes": 88000000,
+          "lfsPointer": false,
+          "publicExposure": false,
+          "action": "require_lfs_or_redaction_before_merge",
+          "severity": "medium",
+          "reason": "repository hygiene remediation is required before merge",
+          "findingCount": 1,
+          "findings": [
+            {
+              "code": "missing_lfs_pointer",
+              "severity": "medium",
+              "message": "results/model-weights.bin is 88000000 bytes and is not routed through Git LFS",
+              "remediation": "replace inline blob with an LFS pointer and preserve the content hash in the manifest"
+            }
+          ],
+          "auditDigest": "7ebcf0dd67a4fed01b63399c3b80fc9e65e6d6a8d49fd798a847e7e1dda66646"
+        },
+        {
+          "path": "code/train.py",
+          "component": "code",
+          "kind": "code",
+          "visibility": "private",
+          "dataClass": "internal",
+          "sizeBytes": 18000,
+          "lfsPointer": false,
+          "publicExposure": false,
+          "action": "allow_commit_tag_export",
+          "severity": "low",
+          "reason": "artifact satisfies sensitive-data and LFS policy",
+          "findingCount": 0,
+          "findings": [],
+          "auditDigest": "faae729dacbc638fafbfae0891042f66917d0fe999de874d48270ea1f9350e6b"
+        }
+      ],
+      "rollbackPacket": {
+        "commitId": "syn-commit-b2",
+        "branch": "experiment/model-card",
+        "decision": "require_repository_hygiene_fix",
+        "rewriteRequired": false,
+        "releaseHoldRequired": false,
+        "heldPaths": [],
+        "lfsPaths": [
+          "results/model-weights.bin"
+        ],
+        "remediationActions": [
+          {
+            "path": "results/model-weights.bin",
+            "code": "repository_hygiene",
+            "action": "replace inline blob with an LFS pointer and preserve the content hash in the manifest"
+          }
+        ],
+        "rollbackDigest": "d009487d0a8e8725e85f33627f61ae977a6790a5dc2fc2ffb5efb9f676e14d7c"
+      },
+      "policySnapshot": {
+        "largeFileBytes": 26214400,
+        "releaseSurfaces": [
+          "tag",
+          "merge_request",
+          "export_bundle",
+          "doi_snapshot"
+        ],
+        "publicExposureVisibilities": [
+          "public",
+          "preprint_export",
+          "doi_snapshot"
+        ]
+      },
+      "auditDigest": "b60678148e4c1bfc725fd083eb877c64197715d12c56c569b7efb27becf8781d"
+    },
+    {
+      "asOfDate": "2026-05-22",
+      "repositoryId": "repo-clinical-protocol",
+      "branch": "protocol/steward-review",
+      "targetSurface": "tag",
+      "commitId": "syn-commit-c3",
+      "action": "require_repository_hygiene_fix",
+      "severity": "medium",
+      "reason": "commit bundle needs LFS routing or redaction before merge",
+      "artifactCount": 2,
+      "findingCount": 1,
+      "heldPaths": [],
+      "byAction": {
+        "require_lfs_or_redaction_before_merge": 1,
+        "allow_commit_tag_export": 1
+      },
+      "bySeverity": {
+        "medium": 1,
+        "low": 1
+      },
+      "artifacts": [
+        {
+          "path": "protocols/consent-appendix.md",
+          "component": "protocols",
+          "kind": "protocol",
+          "visibility": "private",
+          "dataClass": "restricted",
+          "sizeBytes": 25000,
+          "lfsPointer": false,
+          "publicExposure": false,
+          "action": "require_lfs_or_redaction_before_merge",
+          "severity": "medium",
+          "reason": "repository hygiene remediation is required before merge",
+          "findingCount": 1,
+          "findings": [
+            {
+              "code": "consent_form_marker",
+              "severity": "medium",
+              "message": "protocols/consent-appendix.md contains consent form marker evidence",
+              "remediation": "attach restricted-data review evidence before merge"
+            }
+          ],
+          "auditDigest": "3cd1a0e4d71d7975d585a1abaf2a2420e5cdecd5b2be3cec6cbc0630e28759b5"
+        },
+        {
+          "path": "data/deidentified-summary.csv",
+          "component": "data",
+          "kind": "dataset",
+          "visibility": "private",
+          "dataClass": "controlled",
+          "sizeBytes": 1400000,
+          "lfsPointer": true,
+          "publicExposure": false,
+          "action": "allow_commit_tag_export",
+          "severity": "low",
+          "reason": "artifact satisfies sensitive-data and LFS policy",
+          "findingCount": 0,
+          "findings": [],
+          "auditDigest": "22875de84ec3a319f7385d6ea559446f06b4ef2305562b5a08e0ae43bde59447"
+        }
+      ],
+      "rollbackPacket": {
+        "commitId": "syn-commit-c3",
+        "branch": "protocol/steward-review",
+        "decision": "require_repository_hygiene_fix",
+        "rewriteRequired": false,
+        "releaseHoldRequired": false,
+        "heldPaths": [],
+        "lfsPaths": [],
+        "remediationActions": [
+          {
+            "path": "protocols/consent-appendix.md",
+            "code": "repository_hygiene",
+            "action": "attach restricted-data review evidence before merge"
+          }
+        ],
+        "rollbackDigest": "df4de51ae2c78e04b47af6142bd9c7503fdd1fe53b37ab34647a9e381a9cb76e"
+      },
+      "policySnapshot": {
+        "largeFileBytes": 26214400,
+        "releaseSurfaces": [
+          "tag",
+          "merge_request",
+          "export_bundle",
+          "doi_snapshot"
+        ],
+        "publicExposureVisibilities": [
+          "public",
+          "preprint_export",
+          "doi_snapshot"
+        ]
+      },
+      "auditDigest": "8050d881c9e55d35d18586d56c62bd43ead20f3ce5d403bddd0c70a08781622a"
+    },
+    {
+      "asOfDate": "2026-05-22",
+      "repositoryId": "repo-open-methods",
+      "branch": "main",
+      "targetSurface": "export_bundle",
+      "commitId": "syn-commit-d4",
+      "action": "allow_merge_tag_export",
+      "severity": "low",
+      "reason": "commit bundle satisfies sensitive-artifact policy",
+      "artifactCount": 3,
+      "findingCount": 0,
+      "heldPaths": [],
+      "byAction": {
+        "allow_commit_tag_export": 3
+      },
+      "bySeverity": {
+        "low": 3
+      },
+      "artifacts": [
+        {
+          "path": "manuscript/paper.md",
+          "component": "manuscript",
+          "kind": "manuscript",
+          "visibility": "preprint_export",
+          "dataClass": "public",
+          "sizeBytes": 35000,
+          "lfsPointer": false,
+          "publicExposure": true,
+          "action": "allow_commit_tag_export",
+          "severity": "low",
+          "reason": "artifact satisfies sensitive-data and LFS policy",
+          "findingCount": 0,
+          "findings": [],
+          "auditDigest": "df93c69e65ee4841da2e653425a550955496e2ede5992eadb10c7e9c4293137b"
+        },
+        {
+          "path": "code/analysis.py",
+          "component": "code",
+          "kind": "code",
+          "visibility": "preprint_export",
+          "dataClass": "public",
+          "sizeBytes": 22000,
+          "lfsPointer": false,
+          "publicExposure": true,
+          "action": "allow_commit_tag_export",
+          "severity": "low",
+          "reason": "artifact satisfies sensitive-data and LFS policy",
+          "findingCount": 0,
+          "findings": [],
+          "auditDigest": "a5954543617d7530c6145088cf4d6ebb351f217d527b36abb4c2daa0c0e53c87"
+        },
+        {
+          "path": "data/aggregate-results.csv",
+          "component": "data",
+          "kind": "dataset",
+          "visibility": "preprint_export",
+          "dataClass": "public",
+          "sizeBytes": 1800000,
+          "lfsPointer": true,
+          "publicExposure": true,
+          "action": "allow_commit_tag_export",
+          "severity": "low",
+          "reason": "artifact satisfies sensitive-data and LFS policy",
+          "findingCount": 0,
+          "findings": [],
+          "auditDigest": "86e5ceef48c7725fd22421b41f55777bdbc44d6226fee32d28a179ba8b2287aa"
+        }
+      ],
+      "rollbackPacket": {
+        "commitId": "syn-commit-d4",
+        "branch": "main",
+        "decision": "allow_merge_tag_export",
+        "rewriteRequired": false,
+        "releaseHoldRequired": false,
+        "heldPaths": [],
+        "lfsPaths": [],
+        "remediationActions": [],
+        "rollbackDigest": "b714fd9e51e1f1470afa48f675b7612d0c6c308243f9dfbca00dc93f40f058de"
+      },
+      "policySnapshot": {
+        "largeFileBytes": 26214400,
+        "releaseSurfaces": [
+          "tag",
+          "merge_request",
+          "export_bundle",
+          "doi_snapshot"
+        ],
+        "publicExposureVisibilities": [
+          "public",
+          "preprint_export",
+          "doi_snapshot"
+        ]
+      },
+      "auditDigest": "08e00cfb14a099c30e7fc771c6044cd3afebebcff0e0b94a646f5f4e8eecf327"
+    }
+  ],
+  "auditDigest": "e1296212638d85509a535fc84efed4e2d03a9ec40e22e217970b4dd876304373"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "repository-sensitive-artifact-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic sensitive artifact commit guard for SCIBASE project repository version control.",
+  "main": "index.js",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js",
+    "test": "node test.js",
+    "demo": "node demo.js"
+  },
+  "license": "MIT"
+}

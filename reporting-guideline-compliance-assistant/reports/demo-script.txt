@@ -1,0 +1,12 @@
+Reporting Guideline Compliance Assistant demo
+
+1. Load three synthetic manuscripts: clinical trial, systematic review, observational cohort.
+2. Match each manuscript to CONSORT, PRISMA, STROBE, and cross-guideline checks.
+3. Emit reviewer actions, readiness scores, and guideline citation recommendations.
+
+Average readiness score: 54/100
+Ready manuscripts: 0/3
+
+trial-omega-sleep: needs-guideline-rework (62/100)
+review-cardio-ai: needs-guideline-rework (38/100)
+cohort-lab-glucose: needs-guideline-rework (62/100)

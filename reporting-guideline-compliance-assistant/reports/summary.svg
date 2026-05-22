@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300">
+  <rect width="560" height="300" fill="#f8fafc"/>
+  <text x="32" y="42" font-size="22" font-family="Arial" font-weight="700" fill="#111827">Reporting Guideline Compliance</text>
+  <text x="32" y="68" font-size="14" font-family="Arial" fill="#374151">Average readiness score: 54/100</text>
+  <g font-family="Arial" fill="#111827"><text x="32" y="94" font-size="14">trial-omega-sleep (62)</text><rect x="32" y="104" width="285" height="22" rx="3" fill="#b91c1c"/><text x="32" y="148" font-size="14">review-cardio-ai (38)</text><rect x="32" y="158" width="175" height="22" rx="3" fill="#b91c1c"/><text x="32" y="202" font-size="14">cohort-lab-glucose (62)</text><rect x="32" y="212" width="285" height="22" rx="3" fill="#b91c1c"/></g>
+</svg>

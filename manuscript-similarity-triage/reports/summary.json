@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "status": "hold_similarity_review",
+    "manuscriptId": "ms-drought-memory-2026",
+    "passagesReviewed": 4,
+    "sourcesCompared": 5,
+    "citedSources": 3,
+    "heldPassages": 2,
+    "revisePassages": 1,
+    "clearPassages": 1,
+    "acceptedMethodsBoilerplate": 1,
+    "criticalFindings": 2,
+    "warningFindings": 1
+  },
+  "passages": [
+    {
+      "passageId": "p-intro-01",
+      "section": "Introduction",
+      "status": "hold",
+      "topMatches": [
+        {
+          "sourceId": "SRC-SORGHUM-2024",
+          "sourceTitle": "Sorghum seedlings preserve transcriptional drought memory",
+          "score": 0.783,
+          "shingleScore": 0.783,
+          "tokenOverlap": 0.815,
+          "longestRun": 22,
+          "cited": false,
+          "relationship": "external",
+          "sourceType": "open literature",
+          "retracted": false,
+          "methodsBoilerplate": false
+        }
+      ],
+      "acceptedBoilerplate": [],
+      "findings": [
+        {
+          "passageId": "p-intro-01",
+          "sourceId": "SRC-SORGHUM-2024",
+          "code": "uncited_high_similarity",
+          "severity": "critical",
+          "message": "Draft passage has high source overlap without a citation.",
+          "evidence": {
+            "score": 0.783,
+            "longestRun": 22,
+            "sourceTitle": "Sorghum seedlings preserve transcriptional drought memory"
+          },
+          "action": "Add attribution and rewrite the overlapping passage before sharing or submission."
+        }
+      ]
+    },
+    {
+      "passageId": "p-methods-01",
+      "section": "Methods",
+      "status": "clear",
+      "topMatches": [
+        {
+          "sourceId": "PROTO-DRY-01",
+          "sourceTitle": "Standard operating procedure for repeated drought stress",
+          "score": 0.741,
+          "shingleScore": 0.741,
+          "tokenOverlap": 0.8,
+          "longestRun": 24,
+          "cited": true,
+          "relationship": "external",
+          "sourceType": "protocol template",
+          "retracted": false,
+          "methodsBoilerplate": true
+        }
+      ],
+      "acceptedBoilerplate": [
+        {
+          "sourceId": "PROTO-DRY-01",
+          "sourceTitle": "Standard operating procedure for repeated drought stress",
+          "score": 0.741,
+          "reason": "cited_methods_protocol_overlap"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "passageId": "p-discussion-01",
+      "section": "Discussion",
+      "status": "revise",
+      "topMatches": [
+        {
+          "sourceId": "SELF-PREPRINT-2025",
+          "sourceTitle": "Guard-cell recovery after repeated dehydration",
+          "score": 0.692,
+          "shingleScore": 0.692,
+          "tokenOverlap": 0.733,
+          "longestRun": 22,
+          "cited": true,
+          "relationship": "self",
+          "sourceType": "author preprint",
+          "retracted": false,
+          "methodsBoilerplate": false
+        }
+      ],
+      "acceptedBoilerplate": [],
+      "findings": [
+        {
+          "passageId": "p-discussion-01",
+          "sourceId": "SELF-PREPRINT-2025",
+          "code": "self_overlap_disclosure_missing",
+          "severity": "warning",
+          "message": "Draft passage substantially reuses prior author text without a reuse disclosure.",
+          "evidence": {
+            "score": 0.692,
+            "longestRun": 22,
+            "sourceTitle": "Guard-cell recovery after repeated dehydration"
+          },
+          "action": "Add a self-overlap disclosure or rewrite the reused passage for the new manuscript."
+        }
+      ]
+    },
+    {
+      "passageId": "p-results-01",
+      "section": "Results",
+      "status": "hold",
+      "topMatches": [
+        {
+          "sourceId": "RETRACTED-KINASE-2024",
+          "sourceTitle": "Kinase inhibition eliminates drought memory",
+          "score": 0.632,
+          "shingleScore": 0.632,
+          "tokenOverlap": 0.696,
+          "longestRun": 16,
+          "cited": true,
+          "relationship": "external",
+          "sourceType": "retracted literature",
+          "retracted": true,
+          "methodsBoilerplate": false
+        }
+      ],
+      "acceptedBoilerplate": [],
+      "findings": [
+        {
+          "passageId": "p-results-01",
+          "sourceId": "RETRACTED-KINASE-2024",
+          "code": "retracted_source_similarity",
+          "severity": "critical",
+          "message": "Draft passage closely overlaps a retracted or invalidated source.",
+          "evidence": {
+            "score": 0.632,
+            "longestRun": 16,
+            "sourceTitle": "Kinase inhibition eliminates drought memory",
+            "retractionNotice": "Expression vectors were misidentified and the conclusions were withdrawn."
+          },
+          "action": "Hold the passage for rewrite and require a current replacement citation."
+        }
+      ]
+    }
+  ],
+  "reviewerActions": [
+    {
+      "passageId": "p-intro-01",
+      "sourceId": "SRC-SORGHUM-2024",
+      "code": "uncited_high_similarity",
+      "severity": "critical",
+      "message": "Draft passage has high source overlap without a citation.",
+      "evidence": {
+        "score": 0.783,
+        "longestRun": 22,
+        "sourceTitle": "Sorghum seedlings preserve transcriptional drought memory"
+      },
+      "action": "Add attribution and rewrite the overlapping passage before sharing or submission."
+    },
+    {
+      "passageId": "p-results-01",
+      "sourceId": "RETRACTED-KINASE-2024",
+      "code": "retracted_source_similarity",
+      "severity": "critical",
+      "message": "Draft passage closely overlaps a retracted or invalidated source.",
+      "evidence": {
+        "score": 0.632,
+        "longestRun": 16,
+        "sourceTitle": "Kinase inhibition eliminates drought memory",
+        "retractionNotice": "Expression vectors were misidentified and the conclusions were withdrawn."
+      },
+      "action": "Hold the passage for rewrite and require a current replacement citation."
+    },
+    {
+      "passageId": "p-discussion-01",
+      "sourceId": "SELF-PREPRINT-2025",
+      "code": "self_overlap_disclosure_missing",
+      "severity": "warning",
+      "message": "Draft passage substantially reuses prior author text without a reuse disclosure.",
+      "evidence": {
+        "score": 0.692,
+        "longestRun": 22,
+        "sourceTitle": "Guard-cell recovery after repeated dehydration"
+      },
+      "action": "Add a self-overlap disclosure or rewrite the reused passage for the new manuscript."
+    }
+  ],
+  "acceptedBoilerplate": [
+    {
+      "sourceId": "PROTO-DRY-01",
+      "sourceTitle": "Standard operating procedure for repeated drought stress",
+      "score": 0.741,
+      "reason": "cited_methods_protocol_overlap"
+    }
+  ],
+  "auditDigest": "a3629c7f0755e3476c2cc1e5d91bcc6be4c213bd4a8ab77c3558cc5a6c094331"
+}

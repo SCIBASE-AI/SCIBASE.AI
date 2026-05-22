@@ -1,0 +1,518 @@
+{
+  "asOf": "2026-05-23T01:20:00.000Z",
+  "summary": {
+    "totalRooms": 2,
+    "totalSessions": 8,
+    "publishedSessions": 3,
+    "suppressedSessions": 5,
+    "cleanupActions": 7,
+    "recoveryActions": 1,
+    "fanoutEvents": 3,
+    "holdRooms": 1,
+    "sanitizedRooms": 1,
+    "readyRooms": 0
+  },
+  "rooms": [
+    {
+      "roomId": "manuscript-alpha",
+      "documentId": "doc-alpha",
+      "title": "Collaborative manuscript draft",
+      "status": "hold_broadcast_cleanup",
+      "reviewedSessions": 5,
+      "publishedSessions": 2,
+      "suppressedSessions": 3,
+      "sanitizedPresence": {
+        "roomId": "manuscript-alpha",
+        "documentId": "doc-alpha",
+        "sessions": [
+          {
+            "sessionId": "sess-ada-active",
+            "collaboratorId": "ada",
+            "displayName": "Ada",
+            "status": "active",
+            "cursor": {
+              "sectionId": "intro",
+              "blockId": "intro-2",
+              "offset": 81
+            },
+            "typing": true
+          },
+          {
+            "sessionId": "sess-chen-new-tab",
+            "collaboratorId": "chen",
+            "displayName": "Chen",
+            "status": "active",
+            "cursor": {
+              "sectionId": "results",
+              "blockId": "result-2",
+              "offset": 33
+            },
+            "typing": false
+          }
+        ]
+      },
+      "sessionDecisions": [
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-ada-active",
+          "collaboratorId": "ada",
+          "displayName": "Ada",
+          "heartbeatAge": 15,
+          "broadcast": true,
+          "publicStatus": "active",
+          "publicCursor": {
+            "sectionId": "intro",
+            "blockId": "intro-2",
+            "offset": 81
+          },
+          "publicTyping": true,
+          "cleanupActions": [],
+          "recoveryActions": []
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-bio-ghost",
+          "collaboratorId": "bianca",
+          "displayName": "Bianca",
+          "heartbeatAge": 165,
+          "broadcast": false,
+          "publicStatus": "editing",
+          "publicCursor": {
+            "sectionId": "methods",
+            "blockId": "methods-4",
+            "offset": 12
+          },
+          "publicTyping": false,
+          "cleanupActions": [
+            {
+              "roomId": "manuscript-alpha",
+              "sessionId": "sess-bio-ghost",
+              "collaboratorId": "bianca",
+              "code": "ghost_session",
+              "severity": "critical",
+              "message": "Heartbeat is stale by 165s while cursor or editing state is still visible.",
+              "remediation": "Suppress cursor and remove the session from live fanout until a fresh heartbeat arrives."
+            },
+            {
+              "roomId": "manuscript-alpha",
+              "sessionId": "sess-bio-ghost",
+              "collaboratorId": "bianca",
+              "code": "expired_typing_indicator",
+              "severity": "warning",
+              "message": "Typing indicator age 150s exceeds the 20s policy.",
+              "remediation": "Drop typing state while preserving the session if heartbeat is fresh."
+            }
+          ],
+          "recoveryActions": []
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-chen-old-tab",
+          "collaboratorId": "chen",
+          "displayName": "Chen",
+          "heartbeatAge": 35,
+          "broadcast": false,
+          "publicStatus": "active",
+          "publicCursor": {
+            "sectionId": "results",
+            "blockId": "result-1",
+            "offset": 3
+          },
+          "publicTyping": false,
+          "cleanupActions": [
+            {
+              "roomId": "manuscript-alpha",
+              "sessionId": "sess-chen-old-tab",
+              "collaboratorId": "chen",
+              "code": "duplicate_tab_shadowed",
+              "severity": "warning",
+              "message": "A newer tab for the same collaborator is active.",
+              "remediation": "Keep only the newest tab in the next presence fanout."
+            }
+          ],
+          "recoveryActions": []
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-chen-new-tab",
+          "collaboratorId": "chen",
+          "displayName": "Chen",
+          "heartbeatAge": 5,
+          "broadcast": true,
+          "publicStatus": "active",
+          "publicCursor": {
+            "sectionId": "results",
+            "blockId": "result-2",
+            "offset": 33
+          },
+          "publicTyping": false,
+          "cleanupActions": [],
+          "recoveryActions": []
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-dina-reconnect",
+          "collaboratorId": "dina",
+          "displayName": "Dina",
+          "heartbeatAge": 58,
+          "broadcast": false,
+          "publicStatus": "reconnecting",
+          "publicCursor": null,
+          "publicTyping": false,
+          "cleanupActions": [],
+          "recoveryActions": [
+            {
+              "roomId": "manuscript-alpha",
+              "sessionId": "sess-dina-reconnect",
+              "collaboratorId": "dina",
+              "code": "reconnect_grace",
+              "action": "hold_cursor_restore_marker",
+              "expiresInSeconds": 50
+            }
+          ]
+        }
+      ],
+      "cleanupQueue": [
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-bio-ghost",
+          "collaboratorId": "bianca",
+          "code": "ghost_session",
+          "severity": "critical",
+          "message": "Heartbeat is stale by 165s while cursor or editing state is still visible.",
+          "remediation": "Suppress cursor and remove the session from live fanout until a fresh heartbeat arrives."
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-bio-ghost",
+          "collaboratorId": "bianca",
+          "code": "expired_typing_indicator",
+          "severity": "warning",
+          "message": "Typing indicator age 150s exceeds the 20s policy.",
+          "remediation": "Drop typing state while preserving the session if heartbeat is fresh."
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-chen-old-tab",
+          "collaboratorId": "chen",
+          "code": "duplicate_tab_shadowed",
+          "severity": "warning",
+          "message": "A newer tab for the same collaborator is active.",
+          "remediation": "Keep only the newest tab in the next presence fanout."
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "missing-session",
+          "collaboratorId": "unknown",
+          "code": "orphan_cursor",
+          "severity": "warning",
+          "message": "Cursor has no matching live session record.",
+          "remediation": "Drop cursor from the next presence snapshot."
+        }
+      ],
+      "recoveryQueue": [
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-dina-reconnect",
+          "collaboratorId": "dina",
+          "code": "reconnect_grace",
+          "action": "hold_cursor_restore_marker",
+          "expiresInSeconds": 50
+        }
+      ],
+      "fanoutQueue": [
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-ada-active",
+          "collaboratorId": "ada",
+          "channel": "presence_snapshot",
+          "cursor": {
+            "sectionId": "intro",
+            "blockId": "intro-2",
+            "offset": 81
+          },
+          "typing": true
+        },
+        {
+          "roomId": "manuscript-alpha",
+          "sessionId": "sess-chen-new-tab",
+          "collaboratorId": "chen",
+          "channel": "presence_snapshot",
+          "cursor": {
+            "sectionId": "results",
+            "blockId": "result-2",
+            "offset": 33
+          },
+          "typing": false
+        }
+      ]
+    },
+    {
+      "roomId": "notebook-review",
+      "documentId": "doc-notebook",
+      "title": "Notebook review room",
+      "status": "sanitized_ready",
+      "reviewedSessions": 3,
+      "publishedSessions": 1,
+      "suppressedSessions": 2,
+      "sanitizedPresence": {
+        "roomId": "notebook-review",
+        "documentId": "doc-notebook",
+        "sessions": [
+          {
+            "sessionId": "sess-eli-clean",
+            "collaboratorId": "eli",
+            "displayName": "Eli",
+            "status": "active",
+            "cursor": {
+              "sectionId": "analysis",
+              "blockId": "cell-2",
+              "offset": 18
+            },
+            "typing": false
+          }
+        ]
+      },
+      "sessionDecisions": [
+        {
+          "roomId": "notebook-review",
+          "sessionId": "sess-eli-clean",
+          "collaboratorId": "eli",
+          "displayName": "Eli",
+          "heartbeatAge": 12,
+          "broadcast": true,
+          "publicStatus": "active",
+          "publicCursor": {
+            "sectionId": "analysis",
+            "blockId": "cell-2",
+            "offset": 18
+          },
+          "publicTyping": false,
+          "cleanupActions": [],
+          "recoveryActions": []
+        },
+        {
+          "roomId": "notebook-review",
+          "sessionId": "sess-farid-expired-lease",
+          "collaboratorId": "farid",
+          "displayName": "Farid",
+          "heartbeatAge": 10,
+          "broadcast": false,
+          "publicStatus": "active",
+          "publicCursor": {
+            "sectionId": "analysis",
+            "blockId": "cell-5",
+            "offset": 44
+          },
+          "publicTyping": false,
+          "cleanupActions": [
+            {
+              "roomId": "notebook-review",
+              "sessionId": "sess-farid-expired-lease",
+              "collaboratorId": "farid",
+              "code": "expired_typing_indicator",
+              "severity": "warning",
+              "message": "Typing indicator age 65s exceeds the 20s policy.",
+              "remediation": "Drop typing state while preserving the session if heartbeat is fresh."
+            },
+            {
+              "roomId": "notebook-review",
+              "sessionId": "sess-farid-expired-lease",
+              "collaboratorId": "farid",
+              "code": "expired_presence_fanout_lease",
+              "severity": "warning",
+              "message": "Presence fanout lease expired before the next broadcast window.",
+              "remediation": "Renew lease before including this session in a fanout batch."
+            }
+          ],
+          "recoveryActions": []
+        },
+        {
+          "roomId": "notebook-review",
+          "sessionId": "sess-gita-skew",
+          "collaboratorId": "gita",
+          "displayName": "Gita",
+          "heartbeatAge": -22,
+          "broadcast": false,
+          "publicStatus": "clock_skew_review",
+          "publicCursor": null,
+          "publicTyping": false,
+          "cleanupActions": [
+            {
+              "roomId": "notebook-review",
+              "sessionId": "sess-gita-skew",
+              "collaboratorId": "gita",
+              "code": "future_heartbeat_clock_skew",
+              "severity": "warning",
+              "message": "Heartbeat timestamp is ahead of the room clock.",
+              "remediation": "Hold the timestamp for clock-skew review before fanout."
+            }
+          ],
+          "recoveryActions": []
+        }
+      ],
+      "cleanupQueue": [
+        {
+          "roomId": "notebook-review",
+          "sessionId": "sess-farid-expired-lease",
+          "collaboratorId": "farid",
+          "code": "expired_typing_indicator",
+          "severity": "warning",
+          "message": "Typing indicator age 65s exceeds the 20s policy.",
+          "remediation": "Drop typing state while preserving the session if heartbeat is fresh."
+        },
+        {
+          "roomId": "notebook-review",
+          "sessionId": "sess-farid-expired-lease",
+          "collaboratorId": "farid",
+          "code": "expired_presence_fanout_lease",
+          "severity": "warning",
+          "message": "Presence fanout lease expired before the next broadcast window.",
+          "remediation": "Renew lease before including this session in a fanout batch."
+        },
+        {
+          "roomId": "notebook-review",
+          "sessionId": "sess-gita-skew",
+          "collaboratorId": "gita",
+          "code": "future_heartbeat_clock_skew",
+          "severity": "warning",
+          "message": "Heartbeat timestamp is ahead of the room clock.",
+          "remediation": "Hold the timestamp for clock-skew review before fanout."
+        }
+      ],
+      "recoveryQueue": [],
+      "fanoutQueue": [
+        {
+          "roomId": "notebook-review",
+          "sessionId": "sess-eli-clean",
+          "collaboratorId": "eli",
+          "channel": "presence_snapshot",
+          "cursor": {
+            "sectionId": "analysis",
+            "blockId": "cell-2",
+            "offset": 18
+          },
+          "typing": false
+        }
+      ]
+    }
+  ],
+  "cleanupQueue": [
+    {
+      "roomId": "manuscript-alpha",
+      "sessionId": "sess-bio-ghost",
+      "collaboratorId": "bianca",
+      "code": "ghost_session",
+      "severity": "critical",
+      "message": "Heartbeat is stale by 165s while cursor or editing state is still visible.",
+      "remediation": "Suppress cursor and remove the session from live fanout until a fresh heartbeat arrives."
+    },
+    {
+      "roomId": "manuscript-alpha",
+      "sessionId": "sess-bio-ghost",
+      "collaboratorId": "bianca",
+      "code": "expired_typing_indicator",
+      "severity": "warning",
+      "message": "Typing indicator age 150s exceeds the 20s policy.",
+      "remediation": "Drop typing state while preserving the session if heartbeat is fresh."
+    },
+    {
+      "roomId": "manuscript-alpha",
+      "sessionId": "sess-chen-old-tab",
+      "collaboratorId": "chen",
+      "code": "duplicate_tab_shadowed",
+      "severity": "warning",
+      "message": "A newer tab for the same collaborator is active.",
+      "remediation": "Keep only the newest tab in the next presence fanout."
+    },
+    {
+      "roomId": "manuscript-alpha",
+      "sessionId": "missing-session",
+      "collaboratorId": "unknown",
+      "code": "orphan_cursor",
+      "severity": "warning",
+      "message": "Cursor has no matching live session record.",
+      "remediation": "Drop cursor from the next presence snapshot."
+    },
+    {
+      "roomId": "notebook-review",
+      "sessionId": "sess-farid-expired-lease",
+      "collaboratorId": "farid",
+      "code": "expired_typing_indicator",
+      "severity": "warning",
+      "message": "Typing indicator age 65s exceeds the 20s policy.",
+      "remediation": "Drop typing state while preserving the session if heartbeat is fresh."
+    },
+    {
+      "roomId": "notebook-review",
+      "sessionId": "sess-farid-expired-lease",
+      "collaboratorId": "farid",
+      "code": "expired_presence_fanout_lease",
+      "severity": "warning",
+      "message": "Presence fanout lease expired before the next broadcast window.",
+      "remediation": "Renew lease before including this session in a fanout batch."
+    },
+    {
+      "roomId": "notebook-review",
+      "sessionId": "sess-gita-skew",
+      "collaboratorId": "gita",
+      "code": "future_heartbeat_clock_skew",
+      "severity": "warning",
+      "message": "Heartbeat timestamp is ahead of the room clock.",
+      "remediation": "Hold the timestamp for clock-skew review before fanout."
+    }
+  ],
+  "recoveryQueue": [
+    {
+      "roomId": "manuscript-alpha",
+      "sessionId": "sess-dina-reconnect",
+      "collaboratorId": "dina",
+      "code": "reconnect_grace",
+      "action": "hold_cursor_restore_marker",
+      "expiresInSeconds": 50
+    }
+  ],
+  "fanoutQueue": [
+    {
+      "roomId": "manuscript-alpha",
+      "sessionId": "sess-ada-active",
+      "collaboratorId": "ada",
+      "channel": "presence_snapshot",
+      "cursor": {
+        "sectionId": "intro",
+        "blockId": "intro-2",
+        "offset": 81
+      },
+      "typing": true
+    },
+    {
+      "roomId": "manuscript-alpha",
+      "sessionId": "sess-chen-new-tab",
+      "collaboratorId": "chen",
+      "channel": "presence_snapshot",
+      "cursor": {
+        "sectionId": "results",
+        "blockId": "result-2",
+        "offset": 33
+      },
+      "typing": false
+    },
+    {
+      "roomId": "notebook-review",
+      "sessionId": "sess-eli-clean",
+      "collaboratorId": "eli",
+      "channel": "presence_snapshot",
+      "cursor": {
+        "sectionId": "analysis",
+        "blockId": "cell-2",
+        "offset": 18
+      },
+      "typing": false
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "4a2254121a88799219fbeb58149dc0cc31087ce21619de6817fa5963bf7b55ba",
+    "policyVersion": "presence-heartbeat-liveness-v1"
+  }
+}

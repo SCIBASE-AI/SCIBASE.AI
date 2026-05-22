@@ -1,0 +1,156 @@
+[
+  {
+    "scenario": "out-of-scope-section-block",
+    "syncId": "sync-canvas-biology",
+    "generatedAt": "2026-05-22T14:40:00Z",
+    "institution": "North Valley University",
+    "decision": "block-sync",
+    "syncReadinessScore": 60,
+    "findings": [
+      {
+        "type": "out-of-scope-section",
+        "severity": "critical",
+        "userId": "u-ben",
+        "sectionId": "CHEM-999-Z",
+        "message": "u-ben is enrolled in unapproved section CHEM-999-Z"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "remove_out_of_scope_enrollment",
+        "target": "u-ben",
+        "reason": "LMS sync must stay inside approved institutional course sections"
+      }
+    ],
+    "summary": {
+      "rosterCount": 2,
+      "passbackEventCount": 0,
+      "webhookReceiptCount": 1,
+      "approvedSectionCount": 2,
+      "outOfScopeEnrollments": 1,
+      "staleDrops": 0,
+      "missingOrcidLinks": 0,
+      "passbackHolds": 0,
+      "severityCounts": {
+        "critical": 1
+      }
+    }
+  },
+  {
+    "scenario": "admin-review-roster-drift",
+    "syncId": "sync-moodle-physics",
+    "generatedAt": "2026-05-22T14:40:00Z",
+    "institution": "North Valley University",
+    "decision": "needs-admin-review",
+    "syncReadinessScore": 60,
+    "findings": [
+      {
+        "type": "stale-dropped-enrollment",
+        "severity": "major",
+        "userId": "u-clio",
+        "lastChangedAt": "2026-05-01T00:00:00Z",
+        "message": "u-clio has stale dropped enrollment state from 2026-05-01T00:00:00Z"
+      },
+      {
+        "type": "missing-orcid-linkage",
+        "severity": "major",
+        "userId": "u-drew",
+        "message": "u-drew lacks ORCID/profile linkage for enterprise reporting"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "confirm_dropped_enrollment",
+        "target": "u-clio",
+        "reason": "stale dropped students need admin confirmation before roster sync"
+      },
+      {
+        "type": "link_orcid_profile",
+        "target": "u-drew",
+        "reason": "enterprise reporting needs stable researcher identity linkage"
+      }
+    ],
+    "summary": {
+      "rosterCount": 2,
+      "passbackEventCount": 0,
+      "webhookReceiptCount": 1,
+      "approvedSectionCount": 1,
+      "outOfScopeEnrollments": 0,
+      "staleDrops": 1,
+      "missingOrcidLinks": 1,
+      "passbackHolds": 0,
+      "severityCounts": {
+        "major": 2
+      }
+    }
+  },
+  {
+    "scenario": "passback-hold",
+    "syncId": "sync-grade-passback",
+    "generatedAt": "2026-05-22T14:40:00Z",
+    "institution": "North Valley University",
+    "decision": "hold-passback",
+    "syncReadinessScore": 60,
+    "findings": [
+      {
+        "type": "grade-release-window-violation",
+        "severity": "major",
+        "eventId": "grade-1",
+        "releasedAt": "2026-05-22T14:00:00Z",
+        "message": "grade-1 released outside configured grade window"
+      },
+      {
+        "type": "missing-webhook-acknowledgement",
+        "severity": "major",
+        "eventId": "grade-2",
+        "message": "grade-2 lacks acknowledged LMS webhook receipt"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "hold_grade_passback",
+        "target": "grade-1",
+        "reason": "grade releases must occur inside the approved LMS release window"
+      },
+      {
+        "type": "replay_or_confirm_webhook",
+        "target": "grade-2",
+        "reason": "grade passback must have an acknowledged LMS webhook receipt"
+      }
+    ],
+    "summary": {
+      "rosterCount": 1,
+      "passbackEventCount": 2,
+      "webhookReceiptCount": 1,
+      "approvedSectionCount": 1,
+      "outOfScopeEnrollments": 0,
+      "staleDrops": 0,
+      "missingOrcidLinks": 0,
+      "passbackHolds": 2,
+      "severityCounts": {
+        "major": 2
+      }
+    }
+  },
+  {
+    "scenario": "clean-lms-sync",
+    "syncId": "sync-clean-lms",
+    "generatedAt": "2026-05-22T14:40:00Z",
+    "institution": "North Valley University",
+    "decision": "approve-sync",
+    "syncReadinessScore": 100,
+    "findings": [],
+    "requiredActions": [],
+    "summary": {
+      "rosterCount": 2,
+      "passbackEventCount": 1,
+      "webhookReceiptCount": 2,
+      "approvedSectionCount": 1,
+      "outOfScopeEnrollments": 0,
+      "staleDrops": 0,
+      "missingOrcidLinks": 0,
+      "passbackHolds": 0,
+      "severityCounts": {}
+    }
+  }
+]

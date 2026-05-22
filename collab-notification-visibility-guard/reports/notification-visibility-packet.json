@@ -1,0 +1,387 @@
+{
+  "projectId": "sci-editor-proj-12-demo",
+  "evaluatedAt": "2026-05-22T14:00:00Z",
+  "summary": {
+    "totalRoutes": 11,
+    "deliver": 3,
+    "sanitize": 5,
+    "hold": 3,
+    "drop": 0,
+    "maxSeverity": 2,
+    "leakageRiskCount": 8
+  },
+  "routes": [
+    {
+      "eventId": "evt-reviewer-note",
+      "recipientId": "ed-1",
+      "recipientRole": "editor",
+      "channel": "in_app",
+      "action": "deliver",
+      "severity": 0,
+      "reasons": [],
+      "payload": {
+        "subject": "Reviewer Dr. Lane flagged Methods - oncology cohort",
+        "message": "Reviewer Dr. Lane says Figure 2 references /restricted/nb-qc.ipynb and should not be visible in the author email digest yet.",
+        "sectionTitle": "Methods - oncology cohort",
+        "notebookPath": "/restricted/nb-qc.ipynb",
+        "reviewerIdentity": "Dr. Lane",
+        "threadTitle": "Private R2 reviewer note",
+        "eventType": "reviewer_note",
+        "eventId": "evt-reviewer-note",
+        "visibility": "full"
+      },
+      "routeDigest": "0614f949973cd62446c3f5a92e0cb175802001db40cddd90ce62b963e742fab7"
+    },
+    {
+      "eventId": "evt-reviewer-note",
+      "recipientId": "rev-anon-2",
+      "recipientRole": "reviewer",
+      "channel": "in_app",
+      "action": "sanitize",
+      "severity": 1,
+      "reasons": [
+        "blinded-reviewer-identity-hidden",
+        "restricted-notebook-path-hidden:nb-qc"
+      ],
+      "payload": {
+        "subject": "Restricted reviewer note update",
+        "message": "Reviewer [redacted reviewer identity] says Figure 2 references [restricted notebook path] and should not be visible in the author email digest yet.",
+        "eventType": "reviewer_note",
+        "eventId": "evt-reviewer-note",
+        "visibility": "sanitize",
+        "redactedFields": [
+          "reviewerIdentity",
+          "notebookPath"
+        ],
+        "reviewReasons": [
+          "blinded-reviewer-identity-hidden",
+          "restricted-notebook-path-hidden:nb-qc"
+        ]
+      },
+      "routeDigest": "dd70ce34da950d1a90ea92ac50b50cbf3a4c4d71fcec6314a29fc2456757ae0d"
+    },
+    {
+      "eventId": "evt-reviewer-note",
+      "recipientId": "author-1",
+      "recipientRole": "author",
+      "channel": "email",
+      "action": "hold",
+      "severity": 2,
+      "reasons": [
+        "missing-scope:review:R2",
+        "not-private-thread-participant",
+        "blinded-reviewer-identity-hidden",
+        "private-section-title-hidden:methods",
+        "restricted-notebook-path-hidden:nb-qc",
+        "external-channel-requires-sanitized-digest"
+      ],
+      "payload": {
+        "subject": "Restricted reviewer note update",
+        "message": "Reviewer [redacted reviewer identity] says Figure 2 references [restricted notebook path] and should not be visible in the author email digest yet.",
+        "eventType": "reviewer_note",
+        "eventId": "evt-reviewer-note",
+        "visibility": "hold",
+        "redactedFields": [
+          "reviewerIdentity",
+          "sectionTitle",
+          "notebookPath"
+        ],
+        "reviewReasons": [
+          "missing-scope:review:R2",
+          "not-private-thread-participant",
+          "blinded-reviewer-identity-hidden",
+          "private-section-title-hidden:methods",
+          "restricted-notebook-path-hidden:nb-qc",
+          "external-channel-requires-sanitized-digest"
+        ]
+      },
+      "routeDigest": "fee8647af7dc1ee21199883ff4ea1d202d6d338cce61f9bb06b2320a9e8e686e"
+    },
+    {
+      "eventId": "evt-methods-lock",
+      "recipientId": "ed-1",
+      "recipientRole": "editor",
+      "channel": "in_app",
+      "action": "deliver",
+      "severity": 0,
+      "reasons": [],
+      "payload": {
+        "subject": "Methods - oncology cohort locked for review",
+        "message": "The Methods - oncology cohort section is locked at anchor sec-methods-r2 until the embargo review clears.",
+        "sectionTitle": "Methods - oncology cohort",
+        "anchor": "sec-methods-r2",
+        "eventType": "section_lock",
+        "eventId": "evt-methods-lock",
+        "visibility": "full"
+      },
+      "routeDigest": "8a4d753af2c9269d510efa9ef91abd029b5603f9e6f5bc3cbb1f70ec38a7ce61"
+    },
+    {
+      "eventId": "evt-methods-lock",
+      "recipientId": "author-1",
+      "recipientRole": "author",
+      "channel": "email",
+      "action": "sanitize",
+      "severity": 1,
+      "reasons": [
+        "private-section-title-hidden:methods",
+        "embargoed-anchor-hidden:methods",
+        "external-channel-requires-sanitized-digest"
+      ],
+      "payload": {
+        "subject": "Restricted section lock update",
+        "message": "The [restricted section] section is locked at anchor [restricted anchor] until the embargo review clears.",
+        "eventType": "section_lock",
+        "eventId": "evt-methods-lock",
+        "visibility": "sanitize",
+        "redactedFields": [
+          "sectionTitle",
+          "anchor"
+        ],
+        "reviewReasons": [
+          "private-section-title-hidden:methods",
+          "embargoed-anchor-hidden:methods",
+          "external-channel-requires-sanitized-digest"
+        ]
+      },
+      "routeDigest": "68d76233567aea0db69ff7e67aefa1659def34fd1b07b47cb5f18020c95c69c3"
+    },
+    {
+      "eventId": "evt-notebook-output",
+      "recipientId": "ed-1",
+      "recipientRole": "editor",
+      "channel": "in_app",
+      "action": "deliver",
+      "severity": 0,
+      "reasons": [],
+      "payload": {
+        "subject": "QC notebook output changed",
+        "message": "Output for /restricted/nb-qc.ipynb changed after collaborator review. Verify cell qc-17 before export.",
+        "notebookPath": "/restricted/nb-qc.ipynb",
+        "eventType": "notebook_output",
+        "eventId": "evt-notebook-output",
+        "visibility": "full"
+      },
+      "routeDigest": "b1ea637335b1eb2457dcec0258d60f3c91bcd5a595a0865a8964ca8e2a62cea8"
+    },
+    {
+      "eventId": "evt-notebook-output",
+      "recipientId": "analyst-1",
+      "recipientRole": "collaborator",
+      "channel": "push",
+      "action": "sanitize",
+      "severity": 1,
+      "reasons": [
+        "restricted-notebook-path-hidden:nb-qc",
+        "external-channel-requires-sanitized-digest"
+      ],
+      "payload": {
+        "subject": "Restricted notebook output update",
+        "message": "Output for [restricted notebook path] changed after collaborator review. Verify cell qc-17 before export.",
+        "eventType": "notebook_output",
+        "eventId": "evt-notebook-output",
+        "visibility": "sanitize",
+        "redactedFields": [
+          "notebookPath"
+        ],
+        "reviewReasons": [
+          "restricted-notebook-path-hidden:nb-qc",
+          "external-channel-requires-sanitized-digest"
+        ]
+      },
+      "routeDigest": "12f365a120704c1132f9275829bca705f827edb19effe83433271a6c4120e23f"
+    },
+    {
+      "eventId": "evt-notebook-output",
+      "recipientId": "author-1",
+      "recipientRole": "author",
+      "channel": "email",
+      "action": "sanitize",
+      "severity": 1,
+      "reasons": [
+        "restricted-notebook-path-hidden:nb-qc",
+        "external-channel-requires-sanitized-digest"
+      ],
+      "payload": {
+        "subject": "Restricted notebook output update",
+        "message": "Output for [restricted notebook path] changed after collaborator review. Verify cell qc-17 before export.",
+        "eventType": "notebook_output",
+        "eventId": "evt-notebook-output",
+        "visibility": "sanitize",
+        "redactedFields": [
+          "notebookPath"
+        ],
+        "reviewReasons": [
+          "restricted-notebook-path-hidden:nb-qc",
+          "external-channel-requires-sanitized-digest"
+        ]
+      },
+      "routeDigest": "b5f69dcee15b47bde546815640c922ca7a21e23565656021b59c4c7c02fd3fa5"
+    },
+    {
+      "eventId": "evt-export-digest",
+      "recipientId": "pm-1",
+      "recipientRole": "editor",
+      "channel": "email",
+      "action": "sanitize",
+      "severity": 1,
+      "reasons": [
+        "external-channel-requires-sanitized-digest"
+      ],
+      "payload": {
+        "subject": "Publication export digest requires review",
+        "message": "Export packet includes private collaborator note Final R2 reply before journal upload.",
+        "eventType": "export_digest",
+        "eventId": "evt-export-digest",
+        "visibility": "sanitize",
+        "redactedFields": [],
+        "reviewReasons": [
+          "external-channel-requires-sanitized-digest"
+        ]
+      },
+      "routeDigest": "5e53cd393603f361428b24f147456e888461f1aa437eb253c74f607fa1a0c8b2"
+    },
+    {
+      "eventId": "evt-export-digest",
+      "recipientId": "author-1",
+      "recipientRole": "author",
+      "channel": "email",
+      "action": "hold",
+      "severity": 2,
+      "reasons": [
+        "missing-external-digest-receipt",
+        "private-collaborator-note-hidden",
+        "external-channel-requires-sanitized-digest"
+      ],
+      "payload": {
+        "subject": "Publication export digest requires review",
+        "message": "Export packet includes private collaborator note [private collaborator note] before journal upload.",
+        "eventType": "export_digest",
+        "eventId": "evt-export-digest",
+        "visibility": "hold",
+        "redactedFields": [
+          "threadTitle"
+        ],
+        "reviewReasons": [
+          "missing-external-digest-receipt",
+          "private-collaborator-note-hidden",
+          "external-channel-requires-sanitized-digest"
+        ]
+      },
+      "routeDigest": "44d241de5f48d1e20ceb400761b760bfabd8b55b83c62b841613a6c43deb72fa"
+    },
+    {
+      "eventId": "evt-export-digest",
+      "recipientId": "sponsor-1",
+      "recipientRole": "sponsor",
+      "channel": "webhook",
+      "action": "hold",
+      "severity": 2,
+      "reasons": [
+        "missing-scope:manuscript:core",
+        "missing-external-digest-receipt",
+        "private-collaborator-note-hidden",
+        "external-channel-requires-sanitized-digest"
+      ],
+      "payload": {
+        "subject": "Publication export digest requires review",
+        "message": "Export packet includes private collaborator note [private collaborator note] before journal upload.",
+        "eventType": "export_digest",
+        "eventId": "evt-export-digest",
+        "visibility": "hold",
+        "redactedFields": [
+          "threadTitle"
+        ],
+        "reviewReasons": [
+          "missing-scope:manuscript:core",
+          "missing-external-digest-receipt",
+          "private-collaborator-note-hidden",
+          "external-channel-requires-sanitized-digest"
+        ]
+      },
+      "routeDigest": "95f44e4217f00cc76b2ca451e7b27248ae725880dad6fe3275b5f208e864d7fd"
+    }
+  ],
+  "leakageRisks": [
+    {
+      "eventId": "evt-reviewer-note",
+      "recipientId": "rev-anon-2",
+      "action": "sanitize",
+      "reasons": [
+        "blinded-reviewer-identity-hidden",
+        "restricted-notebook-path-hidden:nb-qc"
+      ]
+    },
+    {
+      "eventId": "evt-reviewer-note",
+      "recipientId": "author-1",
+      "action": "hold",
+      "reasons": [
+        "missing-scope:review:R2",
+        "not-private-thread-participant",
+        "blinded-reviewer-identity-hidden",
+        "private-section-title-hidden:methods",
+        "restricted-notebook-path-hidden:nb-qc",
+        "external-channel-requires-sanitized-digest"
+      ]
+    },
+    {
+      "eventId": "evt-methods-lock",
+      "recipientId": "author-1",
+      "action": "sanitize",
+      "reasons": [
+        "private-section-title-hidden:methods",
+        "embargoed-anchor-hidden:methods",
+        "external-channel-requires-sanitized-digest"
+      ]
+    },
+    {
+      "eventId": "evt-notebook-output",
+      "recipientId": "analyst-1",
+      "action": "sanitize",
+      "reasons": [
+        "restricted-notebook-path-hidden:nb-qc",
+        "external-channel-requires-sanitized-digest"
+      ]
+    },
+    {
+      "eventId": "evt-notebook-output",
+      "recipientId": "author-1",
+      "action": "sanitize",
+      "reasons": [
+        "restricted-notebook-path-hidden:nb-qc",
+        "external-channel-requires-sanitized-digest"
+      ]
+    },
+    {
+      "eventId": "evt-export-digest",
+      "recipientId": "pm-1",
+      "action": "sanitize",
+      "reasons": [
+        "external-channel-requires-sanitized-digest"
+      ]
+    },
+    {
+      "eventId": "evt-export-digest",
+      "recipientId": "author-1",
+      "action": "hold",
+      "reasons": [
+        "missing-external-digest-receipt",
+        "private-collaborator-note-hidden",
+        "external-channel-requires-sanitized-digest"
+      ]
+    },
+    {
+      "eventId": "evt-export-digest",
+      "recipientId": "sponsor-1",
+      "action": "hold",
+      "reasons": [
+        "missing-scope:manuscript:core",
+        "missing-external-digest-receipt",
+        "private-collaborator-note-hidden",
+        "external-channel-requires-sanitized-digest"
+      ]
+    }
+  ],
+  "auditDigest": "02f8ceca9fe8760b5554587bfb21d4efeca366f41656e83f6083c53329a3ba80"
+}

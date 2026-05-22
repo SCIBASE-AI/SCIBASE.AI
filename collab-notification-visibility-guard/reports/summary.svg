@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#f8fafc"/>
+<rect x="64" y="58" width="1152" height="604" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="110" y="128" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#111827">Notification Visibility Guard</text>
+<text x="110" y="174" font-family="Arial, sans-serif" font-size="24" fill="#475569">Real-time collaborative research editor notification fanout audit</text>
+<text x="110" y="257" font-family="Arial, sans-serif" font-size="28" fill="#1f2937">deliver</text>
+<rect x="290" y="230" width="760" height="42" rx="6" fill="#e5e7eb"/>
+<rect x="290" y="230" width="432" height="42" rx="6" fill="#1f7a4d"/>
+<text x="1080" y="261" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">3</text>
+<text x="110" y="343" font-family="Arial, sans-serif" font-size="28" fill="#1f2937">sanitize</text>
+<rect x="290" y="316" width="760" height="42" rx="6" fill="#e5e7eb"/>
+<rect x="290" y="316" width="720" height="42" rx="6" fill="#1f5f99"/>
+<text x="1080" y="347" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">5</text>
+<text x="110" y="429" font-family="Arial, sans-serif" font-size="28" fill="#1f2937">hold</text>
+<rect x="290" y="402" width="760" height="42" rx="6" fill="#e5e7eb"/>
+<rect x="290" y="402" width="432" height="42" rx="6" fill="#b36b00"/>
+<text x="1080" y="433" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">3</text>
+<text x="110" y="515" font-family="Arial, sans-serif" font-size="28" fill="#1f2937">drop</text>
+<rect x="290" y="488" width="760" height="42" rx="6" fill="#e5e7eb"/>
+<rect x="290" y="488" width="0" height="42" rx="6" fill="#9e2b25"/>
+<text x="1080" y="519" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">0</text>
+<text x="110" y="626" font-family="Arial, sans-serif" font-size="22" fill="#475569">Digest: 02f8ceca9fe8760b5554587b</text>
+</svg>

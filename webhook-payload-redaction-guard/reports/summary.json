@@ -1,0 +1,183 @@
+{
+  "guard": "webhook-payload-redaction-guard",
+  "issue": "SCIBASE-AI/SCIBASE.AI#19",
+  "asOfDate": "2026-05-23",
+  "decision": "block-unsafe-webhook-delivery",
+  "score": 0,
+  "severitySummary": {
+    "critical": 7,
+    "high": 5,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "rule": "webhook-top-level-field-not-allowlisted",
+      "message": "evt-001 includes non-allowlisted top-level field debugTrace.",
+      "action": "Drop non-contract fields before webhook delivery.",
+      "refs": [
+        "evt-001",
+        "debugTrace"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "webhook-signature-metadata-incomplete",
+      "message": "evt-001 is missing signature field keyId.",
+      "action": "Regenerate signed event metadata before delivery.",
+      "refs": [
+        "evt-001",
+        "keyId"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "webhook-private-project-field-present",
+      "message": "evt-001 includes private project field project.privateNotes.",
+      "action": "Remove private workspace fields from outbound payloads.",
+      "refs": [
+        "evt-001",
+        "project.privateNotes"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "webhook-pii-field-present",
+      "message": "evt-001 includes PII field project.owner.fullName.",
+      "action": "Redact direct identifiers before institutional webhook delivery.",
+      "refs": [
+        "evt-001",
+        "project.owner.fullName"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "webhook-pii-field-present",
+      "message": "evt-001 includes PII field project.owner.email.",
+      "action": "Redact direct identifiers before institutional webhook delivery.",
+      "refs": [
+        "evt-001",
+        "project.owner.email"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "webhook-private-storage-link-present",
+      "message": "evt-001 exposes a private storage URL at dataset.downloadUrl.",
+      "action": "Replace private URLs with DOI/metadata links or suppress the field.",
+      "refs": [
+        "evt-001",
+        "dataset.downloadUrl"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "webhook-dataset-access-not-public-safe",
+      "message": "evt-001 includes dataset data-raw with access restricted.",
+      "action": "Suppress dataset delivery or emit metadata-only redacted payload.",
+      "refs": [
+        "evt-001",
+        "data-raw",
+        "restricted"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "webhook-region-not-allowed",
+      "message": "evt-003 targets region APAC.",
+      "action": "Hold delivery until data-residency routing is approved.",
+      "refs": [
+        "evt-003",
+        "APAC"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "webhook-signature-metadata-incomplete",
+      "message": "evt-003 is missing signature field digest.",
+      "action": "Regenerate signed event metadata before delivery.",
+      "refs": [
+        "evt-003",
+        "digest"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "webhook-signature-algorithm-unsafe",
+      "message": "evt-003 uses unsafe signature algorithm none.",
+      "action": "Block delivery until a production signing algorithm is used.",
+      "refs": [
+        "evt-003",
+        "none"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "webhook-private-project-field-present",
+      "message": "evt-003 includes private project field project.internalReviewerComments.",
+      "action": "Remove private workspace fields from outbound payloads.",
+      "refs": [
+        "evt-003",
+        "project.internalReviewerComments"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "webhook-pii-field-present",
+      "message": "evt-003 includes PII field review.reviewer.fullName.",
+      "action": "Redact direct identifiers before institutional webhook delivery.",
+      "refs": [
+        "evt-003",
+        "review.reviewer.fullName"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "webhook-pii-field-present",
+      "message": "evt-003 includes PII field review.reviewer.employeeId.",
+      "action": "Redact direct identifiers before institutional webhook delivery.",
+      "refs": [
+        "evt-003",
+        "review.reviewer.employeeId"
+      ]
+    }
+  ],
+  "eventDecisions": [
+    {
+      "eventId": "evt-001",
+      "decision": "block-delivery",
+      "rules": [
+        "webhook-top-level-field-not-allowlisted",
+        "webhook-signature-metadata-incomplete",
+        "webhook-private-project-field-present",
+        "webhook-pii-field-present",
+        "webhook-pii-field-present",
+        "webhook-private-storage-link-present",
+        "webhook-dataset-access-not-public-safe"
+      ]
+    },
+    {
+      "eventId": "evt-002",
+      "decision": "deliver",
+      "rules": []
+    },
+    {
+      "eventId": "evt-003",
+      "decision": "block-delivery",
+      "rules": [
+        "webhook-region-not-allowed",
+        "webhook-signature-metadata-incomplete",
+        "webhook-signature-algorithm-unsafe",
+        "webhook-private-project-field-present",
+        "webhook-pii-field-present",
+        "webhook-pii-field-present"
+      ]
+    }
+  ],
+  "safety": [
+    "Synthetic webhook, project, dataset, review, and connector data only",
+    "No live webhook delivery, repository sync, LMS sync, identity, storage, or external provider calls",
+    "No private institutional payloads, credentials, secrets, real users, or live admin mutations"
+  ]
+}

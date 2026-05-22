@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Webhook payload redaction guard summary">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="48" y="66" font-family="Arial" font-size="34" font-weight="700" fill="#111827">Webhook Payload Redaction Guard</text>
+  <text x="48" y="104" font-family="Arial" font-size="18" fill="#475569">SCIBASE #19 enterprise outbound payload review</text>
+  <rect x="48" y="142" width="864" height="94" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="76" y="181" font-family="Arial" font-size="21" font-weight="700" fill="#b91c1c">block-unsafe-webhook-delivery</text>
+  <text x="76" y="213" font-family="Arial" font-size="17" fill="#334155">Critical 7 | High 5 | Findings 13</text>
+  <rect x="48" y="274" width="864" height="76" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="76" y="307" font-family="Arial" font-size="18" fill="#334155">Payload readiness score</text>
+  <rect x="76" y="324" width="760" height="14" rx="7" fill="#e5e7eb"/>
+  <rect x="76" y="324" width="44" height="14" rx="7" fill="#4f46e5"/>
+  <text x="852" y="339" font-family="Arial" font-size="16" text-anchor="end" fill="#111827">0/100</text>
+  <rect x="48" y="390" width="864" height="76" rx="8" fill="#eef2ff" stroke="#a5b4fc"/>
+  <text x="76" y="423" font-family="Arial" font-size="18" font-weight="700" fill="#3730a3">Block unsafe institutional delivery</text>
+  <text x="76" y="451" font-family="Arial" font-size="16" fill="#3730a3">Checks schema allowlists, PII, private fields, storage links, residency, signatures, and dataset access.</text>
+</svg>

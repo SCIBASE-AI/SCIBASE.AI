@@ -1,0 +1,14 @@
+{
+  "name": "webhook-payload-redaction-guard",
+  "version": "1.0.0",
+  "description": "Deterministic enterprise guard for webhook payload redaction and minimization.",
+  "main": "index.js",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check demo.js && node --check demo-video.js && node --check test.js",
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "node demo-video.js"
+  }
+}

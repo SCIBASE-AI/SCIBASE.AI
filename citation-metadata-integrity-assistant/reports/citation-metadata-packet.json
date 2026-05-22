@@ -1,0 +1,368 @@
+{
+  "batch": {
+    "id": "scibase-cmia-demo",
+    "manuscriptTitle": "AI-assisted perturbation mapping for neuroinflammation studies",
+    "toolMode": "citation_insert",
+    "citationStyle": "Nature"
+  },
+  "checkedAt": "2026-05-22T00:00:00.000Z",
+  "decision": {
+    "status": "hold",
+    "reason": "One or more citation candidates have malformed or conflicting metadata.",
+    "nextAction": "Defer citation insertion until metadata is corrected: Malformed DOI: 10.5555 scibase benchmark 2026 014 No synthetic canonical record matched this candidate reference."
+  },
+  "summary": {
+    "score": 12,
+    "referencesChecked": 6,
+    "duplicateGroups": 1,
+    "deferredReferences": 2,
+    "revisionReferences": 4,
+    "blockers": 1,
+    "high": 1,
+    "medium": 3
+  },
+  "referenceFindings": [
+    {
+      "referenceId": "REF-001",
+      "normalizedDoi": "10.5555/scibase.perturbation.2025.001",
+      "normalizedPmcid": "PMC5555001",
+      "normalizedArxiv": null,
+      "canonicalId": "CAN-001",
+      "severity": "medium",
+      "status": "revise",
+      "findings": [
+        {
+          "type": "identifier_valid",
+          "severity": "info",
+          "message": "Identifier formats are valid."
+        },
+        {
+          "type": "year_mismatch",
+          "severity": "medium",
+          "message": "Candidate year 2024 differs from canonical year 2025."
+        },
+        {
+          "type": "author_normalization",
+          "severity": "low",
+          "message": "Candidate author initials should be expanded or normalized."
+        }
+      ],
+      "correctedMetadata": {
+        "title": "Deep perturbation atlas for microglia response screens",
+        "year": 2025,
+        "authors": [
+          "Minh Nguyen",
+          "Anika Patel",
+          "Ravi Singh"
+        ],
+        "doi": "10.5555/scibase.perturbation.2025.001",
+        "pmcid": "PMC5555001",
+        "arxiv": null,
+        "url": "https://doi.org/10.5555/scibase.perturbation.2025.001"
+      }
+    },
+    {
+      "referenceId": "REF-002",
+      "normalizedDoi": "10.5555/scibase.perturbation.2025.001",
+      "normalizedPmcid": "PMC5555001",
+      "normalizedArxiv": null,
+      "canonicalId": "CAN-001",
+      "severity": "medium",
+      "status": "revise",
+      "findings": [
+        {
+          "type": "insecure_url",
+          "severity": "low",
+          "message": "Prefer canonical HTTPS URL instead of http://doi.org/10.5555/scibase.perturbation.2025.001"
+        },
+        {
+          "type": "title_normalization",
+          "severity": "low",
+          "message": "Candidate title should be normalized to canonical capitalization/wording."
+        },
+        {
+          "type": "author_normalization",
+          "severity": "low",
+          "message": "Candidate author initials should be expanded or normalized."
+        },
+        {
+          "type": "canonical_url_update",
+          "severity": "medium",
+          "message": "Use canonical URL https://doi.org/10.5555/scibase.perturbation.2025.001."
+        }
+      ],
+      "correctedMetadata": {
+        "title": "Deep perturbation atlas for microglia response screens",
+        "year": 2025,
+        "authors": [
+          "Minh Nguyen",
+          "Anika Patel",
+          "Ravi Singh"
+        ],
+        "doi": "10.5555/scibase.perturbation.2025.001",
+        "pmcid": "PMC5555001",
+        "arxiv": null,
+        "url": "https://doi.org/10.5555/scibase.perturbation.2025.001"
+      }
+    },
+    {
+      "referenceId": "REF-003",
+      "normalizedDoi": "10.5555 scibase benchmark 2026 014",
+      "normalizedPmcid": null,
+      "normalizedArxiv": "2601.1234",
+      "canonicalId": null,
+      "severity": "blocker",
+      "status": "defer",
+      "findings": [
+        {
+          "type": "malformed_doi",
+          "severity": "blocker",
+          "message": "Malformed DOI: 10.5555 scibase benchmark 2026 014"
+        },
+        {
+          "type": "missing_canonical_record",
+          "severity": "medium",
+          "message": "No synthetic canonical record matched this candidate reference."
+        }
+      ],
+      "correctedMetadata": null
+    },
+    {
+      "referenceId": "REF-004",
+      "normalizedDoi": "10.5555/scibase.batch.2025.044",
+      "normalizedPmcid": "5555044",
+      "normalizedArxiv": null,
+      "canonicalId": "CAN-003",
+      "severity": "high",
+      "status": "defer",
+      "findings": [
+        {
+          "type": "malformed_pmcid",
+          "severity": "high",
+          "message": "PMCID must include the PMC prefix: 5555044"
+        },
+        {
+          "type": "author_normalization",
+          "severity": "low",
+          "message": "Candidate author initials should be expanded or normalized."
+        }
+      ],
+      "correctedMetadata": {
+        "title": "Single-cell batch correction under cytokine challenge",
+        "year": 2025,
+        "authors": [
+          "Li Chen",
+          "Sofia Rivera"
+        ],
+        "doi": "10.5555/scibase.batch.2025.044",
+        "pmcid": "PMC5555044",
+        "arxiv": null,
+        "url": "https://doi.org/10.5555/scibase.batch.2025.044"
+      }
+    },
+    {
+      "referenceId": "REF-005",
+      "normalizedDoi": "10.5555/scibase.notebooks.2025.018",
+      "normalizedPmcid": null,
+      "normalizedArxiv": "2503.11880v2",
+      "canonicalId": "CAN-004",
+      "severity": "low",
+      "status": "revise",
+      "findings": [
+        {
+          "type": "identifier_valid",
+          "severity": "info",
+          "message": "Identifier formats are valid."
+        },
+        {
+          "type": "author_normalization",
+          "severity": "low",
+          "message": "Candidate author initials should be expanded or normalized."
+        }
+      ],
+      "correctedMetadata": {
+        "title": "Open notebooks for reproducible perturbation pipelines",
+        "year": 2025,
+        "authors": [
+          "Paula Gomez",
+          "Noah Hart"
+        ],
+        "doi": "10.5555/scibase.notebooks.2025.018",
+        "pmcid": null,
+        "arxiv": "2503.11880v2",
+        "url": "https://doi.org/10.5555/scibase.notebooks.2025.018"
+      }
+    },
+    {
+      "referenceId": "REF-006",
+      "normalizedDoi": "10.5555/scibase.cytokine.2023.071",
+      "normalizedPmcid": null,
+      "normalizedArxiv": null,
+      "canonicalId": "CAN-005",
+      "severity": "medium",
+      "status": "revise",
+      "findings": [
+        {
+          "type": "malformed_url",
+          "severity": "medium",
+          "message": "URL could not be parsed: notaurl"
+        },
+        {
+          "type": "year_mismatch",
+          "severity": "medium",
+          "message": "Candidate year 2023 differs from canonical year 2024."
+        },
+        {
+          "type": "author_normalization",
+          "severity": "low",
+          "message": "Candidate author initials should be expanded or normalized."
+        },
+        {
+          "type": "canonical_url_update",
+          "severity": "medium",
+          "message": "Use canonical URL https://doi.org/10.5555/scibase.cytokine.2023.071."
+        }
+      ],
+      "correctedMetadata": {
+        "title": "Human cytokine panel validation for microglia assays",
+        "year": 2024,
+        "authors": [
+          "Anika Patel",
+          "Minh Nguyen"
+        ],
+        "doi": "10.5555/scibase.cytokine.2023.071",
+        "pmcid": null,
+        "arxiv": null,
+        "url": "https://doi.org/10.5555/scibase.cytokine.2023.071"
+      }
+    }
+  ],
+  "duplicateGroups": [
+    {
+      "key": "doi:10.5555/scibase.perturbation.2025.001",
+      "referenceIds": [
+        "REF-001",
+        "REF-002"
+      ],
+      "severity": "medium",
+      "preferredReferenceId": "REF-002",
+      "action": "Merge REF-001, REF-002 into canonical bibliography entry REF-002."
+    }
+  ],
+  "actions": [
+    {
+      "priority": "blocker",
+      "referenceId": "REF-003",
+      "title": "DEFER REF-003",
+      "action": "Defer citation insertion until metadata is corrected: Malformed DOI: 10.5555 scibase benchmark 2026 014 No synthetic canonical record matched this candidate reference."
+    },
+    {
+      "priority": "high",
+      "referenceId": "REF-004",
+      "title": "DEFER REF-004",
+      "action": "Defer citation insertion until metadata is corrected: PMCID must include the PMC prefix: 5555044 Candidate author initials should be expanded or normalized."
+    },
+    {
+      "priority": "medium",
+      "referenceId": "REF-002",
+      "title": "MERGE duplicate references REF-001, REF-002",
+      "action": "Merge REF-001, REF-002 into canonical bibliography entry REF-002."
+    },
+    {
+      "priority": "medium",
+      "referenceId": "REF-001",
+      "title": "REVISE REF-001",
+      "action": "Revise citation metadata to canonical title \"Deep perturbation atlas for microglia response screens\" and canonical year 2025."
+    },
+    {
+      "priority": "medium",
+      "referenceId": "REF-002",
+      "title": "REVISE REF-002",
+      "action": "Revise citation metadata to canonical title \"Deep perturbation atlas for microglia response screens\" and canonical year 2025."
+    },
+    {
+      "priority": "medium",
+      "referenceId": "REF-006",
+      "title": "REVISE REF-006",
+      "action": "Revise citation metadata to canonical title \"Human cytokine panel validation for microglia assays\" and canonical year 2024."
+    },
+    {
+      "priority": "low",
+      "referenceId": "REF-005",
+      "title": "REVISE REF-005",
+      "action": "Revise citation metadata to canonical title \"Open notebooks for reproducible perturbation pipelines\" and canonical year 2025."
+    }
+  ],
+  "insertionPlan": [
+    {
+      "referenceId": "REF-001",
+      "action": "merge_duplicate",
+      "canonicalId": "CAN-001",
+      "citationText": "Nguyen, Patel, Singh. Deep perturbation atlas for microglia response screens. (2025). 10.5555/scibase.perturbation.2025.001",
+      "reason": [
+        "Candidate year 2024 differs from canonical year 2025.",
+        "Candidate author initials should be expanded or normalized."
+      ]
+    },
+    {
+      "referenceId": "REF-002",
+      "action": "revise",
+      "canonicalId": "CAN-001",
+      "citationText": "Nguyen, Patel, Singh. Deep perturbation atlas for microglia response screens. (2025). 10.5555/scibase.perturbation.2025.001",
+      "reason": [
+        "Prefer canonical HTTPS URL instead of http://doi.org/10.5555/scibase.perturbation.2025.001",
+        "Candidate title should be normalized to canonical capitalization/wording.",
+        "Candidate author initials should be expanded or normalized.",
+        "Use canonical URL https://doi.org/10.5555/scibase.perturbation.2025.001."
+      ]
+    },
+    {
+      "referenceId": "REF-003",
+      "action": "defer",
+      "canonicalId": null,
+      "citationText": null,
+      "reason": [
+        "Malformed DOI: 10.5555 scibase benchmark 2026 014",
+        "No synthetic canonical record matched this candidate reference."
+      ]
+    },
+    {
+      "referenceId": "REF-004",
+      "action": "defer",
+      "canonicalId": "CAN-003",
+      "citationText": "Chen, Rivera. Single-cell batch correction under cytokine challenge. (2025). 10.5555/scibase.batch.2025.044",
+      "reason": [
+        "PMCID must include the PMC prefix: 5555044",
+        "Candidate author initials should be expanded or normalized."
+      ]
+    },
+    {
+      "referenceId": "REF-005",
+      "action": "revise",
+      "canonicalId": "CAN-004",
+      "citationText": "Gomez, Hart. Open notebooks for reproducible perturbation pipelines. (2025). 10.5555/scibase.notebooks.2025.018",
+      "reason": [
+        "Candidate author initials should be expanded or normalized."
+      ]
+    },
+    {
+      "referenceId": "REF-006",
+      "action": "revise",
+      "canonicalId": "CAN-005",
+      "citationText": "Patel, Nguyen. Human cytokine panel validation for microglia assays. (2024). 10.5555/scibase.cytokine.2023.071",
+      "reason": [
+        "URL could not be parsed: notaurl",
+        "Candidate year 2023 differs from canonical year 2024.",
+        "Candidate author initials should be expanded or normalized.",
+        "Use canonical URL https://doi.org/10.5555/scibase.cytokine.2023.071."
+      ]
+    }
+  ],
+  "reproducibilityContext": {
+    "dataPolicy": "synthetic fixture only",
+    "canonicalFingerprint": "ddcf6288b553bd26bcf1fff00d7e9fc05ca87c0e973d7c3b921f587a2195dd9d",
+    "deterministic": true,
+    "externalNetworkCalls": 0
+  },
+  "auditDigest": "42452f993e187d8f6e3149d400b4a87bcb8c858604088bbf3be635afefbea13f"
+}

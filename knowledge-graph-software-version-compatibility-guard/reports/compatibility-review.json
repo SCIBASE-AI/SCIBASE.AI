@@ -1,0 +1,343 @@
+[
+  {
+    "scenario": "RNA velocity notebook has incompatible runtime stack",
+    "generatedAt": "2026-05-22T16:00:00Z",
+    "recommendationId": "rec-rna-velocity-notebook",
+    "decision": "suppress-recommendation",
+    "summary": {
+      "totalPathCount": 1,
+      "suppressedPathCount": 1,
+      "reviewPathCount": 0,
+      "visiblePathCount": 0,
+      "findingCount": 5,
+      "actionCount": 5
+    },
+    "findings": [
+      {
+        "type": "runtime-version-incompatible",
+        "severity": "block",
+        "pathId": "path-rna-velocity",
+        "subject": "python",
+        "message": "python 3.8.18 does not satisfy >=3.10 <3.12 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3."
+      },
+      {
+        "type": "package-version-incompatible",
+        "severity": "block",
+        "pathId": "path-rna-velocity",
+        "subject": "scanpy",
+        "message": "scanpy 1.8.2 does not satisfy >=1.10 <2.0 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3."
+      },
+      {
+        "type": "package-version-incompatible",
+        "severity": "block",
+        "pathId": "path-rna-velocity",
+        "subject": "anndata",
+        "message": "anndata 0.8.0 does not satisfy >=0.10 <0.11 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3."
+      },
+      {
+        "type": "container-digest-missing",
+        "severity": "block",
+        "pathId": "path-rna-velocity",
+        "subject": "ghcr.io/scibase/velocity",
+        "message": "Container ghcr.io/scibase/velocity:latest is not pinned by digest."
+      },
+      {
+        "type": "workflow-engine-incompatible",
+        "severity": "block",
+        "pathId": "path-rna-velocity",
+        "subject": "nextflow",
+        "message": "nextflow 22.10.6 does not satisfy >=23.10 <24.0."
+      }
+    ],
+    "curatorActions": [
+      {
+        "type": "pin-compatible-runtime",
+        "target": "python",
+        "reason": "Install python >=3.10 <3.12 before this graph path is recommended."
+      },
+      {
+        "type": "update-package-lock",
+        "target": "scanpy",
+        "reason": "Install scanpy >=1.10 <2.0 before this graph path is recommended."
+      },
+      {
+        "type": "update-package-lock",
+        "target": "anndata",
+        "reason": "Install anndata >=0.10 <0.11 before this graph path is recommended."
+      },
+      {
+        "type": "pin-container-digest",
+        "target": "ghcr.io/scibase/velocity",
+        "reason": "Record an immutable sha256 digest before exposing this path in discovery recommendations."
+      },
+      {
+        "type": "upgrade-workflow-engine",
+        "target": "nextflow",
+        "reason": "Pin nextflow >=23.10 <24.0 for rerunnable graph provenance."
+      }
+    ],
+    "suppressedPaths": [
+      {
+        "id": "path-rna-velocity",
+        "from": "concept-rna-velocity",
+        "to": "notebook-velocity-2024",
+        "reason": "python 3.8.18 does not satisfy >=3.10 <3.12 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3. scanpy 1.8.2 does not satisfy >=1.10 <2.0 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3. anndata 0.8.0 does not satisfy >=0.10 <0.11 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3. Container ghcr.io/scibase/velocity:latest is not pinned by digest. nextflow 22.10.6 does not satisfy >=23.10 <24.0.",
+        "findingTypes": [
+          "runtime-version-incompatible",
+          "package-version-incompatible",
+          "package-version-incompatible",
+          "container-digest-missing",
+          "workflow-engine-incompatible"
+        ]
+      }
+    ],
+    "visiblePaths": [],
+    "entityPagePacket": {
+      "recommendationId": "rec-rna-velocity-notebook",
+      "decision": "suppress-recommendation",
+      "generatedAt": "2026-05-22T16:00:00Z",
+      "visiblePaths": [],
+      "suppressedPaths": [
+        {
+          "id": "path-rna-velocity",
+          "from": "concept-rna-velocity",
+          "to": "notebook-velocity-2024",
+          "reason": "python 3.8.18 does not satisfy >=3.10 <3.12 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3. scanpy 1.8.2 does not satisfy >=1.10 <2.0 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3. anndata 0.8.0 does not satisfy >=0.10 <0.11 for RNA velocity -> Velocity rerun notebook -> Cell Atlas v3. Container ghcr.io/scibase/velocity:latest is not pinned by digest. nextflow 22.10.6 does not satisfy >=23.10 <24.0.",
+          "findingTypes": [
+            "runtime-version-incompatible",
+            "package-version-incompatible",
+            "package-version-incompatible",
+            "container-digest-missing",
+            "workflow-engine-incompatible"
+          ]
+        }
+      ],
+      "curatorActions": [
+        {
+          "type": "pin-compatible-runtime",
+          "target": "python",
+          "reason": "Install python >=3.10 <3.12 before this graph path is recommended."
+        },
+        {
+          "type": "update-package-lock",
+          "target": "scanpy",
+          "reason": "Install scanpy >=1.10 <2.0 before this graph path is recommended."
+        },
+        {
+          "type": "update-package-lock",
+          "target": "anndata",
+          "reason": "Install anndata >=0.10 <0.11 before this graph path is recommended."
+        },
+        {
+          "type": "pin-container-digest",
+          "target": "ghcr.io/scibase/velocity",
+          "reason": "Record an immutable sha256 digest before exposing this path in discovery recommendations."
+        },
+        {
+          "type": "upgrade-workflow-engine",
+          "target": "nextflow",
+          "reason": "Pin nextflow >=23.10 <24.0 for rerunnable graph provenance."
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "Spatial protocol is compatible but provenance needs curator review",
+    "generatedAt": "2026-05-22T16:10:00Z",
+    "recommendationId": "rec-spatial-transcriptomics-protocol",
+    "decision": "curator-review",
+    "summary": {
+      "totalPathCount": 1,
+      "suppressedPathCount": 0,
+      "reviewPathCount": 1,
+      "visiblePathCount": 1,
+      "findingCount": 2,
+      "actionCount": 2
+    },
+    "findings": [
+      {
+        "type": "missing-lockfile-provenance",
+        "severity": "review",
+        "pathId": "path-spatial-protocol",
+        "subject": "poetry.lock",
+        "message": "Software versions are compatible but no lockfile evidence is present for curator audit."
+      },
+      {
+        "type": "stale-runtime-capture",
+        "severity": "review",
+        "pathId": "path-spatial-protocol",
+        "subject": "runner-991",
+        "message": "Runtime capture is 294 days old and needs refresh before confidence can be upgraded."
+      }
+    ],
+    "curatorActions": [
+      {
+        "type": "attach-lockfile",
+        "target": "poetry.lock",
+        "reason": "Attach a package lockfile before this recommendation is treated as fully reproducible."
+      },
+      {
+        "type": "refresh-runtime-capture",
+        "target": "runner-991",
+        "reason": "Run a fresh environment capture so graph recommendations reflect current software compatibility."
+      }
+    ],
+    "suppressedPaths": [],
+    "visiblePaths": [
+      {
+        "id": "path-spatial-protocol",
+        "from": "protocol-spatial-v2",
+        "to": "dataset-spatial-lung",
+        "title": "Spatial transcriptomics v2 -> Lung atlas matrix",
+        "status": "needs-review",
+        "compatibilityScore": 80,
+        "findingTypes": [
+          "missing-lockfile-provenance",
+          "stale-runtime-capture"
+        ],
+        "nodes": [
+          {
+            "id": "protocol-spatial-v2",
+            "type": "protocol",
+            "title": "Spatial transcriptomics v2"
+          },
+          {
+            "id": "dataset-spatial-lung",
+            "type": "dataset",
+            "title": "Lung atlas matrix",
+            "format": {
+              "name": "loom",
+              "version": "3.0.0"
+            }
+          }
+        ]
+      }
+    ],
+    "entityPagePacket": {
+      "recommendationId": "rec-spatial-transcriptomics-protocol",
+      "decision": "curator-review",
+      "generatedAt": "2026-05-22T16:10:00Z",
+      "visiblePaths": [
+        {
+          "id": "path-spatial-protocol",
+          "from": "protocol-spatial-v2",
+          "to": "dataset-spatial-lung",
+          "title": "Spatial transcriptomics v2 -> Lung atlas matrix",
+          "status": "needs-review",
+          "compatibilityScore": 80,
+          "findingTypes": [
+            "missing-lockfile-provenance",
+            "stale-runtime-capture"
+          ],
+          "nodes": [
+            {
+              "id": "protocol-spatial-v2",
+              "type": "protocol",
+              "title": "Spatial transcriptomics v2"
+            },
+            {
+              "id": "dataset-spatial-lung",
+              "type": "dataset",
+              "title": "Lung atlas matrix",
+              "format": {
+                "name": "loom",
+                "version": "3.0.0"
+              }
+            }
+          ]
+        }
+      ],
+      "suppressedPaths": [],
+      "curatorActions": [
+        {
+          "type": "attach-lockfile",
+          "target": "poetry.lock",
+          "reason": "Attach a package lockfile before this recommendation is treated as fully reproducible."
+        },
+        {
+          "type": "refresh-runtime-capture",
+          "target": "runner-991",
+          "reason": "Run a fresh environment capture so graph recommendations reflect current software compatibility."
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "CRISPR screen graph path is ready for discovery",
+    "generatedAt": "2026-05-22T16:20:00Z",
+    "recommendationId": "rec-crispr-screen-dataset",
+    "decision": "show-recommendation",
+    "summary": {
+      "totalPathCount": 1,
+      "suppressedPathCount": 0,
+      "reviewPathCount": 0,
+      "visiblePathCount": 1,
+      "findingCount": 0,
+      "actionCount": 0
+    },
+    "findings": [],
+    "curatorActions": [],
+    "suppressedPaths": [],
+    "visiblePaths": [
+      {
+        "id": "path-crispr-screen",
+        "from": "concept-crispr-screen",
+        "to": "dataset-crispr-2026",
+        "title": "CRISPR pooled screen -> CRISPR screen 2026",
+        "status": "visible",
+        "compatibilityScore": 100,
+        "findingTypes": [],
+        "nodes": [
+          {
+            "id": "concept-crispr-screen",
+            "type": "concept",
+            "title": "CRISPR pooled screen"
+          },
+          {
+            "id": "dataset-crispr-2026",
+            "type": "dataset",
+            "title": "CRISPR screen 2026",
+            "format": {
+              "name": "zarr",
+              "version": "2.16.1"
+            }
+          }
+        ]
+      }
+    ],
+    "entityPagePacket": {
+      "recommendationId": "rec-crispr-screen-dataset",
+      "decision": "show-recommendation",
+      "generatedAt": "2026-05-22T16:20:00Z",
+      "visiblePaths": [
+        {
+          "id": "path-crispr-screen",
+          "from": "concept-crispr-screen",
+          "to": "dataset-crispr-2026",
+          "title": "CRISPR pooled screen -> CRISPR screen 2026",
+          "status": "visible",
+          "compatibilityScore": 100,
+          "findingTypes": [],
+          "nodes": [
+            {
+              "id": "concept-crispr-screen",
+              "type": "concept",
+              "title": "CRISPR pooled screen"
+            },
+            {
+              "id": "dataset-crispr-2026",
+              "type": "dataset",
+              "title": "CRISPR screen 2026",
+              "format": {
+                "name": "zarr",
+                "version": "2.16.1"
+              }
+            }
+          ]
+        }
+      ],
+      "suppressedPaths": [],
+      "curatorActions": []
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "service-token-governance-guard",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js",
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "clang -fobjc-arc -framework Foundation -framework AppKit -framework AVFoundation -framework CoreVideo -framework CoreMedia -o /tmp/service-token-governance-demo render-demo.m && /tmp/service-token-governance-demo"
+  }
+}

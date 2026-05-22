@@ -1,0 +1,207 @@
+{
+  "summary": {
+    "projectId": "proj-neuro-crispr-042",
+    "evaluatedAt": "2026-05-22T02:45:00.000Z",
+    "totalAccounts": 4,
+    "issueOrRetain": 1,
+    "holdForOwnerReview": 2,
+    "denyOrRevoke": 1,
+    "criticalFindings": 1,
+    "highFindings": 1,
+    "protectedScopesBlocked": 5,
+    "ownerActions": 3
+  },
+  "decisions": [
+    {
+      "accountId": "svc-notebook-rerun",
+      "displayName": "Notebook rerun worker",
+      "kind": "service_account",
+      "decision": "issue_or_retain",
+      "severity": "low",
+      "riskScore": 24,
+      "blockers": [],
+      "warnings": [],
+      "allowedScopes": [
+        "notebook:run",
+        "dataset:read",
+        "artifact:write",
+        "audit:append"
+      ],
+      "rejectedScopes": [],
+      "grantFindings": [
+        {
+          "artifactId": "notebook-qc-pipeline",
+          "permission": "execute",
+          "dataClass": "code",
+          "score": 0,
+          "reasons": []
+        },
+        {
+          "artifactId": "dataset-public-qc",
+          "permission": "read",
+          "dataClass": "public_dataset",
+          "score": 0,
+          "reasons": []
+        }
+      ],
+      "auditDigest": "e383d144e13c5780b64b47fdaa051267ce0ca7530d5b06db8b4fa1f7dfc61670"
+    },
+    {
+      "accountId": "tok-orcid-profile-sync",
+      "displayName": "ORCID profile sync token",
+      "kind": "api_token",
+      "decision": "hold_for_owner_review",
+      "severity": "low",
+      "riskScore": 27,
+      "blockers": [
+        "token_lifetime_too_long"
+      ],
+      "warnings": [],
+      "allowedScopes": [
+        "profile:read",
+        "profile:write",
+        "audit:append"
+      ],
+      "rejectedScopes": [],
+      "grantFindings": [
+        {
+          "artifactId": "profile-u-owner-alvarez",
+          "permission": "write",
+          "dataClass": "profile_metadata",
+          "score": 0,
+          "reasons": []
+        }
+      ],
+      "auditDigest": "9cf2e02e8bc5f7da82b43c0c5fe7e11d4a9ef280939e7cb7de099bd376807334"
+    },
+    {
+      "accountId": "tok-vendor-export",
+      "displayName": "External vendor export bridge",
+      "kind": "api_token",
+      "decision": "deny_or_revoke",
+      "severity": "critical",
+      "riskScore": 369,
+      "blockers": [
+        "owner_sponsor_missing",
+        "requester_mfa_missing",
+        "integration_unverified",
+        "token_expiry_missing",
+        "rotation_stale",
+        "wildcard_scope",
+        "missing_use_case:dataset-human-rnaseq",
+        "sensitive_protected_grant:dataset-human-rnaseq",
+        "approval_event_missing:owner_approved",
+        "approval_event_missing:issued"
+      ],
+      "warnings": [
+        "protected_scope:restricted-data:download",
+        "protected_scope:dataset:delete"
+      ],
+      "allowedScopes": [],
+      "rejectedScopes": [
+        "*",
+        "restricted-data:download",
+        "dataset:delete",
+        "project:admin"
+      ],
+      "grantFindings": [
+        {
+          "artifactId": "dataset-human-rnaseq",
+          "permission": "download",
+          "dataClass": "restricted_human_dataset",
+          "score": 72,
+          "reasons": [
+            "restricted_artifact",
+            "sensitive_data_class",
+            "protected_permission",
+            "missing_approved_use_case"
+          ]
+        },
+        {
+          "artifactId": "notebook-review-blinded",
+          "permission": "read",
+          "dataClass": "blind_review_material",
+          "score": 36,
+          "reasons": [
+            "restricted_artifact",
+            "sensitive_data_class"
+          ]
+        }
+      ],
+      "auditDigest": "f8cf021653f7d21a0fba185fffedb5e65b6912e46da1924ca08aaa342c6ec3e1"
+    },
+    {
+      "accountId": "svc-manuscript-release",
+      "displayName": "Manuscript release assistant",
+      "kind": "service_account",
+      "decision": "hold_for_owner_review",
+      "severity": "high",
+      "riskScore": 94,
+      "blockers": [
+        "approval_event_missing:issued"
+      ],
+      "warnings": [
+        "protected_scope:manuscript:publish"
+      ],
+      "allowedScopes": [
+        "dataset:read",
+        "audit:append"
+      ],
+      "rejectedScopes": [
+        "manuscript:publish"
+      ],
+      "grantFindings": [
+        {
+          "artifactId": "manuscript-v3",
+          "permission": "publish",
+          "dataClass": "manuscript",
+          "score": 20,
+          "reasons": [
+            "protected_permission"
+          ]
+        },
+        {
+          "artifactId": "dataset-human-rnaseq",
+          "permission": "read",
+          "dataClass": "restricted_human_dataset",
+          "score": 36,
+          "reasons": [
+            "restricted_artifact",
+            "sensitive_data_class"
+          ]
+        }
+      ],
+      "auditDigest": "8bb48aa2be8d66c0d1af19c293559f0c45bbd8a14ba13a007afd3ccc96725582"
+    }
+  ],
+  "ownerQueue": [
+    {
+      "accountId": "tok-orcid-profile-sync",
+      "severity": "low",
+      "code": "owner_review_required",
+      "message": "ORCID profile sync token needs owner review before issuance or retention."
+    },
+    {
+      "accountId": "tok-vendor-export",
+      "severity": "critical",
+      "code": "revoke_or_deny_token",
+      "message": "External vendor export bridge cannot be safely issued or retained until blockers are resolved."
+    },
+    {
+      "accountId": "svc-manuscript-release",
+      "severity": "high",
+      "code": "owner_review_required",
+      "message": "Manuscript release assistant needs owner review before issuance or retention."
+    }
+  ],
+  "controlCoverage": {
+    "identityAndMfa": true,
+    "serviceAccountSponsorship": true,
+    "projectWorkspaceScope": true,
+    "objectLevelAccess": true,
+    "externalCollaboratorRisk": true,
+    "auditLogEvidence": true,
+    "tokenExpiryAndRotation": true
+  },
+  "packetDigest": "666b87b6c50a31f45c48ef9e66f9ad3ba66f49d67f6bf5daf74a9bb0394d5d6f"
+}

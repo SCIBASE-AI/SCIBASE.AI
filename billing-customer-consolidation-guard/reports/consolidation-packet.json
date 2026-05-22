@@ -1,0 +1,216 @@
+[
+  {
+    "scenario": "legal-entity-conflict-with-open-ar",
+    "institutionId": "inst-northbridge",
+    "generatedAt": "2026-05-22T15:00:00Z",
+    "decision": "block-consolidation",
+    "summary": {
+      "profiles": 2,
+      "activeSubscriptions": 2,
+      "duplicateSubscriptionGroups": 0,
+      "openReceivableCents": 420000,
+      "creditBalanceCents": 0,
+      "requiredActions": 2,
+      "critical": 1,
+      "high": 1,
+      "medium": 0
+    },
+    "survivorDraft": {
+      "survivorProfileId": "bill-northbridge-primary",
+      "profileIds": [
+        "bill-northbridge-primary",
+        "bill-northbridge-lab"
+      ],
+      "subscriptionIds": [
+        "sub-pro-01",
+        "sub-lab-77"
+      ],
+      "invoiceIds": [
+        "inv-100",
+        "inv-101"
+      ],
+      "openReceivableCents": 420000,
+      "creditBalanceCents": 0,
+      "analyticsSeats": {
+        "dashboard": 0,
+        "api": 0
+      },
+      "holdReason": "Blocked until legal entity identity conflict is resolved."
+    },
+    "findings": [
+      {
+        "type": "legal-entity-conflict",
+        "severity": "critical",
+        "target": "bill-northbridge-primary, bill-northbridge-lab",
+        "legalNames": [
+          "northbridge research foundation",
+          "northbridge university"
+        ],
+        "taxIds": [
+          "us-12-3456789",
+          "us-98-7654321"
+        ],
+        "message": "Duplicate billing profiles resolve to conflicting legal names or tax identifiers."
+      },
+      {
+        "type": "open-receivable-preservation",
+        "severity": "high",
+        "target": "bill-northbridge-primary",
+        "openReceivableCents": 420000,
+        "message": "Open invoice balances must remain traceable after profile consolidation."
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "route_to_finance_legal_review",
+        "target": "inst-northbridge",
+        "reason": "legal entity identity must be resolved before invoices, credits, or entitlements merge"
+      },
+      {
+        "type": "preserve_open_receivables",
+        "target": "bill-northbridge-primary",
+        "reason": "AR balances, due dates, and invoice ownership must survive billing profile merge"
+      }
+    ]
+  },
+  {
+    "scenario": "duplicate-analytics-subscription-and-credit-transfer",
+    "institutionId": "inst-riverton",
+    "generatedAt": "2026-05-22T15:00:00Z",
+    "decision": "finance-review",
+    "summary": {
+      "profiles": 2,
+      "activeSubscriptions": 2,
+      "duplicateSubscriptionGroups": 1,
+      "openReceivableCents": 90000,
+      "creditBalanceCents": 200000,
+      "requiredActions": 4,
+      "critical": 0,
+      "high": 3,
+      "medium": 1
+    },
+    "survivorDraft": {
+      "survivorProfileId": "bill-riverton-main",
+      "profileIds": [
+        "bill-riverton-main",
+        "bill-riverton-shadow"
+      ],
+      "subscriptionIds": [
+        "sub-main",
+        "sub-shadow"
+      ],
+      "invoiceIds": [
+        "inv-shadow"
+      ],
+      "openReceivableCents": 90000,
+      "creditBalanceCents": 200000,
+      "analyticsSeats": {
+        "dashboard": 26,
+        "api": 7
+      },
+      "holdReason": ""
+    },
+    "findings": [
+      {
+        "type": "duplicate-active-subscription",
+        "severity": "high",
+        "target": "analytics-api",
+        "subscriptions": [
+          {
+            "profileId": "bill-riverton-main",
+            "subscriptionId": "sub-main",
+            "product": "analytics-api"
+          },
+          {
+            "profileId": "bill-riverton-shadow",
+            "subscriptionId": "sub-shadow",
+            "product": "analytics-api"
+          }
+        ],
+        "message": "More than one active subscription exists for the same revenue product."
+      },
+      {
+        "type": "credit-balance-transfer-required",
+        "severity": "high",
+        "target": "bill-riverton-main",
+        "creditBalanceCents": 200000,
+        "message": "Compute credit balances need explicit survivor-account transfer evidence."
+      },
+      {
+        "type": "unverified-payment-evidence",
+        "severity": "high",
+        "target": "bill-riverton-shadow",
+        "message": "One or more merged profiles has unverified payment evidence."
+      },
+      {
+        "type": "open-receivable-preservation",
+        "severity": "medium",
+        "target": "bill-riverton-shadow",
+        "openReceivableCents": 90000,
+        "message": "Open invoice balances must remain traceable after profile consolidation."
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "choose_surviving_subscription",
+        "target": "bill-riverton-main",
+        "reason": "finance must prevent double billing or accidental entitlement loss before merge"
+      },
+      {
+        "type": "preserve_credit_lots",
+        "target": "bill-riverton-main",
+        "reason": "prepaid or expiring compute credits must not disappear during customer consolidation"
+      },
+      {
+        "type": "verify_payment_evidence",
+        "target": "bill-riverton-shadow",
+        "reason": "survivor profile should not inherit paid features from unverified payment records"
+      },
+      {
+        "type": "preserve_open_receivables",
+        "target": "bill-riverton-shadow",
+        "reason": "AR balances, due dates, and invoice ownership must survive billing profile merge"
+      }
+    ]
+  },
+  {
+    "scenario": "clean-same-entity-merge",
+    "institutionId": "inst-eastlake",
+    "generatedAt": "2026-05-22T15:00:00Z",
+    "decision": "ready-to-consolidate",
+    "summary": {
+      "profiles": 2,
+      "activeSubscriptions": 2,
+      "duplicateSubscriptionGroups": 0,
+      "openReceivableCents": 0,
+      "creditBalanceCents": 50000,
+      "requiredActions": 0,
+      "critical": 0,
+      "high": 0,
+      "medium": 0
+    },
+    "survivorDraft": {
+      "survivorProfileId": "bill-eastlake-main",
+      "profileIds": [
+        "bill-eastlake-main",
+        "bill-eastlake-legacy"
+      ],
+      "subscriptionIds": [
+        "sub-eastlake-lab",
+        "sub-eastlake-compute"
+      ],
+      "invoiceIds": [
+        "inv-eastlake-paid"
+      ],
+      "openReceivableCents": 0,
+      "creditBalanceCents": 50000,
+      "analyticsSeats": {
+        "dashboard": 7,
+        "api": 1
+      },
+      "holdReason": ""
+    },
+    "findings": [],
+    "requiredActions": []
+  }
+]

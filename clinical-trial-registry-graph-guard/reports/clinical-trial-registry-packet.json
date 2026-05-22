@@ -1,0 +1,179 @@
+{
+  "asOfDate": "2026-05-22",
+  "trialCount": 4,
+  "heldTrialCount": 3,
+  "heldTrials": [
+    "NCT01234567",
+    "2023-001234-12",
+    "ISRCTN12345678"
+  ],
+  "curatorActionCount": 7,
+  "byAction": {
+    "suppress_clinical_recommendations": 2,
+    "hold_edges_for_curator_review": 1,
+    "allow_trial_graph_edges": 1
+  },
+  "bySeverity": {
+    "critical": 2,
+    "high": 1,
+    "low": 1
+  },
+  "packets": [
+    {
+      "trialId": "trial-alpha",
+      "registry": "clinicaltrials_gov",
+      "registryId": "NCT01234567",
+      "registryKey": "clinicaltrials_gov:NCT01234567",
+      "registryIdValid": true,
+      "status": "completed",
+      "phase": "phase_2",
+      "action": "suppress_clinical_recommendations",
+      "severity": "critical",
+      "reason": "critical trial registry integrity issue affects recommendation safety",
+      "recommendationEdgesPresent": true,
+      "linkedPublicationCount": 1,
+      "linkedDatasetCount": 1,
+      "linkedProtocolCount": 0,
+      "issueCount": 3,
+      "issues": [
+        {
+          "code": "results_posting_overdue",
+          "severity": "critical",
+          "message": "primary completion was 803 days ago and no results-posting date is attached",
+          "curatorAction": "hold outcome and recommendation edges until results-posting evidence or an exemption is attached"
+        },
+        {
+          "code": "missing_protocol_edge",
+          "severity": "high",
+          "message": "phase_2 trial has no linked protocol artifact",
+          "curatorAction": "link the registered protocol before allowing publication or dataset graph edges"
+        },
+        {
+          "code": "endpoint_mismatch",
+          "severity": "high",
+          "message": "publication pub-alpha reports undeclared endpoint overall_survival",
+          "curatorAction": "map the reported endpoint to a registered primary endpoint or mark the edge as exploratory"
+        }
+      ],
+      "curatorActions": [
+        "hold outcome and recommendation edges until results-posting evidence or an exemption is attached",
+        "link the registered protocol before allowing publication or dataset graph edges",
+        "map the reported endpoint to a registered primary endpoint or mark the edge as exploratory"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "registryFreshnessDays": 365,
+        "resultsDueDaysAfterPrimaryCompletion": 365
+      },
+      "auditDigest": "39fa043dfe4b944b53658acea850c2c828cd6906a9c61a2354d4a8e7563c7d20"
+    },
+    {
+      "trialId": "trial-beta",
+      "registry": "euctr",
+      "registryId": "2023-001234-12",
+      "registryKey": "euctr:2023-001234-12",
+      "registryIdValid": true,
+      "status": "active_not_recruiting",
+      "phase": "phase_3",
+      "action": "hold_edges_for_curator_review",
+      "severity": "high",
+      "reason": "trial graph edges need curator review before publication or discovery use",
+      "recommendationEdgesPresent": false,
+      "linkedPublicationCount": 1,
+      "linkedDatasetCount": 1,
+      "linkedProtocolCount": 0,
+      "issueCount": 3,
+      "issues": [
+        {
+          "code": "stale_registry_record",
+          "severity": "medium",
+          "message": "registry evidence is 871 days old",
+          "curatorAction": "refresh registry metadata snapshot and recompute trial graph edge safety"
+        },
+        {
+          "code": "missing_protocol_edge",
+          "severity": "high",
+          "message": "phase_3 trial has no linked protocol artifact",
+          "curatorAction": "link the registered protocol before allowing publication or dataset graph edges"
+        },
+        {
+          "code": "dataset_accession_missing",
+          "severity": "medium",
+          "message": "dataset data-beta is missing a stable accession or access status",
+          "curatorAction": "attach repository accession and access state before recommendation use"
+        }
+      ],
+      "curatorActions": [
+        "refresh registry metadata snapshot and recompute trial graph edge safety",
+        "link the registered protocol before allowing publication or dataset graph edges",
+        "attach repository accession and access state before recommendation use"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "registryFreshnessDays": 365,
+        "resultsDueDaysAfterPrimaryCompletion": 365
+      },
+      "auditDigest": "60eb179272565dec7dbff9d8be144ed1ec18b892c479b1a35a95c719cc5745af"
+    },
+    {
+      "trialId": "trial-gamma",
+      "registry": "isrctn",
+      "registryId": "ISRCTN12345678",
+      "registryKey": "isrctn:ISRCTN12345678",
+      "registryIdValid": true,
+      "status": "withdrawn",
+      "phase": "phase_1",
+      "action": "suppress_clinical_recommendations",
+      "severity": "critical",
+      "reason": "critical trial registry integrity issue affects recommendation safety",
+      "recommendationEdgesPresent": true,
+      "linkedPublicationCount": 0,
+      "linkedDatasetCount": 0,
+      "linkedProtocolCount": 0,
+      "issueCount": 1,
+      "issues": [
+        {
+          "code": "terminal_trial_recommended",
+          "severity": "critical",
+          "message": "trial status withdrawn must not drive active clinical recommendations",
+          "curatorAction": "suppress recommendation cards and route the trial edge to curator review"
+        }
+      ],
+      "curatorActions": [
+        "suppress recommendation cards and route the trial edge to curator review"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "registryFreshnessDays": 365,
+        "resultsDueDaysAfterPrimaryCompletion": 365
+      },
+      "auditDigest": "b0985c8cc1a0cdf80062cde0ed50487638033e01a8067f58ba67a0a1723bbc27"
+    },
+    {
+      "trialId": "trial-delta",
+      "registry": "clinicaltrials_gov",
+      "registryId": "NCT76543210",
+      "registryKey": "clinicaltrials_gov:NCT76543210",
+      "registryIdValid": true,
+      "status": "recruiting",
+      "phase": "phase_2",
+      "action": "allow_trial_graph_edges",
+      "severity": "low",
+      "reason": "registry identifiers, linked artifacts, and recommendation evidence satisfy policy",
+      "recommendationEdgesPresent": false,
+      "linkedPublicationCount": 0,
+      "linkedDatasetCount": 1,
+      "linkedProtocolCount": 1,
+      "issueCount": 0,
+      "issues": [],
+      "curatorActions": [],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "registryFreshnessDays": 365,
+        "resultsDueDaysAfterPrimaryCompletion": 365
+      },
+      "auditDigest": "71089f2df5774d00d65ce2eda994d11100d96ea82bfd6d919ac761fb7c4c6d13"
+    }
+  ],
+  "auditDigest": "94ed1d784ccc3fe141500e6be8f71ff5089e018a61d42737c55279c6c93540a1"
+}

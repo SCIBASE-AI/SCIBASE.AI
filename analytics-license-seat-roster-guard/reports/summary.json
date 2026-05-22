@@ -1,0 +1,153 @@
+{
+  "guard": "analytics-license-seat-roster-guard",
+  "issue": "SCIBASE-AI/SCIBASE.AI#20",
+  "customer": "Northbridge Research Consortium",
+  "asOfDate": "2026-05-22",
+  "renewalDate": "2026-06-01",
+  "decision": "block-renewal-until-seat-evidence-is-clean",
+  "score": 0,
+  "activeBySeatClass": {
+    "dashboard": 5,
+    "api": 2,
+    "viewer": 3
+  },
+  "contractedSeatEntitlements": {
+    "dashboard": 4,
+    "api": 2,
+    "viewer": 5
+  },
+  "estimatedRevenueExposure": 8750,
+  "findings": [
+    {
+      "severity": "high",
+      "rule": "unapproved-seat-overage",
+      "message": "5 active dashboard seats exceed the contracted 4 seat entitlement by 1.",
+      "action": "Hold renewal true-up until finance approves overage billing or seats are reclaimed.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-001",
+        "seat-002",
+        "seat-003",
+        "seat-004",
+        "seat-005"
+      ]
+    },
+    {
+      "severity": "low",
+      "rule": "inactive-paid-seat",
+      "message": "liam.gray@northbridge.edu has not used analytics access since 2025-12-18.",
+      "action": "Queue the seat for renewal roster confirmation or reclaim before the true-up invoice.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-003"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "unapproved-seat-domain",
+      "message": "visiting.pi@partner-lab.com uses domain partner-lab.com, which is outside the signed analytics license domains.",
+      "action": "Remove the seat or attach a signed domain addendum before renewal billing.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-005"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "expired-temporary-access",
+      "message": "visiting.pi@partner-lab.com still has active access after temporary access expired on 2026-04-30.",
+      "action": "Disable the temporary seat or convert it into a paid named seat before renewal.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-005"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "api-usage-without-api-seat",
+      "message": "policy-api@northbridge.edu generated 1300 analytics API queries while assigned to a viewer seat.",
+      "action": "Reclassify the user to an API seat or remove API keys before billing the renewal period.",
+      "estimatedExposure": 2750,
+      "userIds": [
+        "seat-007"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "duplicate-named-seat",
+      "message": "maya.chen@northbridge.edu appears as 2 active named seats.",
+      "action": "Collapse duplicate identity records before seat counts are sent to finance.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-001",
+        "seat-010"
+      ]
+    }
+  ],
+  "financeActions": [
+    {
+      "priority": "blocking",
+      "rule": "unapproved-seat-overage",
+      "action": "Hold renewal true-up until finance approves overage billing or seats are reclaimed.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-001",
+        "seat-002",
+        "seat-003",
+        "seat-004",
+        "seat-005"
+      ]
+    },
+    {
+      "priority": "review",
+      "rule": "inactive-paid-seat",
+      "action": "Queue the seat for renewal roster confirmation or reclaim before the true-up invoice.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-003"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "unapproved-seat-domain",
+      "action": "Remove the seat or attach a signed domain addendum before renewal billing.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-005"
+      ]
+    },
+    {
+      "priority": "review",
+      "rule": "expired-temporary-access",
+      "action": "Disable the temporary seat or convert it into a paid named seat before renewal.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-005"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "api-usage-without-api-seat",
+      "action": "Reclassify the user to an API seat or remove API keys before billing the renewal period.",
+      "estimatedExposure": 2750,
+      "userIds": [
+        "seat-007"
+      ]
+    },
+    {
+      "priority": "review",
+      "rule": "duplicate-named-seat",
+      "action": "Collapse duplicate identity records before seat counts are sent to finance.",
+      "estimatedExposure": 1200,
+      "userIds": [
+        "seat-001",
+        "seat-010"
+      ]
+    }
+  ],
+  "safety": [
+    "Synthetic roster and usage data only",
+    "No Stripe, PayPal, bank, ACH, ERP, SSO, SCIM, or analytics provider calls",
+    "No private customer data, payment credentials, tax IDs, or live invoice mutations"
+  ]
+}

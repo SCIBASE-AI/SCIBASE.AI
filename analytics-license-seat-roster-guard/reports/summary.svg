@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Analytics license seat roster guard summary">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="48" y="68" font-family="Arial" font-size="34" font-weight="700" fill="#0f172a">Analytics License Seat Roster Guard</text>
+  <text x="48" y="104" font-family="Arial" font-size="18" fill="#475569">Northbridge Research Consortium renewal evidence packet</text>
+  <rect x="48" y="142" width="864" height="92" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="76" y="180" font-family="Arial" font-size="22" font-weight="700" fill="#be123c">block-renewal-until-seat-evidence-is-clean</text>
+  <text x="76" y="212" font-family="Arial" font-size="18" fill="#334155">Score 0 | Critical 1 | High 2</text>
+  <rect x="48" y="274" width="864" height="74" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="76" y="306" font-family="Arial" font-size="18" fill="#334155">Estimated revenue exposure</text>
+  <rect x="76" y="322" width="760" height="14" rx="7" fill="#e2e8f0"/>
+  <rect x="76" y="322" width="729.1666666666666" height="14" rx="7" fill="#0f766e"/>
+  <text x="852" y="337" font-family="Arial" font-size="16" text-anchor="end" fill="#0f172a">$8750</text>
+  <rect x="48" y="388" width="864" height="76" rx="8" fill="#ecfeff" stroke="#67e8f9"/>
+  <text x="76" y="421" font-family="Arial" font-size="18" font-weight="700" fill="#155e75">Synthetic-only finance review</text>
+  <text x="76" y="449" font-family="Arial" font-size="16" fill="#155e75">No live billing, SSO, SCIM, payment processor, or private customer data.</text>
+</svg>

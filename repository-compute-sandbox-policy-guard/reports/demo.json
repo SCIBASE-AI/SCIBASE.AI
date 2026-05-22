@@ -1,0 +1,454 @@
+{
+  "generatedAt": "2026-05-22T00:00:00.000Z",
+  "guard": "repository-compute-sandbox-policy-guard",
+  "issue": "SCIBASE-AI/SCIBASE.AI#10",
+  "totals": {
+    "candidates": 3,
+    "ready": 1,
+    "needsReview": 1,
+    "blocked": 1,
+    "blockingIssues": 11,
+    "warnings": 1
+  },
+  "evaluations": [
+    {
+      "generatedAt": "2026-05-22T00:00:00.000Z",
+      "repositoryId": "climate-lab/regional-ensemble",
+      "tag": "preprint-v1.4",
+      "doiDraft": "10.5555/scibase.regional-ensemble.v1",
+      "status": "needs_review",
+      "summary": {
+        "pipelines": 1,
+        "checks": 10,
+        "passedChecks": 10,
+        "blockingIssues": 0,
+        "warnings": 1
+      },
+      "checks": [
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "PINNED_SANDBOX_IMAGE",
+          "passed": true,
+          "detail": "ghcr.io/scibase/repro-cuda@sha256:2222222222222222222222222222222222222222222222222222222222222222"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "NETWORK_EGRESS_POLICY",
+          "passed": true,
+          "detail": "doi-resolution-only"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "CPU_MEMORY_RUNTIME_BUDGET",
+          "passed": true,
+          "detail": "cpu=12; memoryGb=48; runtimeMinutes=210"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "DETERMINISTIC_SEED",
+          "passed": true,
+          "detail": "regional-ensemble-v1.4"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "GPU_REVIEW_PACKET",
+          "passed": true,
+          "detail": "Replay published CUDA ensemble with deterministic kernels and fixed seeds."
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "READ_ONLY_INPUTS",
+          "passed": true,
+          "detail": "inputs are read-only"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "WRITABLE_MOUNT_/tmp/scibase-run/gpu-ensemble-replay",
+          "passed": true,
+          "detail": "path=/tmp/scibase-run/gpu-ensemble-replay; maxGb=2"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "INPUT_MANIFEST_HASH",
+          "passed": true,
+          "detail": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "LOCKFILE_HASH",
+          "passed": true,
+          "detail": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        },
+        {
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "ARTIFACT_HASH_results/ensemble/replay-summary.json",
+          "passed": true,
+          "detail": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "pipelineId": "gpu-ensemble-replay",
+          "code": "GPU_REVIEW_REQUIRED",
+          "message": "GPU execution requires reviewer signoff because hardware kernels can affect determinism.",
+          "requirement": "Computation-aware reproducibility: controlled execution",
+          "remediation": "Attach deterministic kernel notes and reviewer signoff before final publication."
+        }
+      ],
+      "releaseActions": {
+        "allowProtectedMerge": true,
+        "allowExportBundle": true,
+        "allowDoiPublication": false,
+        "requiresReviewerSignoff": true,
+        "remediationChecklist": [
+          {
+            "code": "GPU_REVIEW_REQUIRED",
+            "pipelineId": "gpu-ensemble-replay",
+            "action": "Attach deterministic kernel notes and reviewer signoff before final publication."
+          }
+        ],
+        "status": "needs_review"
+      },
+      "requirementCoverage": {
+        "pinned_image": "Computation-aware reproducibility: container support",
+        "network_policy": "Execution sandboxes: secure runtime validation",
+        "compute_budget": "Computation-aware reproducibility: controlled execution",
+        "writable_mounts": "Execution sandboxes: limited mutable state",
+        "artifact_hashes": "File and metadata versioning: hash-based integrity",
+        "export_gate": "Programmatic access and export: release bundle guard"
+      }
+    },
+    {
+      "generatedAt": "2026-05-22T00:00:00.000Z",
+      "repositoryId": "neuro-lab/sleep-spindle-atlas",
+      "tag": "preprint-v2.1",
+      "doiDraft": "10.5555/scibase.sleep-spindle-atlas.v2",
+      "status": "ready",
+      "summary": {
+        "pipelines": 1,
+        "checks": 10,
+        "passedChecks": 10,
+        "blockingIssues": 0,
+        "warnings": 0
+      },
+      "checks": [
+        {
+          "pipelineId": "analysis-primary",
+          "code": "PINNED_SANDBOX_IMAGE",
+          "passed": true,
+          "detail": "ghcr.io/scibase/repro-python@sha256:1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "NETWORK_EGRESS_POLICY",
+          "passed": true,
+          "detail": "none"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "CPU_MEMORY_RUNTIME_BUDGET",
+          "passed": true,
+          "detail": "cpu=8; memoryGb=32; runtimeMinutes=115"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "DETERMINISTIC_SEED",
+          "passed": true,
+          "detail": "sleep-spindle-atlas-v2"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "READ_ONLY_INPUTS",
+          "passed": true,
+          "detail": "inputs are read-only"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "WRITABLE_MOUNT_/tmp/scibase-run/analysis-primary",
+          "passed": true,
+          "detail": "path=/tmp/scibase-run/analysis-primary; maxGb=1.5"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "INPUT_MANIFEST_HASH",
+          "passed": true,
+          "detail": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "LOCKFILE_HASH",
+          "passed": true,
+          "detail": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "ARTIFACT_HASH_results/tables/spindle-summary.csv",
+          "passed": true,
+          "detail": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        },
+        {
+          "pipelineId": "analysis-primary",
+          "code": "ARTIFACT_HASH_results/figures/cohort-comparison.svg",
+          "passed": true,
+          "detail": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        }
+      ],
+      "issues": [],
+      "releaseActions": {
+        "allowProtectedMerge": true,
+        "allowExportBundle": true,
+        "allowDoiPublication": true,
+        "requiresReviewerSignoff": false,
+        "remediationChecklist": [],
+        "status": "ready"
+      },
+      "requirementCoverage": {
+        "pinned_image": "Computation-aware reproducibility: container support",
+        "network_policy": "Execution sandboxes: secure runtime validation",
+        "compute_budget": "Computation-aware reproducibility: controlled execution",
+        "writable_mounts": "Execution sandboxes: limited mutable state",
+        "artifact_hashes": "File and metadata versioning: hash-based integrity",
+        "export_gate": "Programmatic access and export: release bundle guard"
+      }
+    },
+    {
+      "generatedAt": "2026-05-22T00:00:00.000Z",
+      "repositoryId": "oncology-lab/cell-response-map",
+      "tag": "release-unsafe-candidate",
+      "doiDraft": "10.5555/scibase.cell-response-map.unsafe",
+      "status": "blocked",
+      "summary": {
+        "pipelines": 1,
+        "checks": 10,
+        "passedChecks": 0,
+        "blockingIssues": 11,
+        "warnings": 0
+      },
+      "checks": [
+        {
+          "pipelineId": "training-open-network",
+          "code": "PINNED_SANDBOX_IMAGE",
+          "passed": false,
+          "detail": "python:latest"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "NETWORK_EGRESS_POLICY",
+          "passed": false,
+          "detail": "open-internet"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "CPU_MEMORY_RUNTIME_BUDGET",
+          "passed": false,
+          "detail": "cpu=24; memoryGb=96; runtimeMinutes=360"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "DETERMINISTIC_SEED",
+          "passed": false,
+          "detail": ""
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "GPU_REVIEW_PACKET",
+          "passed": false,
+          "detail": "missing GPU justification"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "READ_ONLY_INPUTS",
+          "passed": false,
+          "detail": "inputs may be mutable"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "WRITABLE_MOUNT_/workspace",
+          "passed": false,
+          "detail": "path=/workspace; maxGb=12"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "INPUT_MANIFEST_HASH",
+          "passed": false,
+          "detail": "missing"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "LOCKFILE_HASH",
+          "passed": false,
+          "detail": "missing"
+        },
+        {
+          "pipelineId": "training-open-network",
+          "code": "ARTIFACT_HASH_results/models/cell-response.pt",
+          "passed": false,
+          "detail": "pending"
+        }
+      ],
+      "issues": [
+        {
+          "severity": "error",
+          "pipelineId": "repository",
+          "code": "EXPORT_BUNDLE_HASH_MISSING",
+          "message": "The export bundle is missing a deterministic hash.",
+          "requirement": "Programmatic access and export: release bundle guard",
+          "remediation": "Build the release bundle and attach its sha256 hash before DOI publication."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "COMPUTE_BUDGET_EXCEEDED",
+          "message": "The pipeline exceeds the approved CPU, memory, or runtime budget.",
+          "requirement": "Computation-aware reproducibility: controlled execution",
+          "remediation": "Keep CPU <= 16, memory <= 64 GB, and runtime <= 240 minutes."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "DETERMINISTIC_SEED_MISSING",
+          "message": "The pipeline does not declare a deterministic seed.",
+          "requirement": "Computation-aware reproducibility: controlled execution",
+          "remediation": "Declare the seed used for replay so results can be regenerated byte-for-byte."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "EXPECTED_ARTIFACT_HASH_MISSING",
+          "message": "Expected artifact results/models/cell-response.pt is missing a sha256 checkpoint.",
+          "requirement": "File and metadata versioning: hash-based integrity",
+          "remediation": "Run the pipeline once in the sandbox and record the artifact hash before export."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "GPU_REVIEW_REQUIRED",
+          "message": "GPU execution requires reviewer signoff because hardware kernels can affect determinism.",
+          "requirement": "Computation-aware reproducibility: controlled execution",
+          "remediation": "Attach deterministic kernel notes and reviewer signoff before final publication."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "INPUT_MANIFEST_HASH_MISSING",
+          "message": "INPUT_MANIFEST_HASH is missing a sha256 checkpoint.",
+          "requirement": "File and metadata versioning: hash-based integrity",
+          "remediation": "Generate input_manifest_hash before accepting this release candidate."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "INPUTS_NOT_READ_ONLY",
+          "message": "Repository inputs must be mounted read-only during replay.",
+          "requirement": "Execution sandboxes: limited mutable state",
+          "remediation": "Mount repository inputs read-only and write outputs only to the controlled scratch path."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "LOCKFILE_HASH_MISSING",
+          "message": "LOCKFILE_HASH is missing a sha256 checkpoint.",
+          "requirement": "File and metadata versioning: hash-based integrity",
+          "remediation": "Generate lockfile_hash before accepting this release candidate."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "NETWORK_EGRESS_TOO_BROAD",
+          "message": "Reproducibility execution cannot use open or unreviewed network egress.",
+          "requirement": "Execution sandboxes: secure runtime validation",
+          "remediation": "Set egress to none, or restrict DOI lookup to the approved resolver allowlist."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "SANDBOX_IMAGE_NOT_PINNED",
+          "message": "Sandbox image must be digest-pinned and must not use latest tags.",
+          "requirement": "Computation-aware reproducibility: container support",
+          "remediation": "Pin the execution image with an immutable sha256 digest."
+        },
+        {
+          "severity": "error",
+          "pipelineId": "training-open-network",
+          "code": "WRITABLE_MOUNT_NOT_CONSTRAINED",
+          "message": "Writable mount is outside the approved scratch prefix or exceeds size limits.",
+          "requirement": "Execution sandboxes: limited mutable state",
+          "remediation": "Use /tmp/scibase-run/ with max 2 GB."
+        }
+      ],
+      "releaseActions": {
+        "allowProtectedMerge": false,
+        "allowExportBundle": false,
+        "allowDoiPublication": false,
+        "requiresReviewerSignoff": false,
+        "remediationChecklist": [
+          {
+            "code": "EXPORT_BUNDLE_HASH_MISSING",
+            "pipelineId": "repository",
+            "action": "Build the release bundle and attach its sha256 hash before DOI publication."
+          },
+          {
+            "code": "COMPUTE_BUDGET_EXCEEDED",
+            "pipelineId": "training-open-network",
+            "action": "Keep CPU <= 16, memory <= 64 GB, and runtime <= 240 minutes."
+          },
+          {
+            "code": "DETERMINISTIC_SEED_MISSING",
+            "pipelineId": "training-open-network",
+            "action": "Declare the seed used for replay so results can be regenerated byte-for-byte."
+          },
+          {
+            "code": "EXPECTED_ARTIFACT_HASH_MISSING",
+            "pipelineId": "training-open-network",
+            "action": "Run the pipeline once in the sandbox and record the artifact hash before export."
+          },
+          {
+            "code": "GPU_REVIEW_REQUIRED",
+            "pipelineId": "training-open-network",
+            "action": "Attach deterministic kernel notes and reviewer signoff before final publication."
+          },
+          {
+            "code": "INPUT_MANIFEST_HASH_MISSING",
+            "pipelineId": "training-open-network",
+            "action": "Generate input_manifest_hash before accepting this release candidate."
+          },
+          {
+            "code": "INPUTS_NOT_READ_ONLY",
+            "pipelineId": "training-open-network",
+            "action": "Mount repository inputs read-only and write outputs only to the controlled scratch path."
+          },
+          {
+            "code": "LOCKFILE_HASH_MISSING",
+            "pipelineId": "training-open-network",
+            "action": "Generate lockfile_hash before accepting this release candidate."
+          },
+          {
+            "code": "NETWORK_EGRESS_TOO_BROAD",
+            "pipelineId": "training-open-network",
+            "action": "Set egress to none, or restrict DOI lookup to the approved resolver allowlist."
+          },
+          {
+            "code": "SANDBOX_IMAGE_NOT_PINNED",
+            "pipelineId": "training-open-network",
+            "action": "Pin the execution image with an immutable sha256 digest."
+          },
+          {
+            "code": "WRITABLE_MOUNT_NOT_CONSTRAINED",
+            "pipelineId": "training-open-network",
+            "action": "Use /tmp/scibase-run/ with max 2 GB."
+          }
+        ],
+        "status": "blocked"
+      },
+      "requirementCoverage": {
+        "pinned_image": "Computation-aware reproducibility: container support",
+        "network_policy": "Execution sandboxes: secure runtime validation",
+        "compute_budget": "Computation-aware reproducibility: controlled execution",
+        "writable_mounts": "Execution sandboxes: limited mutable state",
+        "artifact_hashes": "File and metadata versioning: hash-based integrity",
+        "export_gate": "Programmatic access and export: release bundle guard"
+      }
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "generatedAt": "2026-05-22T00:00:00Z",
+  "issue": "SCIBASE.AI #14",
+  "results": [
+    {
+      "projectId": "SCI-PID-HOLD-09",
+      "projectTitle": "Microscopy Cell Morphology Bundle",
+      "status": "hold",
+      "blockers": [
+        {
+          "code": "PERSISTENT_IDENTIFIER_COLLISION",
+          "severity": "hold",
+          "identifier": "doi:10.5678/scibase.cell.bundle",
+          "message": "Persistent identifier doi:10.5678/scibase.cell.bundle is reused by 2 active artifacts."
+        },
+        {
+          "code": "LANDING_PAGE_NOT_ACCESSIBLE",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle landing page evidence reports HTTP 404."
+        },
+        {
+          "code": "RESOLVER_STATUS_NOT_RELEASE_READY",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle resolver evidence reports HTTP 500."
+        },
+        {
+          "code": "RESOLVER_TARGET_MISMATCH",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle resolver target does not match the declared landing page."
+        },
+        {
+          "code": "DATACITE_METADATA_INCOMPLETE",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle is missing DataCite fields: creators, publisher, types.resourceTypeGeneral."
+        },
+        {
+          "code": "DIRECT_DOWNLOAD_FOR_RESTRICTED_ARTIFACT",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle is restricted but exposes a direct download URL."
+        },
+        {
+          "code": "MISSING_REUSE_LICENSE",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle lacks a reuse license in artifact or schema metadata."
+        },
+        {
+          "code": "VERSION_CHAIN_TARGET_MISSING",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle references missing version-chain identifier 10.5678/scibase.cell.bundle.v1."
+        },
+        {
+          "code": "MISSING_LANDING_PAGE",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-2",
+          "message": "Duplicate active analysis scripts needs a stable landing page URL before public release."
+        },
+        {
+          "code": "MISSING_RESOLVER_EVIDENCE",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-2",
+          "message": "Duplicate active analysis scripts has no captured resolver check evidence."
+        },
+        {
+          "code": "DATACITE_METADATA_INCOMPLETE",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-2",
+          "message": "Duplicate active analysis scripts is missing DataCite fields: identifier, creators, titles, publisher, publicationYear, types.resourceTypeGeneral."
+        },
+        {
+          "code": "MISSING_REUSE_LICENSE",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-2",
+          "message": "Duplicate active analysis scripts lacks a reuse license in artifact or schema metadata."
+        },
+        {
+          "code": "TOMBSTONE_METADATA_MISSING",
+          "severity": "hold",
+          "artifactId": "DATA-HOLD-0",
+          "message": "Withdrawn raw upload is withdrawn but lacks tombstone URL or reason."
+        }
+      ],
+      "warnings": [
+        {
+          "code": "SCHEMA_ORG_METADATA_INCOMPLETE",
+          "severity": "review",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle is missing schema.org fields: url, license."
+        },
+        {
+          "code": "RESTRICTED_ACCESS_TERMS_INCOMPLETE",
+          "severity": "review",
+          "artifactId": "DATA-HOLD-1",
+          "message": "Cell morphology image bundle needs public access terms and a request contact."
+        },
+        {
+          "code": "SCHEMA_ORG_METADATA_INCOMPLETE",
+          "severity": "review",
+          "artifactId": "DATA-HOLD-2",
+          "message": "Duplicate active analysis scripts is missing schema.org fields: @type, identifier, name, url, license."
+        }
+      ],
+      "readySignals": [
+        "Cell morphology image bundle has identifier, landing page, and resolver evidence.",
+        "Withdrawn raw upload has identifier, landing page, and resolver evidence.",
+        "3 hosted artifact(s) were inspected for PID, resolver, metadata, access, and version readiness."
+      ],
+      "remediationActions": [
+        "Mint distinct identifiers or withdraw duplicates for doi:10.5678/scibase.cell.bundle.",
+        "Fix landing page availability for Cell morphology image bundle.",
+        "Fix resolver response for Cell morphology image bundle.",
+        "Point the PID resolver for Cell morphology image bundle at the declared landing page.",
+        "Complete DataCite metadata for Cell morphology image bundle.",
+        "Complete schema.org discovery metadata for Cell morphology image bundle.",
+        "Route restricted access for Cell morphology image bundle through the landing page and approval flow only.",
+        "Attach a reuse license for Cell morphology image bundle.",
+        "Add the referenced prior artifact or remove the broken version-chain link for Cell morphology image bundle.",
+        "Create a landing page for Duplicate active analysis scripts and map the PID resolver to it.",
+        "Capture resolver status, canonical target, and checked timestamp for Duplicate active analysis scripts.",
+        "Complete DataCite metadata for Duplicate active analysis scripts.",
+        "Complete schema.org discovery metadata for Duplicate active analysis scripts.",
+        "Attach a reuse license for Duplicate active analysis scripts.",
+        "Publish tombstone metadata for Withdrawn raw upload."
+      ],
+      "reviewerPacket": {
+        "projectTitle": "Microscopy Cell Morphology Bundle",
+        "status": "hold",
+        "requiredDecision": "hold_release",
+        "blockerCodes": [
+          "PERSISTENT_IDENTIFIER_COLLISION",
+          "LANDING_PAGE_NOT_ACCESSIBLE",
+          "RESOLVER_STATUS_NOT_RELEASE_READY",
+          "RESOLVER_TARGET_MISMATCH",
+          "DATACITE_METADATA_INCOMPLETE",
+          "DIRECT_DOWNLOAD_FOR_RESTRICTED_ARTIFACT",
+          "MISSING_REUSE_LICENSE",
+          "VERSION_CHAIN_TARGET_MISSING",
+          "MISSING_LANDING_PAGE",
+          "MISSING_RESOLVER_EVIDENCE",
+          "DATACITE_METADATA_INCOMPLETE",
+          "MISSING_REUSE_LICENSE",
+          "TOMBSTONE_METADATA_MISSING"
+        ],
+        "warningCodes": [
+          "SCHEMA_ORG_METADATA_INCOMPLETE",
+          "RESTRICTED_ACCESS_TERMS_INCOMPLETE",
+          "SCHEMA_ORG_METADATA_INCOMPLETE"
+        ],
+        "readySignals": [
+          "Cell morphology image bundle has identifier, landing page, and resolver evidence.",
+          "Withdrawn raw upload has identifier, landing page, and resolver evidence.",
+          "3 hosted artifact(s) were inspected for PID, resolver, metadata, access, and version readiness."
+        ]
+      },
+      "auditDigest": "SCI-PID-HOLD-09:hold:B=DATACITE_METADATA_INCOMPLETE|DATACITE_METADATA_INCOMPLETE|DIRECT_DOWNLOAD_FOR_RESTRICTED_ARTIFACT|LANDING_PAGE_NOT_ACCESSIBLE|MISSING_LANDING_PAGE|MISSING_RESOLVER_EVIDENCE|MISSING_REUSE_LICENSE|MISSING_REUSE_LICENSE|PERSISTENT_IDENTIFIER_COLLISION|RESOLVER_STATUS_NOT_RELEASE_READY|RESOLVER_TARGET_MISMATCH|TOMBSTONE_METADATA_MISSING|VERSION_CHAIN_TARGET_MISSING:W=RESTRICTED_ACCESS_TERMS_INCOMPLETE|SCHEMA_ORG_METADATA_INCOMPLETE|SCHEMA_ORG_METADATA_INCOMPLETE"
+    },
+    {
+      "projectId": "SCI-PID-REVIEW-22",
+      "projectTitle": "Restricted Neuroimaging Feature Extracts",
+      "status": "review",
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "LANDING_PAGE_NOT_INDEXABLE",
+          "severity": "review",
+          "artifactId": "DATA-REVIEW-1",
+          "message": "Controlled feature matrix landing page blocks indexing, reducing findability."
+        },
+        {
+          "code": "RESOLVER_EVIDENCE_STALE",
+          "severity": "review",
+          "artifactId": "DATA-REVIEW-1",
+          "message": "Controlled feature matrix resolver evidence is 51 days old."
+        }
+      ],
+      "readySignals": [
+        "Controlled feature matrix has identifier, landing page, and resolver evidence.",
+        "1 hosted artifact(s) were inspected for PID, resolver, metadata, access, and version readiness."
+      ],
+      "remediationActions": [
+        "Refresh resolver evidence for Controlled feature matrix."
+      ],
+      "reviewerPacket": {
+        "projectTitle": "Restricted Neuroimaging Feature Extracts",
+        "status": "review",
+        "requiredDecision": "pid_review",
+        "blockerCodes": [],
+        "warningCodes": [
+          "LANDING_PAGE_NOT_INDEXABLE",
+          "RESOLVER_EVIDENCE_STALE"
+        ],
+        "readySignals": [
+          "Controlled feature matrix has identifier, landing page, and resolver evidence.",
+          "1 hosted artifact(s) were inspected for PID, resolver, metadata, access, and version readiness."
+        ]
+      },
+      "auditDigest": "SCI-PID-REVIEW-22:review:B=none:W=LANDING_PAGE_NOT_INDEXABLE|RESOLVER_EVIDENCE_STALE"
+    },
+    {
+      "projectId": "SCI-PID-READY-17",
+      "projectTitle": "Open Catalyst Reaction Archive",
+      "status": "ready",
+      "blockers": [],
+      "warnings": [],
+      "readySignals": [
+        "Catalyst measurements v2 has identifier, landing page, and resolver evidence.",
+        "Catalyst measurements v1 has identifier, landing page, and resolver evidence.",
+        "2 hosted artifact(s) were inspected for PID, resolver, metadata, access, and version readiness."
+      ],
+      "remediationActions": [],
+      "reviewerPacket": {
+        "projectTitle": "Open Catalyst Reaction Archive",
+        "status": "ready",
+        "requiredDecision": "release_artifacts",
+        "blockerCodes": [],
+        "warningCodes": [],
+        "readySignals": [
+          "Catalyst measurements v2 has identifier, landing page, and resolver evidence.",
+          "Catalyst measurements v1 has identifier, landing page, and resolver evidence.",
+          "2 hosted artifact(s) were inspected for PID, resolver, metadata, access, and version readiness."
+        ]
+      },
+      "auditDigest": "SCI-PID-READY-17:ready:B=none:W=none"
+    }
+  ]
+}

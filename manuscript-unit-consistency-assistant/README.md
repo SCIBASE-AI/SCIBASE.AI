@@ -33,6 +33,7 @@ The demo writes:
 - `reports/unit-consistency-report.md`
 - `reports/unit-consistency-summary.svg`
 - `reports/demo-script.txt`
+- `reports/demo.mp4`
 
 ## API
 

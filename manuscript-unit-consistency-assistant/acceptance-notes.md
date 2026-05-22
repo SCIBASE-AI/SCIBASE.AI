@@ -12,6 +12,7 @@
 - Findings include stable IDs, evidence snippets, recommendations, and severity.
 - Reports are deterministic across repeated runs.
 - Clean sample manuscripts return a 100 readiness score with no findings.
+- The included demo video is H.264, 1280x720, and 4 seconds long.
 
 ## Local Validation
 
@@ -26,4 +27,5 @@ node --check manuscript-unit-consistency-assistant/sample-data.js
 node --check manuscript-unit-consistency-assistant/test.js
 node --check manuscript-unit-consistency-assistant/demo.js
 git diff --check
+mdls -name kMDItemDurationSeconds -name kMDItemCodecs -name kMDItemPixelHeight -name kMDItemPixelWidth manuscript-unit-consistency-assistant/reports/demo.mp4
 ```

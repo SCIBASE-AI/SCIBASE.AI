@@ -1,0 +1,178 @@
+[
+  {
+    "scenario": "missing-required-controls",
+    "manuscriptId": "ms-missing-controls",
+    "generatedAt": "2026-05-23T02:00:00Z",
+    "decision": "hold-for-review",
+    "readinessScore": 10,
+    "findings": [
+      {
+        "type": "missing-control",
+        "severity": "critical",
+        "assayId": "elisa-cytokine-panel",
+        "controlType": "positive",
+        "message": "elisa-cytokine-panel lacks required positive control evidence"
+      },
+      {
+        "type": "missing-control",
+        "severity": "critical",
+        "assayId": "elisa-cytokine-panel",
+        "controlType": "negative",
+        "message": "elisa-cytokine-panel lacks required negative control evidence"
+      },
+      {
+        "type": "missing-control",
+        "severity": "critical",
+        "assayId": "elisa-cytokine-panel",
+        "controlType": "blank",
+        "message": "elisa-cytokine-panel lacks required blank control evidence"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "attach_control_evidence",
+        "target": "elisa-cytokine-panel:positive",
+        "reason": "reviewers need explicit control evidence before assay results are released"
+      },
+      {
+        "type": "attach_control_evidence",
+        "target": "elisa-cytokine-panel:negative",
+        "reason": "reviewers need explicit control evidence before assay results are released"
+      },
+      {
+        "type": "attach_control_evidence",
+        "target": "elisa-cytokine-panel:blank",
+        "reason": "reviewers need explicit control evidence before assay results are released"
+      }
+    ],
+    "summary": {
+      "assayCount": 1,
+      "controlCount": 1,
+      "missingControls": 3,
+      "failedControls": 0,
+      "calibrationIssues": 0,
+      "qcIssues": 0,
+      "severityCounts": {
+        "critical": 3
+      }
+    }
+  },
+  {
+    "scenario": "calibration-drift-response",
+    "manuscriptId": "ms-calibration-drift",
+    "generatedAt": "2026-05-23T02:00:00Z",
+    "decision": "needs-author-response",
+    "readinessScore": 70,
+    "findings": [
+      {
+        "type": "weak-calibration-fit",
+        "severity": "major",
+        "assayId": "lcms-metabolomics",
+        "curveId": "std-curve-lcms-4",
+        "observedRSquared": 0.982,
+        "requiredMinimumRSquared": 0.995,
+        "message": "lcms-metabolomics calibration fit 0.982 is below 0.995"
+      },
+      {
+        "type": "calibration-drift",
+        "severity": "major",
+        "assayId": "lcms-metabolomics",
+        "curveId": "std-curve-lcms-4",
+        "driftPercent": 8.4,
+        "maxDriftPercent": 5,
+        "message": "lcms-metabolomics calibration drift 8.4% exceeds 5%"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "provide_standard_curve_evidence",
+        "target": "lcms-metabolomics:std-curve-lcms-4",
+        "reason": "weak standard curve fit needs source standards or recalibration evidence"
+      },
+      {
+        "type": "rerun_or_explain_calibration",
+        "target": "lcms-metabolomics:std-curve-lcms-4",
+        "reason": "calibration drift must be rerun or explained before release"
+      }
+    ],
+    "summary": {
+      "assayCount": 1,
+      "controlCount": 3,
+      "missingControls": 0,
+      "failedControls": 0,
+      "calibrationIssues": 2,
+      "qcIssues": 0,
+      "severityCounts": {
+        "major": 2
+      }
+    }
+  },
+  {
+    "scenario": "failed-control-and-qc-variation",
+    "manuscriptId": "ms-qc-variation",
+    "generatedAt": "2026-05-23T02:00:00Z",
+    "decision": "needs-author-response",
+    "readinessScore": 70,
+    "findings": [
+      {
+        "type": "failed-control",
+        "severity": "major",
+        "assayId": "cell-viability-assay",
+        "controlId": "staurosporine",
+        "controlType": "positive",
+        "status": "fail",
+        "message": "cell-viability-assay has failed positive control staurosporine"
+      },
+      {
+        "type": "high-qc-variation",
+        "severity": "major",
+        "assayId": "cell-viability-assay",
+        "replicateId": "qc-high",
+        "coefficientOfVariation": 0.22,
+        "maxCoefficientOfVariation": 0.15,
+        "message": "cell-viability-assay QC replicate qc-high CV 0.22 exceeds 0.15"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "repeat_or_explain_control",
+        "target": "cell-viability-assay:staurosporine",
+        "reason": "failed control must be repeated or justified before reviewer approval"
+      },
+      {
+        "type": "repeat_qc_or_explain_variation",
+        "target": "cell-viability-assay:qc-high",
+        "reason": "high replicate variation needs repeat evidence or reviewer-facing explanation"
+      }
+    ],
+    "summary": {
+      "assayCount": 1,
+      "controlCount": 3,
+      "missingControls": 0,
+      "failedControls": 1,
+      "calibrationIssues": 0,
+      "qcIssues": 1,
+      "severityCounts": {
+        "major": 2
+      }
+    }
+  },
+  {
+    "scenario": "ready-assay-packet",
+    "manuscriptId": "ms-ready-assay-packet",
+    "generatedAt": "2026-05-23T02:00:00Z",
+    "decision": "approved",
+    "readinessScore": 100,
+    "findings": [],
+    "requiredActions": [],
+    "summary": {
+      "assayCount": 1,
+      "controlCount": 3,
+      "missingControls": 0,
+      "failedControls": 0,
+      "calibrationIssues": 0,
+      "qcIssues": 0,
+      "severityCounts": {}
+    }
+  }
+]

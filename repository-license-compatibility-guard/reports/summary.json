@@ -1,0 +1,131 @@
+{
+  "asOf": "2026-05-22T12:00:00.000Z",
+  "repositoryId": "repo-neuro-open-atlas",
+  "versionTag": "v1.4.0",
+  "exportIntent": "public_doi_and_commercial_partner_export",
+  "totals": {
+    "totalAssets": 7,
+    "releaseBlockingAssets": 3,
+    "byStatus": {
+      "publishable": 2,
+      "notice_required": 2,
+      "conflict": 1,
+      "hold": 2
+    }
+  },
+  "decisions": [
+    {
+      "id": "asset-code-core",
+      "componentType": "code",
+      "path": "code/atlas_pipeline.py",
+      "license": "MIT",
+      "exportIncluded": true,
+      "status": "publishable",
+      "releaseBlocking": false,
+      "reasons": [
+        "license is compatible with the requested release/export intent"
+      ],
+      "actions": [
+        "Allow asset in DOI/export package",
+        "Preserve license metadata in manifest"
+      ]
+    },
+    {
+      "id": "asset-dataset-images",
+      "componentType": "dataset",
+      "path": "data/images-manifest.json",
+      "license": "CC-BY-4.0",
+      "exportIncluded": true,
+      "status": "notice_required",
+      "releaseBlocking": false,
+      "reasons": [
+        "license permits export but attribution or notice is incomplete"
+      ],
+      "actions": [
+        "Add license notice to export manifest",
+        "Include attribution in citation and repository notice files"
+      ]
+    },
+    {
+      "id": "asset-training-table",
+      "componentType": "dataset",
+      "path": "data/training-table.csv",
+      "license": "CC-BY-NC-4.0",
+      "exportIncluded": true,
+      "status": "conflict",
+      "releaseBlocking": true,
+      "reasons": [
+        "non-commercial license conflicts with commercial partner export intent"
+      ],
+      "actions": [
+        "Block commercial export until asset is relicensed or omitted",
+        "Generate public-only export variant if permitted"
+      ]
+    },
+    {
+      "id": "asset-model-weights",
+      "componentType": "model",
+      "path": "models/segmentation-weights.bin",
+      "license": "Proprietary",
+      "exportIncluded": true,
+      "status": "hold",
+      "releaseBlocking": true,
+      "reasons": [
+        "asset license is proprietary, restricted, or unknown"
+      ],
+      "actions": [
+        "Exclude from public DOI/export package",
+        "Request rights review and replacement artifact"
+      ]
+    },
+    {
+      "id": "asset-notebook",
+      "componentType": "notebook",
+      "path": "notebooks/analysis.ipynb",
+      "license": "GPL-3.0",
+      "exportIncluded": true,
+      "status": "notice_required",
+      "releaseBlocking": false,
+      "reasons": [
+        "license permits export but attribution or notice is incomplete"
+      ],
+      "actions": [
+        "Add license notice to export manifest",
+        "Include attribution in citation and repository notice files"
+      ]
+    },
+    {
+      "id": "asset-figure",
+      "componentType": "figure",
+      "path": "results/figure-3.svg",
+      "license": "CC0-1.0",
+      "exportIncluded": true,
+      "status": "publishable",
+      "releaseBlocking": false,
+      "reasons": [
+        "license is compatible with the requested release/export intent"
+      ],
+      "actions": [
+        "Allow asset in DOI/export package",
+        "Preserve license metadata in manifest"
+      ]
+    },
+    {
+      "id": "asset-raw-supplement",
+      "componentType": "dataset",
+      "path": "data/supplement-private.tsv",
+      "license": "",
+      "exportIncluded": true,
+      "status": "hold",
+      "releaseBlocking": true,
+      "reasons": [
+        "asset has no normalized SPDX or data license"
+      ],
+      "actions": [
+        "Hold tagged release and export bundle",
+        "Attach license metadata or remove asset from export"
+      ]
+    }
+  ],
+  "auditDigest": "734ff57751d2a28105e23bf2507f2da485edf49f470f9048cb1e19b332b9d71b"
+}

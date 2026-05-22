@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <style>
+    .bg{fill:#111827}
+    .panel{fill:#f8fafc}
+    .title{font:700 34px Arial,sans-serif;fill:#0f172a}
+    .meta{font:400 18px Arial,sans-serif;fill:#475569}
+    .label{font:600 20px Arial,sans-serif;fill:#1e293b}
+    .value{font:700 20px Arial,sans-serif;fill:#0f172a}
+    .bar{fill:#f59e0b}
+    .digest{font:400 15px monospace;fill:#334155}
+  </style>
+  <rect class="bg" width="960" height="540"/>
+  <rect class="panel" x="28" y="28" width="904" height="484" rx="16"/>
+  <text x="58" y="82" class="title">Repository License Compatibility Guard</text>
+  <text x="58" y="116" class="meta">Assets 7 | Blocking 3</text>
+  <text x="58" y="177" class="label">conflict</text>
+  <rect x="290" y="154" width="94" height="28" rx="5" class="bar"/>
+  <text x="396" y="176" class="value">1</text>
+  <text x="58" y="223" class="label">hold</text>
+  <rect x="290" y="200" width="188" height="28" rx="5" class="bar"/>
+  <text x="490" y="222" class="value">2</text>
+  <text x="58" y="269" class="label">notice_required</text>
+  <rect x="290" y="246" width="188" height="28" rx="5" class="bar"/>
+  <text x="490" y="268" class="value">2</text>
+  <text x="58" y="315" class="label">publishable</text>
+  <rect x="290" y="292" width="188" height="28" rx="5" class="bar"/>
+  <text x="490" y="314" class="value">2</text>
+  <text x="58" y="482" class="digest">audit 734ff57751d2a28105e23bf2507f2da485edf49f470f9048</text>
+</svg>

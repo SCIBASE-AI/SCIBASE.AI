@@ -1,0 +1,416 @@
+{
+  "summary": {
+    "status": "hold",
+    "manuscriptId": "ms-climate-pulse-2026",
+    "releaseId": "submission-freeze-2026-05-21",
+    "claimsReviewed": 3,
+    "claimsHeld": 2,
+    "assetsReviewed": 3,
+    "assetsHeld": 1,
+    "evidenceAnchorsReviewed": 5,
+    "currentEvidenceAnchors": 4,
+    "criticalFindings": 7,
+    "highFindings": 6,
+    "mediumFindings": 0,
+    "reviewerActions": 10
+  },
+  "claimResults": [
+    {
+      "id": "claim-heat-er",
+      "text": "A two-day heat pulse increased respiratory emergency visits by 18%.",
+      "sectionId": "sec-results",
+      "anchorIds": [
+        "ev-notebook-heat-er",
+        "ev-dataset-er-visits"
+      ],
+      "status": "clear",
+      "findings": []
+    },
+    {
+      "id": "claim-air-quality-control",
+      "text": "Air quality controls did not change the heat-pulse estimate.",
+      "sectionId": "sec-results",
+      "anchorIds": [
+        "ev-notebook-aq-control",
+        "ev-method-control-model"
+      ],
+      "status": "hold",
+      "findings": [
+        {
+          "targetType": "claim",
+          "targetId": "claim-air-quality-control",
+          "evidenceId": "ev-notebook-aq-control",
+          "code": "evidence_digest_drift",
+          "severity": "critical",
+          "message": "Evidence output changed after it was approved.",
+          "action": "Rerun review on the current output digest before submission export.",
+          "details": {
+            "approvedDigest": "sha256:aq_control_output_20260520",
+            "currentDigest": "sha256:aq_control_output_20260521_changed"
+          }
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-air-quality-control",
+          "evidenceId": "ev-notebook-aq-control",
+          "code": "upstream_source_digest_drift",
+          "severity": "critical",
+          "message": "A dataset, code, or notebook dependency changed after evidence approval.",
+          "action": "Refresh the bound notebook output and evidence approval packet.",
+          "details": {
+            "approvedUpstreamDigests": [
+              "sha256:er_visits_v5",
+              "sha256:aq_panel_v3"
+            ],
+            "currentUpstreamDigests": [
+              "sha256:er_visits_v5",
+              "sha256:aq_panel_v4"
+            ]
+          }
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-air-quality-control",
+          "evidenceId": "ev-notebook-aq-control",
+          "code": "evidence_marked_stale",
+          "severity": "critical",
+          "message": "Evidence anchor is explicitly stale relative to the release freeze.",
+          "action": "Regenerate the evidence and update the manuscript binding before export.",
+          "details": {
+            "staleAfter": "2026-05-21T12:15:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "claim-causal-language",
+      "text": "The intervention caused downstream clinic load to fall within one week.",
+      "sectionId": "sec-discussion",
+      "anchorIds": [
+        "ev-notebook-intervention"
+      ],
+      "status": "hold",
+      "findings": [
+        {
+          "targetType": "claim",
+          "targetId": "claim-causal-language",
+          "evidenceId": null,
+          "code": "section_not_locked",
+          "severity": "high",
+          "message": "Publication-ready claim lives in an unlocked section.",
+          "action": "Lock the section or remove the claim from the submission freeze.",
+          "details": {
+            "sectionId": "sec-discussion",
+            "sectionTitle": "Discussion"
+          }
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-causal-language",
+          "evidenceId": null,
+          "code": "required_evidence_type_missing",
+          "severity": "critical",
+          "message": "Claim is missing required dataset evidence.",
+          "action": "Bind the claim to the required evidence type before submission export.",
+          "details": {
+            "requiredType": "dataset"
+          }
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-causal-language",
+          "evidenceId": null,
+          "code": "citation_binding_missing",
+          "severity": "high",
+          "message": "Claim has no citation key bound to the supporting evidence.",
+          "action": "Bind a DOI or citation key to the evidence packet for reviewer traceability.",
+          "details": {}
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-causal-language",
+          "evidenceId": "ev-notebook-intervention",
+          "code": "evidence_not_locked",
+          "severity": "high",
+          "message": "Evidence anchor is not locked for submission release.",
+          "action": "Lock the evidence anchor or remove it from the publication-ready release.",
+          "details": {
+            "sourcePath": "analysis/intervention_subgroup.ipynb#cell-31"
+          }
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-causal-language",
+          "evidenceId": "ev-notebook-intervention",
+          "code": "evidence_not_approved",
+          "severity": "high",
+          "message": "Evidence anchor has not been approved for the current release.",
+          "action": "Approve the evidence packet after rerunning the linked analysis.",
+          "details": {}
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-causal-language",
+          "evidenceId": "ev-notebook-intervention",
+          "code": "section_version_mismatch",
+          "severity": "high",
+          "message": "Evidence is bound to a different section version than the release candidate.",
+          "action": "Rebind the evidence to the current section hash or restore the approved section.",
+          "details": {
+            "evidenceSectionVersionHash": "sec_discussion_v8_old",
+            "currentSectionVersionHash": "sec_discussion_v9_0b12"
+          }
+        },
+        {
+          "targetType": "claim",
+          "targetId": "claim-causal-language",
+          "evidenceId": "ev-notebook-intervention",
+          "code": "citation_metadata_missing",
+          "severity": "high",
+          "message": "Evidence anchor lacks DOI and citation metadata.",
+          "action": "Add a DOI or stable citation key before the claim is exportable.",
+          "details": {}
+        }
+      ]
+    }
+  ],
+  "assetResults": [
+    {
+      "id": "fig-heat-response",
+      "kind": "figure",
+      "label": "Figure 2",
+      "sectionId": "sec-results",
+      "sourceAnchorIds": [
+        "ev-notebook-heat-er"
+      ],
+      "status": "clear",
+      "findings": []
+    },
+    {
+      "id": "table-sensitivity",
+      "kind": "table",
+      "label": "Table 1",
+      "sectionId": "sec-results",
+      "sourceAnchorIds": [
+        "ev-notebook-aq-control",
+        "ev-dataset-er-visits"
+      ],
+      "status": "hold",
+      "findings": [
+        {
+          "targetType": "table",
+          "targetId": "table-sensitivity",
+          "evidenceId": "ev-notebook-aq-control",
+          "code": "evidence_digest_drift",
+          "severity": "critical",
+          "message": "Evidence output changed after it was approved.",
+          "action": "Rerun review on the current output digest before submission export.",
+          "details": {
+            "approvedDigest": "sha256:aq_control_output_20260520",
+            "currentDigest": "sha256:aq_control_output_20260521_changed"
+          }
+        },
+        {
+          "targetType": "table",
+          "targetId": "table-sensitivity",
+          "evidenceId": "ev-notebook-aq-control",
+          "code": "upstream_source_digest_drift",
+          "severity": "critical",
+          "message": "A dataset, code, or notebook dependency changed after evidence approval.",
+          "action": "Refresh the bound notebook output and evidence approval packet.",
+          "details": {
+            "approvedUpstreamDigests": [
+              "sha256:er_visits_v5",
+              "sha256:aq_panel_v3"
+            ],
+            "currentUpstreamDigests": [
+              "sha256:er_visits_v5",
+              "sha256:aq_panel_v4"
+            ]
+          }
+        },
+        {
+          "targetType": "table",
+          "targetId": "table-sensitivity",
+          "evidenceId": "ev-notebook-aq-control",
+          "code": "evidence_marked_stale",
+          "severity": "critical",
+          "message": "Evidence anchor is explicitly stale relative to the release freeze.",
+          "action": "Regenerate the evidence and update the manuscript binding before export.",
+          "details": {
+            "staleAfter": "2026-05-21T12:15:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "eq-risk-index",
+      "kind": "equation",
+      "label": "Equation 1",
+      "sectionId": "sec-methods",
+      "sourceAnchorIds": [
+        "ev-method-control-model"
+      ],
+      "status": "clear",
+      "findings": []
+    }
+  ],
+  "evidenceCoverage": [
+    {
+      "id": "ev-notebook-heat-er",
+      "type": "notebook_output",
+      "title": "Notebook output: heat pulse respiratory visits",
+      "sourcePath": "analysis/heat_response.ipynb#cell-14",
+      "locked": true,
+      "approved": true,
+      "digestCurrent": true,
+      "upstreamCurrent": true,
+      "doi": "10.5555/heat.2025.002",
+      "citationKey": "rossi2025heat"
+    },
+    {
+      "id": "ev-dataset-er-visits",
+      "type": "dataset",
+      "title": "Respiratory ER visit extract",
+      "sourcePath": "data/respiratory_er_visits.parquet",
+      "locked": true,
+      "approved": true,
+      "digestCurrent": true,
+      "upstreamCurrent": true,
+      "doi": "10.5555/heat-data.2025.004",
+      "citationKey": "rossi2025heat"
+    },
+    {
+      "id": "ev-notebook-aq-control",
+      "type": "notebook_output",
+      "title": "Notebook output: air quality controls",
+      "sourcePath": "analysis/air_quality_controls.ipynb#cell-22",
+      "locked": true,
+      "approved": true,
+      "digestCurrent": false,
+      "upstreamCurrent": false,
+      "doi": "10.5555/dlag.2024.019",
+      "citationKey": "chen2024distributedlag"
+    },
+    {
+      "id": "ev-method-control-model",
+      "type": "method_citation",
+      "title": "Distributed lag model reference",
+      "sourcePath": "references.bib#chen2024distributedlag",
+      "locked": true,
+      "approved": true,
+      "digestCurrent": true,
+      "upstreamCurrent": true,
+      "doi": "10.5555/dlag.2024.019",
+      "citationKey": "chen2024distributedlag"
+    },
+    {
+      "id": "ev-notebook-intervention",
+      "type": "notebook_output",
+      "title": "Notebook output: intervention subgroup",
+      "sourcePath": "analysis/intervention_subgroup.ipynb#cell-31",
+      "locked": false,
+      "approved": false,
+      "digestCurrent": true,
+      "upstreamCurrent": true,
+      "doi": null,
+      "citationKey": null
+    }
+  ],
+  "reviewerActions": [
+    {
+      "code": "evidence_digest_drift",
+      "targetIds": [
+        "claim-air-quality-control",
+        "table-sensitivity"
+      ],
+      "evidenceId": "ev-notebook-aq-control",
+      "severity": "critical",
+      "action": "Rerun review on the current output digest before submission export."
+    },
+    {
+      "code": "upstream_source_digest_drift",
+      "targetIds": [
+        "claim-air-quality-control",
+        "table-sensitivity"
+      ],
+      "evidenceId": "ev-notebook-aq-control",
+      "severity": "critical",
+      "action": "Refresh the bound notebook output and evidence approval packet."
+    },
+    {
+      "code": "evidence_marked_stale",
+      "targetIds": [
+        "claim-air-quality-control",
+        "table-sensitivity"
+      ],
+      "evidenceId": "ev-notebook-aq-control",
+      "severity": "critical",
+      "action": "Regenerate the evidence and update the manuscript binding before export."
+    },
+    {
+      "code": "section_not_locked",
+      "targetIds": [
+        "claim-causal-language"
+      ],
+      "evidenceId": null,
+      "severity": "high",
+      "action": "Lock the section or remove the claim from the submission freeze."
+    },
+    {
+      "code": "required_evidence_type_missing",
+      "targetIds": [
+        "claim-causal-language"
+      ],
+      "evidenceId": null,
+      "severity": "critical",
+      "action": "Bind the claim to the required evidence type before submission export."
+    },
+    {
+      "code": "citation_binding_missing",
+      "targetIds": [
+        "claim-causal-language"
+      ],
+      "evidenceId": null,
+      "severity": "high",
+      "action": "Bind a DOI or citation key to the evidence packet for reviewer traceability."
+    },
+    {
+      "code": "evidence_not_locked",
+      "targetIds": [
+        "claim-causal-language"
+      ],
+      "evidenceId": "ev-notebook-intervention",
+      "severity": "high",
+      "action": "Lock the evidence anchor or remove it from the publication-ready release."
+    },
+    {
+      "code": "evidence_not_approved",
+      "targetIds": [
+        "claim-causal-language"
+      ],
+      "evidenceId": "ev-notebook-intervention",
+      "severity": "high",
+      "action": "Approve the evidence packet after rerunning the linked analysis."
+    },
+    {
+      "code": "section_version_mismatch",
+      "targetIds": [
+        "claim-causal-language"
+      ],
+      "evidenceId": "ev-notebook-intervention",
+      "severity": "high",
+      "action": "Rebind the evidence to the current section hash or restore the approved section."
+    },
+    {
+      "code": "citation_metadata_missing",
+      "targetIds": [
+        "claim-causal-language"
+      ],
+      "evidenceId": "ev-notebook-intervention",
+      "severity": "high",
+      "action": "Add a DOI or stable citation key before the claim is exportable."
+    }
+  ],
+  "auditDigest": "8b6eee3d8d77afc6eaa27f3b"
+}

@@ -1,0 +1,148 @@
+[
+  {
+    "scenario": "author-response-needed",
+    "manuscriptId": "ms-organoid-drug-response",
+    "generatedAt": "2026-05-22T14:00:00Z",
+    "decision": "hold-for-author-response",
+    "summary": {
+      "critical": 2,
+      "major": 4,
+      "minor": 0,
+      "specimens": 1,
+      "cellLines": 1,
+      "reagents": 1,
+      "findings": 6
+    },
+    "findings": [
+      {
+        "type": "missing-specimen-source",
+        "severity": "critical",
+        "target": "spec-1",
+        "message": "spec-1 is missing source, accession, facility, or cohort provenance"
+      },
+      {
+        "type": "missing-specimen-context",
+        "severity": "major",
+        "target": "spec-1",
+        "missingContext": [
+          "strain",
+          "sex",
+          "age"
+        ],
+        "message": "spec-1 lacks biological context fields: strain, sex, age"
+      },
+      {
+        "type": "stale-cell-line-authentication",
+        "severity": "critical",
+        "target": "cl-hek293t",
+        "authenticatedAt": "2024-01-01T00:00:00Z",
+        "message": "cl-hek293t authentication evidence is older than 365 days"
+      },
+      {
+        "type": "missing-mycoplasma-evidence",
+        "severity": "major",
+        "target": "cl-hek293t",
+        "message": "cl-hek293t lacks mycoplasma test evidence"
+      },
+      {
+        "type": "missing-reagent-lot",
+        "severity": "major",
+        "target": "ab-gapdh",
+        "message": "ab-gapdh lacks batch or lot evidence"
+      },
+      {
+        "type": "missing-antibody-rrid",
+        "severity": "major",
+        "target": "ab-gapdh",
+        "message": "ab-gapdh is an antibody without RRID evidence"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "request_specimen_source",
+        "target": "spec-1",
+        "reason": "reviewers need specimen origin provenance before trusting biomethods claims"
+      },
+      {
+        "type": "request_specimen_context",
+        "target": "spec-1",
+        "reason": "organism, strain, sex, and age context are needed for biology peer-review templates"
+      },
+      {
+        "type": "refresh_cell_line_authentication",
+        "target": "cl-hek293t",
+        "reason": "stale identity evidence can invalidate downstream biological conclusions"
+      },
+      {
+        "type": "provide_mycoplasma_test",
+        "target": "cl-hek293t",
+        "reason": "cell-culture studies need contamination-screening evidence"
+      },
+      {
+        "type": "record_reagent_lot",
+        "target": "ab-gapdh",
+        "reason": "batch-sensitive assays need lot traceability before peer review"
+      },
+      {
+        "type": "record_antibody_rrid",
+        "target": "ab-gapdh",
+        "reason": "antibody-based claims need RRID evidence for reviewer verification"
+      }
+    ]
+  },
+  {
+    "scenario": "batch-review-needed",
+    "manuscriptId": "ms-batch-sensitive-assay",
+    "generatedAt": "2026-05-22T14:00:00Z",
+    "decision": "needs-provenance-review",
+    "summary": {
+      "critical": 0,
+      "major": 1,
+      "minor": 0,
+      "specimens": 0,
+      "cellLines": 0,
+      "reagents": 2,
+      "findings": 1
+    },
+    "findings": [
+      {
+        "type": "reagent-batch-conflict",
+        "severity": "major",
+        "target": "ELISA-IL6",
+        "lots": [
+          "lot-a",
+          "lot-b"
+        ],
+        "methodSections": [
+          "Figure 2",
+          "Figure 4"
+        ],
+        "message": "ELISA-IL6 appears with multiple lots without batch-effect notes"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "explain_reagent_batch_handling",
+        "target": "ELISA-IL6",
+        "reason": "multi-lot reagents need batch-effect handling before claims are compared"
+      }
+    ]
+  },
+  {
+    "scenario": "ready-for-review",
+    "manuscriptId": "ms-complete-biomethods",
+    "generatedAt": "2026-05-22T14:00:00Z",
+    "decision": "ready-for-review",
+    "summary": {
+      "critical": 0,
+      "major": 0,
+      "minor": 0,
+      "specimens": 1,
+      "cellLines": 1,
+      "reagents": 1,
+      "findings": 0
+    },
+    "findings": [],
+    "requiredActions": []
+  }
+]

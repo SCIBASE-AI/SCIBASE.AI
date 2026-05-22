@@ -1,0 +1,66 @@
+[
+  {
+    "scenario": "consent-block",
+    "projectId": "project-neuro-imaging",
+    "action": "publish-preprint",
+    "generatedAt": "2026-05-22T12:30:00Z",
+    "decision": "blocked",
+    "blockers": [
+      "Mika Rao is listed in the credit statement without consent"
+    ],
+    "requiredActions": [
+      {
+        "type": "collect_credit_consent",
+        "target": "u2",
+        "reason": "publication credit requires explicit contributor consent"
+      }
+    ],
+    "coverage": {
+      "artifactContributorCount": 2,
+      "creditedContributorCount": 2,
+      "consentCoverage": 0.5
+    }
+  },
+  {
+    "scenario": "omitted-contributor-remediation",
+    "projectId": "project-climate-model",
+    "action": "publish-preprint",
+    "generatedAt": "2026-05-22T12:30:00Z",
+    "decision": "needs-remediation",
+    "blockers": [
+      "Jon Bell has no CRediT roles assigned",
+      "Ren Ito contributed to project artifacts but is missing from credit statement"
+    ],
+    "requiredActions": [
+      {
+        "type": "assign_credit_roles",
+        "target": "u2",
+        "reason": "credited contributors need at least one CRediT taxonomy role"
+      },
+      {
+        "type": "review_omitted_artifact_contributor",
+        "target": "u3",
+        "reason": "artifact contributions must be credited or explicitly excluded with review evidence"
+      }
+    ],
+    "coverage": {
+      "artifactContributorCount": 2,
+      "creditedContributorCount": 2,
+      "consentCoverage": 1
+    }
+  },
+  {
+    "scenario": "approved-credit-packet",
+    "projectId": "project-approved-credit",
+    "action": "publish-preprint",
+    "generatedAt": "2026-05-22T12:30:00Z",
+    "decision": "approved",
+    "blockers": [],
+    "requiredActions": [],
+    "coverage": {
+      "artifactContributorCount": 2,
+      "creditedContributorCount": 2,
+      "consentCoverage": 1
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "manuscriptId": "MS-ETHICS-042",
+  "title": "Multisite sleep biomarker study",
+  "status": "revise",
+  "blockers": [
+    {
+      "code": "MISSING_CODE_EVIDENCE",
+      "severity": "revise",
+      "claimId": "C2",
+      "message": "Claim C2 requires analysis-code evidence."
+    },
+    {
+      "code": "PRIVATE_DATASET_WITHOUT_AVAILABILITY",
+      "severity": "revise",
+      "artifactId": "D2",
+      "message": "Sensor dropout review table is not public and lacks repository or controlled-access terms."
+    }
+  ],
+  "readySignals": [
+    "Ethics review and adult consent are present in the manuscript packet.",
+    "Data availability statement names a repository or recognized deposit path.",
+    "Code availability statement identifies a reviewable repository path."
+  ],
+  "reviewerTasks": [
+    "Attach analysis-code evidence for claim C2: A subgroup analysis was run after sensor dropout review.",
+    "Add a repository or controlled-access statement for Sensor dropout review table."
+  ],
+  "auditDigest": "MS-ETHICS-042:revise:03:MISSING_CODE_EVIDENCE|PRIVATE_DATASET_WITHOUT_AVAILABILITY"
+}

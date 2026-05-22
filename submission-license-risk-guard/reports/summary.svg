@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#101827"/>
+<rect x="72" y="68" width="1136" height="584" rx="24" fill="#f8fafc"/>
+<text x="120" y="140" font-family="Arial" font-size="42" font-weight="700" fill="#b91c1c">Submission License Risk Guard</text>
+<text x="120" y="202" font-family="Arial" font-size="27" fill="#111827">Status: BLOCK_SPONSOR_REVIEW</text>
+<text x="120" y="250" font-family="Arial" font-size="24" fill="#334155">Blockers: 11   Warnings: 7   Digest: 770cc68328cd9c</text>
+<line x1="120" y1="292" x2="1160" y2="292" stroke="#cbd5e1" stroke-width="3"/>
+<text x="120" y="352" font-family="Arial" font-size="23" fill="#1f2937">blocker - patient-feature-table - data-steward</text>
+<text x="120" y="400" font-family="Arial" font-size="23" fill="#1f2937">blocker - bio-csv-parser - security-reviewer</text>
+<text x="120" y="448" font-family="Arial" font-size="23" fill="#1f2937">blocker - plotlab - license-reviewer</text>
+<text x="120" y="496" font-family="Arial" font-size="23" fill="#1f2937">blocker - patient-feature-table - sponsor-admin</text>
+<text x="120" y="604" font-family="Arial" font-size="22" fill="#475569">Pre-review policy packet generated from synthetic solver deliverables.</text>
+</svg>

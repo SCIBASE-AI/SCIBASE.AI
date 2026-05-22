@@ -1,0 +1,63 @@
+{
+  "challengeId": "sbio-forecast-2026",
+  "submissionId": "submission-notice-followup",
+  "team": "Careful Methods Group",
+  "status": "conditional_review",
+  "summary": {
+    "blockers": 0,
+    "warnings": 3,
+    "artifactsReviewed": 2,
+    "dependenciesReviewed": 1
+  },
+  "blockers": [],
+  "warnings": [
+    {
+      "code": "notice_missing",
+      "subject": "solver-code",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for solver-code."
+    },
+    {
+      "code": "notice_missing",
+      "subject": "synthetic-table",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for synthetic-table."
+    },
+    {
+      "code": "dependency_advisory",
+      "subject": "ml-workbench",
+      "ownerRole": "security-reviewer",
+      "detail": "ml-workbench has low advisory GHSA-low-demo.",
+      "remediation": "Upgrade to 3.2.2 or provide a compensating-control note."
+    }
+  ],
+  "actions": [
+    {
+      "code": "dependency_advisory",
+      "subject": "ml-workbench",
+      "ownerRole": "security-reviewer",
+      "detail": "ml-workbench has low advisory GHSA-low-demo.",
+      "remediation": "Upgrade to 3.2.2 or provide a compensating-control note.",
+      "priority": "warning"
+    },
+    {
+      "code": "notice_missing",
+      "subject": "solver-code",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for solver-code.",
+      "priority": "warning"
+    },
+    {
+      "code": "notice_missing",
+      "subject": "synthetic-table",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for synthetic-table.",
+      "priority": "warning"
+    }
+  ],
+  "fingerprint": "3c8bc3d65e3b7648040c10385fd7438faa174d8de4740ae0a4bbef7ff23a8b58"
+}

@@ -1,0 +1,289 @@
+{
+  "challengeId": "sbio-forecast-2026",
+  "submissionId": "submission-risky-cell-model",
+  "team": "Open Biomarker Lab",
+  "status": "block_sponsor_review",
+  "summary": {
+    "blockers": 11,
+    "warnings": 7,
+    "artifactsReviewed": 3,
+    "dependenciesReviewed": 3
+  },
+  "blockers": [
+    {
+      "code": "license_incompatible",
+      "subject": "solver-code",
+      "ownerRole": "license-reviewer",
+      "detail": "code license AGPL-3.0 is outside the challenge allowlist.",
+      "remediation": "Replace solver-code, obtain sponsor exception approval, or remove it from the review package."
+    },
+    {
+      "code": "license_incompatible",
+      "subject": "patient-feature-table",
+      "ownerRole": "license-reviewer",
+      "detail": "dataset license DUA-Restricted is outside the challenge allowlist.",
+      "remediation": "Replace patient-feature-table, obtain sponsor exception approval, or remove it from the review package."
+    },
+    {
+      "code": "restricted_human_data",
+      "subject": "patient-feature-table",
+      "ownerRole": "data-steward",
+      "detail": "Human-derived data is included but the challenge does not allow restricted human data.",
+      "remediation": "Remove the raw dataset, replace it with a synthetic digest, or get sponsor and ethics approval."
+    },
+    {
+      "code": "missing_consent",
+      "subject": "patient-feature-table",
+      "ownerRole": "ethics-reviewer",
+      "detail": "Dataset does not show consent for this challenge use.",
+      "remediation": "Attach consent evidence or redact the dataset from the submission package."
+    },
+    {
+      "code": "data_redistribution_blocked",
+      "subject": "patient-feature-table",
+      "ownerRole": "data-steward",
+      "detail": "Dataset license DUA-Restricted does not permit raw redistribution.",
+      "remediation": "Convert to reviewer-safe derived features or keep raw data in a controlled data room."
+    },
+    {
+      "code": "raw_data_download_risk",
+      "subject": "patient-feature-table",
+      "ownerRole": "platform-operator",
+      "detail": "Sponsor download access is enabled for restricted raw data.",
+      "remediation": "Disable raw download and expose only approved aggregate reviewer packets."
+    },
+    {
+      "code": "license_incompatible",
+      "subject": "weights",
+      "ownerRole": "license-reviewer",
+      "detail": "model license Research-Only is outside the challenge allowlist.",
+      "remediation": "Replace weights, obtain sponsor exception approval, or remove it from the review package."
+    },
+    {
+      "code": "model_commercial_use_blocked",
+      "subject": "weights",
+      "ownerRole": "model-reviewer",
+      "detail": "Model weights are redistributed but do not allow sponsor commercial evaluation.",
+      "remediation": "Use an allowed model license or provide an inference-only review endpoint."
+    },
+    {
+      "code": "dependency_advisory",
+      "subject": "bio-csv-parser",
+      "ownerRole": "security-reviewer",
+      "detail": "bio-csv-parser has critical advisory CVE-2026-1020.",
+      "remediation": "Upgrade to 2.4.8 or provide a compensating-control note."
+    },
+    {
+      "code": "dependency_license_incompatible",
+      "subject": "plotlab",
+      "ownerRole": "license-reviewer",
+      "detail": "Dependency license GPL-3.0 is outside the challenge code allowlist.",
+      "remediation": "Replace plotlab or document a sponsor-approved exception."
+    },
+    {
+      "code": "export_disclosure_missing",
+      "subject": "patient-feature-table",
+      "ownerRole": "sponsor-admin",
+      "detail": "Artifact has export classification controlled-biomedical but no matching challenge disclosure.",
+      "remediation": "Add sponsor-visible export-control handling before reviewer access."
+    }
+  ],
+  "warnings": [
+    {
+      "code": "notice_missing",
+      "subject": "solver-code",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for solver-code."
+    },
+    {
+      "code": "notice_missing",
+      "subject": "patient-feature-table",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for patient-feature-table."
+    },
+    {
+      "code": "notice_missing",
+      "subject": "weights",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for weights."
+    },
+    {
+      "code": "model_provenance_unknown",
+      "subject": "weights",
+      "ownerRole": "model-reviewer",
+      "detail": "Model training-data provenance is not fully documented.",
+      "remediation": "Attach training-data provenance notes before final award review."
+    },
+    {
+      "code": "dependency_unpinned",
+      "subject": "bio-csv-parser",
+      "ownerRole": "solver-team",
+      "detail": "Direct dependency bio-csv-parser@^2.4.0 is not pinned.",
+      "remediation": "Pin the dependency version so the submission can be reproduced."
+    },
+    {
+      "code": "dependency_unpinned",
+      "subject": "plotlab",
+      "ownerRole": "solver-team",
+      "detail": "Direct dependency plotlab@latest is not pinned.",
+      "remediation": "Pin the dependency version so the submission can be reproduced."
+    },
+    {
+      "code": "dependency_advisory",
+      "subject": "stats-core",
+      "ownerRole": "security-reviewer",
+      "detail": "stats-core has low advisory GHSA-demo-2026.",
+      "remediation": "Upgrade to 1.8.4 or provide a compensating-control note."
+    }
+  ],
+  "actions": [
+    {
+      "code": "data_redistribution_blocked",
+      "subject": "patient-feature-table",
+      "ownerRole": "data-steward",
+      "detail": "Dataset license DUA-Restricted does not permit raw redistribution.",
+      "remediation": "Convert to reviewer-safe derived features or keep raw data in a controlled data room.",
+      "priority": "blocker"
+    },
+    {
+      "code": "dependency_advisory",
+      "subject": "bio-csv-parser",
+      "ownerRole": "security-reviewer",
+      "detail": "bio-csv-parser has critical advisory CVE-2026-1020.",
+      "remediation": "Upgrade to 2.4.8 or provide a compensating-control note.",
+      "priority": "blocker"
+    },
+    {
+      "code": "dependency_license_incompatible",
+      "subject": "plotlab",
+      "ownerRole": "license-reviewer",
+      "detail": "Dependency license GPL-3.0 is outside the challenge code allowlist.",
+      "remediation": "Replace plotlab or document a sponsor-approved exception.",
+      "priority": "blocker"
+    },
+    {
+      "code": "export_disclosure_missing",
+      "subject": "patient-feature-table",
+      "ownerRole": "sponsor-admin",
+      "detail": "Artifact has export classification controlled-biomedical but no matching challenge disclosure.",
+      "remediation": "Add sponsor-visible export-control handling before reviewer access.",
+      "priority": "blocker"
+    },
+    {
+      "code": "license_incompatible",
+      "subject": "solver-code",
+      "ownerRole": "license-reviewer",
+      "detail": "code license AGPL-3.0 is outside the challenge allowlist.",
+      "remediation": "Replace solver-code, obtain sponsor exception approval, or remove it from the review package.",
+      "priority": "blocker"
+    },
+    {
+      "code": "license_incompatible",
+      "subject": "patient-feature-table",
+      "ownerRole": "license-reviewer",
+      "detail": "dataset license DUA-Restricted is outside the challenge allowlist.",
+      "remediation": "Replace patient-feature-table, obtain sponsor exception approval, or remove it from the review package.",
+      "priority": "blocker"
+    },
+    {
+      "code": "license_incompatible",
+      "subject": "weights",
+      "ownerRole": "license-reviewer",
+      "detail": "model license Research-Only is outside the challenge allowlist.",
+      "remediation": "Replace weights, obtain sponsor exception approval, or remove it from the review package.",
+      "priority": "blocker"
+    },
+    {
+      "code": "missing_consent",
+      "subject": "patient-feature-table",
+      "ownerRole": "ethics-reviewer",
+      "detail": "Dataset does not show consent for this challenge use.",
+      "remediation": "Attach consent evidence or redact the dataset from the submission package.",
+      "priority": "blocker"
+    },
+    {
+      "code": "model_commercial_use_blocked",
+      "subject": "weights",
+      "ownerRole": "model-reviewer",
+      "detail": "Model weights are redistributed but do not allow sponsor commercial evaluation.",
+      "remediation": "Use an allowed model license or provide an inference-only review endpoint.",
+      "priority": "blocker"
+    },
+    {
+      "code": "raw_data_download_risk",
+      "subject": "patient-feature-table",
+      "ownerRole": "platform-operator",
+      "detail": "Sponsor download access is enabled for restricted raw data.",
+      "remediation": "Disable raw download and expose only approved aggregate reviewer packets.",
+      "priority": "blocker"
+    },
+    {
+      "code": "restricted_human_data",
+      "subject": "patient-feature-table",
+      "ownerRole": "data-steward",
+      "detail": "Human-derived data is included but the challenge does not allow restricted human data.",
+      "remediation": "Remove the raw dataset, replace it with a synthetic digest, or get sponsor and ethics approval.",
+      "priority": "blocker"
+    },
+    {
+      "code": "dependency_advisory",
+      "subject": "stats-core",
+      "ownerRole": "security-reviewer",
+      "detail": "stats-core has low advisory GHSA-demo-2026.",
+      "remediation": "Upgrade to 1.8.4 or provide a compensating-control note.",
+      "priority": "warning"
+    },
+    {
+      "code": "dependency_unpinned",
+      "subject": "bio-csv-parser",
+      "ownerRole": "solver-team",
+      "detail": "Direct dependency bio-csv-parser@^2.4.0 is not pinned.",
+      "remediation": "Pin the dependency version so the submission can be reproduced.",
+      "priority": "warning"
+    },
+    {
+      "code": "dependency_unpinned",
+      "subject": "plotlab",
+      "ownerRole": "solver-team",
+      "detail": "Direct dependency plotlab@latest is not pinned.",
+      "remediation": "Pin the dependency version so the submission can be reproduced.",
+      "priority": "warning"
+    },
+    {
+      "code": "model_provenance_unknown",
+      "subject": "weights",
+      "ownerRole": "model-reviewer",
+      "detail": "Model training-data provenance is not fully documented.",
+      "remediation": "Attach training-data provenance notes before final award review.",
+      "priority": "warning"
+    },
+    {
+      "code": "notice_missing",
+      "subject": "solver-code",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for solver-code.",
+      "priority": "warning"
+    },
+    {
+      "code": "notice_missing",
+      "subject": "patient-feature-table",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for patient-feature-table.",
+      "priority": "warning"
+    },
+    {
+      "code": "notice_missing",
+      "subject": "weights",
+      "ownerRole": "solver-team",
+      "detail": "Redistributed artifact is missing attribution or license notice evidence.",
+      "remediation": "Attach notice and attribution evidence for weights.",
+      "priority": "warning"
+    }
+  ],
+  "fingerprint": "770cc68328cd9c9d28f431c82f91b3022fc5433f4ee309085d59a695d9384d2d"
+}

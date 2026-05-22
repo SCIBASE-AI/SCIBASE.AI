@@ -1,0 +1,185 @@
+[
+  {
+    "scenario": "Controlled dataset has drifted archive and public landing-page policy",
+    "generatedAt": "2026-05-22T18:00:00Z",
+    "artifactId": "dataset-cellatlas-v4",
+    "artifactType": "dataset",
+    "decision": "hold-artifact",
+    "summary": {
+      "findingCount": 6,
+      "blockingFindingCount": 5,
+      "reviewFindingCount": 1
+    },
+    "findings": [
+      {
+        "type": "replica-checksum-mismatch",
+        "severity": "block",
+        "target": "cold-archive",
+        "message": "cold-archive checksum sha256:archive-222 does not match canonical sha256:canonical-111."
+      },
+      {
+        "type": "manifest-version-mismatch",
+        "severity": "block",
+        "target": "cold-archive",
+        "message": "cold-archive manifest version 4.1.0 does not match canonical 4.2.0."
+      },
+      {
+        "type": "access-policy-mismatch",
+        "severity": "block",
+        "target": "institutional-mirror",
+        "message": "institutional-mirror access policy public does not match canonical controlled."
+      },
+      {
+        "type": "replica-verification-stale",
+        "severity": "review",
+        "target": "institutional-mirror",
+        "message": "institutional-mirror was last verified 288 hours ago, above the 168-hour freshness threshold."
+      },
+      {
+        "type": "landing-page-datacite-mismatch",
+        "severity": "block",
+        "target": "landing-page",
+        "message": "Landing page DataCite DOI 10.1234/cellatlas.v3 does not match canonical DOI 10.1234/cellatlas.v4."
+      },
+      {
+        "type": "landing-page-access-policy-mismatch",
+        "severity": "block",
+        "target": "landing-page",
+        "message": "Landing page access policy public does not match canonical policy controlled."
+      }
+    ],
+    "repairPlan": [
+      {
+        "type": "repair-checksum",
+        "target": "cold-archive",
+        "reason": "Reconcile cold-archive checksum against canonical manifest before exposing durable artifact actions."
+      },
+      {
+        "type": "repair-manifestVersion",
+        "target": "cold-archive",
+        "reason": "Reconcile cold-archive manifest version against canonical manifest before exposing durable artifact actions."
+      },
+      {
+        "type": "repair-accessPolicy",
+        "target": "institutional-mirror",
+        "reason": "Reconcile institutional-mirror access policy against canonical manifest before exposing durable artifact actions."
+      },
+      {
+        "type": "refresh-replica-verification",
+        "target": "institutional-mirror",
+        "reason": "Refresh checksum and manifest verification for institutional-mirror before export or reproduce actions continue."
+      },
+      {
+        "type": "repair-landing-page-datacite",
+        "target": "landing-page",
+        "reason": "Update landing page DataCite metadata before persistent links or exports are enabled."
+      },
+      {
+        "type": "repair-landing-page-access-policy",
+        "target": "landing-page",
+        "reason": "Align landing page access policy with canonical storage policy before public previews are trusted."
+      }
+    ],
+    "visibleActions": [],
+    "gatedActions": [
+      "enable-preview",
+      "enable-export",
+      "enable-reproduce"
+    ],
+    "publicationPacket": {
+      "artifactId": "dataset-cellatlas-v4",
+      "artifactType": "dataset",
+      "decision": "hold-artifact",
+      "dataciteDoi": "10.1234/cellatlas.v4",
+      "schemaOrgUrl": "https://scibase.example/artifacts/dataset-cellatlas-v4",
+      "replicaCount": 3,
+      "gatedActions": [
+        "enable-preview",
+        "enable-export",
+        "enable-reproduce"
+      ],
+      "visibleActions": []
+    }
+  },
+  {
+    "scenario": "Notebook mirror lag needs repair review",
+    "generatedAt": "2026-05-22T18:10:00Z",
+    "artifactId": "notebook-rerun-pack",
+    "artifactType": "notebook",
+    "decision": "repair-review",
+    "summary": {
+      "findingCount": 1,
+      "blockingFindingCount": 0,
+      "reviewFindingCount": 1
+    },
+    "findings": [
+      {
+        "type": "replica-verification-stale",
+        "severity": "review",
+        "target": "public-mirror",
+        "message": "public-mirror was last verified 73 hours ago, above the 48-hour freshness threshold."
+      }
+    ],
+    "repairPlan": [
+      {
+        "type": "refresh-replica-verification",
+        "target": "public-mirror",
+        "reason": "Refresh checksum and manifest verification for public-mirror before export or reproduce actions continue."
+      }
+    ],
+    "visibleActions": [
+      "enable-preview"
+    ],
+    "gatedActions": [
+      "enable-export"
+    ],
+    "publicationPacket": {
+      "artifactId": "notebook-rerun-pack",
+      "artifactType": "notebook",
+      "decision": "repair-review",
+      "dataciteDoi": "10.1234/notebook.rerun",
+      "schemaOrgUrl": "https://scibase.example/artifacts/notebook-rerun-pack",
+      "replicaCount": 2,
+      "gatedActions": [
+        "enable-export"
+      ],
+      "visibleActions": [
+        "enable-preview"
+      ]
+    }
+  },
+  {
+    "scenario": "Model capsule replicas are ready for publication",
+    "generatedAt": "2026-05-22T18:20:00Z",
+    "artifactId": "model-weight-capsule",
+    "artifactType": "model",
+    "decision": "publish-artifact",
+    "summary": {
+      "findingCount": 0,
+      "blockingFindingCount": 0,
+      "reviewFindingCount": 0
+    },
+    "findings": [],
+    "repairPlan": [],
+    "visibleActions": [
+      "enable-preview",
+      "enable-export",
+      "enable-reproduce"
+    ],
+    "gatedActions": [],
+    "publicationPacket": {
+      "artifactId": "model-weight-capsule",
+      "artifactType": "model",
+      "decision": "publish-artifact",
+      "dataciteDoi": "10.1234/model.weight",
+      "schemaOrgUrl": "https://scibase.example/artifacts/model-weight-capsule",
+      "replicaCount": 3,
+      "gatedActions": [],
+      "visibleActions": [
+        "enable-preview",
+        "enable-export",
+        "enable-reproduce"
+      ]
+    }
+  }
+]

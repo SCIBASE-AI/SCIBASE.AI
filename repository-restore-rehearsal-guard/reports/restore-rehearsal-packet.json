@@ -1,0 +1,818 @@
+{
+  "asOf": "2026-05-23T02:00:00.000Z",
+  "policy": {
+    "maxSnapshotAgeDays": 30,
+    "maxRestoreDrillAgeDays": 21,
+    "maxNotebookReplayAgeDays": 14,
+    "requiredRefs": [
+      "refs/heads/main"
+    ],
+    "requiredComponents": [
+      "manuscript",
+      "data",
+      "code",
+      "metadata"
+    ],
+    "requiredEnvironmentLocks": [
+      "containerDigest",
+      "dependencyLock"
+    ],
+    "policyVersion": "repository-restore-rehearsal-v1"
+  },
+  "summary": {
+    "totalRepositories": 3,
+    "readyRepositories": 1,
+    "stewardReviewRepositories": 0,
+    "heldRepositories": 2,
+    "totalFindings": 10,
+    "criticalFindings": 6,
+    "warningFindings": 4
+  },
+  "repositories": [
+    {
+      "repositoryId": "neuro-reproducibility-atlas",
+      "title": "Neuro Reproducibility Atlas",
+      "status": "restore_ready",
+      "snapshotId": "snap-2026-05-21",
+      "releaseCandidate": {
+        "snapshotId": "snap-2026-05-21",
+        "tag": "v1.2.0",
+        "requiredRefs": [
+          "refs/heads/release/v1.2"
+        ]
+      },
+      "summary": {
+        "checks": 11,
+        "passedChecks": 11,
+        "criticalFindings": 0,
+        "warningFindings": 0
+      },
+      "checks": [
+        {
+          "code": "candidate_snapshot_declared",
+          "severity": "critical",
+          "pass": true,
+          "message": "Release candidate declares the snapshot that should be restored before export.",
+          "evidence": {}
+        },
+        {
+          "code": "snapshot_found",
+          "severity": "critical",
+          "pass": true,
+          "message": "Declared snapshot exists in the repository restore catalog.",
+          "evidence": {}
+        },
+        {
+          "code": "snapshot_recency",
+          "severity": "warning",
+          "pass": true,
+          "message": "Snapshot age is 1 days.",
+          "evidence": {
+            "snapshotAgeDays": 1,
+            "maxSnapshotAgeDays": 30
+          }
+        },
+        {
+          "code": "restore_drill_recent_passed",
+          "severity": "critical",
+          "pass": true,
+          "message": "Latest restore drill status is passed and age is 0 days.",
+          "evidence": {
+            "drillId": "drill-neuro-20260522",
+            "status": "passed",
+            "drillAgeDays": 0
+          }
+        },
+        {
+          "code": "ref_coverage",
+          "severity": "critical",
+          "pass": true,
+          "message": "Snapshot covers every required protected branch ref.",
+          "evidence": {
+            "requiredRefs": [
+              "refs/heads/main",
+              "refs/heads/release/v1.2"
+            ],
+            "missingRefs": []
+          }
+        },
+        {
+          "code": "tag_coverage",
+          "severity": "warning",
+          "pass": true,
+          "message": "Release tag v1.2.0 is present in the snapshot.",
+          "evidence": {
+            "tag": "v1.2.0"
+          }
+        },
+        {
+          "code": "component_manifest_integrity",
+          "severity": "critical",
+          "pass": true,
+          "message": "Required repository components match the snapshot manifest.",
+          "evidence": {
+            "covered": [
+              "manuscript",
+              "data",
+              "code",
+              "metadata"
+            ],
+            "failures": []
+          }
+        },
+        {
+          "code": "artifact_mirror_ready",
+          "severity": "critical",
+          "pass": true,
+          "message": "Large and restricted artifacts have matching restore mirrors.",
+          "evidence": {
+            "mirrored": [
+              {
+                "path": "data/participants.parquet",
+                "component": "data"
+              }
+            ],
+            "failures": []
+          }
+        },
+        {
+          "code": "environment_lock_coverage",
+          "severity": "warning",
+          "pass": true,
+          "message": "Environment locks are present for restore replay.",
+          "evidence": {
+            "present": [
+              "containerDigest",
+              "dependencyLock"
+            ],
+            "missing": []
+          }
+        },
+        {
+          "code": "notebook_replay_recent",
+          "severity": "warning",
+          "pass": true,
+          "message": "Notebook replay evidence reviewed for 1 notebook artifacts.",
+          "evidence": {
+            "total": 1,
+            "failed": [],
+            "stale": [],
+            "missing": []
+          }
+        },
+        {
+          "code": "export_manifest_linked",
+          "severity": "critical",
+          "pass": true,
+          "message": "Export manifest is linked to the restored snapshot.",
+          "evidence": {
+            "snapshotId": "snap-2026-05-21",
+            "exportSnapshotId": "snap-2026-05-21",
+            "doi": "10.5555/scibase.neuro-atlas.v1.2.0"
+          }
+        }
+      ],
+      "findings": [],
+      "remediationQueue": [],
+      "restorePacket": {
+        "policyVersion": "repository-restore-rehearsal-v1",
+        "candidateTag": "v1.2.0",
+        "restoredSnapshot": "snap-2026-05-21",
+        "decision": "restore_ready"
+      }
+    },
+    {
+      "repositoryId": "climate-table-fork",
+      "title": "Climate Table Fork",
+      "status": "hold_restore_rehearsal",
+      "snapshotId": "snap-2026-05-08",
+      "releaseCandidate": {
+        "snapshotId": "snap-2026-05-08",
+        "tag": "preprint-v0.9",
+        "requiredRefs": [
+          "refs/heads/release/preprint"
+        ]
+      },
+      "summary": {
+        "checks": 11,
+        "passedChecks": 5,
+        "criticalFindings": 4,
+        "warningFindings": 2
+      },
+      "checks": [
+        {
+          "code": "candidate_snapshot_declared",
+          "severity": "critical",
+          "pass": true,
+          "message": "Release candidate declares the snapshot that should be restored before export.",
+          "evidence": {}
+        },
+        {
+          "code": "snapshot_found",
+          "severity": "critical",
+          "pass": true,
+          "message": "Declared snapshot exists in the repository restore catalog.",
+          "evidence": {}
+        },
+        {
+          "code": "snapshot_recency",
+          "severity": "warning",
+          "pass": true,
+          "message": "Snapshot age is 14 days.",
+          "evidence": {
+            "snapshotAgeDays": 14,
+            "maxSnapshotAgeDays": 30
+          }
+        },
+        {
+          "code": "restore_drill_recent_passed",
+          "severity": "critical",
+          "pass": false,
+          "message": "Latest restore drill status is failed and age is 13 days.",
+          "evidence": {
+            "drillId": "drill-climate-20260509",
+            "status": "failed",
+            "drillAgeDays": 13
+          }
+        },
+        {
+          "code": "ref_coverage",
+          "severity": "critical",
+          "pass": false,
+          "message": "Snapshot is missing required refs: refs/heads/release/preprint.",
+          "evidence": {
+            "requiredRefs": [
+              "refs/heads/main",
+              "refs/heads/release/preprint"
+            ],
+            "missingRefs": [
+              "refs/heads/release/preprint"
+            ]
+          }
+        },
+        {
+          "code": "tag_coverage",
+          "severity": "warning",
+          "pass": false,
+          "message": "Release tag preprint-v0.9 is missing in the snapshot.",
+          "evidence": {
+            "tag": "preprint-v0.9"
+          }
+        },
+        {
+          "code": "component_manifest_integrity",
+          "severity": "critical",
+          "pass": false,
+          "message": "Component manifest has 1 restore blockers.",
+          "evidence": {
+            "covered": [
+              "manuscript",
+              "code",
+              "metadata"
+            ],
+            "failures": [
+              {
+                "component": "data",
+                "reason": "hash_mismatch",
+                "expectedHash": "sha256:expected-climate-data",
+                "snapshotHash": "sha256:actual-climate-data"
+              }
+            ]
+          }
+        },
+        {
+          "code": "artifact_mirror_ready",
+          "severity": "critical",
+          "pass": false,
+          "message": "Artifact mirror readiness has 1 blockers.",
+          "evidence": {
+            "mirrored": [],
+            "failures": [
+              {
+                "path": "data/raw-grid.parquet",
+                "component": "data",
+                "reason": "mirror_not_ready"
+              }
+            ]
+          }
+        },
+        {
+          "code": "environment_lock_coverage",
+          "severity": "warning",
+          "pass": false,
+          "message": "Missing environment locks: dependencyLock.",
+          "evidence": {
+            "present": [
+              "containerDigest"
+            ],
+            "missing": [
+              "dependencyLock"
+            ]
+          }
+        },
+        {
+          "code": "notebook_replay_recent",
+          "severity": "warning",
+          "pass": true,
+          "message": "Snapshot contains no notebooks requiring replay evidence.",
+          "evidence": {
+            "total": 0,
+            "failed": [],
+            "stale": [],
+            "missing": []
+          }
+        },
+        {
+          "code": "export_manifest_linked",
+          "severity": "critical",
+          "pass": true,
+          "message": "Export manifest is linked to the restored snapshot.",
+          "evidence": {
+            "snapshotId": "snap-2026-05-08",
+            "exportSnapshotId": "snap-2026-05-08",
+            "doi": "10.5555/scibase.climate.preprint"
+          }
+        }
+      ],
+      "findings": [
+        {
+          "code": "restore_drill_recent_passed",
+          "severity": "critical",
+          "message": "Latest restore drill status is failed and age is 13 days.",
+          "remediation": "Run a restore rehearsal from the immutable snapshot and attach the passed drill report.",
+          "evidence": {
+            "drillId": "drill-climate-20260509",
+            "status": "failed",
+            "drillAgeDays": 13
+          }
+        },
+        {
+          "code": "ref_coverage",
+          "severity": "critical",
+          "message": "Snapshot is missing required refs: refs/heads/release/preprint.",
+          "remediation": "Rebuild the snapshot with all protected branch refs required for release reconstruction.",
+          "evidence": {
+            "requiredRefs": [
+              "refs/heads/main",
+              "refs/heads/release/preprint"
+            ],
+            "missingRefs": [
+              "refs/heads/release/preprint"
+            ]
+          }
+        },
+        {
+          "code": "tag_coverage",
+          "severity": "warning",
+          "message": "Release tag preprint-v0.9 is missing in the snapshot.",
+          "remediation": "Attach the release tag to the immutable snapshot before DOI or export publication.",
+          "evidence": {
+            "tag": "preprint-v0.9"
+          }
+        },
+        {
+          "code": "component_manifest_integrity",
+          "severity": "critical",
+          "message": "Component manifest has 1 restore blockers.",
+          "remediation": "Regenerate the manifest from restored files and reconcile missing or mismatched component hashes.",
+          "evidence": {
+            "covered": [
+              "manuscript",
+              "code",
+              "metadata"
+            ],
+            "failures": [
+              {
+                "component": "data",
+                "reason": "hash_mismatch",
+                "expectedHash": "sha256:expected-climate-data",
+                "snapshotHash": "sha256:actual-climate-data"
+              }
+            ]
+          }
+        },
+        {
+          "code": "artifact_mirror_ready",
+          "severity": "critical",
+          "message": "Artifact mirror readiness has 1 blockers.",
+          "remediation": "Mirror required LFS or restricted artifacts and verify mirror digests before export.",
+          "evidence": {
+            "mirrored": [],
+            "failures": [
+              {
+                "path": "data/raw-grid.parquet",
+                "component": "data",
+                "reason": "mirror_not_ready"
+              }
+            ]
+          }
+        },
+        {
+          "code": "environment_lock_coverage",
+          "severity": "warning",
+          "message": "Missing environment locks: dependencyLock.",
+          "remediation": "Attach container image digests and dependency lockfiles used by the restore drill.",
+          "evidence": {
+            "present": [
+              "containerDigest"
+            ],
+            "missing": [
+              "dependencyLock"
+            ]
+          }
+        }
+      ],
+      "remediationQueue": [
+        {
+          "repositoryId": "climate-table-fork",
+          "snapshotId": "snap-2026-05-08",
+          "code": "restore_drill_recent_passed",
+          "severity": "critical",
+          "action": "run_restore_rehearsal",
+          "remediation": "Run a restore rehearsal from the immutable snapshot and attach the passed drill report."
+        },
+        {
+          "repositoryId": "climate-table-fork",
+          "snapshotId": "snap-2026-05-08",
+          "code": "ref_coverage",
+          "severity": "critical",
+          "action": "rebuild_snapshot_refs",
+          "remediation": "Rebuild the snapshot with all protected branch refs required for release reconstruction."
+        },
+        {
+          "repositoryId": "climate-table-fork",
+          "snapshotId": "snap-2026-05-08",
+          "code": "tag_coverage",
+          "severity": "warning",
+          "action": "attach_release_tag",
+          "remediation": "Attach the release tag to the immutable snapshot before DOI or export publication."
+        },
+        {
+          "repositoryId": "climate-table-fork",
+          "snapshotId": "snap-2026-05-08",
+          "code": "component_manifest_integrity",
+          "severity": "critical",
+          "action": "reconcile_component_manifest",
+          "remediation": "Regenerate the manifest from restored files and reconcile missing or mismatched component hashes."
+        },
+        {
+          "repositoryId": "climate-table-fork",
+          "snapshotId": "snap-2026-05-08",
+          "code": "artifact_mirror_ready",
+          "severity": "critical",
+          "action": "repair_artifact_mirror",
+          "remediation": "Mirror required LFS or restricted artifacts and verify mirror digests before export."
+        },
+        {
+          "repositoryId": "climate-table-fork",
+          "snapshotId": "snap-2026-05-08",
+          "code": "environment_lock_coverage",
+          "severity": "warning",
+          "action": "attach_environment_locks",
+          "remediation": "Attach container image digests and dependency lockfiles used by the restore drill."
+        }
+      ],
+      "restorePacket": {
+        "policyVersion": "repository-restore-rehearsal-v1",
+        "candidateTag": "preprint-v0.9",
+        "restoredSnapshot": "snap-2026-05-08",
+        "decision": "hold_restore_rehearsal"
+      }
+    },
+    {
+      "repositoryId": "protein-model-sandbox",
+      "title": "Protein Model Sandbox",
+      "status": "hold_restore_rehearsal",
+      "snapshotId": "snap-2026-04-14",
+      "releaseCandidate": {
+        "snapshotId": "snap-2026-04-14",
+        "tag": "v0.4.0",
+        "requiredRefs": [
+          "refs/heads/release/v0.4"
+        ]
+      },
+      "summary": {
+        "checks": 11,
+        "passedChecks": 7,
+        "criticalFindings": 2,
+        "warningFindings": 2
+      },
+      "checks": [
+        {
+          "code": "candidate_snapshot_declared",
+          "severity": "critical",
+          "pass": true,
+          "message": "Release candidate declares the snapshot that should be restored before export.",
+          "evidence": {}
+        },
+        {
+          "code": "snapshot_found",
+          "severity": "critical",
+          "pass": true,
+          "message": "Declared snapshot exists in the repository restore catalog.",
+          "evidence": {}
+        },
+        {
+          "code": "snapshot_recency",
+          "severity": "warning",
+          "pass": false,
+          "message": "Snapshot age is 38 days.",
+          "evidence": {
+            "snapshotAgeDays": 38,
+            "maxSnapshotAgeDays": 30
+          }
+        },
+        {
+          "code": "restore_drill_recent_passed",
+          "severity": "critical",
+          "pass": false,
+          "message": "Latest restore drill status is passed and age is 35 days.",
+          "evidence": {
+            "drillId": "drill-protein-20260417",
+            "status": "passed",
+            "drillAgeDays": 35
+          }
+        },
+        {
+          "code": "ref_coverage",
+          "severity": "critical",
+          "pass": true,
+          "message": "Snapshot covers every required protected branch ref.",
+          "evidence": {
+            "requiredRefs": [
+              "refs/heads/main",
+              "refs/heads/release/v0.4"
+            ],
+            "missingRefs": []
+          }
+        },
+        {
+          "code": "tag_coverage",
+          "severity": "warning",
+          "pass": true,
+          "message": "Release tag v0.4.0 is present in the snapshot.",
+          "evidence": {
+            "tag": "v0.4.0"
+          }
+        },
+        {
+          "code": "component_manifest_integrity",
+          "severity": "critical",
+          "pass": true,
+          "message": "Required repository components match the snapshot manifest.",
+          "evidence": {
+            "covered": [
+              "manuscript",
+              "data",
+              "code",
+              "metadata"
+            ],
+            "failures": []
+          }
+        },
+        {
+          "code": "artifact_mirror_ready",
+          "severity": "critical",
+          "pass": true,
+          "message": "Large and restricted artifacts have matching restore mirrors.",
+          "evidence": {
+            "mirrored": [
+              {
+                "path": "data/features.arrow",
+                "component": "data"
+              }
+            ],
+            "failures": []
+          }
+        },
+        {
+          "code": "environment_lock_coverage",
+          "severity": "warning",
+          "pass": true,
+          "message": "Environment locks are present for restore replay.",
+          "evidence": {
+            "present": [
+              "containerDigest",
+              "dependencyLock"
+            ],
+            "missing": []
+          }
+        },
+        {
+          "code": "notebook_replay_recent",
+          "severity": "warning",
+          "pass": false,
+          "message": "Notebook replay evidence reviewed for 1 notebook artifacts.",
+          "evidence": {
+            "total": 1,
+            "failed": [],
+            "stale": [
+              {
+                "path": "notebooks/evaluation.ipynb",
+                "ageDays": 36
+              }
+            ],
+            "missing": []
+          }
+        },
+        {
+          "code": "export_manifest_linked",
+          "severity": "critical",
+          "pass": false,
+          "message": "Export manifest is missing for the release snapshot.",
+          "evidence": {
+            "snapshotId": "snap-2026-04-14",
+            "exportSnapshotId": null,
+            "doi": null
+          }
+        }
+      ],
+      "findings": [
+        {
+          "code": "snapshot_recency",
+          "severity": "warning",
+          "message": "Snapshot age is 38 days.",
+          "remediation": "Cut a fresh snapshot or document why an older snapshot is still the release source.",
+          "evidence": {
+            "snapshotAgeDays": 38,
+            "maxSnapshotAgeDays": 30
+          }
+        },
+        {
+          "code": "restore_drill_recent_passed",
+          "severity": "critical",
+          "message": "Latest restore drill status is passed and age is 35 days.",
+          "remediation": "Run a restore rehearsal from the immutable snapshot and attach the passed drill report.",
+          "evidence": {
+            "drillId": "drill-protein-20260417",
+            "status": "passed",
+            "drillAgeDays": 35
+          }
+        },
+        {
+          "code": "notebook_replay_recent",
+          "severity": "warning",
+          "message": "Notebook replay evidence reviewed for 1 notebook artifacts.",
+          "remediation": "Replay notebooks from the restored environment and attach fresh pass evidence.",
+          "evidence": {
+            "total": 1,
+            "failed": [],
+            "stale": [
+              {
+                "path": "notebooks/evaluation.ipynb",
+                "ageDays": 36
+              }
+            ],
+            "missing": []
+          }
+        },
+        {
+          "code": "export_manifest_linked",
+          "severity": "critical",
+          "message": "Export manifest is missing for the release snapshot.",
+          "remediation": "Generate an export manifest that names the immutable snapshot and all restored components.",
+          "evidence": {
+            "snapshotId": "snap-2026-04-14",
+            "exportSnapshotId": null,
+            "doi": null
+          }
+        }
+      ],
+      "remediationQueue": [
+        {
+          "repositoryId": "protein-model-sandbox",
+          "snapshotId": "snap-2026-04-14",
+          "code": "snapshot_recency",
+          "severity": "warning",
+          "action": "refresh_release_snapshot",
+          "remediation": "Cut a fresh snapshot or document why an older snapshot is still the release source."
+        },
+        {
+          "repositoryId": "protein-model-sandbox",
+          "snapshotId": "snap-2026-04-14",
+          "code": "restore_drill_recent_passed",
+          "severity": "critical",
+          "action": "run_restore_rehearsal",
+          "remediation": "Run a restore rehearsal from the immutable snapshot and attach the passed drill report."
+        },
+        {
+          "repositoryId": "protein-model-sandbox",
+          "snapshotId": "snap-2026-04-14",
+          "code": "notebook_replay_recent",
+          "severity": "warning",
+          "action": "rerun_notebook_replay",
+          "remediation": "Replay notebooks from the restored environment and attach fresh pass evidence."
+        },
+        {
+          "repositoryId": "protein-model-sandbox",
+          "snapshotId": "snap-2026-04-14",
+          "code": "export_manifest_linked",
+          "severity": "critical",
+          "action": "generate_export_manifest",
+          "remediation": "Generate an export manifest that names the immutable snapshot and all restored components."
+        }
+      ],
+      "restorePacket": {
+        "policyVersion": "repository-restore-rehearsal-v1",
+        "candidateTag": "v0.4.0",
+        "restoredSnapshot": "snap-2026-04-14",
+        "decision": "hold_restore_rehearsal"
+      }
+    }
+  ],
+  "remediationQueue": [
+    {
+      "repositoryId": "climate-table-fork",
+      "snapshotId": "snap-2026-05-08",
+      "code": "restore_drill_recent_passed",
+      "severity": "critical",
+      "action": "run_restore_rehearsal",
+      "remediation": "Run a restore rehearsal from the immutable snapshot and attach the passed drill report."
+    },
+    {
+      "repositoryId": "climate-table-fork",
+      "snapshotId": "snap-2026-05-08",
+      "code": "ref_coverage",
+      "severity": "critical",
+      "action": "rebuild_snapshot_refs",
+      "remediation": "Rebuild the snapshot with all protected branch refs required for release reconstruction."
+    },
+    {
+      "repositoryId": "climate-table-fork",
+      "snapshotId": "snap-2026-05-08",
+      "code": "tag_coverage",
+      "severity": "warning",
+      "action": "attach_release_tag",
+      "remediation": "Attach the release tag to the immutable snapshot before DOI or export publication."
+    },
+    {
+      "repositoryId": "climate-table-fork",
+      "snapshotId": "snap-2026-05-08",
+      "code": "component_manifest_integrity",
+      "severity": "critical",
+      "action": "reconcile_component_manifest",
+      "remediation": "Regenerate the manifest from restored files and reconcile missing or mismatched component hashes."
+    },
+    {
+      "repositoryId": "climate-table-fork",
+      "snapshotId": "snap-2026-05-08",
+      "code": "artifact_mirror_ready",
+      "severity": "critical",
+      "action": "repair_artifact_mirror",
+      "remediation": "Mirror required LFS or restricted artifacts and verify mirror digests before export."
+    },
+    {
+      "repositoryId": "climate-table-fork",
+      "snapshotId": "snap-2026-05-08",
+      "code": "environment_lock_coverage",
+      "severity": "warning",
+      "action": "attach_environment_locks",
+      "remediation": "Attach container image digests and dependency lockfiles used by the restore drill."
+    },
+    {
+      "repositoryId": "protein-model-sandbox",
+      "snapshotId": "snap-2026-04-14",
+      "code": "snapshot_recency",
+      "severity": "warning",
+      "action": "refresh_release_snapshot",
+      "remediation": "Cut a fresh snapshot or document why an older snapshot is still the release source."
+    },
+    {
+      "repositoryId": "protein-model-sandbox",
+      "snapshotId": "snap-2026-04-14",
+      "code": "restore_drill_recent_passed",
+      "severity": "critical",
+      "action": "run_restore_rehearsal",
+      "remediation": "Run a restore rehearsal from the immutable snapshot and attach the passed drill report."
+    },
+    {
+      "repositoryId": "protein-model-sandbox",
+      "snapshotId": "snap-2026-04-14",
+      "code": "notebook_replay_recent",
+      "severity": "warning",
+      "action": "rerun_notebook_replay",
+      "remediation": "Replay notebooks from the restored environment and attach fresh pass evidence."
+    },
+    {
+      "repositoryId": "protein-model-sandbox",
+      "snapshotId": "snap-2026-04-14",
+      "code": "export_manifest_linked",
+      "severity": "critical",
+      "action": "generate_export_manifest",
+      "remediation": "Generate an export manifest that names the immutable snapshot and all restored components."
+    }
+  ],
+  "releaseQueue": [
+    {
+      "repositoryId": "neuro-reproducibility-atlas",
+      "snapshotId": "snap-2026-05-21",
+      "tag": "v1.2.0",
+      "action": "allow_release_export"
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "33359f292086b7e89d2ea1bf3c76937a1557755ddf9627660e44c40cb7f1d319",
+    "policyVersion": "repository-restore-rehearsal-v1"
+  }
+}

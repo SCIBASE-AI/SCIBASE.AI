@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#102018"/>
+  <text x="48" y="78" fill="#f8fafc" font-family="Arial" font-size="34" font-weight="700">Repository Restore Rehearsal Guard</text>
+  <text x="48" y="122" fill="#cbd5e1" font-family="Arial" font-size="18">Release snapshots are checked before DOI/export publication</text>
+  <rect x="48" y="172" width="250" height="150" rx="10" fill="#047857"/>
+  <text x="78" y="232" fill="#ecfdf5" font-family="Arial" font-size="56" font-weight="700">1</text>
+  <text x="78" y="272" fill="#a7f3d0" font-family="Arial" font-size="22">restore ready</text>
+  <rect x="355" y="172" width="250" height="150" rx="10" fill="#b45309"/>
+  <text x="385" y="232" fill="#fffbeb" font-family="Arial" font-size="56" font-weight="700">4</text>
+  <text x="385" y="272" fill="#fde68a" font-family="Arial" font-size="22">warnings</text>
+  <rect x="662" y="172" width="250" height="150" rx="10" fill="#be123c"/>
+  <text x="692" y="232" fill="#ffe4e6" font-family="Arial" font-size="56" font-weight="700">6</text>
+  <text x="692" y="272" fill="#fecdd3" font-family="Arial" font-size="22">critical</text>
+  <text x="48" y="386" fill="#e2e8f0" font-family="Arial" font-size="20">Controls: restore drill, refs, tags, checksums, LFS mirrors, environment locks, notebook replay, export manifest.</text>
+  <text x="48" y="426" fill="#94a3b8" font-family="Arial" font-size="16">Digest 33359f292086b7e89d2ea1bf3c76...</text>
+</svg>

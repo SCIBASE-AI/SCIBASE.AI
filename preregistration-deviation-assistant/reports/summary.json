@@ -1,0 +1,205 @@
+{
+  "generatedAt": "2026-05-22T00:00:00Z",
+  "issue": "SCIBASE.AI #16",
+  "results": [
+    {
+      "manuscriptId": "MS-HOLD-771",
+      "registrationId": "OSF-HOLD-771",
+      "status": "hold",
+      "blockers": [
+        {
+          "code": "PRIMARY_OUTCOME_SWITCH",
+          "severity": "hold",
+          "message": "Primary outcome mismatch. Missing: replication-success-rate. Added: reviewer-confidence, benchmark-score-gain."
+        },
+        {
+          "code": "SECONDARY_OUTCOME_PROMOTED",
+          "severity": "hold",
+          "message": "Secondary outcome promoted to primary without amendment: reviewer-confidence."
+        },
+        {
+          "code": "ANALYSIS_MODEL_DEVIATION",
+          "severity": "hold",
+          "message": "Analysis model changed from logistic regression to random forest classifier."
+        },
+        {
+          "code": "MULTIPLE_TESTING_CORRECTION_MISSING",
+          "severity": "hold",
+          "message": "Registered plan requires multiple-testing correction but manuscript disables it."
+        },
+        {
+          "code": "REGISTERED_EXCLUSION_CRITERIA_OMITTED",
+          "severity": "hold",
+          "message": "Registered exclusion criteria are missing from the manuscript: missing-raw-data."
+        },
+        {
+          "code": "POST_HOC_EXCLUSION_CRITERIA",
+          "severity": "hold",
+          "message": "Manuscript adds exclusion criteria without amendment: low-citation-count."
+        },
+        {
+          "code": "UNREGISTERED_SUBGROUP_CONFIRMATORY_CLAIM",
+          "severity": "hold",
+          "message": "Unregistered subgroups are presented as confirmatory: single-cell-papers."
+        },
+        {
+          "code": "RETROSPECTIVE_REGISTRATION",
+          "severity": "hold",
+          "message": "Registration timestamp is after data collection started."
+        }
+      ],
+      "warnings": [
+        {
+          "code": "UNREGISTERED_COVARIATES_ADDED",
+          "severity": "review",
+          "message": "Manuscript adds unregistered covariates: journal-impact."
+        },
+        {
+          "code": "SAMPLE_SIZE_DEVIATION",
+          "severity": "review",
+          "message": "Analyzed sample size 198 differs from target 300 by more than 10%."
+        },
+        {
+          "code": "EXPLORATORY_LABELING_INCOMPLETE",
+          "severity": "review",
+          "message": "Exploratory findings are present but labeling is incomplete."
+        },
+        {
+          "code": "POST_UNBLINDING_AMENDMENT",
+          "severity": "review",
+          "message": "Amendment AMD-LATE-1 occurred after unblinding."
+        }
+      ],
+      "readySignals": [
+        "Registration OSF:OSF-HOLD-771 is linked to the manuscript."
+      ],
+      "remediationActions": [
+        "Explain the primary-outcome change and downgrade unregistered outcomes to exploratory if not prospectively amended.",
+        "Restore the registered outcome hierarchy or cite a prospective amendment.",
+        "Restore the preregistered analysis model or label the changed analysis as exploratory.",
+        "Mark added covariates as sensitivity analyses or cite a prospective amendment.",
+        "Apply the registered multiple-testing correction or explain the deviation.",
+        "Explain recruitment stopping, attrition, or sample-size amendment.",
+        "Report every registered exclusion criterion and participant count impact.",
+        "Remove post-hoc exclusions from confirmatory analysis or label them exploratory.",
+        "Move unregistered subgroup findings to exploratory language.",
+        "Add explicit exploratory labels to non-preregistered findings.",
+        "Disclose retrospective registration and avoid confirmatory preregistration claims.",
+        "Explain whether post-unblinding amendments affect confirmatory claims."
+      ],
+      "reviewerPacket": {
+        "manuscriptTitle": "Automated reproducibility screening across benchmark papers",
+        "registration": "OSF:OSF-HOLD-771",
+        "status": "hold",
+        "requiredDecision": "hold_confirmatory_review",
+        "blockerCodes": [
+          "PRIMARY_OUTCOME_SWITCH",
+          "SECONDARY_OUTCOME_PROMOTED",
+          "ANALYSIS_MODEL_DEVIATION",
+          "MULTIPLE_TESTING_CORRECTION_MISSING",
+          "REGISTERED_EXCLUSION_CRITERIA_OMITTED",
+          "POST_HOC_EXCLUSION_CRITERIA",
+          "UNREGISTERED_SUBGROUP_CONFIRMATORY_CLAIM",
+          "RETROSPECTIVE_REGISTRATION"
+        ],
+        "warningCodes": [
+          "UNREGISTERED_COVARIATES_ADDED",
+          "SAMPLE_SIZE_DEVIATION",
+          "EXPLORATORY_LABELING_INCOMPLETE",
+          "POST_UNBLINDING_AMENDMENT"
+        ],
+        "readySignals": [
+          "Registration OSF:OSF-HOLD-771 is linked to the manuscript."
+        ]
+      },
+      "auditDigest": "MS-HOLD-771:OSF-HOLD-771:hold:B=ANALYSIS_MODEL_DEVIATION|MULTIPLE_TESTING_CORRECTION_MISSING|POST_HOC_EXCLUSION_CRITERIA|PRIMARY_OUTCOME_SWITCH|REGISTERED_EXCLUSION_CRITERIA_OMITTED|RETROSPECTIVE_REGISTRATION|SECONDARY_OUTCOME_PROMOTED|UNREGISTERED_SUBGROUP_CONFIRMATORY_CLAIM:W=EXPLORATORY_LABELING_INCOMPLETE|POST_UNBLINDING_AMENDMENT|SAMPLE_SIZE_DEVIATION|UNREGISTERED_COVARIATES_ADDED"
+    },
+    {
+      "manuscriptId": "MS-REVIEW-118",
+      "registrationId": "OSF-REVIEW-118",
+      "status": "review",
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "REGISTERED_SECONDARY_OUTCOME_OMITTED",
+          "severity": "review",
+          "message": "Registered secondary outcomes are omitted: missed-limitation-count."
+        },
+        {
+          "code": "UNREGISTERED_SUBGROUPS_DISCLOSED",
+          "severity": "review",
+          "message": "Unregistered subgroups need clear exploratory labeling: phase-iii-trials."
+        },
+        {
+          "code": "EXPLORATORY_LABELING_INCOMPLETE",
+          "severity": "review",
+          "message": "Exploratory findings are present but labeling is incomplete."
+        }
+      ],
+      "readySignals": [
+        "Registration OSF:OSF-REVIEW-118 is linked to the manuscript.",
+        "Primary manuscript outcome matches the registered primary outcome plan.",
+        "Primary analysis model matches the registered analysis plan.",
+        "Analyzed sample size is within the registered tolerance or amendment path.",
+        "Registration predates data collection start."
+      ],
+      "remediationActions": [
+        "Report omitted secondary outcomes or explain why they are not analyzed.",
+        "Add explicit exploratory labels to non-preregistered findings."
+      ],
+      "reviewerPacket": {
+        "manuscriptTitle": "Citation coverage assistance in clinical trial manuscripts",
+        "registration": "OSF:OSF-REVIEW-118",
+        "status": "review",
+        "requiredDecision": "deviation_review",
+        "blockerCodes": [],
+        "warningCodes": [
+          "REGISTERED_SECONDARY_OUTCOME_OMITTED",
+          "UNREGISTERED_SUBGROUPS_DISCLOSED",
+          "EXPLORATORY_LABELING_INCOMPLETE"
+        ],
+        "readySignals": [
+          "Registration OSF:OSF-REVIEW-118 is linked to the manuscript.",
+          "Primary manuscript outcome matches the registered primary outcome plan.",
+          "Primary analysis model matches the registered analysis plan.",
+          "Analyzed sample size is within the registered tolerance or amendment path.",
+          "Registration predates data collection start."
+        ]
+      },
+      "auditDigest": "MS-REVIEW-118:OSF-REVIEW-118:review:B=none:W=EXPLORATORY_LABELING_INCOMPLETE|REGISTERED_SECONDARY_OUTCOME_OMITTED|UNREGISTERED_SUBGROUPS_DISCLOSED"
+    },
+    {
+      "manuscriptId": "MS-READY-042",
+      "registrationId": "OSF-READY-042",
+      "status": "ready",
+      "blockers": [],
+      "warnings": [],
+      "readySignals": [
+        "Registration OSF:OSF-READY-042 is linked to the manuscript.",
+        "Primary manuscript outcome matches the registered primary outcome plan.",
+        "Primary analysis model matches the registered analysis plan.",
+        "Analyzed sample size is within the registered tolerance or amendment path.",
+        "Exploratory findings are labeled separately from confirmatory tests.",
+        "Registration predates data collection start."
+      ],
+      "remediationActions": [],
+      "reviewerPacket": {
+        "manuscriptTitle": "AI-assisted review feedback improves reproducibility reporting",
+        "registration": "OSF:OSF-READY-042",
+        "status": "ready",
+        "requiredDecision": "release_ai_review",
+        "blockerCodes": [],
+        "warningCodes": [],
+        "readySignals": [
+          "Registration OSF:OSF-READY-042 is linked to the manuscript.",
+          "Primary manuscript outcome matches the registered primary outcome plan.",
+          "Primary analysis model matches the registered analysis plan.",
+          "Analyzed sample size is within the registered tolerance or amendment path.",
+          "Exploratory findings are labeled separately from confirmatory tests.",
+          "Registration predates data collection start."
+        ]
+      },
+      "auditDigest": "MS-READY-042:OSF-READY-042:ready:B=none:W=none"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+[
+  {
+    "scenario": "duplicate-key-and-locked-edit",
+    "generatedAt": "2026-05-22T16:10:00Z",
+    "manuscriptId": "collab-editor-neuro-042",
+    "libraryRevision": "refs-r17",
+    "decision": "hold-export",
+    "summary": {
+      "findingCount": 4,
+      "blockingFindingCount": 4,
+      "reviewFindingCount": 0
+    },
+    "findings": [
+      {
+        "type": "duplicate-source-identifier",
+        "severity": "block",
+        "target": "doi:10.1101/2026.04.01.123456",
+        "message": "References zotero-a1, bibtex-b9 share source identifier 10.1101/2026.04.01.123456."
+      },
+      {
+        "type": "citation-key-collision",
+        "severity": "block",
+        "target": "nguyen2026atlas",
+        "message": "Citation key Nguyen2026Atlas points to multiple references: zotero-a1, bibtex-b9."
+      },
+      {
+        "type": "stale-citation-anchor",
+        "severity": "block",
+        "target": "sec-discussion-p2-c1",
+        "message": "Citation anchor sec-discussion-p2-c1 references Missing2023Trial, which is absent from the merged library."
+      },
+      {
+        "type": "locked-reference-edit",
+        "severity": "block",
+        "target": "endnote-locked",
+        "message": "Locked reference endnote-locked has proposed changes to title, doi."
+      }
+    ],
+    "remediationPlan": [
+      {
+        "type": "deduplicate-source-record",
+        "target": "doi:10.1101/2026.04.01.123456",
+        "reason": "Merge or remove duplicate reference records for 10.1101/2026.04.01.123456 before syncing the collaborative library."
+      },
+      {
+        "type": "rename-citation-key",
+        "target": "nguyen2026atlas",
+        "reason": "Assign unique citation keys for zotero-a1, bibtex-b9 and update manuscript anchors before export."
+      },
+      {
+        "type": "repair-citation-anchor",
+        "target": "sec-discussion-p2-c1",
+        "reason": "Reconnect sec-discussion-p2-c1 to an active reference key or remove the stale in-text citation before export."
+      },
+      {
+        "type": "review-locked-reference-edit",
+        "target": "endnote-locked",
+        "reason": "Require reference owner approval before applying locked endnote-locked edits from orcid:0000-0002-2222-3333."
+      }
+    ],
+    "visibleActions": [
+      "notify-collaborators"
+    ],
+    "gatedActions": [
+      "sync-reference-library",
+      "export-manuscript"
+    ],
+    "reviewerPacket": {
+      "manuscriptId": "collab-editor-neuro-042",
+      "libraryRevision": "refs-r17",
+      "referenceCount": 3,
+      "citationCount": 2,
+      "decision": "hold-export",
+      "gatedActions": [
+        "sync-reference-library",
+        "export-manuscript"
+      ],
+      "visibleActions": [
+        "notify-collaborators"
+      ]
+    }
+  },
+  {
+    "scenario": "review-incomplete-field-note",
+    "generatedAt": "2026-05-22T16:20:00Z",
+    "manuscriptId": "collab-editor-ecology-019",
+    "libraryRevision": "refs-r08",
+    "decision": "merge-review",
+    "summary": {
+      "findingCount": 2,
+      "blockingFindingCount": 0,
+      "reviewFindingCount": 2
+    },
+    "findings": [
+      {
+        "type": "missing-source-metadata",
+        "severity": "review",
+        "target": "zotero-fieldnote",
+        "message": "Reference zotero-fieldnote is missing DOI/PMID or core title, author, and year metadata."
+      },
+      {
+        "type": "unresolved-reference-conflict",
+        "severity": "review",
+        "target": "zotero-fieldnote",
+        "message": "Reference zotero-fieldnote still has an unresolved merge conflict from a collaborator library import."
+      }
+    ],
+    "remediationPlan": [
+      {
+        "type": "complete-source-metadata",
+        "target": "zotero-fieldnote",
+        "reason": "Complete DOI/PMID plus title, author, and year metadata for zotero-fieldnote before final manuscript export."
+      },
+      {
+        "type": "resolve-reference-conflict",
+        "target": "zotero-fieldnote",
+        "reason": "Pick the winning source metadata for zotero-fieldnote and record the merge decision before export."
+      }
+    ],
+    "visibleActions": [
+      "sync-reference-library",
+      "notify-collaborators"
+    ],
+    "gatedActions": [
+      "export-manuscript"
+    ],
+    "reviewerPacket": {
+      "manuscriptId": "collab-editor-ecology-019",
+      "libraryRevision": "refs-r08",
+      "referenceCount": 2,
+      "citationCount": 2,
+      "decision": "merge-review",
+      "gatedActions": [
+        "export-manuscript"
+      ],
+      "visibleActions": [
+        "sync-reference-library",
+        "notify-collaborators"
+      ]
+    }
+  },
+  {
+    "scenario": "clean-multi-manager-merge",
+    "generatedAt": "2026-05-22T16:30:00Z",
+    "manuscriptId": "collab-editor-physics-007",
+    "libraryRevision": "refs-r22",
+    "decision": "export-ready",
+    "summary": {
+      "findingCount": 0,
+      "blockingFindingCount": 0,
+      "reviewFindingCount": 0
+    },
+    "findings": [],
+    "remediationPlan": [],
+    "visibleActions": [
+      "sync-reference-library",
+      "export-manuscript",
+      "notify-collaborators"
+    ],
+    "gatedActions": [],
+    "reviewerPacket": {
+      "manuscriptId": "collab-editor-physics-007",
+      "libraryRevision": "refs-r22",
+      "referenceCount": 2,
+      "citationCount": 2,
+      "decision": "export-ready",
+      "gatedActions": [],
+      "visibleActions": [
+        "sync-reference-library",
+        "export-manuscript",
+        "notify-collaborators"
+      ]
+    }
+  }
+]

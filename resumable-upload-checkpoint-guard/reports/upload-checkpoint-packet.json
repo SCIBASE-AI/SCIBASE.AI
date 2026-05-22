@@ -1,0 +1,149 @@
+[
+  {
+    "scenario": "missing-chunk-abort",
+    "uploadId": "upload-climate-parquet",
+    "generatedAt": "2026-05-22T14:10:00Z",
+    "expiresAt": "2026-05-23T00:00:00Z",
+    "artifactPath": "datasets/climate-observations.parquet",
+    "decision": "abort-and-reupload",
+    "integrityScore": 35,
+    "findings": [
+      {
+        "type": "missing-upload-chunk",
+        "severity": "critical",
+        "missingChunks": [
+          2
+        ],
+        "message": "Upload checkpoint is missing chunk indexes 2"
+      },
+      {
+        "type": "upload-size-mismatch",
+        "severity": "major",
+        "expectedSizeBytes": 4096,
+        "receivedBytes": 3072,
+        "message": "Received 3072 bytes but artifact manifest expects 4096"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "abort_incomplete_checkpoint",
+        "target": "upload-climate-parquet",
+        "reason": "durable artifact commits require contiguous multipart coverage"
+      },
+      {
+        "type": "reconcile_upload_size",
+        "target": "upload-climate-parquet",
+        "reason": "chunk byte totals must match the artifact manifest"
+      }
+    ],
+    "summary": {
+      "expectedChunks": 4,
+      "receivedChunks": 3,
+      "coverage": 0.75,
+      "expectedSizeBytes": 4096,
+      "receivedBytes": 3072,
+      "severityCounts": {
+        "critical": 1,
+        "major": 1
+      }
+    }
+  },
+  {
+    "scenario": "checksum-hold",
+    "uploadId": "upload-notebook",
+    "generatedAt": "2026-05-22T14:10:00Z",
+    "expiresAt": "2026-05-23T00:00:00Z",
+    "artifactPath": "notebooks/reproduce.ipynb",
+    "decision": "hold-resume",
+    "integrityScore": 75,
+    "findings": [
+      {
+        "type": "chunk-checksum-mismatch",
+        "severity": "major",
+        "chunk": 1,
+        "declaredHash": "sha256:declared",
+        "observedHash": "sha256:observed",
+        "message": "Chunk 1 declares sha256:declared but observed sha256:observed"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "reupload_chunk",
+        "target": "upload-notebook:chunk-1",
+        "reason": "chunk checksum evidence must match before upload resume or artifact commit"
+      }
+    ],
+    "summary": {
+      "expectedChunks": 2,
+      "receivedChunks": 2,
+      "coverage": 1,
+      "expectedSizeBytes": 2048,
+      "receivedBytes": 2048,
+      "severityCounts": {
+        "major": 1
+      }
+    }
+  },
+  {
+    "scenario": "metadata-hold",
+    "uploadId": "upload-rna-counts",
+    "generatedAt": "2026-05-22T14:10:00Z",
+    "expiresAt": "2026-05-23T00:00:00Z",
+    "artifactPath": "datasets/rna-counts.csv",
+    "decision": "hold-metadata",
+    "integrityScore": 80,
+    "findings": [
+      {
+        "type": "missing-final-manifest-hash",
+        "severity": "metadata",
+        "message": "Artifact lacks final manifest hash"
+      },
+      {
+        "type": "missing-metadata-schema",
+        "severity": "metadata",
+        "message": "Artifact lacks DataCite/schema.org metadata schema evidence"
+      }
+    ],
+    "requiredActions": [
+      {
+        "type": "record_final_manifest_hash",
+        "target": "datasets/rna-counts.csv",
+        "reason": "durable commits need a stable manifest hash for replay and DOI metadata"
+      },
+      {
+        "type": "attach_metadata_schema",
+        "target": "datasets/rna-counts.csv",
+        "reason": "hosted research artifacts need machine-readable metadata before commit"
+      }
+    ],
+    "summary": {
+      "expectedChunks": 1,
+      "receivedChunks": 1,
+      "coverage": 1,
+      "expectedSizeBytes": 1000,
+      "receivedBytes": 1000,
+      "severityCounts": {
+        "metadata": 2
+      }
+    }
+  },
+  {
+    "scenario": "clean-upload",
+    "uploadId": "upload-clean-supplement",
+    "generatedAt": "2026-05-22T14:10:00Z",
+    "expiresAt": "2026-05-23T00:00:00Z",
+    "artifactPath": "supplements/source-data.zip",
+    "decision": "commit-artifact",
+    "integrityScore": 100,
+    "findings": [],
+    "requiredActions": [],
+    "summary": {
+      "expectedChunks": 3,
+      "receivedChunks": 3,
+      "coverage": 1,
+      "expectedSizeBytes": 3072,
+      "receivedBytes": 3072,
+      "severityCounts": {}
+    }
+  }
+]

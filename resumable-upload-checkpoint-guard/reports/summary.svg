@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#101820"/>
+  <text x="48" y="72" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">Resumable Upload Checkpoint Guard</text>
+  <text x="48" y="112" fill="#bae6fd" font-family="Arial, sans-serif" font-size="18">Synthetic multipart upload safety packet for scientific artifacts</text>
+  <g transform="translate(48 158)">
+    <rect width="190" height="154" rx="10" fill="#065f46"/>
+    <text x="22" y="48" fill="#d1fae5" font-family="Arial, sans-serif" font-size="18" font-weight="700">Commit</text>
+    <text x="22" y="108" fill="#ecfdf5" font-family="Arial, sans-serif" font-size="54" font-weight="700">1</text>
+  </g>
+  <g transform="translate(270 158)">
+    <rect width="190" height="154" rx="10" fill="#7c2d12"/>
+    <text x="22" y="48" fill="#fed7aa" font-family="Arial, sans-serif" font-size="18" font-weight="700">Metadata</text>
+    <text x="22" y="108" fill="#fff7ed" font-family="Arial, sans-serif" font-size="54" font-weight="700">1</text>
+  </g>
+  <g transform="translate(492 158)">
+    <rect width="190" height="154" rx="10" fill="#854d0e"/>
+    <text x="22" y="48" fill="#fef3c7" font-family="Arial, sans-serif" font-size="18" font-weight="700">Resume Hold</text>
+    <text x="22" y="108" fill="#fffbeb" font-family="Arial, sans-serif" font-size="54" font-weight="700">1</text>
+  </g>
+  <g transform="translate(714 158)">
+    <rect width="190" height="154" rx="10" fill="#991b1b"/>
+    <text x="22" y="48" fill="#fee2e2" font-family="Arial, sans-serif" font-size="18" font-weight="700">Abort</text>
+    <text x="22" y="108" fill="#fef2f2" font-family="Arial, sans-serif" font-size="54" font-weight="700">1</text>
+  </g>
+  <text x="48" y="382" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="22">Checks: contiguous chunks, checksum evidence, manifest hash, metadata schema, expiry</text>
+  <text x="48" y="424" fill="#d1d5db" font-family="Arial, sans-serif" font-size="18">Reviewer findings: 5. Outputs: JSON packet, Markdown report, SVG summary, MP4 artifact.</text>
+  <text x="48" y="478" fill="#9ca3af" font-family="Arial, sans-serif" font-size="16">Synthetic data only. No private datasets, credentials, storage provider calls, or network access.</text>
+</svg>

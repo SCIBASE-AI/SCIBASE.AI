@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Project deletion and erasure guard summary</title>
+  <desc id="desc">Synthetic deletion and profile erasure finalization decisions.</desc>
+  <rect width="1280" height="720" fill="#111827"/>
+  <rect x="70" y="70" width="1140" height="580" rx="18" fill="#f9fafb"/>
+  <text x="110" y="140" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#111827">Deletion and erasure guard</text>
+  <text x="110" y="195" font-family="Arial, sans-serif" font-size="26" fill="#374151">Retention holds, co-owner consent, citation tombstones, escrow preservation</text>
+  <rect x="110" y="245" width="310" height="150" rx="14" fill="#dbeafe"/>
+  <text x="135" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1e3a8a">5 requests</text>
+  <text x="135" y="350" font-family="Arial, sans-serif" font-size="26" fill="#1e40af">reviewed locally</text>
+  <rect x="465" y="245" width="310" height="150" rx="14" fill="#fee2e2"/>
+  <text x="490" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#7f1d1d">1 blocked</text>
+  <text x="490" y="350" font-family="Arial, sans-serif" font-size="26" fill="#991b1b">before deletion</text>
+  <rect x="820" y="245" width="310" height="150" rx="14" fill="#dcfce7"/>
+  <text x="845" y="300" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#14532d">No live data</text>
+  <text x="845" y="350" font-family="Arial, sans-serif" font-size="26" fill="#166534">synthetic only</text>
+  <text x="110" y="465" font-family="Arial, sans-serif" font-size="24" fill="#111827">Actions: approve_recoverable_delete (1) / steward_review_required (1) / approve_tombstone_delete (1) / detach_profile_preserve_attribution (1) / preserve_anonymous_review_escrow (1)</text>
+  <text x="110" y="525" font-family="Arial, sans-serif" font-size="24" fill="#111827">Modes: recoverable_delete (1) / blocked (1) / tombstone (1) / redacted_erasure (2)</text>
+  <text x="110" y="590" font-family="Arial, sans-serif" font-size="20" fill="#4b5563">Digest: 693f7ad981c20bca563f8b75845d69c8...</text>
+</svg>

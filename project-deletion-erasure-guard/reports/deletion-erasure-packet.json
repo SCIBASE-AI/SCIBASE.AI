@@ -1,0 +1,221 @@
+{
+  "asOfDate": "2026-05-22",
+  "requestCount": 5,
+  "byAction": {
+    "approve_recoverable_delete": 1,
+    "steward_review_required": 1,
+    "approve_tombstone_delete": 1,
+    "detach_profile_preserve_attribution": 1,
+    "preserve_anonymous_review_escrow": 1
+  },
+  "byMode": {
+    "recoverable_delete": 1,
+    "blocked": 1,
+    "tombstone": 1,
+    "redacted_erasure": 2
+  },
+  "blockedRequests": [
+    "DEL-PRJ-552"
+  ],
+  "packets": [
+    {
+      "requestId": "DEL-PRJ-441",
+      "type": "project_deletion",
+      "requesterRole": "owner",
+      "projectId": "proj-private-draft",
+      "projectVisibility": "private",
+      "action": "approve_recoverable_delete",
+      "severity": "low",
+      "reason": "private project/profile has verified authority, no holds, and policy recovery window",
+      "finalizationMode": "recoverable_delete",
+      "activeHoldTypes": [],
+      "coOwnerConsentRatio": 1,
+      "citationTombstoneRequired": false,
+      "anonymousEscrowRequired": false,
+      "recoveryWindowDays": 30,
+      "riskScore": 0,
+      "retainedReceiptFields": [
+        "request_id",
+        "request_type",
+        "actor_hash",
+        "project_hash",
+        "decision",
+        "policy_digest",
+        "timestamp"
+      ],
+      "actions": [
+        "approve recoverable deletion and schedule final purge after recovery window",
+        "retain minimized audit receipt only",
+        "retain minimized audit receipt for 2555 days"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "recoveryWindowDays": 30,
+        "minimumCoOwnerConsentRatio": 0.66,
+        "mfaFreshnessDays": 7,
+        "auditReceiptRetentionDays": 2555
+      },
+      "auditDigest": "2ee7f039b44e289674373603e76ed99b8cbad2c6f0c44fe272b2733469f9c5c5"
+    },
+    {
+      "requestId": "DEL-PRJ-552",
+      "type": "project_deletion",
+      "requesterRole": "owner",
+      "projectId": "proj-clinical-study",
+      "projectVisibility": "institutional-only",
+      "action": "steward_review_required",
+      "severity": "critical",
+      "reason": "active retention holds: irb_retention, funder_retention",
+      "finalizationMode": "blocked",
+      "activeHoldTypes": [
+        "irb_retention",
+        "funder_retention"
+      ],
+      "coOwnerConsentRatio": 0.5,
+      "citationTombstoneRequired": false,
+      "anonymousEscrowRequired": false,
+      "recoveryWindowDays": 30,
+      "riskScore": 97,
+      "retainedReceiptFields": [
+        "request_id",
+        "request_type",
+        "actor_hash",
+        "project_hash",
+        "decision",
+        "policy_digest",
+        "timestamp"
+      ],
+      "actions": [
+        "freeze destructive deletion until all retention holds are released",
+        "attach legal/IRB/funder hold evidence to steward packet",
+        "retain minimized audit receipt for 2555 days"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "recoveryWindowDays": 30,
+        "minimumCoOwnerConsentRatio": 0.66,
+        "mfaFreshnessDays": 7,
+        "auditReceiptRetentionDays": 2555
+      },
+      "auditDigest": "ddc529a97dee673c0a63b202d326518ff8ec13931fde8628fd732d3cabbcbc7e"
+    },
+    {
+      "requestId": "DEL-PRJ-620",
+      "type": "project_deletion",
+      "requesterRole": "admin",
+      "projectId": "proj-public-model",
+      "projectVisibility": "public",
+      "action": "approve_tombstone_delete",
+      "severity": "medium",
+      "reason": "public DOI, citation, fork, or visibility evidence requires a citation-safe tombstone",
+      "finalizationMode": "tombstone",
+      "activeHoldTypes": [],
+      "coOwnerConsentRatio": 1,
+      "citationTombstoneRequired": true,
+      "anonymousEscrowRequired": false,
+      "recoveryWindowDays": 30,
+      "riskScore": 22,
+      "retainedReceiptFields": [
+        "request_id",
+        "request_type",
+        "actor_hash",
+        "project_hash",
+        "decision",
+        "policy_digest",
+        "timestamp"
+      ],
+      "actions": [
+        "create citation-safe project tombstone with DOI/version redirect",
+        "remove editable workspace state after recovery window expires",
+        "retain minimized audit receipt for 2555 days"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "recoveryWindowDays": 30,
+        "minimumCoOwnerConsentRatio": 0.66,
+        "mfaFreshnessDays": 7,
+        "auditReceiptRetentionDays": 2555
+      },
+      "auditDigest": "0fcdc6e4df12f042b124349d8c5de70fefb1c3ddef4d6668206eafcd8daf8f51"
+    },
+    {
+      "requestId": "ERASE-USER-118",
+      "type": "profile_erasure",
+      "requesterRole": "owner",
+      "projectId": null,
+      "projectVisibility": null,
+      "action": "detach_profile_preserve_attribution",
+      "severity": "medium",
+      "reason": "profile has authored or administered project links that need attribution-preserving detachment",
+      "finalizationMode": "redacted_erasure",
+      "activeHoldTypes": [],
+      "coOwnerConsentRatio": 1,
+      "citationTombstoneRequired": false,
+      "anonymousEscrowRequired": false,
+      "recoveryWindowDays": 30,
+      "riskScore": 12,
+      "retainedReceiptFields": [
+        "request_id",
+        "request_type",
+        "actor_hash",
+        "project_hash",
+        "decision",
+        "policy_digest",
+        "timestamp"
+      ],
+      "actions": [
+        "remove public profile fields and login identifiers",
+        "preserve minimal attribution hashes on authored projects and reviews",
+        "retain minimized audit receipt for 2555 days"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "recoveryWindowDays": 30,
+        "minimumCoOwnerConsentRatio": 0.66,
+        "mfaFreshnessDays": 7,
+        "auditReceiptRetentionDays": 2555
+      },
+      "auditDigest": "c9c9a84c92616c8946a8565c8fac49e0eaa2197ee20e8f5b88da96e61abf75bc"
+    },
+    {
+      "requestId": "ERASE-USER-221",
+      "type": "profile_erasure",
+      "requesterRole": "owner",
+      "projectId": null,
+      "projectVisibility": null,
+      "action": "preserve_anonymous_review_escrow",
+      "severity": "medium",
+      "reason": "anonymous review pseudonyms or appeals require escrow-preserving erasure",
+      "finalizationMode": "redacted_erasure",
+      "activeHoldTypes": [],
+      "coOwnerConsentRatio": 1,
+      "citationTombstoneRequired": false,
+      "anonymousEscrowRequired": true,
+      "recoveryWindowDays": 30,
+      "riskScore": 22,
+      "retainedReceiptFields": [
+        "request_id",
+        "request_type",
+        "actor_hash",
+        "project_hash",
+        "decision",
+        "policy_digest",
+        "timestamp"
+      ],
+      "actions": [
+        "replace profile fields with pseudonymous labels",
+        "preserve escrow receipts required for appeals without exposing identity",
+        "retain minimized audit receipt for 2555 days"
+      ],
+      "policySnapshot": {
+        "asOfDate": "2026-05-22",
+        "recoveryWindowDays": 30,
+        "minimumCoOwnerConsentRatio": 0.66,
+        "mfaFreshnessDays": 7,
+        "auditReceiptRetentionDays": 2555
+      },
+      "auditDigest": "db0cdc4b4a5c593098297c164ffffaaac3c54f06c70214d5e1ed6a8489aa9125"
+    }
+  ],
+  "auditDigest": "693f7ad981c20bca563f8b75845d69c83c91c8f946c989c3bda11275170732b7"
+}

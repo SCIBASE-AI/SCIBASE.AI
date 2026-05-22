@@ -1,0 +1,224 @@
+[
+  {
+    "scenario": "Biology fast-track template misses rubric and privacy requirements",
+    "generatedAt": "2026-05-22T17:00:00Z",
+    "templateId": "tpl-biology-fast-track",
+    "discipline": "biology",
+    "decision": "hold-template",
+    "summary": {
+      "findingCount": 8,
+      "blockingFindingCount": 6,
+      "reviewFindingCount": 2
+    },
+    "findings": [
+      {
+        "type": "missing-required-rubric-dimension",
+        "severity": "block",
+        "subject": "rigor",
+        "message": "Template is missing the required rigor rubric dimension."
+      },
+      {
+        "type": "missing-required-rubric-dimension",
+        "severity": "block",
+        "subject": "reproducibility",
+        "message": "Template is missing the required reproducibility rubric dimension."
+      },
+      {
+        "type": "score-scale-out-of-bounds",
+        "severity": "block",
+        "subject": "novelty",
+        "message": "novelty uses score scale -1..12, outside the supported 0..10 increasing range."
+      },
+      {
+        "type": "evidence-anchor-missing",
+        "severity": "block",
+        "subject": "dataset",
+        "message": "No rubric dimension requires evidence anchored to dataset."
+      },
+      {
+        "type": "evidence-anchor-missing",
+        "severity": "block",
+        "subject": "code",
+        "message": "No rubric dimension requires evidence anchored to code."
+      },
+      {
+        "type": "evidence-anchor-missing",
+        "severity": "block",
+        "subject": "notebook",
+        "message": "No rubric dimension requires evidence anchored to notebook."
+      },
+      {
+        "type": "anonymous-mode-privacy-gap",
+        "severity": "review",
+        "subject": "double-blind",
+        "message": "Anonymous or blind review mode does not hide both author and reviewer identities with a safe label policy."
+      },
+      {
+        "type": "profile-publication-packet-incomplete",
+        "severity": "review",
+        "subject": "tpl-biology-fast-track",
+        "message": "Profile or citation-page publication packet must include rubric versioning and anonymous identity redaction."
+      }
+    ],
+    "curatorActions": [
+      {
+        "type": "add-rubric-dimension",
+        "target": "rigor",
+        "reason": "Add a rigor scoring dimension before this peer-review template can affect reputation."
+      },
+      {
+        "type": "add-rubric-dimension",
+        "target": "reproducibility",
+        "reason": "Add a reproducibility scoring dimension before this peer-review template can affect reputation."
+      },
+      {
+        "type": "normalize-score-scale",
+        "target": "novelty",
+        "reason": "Use an increasing numeric score scale within 0..10 so reputation deltas are comparable."
+      },
+      {
+        "type": "add-evidence-anchor",
+        "target": "dataset",
+        "reason": "Require at least one scoring dimension to cite dataset evidence before profile or timeline credit is computed."
+      },
+      {
+        "type": "add-evidence-anchor",
+        "target": "code",
+        "reason": "Require at least one scoring dimension to cite code evidence before profile or timeline credit is computed."
+      },
+      {
+        "type": "add-evidence-anchor",
+        "target": "notebook",
+        "reason": "Require at least one scoring dimension to cite notebook evidence before profile or timeline credit is computed."
+      },
+      {
+        "type": "repair-review-mode-privacy",
+        "target": "tpl-biology-fast-track",
+        "reason": "Hide author and reviewer identities and replace real-name labels before publishing review receipts."
+      },
+      {
+        "type": "complete-profile-publication-packet",
+        "target": "tpl-biology-fast-track",
+        "reason": "Include rubric version metadata and anonymous identity redaction before profile or citation publication."
+      }
+    ],
+    "templatePacket": {
+      "templateId": "tpl-biology-fast-track",
+      "discipline": "biology",
+      "decision": "hold-template",
+      "profileSafe": false,
+      "rubricScore": 0,
+      "requiredDimensions": [
+        "clarity",
+        "rigor",
+        "novelty",
+        "reproducibility"
+      ],
+      "reviewedArtifactTypes": [
+        "document",
+        "dataset",
+        "code",
+        "notebook"
+      ],
+      "publicationTargets": [
+        "project-timeline",
+        "reviewer-profile"
+      ]
+    }
+  },
+  {
+    "scenario": "Physics methods template needs reviewer declarations",
+    "generatedAt": "2026-05-22T17:10:00Z",
+    "templateId": "tpl-physics-methods",
+    "discipline": "physics",
+    "decision": "curator-review",
+    "summary": {
+      "findingCount": 2,
+      "blockingFindingCount": 0,
+      "reviewFindingCount": 2
+    },
+    "findings": [
+      {
+        "type": "reviewer-declaration-incomplete",
+        "severity": "review",
+        "subject": "conflictOfInterest",
+        "message": "Reviewer declaration conflictOfInterest must be completed before reputation deltas are trusted."
+      },
+      {
+        "type": "reviewer-declaration-incomplete",
+        "severity": "review",
+        "subject": "dataAccess",
+        "message": "Reviewer declaration dataAccess must be completed before reputation deltas are trusted."
+      }
+    ],
+    "curatorActions": [
+      {
+        "type": "complete-reviewer-declaration",
+        "target": "conflictOfInterest",
+        "reason": "Require reviewer attestations before template output affects profiles or leaderboards."
+      },
+      {
+        "type": "complete-reviewer-declaration",
+        "target": "dataAccess",
+        "reason": "Require reviewer attestations before template output affects profiles or leaderboards."
+      }
+    ],
+    "templatePacket": {
+      "templateId": "tpl-physics-methods",
+      "discipline": "physics",
+      "decision": "curator-review",
+      "profileSafe": true,
+      "rubricScore": 84,
+      "requiredDimensions": [
+        "clarity",
+        "rigor",
+        "novelty",
+        "reproducibility"
+      ],
+      "reviewedArtifactTypes": [
+        "document",
+        "code"
+      ],
+      "publicationTargets": [
+        "project-timeline"
+      ]
+    }
+  },
+  {
+    "scenario": "Social-science open review template is publication ready",
+    "generatedAt": "2026-05-22T17:20:00Z",
+    "templateId": "tpl-social-science-open-review",
+    "discipline": "social-sciences",
+    "decision": "publish-template",
+    "summary": {
+      "findingCount": 0,
+      "blockingFindingCount": 0,
+      "reviewFindingCount": 0
+    },
+    "findings": [],
+    "curatorActions": [],
+    "templatePacket": {
+      "templateId": "tpl-social-science-open-review",
+      "discipline": "social-sciences",
+      "decision": "publish-template",
+      "profileSafe": true,
+      "rubricScore": 100,
+      "requiredDimensions": [
+        "clarity",
+        "rigor",
+        "novelty",
+        "reproducibility"
+      ],
+      "reviewedArtifactTypes": [
+        "document",
+        "dataset",
+        "notebook"
+      ],
+      "publicationTargets": [
+        "project-timeline",
+        "reviewer-profile",
+        "citation-page"
+      ]
+    }
+  }
+]

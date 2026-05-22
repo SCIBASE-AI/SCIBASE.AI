@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#101820"/>
+  <rect x="72" y="72" width="1136" height="576" rx="24" fill="#f7f3e8"/>
+  <text x="112" y="148" fill="#101820" font-family="Arial, sans-serif" font-size="44" font-weight="700">Conflict Disclosure Consistency Assistant</text>
+  <text x="112" y="212" fill="#31525b" font-family="Arial, sans-serif" font-size="26">Status: hold_disclosure_review</text>
+  <g font-family="Arial, sans-serif" font-size="30" fill="#101820">
+    <text x="112" y="304">Projects reviewed: 3</text>
+    <text x="112" y="360">Held projects: 1</text>
+    <text x="112" y="416">Ready projects: 2</text>
+    <text x="112" y="472">Critical findings: 5</text>
+    <text x="112" y="528">Undisclosed funding: $250,000.00</text>
+  </g>
+  <rect x="760" y="250" width="330" height="220" rx="18" fill="#e84a5f"/>
+  <text x="796" y="340" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="700">5</text>
+  <text x="796" y="396" fill="#ffffff" font-family="Arial, sans-serif" font-size="26">critical disclosure blockers</text>
+</svg>

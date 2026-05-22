@@ -1,0 +1,263 @@
+{
+  "summary": {
+    "status": "hold_disclosure_review",
+    "projectsReviewed": 3,
+    "heldProjects": 1,
+    "readyProjects": 2,
+    "reviseProjects": 0,
+    "affectedAuthors": 1,
+    "undisclosedFundingCents": 25000000,
+    "criticalFindings": 5,
+    "warningFindings": 3
+  },
+  "projectResults": [
+    {
+      "projectId": "cardio-device-trial",
+      "title": "Adaptive Cardio Device Trial",
+      "status": "hold_disclosure_review",
+      "severityCounts": {
+        "critical": 5,
+        "warning": 3
+      },
+      "disclosureConfidence": 0,
+      "findings": [
+        {
+          "projectId": "cardio-device-trial",
+          "code": "missing_competing_interest_statement",
+          "severity": "critical",
+          "message": "Dr. Mira Patel has no competing-interest statement.",
+          "evidence": {
+            "authorId": "a1",
+            "authorName": "Dr. Mira Patel"
+          },
+          "action": "Add an explicit competing-interest statement before review packet release."
+        },
+        {
+          "projectId": "cardio-device-trial",
+          "code": "author_relationship_not_disclosed",
+          "severity": "critical",
+          "message": "Dr. Mira Patel has an affiliation that overlaps a funder or data provider without a matching disclosure.",
+          "evidence": {
+            "authorId": "a1",
+            "affiliations": [
+              "North Valley Cardiology",
+              "PulseWave Medical"
+            ],
+            "relationships": [
+              "PulseWave Medical"
+            ]
+          },
+          "action": "Add an author-level relationship disclosure or remove the conflicted author from the neutral review path."
+        },
+        {
+          "projectId": "cardio-device-trial",
+          "code": "funding_source_missing_from_statement",
+          "severity": "critical",
+          "message": "One or more project funders are missing from the funding disclosure.",
+          "evidence": {
+            "undisclosedFunders": [
+              "PulseWave Medical"
+            ],
+            "disclosedFunding": [
+              "NIH",
+              "R01-HL-2026"
+            ]
+          },
+          "action": "Update funding disclosures to list every sponsor, grant, and commercial backer."
+        },
+        {
+          "projectId": "cardio-device-trial",
+          "code": "sponsor_role_missing",
+          "severity": "critical",
+          "message": "Commercial or sponsor funders are present but sponsor role is not described.",
+          "evidence": {
+            "sponsors": [
+              "PulseWave Medical"
+            ]
+          },
+          "action": "State whether sponsors influenced study design, analysis, publication, or data access."
+        },
+        {
+          "projectId": "cardio-device-trial",
+          "code": "trial_registry_funding_mismatch",
+          "severity": "critical",
+          "message": "Trial registry funding does not match the manuscript funding statement.",
+          "evidence": {
+            "registryId": "NCT-COI-1001",
+            "registryFunders": [
+              "PulseWave Medical",
+              "NIH R01-HL-2026"
+            ],
+            "disclosedFunding": [
+              "NIH",
+              "R01-HL-2026"
+            ]
+          },
+          "action": "Reconcile registry and manuscript funding before the peer-review packet is shown."
+        },
+        {
+          "projectId": "cardio-device-trial",
+          "code": "data_provider_relationship_missing",
+          "severity": "warning",
+          "message": "Restricted or sponsored data providers are not fully disclosed.",
+          "evidence": {
+            "providers": [
+              "PulseWave Medical"
+            ]
+          },
+          "action": "Add data-provider relationship and access-term notes to the reviewer packet."
+        },
+        {
+          "projectId": "cardio-device-trial",
+          "code": "citation_relationship_context_missing",
+          "severity": "warning",
+          "message": "Primary support citations have funder or affiliation overlap without context.",
+          "evidence": {
+            "citations": [
+              "cite-pulsewave-2025"
+            ]
+          },
+          "action": "Add citation-context notes so reviewers can see related-party support."
+        },
+        {
+          "projectId": "cardio-device-trial",
+          "code": "reviewer_disclosure_packet_incomplete",
+          "severity": "warning",
+          "message": "The reviewer disclosure packet is missing required sections.",
+          "evidence": {
+            "missingSections": [
+              "sponsorRole",
+              "dataProviderRelationships"
+            ]
+          },
+          "action": "Fill all required disclosure sections before sending the assistant packet to reviewers."
+        }
+      ],
+      "revisionTasks": [
+        {
+          "id": "cardio-device-trial-task-1",
+          "code": "missing_competing_interest_statement",
+          "severity": "critical",
+          "action": "Add an explicit competing-interest statement before review packet release."
+        },
+        {
+          "id": "cardio-device-trial-task-2",
+          "code": "author_relationship_not_disclosed",
+          "severity": "critical",
+          "action": "Add an author-level relationship disclosure or remove the conflicted author from the neutral review path."
+        },
+        {
+          "id": "cardio-device-trial-task-3",
+          "code": "funding_source_missing_from_statement",
+          "severity": "critical",
+          "action": "Update funding disclosures to list every sponsor, grant, and commercial backer."
+        },
+        {
+          "id": "cardio-device-trial-task-4",
+          "code": "sponsor_role_missing",
+          "severity": "critical",
+          "action": "State whether sponsors influenced study design, analysis, publication, or data access."
+        },
+        {
+          "id": "cardio-device-trial-task-5",
+          "code": "trial_registry_funding_mismatch",
+          "severity": "critical",
+          "action": "Reconcile registry and manuscript funding before the peer-review packet is shown."
+        },
+        {
+          "id": "cardio-device-trial-task-6",
+          "code": "data_provider_relationship_missing",
+          "severity": "warning",
+          "action": "Add data-provider relationship and access-term notes to the reviewer packet."
+        },
+        {
+          "id": "cardio-device-trial-task-7",
+          "code": "citation_relationship_context_missing",
+          "severity": "warning",
+          "action": "Add citation-context notes so reviewers can see related-party support."
+        },
+        {
+          "id": "cardio-device-trial-task-8",
+          "code": "reviewer_disclosure_packet_incomplete",
+          "severity": "warning",
+          "action": "Fill all required disclosure sections before sending the assistant packet to reviewers."
+        }
+      ]
+    },
+    {
+      "projectId": "open-soil-atlas",
+      "title": "Open Soil Microbiome Atlas",
+      "status": "ready_for_review",
+      "severityCounts": {
+        "critical": 0,
+        "warning": 0
+      },
+      "disclosureConfidence": 100,
+      "findings": [],
+      "revisionTasks": []
+    },
+    {
+      "projectId": "materials-catalyst-screen",
+      "title": "Catalyst Screening With Shared Beamline Data",
+      "status": "ready_for_review",
+      "severityCounts": {
+        "critical": 0,
+        "warning": 0
+      },
+      "disclosureConfidence": 100,
+      "findings": [],
+      "revisionTasks": []
+    }
+  ],
+  "reviewerActions": [
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "critical",
+      "code": "missing_competing_interest_statement",
+      "action": "Add an explicit competing-interest statement before review packet release."
+    },
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "critical",
+      "code": "author_relationship_not_disclosed",
+      "action": "Add an author-level relationship disclosure or remove the conflicted author from the neutral review path."
+    },
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "critical",
+      "code": "funding_source_missing_from_statement",
+      "action": "Update funding disclosures to list every sponsor, grant, and commercial backer."
+    },
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "critical",
+      "code": "sponsor_role_missing",
+      "action": "State whether sponsors influenced study design, analysis, publication, or data access."
+    },
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "critical",
+      "code": "trial_registry_funding_mismatch",
+      "action": "Reconcile registry and manuscript funding before the peer-review packet is shown."
+    },
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "warning",
+      "code": "data_provider_relationship_missing",
+      "action": "Add data-provider relationship and access-term notes to the reviewer packet."
+    },
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "warning",
+      "code": "citation_relationship_context_missing",
+      "action": "Add citation-context notes so reviewers can see related-party support."
+    },
+    {
+      "projectId": "cardio-device-trial",
+      "severity": "warning",
+      "code": "reviewer_disclosure_packet_incomplete",
+      "action": "Fill all required disclosure sections before sending the assistant packet to reviewers."
+    }
+  ],
+  "auditDigest": "c8f21e75768c286dd6fd95359d2fe42ecffe1d52c9667fe426517d558bf0204e"
+}

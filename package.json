@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "check": "node --check credit-role-evidence-guard/index.js && node --check credit-role-evidence-guard/sample-data.js && node --check credit-role-evidence-guard/test.js && node --check credit-role-evidence-guard/demo.js",
+    "test": "node credit-role-evidence-guard/test.js",
+    "demo": "node credit-role-evidence-guard/demo.js"
+  },
+  "type": "module"
+}

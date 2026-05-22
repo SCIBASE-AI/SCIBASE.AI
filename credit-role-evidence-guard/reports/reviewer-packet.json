@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-05-22T12:00:00.000Z",
+  "summary": {
+    "approve": 1,
+    "hold": 4,
+    "reject": 2,
+    "totalFindings": 7,
+    "riskScore": 31
+  },
+  "decisions": [
+    {
+      "claimId": "claim-001",
+      "contributorId": "user-mei",
+      "contributorName": "Mei Lin",
+      "projectId": "proj-neuro-open-001",
+      "role": "Data curation",
+      "decision": "hold",
+      "riskScore": 3,
+      "evidenceIds": [
+        "artifact-dataset-raw-001",
+        "artifact-data-dictionary-001"
+      ],
+      "findings": [
+        {
+          "code": "duplicate-credit-claim",
+          "severity": "hold",
+          "message": "Another claim uses the same contributor, role, project, and evidence set.",
+          "remediation": "Deduplicate before computing profile reputation deltas."
+        }
+      ]
+    },
+    {
+      "claimId": "claim-002",
+      "contributorId": "user-nora",
+      "contributorName": "Nora Hart",
+      "projectId": "proj-climate-model-014",
+      "role": "Software",
+      "decision": "approve",
+      "riskScore": 0,
+      "evidenceIds": [
+        "artifact-analysis-code-001"
+      ],
+      "findings": []
+    },
+    {
+      "claimId": "claim-003",
+      "contributorId": "user-ada",
+      "contributorName": "Ada Pike",
+      "projectId": "proj-neuro-open-001",
+      "role": "Peer review",
+      "decision": "reject",
+      "riskScore": 11,
+      "evidenceIds": [
+        "artifact-review-blind-001"
+      ],
+      "findings": [
+        {
+          "code": "author-review-credit-conflict",
+          "severity": "reject",
+          "message": "A project author cannot receive peer-review reputation credit for reviewing their own project.",
+          "remediation": "Route the review to an independent reviewer or record it as author response work."
+        },
+        {
+          "code": "blind-review-identity-leak",
+          "severity": "hold",
+          "message": "Public profile credit is backed by blind-review evidence that could expose reviewer identity.",
+          "remediation": "Publish an anonymized receipt or keep the credit private until the review mode permits disclosure."
+        }
+      ]
+    },
+    {
+      "claimId": "claim-004",
+      "contributorId": "user-ravi",
+      "contributorName": "Ravi Singh",
+      "projectId": "proj-climate-model-014",
+      "role": "Software",
+      "decision": "hold",
+      "riskScore": 3,
+      "evidenceIds": [
+        "artifact-manuscript-001"
+      ],
+      "findings": [
+        {
+          "code": "role-evidence-mismatch",
+          "severity": "hold",
+          "message": "Role \"Software\" expects code, test, notebook evidence, but got manuscript.",
+          "remediation": "Attach role-appropriate evidence or change the claimed role."
+        }
+      ]
+    },
+    {
+      "claimId": "claim-005",
+      "contributorId": "user-lena",
+      "contributorName": "Lena Rowe",
+      "projectId": "proj-climate-model-014",
+      "role": "Writing - original draft",
+      "decision": "hold",
+      "riskScore": 3,
+      "evidenceIds": [
+        "artifact-manuscript-001"
+      ],
+      "findings": [
+        {
+          "code": "missing-profile-consent",
+          "severity": "hold",
+          "message": "Lena Rowe has not consented to publish this credit in institutional-export.",
+          "remediation": "Collect contributor consent or keep the credit internal."
+        }
+      ]
+    },
+    {
+      "claimId": "claim-006",
+      "contributorId": "user-mei",
+      "contributorName": "Mei Lin",
+      "projectId": "proj-neuro-open-001",
+      "role": "Data curation",
+      "decision": "hold",
+      "riskScore": 3,
+      "evidenceIds": [
+        "artifact-dataset-raw-001",
+        "artifact-data-dictionary-001"
+      ],
+      "findings": [
+        {
+          "code": "duplicate-credit-claim",
+          "severity": "hold",
+          "message": "Another claim uses the same contributor, role, project, and evidence set.",
+          "remediation": "Deduplicate before computing profile reputation deltas."
+        }
+      ]
+    },
+    {
+      "claimId": "claim-007",
+      "contributorId": "user-otto",
+      "contributorName": "Otto Gray",
+      "projectId": "proj-neuro-open-001",
+      "role": "Validation",
+      "decision": "reject",
+      "riskScore": 8,
+      "evidenceIds": [],
+      "findings": [
+        {
+          "code": "empty-evidence-set",
+          "severity": "reject",
+          "message": "No artifact evidence is attached to the contribution claim.",
+          "remediation": "Attach at least one artifact matching the claimed role."
+        }
+      ]
+    }
+  ]
+}

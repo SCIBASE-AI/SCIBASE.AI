@@ -1,0 +1,637 @@
+{
+  "asOf": "2026-05-23T03:00:00.000Z",
+  "policy": {
+    "pValueThreshold": 0.05,
+    "fdrThreshold": 0.05,
+    "familySizeWarningThreshold": 5,
+    "allowedCorrectionMethods": [
+      "benjamini-hochberg",
+      "bonferroni",
+      "holm",
+      "pre-registered-hierarchy"
+    ],
+    "policyVersion": "multiple-comparison-control-v1"
+  },
+  "summary": {
+    "totalManuscripts": 3,
+    "readyManuscripts": 1,
+    "statisticalReviewManuscripts": 0,
+    "reviseManuscripts": 2,
+    "totalFamilies": 3,
+    "totalTests": 15,
+    "totalFindings": 7,
+    "criticalFindings": 5,
+    "warningFindings": 2
+  },
+  "manuscripts": [
+    {
+      "manuscriptId": "cardio-biomarker-study",
+      "title": "Cardiac Biomarker Response Study",
+      "status": "peer_review_ready",
+      "summary": {
+        "families": 1,
+        "tests": 3,
+        "passedFamilies": 1,
+        "criticalFindings": 0,
+        "warningFindings": 0
+      },
+      "families": [
+        {
+          "familyId": "primary-biomarkers",
+          "label": "Primary biomarker outcomes",
+          "intent": "confirmatory",
+          "correctionMethod": "benjamini-hochberg",
+          "testsReviewed": 3,
+          "status": "passed",
+          "checks": [
+            {
+              "code": "family_boundary_declared",
+              "severity": "warning",
+              "pass": true,
+              "message": "Declared family size 3 covers 3 tests.",
+              "evidence": {
+                "declaredFamilySize": 3,
+                "observedTests": 3
+              }
+            },
+            {
+              "code": "correction_method_allowed",
+              "severity": "critical",
+              "pass": true,
+              "message": "Correction method benjamini-hochberg is accepted.",
+              "evidence": {
+                "correctionMethod": "benjamini-hochberg",
+                "needsCorrection": true,
+                "intent": "confirmatory"
+              }
+            },
+            {
+              "code": "adjusted_values_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Every significant test has adjusted p/q evidence when correction is required.",
+              "evidence": {
+                "missingTestIds": []
+              }
+            },
+            {
+              "code": "unadjusted_significance_claim",
+              "severity": "critical",
+              "pass": true,
+              "message": "Result claims align with adjusted evidence.",
+              "evidence": {
+                "claimIds": []
+              }
+            },
+            {
+              "code": "fdr_threshold_consistency",
+              "severity": "critical",
+              "pass": true,
+              "message": "Claimed significant tests are within the adjusted threshold.",
+              "evidence": {
+                "threshold": 0.05,
+                "testIds": []
+              }
+            },
+            {
+              "code": "endpoint_hierarchy_covered",
+              "severity": "warning",
+              "pass": true,
+              "message": "Confirmatory family endpoint hierarchy reviewed.",
+              "evidence": {
+                "intent": "confirmatory",
+                "primaryEndpoints": [
+                  "troponin-change"
+                ]
+              }
+            },
+            {
+              "code": "exploratory_labeling",
+              "severity": "warning",
+              "pass": true,
+              "message": "Exploratory claims are labeled without confirmatory overstatement.",
+              "evidence": {
+                "claimIds": []
+              }
+            }
+          ],
+          "findings": []
+        }
+      ],
+      "findings": [],
+      "reviewQueue": []
+    },
+    {
+      "manuscriptId": "neuro-screening-draft",
+      "title": "Neuro Screening Draft",
+      "status": "revise_before_submission",
+      "summary": {
+        "families": 1,
+        "tests": 8,
+        "passedFamilies": 0,
+        "criticalFindings": 3,
+        "warningFindings": 1
+      },
+      "families": [
+        {
+          "familyId": "neuro-panel",
+          "label": "Neurocognitive screening panel",
+          "intent": "confirmatory",
+          "correctionMethod": "none",
+          "testsReviewed": 8,
+          "status": "failed",
+          "checks": [
+            {
+              "code": "family_boundary_declared",
+              "severity": "warning",
+              "pass": true,
+              "message": "Declared family size 8 covers 8 tests.",
+              "evidence": {
+                "declaredFamilySize": 8,
+                "observedTests": 8
+              }
+            },
+            {
+              "code": "correction_method_allowed",
+              "severity": "critical",
+              "pass": false,
+              "message": "Correction method none is not accepted for this family.",
+              "evidence": {
+                "correctionMethod": "none",
+                "needsCorrection": true,
+                "intent": "confirmatory"
+              }
+            },
+            {
+              "code": "adjusted_values_present",
+              "severity": "critical",
+              "pass": false,
+              "message": "4 significant tests are missing adjusted p/q evidence.",
+              "evidence": {
+                "missingTestIds": [
+                  "memory",
+                  "attention",
+                  "language",
+                  "mood"
+                ]
+              }
+            },
+            {
+              "code": "unadjusted_significance_claim",
+              "severity": "critical",
+              "pass": false,
+              "message": "2 result claims rely on unadjusted or non-significant adjusted evidence.",
+              "evidence": {
+                "claimIds": [
+                  "claim-neuro-1",
+                  "claim-neuro-2"
+                ]
+              }
+            },
+            {
+              "code": "fdr_threshold_consistency",
+              "severity": "critical",
+              "pass": true,
+              "message": "Claimed significant tests are within the adjusted threshold.",
+              "evidence": {
+                "threshold": 0.05,
+                "testIds": []
+              }
+            },
+            {
+              "code": "endpoint_hierarchy_covered",
+              "severity": "warning",
+              "pass": false,
+              "message": "Confirmatory family endpoint hierarchy reviewed.",
+              "evidence": {
+                "intent": "confirmatory",
+                "primaryEndpoints": []
+              }
+            },
+            {
+              "code": "exploratory_labeling",
+              "severity": "warning",
+              "pass": true,
+              "message": "Exploratory claims are labeled without confirmatory overstatement.",
+              "evidence": {
+                "claimIds": []
+              }
+            }
+          ],
+          "findings": [
+            {
+              "familyId": "neuro-panel",
+              "code": "correction_method_allowed",
+              "severity": "critical",
+              "message": "Correction method none is not accepted for this family.",
+              "remediation": "Choose a declared multiplicity method such as Benjamini-Hochberg, Bonferroni, Holm, or a pre-registered hierarchy.",
+              "evidence": {
+                "correctionMethod": "none",
+                "needsCorrection": true,
+                "intent": "confirmatory"
+              }
+            },
+            {
+              "familyId": "neuro-panel",
+              "code": "adjusted_values_present",
+              "severity": "critical",
+              "message": "4 significant tests are missing adjusted p/q evidence.",
+              "remediation": "Report adjusted p-values or q-values for every significant claim in the family.",
+              "evidence": {
+                "missingTestIds": [
+                  "memory",
+                  "attention",
+                  "language",
+                  "mood"
+                ]
+              }
+            },
+            {
+              "familyId": "neuro-panel",
+              "code": "unadjusted_significance_claim",
+              "severity": "critical",
+              "message": "2 result claims rely on unadjusted or non-significant adjusted evidence.",
+              "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold.",
+              "evidence": {
+                "claimIds": [
+                  "claim-neuro-1",
+                  "claim-neuro-2"
+                ]
+              }
+            },
+            {
+              "familyId": "neuro-panel",
+              "code": "endpoint_hierarchy_covered",
+              "severity": "warning",
+              "message": "Confirmatory family endpoint hierarchy reviewed.",
+              "remediation": "Declare primary and secondary endpoints before making confirmatory significance claims.",
+              "evidence": {
+                "intent": "confirmatory",
+                "primaryEndpoints": []
+              }
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "familyId": "neuro-panel",
+          "code": "correction_method_allowed",
+          "severity": "critical",
+          "message": "Correction method none is not accepted for this family.",
+          "remediation": "Choose a declared multiplicity method such as Benjamini-Hochberg, Bonferroni, Holm, or a pre-registered hierarchy.",
+          "evidence": {
+            "correctionMethod": "none",
+            "needsCorrection": true,
+            "intent": "confirmatory"
+          }
+        },
+        {
+          "familyId": "neuro-panel",
+          "code": "adjusted_values_present",
+          "severity": "critical",
+          "message": "4 significant tests are missing adjusted p/q evidence.",
+          "remediation": "Report adjusted p-values or q-values for every significant claim in the family.",
+          "evidence": {
+            "missingTestIds": [
+              "memory",
+              "attention",
+              "language",
+              "mood"
+            ]
+          }
+        },
+        {
+          "familyId": "neuro-panel",
+          "code": "unadjusted_significance_claim",
+          "severity": "critical",
+          "message": "2 result claims rely on unadjusted or non-significant adjusted evidence.",
+          "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold.",
+          "evidence": {
+            "claimIds": [
+              "claim-neuro-1",
+              "claim-neuro-2"
+            ]
+          }
+        },
+        {
+          "familyId": "neuro-panel",
+          "code": "endpoint_hierarchy_covered",
+          "severity": "warning",
+          "message": "Confirmatory family endpoint hierarchy reviewed.",
+          "remediation": "Declare primary and secondary endpoints before making confirmatory significance claims.",
+          "evidence": {
+            "intent": "confirmatory",
+            "primaryEndpoints": []
+          }
+        }
+      ],
+      "reviewQueue": [
+        {
+          "manuscriptId": "neuro-screening-draft",
+          "familyId": "neuro-panel",
+          "code": "correction_method_allowed",
+          "severity": "critical",
+          "action": "choose_multiplicity_method",
+          "remediation": "Choose a declared multiplicity method such as Benjamini-Hochberg, Bonferroni, Holm, or a pre-registered hierarchy."
+        },
+        {
+          "manuscriptId": "neuro-screening-draft",
+          "familyId": "neuro-panel",
+          "code": "adjusted_values_present",
+          "severity": "critical",
+          "action": "report_adjusted_values",
+          "remediation": "Report adjusted p-values or q-values for every significant claim in the family."
+        },
+        {
+          "manuscriptId": "neuro-screening-draft",
+          "familyId": "neuro-panel",
+          "code": "unadjusted_significance_claim",
+          "severity": "critical",
+          "action": "rewrite_significance_claim",
+          "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold."
+        },
+        {
+          "manuscriptId": "neuro-screening-draft",
+          "familyId": "neuro-panel",
+          "code": "endpoint_hierarchy_covered",
+          "severity": "warning",
+          "action": "declare_endpoint_hierarchy",
+          "remediation": "Declare primary and secondary endpoints before making confirmatory significance claims."
+        }
+      ]
+    },
+    {
+      "manuscriptId": "metabolomics-exploration",
+      "title": "Metabolomics Exploration",
+      "status": "revise_before_submission",
+      "summary": {
+        "families": 1,
+        "tests": 4,
+        "passedFamilies": 0,
+        "criticalFindings": 2,
+        "warningFindings": 1
+      },
+      "families": [
+        {
+          "familyId": "metabolite-screen",
+          "label": "Exploratory metabolite screen",
+          "intent": "exploratory",
+          "correctionMethod": "benjamini-hochberg",
+          "testsReviewed": 4,
+          "status": "failed",
+          "checks": [
+            {
+              "code": "family_boundary_declared",
+              "severity": "warning",
+              "pass": true,
+              "message": "Declared family size 4 covers 4 tests.",
+              "evidence": {
+                "declaredFamilySize": 4,
+                "observedTests": 4
+              }
+            },
+            {
+              "code": "correction_method_allowed",
+              "severity": "warning",
+              "pass": true,
+              "message": "Correction method benjamini-hochberg is accepted.",
+              "evidence": {
+                "correctionMethod": "benjamini-hochberg",
+                "needsCorrection": true,
+                "intent": "exploratory"
+              }
+            },
+            {
+              "code": "adjusted_values_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Every significant test has adjusted p/q evidence when correction is required.",
+              "evidence": {
+                "missingTestIds": []
+              }
+            },
+            {
+              "code": "unadjusted_significance_claim",
+              "severity": "critical",
+              "pass": false,
+              "message": "1 result claims rely on unadjusted or non-significant adjusted evidence.",
+              "evidence": {
+                "claimIds": [
+                  "claim-metab-2"
+                ]
+              }
+            },
+            {
+              "code": "fdr_threshold_consistency",
+              "severity": "critical",
+              "pass": false,
+              "message": "1 tests exceed the adjusted threshold but are still claimed significant.",
+              "evidence": {
+                "threshold": 0.05,
+                "testIds": [
+                  "metabolite-b"
+                ]
+              }
+            },
+            {
+              "code": "endpoint_hierarchy_covered",
+              "severity": "warning",
+              "pass": true,
+              "message": "Endpoint hierarchy is optional for exploratory families.",
+              "evidence": {
+                "intent": "exploratory",
+                "primaryEndpoints": []
+              }
+            },
+            {
+              "code": "exploratory_labeling",
+              "severity": "warning",
+              "pass": false,
+              "message": "1 exploratory claims use confirmatory language without a label.",
+              "evidence": {
+                "claimIds": [
+                  "claim-metab-2"
+                ]
+              }
+            }
+          ],
+          "findings": [
+            {
+              "familyId": "metabolite-screen",
+              "code": "unadjusted_significance_claim",
+              "severity": "critical",
+              "message": "1 result claims rely on unadjusted or non-significant adjusted evidence.",
+              "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold.",
+              "evidence": {
+                "claimIds": [
+                  "claim-metab-2"
+                ]
+              }
+            },
+            {
+              "familyId": "metabolite-screen",
+              "code": "fdr_threshold_consistency",
+              "severity": "critical",
+              "message": "1 tests exceed the adjusted threshold but are still claimed significant.",
+              "remediation": "Downgrade the claim or revise the correction threshold and reported adjusted values.",
+              "evidence": {
+                "threshold": 0.05,
+                "testIds": [
+                  "metabolite-b"
+                ]
+              }
+            },
+            {
+              "familyId": "metabolite-screen",
+              "code": "exploratory_labeling",
+              "severity": "warning",
+              "message": "1 exploratory claims use confirmatory language without a label.",
+              "remediation": "Mark exploratory findings clearly and avoid confirmatory language for hypothesis-generating analyses.",
+              "evidence": {
+                "claimIds": [
+                  "claim-metab-2"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "familyId": "metabolite-screen",
+          "code": "unadjusted_significance_claim",
+          "severity": "critical",
+          "message": "1 result claims rely on unadjusted or non-significant adjusted evidence.",
+          "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold.",
+          "evidence": {
+            "claimIds": [
+              "claim-metab-2"
+            ]
+          }
+        },
+        {
+          "familyId": "metabolite-screen",
+          "code": "fdr_threshold_consistency",
+          "severity": "critical",
+          "message": "1 tests exceed the adjusted threshold but are still claimed significant.",
+          "remediation": "Downgrade the claim or revise the correction threshold and reported adjusted values.",
+          "evidence": {
+            "threshold": 0.05,
+            "testIds": [
+              "metabolite-b"
+            ]
+          }
+        },
+        {
+          "familyId": "metabolite-screen",
+          "code": "exploratory_labeling",
+          "severity": "warning",
+          "message": "1 exploratory claims use confirmatory language without a label.",
+          "remediation": "Mark exploratory findings clearly and avoid confirmatory language for hypothesis-generating analyses.",
+          "evidence": {
+            "claimIds": [
+              "claim-metab-2"
+            ]
+          }
+        }
+      ],
+      "reviewQueue": [
+        {
+          "manuscriptId": "metabolomics-exploration",
+          "familyId": "metabolite-screen",
+          "code": "unadjusted_significance_claim",
+          "severity": "critical",
+          "action": "rewrite_significance_claim",
+          "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold."
+        },
+        {
+          "manuscriptId": "metabolomics-exploration",
+          "familyId": "metabolite-screen",
+          "code": "fdr_threshold_consistency",
+          "severity": "critical",
+          "action": "align_claim_with_adjusted_threshold",
+          "remediation": "Downgrade the claim or revise the correction threshold and reported adjusted values."
+        },
+        {
+          "manuscriptId": "metabolomics-exploration",
+          "familyId": "metabolite-screen",
+          "code": "exploratory_labeling",
+          "severity": "warning",
+          "action": "label_exploratory_claims",
+          "remediation": "Mark exploratory findings clearly and avoid confirmatory language for hypothesis-generating analyses."
+        }
+      ]
+    }
+  ],
+  "reviewQueue": [
+    {
+      "manuscriptId": "neuro-screening-draft",
+      "familyId": "neuro-panel",
+      "code": "correction_method_allowed",
+      "severity": "critical",
+      "action": "choose_multiplicity_method",
+      "remediation": "Choose a declared multiplicity method such as Benjamini-Hochberg, Bonferroni, Holm, or a pre-registered hierarchy."
+    },
+    {
+      "manuscriptId": "neuro-screening-draft",
+      "familyId": "neuro-panel",
+      "code": "adjusted_values_present",
+      "severity": "critical",
+      "action": "report_adjusted_values",
+      "remediation": "Report adjusted p-values or q-values for every significant claim in the family."
+    },
+    {
+      "manuscriptId": "neuro-screening-draft",
+      "familyId": "neuro-panel",
+      "code": "unadjusted_significance_claim",
+      "severity": "critical",
+      "action": "rewrite_significance_claim",
+      "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold."
+    },
+    {
+      "manuscriptId": "neuro-screening-draft",
+      "familyId": "neuro-panel",
+      "code": "endpoint_hierarchy_covered",
+      "severity": "warning",
+      "action": "declare_endpoint_hierarchy",
+      "remediation": "Declare primary and secondary endpoints before making confirmatory significance claims."
+    },
+    {
+      "manuscriptId": "metabolomics-exploration",
+      "familyId": "metabolite-screen",
+      "code": "unadjusted_significance_claim",
+      "severity": "critical",
+      "action": "rewrite_significance_claim",
+      "remediation": "Rewrite significance language or support it with adjusted p/q values below the declared threshold."
+    },
+    {
+      "manuscriptId": "metabolomics-exploration",
+      "familyId": "metabolite-screen",
+      "code": "fdr_threshold_consistency",
+      "severity": "critical",
+      "action": "align_claim_with_adjusted_threshold",
+      "remediation": "Downgrade the claim or revise the correction threshold and reported adjusted values."
+    },
+    {
+      "manuscriptId": "metabolomics-exploration",
+      "familyId": "metabolite-screen",
+      "code": "exploratory_labeling",
+      "severity": "warning",
+      "action": "label_exploratory_claims",
+      "remediation": "Mark exploratory findings clearly and avoid confirmatory language for hypothesis-generating analyses."
+    }
+  ],
+  "readyQueue": [
+    {
+      "manuscriptId": "cardio-biomarker-study",
+      "action": "allow_peer_review_submission",
+      "checkedFamilies": 1
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "b092238857bd2f7d0f4e18118723850c200466ee9f6ccc42ab2872d3c324cd19",
+    "policyVersion": "multiple-comparison-control-v1"
+  }
+}

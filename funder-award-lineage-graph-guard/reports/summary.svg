@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="72" y="64" width="1136" height="592" rx="24" fill="#f8fafc"/>
+  <text x="112" y="128" fill="#0f172a" font-family="Arial, sans-serif" font-size="42" font-weight="700">Funder Award Lineage Graph Guard</text>
+  <text x="112" y="174" fill="#475569" font-family="Arial, sans-serif" font-size="22">SCIBASE Scientific Knowledge Graph Integration - issue #17</text>
+  <rect x="112" y="226" width="220" height="86" rx="18" fill="#dc2626"/>
+  <text x="142" y="281" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">HOLD</text>
+  <text x="112" y="374" fill="#0f172a" font-family="Arial, sans-serif" font-size="28">Primary blockers: 10</text>
+  <text x="112" y="420" fill="#0f172a" font-family="Arial, sans-serif" font-size="28">Graph packets checked: 3</text>
+  <text x="112" y="466" fill="#0f172a" font-family="Arial, sans-serif" font-size="28">Decision: hold_graph_export</text>
+  <text x="112" y="538" fill="#334155" font-family="Arial, sans-serif" font-size="20">Checks: funders, awards, projects, outputs, mandates, funding text, and recommendation safety.</text>
+  <text x="112" y="584" fill="#64748b" font-family="Arial, sans-serif" font-size="17">Digest: KG-FUNDER-HOLD-3:hold:B=AWARD_FUNDER_NODE_MISSING|AWARD_NUMBER_MISSING|DUPLICATE_FUNDER_AWARD_NUMBER|FUNDED_PROJECT_WITHOUT_AWARD_EDGE|INACTIVE_AWARD_USED_IN_VISIBLE_RECOMMENDATION|OPEN_ACCESS_MANDATE_UNMET|OUTPUT_AWARD_EDGE_MISSING_TARGET|OUTPUT_PROJECT_EDGE_MISSING_TARGET|PROJECT_AWARD_EDGE_MISSING_TARGET|RECOMMENDATION_AWARD_MISSING:W=AWARD_MANDATES_MISSING|AWARD_URI_MISSING|DATA_SHARING_MANDATE_NEEDS_REVIEW|FUNDING_TEXT_AWARD_MISMATCH</text>
+  <text x="112" y="620" fill="#64748b" font-family="Arial, sans-serif" font-size="17">Synthetic graph data only. No external funder, ROR, DOI, or grant API calls.</text>
+</svg>

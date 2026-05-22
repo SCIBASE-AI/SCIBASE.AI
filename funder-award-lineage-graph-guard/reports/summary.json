@@ -1,0 +1,251 @@
+{
+  "generatedAt": "2026-05-22T00:00:00Z",
+  "issue": "SCIBASE.AI #17",
+  "results": [
+    {
+      "graphId": "KG-FUNDER-HOLD-3",
+      "status": "hold",
+      "blockers": [
+        {
+          "code": "DUPLICATE_FUNDER_AWARD_NUMBER",
+          "severity": "hold",
+          "awardId": "AWD-DOE-2",
+          "message": "DOE Genomics duplicate duplicates award number DE SC001."
+        },
+        {
+          "code": "AWARD_NUMBER_MISSING",
+          "severity": "hold",
+          "awardId": "AWD-MISSING-FUNDER",
+          "message": "Unlinked private award lacks a funder award number."
+        },
+        {
+          "code": "AWARD_FUNDER_NODE_MISSING",
+          "severity": "hold",
+          "awardId": "AWD-MISSING-FUNDER",
+          "message": "Unlinked private award references missing funder FUNDER-MISSING."
+        },
+        {
+          "code": "PROJECT_AWARD_EDGE_MISSING_TARGET",
+          "severity": "hold",
+          "projectId": "PROJ-GENOMICS",
+          "message": "Genomics collaboration map references missing award AWD-MISSING."
+        },
+        {
+          "code": "FUNDED_PROJECT_WITHOUT_AWARD_EDGE",
+          "severity": "hold",
+          "projectId": "PROJ-UNLINKED",
+          "message": "Funded but unlinked project is marked funded but has no award edge."
+        },
+        {
+          "code": "OUTPUT_PROJECT_EDGE_MISSING_TARGET",
+          "severity": "hold",
+          "outputId": "OUT-ORPHAN",
+          "message": "Orphan output references missing project PROJ-MISSING."
+        },
+        {
+          "code": "OUTPUT_AWARD_EDGE_MISSING_TARGET",
+          "severity": "hold",
+          "outputId": "OUT-ORPHAN",
+          "message": "Orphan output references missing award AWD-MISSING."
+        },
+        {
+          "code": "OPEN_ACCESS_MANDATE_UNMET",
+          "severity": "hold",
+          "outputId": "OUT-GENOMICS-DATA",
+          "message": "Genomics collaboration dataset is linked to DOE Genomics A but is not marked open access."
+        },
+        {
+          "code": "INACTIVE_AWARD_USED_IN_VISIBLE_RECOMMENDATION",
+          "severity": "hold",
+          "recommendationId": "REC-BAD-1",
+          "message": "Recommendation REC-BAD-1 is visible but uses inactive award AWD-DOE-1."
+        },
+        {
+          "code": "RECOMMENDATION_AWARD_MISSING",
+          "severity": "hold",
+          "recommendationId": "REC-BAD-2",
+          "message": "Recommendation REC-BAD-2 references missing award AWD-DOES-NOT-EXIST."
+        }
+      ],
+      "warnings": [
+        {
+          "code": "AWARD_URI_MISSING",
+          "severity": "review",
+          "awardId": "AWD-MISSING-FUNDER",
+          "message": "Unlinked private award lacks a stable funder or grant URI."
+        },
+        {
+          "code": "AWARD_MANDATES_MISSING",
+          "severity": "review",
+          "awardId": "AWD-MISSING-FUNDER",
+          "message": "Unlinked private award has no open-access, data, or reporting mandate metadata."
+        },
+        {
+          "code": "FUNDING_TEXT_AWARD_MISMATCH",
+          "severity": "review",
+          "outputId": "OUT-GENOMICS-DATA",
+          "message": "Genomics collaboration dataset funding text does not mention linked award(s): AWD-DOE-1."
+        },
+        {
+          "code": "DATA_SHARING_MANDATE_NEEDS_REVIEW",
+          "severity": "review",
+          "outputId": "OUT-GENOMICS-DATA",
+          "message": "Genomics collaboration dataset is linked to a data-sharing award but data availability is restricted."
+        }
+      ],
+      "readySignals": [
+        "Award records were checked for canonical funder IDs, award numbers, URIs, dates, and mandates.",
+        "Project-to-award graph edges were checked for missing targets.",
+        "Output funding statements and inherited project award edges were checked.",
+        "Award mandates were compared against output open-access, data, and reporting metadata.",
+        "2 funder-aware recommendation(s) were checked for award lineage safety.",
+        "3 award node(s), 2 project node(s), and 2 output node(s) were inspected."
+      ],
+      "remediationActions": [
+        "Merge or disambiguate duplicate award number DE SC001.",
+        "Record the canonical award number for Unlinked private award.",
+        "Attach Unlinked private award to a canonical funder node.",
+        "Add a stable funder award URI for Unlinked private award.",
+        "Repair or remove the broken award edge AWD-MISSING on Genomics collaboration map.",
+        "Connect Funded but unlinked project to the funding award node(s).",
+        "Attach Orphan output to a valid project node.",
+        "Satisfy or explain the open-access mandate for Genomics collaboration dataset.",
+        "Hide recommendation REC-BAD-1 or update the award lineage.",
+        "Remove or repair recommendation REC-BAD-2."
+      ],
+      "reviewerPacket": {
+        "graphTitle": "Genomics collaboration graph",
+        "status": "hold",
+        "requiredDecision": "hold_graph_export",
+        "blockerCodes": [
+          "DUPLICATE_FUNDER_AWARD_NUMBER",
+          "AWARD_NUMBER_MISSING",
+          "AWARD_FUNDER_NODE_MISSING",
+          "PROJECT_AWARD_EDGE_MISSING_TARGET",
+          "FUNDED_PROJECT_WITHOUT_AWARD_EDGE",
+          "OUTPUT_PROJECT_EDGE_MISSING_TARGET",
+          "OUTPUT_AWARD_EDGE_MISSING_TARGET",
+          "OPEN_ACCESS_MANDATE_UNMET",
+          "INACTIVE_AWARD_USED_IN_VISIBLE_RECOMMENDATION",
+          "RECOMMENDATION_AWARD_MISSING"
+        ],
+        "warningCodes": [
+          "AWARD_URI_MISSING",
+          "AWARD_MANDATES_MISSING",
+          "FUNDING_TEXT_AWARD_MISMATCH",
+          "DATA_SHARING_MANDATE_NEEDS_REVIEW"
+        ],
+        "readySignals": [
+          "Award records were checked for canonical funder IDs, award numbers, URIs, dates, and mandates.",
+          "Project-to-award graph edges were checked for missing targets.",
+          "Output funding statements and inherited project award edges were checked.",
+          "Award mandates were compared against output open-access, data, and reporting metadata.",
+          "2 funder-aware recommendation(s) were checked for award lineage safety.",
+          "3 award node(s), 2 project node(s), and 2 output node(s) were inspected."
+        ]
+      },
+      "auditDigest": "KG-FUNDER-HOLD-3:hold:B=AWARD_FUNDER_NODE_MISSING|AWARD_NUMBER_MISSING|DUPLICATE_FUNDER_AWARD_NUMBER|FUNDED_PROJECT_WITHOUT_AWARD_EDGE|INACTIVE_AWARD_USED_IN_VISIBLE_RECOMMENDATION|OPEN_ACCESS_MANDATE_UNMET|OUTPUT_AWARD_EDGE_MISSING_TARGET|OUTPUT_PROJECT_EDGE_MISSING_TARGET|PROJECT_AWARD_EDGE_MISSING_TARGET|RECOMMENDATION_AWARD_MISSING:W=AWARD_MANDATES_MISSING|AWARD_URI_MISSING|DATA_SHARING_MANDATE_NEEDS_REVIEW|FUNDING_TEXT_AWARD_MISMATCH"
+    },
+    {
+      "graphId": "KG-FUNDER-REVIEW-2",
+      "status": "review",
+      "blockers": [],
+      "warnings": [
+        {
+          "code": "AWARD_URI_MISSING",
+          "severity": "review",
+          "awardId": "AWD-NIH-R01-777",
+          "message": "NIH R01NS777 lacks a stable funder or grant URI."
+        },
+        {
+          "code": "EXPIRED_AWARD_MARKED_ACTIVE",
+          "severity": "review",
+          "awardId": "AWD-NIH-R01-777",
+          "message": "NIH R01NS777 ended on 2025-01-01 but is still marked active."
+        },
+        {
+          "code": "DATA_SHARING_MANDATE_NEEDS_REVIEW",
+          "severity": "review",
+          "outputId": "OUT-NEURO-PAPER",
+          "message": "Neuroimaging method comparison is linked to a data-sharing award but data availability is controlled."
+        },
+        {
+          "code": "FUNDER_REPORTING_EXPORT_NOT_READY",
+          "severity": "review",
+          "outputId": "OUT-NEURO-PAPER",
+          "message": "Neuroimaging method comparison needs funder reporting export metadata."
+        },
+        {
+          "code": "FUNDER_AFFINITY_EXPLANATION_MISSING",
+          "severity": "review",
+          "recommendationId": "REC-NEURO-1",
+          "message": "Recommendation REC-NEURO-1 uses funder affinity without an explanation."
+        }
+      ],
+      "readySignals": [
+        "Award records were checked for canonical funder IDs, award numbers, URIs, dates, and mandates.",
+        "Project-to-award graph edges were checked for missing targets.",
+        "Output funding statements and inherited project award edges were checked.",
+        "Award mandates were compared against output open-access, data, and reporting metadata.",
+        "1 funder-aware recommendation(s) were checked for award lineage safety.",
+        "1 award node(s), 1 project node(s), and 1 output node(s) were inspected."
+      ],
+      "remediationActions": [
+        "Add a stable funder award URI for NIH R01NS777."
+      ],
+      "reviewerPacket": {
+        "graphTitle": "Neuroimaging method graph",
+        "status": "review",
+        "requiredDecision": "lineage_review",
+        "blockerCodes": [],
+        "warningCodes": [
+          "AWARD_URI_MISSING",
+          "EXPIRED_AWARD_MARKED_ACTIVE",
+          "DATA_SHARING_MANDATE_NEEDS_REVIEW",
+          "FUNDER_REPORTING_EXPORT_NOT_READY",
+          "FUNDER_AFFINITY_EXPLANATION_MISSING"
+        ],
+        "readySignals": [
+          "Award records were checked for canonical funder IDs, award numbers, URIs, dates, and mandates.",
+          "Project-to-award graph edges were checked for missing targets.",
+          "Output funding statements and inherited project award edges were checked.",
+          "Award mandates were compared against output open-access, data, and reporting metadata.",
+          "1 funder-aware recommendation(s) were checked for award lineage safety.",
+          "1 award node(s), 1 project node(s), and 1 output node(s) were inspected."
+        ]
+      },
+      "auditDigest": "KG-FUNDER-REVIEW-2:review:B=none:W=AWARD_URI_MISSING|DATA_SHARING_MANDATE_NEEDS_REVIEW|EXPIRED_AWARD_MARKED_ACTIVE|FUNDER_AFFINITY_EXPLANATION_MISSING|FUNDER_REPORTING_EXPORT_NOT_READY"
+    },
+    {
+      "graphId": "KG-FUNDER-READY-1",
+      "status": "ready",
+      "blockers": [],
+      "warnings": [],
+      "readySignals": [
+        "Award records were checked for canonical funder IDs, award numbers, URIs, dates, and mandates.",
+        "Project-to-award graph edges were checked for missing targets.",
+        "Output funding statements and inherited project award edges were checked.",
+        "Award mandates were compared against output open-access, data, and reporting metadata.",
+        "1 funder-aware recommendation(s) were checked for award lineage safety.",
+        "1 award node(s), 1 project node(s), and 1 output node(s) were inspected."
+      ],
+      "remediationActions": [],
+      "reviewerPacket": {
+        "graphTitle": "Catalyst reuse knowledge graph",
+        "status": "ready",
+        "requiredDecision": "release_graph",
+        "blockerCodes": [],
+        "warningCodes": [],
+        "readySignals": [
+          "Award records were checked for canonical funder IDs, award numbers, URIs, dates, and mandates.",
+          "Project-to-award graph edges were checked for missing targets.",
+          "Output funding statements and inherited project award edges were checked.",
+          "Award mandates were compared against output open-access, data, and reporting metadata.",
+          "1 funder-aware recommendation(s) were checked for award lineage safety.",
+          "1 award node(s), 1 project node(s), and 1 output node(s) were inspected."
+        ]
+      },
+      "auditDigest": "KG-FUNDER-READY-1:ready:B=none:W=none"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "generatedAt": "2026-05-22T03:00:00.000Z",
+  "project": {
+    "id": "proj-neuro-graph-biomarkers",
+    "title": "Neural graph biomarkers for early intervention response",
+    "domain": "neuroscience",
+    "anonymousReviewMode": "double_blind"
+  },
+  "summary": {
+    "projectId": "proj-neuro-graph-biomarkers",
+    "totalAssignments": 5,
+    "allow": 1,
+    "stewardReview": 1,
+    "recuse": 3,
+    "criticalFindings": 3,
+    "reputationWeightAtRisk": 0.92,
+    "anonymousMode": "double_blind"
+  },
+  "decisions": [
+    {
+      "assignmentId": "assign-lina",
+      "reviewerId": "rev-lina",
+      "reviewerLabel": "reviewer-aa720145",
+      "reviewType": "methods_reproducibility",
+      "mode": "double_blind",
+      "decision": "allow",
+      "severity": "low",
+      "riskScore": 16,
+      "reputationWeight": 0.22,
+      "publicImpact": "profile_and_project",
+      "blockers": [],
+      "warnings": [
+        "relationship:prior_public_comment",
+        "public_reputation_surface"
+      ],
+      "findings": [
+        {
+          "authorId": "user-cora",
+          "type": "prior_public_comment",
+          "severity": "low",
+          "points": 8,
+          "hard": false,
+          "evidence": "Prior public methods question on an earlier project version."
+        }
+      ],
+      "auditDigest": "cb756061b9d85adc0df6efc2361ae849a576245173302c616bc0d5b7d6a98f56"
+    },
+    {
+      "assignmentId": "assign-mateo",
+      "reviewerId": "rev-mateo",
+      "reviewerLabel": "reviewer-565c1d0e",
+      "reviewType": "technical_rigor",
+      "mode": "double_blind",
+      "decision": "recuse",
+      "severity": "critical",
+      "riskScore": 118,
+      "reputationWeight": 0.34,
+      "publicImpact": "profile_and_leaderboard",
+      "blockers": [
+        "hard_conflict:same_lab",
+        "hard_conflict:mentor_student"
+      ],
+      "warnings": [
+        "blind_review_institution_overlap",
+        "high_reputation_weight",
+        "public_reputation_surface"
+      ],
+      "findings": [
+        {
+          "authorId": "user-ada",
+          "type": "same_lab",
+          "severity": "critical",
+          "points": 40,
+          "hard": true,
+          "evidence": "Current lab roster places reviewer and author in lab-graph-neuro."
+        },
+        {
+          "authorId": "user-cora",
+          "type": "mentor_student",
+          "severity": "critical",
+          "points": 40,
+          "hard": true,
+          "evidence": "Reviewer is listed as project methods mentor."
+        }
+      ],
+      "auditDigest": "ea3c8c0a00aea4991dd7518293dc2875d6399abb31f60715ca113afe63e76098"
+    },
+    {
+      "assignmentId": "assign-nadia",
+      "reviewerId": "rev-nadia",
+      "reviewerLabel": "reviewer-75c8fcbd",
+      "reviewType": "statistical_methods",
+      "mode": "public",
+      "decision": "steward_review",
+      "severity": "medium",
+      "riskScore": 36,
+      "reputationWeight": 0.18,
+      "publicImpact": "profile_only",
+      "blockers": [],
+      "warnings": [
+        "conflict_disclosure_stale",
+        "relationship:coauthorship"
+      ],
+      "findings": [
+        {
+          "authorId": "user-ben",
+          "type": "coauthorship",
+          "severity": "high",
+          "points": 22,
+          "hard": false,
+          "evidence": "Shared preprint DOI 10.5555/neuro.2025.14."
+        }
+      ],
+      "auditDigest": "da63a9b6a2979d9e7adfe7b7dea23076538b8fa2f0671178a3766ced44918124"
+    },
+    {
+      "assignmentId": "assign-oscar",
+      "reviewerId": "rev-oscar",
+      "reviewerLabel": "reviewer-0b08c827",
+      "reviewType": "clinical_translation",
+      "mode": "double_blind",
+      "decision": "recuse",
+      "severity": "critical",
+      "riskScore": 78,
+      "reputationWeight": 0.28,
+      "publicImpact": "profile_and_project",
+      "blockers": [
+        "hard_conflict:shared_grant"
+      ],
+      "warnings": [
+        "relationship:shared_institution",
+        "high_reputation_weight",
+        "public_reputation_surface"
+      ],
+      "findings": [
+        {
+          "authorId": "user-ben",
+          "type": "shared_institution",
+          "severity": "medium",
+          "points": 18,
+          "hard": false,
+          "evidence": "Same institution for double-blind review."
+        },
+        {
+          "authorId": "user-ben",
+          "type": "shared_grant",
+          "severity": "critical",
+          "points": 40,
+          "hard": true,
+          "evidence": "Both are named personnel on grant-ninds-2214."
+        }
+      ],
+      "auditDigest": "8ee165ac39c58d0a7842e11af8facee63374f0c8d37e704b043c934abfa75068"
+    },
+    {
+      "assignmentId": "assign-priya",
+      "reviewerId": "rev-priya",
+      "reviewerLabel": "reviewer-64152af5",
+      "reviewType": "domain_review",
+      "mode": "public",
+      "decision": "recuse",
+      "severity": "critical",
+      "riskScore": 68,
+      "reputationWeight": 0.12,
+      "publicImpact": "profile_only",
+      "blockers": [
+        "reviewer_inactive"
+      ],
+      "warnings": [
+        "reviewer_history_thin",
+        "calibration_below_threshold",
+        "conflict_disclosure_stale"
+      ],
+      "findings": [],
+      "auditDigest": "0bfffca9bfede4687ed414acd900d266c0965eec3850306fedaa04896a5ea131"
+    }
+  ],
+  "stewardQueue": [
+    {
+      "assignmentId": "assign-mateo",
+      "severity": "critical",
+      "code": "replace_reviewer",
+      "message": "reviewer-565c1d0e should be recused before review credit or reputation impact is recorded."
+    },
+    {
+      "assignmentId": "assign-nadia",
+      "severity": "medium",
+      "code": "steward_review_required",
+      "message": "reviewer-75c8fcbd needs conflict steward review before assignment is released."
+    },
+    {
+      "assignmentId": "assign-oscar",
+      "severity": "critical",
+      "code": "replace_reviewer",
+      "message": "reviewer-0b08c827 should be recused before review credit or reputation impact is recorded."
+    },
+    {
+      "assignmentId": "assign-priya",
+      "severity": "critical",
+      "code": "replace_reviewer",
+      "message": "reviewer-64152af5 should be recused before review credit or reputation impact is recorded."
+    }
+  ],
+  "packetDigest": "3fad477b686abbaba68bd81c5140c2290ea013644782c632a20c2c2f2936680f"
+}

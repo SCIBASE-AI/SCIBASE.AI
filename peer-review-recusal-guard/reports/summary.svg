@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#111827"/>
+  <rect x="32" y="32" width="896" height="356" rx="8" fill="#1f2937"/>
+  <text x="54" y="78" fill="#ffffff" font-size="30" font-family="Arial, sans-serif" font-weight="700">Peer Review Recusal Guard</text>
+  <text x="54" y="108" fill="#d1d5db" font-size="17" font-family="Arial, sans-serif">Pre-review conflict screening for community reputation integrity</text>
+  <text x="54" y="134" fill="#a7f3d0" font-size="17" font-family="Arial, sans-serif">allow 1 | steward 1 | recuse 3 | weight at risk 92%</text>
+  <g><rect x="54" y="135" width="852" height="30" rx="4" fill="#117865" opacity="0.88"/><text x="72" y="158" fill="#ffffff" font-size="17">assign-lina: allow (16)</text></g><g><rect x="54" y="173" width="852" height="30" rx="4" fill="#b91c1c" opacity="0.88"/><text x="72" y="196" fill="#ffffff" font-size="17">assign-mateo: recuse (118)</text></g><g><rect x="54" y="211" width="852" height="30" rx="4" fill="#b45309" opacity="0.88"/><text x="72" y="234" fill="#ffffff" font-size="17">assign-nadia: steward_review (36)</text></g><g><rect x="54" y="249" width="852" height="30" rx="4" fill="#b91c1c" opacity="0.88"/><text x="72" y="272" fill="#ffffff" font-size="17">assign-oscar: recuse (78)</text></g><g><rect x="54" y="287" width="852" height="30" rx="4" fill="#b91c1c" opacity="0.88"/><text x="72" y="310" fill="#ffffff" font-size="17">assign-priya: recuse (68)</text></g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+<rect width="920" height="420" fill="#f8fafc"/>
+<rect x="24" y="24" width="872" height="372" rx="8" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="42" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Manuscript Unit Consistency Assistant</text>
+<text x="42" y="110" font-family="Arial" font-size="18" fill="#475467">Metabolic rescue assay draft with unit hygiene risks</text>
+<text x="42" y="135" font-family="Arial" font-size="15" fill="#667085">Audit digest 66b689128bf18282</text>
+<text x="42" y="142" font-family="Arial" font-size="17" fill="#101828">High: 2</text>
+<rect x="42" y="150" width="180" height="26" rx="4" fill="#d92d20"/>
+<text x="42" y="197" font-family="Arial" font-size="17" fill="#101828">Medium: 4</text>
+<rect x="42" y="205" width="360" height="26" rx="4" fill="#f79009"/>
+<text x="42" y="252" font-family="Arial" font-size="17" fill="#101828">Low: 2</text>
+<rect x="42" y="260" width="180" height="26" rx="4" fill="#475467"/>
+<circle cx="730" cy="205" r="86" fill="#ecfdf3" stroke="#12b76a" stroke-width="10"/>
+<text x="730" y="195" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" fill="#027a48">2</text>
+<text x="730" y="228" font-family="Arial" font-size="16" text-anchor="middle" fill="#027a48">readiness score</text>
+<text x="730" y="286" font-family="Arial" font-size="17" text-anchor="middle" fill="#344054">block-before-submission</text>
+</svg>

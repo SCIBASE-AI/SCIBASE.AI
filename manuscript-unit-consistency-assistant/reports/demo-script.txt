@@ -1,0 +1,9 @@
+Demo storyboard for manuscript-unit-consistency-assistant
+
+1. Load a draft manuscript packet with sections, tables, and tracked terms.
+2. Extract 15 measurements from methods, results, and table cells.
+3. Surface 8 reviewer findings, prioritizing high-severity blockers first.
+4. Export JSON, Markdown, and SVG artifacts for an AI peer-review aid workflow.
+
+Readiness result: block-before-submission (2/100).
+Audit digest: 66b689128bf18282.

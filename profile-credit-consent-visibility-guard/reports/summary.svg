@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <style>
+    .bg{fill:#111827}
+    .panel{fill:#f8fafc}
+    .title{font:700 34px Arial,sans-serif;fill:#0f172a}
+    .meta{font:400 18px Arial,sans-serif;fill:#475569}
+    .label{font:600 20px Arial,sans-serif;fill:#1e293b}
+    .value{font:700 20px Arial,sans-serif;fill:#0f172a}
+    .bar{fill:#2dd4bf}
+    .digest{font:400 15px monospace;fill:#334155}
+  </style>
+  <rect class="bg" width="960" height="540"/>
+  <rect class="panel" x="28" y="28" width="904" height="484" rx="16"/>
+  <text x="44" y="78" class="title">Profile Credit Consent Visibility Guard</text>
+  <text x="44" y="110" class="meta">Credits: 7 | Public reputation delta: 17</text>
+
+  <text x="44" y="153" class="label">citation_only</text>
+  <rect x="238" y="132" width="78" height="26" rx="5" class="bar"/>
+  <text x="326" y="152" class="value">1</text>
+  <text x="44" y="195" class="label">hold</text>
+  <rect x="238" y="174" width="156" height="26" rx="5" class="bar"/>
+  <text x="404" y="194" class="value">2</text>
+  <text x="44" y="237" class="label">institutional_only</text>
+  <rect x="238" y="216" width="78" height="26" rx="5" class="bar"/>
+  <text x="326" y="236" class="value">1</text>
+  <text x="44" y="279" class="label">publishable</text>
+  <rect x="238" y="258" width="156" height="26" rx="5" class="bar"/>
+  <text x="404" y="278" class="value">2</text>
+  <text x="44" y="321" class="label">redacted</text>
+  <rect x="238" y="300" width="78" height="26" rx="5" class="bar"/>
+  <text x="326" y="320" class="value">1</text>
+  <text x="44" y="482" class="digest">audit 41de587fb911104fbd7898f0df8a48b004d188bf0c48b408</text>
+</svg>

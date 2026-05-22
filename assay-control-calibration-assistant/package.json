@@ -1,0 +1,12 @@
+{
+  "name": "assay-control-calibration-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free assay control and calibration completeness assistant for SCIBASE issue #16.",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check demo.js && node --check render-video.js && node --check test.js",
+    "test": "node --test test.js",
+    "demo": "node demo.js",
+    "video": "node render-video.js"
+  }
+}

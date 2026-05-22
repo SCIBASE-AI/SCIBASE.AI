@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<rect width="960" height="540" fill="#f8fafc"/>
+<rect x="48" y="48" width="864" height="444" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="84" y="112" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#c2410c">Embargo release BLOCK</text>
+<text x="84" y="164" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Release: release-alpha-double-blind</text>
+<text x="84" y="206" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Blockers: 7   Warnings: 1   Passes: 4</text>
+<text x="84" y="248" font-family="Arial, sans-serif" font-size="22" fill="#0f172a">Risk score: 710</text>
+<text x="84" y="290" font-family="Arial, sans-serif" font-size="18" fill="#475569">Fingerprint: adfb1595a7cdcd07</text>
+<line x1="84" y1="326" x2="876" y2="326" stroke="#e2e8f0" stroke-width="2"/>
+<text x="84" y="370" font-family="Arial, sans-serif" font-size="18" fill="#334155">must_fix: managing_editor</text>
+<text x="84" y="404" font-family="Arial, sans-serif" font-size="18" fill="#334155">must_fix: collaboration_lead</text>
+<text x="84" y="438" font-family="Arial, sans-serif" font-size="18" fill="#334155">must_fix: data_steward</text>
+<text x="84" y="472" font-family="Arial, sans-serif" font-size="18" fill="#334155">must_fix: data_steward</text>
+</svg>

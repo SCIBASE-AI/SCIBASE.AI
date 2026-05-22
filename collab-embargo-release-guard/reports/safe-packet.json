@@ -1,0 +1,153 @@
+{
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "releaseId": "release-alpha-double-blind-safe",
+  "releaseChannel": "journal-submission",
+  "releaseAt": "2026-06-16T12:00:00.000Z",
+  "status": "hold",
+  "riskScore": 10,
+  "fingerprint": "1ed70b2a9d838f2377d9d112e76d503b2a9a7876331ee62a69676cc40a438ff1",
+  "summary": {
+    "checks": 10,
+    "blockers": 0,
+    "warnings": 1,
+    "passes": 9
+  },
+  "checks": [
+    {
+      "id": "embargo-embargo-dataset-alpha-expired",
+      "severity": "pass",
+      "message": "Embargo window has expired before release.",
+      "evidence": {
+        "embargo": "embargo-dataset-alpha",
+        "endsAt": "2026-06-15T16:00:00.000Z",
+        "artifacts": [
+          "dataset-alpha"
+        ]
+      }
+    },
+    {
+      "id": "blind-review-identity-redacted",
+      "severity": "pass",
+      "message": "Blind-review package has no visible author or affiliation identity fields.",
+      "evidence": {
+        "reviewMode": "double_blind"
+      }
+    },
+    {
+      "id": "artifact-figure-main-public",
+      "severity": "pass",
+      "message": "Artifact is public-safe for this release package.",
+      "evidence": {
+        "artifact": "figure-main"
+      }
+    },
+    {
+      "id": "artifact-dataset-alpha-redacted",
+      "severity": "warning",
+      "message": "Restricted artifact is included only through a redacted digest.",
+      "evidence": {
+        "artifact": "dataset-alpha",
+        "classification": "embargoed",
+        "redactionDigest": "sha256:dataset-alpha-redacted"
+      }
+    },
+    {
+      "id": "thread-thread-editorial-ready-release-safe",
+      "severity": "pass",
+      "message": "Exported collaboration thread is release-safe.",
+      "evidence": {
+        "thread": "thread-editorial-ready"
+      }
+    },
+    {
+      "id": "presence-snapshots-excluded",
+      "severity": "pass",
+      "message": "Live cursor and presence snapshots are excluded from the release package.",
+      "evidence": {}
+    },
+    {
+      "id": "section-intro-approved",
+      "severity": "pass",
+      "message": "Exported section matches the approved collaborative version.",
+      "evidence": {
+        "section": "intro",
+        "version": "v5"
+      }
+    },
+    {
+      "id": "section-methods-approved",
+      "severity": "pass",
+      "message": "Exported section matches the approved collaborative version.",
+      "evidence": {
+        "section": "methods",
+        "version": "v8"
+      }
+    },
+    {
+      "id": "section-results-approved",
+      "severity": "pass",
+      "message": "Exported section matches the approved collaborative version.",
+      "evidence": {
+        "section": "results",
+        "version": "v3"
+      }
+    },
+    {
+      "id": "release-clock-after-not-before",
+      "severity": "pass",
+      "message": "Release is scheduled after the policy not-before timestamp.",
+      "evidence": {
+        "releaseAt": "2026-06-16T12:00:00.000Z",
+        "notBefore": "2026-06-01T13:00:00.000Z"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "action-artifact-dataset-alpha-redacted",
+      "sourceCheck": "artifact-dataset-alpha-redacted",
+      "priority": "review",
+      "ownerRole": "data_steward",
+      "instruction": "Replace restricted files with release-safe redacted digests."
+    }
+  ],
+  "safeManifest": {
+    "id": "release-alpha-double-blind-safe",
+    "channel": "journal-submission",
+    "releaseAt": "2026-06-16T12:00:00.000Z",
+    "sections": [
+      {
+        "id": "intro",
+        "version": "v5"
+      },
+      {
+        "id": "methods",
+        "version": "v8"
+      },
+      {
+        "id": "results",
+        "version": "v3"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "figure-main",
+        "title": "Main blinded figure",
+        "treatment": "full",
+        "digest": "sha256:figure-main"
+      },
+      {
+        "id": "dataset-alpha",
+        "title": "Partner hospital dataset alpha redacted digest",
+        "treatment": "redacted",
+        "digest": "sha256:dataset-alpha-redacted"
+      }
+    ],
+    "metadata": {
+      "title": "Collaborative Study Alpha",
+      "reviewMode": "double_blind",
+      "authorsRedacted": true,
+      "affiliationsRedacted": true
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "releaseId": "release-alpha-double-blind",
+  "releaseChannel": "journal-submission",
+  "releaseAt": "2026-06-01T12:00:00.000Z",
+  "status": "block",
+  "riskScore": 710,
+  "fingerprint": "adfb1595a7cdcd07b85f57ca1bd3a7c66b13ef1f3d744080d278f835715e8ae5",
+  "summary": {
+    "checks": 12,
+    "blockers": 7,
+    "warnings": 1,
+    "passes": 4
+  },
+  "checks": [
+    {
+      "id": "embargo-embargo-dataset-alpha-active",
+      "severity": "blocker",
+      "message": "Release package contains artifacts before their embargo window ends.",
+      "evidence": {
+        "embargo": "embargo-dataset-alpha",
+        "endsAt": "2026-06-15T16:00:00.000Z",
+        "artifacts": [
+          "dataset-alpha",
+          "supplement-lab-notes"
+        ],
+        "releaseAt": "2026-06-01T12:00:00.000Z"
+      }
+    },
+    {
+      "id": "blind-review-identity-leak",
+      "severity": "blocker",
+      "message": "Blind-review release package exposes author or affiliation identity fields.",
+      "evidence": {
+        "reviewMode": "double_blind",
+        "exposed": [
+          "metadata.authors",
+          "metadata.affiliations",
+          "metadata.correspondingAuthor",
+          "section.methods.exportText"
+        ]
+      }
+    },
+    {
+      "id": "artifact-figure-main-public",
+      "severity": "pass",
+      "message": "Artifact is public-safe for this release package.",
+      "evidence": {
+        "artifact": "figure-main"
+      }
+    },
+    {
+      "id": "artifact-dataset-alpha-restricted",
+      "severity": "blocker",
+      "message": "Restricted artifact is included without a release-safe redaction treatment.",
+      "evidence": {
+        "artifact": "dataset-alpha",
+        "classification": "embargoed",
+        "releaseTreatment": "none"
+      }
+    },
+    {
+      "id": "artifact-supplement-lab-notes-restricted",
+      "severity": "blocker",
+      "message": "Restricted artifact is included without a release-safe redaction treatment.",
+      "evidence": {
+        "artifact": "supplement-lab-notes",
+        "classification": "restricted",
+        "releaseTreatment": "full"
+      }
+    },
+    {
+      "id": "thread-thread-editorial-ready-release-safe",
+      "severity": "pass",
+      "message": "Exported collaboration thread is release-safe.",
+      "evidence": {
+        "thread": "thread-editorial-ready"
+      }
+    },
+    {
+      "id": "thread-thread-private-sponsor-private-export",
+      "severity": "blocker",
+      "message": "Release package exports a private collaboration thread.",
+      "evidence": {
+        "thread": "thread-private-sponsor",
+        "visibility": "private",
+        "section": "methods"
+      }
+    },
+    {
+      "id": "presence-snapshots-exported",
+      "severity": "warning",
+      "message": "Live presence snapshots are included; verify they are sanitized before external release.",
+      "evidence": {
+        "includePresenceSnapshots": true
+      }
+    },
+    {
+      "id": "section-intro-approved",
+      "severity": "pass",
+      "message": "Exported section matches the approved collaborative version.",
+      "evidence": {
+        "section": "intro",
+        "version": "v5"
+      }
+    },
+    {
+      "id": "section-methods-version-drift",
+      "severity": "blocker",
+      "message": "Exported section version differs from the approved collaborative version.",
+      "evidence": {
+        "section": "methods",
+        "exportedVersion": "v6",
+        "approvedVersion": "v7",
+        "latestVersion": "v8"
+      }
+    },
+    {
+      "id": "section-results-approved",
+      "severity": "pass",
+      "message": "Exported section matches the approved collaborative version.",
+      "evidence": {
+        "section": "results",
+        "version": "v3"
+      }
+    },
+    {
+      "id": "release-clock-before-not-before",
+      "severity": "blocker",
+      "message": "Release is scheduled before the policy not-before timestamp.",
+      "evidence": {
+        "releaseAt": "2026-06-01T12:00:00.000Z",
+        "notBefore": "2026-06-01T13:00:00.000Z"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "action-embargo-embargo-dataset-alpha-active",
+      "sourceCheck": "embargo-embargo-dataset-alpha-active",
+      "priority": "must_fix",
+      "ownerRole": "managing_editor",
+      "instruction": "Remove embargoed artifacts or move release time after the embargo end."
+    },
+    {
+      "id": "action-blind-review-identity-leak",
+      "sourceCheck": "blind-review-identity-leak",
+      "priority": "must_fix",
+      "ownerRole": "collaboration_lead",
+      "instruction": "Redact author and affiliation identity fields before external review export."
+    },
+    {
+      "id": "action-artifact-dataset-alpha-restricted",
+      "sourceCheck": "artifact-dataset-alpha-restricted",
+      "priority": "must_fix",
+      "ownerRole": "data_steward",
+      "instruction": "Replace restricted files with release-safe redacted digests."
+    },
+    {
+      "id": "action-artifact-supplement-lab-notes-restricted",
+      "sourceCheck": "artifact-supplement-lab-notes-restricted",
+      "priority": "must_fix",
+      "ownerRole": "data_steward",
+      "instruction": "Replace restricted files with release-safe redacted digests."
+    },
+    {
+      "id": "action-thread-thread-private-sponsor-private-export",
+      "sourceCheck": "thread-thread-private-sponsor-private-export",
+      "priority": "must_fix",
+      "ownerRole": "collaboration_lead",
+      "instruction": "Resolve or exclude private review threads before release."
+    },
+    {
+      "id": "action-presence-snapshots-exported",
+      "sourceCheck": "presence-snapshots-exported",
+      "priority": "review",
+      "ownerRole": "collaboration_lead",
+      "instruction": "Exclude live presence snapshots from external release packets."
+    },
+    {
+      "id": "action-section-methods-version-drift",
+      "sourceCheck": "section-methods-version-drift",
+      "priority": "must_fix",
+      "ownerRole": "section_owner",
+      "instruction": "Export the approved section version or re-approve the latest draft."
+    },
+    {
+      "id": "action-release-clock-before-not-before",
+      "sourceCheck": "release-clock-before-not-before",
+      "priority": "must_fix",
+      "ownerRole": "managing_editor",
+      "instruction": "Move the release time after the not-before gate or update the governing policy clock."
+    }
+  ],
+  "safeManifest": {
+    "id": "release-alpha-double-blind",
+    "channel": "journal-submission",
+    "releaseAt": "2026-06-01T12:00:00.000Z",
+    "sections": [
+      {
+        "id": "intro",
+        "version": "v5"
+      },
+      {
+        "id": "methods",
+        "version": "v6"
+      },
+      {
+        "id": "results",
+        "version": "v3"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "figure-main",
+        "title": "Main blinded figure",
+        "treatment": "full",
+        "digest": "sha256:figure-main"
+      }
+    ],
+    "metadata": {
+      "title": "Collaborative Study Alpha",
+      "reviewMode": "double_blind",
+      "authorsRedacted": false,
+      "affiliationsRedacted": false
+    }
+  }
+}

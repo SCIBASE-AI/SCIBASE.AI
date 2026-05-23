@@ -1,0 +1,957 @@
+{
+  "asOf": "2026-05-23T21:50:00.000Z",
+  "policy": {
+    "sensitiveObjectTypes": [
+      "dataset",
+      "notebook",
+      "manuscript",
+      "review_thread"
+    ],
+    "restrictedClassifications": [
+      "restricted",
+      "human_subject",
+      "embargoed",
+      "anonymous_review"
+    ],
+    "requiredStewardApprovalActions": [
+      "read",
+      "download",
+      "export",
+      "comment"
+    ],
+    "maxOverrideAgeDays": 90,
+    "forbiddenInheritedActions": {
+      "dataset": [
+        "download",
+        "export"
+      ],
+      "notebook": [
+        "execute",
+        "export"
+      ],
+      "manuscript": [
+        "publish"
+      ],
+      "review_thread": [
+        "read",
+        "comment"
+      ]
+    },
+    "policyVersion": "object-permission-inheritance-drift-v1"
+  },
+  "summary": {
+    "totalProjects": 2,
+    "readyProjects": 1,
+    "reviewProjects": 0,
+    "blockedProjects": 1,
+    "totalObjects": 5,
+    "sensitiveObjects": 4,
+    "totalFindings": 6,
+    "criticalFindings": 3,
+    "warningFindings": 3
+  },
+  "projects": [
+    {
+      "projectId": "oncology-collab",
+      "title": "Oncology Collaboration Workspace",
+      "status": "permission_change_blocked",
+      "summary": {
+        "objects": 3,
+        "sensitiveObjects": 3,
+        "criticalFindings": 3,
+        "warningFindings": 3
+      },
+      "objects": [
+        {
+          "objectId": "dataset-rna-human",
+          "objectType": "dataset",
+          "classification": "human_subject",
+          "sensitive": true,
+          "checks": [
+            {
+              "code": "inherited_grant_overexposure",
+              "severity": "critical",
+              "pass": false,
+              "message": "2 inherited grants would overexpose this object.",
+              "evidence": {
+                "exposures": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "download",
+                    "objectType": "dataset",
+                    "classification": "human_subject"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "download",
+                    "objectType": "dataset",
+                    "classification": "human_subject"
+                  }
+                ]
+              }
+            },
+            {
+              "code": "stale_object_override",
+              "severity": "warning",
+              "pass": true,
+              "message": "No stale allow overrides remain on this object.",
+              "evidence": {
+                "overrideIds": [],
+                "maxOverrideAgeDays": 90
+              }
+            },
+            {
+              "code": "data_steward_approval_present",
+              "severity": "critical",
+              "pass": false,
+              "message": "1 pending sensitive actions are missing data-steward approval.",
+              "evidence": {
+                "missingApprovals": [
+                  {
+                    "changeId": "change-dataset-download-ben",
+                    "action": "download",
+                    "targetMemberId": "member-ben"
+                  }
+                ]
+              }
+            },
+            {
+              "code": "object_override_completeness",
+              "severity": "warning",
+              "pass": false,
+              "message": "2 restricted inherited actions lack explicit object overrides.",
+              "evidence": {
+                "gaps": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "download"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "download"
+                  }
+                ]
+              }
+            }
+          ],
+          "findings": [
+            {
+              "objectId": "dataset-rna-human",
+              "code": "inherited_grant_overexposure",
+              "severity": "critical",
+              "message": "2 inherited grants would overexpose this object.",
+              "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace.",
+              "evidence": {
+                "exposures": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "download",
+                    "objectType": "dataset",
+                    "classification": "human_subject"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "download",
+                    "objectType": "dataset",
+                    "classification": "human_subject"
+                  }
+                ]
+              }
+            },
+            {
+              "objectId": "dataset-rna-human",
+              "code": "data_steward_approval_present",
+              "severity": "critical",
+              "message": "1 pending sensitive actions are missing data-steward approval.",
+              "remediation": "Collect current data-steward approval before applying object permission changes.",
+              "evidence": {
+                "missingApprovals": [
+                  {
+                    "changeId": "change-dataset-download-ben",
+                    "action": "download",
+                    "targetMemberId": "member-ben"
+                  }
+                ]
+              }
+            },
+            {
+              "objectId": "dataset-rna-human",
+              "code": "object_override_completeness",
+              "severity": "warning",
+              "message": "2 restricted inherited actions lack explicit object overrides.",
+              "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently.",
+              "evidence": {
+                "gaps": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "download"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "download"
+                  }
+                ]
+              }
+            }
+          ],
+          "effectiveGrants": [
+            {
+              "memberId": "member-ada",
+              "objectId": "dataset-rna-human",
+              "actions": [
+                "comment",
+                "download",
+                "execute",
+                "publish",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-ben",
+              "objectId": "dataset-rna-human",
+              "actions": [
+                "download",
+                "execute",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-cy",
+              "objectId": "dataset-rna-human",
+              "actions": [
+                "comment",
+                "read"
+              ]
+            }
+          ]
+        },
+        {
+          "objectId": "thread-blinded-review",
+          "objectType": "review_thread",
+          "classification": "anonymous_review",
+          "sensitive": true,
+          "checks": [
+            {
+              "code": "inherited_grant_overexposure",
+              "severity": "critical",
+              "pass": false,
+              "message": "5 inherited grants would overexpose this object.",
+              "evidence": {
+                "exposures": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "read",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "comment",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "read",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-cy",
+                    "roleId": "reviewer",
+                    "action": "read",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-cy",
+                    "roleId": "reviewer",
+                    "action": "comment",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  }
+                ]
+              }
+            },
+            {
+              "code": "stale_object_override",
+              "severity": "warning",
+              "pass": false,
+              "message": "1 stale allow overrides require review.",
+              "evidence": {
+                "overrideIds": [
+                  "override-thread-legacy-read"
+                ],
+                "maxOverrideAgeDays": 90
+              }
+            },
+            {
+              "code": "data_steward_approval_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Required data-steward approvals are present for pending sensitive actions.",
+              "evidence": {
+                "missingApprovals": []
+              }
+            },
+            {
+              "code": "object_override_completeness",
+              "severity": "warning",
+              "pass": false,
+              "message": "4 restricted inherited actions lack explicit object overrides.",
+              "evidence": {
+                "gaps": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "read"
+                  },
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "comment"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "read"
+                  },
+                  {
+                    "memberId": "member-cy",
+                    "roleId": "reviewer",
+                    "action": "comment"
+                  }
+                ]
+              }
+            }
+          ],
+          "findings": [
+            {
+              "objectId": "thread-blinded-review",
+              "code": "inherited_grant_overexposure",
+              "severity": "critical",
+              "message": "5 inherited grants would overexpose this object.",
+              "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace.",
+              "evidence": {
+                "exposures": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "read",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "comment",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "read",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-cy",
+                    "roleId": "reviewer",
+                    "action": "read",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  },
+                  {
+                    "memberId": "member-cy",
+                    "roleId": "reviewer",
+                    "action": "comment",
+                    "objectType": "review_thread",
+                    "classification": "anonymous_review"
+                  }
+                ]
+              }
+            },
+            {
+              "objectId": "thread-blinded-review",
+              "code": "stale_object_override",
+              "severity": "warning",
+              "message": "1 stale allow overrides require review.",
+              "remediation": "Recertify, expire, or replace stale object-level allow overrides.",
+              "evidence": {
+                "overrideIds": [
+                  "override-thread-legacy-read"
+                ],
+                "maxOverrideAgeDays": 90
+              }
+            },
+            {
+              "objectId": "thread-blinded-review",
+              "code": "object_override_completeness",
+              "severity": "warning",
+              "message": "4 restricted inherited actions lack explicit object overrides.",
+              "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently.",
+              "evidence": {
+                "gaps": [
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "read"
+                  },
+                  {
+                    "memberId": "member-ada",
+                    "roleId": "owner",
+                    "action": "comment"
+                  },
+                  {
+                    "memberId": "member-ben",
+                    "roleId": "analyst",
+                    "action": "read"
+                  },
+                  {
+                    "memberId": "member-cy",
+                    "roleId": "reviewer",
+                    "action": "comment"
+                  }
+                ]
+              }
+            }
+          ],
+          "effectiveGrants": [
+            {
+              "memberId": "member-ada",
+              "objectId": "thread-blinded-review",
+              "actions": [
+                "comment",
+                "download",
+                "execute",
+                "export",
+                "publish",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-ben",
+              "objectId": "thread-blinded-review",
+              "actions": [
+                "download",
+                "execute",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-cy",
+              "objectId": "thread-blinded-review",
+              "actions": [
+                "comment",
+                "read"
+              ]
+            }
+          ]
+        },
+        {
+          "objectId": "notebook-qc",
+          "objectType": "notebook",
+          "classification": "restricted",
+          "sensitive": true,
+          "checks": [
+            {
+              "code": "inherited_grant_overexposure",
+              "severity": "critical",
+              "pass": true,
+              "message": "Inherited role grants do not overexpose this object.",
+              "evidence": {
+                "exposures": []
+              }
+            },
+            {
+              "code": "stale_object_override",
+              "severity": "warning",
+              "pass": true,
+              "message": "No stale allow overrides remain on this object.",
+              "evidence": {
+                "overrideIds": [],
+                "maxOverrideAgeDays": 90
+              }
+            },
+            {
+              "code": "data_steward_approval_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Required data-steward approvals are present for pending sensitive actions.",
+              "evidence": {
+                "missingApprovals": []
+              }
+            },
+            {
+              "code": "object_override_completeness",
+              "severity": "warning",
+              "pass": true,
+              "message": "Object overrides fully cover restricted inherited actions.",
+              "evidence": {
+                "gaps": []
+              }
+            }
+          ],
+          "findings": [],
+          "effectiveGrants": [
+            {
+              "memberId": "member-ada",
+              "objectId": "notebook-qc",
+              "actions": [
+                "comment",
+                "download",
+                "publish",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-ben",
+              "objectId": "notebook-qc",
+              "actions": [
+                "download",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-cy",
+              "objectId": "notebook-qc",
+              "actions": [
+                "comment",
+                "read"
+              ]
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "objectId": "dataset-rna-human",
+          "code": "inherited_grant_overexposure",
+          "severity": "critical",
+          "message": "2 inherited grants would overexpose this object.",
+          "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace.",
+          "evidence": {
+            "exposures": [
+              {
+                "memberId": "member-ada",
+                "roleId": "owner",
+                "action": "download",
+                "objectType": "dataset",
+                "classification": "human_subject"
+              },
+              {
+                "memberId": "member-ben",
+                "roleId": "analyst",
+                "action": "download",
+                "objectType": "dataset",
+                "classification": "human_subject"
+              }
+            ]
+          }
+        },
+        {
+          "objectId": "dataset-rna-human",
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "message": "1 pending sensitive actions are missing data-steward approval.",
+          "remediation": "Collect current data-steward approval before applying object permission changes.",
+          "evidence": {
+            "missingApprovals": [
+              {
+                "changeId": "change-dataset-download-ben",
+                "action": "download",
+                "targetMemberId": "member-ben"
+              }
+            ]
+          }
+        },
+        {
+          "objectId": "dataset-rna-human",
+          "code": "object_override_completeness",
+          "severity": "warning",
+          "message": "2 restricted inherited actions lack explicit object overrides.",
+          "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently.",
+          "evidence": {
+            "gaps": [
+              {
+                "memberId": "member-ada",
+                "roleId": "owner",
+                "action": "download"
+              },
+              {
+                "memberId": "member-ben",
+                "roleId": "analyst",
+                "action": "download"
+              }
+            ]
+          }
+        },
+        {
+          "objectId": "thread-blinded-review",
+          "code": "inherited_grant_overexposure",
+          "severity": "critical",
+          "message": "5 inherited grants would overexpose this object.",
+          "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace.",
+          "evidence": {
+            "exposures": [
+              {
+                "memberId": "member-ada",
+                "roleId": "owner",
+                "action": "read",
+                "objectType": "review_thread",
+                "classification": "anonymous_review"
+              },
+              {
+                "memberId": "member-ada",
+                "roleId": "owner",
+                "action": "comment",
+                "objectType": "review_thread",
+                "classification": "anonymous_review"
+              },
+              {
+                "memberId": "member-ben",
+                "roleId": "analyst",
+                "action": "read",
+                "objectType": "review_thread",
+                "classification": "anonymous_review"
+              },
+              {
+                "memberId": "member-cy",
+                "roleId": "reviewer",
+                "action": "read",
+                "objectType": "review_thread",
+                "classification": "anonymous_review"
+              },
+              {
+                "memberId": "member-cy",
+                "roleId": "reviewer",
+                "action": "comment",
+                "objectType": "review_thread",
+                "classification": "anonymous_review"
+              }
+            ]
+          }
+        },
+        {
+          "objectId": "thread-blinded-review",
+          "code": "stale_object_override",
+          "severity": "warning",
+          "message": "1 stale allow overrides require review.",
+          "remediation": "Recertify, expire, or replace stale object-level allow overrides.",
+          "evidence": {
+            "overrideIds": [
+              "override-thread-legacy-read"
+            ],
+            "maxOverrideAgeDays": 90
+          }
+        },
+        {
+          "objectId": "thread-blinded-review",
+          "code": "object_override_completeness",
+          "severity": "warning",
+          "message": "4 restricted inherited actions lack explicit object overrides.",
+          "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently.",
+          "evidence": {
+            "gaps": [
+              {
+                "memberId": "member-ada",
+                "roleId": "owner",
+                "action": "read"
+              },
+              {
+                "memberId": "member-ada",
+                "roleId": "owner",
+                "action": "comment"
+              },
+              {
+                "memberId": "member-ben",
+                "roleId": "analyst",
+                "action": "read"
+              },
+              {
+                "memberId": "member-cy",
+                "roleId": "reviewer",
+                "action": "comment"
+              }
+            ]
+          }
+        }
+      ],
+      "remediationQueue": [
+        {
+          "projectId": "oncology-collab",
+          "objectId": "dataset-rna-human",
+          "code": "inherited_grant_overexposure",
+          "severity": "critical",
+          "action": "narrow_inherited_role_or_add_explicit_deny",
+          "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace."
+        },
+        {
+          "projectId": "oncology-collab",
+          "objectId": "dataset-rna-human",
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "action": "collect_data_steward_approval",
+          "remediation": "Collect current data-steward approval before applying object permission changes."
+        },
+        {
+          "projectId": "oncology-collab",
+          "objectId": "dataset-rna-human",
+          "code": "object_override_completeness",
+          "severity": "warning",
+          "action": "add_explicit_object_override_decision",
+          "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently."
+        },
+        {
+          "projectId": "oncology-collab",
+          "objectId": "thread-blinded-review",
+          "code": "inherited_grant_overexposure",
+          "severity": "critical",
+          "action": "narrow_inherited_role_or_add_explicit_deny",
+          "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace."
+        },
+        {
+          "projectId": "oncology-collab",
+          "objectId": "thread-blinded-review",
+          "code": "stale_object_override",
+          "severity": "warning",
+          "action": "recertify_or_expire_object_override",
+          "remediation": "Recertify, expire, or replace stale object-level allow overrides."
+        },
+        {
+          "projectId": "oncology-collab",
+          "objectId": "thread-blinded-review",
+          "code": "object_override_completeness",
+          "severity": "warning",
+          "action": "add_explicit_object_override_decision",
+          "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently."
+        }
+      ]
+    },
+    {
+      "projectId": "materials-open-methods",
+      "title": "Materials Open Methods Workspace",
+      "status": "permission_change_ready",
+      "summary": {
+        "objects": 2,
+        "sensitiveObjects": 1,
+        "criticalFindings": 0,
+        "warningFindings": 0
+      },
+      "objects": [
+        {
+          "objectId": "manuscript-methods",
+          "objectType": "manuscript",
+          "classification": "restricted",
+          "sensitive": true,
+          "checks": [
+            {
+              "code": "inherited_grant_overexposure",
+              "severity": "critical",
+              "pass": true,
+              "message": "Inherited role grants do not overexpose this object.",
+              "evidence": {
+                "exposures": []
+              }
+            },
+            {
+              "code": "stale_object_override",
+              "severity": "warning",
+              "pass": true,
+              "message": "No stale allow overrides remain on this object.",
+              "evidence": {
+                "overrideIds": [],
+                "maxOverrideAgeDays": 90
+              }
+            },
+            {
+              "code": "data_steward_approval_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Required data-steward approvals are present for pending sensitive actions.",
+              "evidence": {
+                "missingApprovals": []
+              }
+            },
+            {
+              "code": "object_override_completeness",
+              "severity": "warning",
+              "pass": true,
+              "message": "Object overrides fully cover restricted inherited actions.",
+              "evidence": {
+                "gaps": []
+              }
+            }
+          ],
+          "findings": [],
+          "effectiveGrants": [
+            {
+              "memberId": "member-dee",
+              "objectId": "manuscript-methods",
+              "actions": [
+                "comment",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-eli",
+              "objectId": "manuscript-methods",
+              "actions": [
+                "comment",
+                "read"
+              ]
+            }
+          ]
+        },
+        {
+          "objectId": "dataset-public-calibration",
+          "objectType": "dataset",
+          "classification": "public",
+          "sensitive": false,
+          "checks": [
+            {
+              "code": "inherited_grant_overexposure",
+              "severity": "critical",
+              "pass": true,
+              "message": "Inherited role grants do not overexpose this object.",
+              "evidence": {
+                "exposures": []
+              }
+            },
+            {
+              "code": "stale_object_override",
+              "severity": "warning",
+              "pass": true,
+              "message": "No stale allow overrides remain on this object.",
+              "evidence": {
+                "overrideIds": [],
+                "maxOverrideAgeDays": 90
+              }
+            },
+            {
+              "code": "data_steward_approval_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Required data-steward approvals are present for pending sensitive actions.",
+              "evidence": {
+                "missingApprovals": []
+              }
+            },
+            {
+              "code": "object_override_completeness",
+              "severity": "warning",
+              "pass": true,
+              "message": "Object overrides fully cover restricted inherited actions.",
+              "evidence": {
+                "gaps": []
+              }
+            }
+          ],
+          "findings": [],
+          "effectiveGrants": [
+            {
+              "memberId": "member-dee",
+              "objectId": "dataset-public-calibration",
+              "actions": [
+                "comment",
+                "read",
+                "write"
+              ]
+            },
+            {
+              "memberId": "member-eli",
+              "objectId": "dataset-public-calibration",
+              "actions": [
+                "comment",
+                "read"
+              ]
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "remediationQueue": []
+    }
+  ],
+  "remediationQueue": [
+    {
+      "projectId": "oncology-collab",
+      "objectId": "dataset-rna-human",
+      "code": "inherited_grant_overexposure",
+      "severity": "critical",
+      "action": "narrow_inherited_role_or_add_explicit_deny",
+      "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace."
+    },
+    {
+      "projectId": "oncology-collab",
+      "objectId": "dataset-rna-human",
+      "code": "data_steward_approval_present",
+      "severity": "critical",
+      "action": "collect_data_steward_approval",
+      "remediation": "Collect current data-steward approval before applying object permission changes."
+    },
+    {
+      "projectId": "oncology-collab",
+      "objectId": "dataset-rna-human",
+      "code": "object_override_completeness",
+      "severity": "warning",
+      "action": "add_explicit_object_override_decision",
+      "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently."
+    },
+    {
+      "projectId": "oncology-collab",
+      "objectId": "thread-blinded-review",
+      "code": "inherited_grant_overexposure",
+      "severity": "critical",
+      "action": "narrow_inherited_role_or_add_explicit_deny",
+      "remediation": "Add explicit deny overrides, narrow the role grant, or split the sensitive object into a restricted workspace."
+    },
+    {
+      "projectId": "oncology-collab",
+      "objectId": "thread-blinded-review",
+      "code": "stale_object_override",
+      "severity": "warning",
+      "action": "recertify_or_expire_object_override",
+      "remediation": "Recertify, expire, or replace stale object-level allow overrides."
+    },
+    {
+      "projectId": "oncology-collab",
+      "objectId": "thread-blinded-review",
+      "code": "object_override_completeness",
+      "severity": "warning",
+      "action": "add_explicit_object_override_decision",
+      "remediation": "Add object-level deny/allow decisions so inherited project roles cannot drift silently."
+    }
+  ],
+  "readyQueue": [
+    {
+      "projectId": "materials-open-methods",
+      "action": "apply_permission_change",
+      "objectsReviewed": 2
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "cf7e0ed51584b91a6be77038b45379f2ab9c547f77001a14dfecf89f2ff1b865",
+    "policyVersion": "object-permission-inheritance-drift-v1"
+  }
+}

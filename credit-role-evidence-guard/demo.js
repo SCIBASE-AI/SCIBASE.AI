@@ -27,4 +27,3 @@ console.log("Generated credit role evidence guard reports:");
 console.log("- credit-role-evidence-guard/reports/reviewer-packet.json");
 console.log("- credit-role-evidence-guard/reports/reviewer-report.md");
 console.log("- credit-role-evidence-guard/reports/summary.svg");
-

@@ -68,4 +68,3 @@ Generated: 2026-05-22T12:00:00.000Z
 - Role: Validation
 - Risk score: 8
 - empty-evidence-set: No artifact evidence is attached to the contribution claim. Remediation: Attach at least one artifact matching the claimed role.
-

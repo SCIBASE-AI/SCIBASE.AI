@@ -27,4 +27,3 @@ node credit-role-evidence-guard/demo.js
 ```
 
 The demo writes reviewer artifacts to `credit-role-evidence-guard/reports/`.
-

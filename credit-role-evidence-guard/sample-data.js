@@ -149,4 +149,3 @@ export const sampleCreditClaims = [
     declaredAt: "2026-05-20T09:00:00Z",
   },
 ];
-

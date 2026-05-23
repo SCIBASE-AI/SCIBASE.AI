@@ -52,4 +52,3 @@ assert.ok(
 );
 
 console.log("credit-role-evidence-guard tests passed");
-

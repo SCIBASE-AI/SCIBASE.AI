@@ -1,0 +1,167 @@
+{
+  "generatedAt": "2026-05-23T00:00:00.000Z",
+  "guard": "challenge-embargo-release-guard",
+  "results": [
+    {
+      "challengeId": "CH-QUANTUM-HOLD-017",
+      "title": "Quantum noise-reduction challenge",
+      "status": "hold",
+      "summary": {
+        "releaseReady": false,
+        "blockers": 10,
+        "warnings": 0,
+        "artifactsReady": 0,
+        "artifactsHeld": 2
+      },
+      "blockers": [
+        {
+          "code": "SPONSOR_RELEASE_APPROVAL_MISSING",
+          "message": "Sponsor release approval is required before public challenge release.",
+          "evidence": {}
+        },
+        {
+          "code": "ACTIVE_EMBARGO",
+          "message": "Embargo embargo-quantum-ip is still active or lacks explicit release approval.",
+          "evidence": {
+            "embargoId": "embargo-quantum-ip",
+            "type": "patent-review",
+            "endsAt": "2026-07-15"
+          }
+        },
+        {
+          "code": "PATENT_HOLD_UNCLEARED",
+          "message": "Patent hold patent-qft-1 needs docket and counsel clearance before artifacts are exposed.",
+          "evidence": {
+            "holdId": "patent-qft-1",
+            "status": "pending"
+          }
+        },
+        {
+          "code": "PUBLICATION_HOLD_UNCLEARED",
+          "message": "Publication hold pub-qft-1 must clear before public release.",
+          "evidence": {
+            "holdId": "pub-qft-1",
+            "status": "pending-journal-review"
+          }
+        },
+        {
+          "code": "NDA_RELEASE_APPROVAL_MISSING",
+          "message": "Sponsor NDA release approval is missing.",
+          "evidence": {}
+        },
+        {
+          "code": "NDA_RELEASE_APPROVAL_MISSING",
+          "message": "Solver team team-hilbert has not approved NDA release.",
+          "evidence": {
+            "teamId": "team-hilbert"
+          }
+        },
+        {
+          "code": "WINNER_PUBLIC_CONSENT_MISSING",
+          "message": "Winner team team-hilbert has not consented to public naming.",
+          "evidence": {
+            "teamId": "team-hilbert"
+          }
+        },
+        {
+          "code": "FUNDER_DEADLINE_MISSED",
+          "message": "Release date is after the funder open-science deadline without an approved exception.",
+          "evidence": {
+            "deadline": "2026-06-18"
+          }
+        },
+        {
+          "code": "ARTIFACT_RELEASE_UNSAFE",
+          "message": "Artifact winner-summary is not safe for requested visibility.",
+          "evidence": {
+            "artifactId": "winner-summary",
+            "reasons": [
+              "REDACTION_INCOMPLETE",
+              "CHECKSUM_INVALID",
+              "LICENSE_MISSING"
+            ]
+          }
+        },
+        {
+          "code": "ARTIFACT_RELEASE_UNSAFE",
+          "message": "Artifact holdout-dataset is not safe for requested visibility.",
+          "evidence": {
+            "artifactId": "holdout-dataset",
+            "reasons": [
+              "REDACTION_INCOMPLETE",
+              "CHECKSUM_INVALID",
+              "LICENSE_MISSING"
+            ]
+          }
+        }
+      ],
+      "warnings": [],
+      "artifactDecisions": [
+        {
+          "id": "winner-summary",
+          "type": "winner-announcement",
+          "visibility": "public",
+          "decision": "hold",
+          "reasons": [
+            "REDACTION_INCOMPLETE",
+            "CHECKSUM_INVALID",
+            "LICENSE_MISSING"
+          ]
+        },
+        {
+          "id": "holdout-dataset",
+          "type": "dataset",
+          "visibility": "public",
+          "decision": "hold",
+          "reasons": [
+            "REDACTION_INCOMPLETE",
+            "CHECKSUM_INVALID",
+            "LICENSE_MISSING"
+          ]
+        }
+      ],
+      "actions": [
+        "Keep release packet private until embargo approval or end date.",
+        "Collect patent docket and counsel clearance before exposing artifacts.",
+        "Wait for manuscript/preprint clearance before public release.",
+        "Collect sponsor and solver NDA release approvals.",
+        "Use anonymized winner labels until public-name consent exists.",
+        "Escalate missed open-science deadline or attach approved exception.",
+        "Complete redaction, checksum, and license evidence for held artifacts."
+      ],
+      "digest": "sha256:77c6a90e7b760e131af0dcce6599c17a070af17d27265d62ee95e9e6bb1ae1d7"
+    },
+    {
+      "challengeId": "CH-BIO-EMBARGO-042",
+      "title": "Single-cell biomarker challenge",
+      "status": "release_ready",
+      "summary": {
+        "releaseReady": true,
+        "blockers": 0,
+        "warnings": 0,
+        "artifactsReady": 2,
+        "artifactsHeld": 0
+      },
+      "blockers": [],
+      "warnings": [],
+      "artifactDecisions": [
+        {
+          "id": "winner-summary",
+          "type": "winner-announcement",
+          "visibility": "public",
+          "decision": "release",
+          "reasons": []
+        },
+        {
+          "id": "notebook-bundle",
+          "type": "notebook",
+          "visibility": "public",
+          "decision": "release",
+          "reasons": []
+        }
+      ],
+      "actions": [],
+      "digest": "sha256:2d513de043142e565b0bf0bba97f910f50056c20208077053abf2a796cc8120b"
+    }
+  ]
+}

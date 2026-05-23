@@ -8,18 +8,58 @@ const SEVERITY_RANK = {
 };
 
 function yearsBetween(olderDate, newerDate) {
-  const older = new Date(`${olderDate}T00:00:00Z`);
-  const newer = new Date(`${newerDate}T00:00:00Z`);
+  const older = parseIsoDate(olderDate);
+  const newer = parseIsoDate(newerDate);
+  if (!older || !newer) {
+    return null;
+  }
   return (newer.getTime() - older.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
 }
 
-function latestDate(dates) {
-  const validDates = dates.filter(Boolean).sort();
-  return validDates[validDates.length - 1] || null;
+function parseIsoDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value))) {
+    return null;
+  }
+  const date = new Date(`${value}T00:00:00Z`);
+  if (!Number.isFinite(date.getTime())) {
+    return null;
+  }
+  return date;
 }
 
-function evidenceForTopic(ledger, topic) {
-  return ledger.signals.filter((signal) => signal.topic === topic);
+function splitDates(dates) {
+  const validDates = [];
+  const invalidDates = [];
+  for (const date of dates.filter(Boolean)) {
+    if (parseIsoDate(date)) {
+      validDates.push(date);
+    } else {
+      invalidDates.push(date);
+    }
+  }
+  validDates.sort();
+  return {
+    latestDate: validDates[validDates.length - 1] || null,
+    invalidDates
+  };
+}
+
+function evidenceForTopic(ledger, topic, policy) {
+  const allowedTypes = new Set(policy.requiredEvidenceTypes || []);
+  return ledger.signals.filter((signal) => {
+    const topicMatches = signal.topic === topic;
+    const typeAllowed = allowedTypes.size === 0 || allowedTypes.has(signal.evidenceType);
+    return topicMatches && typeAllowed;
+  });
+}
+
+function usesCurrentEvidenceLanguage(claim) {
+  const tone = String(claim.tone || "").toLowerCase();
+  return claim.currentEvidenceClaim === true
+    || tone.includes("current")
+    || tone.includes("latest")
+    || tone.includes("state-of-the-art")
+    || tone.includes("up-to-date");
 }
 
 function addFinding(findings, finding) {
@@ -36,9 +76,21 @@ function addFinding(findings, finding) {
 
 function evaluateClaimFreshness(claim, ledger, policy) {
   const findings = [];
-  const signals = evidenceForTopic(ledger, claim.topic);
-  const latestCitation = latestDate(claim.citationDates || []);
+  const signals = evidenceForTopic(ledger, claim.topic, policy);
+  const dateSummary = splitDates(claim.citationDates || []);
+  const latestCitation = dateSummary.latestDate;
   const reviewDate = policy.reviewDate;
+
+  if (dateSummary.invalidDates.length > 0) {
+    addFinding(findings, {
+      severity: "major",
+      code: "INVALID_SUPPORT_DATE",
+      claimId: claim.id,
+      topic: claim.topic,
+      detail: `Claim has invalid support date values: ${dateSummary.invalidDates.join(", ")}.`,
+      requiredAction: "Normalize support dates to ISO YYYY-MM-DD before freshness review."
+    });
+  }
 
   if (!latestCitation) {
     addFinding(findings, {
@@ -77,7 +129,13 @@ function evaluateClaimFreshness(claim, ledger, policy) {
       });
     }
 
-    if (signal.currentVersion && claim.datasetVersion && claim.datasetVersion !== signal.currentVersion) {
+    if (
+      signal.evidenceType === "dataset_release"
+      && usesCurrentEvidenceLanguage(claim)
+      && signal.currentVersion
+      && claim.datasetVersion
+      && claim.datasetVersion !== signal.currentVersion
+    ) {
       addFinding(findings, {
         severity: "major",
         code: "DATASET_VERSION_DRIFT",
@@ -89,7 +147,13 @@ function evaluateClaimFreshness(claim, ledger, policy) {
       });
     }
 
-    if (signal.currentVersion && claim.benchmarkVersion && claim.benchmarkVersion !== signal.currentVersion) {
+    if (
+      signal.evidenceType === "benchmark_update"
+      && usesCurrentEvidenceLanguage(claim)
+      && signal.currentVersion
+      && claim.benchmarkVersion
+      && claim.benchmarkVersion !== signal.currentVersion
+    ) {
       addFinding(findings, {
         severity: "major",
         code: "BENCHMARK_VERSION_DRIFT",
@@ -245,7 +309,7 @@ function renderMarkdown(report) {
     lines.push("| --- | --- | --- | --- | --- |");
     for (const finding of manuscript.findings) {
       lines.push(
-        `| ${finding.severity} | ${finding.code} | ${finding.claimId} | ${finding.detail} | ${finding.requiredAction} |`
+        `| ${escapeMarkdownCell(finding.severity)} | ${escapeMarkdownCell(finding.code)} | ${escapeMarkdownCell(finding.claimId)} | ${escapeMarkdownCell(finding.detail)} | ${escapeMarkdownCell(finding.requiredAction)} |`
       );
     }
     lines.push("");
@@ -259,6 +323,13 @@ function renderMarkdown(report) {
   }
 
   return `${lines.join("\n").trimEnd()}\n`;
+}
+
+function escapeMarkdownCell(value) {
+  return String(value)
+    .replaceAll("\\", "\\\\")
+    .replaceAll("|", "\\|")
+    .replace(/\r?\n/g, "<br>");
 }
 
 function escapeXml(value) {

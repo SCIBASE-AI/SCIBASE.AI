@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Enterprise vendor DPA review summary">
+  <rect width="960" height="540" fill="#101828"/>
+  <text x="56" y="76" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Enterprise Vendor DPA Review Guard</text>
+  <text x="56" y="120" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">Synthetic vendor requests evaluated before institutional enablement.</text>
+  <text x="56" y="162" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="20">Approved: 1</text>
+  <rect x="56" y="178" width="620" height="32" rx="6" fill="#1f2937"/>
+  <rect x="56" y="178" width="207" height="32" rx="6" fill="#22c55e"/>
+  <text x="56" y="244" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="20">Legal review: 1</text>
+  <rect x="56" y="260" width="620" height="32" rx="6" fill="#1f2937"/>
+  <rect x="56" y="260" width="207" height="32" rx="6" fill="#f59e0b"/>
+  <text x="56" y="326" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="20">Hold: 1</text>
+  <rect x="56" y="342" width="620" height="32" rx="6" fill="#1f2937"/>
+  <rect x="56" y="342" width="207" height="32" rx="6" fill="#ef4444"/>
+  <text x="56" y="468" fill="#94a3b8" font-family="monospace" font-size="15">digest 2bc17eb5d5b748a5eb4982642a8ca9af</text>
+</svg>

@@ -1,0 +1,215 @@
+{
+  "totalVendors": 3,
+  "byStatus": {
+    "approve_vendor": 1,
+    "needs_legal_review": 1,
+    "hold_vendor": 1
+  },
+  "decisions": [
+    {
+      "vendorId": "vendor-zenith-archive",
+      "vendorName": "Zenith Archive",
+      "status": "approve_vendor",
+      "riskScore": 0,
+      "blockers": [],
+      "warnings": [],
+      "requiredActions": [],
+      "webhookEvent": {
+        "type": "enterprise.vendor_dpa.approved",
+        "vendorId": "vendor-zenith-archive",
+        "vendorName": "Zenith Archive",
+        "status": "approve_vendor",
+        "riskScore": 0,
+        "owner": "Enterprise Integrations",
+        "blockerCodes": [],
+        "warningCodes": []
+      },
+      "auditDigest": "7ad1ad454c15ab1532003bda61b5568a249d699725546d4309ad04973ce356e2"
+    },
+    {
+      "vendorId": "vendor-crossborder-notebook",
+      "vendorName": "Crossborder Notebook",
+      "status": "needs_legal_review",
+      "riskScore": 1,
+      "blockers": [],
+      "warnings": [
+        {
+          "severity": "warning",
+          "code": "subprocessor_region_requires_scc",
+          "message": "Cross-border subprocessors need SCC review: Regional Search."
+        }
+      ],
+      "requiredActions": [
+        {
+          "code": "resolve_subprocessor_region_requires_scc",
+          "owner": "Research Systems",
+          "description": "Cross-border subprocessors need SCC review: Regional Search."
+        }
+      ],
+      "webhookEvent": {
+        "type": "enterprise.vendor_dpa.review",
+        "vendorId": "vendor-crossborder-notebook",
+        "vendorName": "Crossborder Notebook",
+        "status": "needs_legal_review",
+        "riskScore": 1,
+        "owner": "Research Systems",
+        "blockerCodes": [],
+        "warningCodes": [
+          "subprocessor_region_requires_scc"
+        ]
+      },
+      "auditDigest": "cfaac9ba50cfff1eb07bde67207337e8b2da7ef38db13c3204192178e10a5e53"
+    },
+    {
+      "vendorId": "vendor-risky-lab-ai",
+      "vendorName": "Risky Lab AI",
+      "status": "hold_vendor",
+      "riskScore": 7,
+      "blockers": [
+        {
+          "severity": "blocker",
+          "code": "missing_owner",
+          "message": "Assign an accountable enterprise owner before enablement."
+        },
+        {
+          "severity": "blocker",
+          "code": "dpa_not_active",
+          "message": "Vendor DPA must be active and signed."
+        },
+        {
+          "severity": "blocker",
+          "code": "region_not_allowed",
+          "message": "Vendor region APAC is outside approved regions."
+        },
+        {
+          "severity": "blocker",
+          "code": "missing_baa_for_phi",
+          "message": "phi requires BAA coverage before review."
+        },
+        {
+          "severity": "blocker",
+          "code": "missing_dua_for_student_records",
+          "message": "student_records requires DUA coverage before review."
+        },
+        {
+          "severity": "blocker",
+          "code": "unapproved_subprocessor",
+          "message": "Unapproved subprocessors: Shadow Analytics."
+        },
+        {
+          "severity": "blocker",
+          "code": "breach_notice_sla_exceeded",
+          "message": "Breach notice SLA is 120h, above 72h."
+        },
+        {
+          "severity": "blocker",
+          "code": "security_review_stale",
+          "message": "Security review is stale or missing reviewer evidence."
+        }
+      ],
+      "warnings": [
+        {
+          "severity": "warning",
+          "code": "subprocessor_region_requires_scc",
+          "message": "Cross-border subprocessors need SCC review: Shadow Analytics."
+        }
+      ],
+      "requiredActions": [
+        {
+          "code": "resolve_missing_owner",
+          "owner": "Enterprise Governance",
+          "description": "Assign an accountable enterprise owner before enablement."
+        },
+        {
+          "code": "resolve_dpa_not_active",
+          "owner": "Enterprise Governance",
+          "description": "Vendor DPA must be active and signed."
+        },
+        {
+          "code": "resolve_region_not_allowed",
+          "owner": "Enterprise Governance",
+          "description": "Vendor region APAC is outside approved regions."
+        },
+        {
+          "code": "resolve_missing_baa_for_phi",
+          "owner": "Enterprise Governance",
+          "description": "phi requires BAA coverage before review."
+        },
+        {
+          "code": "resolve_missing_dua_for_student_records",
+          "owner": "Enterprise Governance",
+          "description": "student_records requires DUA coverage before review."
+        },
+        {
+          "code": "resolve_unapproved_subprocessor",
+          "owner": "Enterprise Governance",
+          "description": "Unapproved subprocessors: Shadow Analytics."
+        },
+        {
+          "code": "resolve_breach_notice_sla_exceeded",
+          "owner": "Enterprise Governance",
+          "description": "Breach notice SLA is 120h, above 72h."
+        },
+        {
+          "code": "resolve_security_review_stale",
+          "owner": "Enterprise Governance",
+          "description": "Security review is stale or missing reviewer evidence."
+        },
+        {
+          "code": "resolve_subprocessor_region_requires_scc",
+          "owner": "Enterprise Governance",
+          "description": "Cross-border subprocessors need SCC review: Shadow Analytics."
+        }
+      ],
+      "webhookEvent": {
+        "type": "enterprise.vendor_dpa.hold",
+        "vendorId": "vendor-risky-lab-ai",
+        "vendorName": "Risky Lab AI",
+        "status": "hold_vendor",
+        "riskScore": 7,
+        "owner": "Enterprise Governance",
+        "blockerCodes": [
+          "missing_owner",
+          "dpa_not_active",
+          "region_not_allowed",
+          "missing_baa_for_phi",
+          "missing_dua_for_student_records",
+          "unapproved_subprocessor",
+          "breach_notice_sla_exceeded",
+          "security_review_stale"
+        ],
+        "warningCodes": [
+          "subprocessor_region_requires_scc"
+        ]
+      },
+      "auditDigest": "c176a09365c1cd192c881eb6c96b9d73099fad81b4ce397a21edf69b36c1f903"
+    }
+  ],
+  "adminActions": [
+    {
+      "vendorId": "vendor-risky-lab-ai",
+      "vendorName": "Risky Lab AI",
+      "status": "hold_vendor",
+      "actionCodes": [
+        "resolve_missing_owner",
+        "resolve_dpa_not_active",
+        "resolve_region_not_allowed",
+        "resolve_missing_baa_for_phi",
+        "resolve_missing_dua_for_student_records",
+        "resolve_unapproved_subprocessor",
+        "resolve_breach_notice_sla_exceeded",
+        "resolve_security_review_stale",
+        "resolve_subprocessor_region_requires_scc"
+      ]
+    },
+    {
+      "vendorId": "vendor-crossborder-notebook",
+      "vendorName": "Crossborder Notebook",
+      "status": "needs_legal_review",
+      "actionCodes": [
+        "resolve_subprocessor_region_requires_scc"
+      ]
+    }
+  ],
+  "auditDigest": "2bc17eb5d5b748a5eb4982642a8ca9af5bdc90e98916182b577073db55edf7cb"
+}

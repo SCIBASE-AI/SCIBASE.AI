@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img">
+<rect width="1280" height="720" fill="#f7f4ee"/>
+<rect x="42" y="34" width="1196" height="652" rx="12" fill="#ffffff" stroke="#1d2939" stroke-width="2"/>
+<rect x="42" y="34" width="1196" height="12" rx="6" fill="#1d4e89"/>
+<rect x="42" y="34" width="149" height="12" rx="6" fill="#1a7f64"/>
+<text x="82" y="96" fill="#17202a" font-family="Arial, sans-serif" font-size="36" font-weight="700">Enterprise compute quota governance proof</text>
+<text x="82" y="132" fill="#475467" font-family="Arial, sans-serif" font-size="19" font-weight="400">Static companion to docs/demo.mp4 and docs/demo.md</text>
+<text x="1160" y="96" fill="#667085" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="end">1/8</text>
+<line x1="82" y1="158" x2="1198" y2="158" stroke="#d0d5dd" stroke-width="1"/>
+<circle cx="98" cy="206" r="5" fill="#1d4e89"/>
+<text x="122" y="214" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">Synthetic input: 2 labs, 4 projects, and policy</text>
+<text x="122" y="243" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">ratios for warning, critical, and blocked quota</text>
+<text x="122" y="272" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">states.</text>
+<circle cx="98" cy="302" r="5" fill="#1d4e89"/>
+<text x="122" y="310" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">Governance output: dashboard metrics, approval</text>
+<text x="122" y="339" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">queue decisions, REST API catalog, CSV risk</text>
+<text x="122" y="368" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">register, export manifest, and HMAC signed webhook</text>
+<text x="122" y="397" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">events.</text>
+<circle cx="98" cy="427" r="5" fill="#1d4e89"/>
+<text x="122" y="435" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">Validation: npm run check, npm test, npm run demo,</text>
+<text x="122" y="464" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">git diff --check.</text>
+<circle cx="98" cy="494" r="5" fill="#1d4e89"/>
+<text x="122" y="502" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">Reviewer focus: usage is evaluated against limits;</text>
+<text x="122" y="531" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">risk becomes decisions; exports and webhooks</text>
+<text x="122" y="560" fill="#1f2937" font-family="Arial, sans-serif" font-size="24" font-weight="400">preserve evidence.</text>
+<rect x="850" y="210" width="310" height="310" rx="12" fill="#f2f4f7" stroke="#d0d5dd"/>
+<text x="880" y="258" fill="#17202a" font-family="Arial, sans-serif" font-size="25" font-weight="700">Human-reviewable proof</text>
+<circle cx="884" cy="296" r="4" fill="#1a7f64"/>
+<text x="902" y="304" fill="#344054" font-family="Arial, sans-serif" font-size="22" font-weight="400">MP4: 40 second walkthrough.</text>
+<circle cx="884" cy="338" r="4" fill="#1a7f64"/>
+<text x="902" y="346" fill="#344054" font-family="Arial, sans-serif" font-size="22" font-weight="400">MD: exact validation steps</text>
+<text x="902" y="374" fill="#344054" font-family="Arial, sans-serif" font-size="22" font-weight="400">and sample output.</text>
+<circle cx="884" cy="408" r="4" fill="#1a7f64"/>
+<text x="902" y="416" fill="#344054" font-family="Arial, sans-serif" font-size="22" font-weight="400">SVG: static visual summary.</text>
+<rect x="82" y="610" width="1096" height="36" rx="8" fill="#eef6ff"/>
+<text x="102" y="634" fill="#1d4e89" font-family="Arial, sans-serif" font-size="18" font-weight="700">Proof gate: file existence is not enough; demo must be understandable, task-relevant, and tied to the PR claim.</text>
+</svg>

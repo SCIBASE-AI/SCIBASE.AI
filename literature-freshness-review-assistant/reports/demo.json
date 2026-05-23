@@ -1,0 +1,217 @@
+{
+  "assistant": "literature-freshness-review-assistant",
+  "policy": {
+    "reviewDate": "2026-05-23",
+    "staleAfterYears": 4,
+    "contradictionSeverity": "critical",
+    "requiredEvidenceTypes": [
+      "systematic_review",
+      "guideline",
+      "dataset_release",
+      "benchmark_update"
+    ],
+    "holdSeverityCutoff": "critical"
+  },
+  "aggregate": {
+    "reviewedManuscripts": 2,
+    "heldManuscripts": 1,
+    "revisionManuscripts": 0,
+    "readyManuscripts": 1,
+    "criticalFindings": 1,
+    "majorFindings": 8,
+    "actionableFindings": 9
+  },
+  "manuscripts": [
+    {
+      "packetId": "ms-hold-senolytic-review",
+      "title": "Senolytic cardiac safety manuscript",
+      "domain": "translational cardiometabolic biology",
+      "reviewDate": "2026-05-23",
+      "summary": {
+        "status": "hold_freshness_review",
+        "totalFindings": 9,
+        "actionableFindings": 9,
+        "criticalFindings": 1,
+        "majorFindings": 8,
+        "warningFindings": 0,
+        "readyFindings": 0
+      },
+      "findings": [
+        {
+          "severity": "major",
+          "code": "STALE_SUPPORT_WINDOW",
+          "claimId": "claim-tolerability",
+          "topic": "senolytic cardiometabolic safety",
+          "detail": "Latest support is 2021-06-01, older than the 4-year freshness window.",
+          "requiredAction": "Add recent evidence or downgrade the claim wording.",
+          "evidenceSignalId": null
+        },
+        {
+          "severity": "critical",
+          "code": "NEWER_CONTRADICTORY_EVIDENCE",
+          "claimId": "claim-tolerability",
+          "topic": "senolytic cardiometabolic safety",
+          "detail": "2025 systematic review of senolytic cardiometabolic safety (2025-11-18) contradicts older support but is not cited.",
+          "requiredAction": "Discuss the larger safety signal before claiming broad tolerability.",
+          "evidenceSignalId": "ev-sr-2025-senolytic-cardiometabolic"
+        },
+        {
+          "severity": "major",
+          "code": "STALE_SUPPORT_WINDOW",
+          "claimId": "claim-organoid-methods",
+          "topic": "organoid assay reporting",
+          "detail": "Latest support is 2022-02-10, older than the 4-year freshness window.",
+          "requiredAction": "Add recent evidence or downgrade the claim wording.",
+          "evidenceSignalId": null
+        },
+        {
+          "severity": "major",
+          "code": "MISSING_NEWER_EVIDENCE",
+          "claimId": "claim-organoid-methods",
+          "topic": "organoid assay reporting",
+          "detail": "SCIBASE organoid reporting guidance 2026.1 (2026-02-04) updates older support but is not cited.",
+          "requiredAction": "Use the 2026.1 organoid reporting checklist for reviewer packets.",
+          "evidenceSignalId": "ev-guide-2026-organoid-reporting"
+        },
+        {
+          "severity": "major",
+          "code": "STALE_SUPPORT_WINDOW",
+          "claimId": "claim-atlas-normalization",
+          "topic": "single-cell atlas normalization",
+          "detail": "Latest support is 2021-12-12, older than the 4-year freshness window.",
+          "requiredAction": "Add recent evidence or downgrade the claim wording.",
+          "evidenceSignalId": null
+        },
+        {
+          "severity": "major",
+          "code": "MISSING_NEWER_EVIDENCE",
+          "claimId": "claim-atlas-normalization",
+          "topic": "single-cell atlas normalization",
+          "detail": "Single Cell Atlas v4.0 release notes (2026-03-14) supersedes older support but is not cited.",
+          "requiredAction": "Reconcile claims trained on atlas v2.x or v3.x against v4.0 annotations.",
+          "evidenceSignalId": "ev-data-2026-single-cell-atlas-v4"
+        },
+        {
+          "severity": "major",
+          "code": "DATASET_VERSION_DRIFT",
+          "claimId": "claim-atlas-normalization",
+          "topic": "single-cell atlas normalization",
+          "detail": "Claim uses dataset v2.1; current ledger version is v4.0.",
+          "requiredAction": "Reconcile claims trained on atlas v2.x or v3.x against v4.0 annotations.",
+          "evidenceSignalId": "ev-data-2026-single-cell-atlas-v4"
+        },
+        {
+          "severity": "major",
+          "code": "MISSING_NEWER_EVIDENCE",
+          "claimId": "claim-protein-benchmark",
+          "topic": "protein structure benchmark",
+          "detail": "Protein structure benchmark leaderboard recalibration (2026-01-22) updates older support but is not cited.",
+          "requiredAction": "Refresh benchmark claims against the recalibrated 2026.01 leaderboard.",
+          "evidenceSignalId": "ev-bench-2026-protein-leaderboard"
+        },
+        {
+          "severity": "major",
+          "code": "BENCHMARK_VERSION_DRIFT",
+          "claimId": "claim-protein-benchmark",
+          "topic": "protein structure benchmark",
+          "detail": "Claim uses benchmark 2024.10; current ledger version is 2026.01.",
+          "requiredAction": "Refresh benchmark claims against the recalibrated 2026.01 leaderboard.",
+          "evidenceSignalId": "ev-bench-2026-protein-leaderboard"
+        }
+      ],
+      "reviewerActions": [
+        {
+          "claimId": "claim-tolerability",
+          "severity": "major",
+          "action": "Add recent evidence or downgrade the claim wording.",
+          "reason": "Latest support is 2021-06-01, older than the 4-year freshness window."
+        },
+        {
+          "claimId": "claim-tolerability",
+          "severity": "critical",
+          "action": "Discuss the larger safety signal before claiming broad tolerability.",
+          "reason": "2025 systematic review of senolytic cardiometabolic safety (2025-11-18) contradicts older support but is not cited."
+        },
+        {
+          "claimId": "claim-organoid-methods",
+          "severity": "major",
+          "action": "Add recent evidence or downgrade the claim wording.",
+          "reason": "Latest support is 2022-02-10, older than the 4-year freshness window."
+        },
+        {
+          "claimId": "claim-organoid-methods",
+          "severity": "major",
+          "action": "Use the 2026.1 organoid reporting checklist for reviewer packets.",
+          "reason": "SCIBASE organoid reporting guidance 2026.1 (2026-02-04) updates older support but is not cited."
+        },
+        {
+          "claimId": "claim-atlas-normalization",
+          "severity": "major",
+          "action": "Add recent evidence or downgrade the claim wording.",
+          "reason": "Latest support is 2021-12-12, older than the 4-year freshness window."
+        },
+        {
+          "claimId": "claim-atlas-normalization",
+          "severity": "major",
+          "action": "Reconcile claims trained on atlas v2.x or v3.x against v4.0 annotations.",
+          "reason": "Single Cell Atlas v4.0 release notes (2026-03-14) supersedes older support but is not cited."
+        },
+        {
+          "claimId": "claim-atlas-normalization",
+          "severity": "major",
+          "action": "Reconcile claims trained on atlas v2.x or v3.x against v4.0 annotations.",
+          "reason": "Claim uses dataset v2.1; current ledger version is v4.0."
+        },
+        {
+          "claimId": "claim-protein-benchmark",
+          "severity": "major",
+          "action": "Refresh benchmark claims against the recalibrated 2026.01 leaderboard.",
+          "reason": "Protein structure benchmark leaderboard recalibration (2026-01-22) updates older support but is not cited."
+        },
+        {
+          "claimId": "claim-protein-benchmark",
+          "severity": "major",
+          "action": "Refresh benchmark claims against the recalibrated 2026.01 leaderboard.",
+          "reason": "Claim uses benchmark 2024.10; current ledger version is 2026.01."
+        }
+      ],
+      "researchGapPrompts": [
+        "Freshness gap: update the evidence base for senolytic cardiometabolic safety before treating the claim as current.",
+        "Freshness gap: update the evidence base for organoid assay reporting before treating the claim as current.",
+        "Freshness gap: update the evidence base for single-cell atlas normalization before treating the claim as current.",
+        "Freshness gap: update the evidence base for protein structure benchmark before treating the claim as current."
+      ],
+      "auditDigest": "2b28dfa1b6fc17166e45aa06df339015e0dec9da568f3a185015dab564cad637"
+    },
+    {
+      "packetId": "ms-ready-telemetry-review",
+      "title": "Telemetry implant arrhythmia replication note",
+      "domain": "clinical devices",
+      "reviewDate": "2026-05-23",
+      "summary": {
+        "status": "ready_for_review",
+        "totalFindings": 1,
+        "actionableFindings": 0,
+        "criticalFindings": 0,
+        "majorFindings": 0,
+        "warningFindings": 0,
+        "readyFindings": 1
+      },
+      "findings": [
+        {
+          "severity": "info",
+          "code": "FRESHNESS_READY",
+          "claimId": "claim-telemetry-risk",
+          "topic": "telemetry implant arrhythmia",
+          "detail": "Claim cites the current evidence signal for its topic.",
+          "requiredAction": "No freshness hold required.",
+          "evidenceSignalId": null
+        }
+      ],
+      "reviewerActions": [],
+      "researchGapPrompts": [],
+      "auditDigest": "30b9621c84e89262d698c368e40fcd6fd32bde83bb05cf9be0e70ad5823c4287"
+    }
+  ],
+  "auditDigest": "45a5a7683b859d96101b72cc8442e889cd630ad2736fcebe4dd6b85302cd0cd8"
+}

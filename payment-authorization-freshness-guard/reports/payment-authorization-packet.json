@@ -1,0 +1,116 @@
+{
+  "batchId": "revenue-payment-auth-demo",
+  "generatedAt": "2026-05-23T09:30:00Z",
+  "decision": "block-unsafe-charges",
+  "authorizationScore": 0,
+  "summary": {
+    "requestsReviewed": 4,
+    "blockedCharges": 2,
+    "reviewCharges": 1,
+    "expiredInstruments": 1,
+    "staleMandates": 1,
+    "authorizationIssues": 2,
+    "varianceIssues": 2
+  },
+  "findings": [
+    {
+      "requestId": "charge-expired-card",
+      "customerId": "inst-alpha",
+      "type": "expired-payment-instrument",
+      "severity": "blocker",
+      "message": "Saved card expired at 2026-04-30."
+    },
+    {
+      "requestId": "charge-expired-card",
+      "customerId": "inst-alpha",
+      "type": "stale-sca-mandate",
+      "severity": "blocker",
+      "message": "SCA authentication age is 295.4 days, above 180 days."
+    },
+    {
+      "requestId": "charge-expired-card",
+      "customerId": "inst-alpha",
+      "type": "unsafe-charge-release",
+      "severity": "blocker",
+      "message": "Charge release is blocked until payment authorization freshness issues are resolved."
+    },
+    {
+      "requestId": "charge-ach-scope",
+      "customerId": "lab-beta",
+      "type": "missing-debit-mandate",
+      "severity": "major",
+      "message": "ACH/direct-debit charge lacks signed debit authorization evidence."
+    },
+    {
+      "requestId": "charge-ach-scope",
+      "customerId": "lab-beta",
+      "type": "mandate-scope-mismatch",
+      "severity": "major",
+      "message": "Mandate does not cover ai_compute_topup."
+    },
+    {
+      "requestId": "charge-variance",
+      "customerId": "consortium-gamma",
+      "type": "amount-variance-without-notice",
+      "severity": "blocker",
+      "message": "Charge amount variance is 40.0%, above 10% without customer notice."
+    },
+    {
+      "requestId": "charge-variance",
+      "customerId": "consortium-gamma",
+      "type": "currency-variance-without-notice",
+      "severity": "blocker",
+      "message": "Charge currency EUR differs from authorized USD without customer notice."
+    },
+    {
+      "requestId": "charge-variance",
+      "customerId": "consortium-gamma",
+      "type": "unsafe-charge-release",
+      "severity": "blocker",
+      "message": "Charge release is blocked until payment authorization freshness issues are resolved."
+    }
+  ],
+  "requiredActions": [
+    {
+      "type": "collect_updated_payment_method",
+      "requestId": "charge-expired-card",
+      "owner": "billing_ops"
+    },
+    {
+      "type": "refresh_sca_mandate",
+      "requestId": "charge-expired-card",
+      "owner": "billing_ops"
+    },
+    {
+      "type": "hold_charge_release",
+      "requestId": "charge-expired-card",
+      "owner": "finance_ops"
+    },
+    {
+      "type": "collect_debit_mandate",
+      "requestId": "charge-ach-scope",
+      "owner": "finance_ops"
+    },
+    {
+      "type": "update_mandate_scope",
+      "requestId": "charge-ach-scope",
+      "owner": "finance_ops"
+    },
+    {
+      "type": "send_customer_charge_notice",
+      "requestId": "charge-variance",
+      "owner": "billing_ops"
+    },
+    {
+      "type": "reauthorize_currency",
+      "requestId": "charge-variance",
+      "owner": "billing_ops"
+    },
+    {
+      "type": "hold_charge_release",
+      "requestId": "charge-variance",
+      "owner": "finance_ops"
+    }
+  ],
+  "auditDigest": "e99c8ba0ed28b1cc"
+}

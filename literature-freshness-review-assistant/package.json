@@ -1,0 +1,13 @@
+{
+  "name": "literature-freshness-review-assistant",
+  "version": "1.0.0",
+  "description": "Freshness-focused AI research assistant review slice for SCIBASE issue #16.",
+  "main": "index.js",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && node --check scripts/render-demo-video.js",
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "node scripts/render-demo-video.js"
+  },
+  "license": "MIT"
+}

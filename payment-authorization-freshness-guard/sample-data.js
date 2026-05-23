@@ -1,0 +1,73 @@
+const sampleBatch = {
+  batchId: 'revenue-payment-auth-demo',
+  generatedAt: '2026-05-23T09:30:00Z',
+  chargeRequests: [
+    {
+      id: 'charge-expired-card',
+      customerId: 'inst-alpha',
+      revenueStream: 'subscription_renewal',
+      amount: 12000,
+      currency: 'USD',
+      paymentInstrument: {
+        type: 'card',
+        expiresAt: '2026-04-30',
+        scaAuthenticatedAt: '2025-08-01T00:00:00Z',
+        scaMaxAgeDays: 180,
+        autopayConsent: true,
+      },
+      renewalNoticeSentAt: '2026-05-10T00:00:00Z',
+    },
+    {
+      id: 'charge-ach-scope',
+      customerId: 'lab-beta',
+      revenueStream: 'ai_compute_topup',
+      amount: 3000,
+      currency: 'USD',
+      paymentInstrument: {
+        type: 'ach',
+        mandateSignedAt: null,
+        mandateCoversStreams: ['subscription_renewal'],
+        autopayConsent: true,
+      },
+    },
+    {
+      id: 'charge-variance',
+      customerId: 'consortium-gamma',
+      revenueStream: 'analytics_license',
+      amount: 9800,
+      currency: 'EUR',
+      authorizedAmount: 7000,
+      authorizedCurrency: 'USD',
+      varianceThresholdPercent: 10,
+      customerNoticeSentAt: null,
+      paymentInstrument: {
+        type: 'card',
+        expiresAt: '2027-08-31',
+        scaAuthenticatedAt: '2026-04-01T00:00:00Z',
+        scaMaxAgeDays: 180,
+        autopayConsent: true,
+      },
+    },
+    {
+      id: 'charge-ready',
+      customerId: 'inst-delta',
+      revenueStream: 'subscription_renewal',
+      amount: 5000,
+      currency: 'USD',
+      authorizedAmount: 5000,
+      authorizedCurrency: 'USD',
+      varianceThresholdPercent: 10,
+      customerNoticeSentAt: '2026-05-01T00:00:00Z',
+      renewalNoticeSentAt: '2026-05-01T00:00:00Z',
+      paymentInstrument: {
+        type: 'card',
+        expiresAt: '2027-09-30',
+        scaAuthenticatedAt: '2026-05-01T00:00:00Z',
+        scaMaxAgeDays: 180,
+        autopayConsent: true,
+      },
+    },
+  ],
+};
+
+module.exports = {sampleBatch};

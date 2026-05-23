@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Payment authorization freshness guard summary">
+  <rect width="960" height="540" fill="#1d2330"/>
+  <rect x="48" y="44" width="864" height="452" rx="6" fill="#f8fafc" opacity="0.94"/>
+  <text x="78" y="98" font-family="Arial, sans-serif" font-size="28" fill="#1d2330" font-weight="700">Payment Authorization Freshness</text>
+  <text x="78" y="132" font-family="Arial, sans-serif" font-size="16" fill="#3d4657">Decision: block-unsafe-charges | Digest: e99c8ba0ed28b1cc</text>
+  <text x="78" y="188" font-family="Arial, sans-serif" font-size="18" fill="#1d2330">Authorization score</text>
+  <rect x="78" y="206" width="760" height="34" fill="#dbe4f0"/>
+  <rect x="78" y="206" width="24" height="34" fill="#2f855a"/>
+  <text x="852" y="230" font-family="Arial, sans-serif" font-size="18" fill="#1d2330">0</text>
+  <text x="78" y="294" font-family="Arial, sans-serif" font-size="18" fill="#1d2330">Findings</text>
+  <rect x="78" y="312" width="760" height="34" fill="#dbe4f0"/>
+  <rect x="78" y="312" width="608" height="34" fill="#b45309"/>
+  <text x="852" y="336" font-family="Arial, sans-serif" font-size="18" fill="#1d2330">8</text>
+  <text x="78" y="400" font-family="Arial, sans-serif" font-size="18" fill="#1d2330">Required actions</text>
+  <rect x="78" y="418" width="760" height="34" fill="#dbe4f0"/>
+  <rect x="78" y="418" width="608" height="34" fill="#1d4ed8"/>
+  <text x="852" y="442" font-family="Arial, sans-serif" font-size="18" fill="#1d2330">8</text>
+</svg>

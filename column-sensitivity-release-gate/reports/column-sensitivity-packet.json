@@ -1,0 +1,735 @@
+{
+  "asOf": "2026-05-23T22:25:00.000Z",
+  "policy": {
+    "publicReleaseModes": [
+      "public_preview",
+      "api_access",
+      "export_bundle"
+    ],
+    "directIdentifierTypes": [
+      "person_name",
+      "email",
+      "phone",
+      "street_address",
+      "subject_id"
+    ],
+    "quasiIdentifierTypes": [
+      "age",
+      "date",
+      "postal_code",
+      "institution",
+      "rare_condition"
+    ],
+    "sensitiveTypes": [
+      "diagnosis",
+      "genetic_marker",
+      "lab_result",
+      "income",
+      "free_text",
+      "precise_location"
+    ],
+    "acceptedTransforms": [
+      "drop",
+      "hash",
+      "generalize",
+      "bucket",
+      "redact",
+      "coarsen_location"
+    ],
+    "minKAnonymity": 10,
+    "maxPreciseLocationDecimals": 2,
+    "maxSensitiveColumnsPublic": 5,
+    "policyVersion": "column-sensitivity-release-v1"
+  },
+  "summary": {
+    "totalDatasets": 3,
+    "readyDatasets": 1,
+    "reviewDatasets": 1,
+    "blockedDatasets": 1,
+    "totalColumns": 15,
+    "sensitiveColumns": 15,
+    "totalFindings": 7,
+    "criticalFindings": 4,
+    "warningFindings": 3
+  },
+  "datasets": [
+    {
+      "datasetId": "metabolomics-public-release",
+      "title": "Metabolomics Public Release",
+      "status": "release_ready",
+      "summary": {
+        "columns": 5,
+        "sensitiveColumns": 5,
+        "releaseModes": 3,
+        "criticalFindings": 0,
+        "warningFindings": 0
+      },
+      "checks": [
+        {
+          "code": "direct_identifiers_transformed",
+          "severity": "critical",
+          "pass": true,
+          "message": "Direct identifier columns are removed or transformed before release.",
+          "evidence": {
+            "columns": []
+          }
+        },
+        {
+          "code": "quasi_identifier_k_anonymity_met",
+          "severity": "critical",
+          "pass": true,
+          "message": "Quasi-identifier release evidence satisfies k-anonymity policy.",
+          "evidence": {
+            "columns": [],
+            "minKAnonymity": 10
+          }
+        },
+        {
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "pass": true,
+          "message": "Free-text columns have redaction review evidence.",
+          "evidence": {
+            "columns": []
+          }
+        },
+        {
+          "code": "location_precision_safe",
+          "severity": "critical",
+          "pass": true,
+          "message": "Location columns are coarsened to the allowed precision.",
+          "evidence": {
+            "columns": [],
+            "maxPreciseLocationDecimals": 2
+          }
+        },
+        {
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "pass": true,
+          "message": "Data-steward approvals cover sensitive released columns.",
+          "evidence": {
+            "missingApprovals": []
+          }
+        },
+        {
+          "code": "public_sensitive_column_budget",
+          "severity": "warning",
+          "pass": true,
+          "message": "Public release stays within the sensitive-column review budget.",
+          "evidence": {
+            "sensitiveColumns": [
+              "sample_hash",
+              "age_band",
+              "site_region",
+              "metabolite_a",
+              "collection_area"
+            ],
+            "maxSensitiveColumnsPublic": 5,
+            "releaseModes": [
+              "public_preview",
+              "api_access",
+              "export_bundle"
+            ]
+          }
+        }
+      ],
+      "findings": [],
+      "columnSummary": [
+        {
+          "columnId": "sample_hash",
+          "label": "Sample hash",
+          "sensitivity": "direct_identifier",
+          "transform": "hash"
+        },
+        {
+          "columnId": "age_band",
+          "label": "Age band",
+          "sensitivity": "quasi_identifier",
+          "transform": "bucket"
+        },
+        {
+          "columnId": "site_region",
+          "label": "Site region",
+          "sensitivity": "quasi_identifier",
+          "transform": "generalize"
+        },
+        {
+          "columnId": "metabolite_a",
+          "label": "Metabolite A",
+          "sensitivity": "sensitive",
+          "transform": null
+        },
+        {
+          "columnId": "collection_area",
+          "label": "Collection area",
+          "sensitivity": "sensitive",
+          "transform": "coarsen_location"
+        }
+      ],
+      "reviewQueue": []
+    },
+    {
+      "datasetId": "clinical-screening-export",
+      "title": "Clinical Screening Export",
+      "status": "release_blocked",
+      "summary": {
+        "columns": 6,
+        "sensitiveColumns": 6,
+        "releaseModes": 2,
+        "criticalFindings": 4,
+        "warningFindings": 2
+      },
+      "checks": [
+        {
+          "code": "direct_identifiers_transformed",
+          "severity": "critical",
+          "pass": false,
+          "message": "1 direct identifier columns lack an accepted release transform.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "participant_email",
+                "sensitivityType": "email",
+                "transform": null
+              }
+            ]
+          }
+        },
+        {
+          "code": "quasi_identifier_k_anonymity_met",
+          "severity": "critical",
+          "pass": false,
+          "message": "2 quasi-identifier columns do not satisfy k-anonymity policy.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "birth_date",
+                "sensitivityType": "date",
+                "transform": null,
+                "kAnonymity": 4
+              },
+              {
+                "columnId": "postal_code",
+                "sensitivityType": "postal_code",
+                "transform": "generalize",
+                "kAnonymity": 4
+              }
+            ],
+            "minKAnonymity": 10
+          }
+        },
+        {
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "pass": false,
+          "message": "1 free-text columns are missing redaction review evidence.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "diagnosis_text",
+                "reviewStatus": "pending"
+              }
+            ]
+          }
+        },
+        {
+          "code": "location_precision_safe",
+          "severity": "critical",
+          "pass": false,
+          "message": "1 location columns retain excessive precision.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "gps_lat_lon",
+                "transform": "coarsen_location",
+                "precisionDecimals": 5
+              }
+            ],
+            "maxPreciseLocationDecimals": 2
+          }
+        },
+        {
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "pass": false,
+          "message": "5 sensitive columns are missing release approval.",
+          "evidence": {
+            "missingApprovals": [
+              {
+                "columnId": "participant_email",
+                "sensitivityType": "email"
+              },
+              {
+                "columnId": "birth_date",
+                "sensitivityType": "date"
+              },
+              {
+                "columnId": "diagnosis_text",
+                "sensitivityType": "free_text"
+              },
+              {
+                "columnId": "gps_lat_lon",
+                "sensitivityType": "precise_location"
+              },
+              {
+                "columnId": "variant_marker",
+                "sensitivityType": "genetic_marker"
+              }
+            ]
+          }
+        },
+        {
+          "code": "public_sensitive_column_budget",
+          "severity": "warning",
+          "pass": false,
+          "message": "Public release contains more sensitive columns than policy allows without extra review.",
+          "evidence": {
+            "sensitiveColumns": [
+              "participant_email",
+              "birth_date",
+              "postal_code",
+              "diagnosis_text",
+              "gps_lat_lon",
+              "variant_marker"
+            ],
+            "maxSensitiveColumnsPublic": 5,
+            "releaseModes": [
+              "public_preview",
+              "export_bundle"
+            ]
+          }
+        }
+      ],
+      "findings": [
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "direct_identifiers_transformed",
+          "severity": "critical",
+          "message": "1 direct identifier columns lack an accepted release transform.",
+          "remediation": "Drop, hash, or redact direct identifiers before public preview, API access, or export.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "participant_email",
+                "sensitivityType": "email",
+                "transform": null
+              }
+            ]
+          }
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "quasi_identifier_k_anonymity_met",
+          "severity": "critical",
+          "message": "2 quasi-identifier columns do not satisfy k-anonymity policy.",
+          "remediation": "Generalize, bucket, or suppress quasi-identifiers until release evidence meets the k-anonymity threshold.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "birth_date",
+                "sensitivityType": "date",
+                "transform": null,
+                "kAnonymity": 4
+              },
+              {
+                "columnId": "postal_code",
+                "sensitivityType": "postal_code",
+                "transform": "generalize",
+                "kAnonymity": 4
+              }
+            ],
+            "minKAnonymity": 10
+          }
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "message": "1 free-text columns are missing redaction review evidence.",
+          "remediation": "Attach redaction review evidence or remove free-text columns from release lanes.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "diagnosis_text",
+                "reviewStatus": "pending"
+              }
+            ]
+          }
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "location_precision_safe",
+          "severity": "critical",
+          "message": "1 location columns retain excessive precision.",
+          "remediation": "Coarsen location coordinates or suppress precise locations before release.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "gps_lat_lon",
+                "transform": "coarsen_location",
+                "precisionDecimals": 5
+              }
+            ],
+            "maxPreciseLocationDecimals": 2
+          }
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "message": "5 sensitive columns are missing release approval.",
+          "remediation": "Collect data-steward approval for each sensitive column before enabling release lanes.",
+          "evidence": {
+            "missingApprovals": [
+              {
+                "columnId": "participant_email",
+                "sensitivityType": "email"
+              },
+              {
+                "columnId": "birth_date",
+                "sensitivityType": "date"
+              },
+              {
+                "columnId": "diagnosis_text",
+                "sensitivityType": "free_text"
+              },
+              {
+                "columnId": "gps_lat_lon",
+                "sensitivityType": "precise_location"
+              },
+              {
+                "columnId": "variant_marker",
+                "sensitivityType": "genetic_marker"
+              }
+            ]
+          }
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "public_sensitive_column_budget",
+          "severity": "warning",
+          "message": "Public release contains more sensitive columns than policy allows without extra review.",
+          "remediation": "Reduce public columns, split the dataset, or route to restricted access review.",
+          "evidence": {
+            "sensitiveColumns": [
+              "participant_email",
+              "birth_date",
+              "postal_code",
+              "diagnosis_text",
+              "gps_lat_lon",
+              "variant_marker"
+            ],
+            "maxSensitiveColumnsPublic": 5,
+            "releaseModes": [
+              "public_preview",
+              "export_bundle"
+            ]
+          }
+        }
+      ],
+      "columnSummary": [
+        {
+          "columnId": "participant_email",
+          "label": "Participant email",
+          "sensitivity": "direct_identifier",
+          "transform": null
+        },
+        {
+          "columnId": "birth_date",
+          "label": "Birth date",
+          "sensitivity": "quasi_identifier",
+          "transform": null
+        },
+        {
+          "columnId": "postal_code",
+          "label": "Postal code",
+          "sensitivity": "quasi_identifier",
+          "transform": "generalize"
+        },
+        {
+          "columnId": "diagnosis_text",
+          "label": "Diagnosis notes",
+          "sensitivity": "sensitive",
+          "transform": null
+        },
+        {
+          "columnId": "gps_lat_lon",
+          "label": "GPS coordinates",
+          "sensitivity": "sensitive",
+          "transform": "coarsen_location"
+        },
+        {
+          "columnId": "variant_marker",
+          "label": "Variant marker",
+          "sensitivity": "sensitive",
+          "transform": null
+        }
+      ],
+      "reviewQueue": [
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "direct_identifiers_transformed",
+          "severity": "critical",
+          "action": "transform_or_remove_direct_identifiers",
+          "remediation": "Drop, hash, or redact direct identifiers before public preview, API access, or export."
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "quasi_identifier_k_anonymity_met",
+          "severity": "critical",
+          "action": "generalize_quasi_identifiers",
+          "remediation": "Generalize, bucket, or suppress quasi-identifiers until release evidence meets the k-anonymity threshold."
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "action": "complete_free_text_redaction_review",
+          "remediation": "Attach redaction review evidence or remove free-text columns from release lanes."
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "location_precision_safe",
+          "severity": "critical",
+          "action": "coarsen_location_precision",
+          "remediation": "Coarsen location coordinates or suppress precise locations before release."
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "action": "collect_column_release_approval",
+          "remediation": "Collect data-steward approval for each sensitive column before enabling release lanes."
+        },
+        {
+          "datasetId": "clinical-screening-export",
+          "code": "public_sensitive_column_budget",
+          "severity": "warning",
+          "action": "route_to_restricted_access_review",
+          "remediation": "Reduce public columns, split the dataset, or route to restricted access review."
+        }
+      ]
+    },
+    {
+      "datasetId": "survey-free-text-review",
+      "title": "Survey Free Text Review",
+      "status": "release_review",
+      "summary": {
+        "columns": 4,
+        "sensitiveColumns": 4,
+        "releaseModes": 1,
+        "criticalFindings": 0,
+        "warningFindings": 1
+      },
+      "checks": [
+        {
+          "code": "direct_identifiers_transformed",
+          "severity": "critical",
+          "pass": true,
+          "message": "Direct identifier columns are removed or transformed before release.",
+          "evidence": {
+            "columns": []
+          }
+        },
+        {
+          "code": "quasi_identifier_k_anonymity_met",
+          "severity": "critical",
+          "pass": true,
+          "message": "Quasi-identifier release evidence satisfies k-anonymity policy.",
+          "evidence": {
+            "columns": [],
+            "minKAnonymity": 10
+          }
+        },
+        {
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "pass": false,
+          "message": "1 free-text columns are missing redaction review evidence.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "open_response",
+                "reviewStatus": "pending"
+              }
+            ]
+          }
+        },
+        {
+          "code": "location_precision_safe",
+          "severity": "critical",
+          "pass": true,
+          "message": "Location columns are coarsened to the allowed precision.",
+          "evidence": {
+            "columns": [],
+            "maxPreciseLocationDecimals": 2
+          }
+        },
+        {
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "pass": true,
+          "message": "Data-steward approvals cover sensitive released columns.",
+          "evidence": {
+            "missingApprovals": []
+          }
+        },
+        {
+          "code": "public_sensitive_column_budget",
+          "severity": "warning",
+          "pass": true,
+          "message": "Public release stays within the sensitive-column review budget.",
+          "evidence": {
+            "sensitiveColumns": [
+              "participant_hash",
+              "age_bucket",
+              "open_response",
+              "rare_condition_group"
+            ],
+            "maxSensitiveColumnsPublic": 5,
+            "releaseModes": [
+              "public_preview"
+            ]
+          }
+        }
+      ],
+      "findings": [
+        {
+          "datasetId": "survey-free-text-review",
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "message": "1 free-text columns are missing redaction review evidence.",
+          "remediation": "Attach redaction review evidence or remove free-text columns from release lanes.",
+          "evidence": {
+            "columns": [
+              {
+                "columnId": "open_response",
+                "reviewStatus": "pending"
+              }
+            ]
+          }
+        }
+      ],
+      "columnSummary": [
+        {
+          "columnId": "participant_hash",
+          "label": "Participant hash",
+          "sensitivity": "direct_identifier",
+          "transform": "hash"
+        },
+        {
+          "columnId": "age_bucket",
+          "label": "Age bucket",
+          "sensitivity": "quasi_identifier",
+          "transform": "bucket"
+        },
+        {
+          "columnId": "open_response",
+          "label": "Open response",
+          "sensitivity": "sensitive",
+          "transform": null
+        },
+        {
+          "columnId": "rare_condition_group",
+          "label": "Rare condition group",
+          "sensitivity": "quasi_identifier",
+          "transform": "bucket"
+        }
+      ],
+      "reviewQueue": [
+        {
+          "datasetId": "survey-free-text-review",
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "action": "complete_free_text_redaction_review",
+          "remediation": "Attach redaction review evidence or remove free-text columns from release lanes."
+        }
+      ]
+    }
+  ],
+  "reviewQueue": [
+    {
+      "datasetId": "clinical-screening-export",
+      "code": "direct_identifiers_transformed",
+      "severity": "critical",
+      "action": "transform_or_remove_direct_identifiers",
+      "remediation": "Drop, hash, or redact direct identifiers before public preview, API access, or export."
+    },
+    {
+      "datasetId": "clinical-screening-export",
+      "code": "quasi_identifier_k_anonymity_met",
+      "severity": "critical",
+      "action": "generalize_quasi_identifiers",
+      "remediation": "Generalize, bucket, or suppress quasi-identifiers until release evidence meets the k-anonymity threshold."
+    },
+    {
+      "datasetId": "clinical-screening-export",
+      "code": "free_text_review_attested",
+      "severity": "warning",
+      "action": "complete_free_text_redaction_review",
+      "remediation": "Attach redaction review evidence or remove free-text columns from release lanes."
+    },
+    {
+      "datasetId": "clinical-screening-export",
+      "code": "location_precision_safe",
+      "severity": "critical",
+      "action": "coarsen_location_precision",
+      "remediation": "Coarsen location coordinates or suppress precise locations before release."
+    },
+    {
+      "datasetId": "clinical-screening-export",
+      "code": "data_steward_approval_present",
+      "severity": "critical",
+      "action": "collect_column_release_approval",
+      "remediation": "Collect data-steward approval for each sensitive column before enabling release lanes."
+    },
+    {
+      "datasetId": "clinical-screening-export",
+      "code": "public_sensitive_column_budget",
+      "severity": "warning",
+      "action": "route_to_restricted_access_review",
+      "remediation": "Reduce public columns, split the dataset, or route to restricted access review."
+    },
+    {
+      "datasetId": "survey-free-text-review",
+      "code": "free_text_review_attested",
+      "severity": "warning",
+      "action": "complete_free_text_redaction_review",
+      "remediation": "Attach redaction review evidence or remove free-text columns from release lanes."
+    }
+  ],
+  "releaseQueue": [
+    {
+      "datasetId": "metabolomics-public-release",
+      "action": "enable_preview_api_or_export",
+      "checkedColumns": 5
+    }
+  ],
+  "holdQueue": [
+    {
+      "datasetId": "clinical-screening-export",
+      "action": "block_release_until_sensitivity_fixed",
+      "findingCodes": [
+        "direct_identifiers_transformed",
+        "quasi_identifier_k_anonymity_met",
+        "free_text_review_attested",
+        "location_precision_safe",
+        "data_steward_approval_present",
+        "public_sensitive_column_budget"
+      ]
+    },
+    {
+      "datasetId": "survey-free-text-review",
+      "action": "defer_release_for_review",
+      "findingCodes": [
+        "free_text_review_attested"
+      ]
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "81ec569e7857229841a0d8706644430bedef984ebef8fba631d5f3744d40f694",
+    "policyVersion": "column-sensitivity-release-v1"
+  }
+}

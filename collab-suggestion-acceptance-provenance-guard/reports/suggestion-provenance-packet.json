@@ -1,0 +1,669 @@
+{
+  "asOf": "2026-05-23T21:30:00.000Z",
+  "policy": {
+    "protectedSectionTypes": [
+      "results",
+      "methods",
+      "ethics",
+      "limitations"
+    ],
+    "requiredApprovalRoles": [
+      "corresponding_author"
+    ],
+    "maxNotebookAgeMinutes": 180,
+    "maxAnchorDrift": 4,
+    "policyVersion": "collab-suggestion-acceptance-provenance-v1"
+  },
+  "summary": {
+    "totalManuscripts": 2,
+    "acceptanceReadyManuscripts": 1,
+    "deferredManuscripts": 0,
+    "blockedManuscripts": 1,
+    "totalSuggestions": 4,
+    "acceptedSuggestions": 2,
+    "deferredSuggestions": 1,
+    "escalatedSuggestions": 1,
+    "totalFindings": 5,
+    "criticalFindings": 4,
+    "warningFindings": 1
+  },
+  "manuscripts": [
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "title": "Immune Response Manuscript",
+      "status": "acceptance_blocked",
+      "summary": {
+        "sections": 2,
+        "suggestions": 3,
+        "accepted": 1,
+        "deferred": 1,
+        "escalated": 1,
+        "findings": 5
+      },
+      "suggestions": [
+        {
+          "suggestionId": "sug-safe-il6-wording",
+          "sectionId": "results-primary",
+          "proposerId": "author-garcia",
+          "decision": "accept",
+          "provenanceDigest": "dec9816d7e07be0165ad00af794019b4673e93224f77b590e16024aaf08d07d7",
+          "checks": [
+            {
+              "code": "target_section_exists",
+              "severity": "critical",
+              "pass": true,
+              "message": "Target manuscript section exists.",
+              "evidence": {
+                "sectionId": "results-primary"
+              }
+            },
+            {
+              "code": "section_version_hash_current",
+              "severity": "critical",
+              "pass": true,
+              "message": "Suggestion base section hash matches the current section.",
+              "evidence": {
+                "expectedHash": "sha256-results-v12",
+                "currentHash": "sha256-results-v12"
+              }
+            },
+            {
+              "code": "quote_anchor_stable",
+              "severity": "critical",
+              "pass": true,
+              "message": "Quote anchor still resolves inside the target section.",
+              "evidence": {
+                "quote": "Treatment reduced IL-6 by 18 percent",
+                "resolvedIndex": 0,
+                "expectedStart": 0,
+                "drift": 0,
+                "maxAnchorDrift": 4
+              }
+            },
+            {
+              "code": "locked_section_rules_satisfied",
+              "severity": "critical",
+              "pass": "submission freeze allows corresponding-author approved wording fix",
+              "message": "Section lock rules permit this suggestion acceptance.",
+              "evidence": {
+                "locked": true,
+                "sectionType": "results",
+                "protectedType": true,
+                "overrideApproved": true,
+                "overrideSectionHash": "sha256-results-v12"
+              }
+            },
+            {
+              "code": "required_author_approvals_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Required author approvals are present.",
+              "evidence": {
+                "approvedRoles": [
+                  "corresponding_author"
+                ],
+                "missingRoles": [],
+                "requiredApprovalRoles": [
+                  "corresponding_author"
+                ]
+              }
+            },
+            {
+              "code": "blocking_replies_resolved",
+              "severity": "critical",
+              "pass": true,
+              "message": "No unresolved blocking reviewer replies remain.",
+              "evidence": {
+                "commentIds": []
+              }
+            },
+            {
+              "code": "notebook_outputs_fresh",
+              "severity": "warning",
+              "pass": true,
+              "message": "Related notebook outputs are fresh enough for acceptance.",
+              "evidence": {
+                "notebookIds": [
+                  "nb-il6-model"
+                ],
+                "staleNotebookIds": [],
+                "maxNotebookAgeMinutes": 180
+              }
+            }
+          ],
+          "findings": []
+        },
+        {
+          "suggestionId": "sug-stale-crp-result",
+          "sectionId": "results-primary",
+          "proposerId": "author-shah",
+          "decision": "defer",
+          "provenanceDigest": "73632b9a333724982778dcf995f41705839f280d44535fcee81240aff3a638ac",
+          "checks": [
+            {
+              "code": "target_section_exists",
+              "severity": "critical",
+              "pass": true,
+              "message": "Target manuscript section exists.",
+              "evidence": {
+                "sectionId": "results-primary"
+              }
+            },
+            {
+              "code": "section_version_hash_current",
+              "severity": "critical",
+              "pass": true,
+              "message": "Suggestion base section hash matches the current section.",
+              "evidence": {
+                "expectedHash": "sha256-results-v12",
+                "currentHash": "sha256-results-v12"
+              }
+            },
+            {
+              "code": "quote_anchor_stable",
+              "severity": "critical",
+              "pass": true,
+              "message": "Quote anchor still resolves inside the target section.",
+              "evidence": {
+                "quote": "CRP remained unchanged",
+                "resolvedIndex": 43,
+                "expectedStart": 43,
+                "drift": 0,
+                "maxAnchorDrift": 4
+              }
+            },
+            {
+              "code": "locked_section_rules_satisfied",
+              "severity": "critical",
+              "pass": "statistics team update",
+              "message": "Section lock rules permit this suggestion acceptance.",
+              "evidence": {
+                "locked": true,
+                "sectionType": "results",
+                "protectedType": true,
+                "overrideApproved": true,
+                "overrideSectionHash": "sha256-results-v12"
+              }
+            },
+            {
+              "code": "required_author_approvals_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Required author approvals are present.",
+              "evidence": {
+                "approvedRoles": [
+                  "corresponding_author"
+                ],
+                "missingRoles": [],
+                "requiredApprovalRoles": [
+                  "corresponding_author"
+                ]
+              }
+            },
+            {
+              "code": "blocking_replies_resolved",
+              "severity": "critical",
+              "pass": true,
+              "message": "No unresolved blocking reviewer replies remain.",
+              "evidence": {
+                "commentIds": []
+              }
+            },
+            {
+              "code": "notebook_outputs_fresh",
+              "severity": "warning",
+              "pass": false,
+              "message": "Related notebook outputs are stale or missing.",
+              "evidence": {
+                "notebookIds": [
+                  "nb-crp-sensitivity"
+                ],
+                "staleNotebookIds": [
+                  "nb-crp-sensitivity"
+                ],
+                "maxNotebookAgeMinutes": 180
+              }
+            }
+          ],
+          "findings": [
+            {
+              "suggestionId": "sug-stale-crp-result",
+              "code": "notebook_outputs_fresh",
+              "severity": "warning",
+              "message": "Related notebook outputs are stale or missing.",
+              "remediation": "Re-run related notebook cells and attach fresh outputs before accepting the suggestion.",
+              "evidence": {
+                "notebookIds": [
+                  "nb-crp-sensitivity"
+                ],
+                "staleNotebookIds": [
+                  "nb-crp-sensitivity"
+                ],
+                "maxNotebookAgeMinutes": 180
+              }
+            }
+          ]
+        },
+        {
+          "suggestionId": "sug-stale-methods-anchor",
+          "sectionId": "methods-assay",
+          "proposerId": "author-garcia",
+          "decision": "escalate",
+          "provenanceDigest": "a21b033b77c445f1999b2ca0803a66d6e00d71a39186a0ea18de9da5374bee88",
+          "checks": [
+            {
+              "code": "target_section_exists",
+              "severity": "critical",
+              "pass": true,
+              "message": "Target manuscript section exists.",
+              "evidence": {
+                "sectionId": "methods-assay"
+              }
+            },
+            {
+              "code": "section_version_hash_current",
+              "severity": "critical",
+              "pass": false,
+              "message": "Suggestion was prepared against a stale section hash.",
+              "evidence": {
+                "expectedHash": "sha256-methods-v3",
+                "currentHash": "sha256-methods-v4"
+              }
+            },
+            {
+              "code": "quote_anchor_stable",
+              "severity": "critical",
+              "pass": false,
+              "message": "Quote anchor cannot be safely resolved in the target section.",
+              "evidence": {
+                "quote": "singleplex assay",
+                "resolvedIndex": -1,
+                "expectedStart": 28,
+                "drift": null,
+                "maxAnchorDrift": 4
+              }
+            },
+            {
+              "code": "locked_section_rules_satisfied",
+              "severity": "critical",
+              "pass": true,
+              "message": "Section lock rules permit this suggestion acceptance.",
+              "evidence": {
+                "locked": false
+              }
+            },
+            {
+              "code": "required_author_approvals_present",
+              "severity": "critical",
+              "pass": false,
+              "message": "Required author approvals are missing.",
+              "evidence": {
+                "approvedRoles": [
+                  "coauthor"
+                ],
+                "missingRoles": [
+                  "corresponding_author"
+                ],
+                "requiredApprovalRoles": [
+                  "corresponding_author"
+                ]
+              }
+            },
+            {
+              "code": "blocking_replies_resolved",
+              "severity": "critical",
+              "pass": false,
+              "message": "1 blocking reviewer replies remain unresolved.",
+              "evidence": {
+                "commentIds": [
+                  "comment-202"
+                ]
+              }
+            },
+            {
+              "code": "notebook_outputs_fresh",
+              "severity": "warning",
+              "pass": true,
+              "message": "Related notebook outputs are fresh enough for acceptance.",
+              "evidence": {
+                "notebookIds": [],
+                "staleNotebookIds": [],
+                "maxNotebookAgeMinutes": 180
+              }
+            }
+          ],
+          "findings": [
+            {
+              "suggestionId": "sug-stale-methods-anchor",
+              "code": "section_version_hash_current",
+              "severity": "critical",
+              "message": "Suggestion was prepared against a stale section hash.",
+              "remediation": "Rebase or re-review the suggestion against the current section version.",
+              "evidence": {
+                "expectedHash": "sha256-methods-v3",
+                "currentHash": "sha256-methods-v4"
+              }
+            },
+            {
+              "suggestionId": "sug-stale-methods-anchor",
+              "code": "quote_anchor_stable",
+              "severity": "critical",
+              "message": "Quote anchor cannot be safely resolved in the target section.",
+              "remediation": "Refresh the quoted anchor and offsets before accepting the suggestion.",
+              "evidence": {
+                "quote": "singleplex assay",
+                "resolvedIndex": -1,
+                "expectedStart": 28,
+                "drift": null,
+                "maxAnchorDrift": 4
+              }
+            },
+            {
+              "suggestionId": "sug-stale-methods-anchor",
+              "code": "required_author_approvals_present",
+              "severity": "critical",
+              "message": "Required author approvals are missing.",
+              "remediation": "Collect approval from the corresponding author or configured required role.",
+              "evidence": {
+                "approvedRoles": [
+                  "coauthor"
+                ],
+                "missingRoles": [
+                  "corresponding_author"
+                ],
+                "requiredApprovalRoles": [
+                  "corresponding_author"
+                ]
+              }
+            },
+            {
+              "suggestionId": "sug-stale-methods-anchor",
+              "code": "blocking_replies_resolved",
+              "severity": "critical",
+              "message": "1 blocking reviewer replies remain unresolved.",
+              "remediation": "Resolve blocking replies before accepting the suggestion.",
+              "evidence": {
+                "commentIds": [
+                  "comment-202"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "acceptQueue": [
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-safe-il6-wording",
+          "action": "apply_suggestion_with_provenance",
+          "sectionId": "results-primary",
+          "provenanceDigest": "dec9816d7e07be0165ad00af794019b4673e93224f77b590e16024aaf08d07d7"
+        }
+      ],
+      "deferQueue": [
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-stale-crp-result",
+          "action": "defer_until_minor_provenance_gap_is_fixed",
+          "findingCodes": [
+            "notebook_outputs_fresh"
+          ]
+        }
+      ],
+      "escalationQueue": [
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-stale-methods-anchor",
+          "action": "escalate_before_acceptance_mutates_manuscript",
+          "findingCodes": [
+            "section_version_hash_current",
+            "quote_anchor_stable",
+            "required_author_approvals_present",
+            "blocking_replies_resolved"
+          ]
+        }
+      ],
+      "reviewQueue": [
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-stale-crp-result",
+          "code": "notebook_outputs_fresh",
+          "severity": "warning",
+          "action": "rerun_related_notebooks",
+          "remediation": "Re-run related notebook cells and attach fresh outputs before accepting the suggestion."
+        },
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-stale-methods-anchor",
+          "code": "section_version_hash_current",
+          "severity": "critical",
+          "action": "rebase_suggestion_to_current_section",
+          "remediation": "Rebase or re-review the suggestion against the current section version."
+        },
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-stale-methods-anchor",
+          "code": "quote_anchor_stable",
+          "severity": "critical",
+          "action": "refresh_quote_anchor",
+          "remediation": "Refresh the quoted anchor and offsets before accepting the suggestion."
+        },
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-stale-methods-anchor",
+          "code": "required_author_approvals_present",
+          "severity": "critical",
+          "action": "collect_author_approval",
+          "remediation": "Collect approval from the corresponding author or configured required role."
+        },
+        {
+          "manuscriptId": "immune-response-manuscript",
+          "suggestionId": "sug-stale-methods-anchor",
+          "code": "blocking_replies_resolved",
+          "severity": "critical",
+          "action": "resolve_blocking_replies",
+          "remediation": "Resolve blocking replies before accepting the suggestion."
+        }
+      ]
+    },
+    {
+      "manuscriptId": "materials-catalyst-draft",
+      "title": "Materials Catalyst Draft",
+      "status": "acceptance_ready",
+      "summary": {
+        "sections": 1,
+        "suggestions": 1,
+        "accepted": 1,
+        "deferred": 0,
+        "escalated": 0,
+        "findings": 0
+      },
+      "suggestions": [
+        {
+          "suggestionId": "sug-discussion-precision",
+          "sectionId": "discussion",
+          "proposerId": "author-owens",
+          "decision": "accept",
+          "provenanceDigest": "50aab2054728d55c7fca4c2a107639704ab6c6a4d723e2740702ddc6e995f57c",
+          "checks": [
+            {
+              "code": "target_section_exists",
+              "severity": "critical",
+              "pass": true,
+              "message": "Target manuscript section exists.",
+              "evidence": {
+                "sectionId": "discussion"
+              }
+            },
+            {
+              "code": "section_version_hash_current",
+              "severity": "critical",
+              "pass": true,
+              "message": "Suggestion base section hash matches the current section.",
+              "evidence": {
+                "expectedHash": "sha256-discussion-v7",
+                "currentHash": "sha256-discussion-v7"
+              }
+            },
+            {
+              "code": "quote_anchor_stable",
+              "severity": "critical",
+              "pass": true,
+              "message": "Quote anchor still resolves inside the target section.",
+              "evidence": {
+                "quote": "modest activity decline",
+                "resolvedIndex": 55,
+                "expectedStart": 58,
+                "drift": 3,
+                "maxAnchorDrift": 4
+              }
+            },
+            {
+              "code": "locked_section_rules_satisfied",
+              "severity": "critical",
+              "pass": true,
+              "message": "Section lock rules permit this suggestion acceptance.",
+              "evidence": {
+                "locked": false
+              }
+            },
+            {
+              "code": "required_author_approvals_present",
+              "severity": "critical",
+              "pass": true,
+              "message": "Required author approvals are present.",
+              "evidence": {
+                "approvedRoles": [
+                  "corresponding_author"
+                ],
+                "missingRoles": [],
+                "requiredApprovalRoles": [
+                  "corresponding_author"
+                ]
+              }
+            },
+            {
+              "code": "blocking_replies_resolved",
+              "severity": "critical",
+              "pass": true,
+              "message": "No unresolved blocking reviewer replies remain.",
+              "evidence": {
+                "commentIds": []
+              }
+            },
+            {
+              "code": "notebook_outputs_fresh",
+              "severity": "warning",
+              "pass": true,
+              "message": "Related notebook outputs are fresh enough for acceptance.",
+              "evidence": {
+                "notebookIds": [],
+                "staleNotebookIds": [],
+                "maxNotebookAgeMinutes": 180
+              }
+            }
+          ],
+          "findings": []
+        }
+      ],
+      "acceptQueue": [
+        {
+          "manuscriptId": "materials-catalyst-draft",
+          "suggestionId": "sug-discussion-precision",
+          "action": "apply_suggestion_with_provenance",
+          "sectionId": "discussion",
+          "provenanceDigest": "50aab2054728d55c7fca4c2a107639704ab6c6a4d723e2740702ddc6e995f57c"
+        }
+      ],
+      "deferQueue": [],
+      "escalationQueue": [],
+      "reviewQueue": []
+    }
+  ],
+  "reviewQueue": [
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-stale-crp-result",
+      "code": "notebook_outputs_fresh",
+      "severity": "warning",
+      "action": "rerun_related_notebooks",
+      "remediation": "Re-run related notebook cells and attach fresh outputs before accepting the suggestion."
+    },
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-stale-methods-anchor",
+      "code": "section_version_hash_current",
+      "severity": "critical",
+      "action": "rebase_suggestion_to_current_section",
+      "remediation": "Rebase or re-review the suggestion against the current section version."
+    },
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-stale-methods-anchor",
+      "code": "quote_anchor_stable",
+      "severity": "critical",
+      "action": "refresh_quote_anchor",
+      "remediation": "Refresh the quoted anchor and offsets before accepting the suggestion."
+    },
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-stale-methods-anchor",
+      "code": "required_author_approvals_present",
+      "severity": "critical",
+      "action": "collect_author_approval",
+      "remediation": "Collect approval from the corresponding author or configured required role."
+    },
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-stale-methods-anchor",
+      "code": "blocking_replies_resolved",
+      "severity": "critical",
+      "action": "resolve_blocking_replies",
+      "remediation": "Resolve blocking replies before accepting the suggestion."
+    }
+  ],
+  "acceptQueue": [
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-safe-il6-wording",
+      "action": "apply_suggestion_with_provenance",
+      "sectionId": "results-primary",
+      "provenanceDigest": "dec9816d7e07be0165ad00af794019b4673e93224f77b590e16024aaf08d07d7"
+    },
+    {
+      "manuscriptId": "materials-catalyst-draft",
+      "suggestionId": "sug-discussion-precision",
+      "action": "apply_suggestion_with_provenance",
+      "sectionId": "discussion",
+      "provenanceDigest": "50aab2054728d55c7fca4c2a107639704ab6c6a4d723e2740702ddc6e995f57c"
+    }
+  ],
+  "deferQueue": [
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-stale-crp-result",
+      "action": "defer_until_minor_provenance_gap_is_fixed",
+      "findingCodes": [
+        "notebook_outputs_fresh"
+      ]
+    }
+  ],
+  "escalationQueue": [
+    {
+      "manuscriptId": "immune-response-manuscript",
+      "suggestionId": "sug-stale-methods-anchor",
+      "action": "escalate_before_acceptance_mutates_manuscript",
+      "findingCodes": [
+        "section_version_hash_current",
+        "quote_anchor_stable",
+        "required_author_approvals_present",
+        "blocking_replies_resolved"
+      ]
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "8fd8f893ce8dfd151ca628ed7c42a3080357da86b1d9fae65dd9994f4ebb5653",
+    "policyVersion": "collab-suggestion-acceptance-provenance-v1"
+  }
+}

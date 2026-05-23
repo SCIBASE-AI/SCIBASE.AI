@@ -1,0 +1,149 @@
+{
+  "generatedAt": "2026-05-23T00:00:00.000Z",
+  "guard": "knowledge-graph-temporal-validity-guard",
+  "results": [
+    {
+      "graphId": "kg-temporal-review-2026-05",
+      "asOf": "2026-05-23",
+      "status": "hold_temporal_review",
+      "summary": {
+        "blockers": 6,
+        "reviewItems": 1,
+        "nodeFindings": 2,
+        "edgeFindings": 5,
+        "versionDrift": 2,
+        "suppressedRecommendations": 2
+      },
+      "findings": [
+        {
+          "code": "NODE_EXPIRED",
+          "severity": "blocker",
+          "targetType": "node",
+          "targetId": "dataset-scrna-v2",
+          "message": "Node dataset-scrna-v2 expired before 2026-05-23.",
+          "evidence": {
+            "validUntil": "2026-04-15"
+          }
+        },
+        {
+          "code": "NODE_NOT_YET_EFFECTIVE",
+          "severity": "blocker",
+          "targetType": "node",
+          "targetId": "dataset-scrna-v4",
+          "message": "Node dataset-scrna-v4 is not effective on 2026-05-23.",
+          "evidence": {
+            "validFrom": "2026-08-01"
+          }
+        },
+        {
+          "code": "EDGE_EXPIRED",
+          "severity": "blocker",
+          "targetType": "edge",
+          "targetId": "edge-expired-dataset",
+          "message": "Edge edge-expired-dataset expired before 2026-05-23.",
+          "evidence": {
+            "validUntil": "2026-04-01"
+          }
+        },
+        {
+          "code": "EVIDENCE_VERSION_DRIFT",
+          "severity": "blocker",
+          "targetType": "edge",
+          "targetId": "edge-expired-dataset",
+          "message": "Edge edge-expired-dataset cites v1, but target dataset-scrna-v2 is v2.",
+          "evidence": {
+            "edgeVersion": "v1",
+            "targetVersion": "v2",
+            "targetId": "dataset-scrna-v2"
+          }
+        },
+        {
+          "code": "EDGE_NOT_YET_EFFECTIVE",
+          "severity": "blocker",
+          "targetType": "edge",
+          "targetId": "edge-future-dataset",
+          "message": "Edge edge-future-dataset is not effective on 2026-05-23.",
+          "evidence": {
+            "validFrom": "2026-08-02"
+          }
+        },
+        {
+          "code": "EVIDENCE_VERSION_DRIFT",
+          "severity": "blocker",
+          "targetType": "edge",
+          "targetId": "edge-paper-method",
+          "message": "Edge edge-paper-method cites v1, but target method-scrna-normalization-v2 is v2.",
+          "evidence": {
+            "edgeVersion": "v1",
+            "targetVersion": "v2",
+            "targetId": "method-scrna-normalization-v2"
+          }
+        },
+        {
+          "code": "AFFILIATION_EXPIRED",
+          "severity": "review",
+          "targetType": "edge",
+          "targetId": "edge-author-affiliation",
+          "message": "Affiliation edge edge-author-affiliation expired and needs curator review.",
+          "evidence": {
+            "validUntil": "2026-01-31"
+          }
+        }
+      ],
+      "recommendationDecisions": [
+        {
+          "id": "rec-risky-crispr",
+          "title": "Recommend stale CRISPR dataset workflow",
+          "decision": "suppress",
+          "reasons": [
+            "NODE_BLOCKED:dataset-scrna-v2",
+            "EDGE_BLOCKED:edge-expired-dataset",
+            "EDGE_BLOCKED:edge-paper-method"
+          ]
+        },
+        {
+          "id": "rec-future-dataset",
+          "title": "Recommend future dataset release",
+          "decision": "suppress",
+          "reasons": [
+            "NODE_BLOCKED:dataset-scrna-v4",
+            "EDGE_BLOCKED:edge-future-dataset"
+          ]
+        }
+      ],
+      "curatorActions": [
+        "Retire expired nodes from public entity pages or map them to a current version.",
+        "Keep future-dated nodes hidden until their effective date.",
+        "Remove or replace expired relationship edges before graph recommendation release.",
+        "Refresh relationship evidence to match the current target node or dataset version.",
+        "Delay relationship publication until the effective date.",
+        "Route expired affiliations to curator review before profile/entity-page display."
+      ],
+      "digest": "sha256:7abaeae1e266b2772822a7799e80bd64e017f52369350e102a7b3641ef486371"
+    },
+    {
+      "graphId": "kg-temporal-2026-05",
+      "asOf": "2026-05-23",
+      "status": "temporal_ready",
+      "summary": {
+        "blockers": 0,
+        "reviewItems": 0,
+        "nodeFindings": 0,
+        "edgeFindings": 0,
+        "versionDrift": 0,
+        "suppressedRecommendations": 0
+      },
+      "findings": [],
+      "recommendationDecisions": [
+        {
+          "id": "rec-crispr-single-cell",
+          "title": "Recommend CRISPR single-cell workflow",
+          "decision": "publish",
+          "reasons": []
+        }
+      ],
+      "curatorActions": [],
+      "digest": "sha256:3dd829ed8fb5ed4d46fd3f3043f111f67068e6bca0175514b6f4966b49349797"
+    }
+  ]
+}

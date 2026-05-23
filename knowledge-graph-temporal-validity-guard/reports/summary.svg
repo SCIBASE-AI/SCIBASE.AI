@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="70" y="70" width="1140" height="580" rx="18" fill="#ffffff" stroke="#1f2933" stroke-width="3"/>
+  <text x="112" y="138" font-family="Arial, sans-serif" font-size="45" font-weight="700" fill="#111827">Knowledge graph temporal validity guard</text>
+  <text x="112" y="188" font-family="Arial, sans-serif" font-size="25" fill="#374151">Checks effective dates, expiry dates, versions, affiliations, and recommendation paths before graph publication.</text>
+  <g transform="translate(112 250)">
+    <rect width="488" height="250" rx="14" fill="#fff1f0" stroke="#b42318" stroke-width="3"/>
+    <text x="32" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#b42318">Temporal hold</text>
+    <text x="32" y="110" font-family="Arial, sans-serif" font-size="24" fill="#1f2933">kg-temporal-review-2026-05</text>
+    <text x="32" y="160" font-family="Arial, sans-serif" font-size="24" fill="#1f2933">Blockers: 6</text>
+    <text x="32" y="202" font-family="Arial, sans-serif" font-size="24" fill="#1f2933">Suppressed recs: 2</text>
+  </g>
+  <g transform="translate(680 250)">
+    <rect width="488" height="250" rx="14" fill="#eefaf2" stroke="#147d3f" stroke-width="3"/>
+    <text x="32" y="56" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#147d3f">Temporal ready</text>
+    <text x="32" y="110" font-family="Arial, sans-serif" font-size="24" fill="#1f2933">kg-temporal-2026-05</text>
+    <text x="32" y="160" font-family="Arial, sans-serif" font-size="24" fill="#1f2933">Blockers: 0</text>
+    <text x="32" y="202" font-family="Arial, sans-serif" font-size="24" fill="#1f2933">Suppressed recs: 0</text>
+  </g>
+  <text x="112" y="588" font-family="Arial, sans-serif" font-size="24" fill="#4b5563">Reviewer artifacts: JSON packet, Markdown report, SVG summary, H.264 demo video.</text>
+</svg>

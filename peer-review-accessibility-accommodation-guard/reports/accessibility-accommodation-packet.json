@@ -1,0 +1,105 @@
+{
+  "reviewId": "community-reputation-accessibility-demo",
+  "generatedAt": "2026-05-23T08:30:00Z",
+  "decision": "hold-for-accessibility-review",
+  "fairnessScore": 0,
+  "summary": {
+    "eventsReviewed": 4,
+    "accommodationEvents": 3,
+    "missingAccessibleArtifacts": 1,
+    "deadlineIssues": 1,
+    "privacyHolds": 1,
+    "localeWindowIssues": 2,
+    "penaltiesHeld": 2
+  },
+  "findings": [
+    {
+      "eventId": "review-late-accessibility",
+      "reviewerId": "reviewer-alpha",
+      "type": "missing-accessible-artifact",
+      "severity": "blocker",
+      "message": "Approved accommodation requires dataset_summary, but it is not available."
+    },
+    {
+      "eventId": "review-late-accessibility",
+      "reviewerId": "reviewer-alpha",
+      "type": "missing-adjusted-deadline",
+      "severity": "blocker",
+      "message": "Extended-deadline accommodation was approved without an adjusted deadline."
+    },
+    {
+      "eventId": "review-late-accessibility",
+      "reviewerId": "reviewer-alpha",
+      "type": "unfair-reputation-penalty",
+      "severity": "blocker",
+      "message": "Negative reputation delta -8 is held until accessibility and locale issues are resolved."
+    },
+    {
+      "eventId": "review-disclosure-risk",
+      "reviewerId": "reviewer-beta",
+      "type": "unsafe-accommodation-disclosure",
+      "severity": "major",
+      "message": "Accommodation details are visible in an anonymous review context."
+    },
+    {
+      "eventId": "review-locale-window",
+      "reviewerId": "reviewer-gamma",
+      "type": "insufficient-local-response-window",
+      "severity": "major",
+      "message": "Reviewer response window is 3.0 hours, below required 24 hours."
+    },
+    {
+      "eventId": "review-locale-window",
+      "reviewerId": "reviewer-gamma",
+      "type": "missing-translation-support",
+      "severity": "major",
+      "message": "Reviewer requires vi support, but no translated abstract was provided."
+    },
+    {
+      "eventId": "review-locale-window",
+      "reviewerId": "reviewer-gamma",
+      "type": "unfair-reputation-penalty",
+      "severity": "blocker",
+      "message": "Negative reputation delta -4 is held until accessibility and locale issues are resolved."
+    }
+  ],
+  "requiredActions": [
+    {
+      "type": "publish_accessible_artifact",
+      "eventId": "review-late-accessibility",
+      "artifact": "dataset_summary",
+      "owner": "review_steward"
+    },
+    {
+      "type": "record_adjusted_deadline",
+      "eventId": "review-late-accessibility",
+      "owner": "review_steward"
+    },
+    {
+      "type": "freeze_reputation_penalty",
+      "eventId": "review-late-accessibility",
+      "owner": "reputation_steward"
+    },
+    {
+      "type": "redact_accommodation_disclosure",
+      "eventId": "review-disclosure-risk",
+      "owner": "privacy_steward"
+    },
+    {
+      "type": "extend_response_window",
+      "eventId": "review-locale-window",
+      "owner": "review_coordinator"
+    },
+    {
+      "type": "provide_translated_abstract",
+      "eventId": "review-locale-window",
+      "owner": "review_coordinator"
+    },
+    {
+      "type": "freeze_reputation_penalty",
+      "eventId": "review-locale-window",
+      "owner": "reputation_steward"
+    }
+  ],
+  "auditDigest": "4d1c204c07ce84e5"
+}

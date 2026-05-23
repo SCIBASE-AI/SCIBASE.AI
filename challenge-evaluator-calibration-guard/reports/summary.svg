@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#101820"/>
+  <text x="48" y="78" fill="#f8fafc" font-family="Arial" font-size="34" font-weight="700">Challenge Evaluator Calibration Guard</text>
+  <text x="48" y="122" fill="#cbd5e1" font-family="Arial" font-size="18">Seed coverage, severity drift, inter-rater spread, and normalization gates</text>
+  <rect x="48" y="172" width="250" height="150" rx="8" fill="#047857"/>
+  <text x="78" y="232" fill="#ecfdf5" font-family="Arial" font-size="56" font-weight="700">1</text>
+  <text x="78" y="272" fill="#a7f3d0" font-family="Arial" font-size="22">live-ready</text>
+  <rect x="355" y="172" width="250" height="150" rx="8" fill="#ca8a04"/>
+  <text x="385" y="232" fill="#fefce8" font-family="Arial" font-size="56" font-weight="700">1</text>
+  <text x="385" y="272" fill="#fef08a" font-family="Arial" font-size="22">recalibrate</text>
+  <rect x="662" y="172" width="250" height="150" rx="8" fill="#be123c"/>
+  <text x="692" y="232" fill="#ffe4e6" font-family="Arial" font-size="56" font-weight="700">1</text>
+  <text x="692" y="272" fill="#fecdd3" font-family="Arial" font-size="22">held</text>
+  <text x="48" y="386" fill="#e2e8f0" font-family="Arial" font-size="20">Controls: rubric coverage, evaluator role exclusions, conflicts, drift, spread, and score anchors.</text>
+  <text x="48" y="426" fill="#94a3b8" font-family="Arial" font-size="16">Digest 3ad47de3b19a94258f39925456ea...</text>
+</svg>

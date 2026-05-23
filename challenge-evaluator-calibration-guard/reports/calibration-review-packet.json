@@ -1,0 +1,1466 @@
+{
+  "asOf": "2026-05-23T21:45:00.000Z",
+  "policy": {
+    "minRubricCriteria": 2,
+    "minSeedsPerCriterion": 2,
+    "requiredSeedOutcomes": [
+      "passing",
+      "borderline",
+      "failing"
+    ],
+    "excludedEvaluatorRoles": [
+      "sponsor",
+      "solver",
+      "observer"
+    ],
+    "minEligibleEvaluators": 2,
+    "maxEvaluatorMeanDrift": 0.75,
+    "maxCriterionMeanDrift": 0.85,
+    "maxInterRaterSpread": 1.5,
+    "requiredAnchorTypes": [
+      "low",
+      "target",
+      "high"
+    ],
+    "policyVersion": "challenge-evaluator-calibration-v1"
+  },
+  "summary": {
+    "totalChallenges": 3,
+    "readyChallenges": 1,
+    "recalibrationChallenges": 1,
+    "heldChallenges": 1,
+    "totalSeeds": 8,
+    "totalCalibrationScores": 22,
+    "totalFindings": 7,
+    "criticalFindings": 4,
+    "warningFindings": 3
+  },
+  "challenges": [
+    {
+      "challengeId": "neuro-imaging-prize",
+      "title": "Neuro Imaging Model Prize",
+      "status": "live_scoring_ready",
+      "summary": {
+        "criteria": 3,
+        "seeds": 3,
+        "calibrationScores": 9,
+        "eligibleEvaluators": 3,
+        "criticalFindings": 0,
+        "warningFindings": 0
+      },
+      "checks": [
+        {
+          "code": "rubric_declared",
+          "severity": "critical",
+          "pass": true,
+          "message": "3 rubric criteria are declared for calibration.",
+          "evidence": {
+            "criteria": [
+              "scientific-validity",
+              "reproducibility",
+              "impact"
+            ]
+          }
+        },
+        {
+          "code": "seed_coverage_complete",
+          "severity": "critical",
+          "pass": true,
+          "message": "Seed submissions cover every criterion and required outcome bucket.",
+          "evidence": {
+            "criterionCounts": [
+              {
+                "criterionId": "scientific-validity",
+                "seedCount": 3
+              },
+              {
+                "criterionId": "reproducibility",
+                "seedCount": 3
+              },
+              {
+                "criterionId": "impact",
+                "seedCount": 3
+              }
+            ],
+            "missingCriterionCoverage": [],
+            "observedOutcomes": [
+              "borderline",
+              "failing",
+              "passing"
+            ],
+            "missingOutcomes": []
+          }
+        },
+        {
+          "code": "evaluator_role_exclusion",
+          "severity": "critical",
+          "pass": true,
+          "message": "Calibration scores only come from eligible evaluators.",
+          "evidence": {
+            "eligibleEvaluatorIds": [
+              "eval-chen",
+              "eval-patel",
+              "eval-okafor"
+            ],
+            "invalidScoreIds": []
+          }
+        },
+        {
+          "code": "conflict_free_scores",
+          "severity": "critical",
+          "pass": true,
+          "message": "No calibration score is tied to an evaluator/seed conflict.",
+          "evidence": {
+            "conflictingScoreIds": []
+          }
+        },
+        {
+          "code": "evaluator_severity_drift_within_limit",
+          "severity": "warning",
+          "pass": true,
+          "message": "Evaluator severity drift stays within policy tolerance.",
+          "evidence": {
+            "evaluators": [
+              {
+                "evaluatorId": "eval-chen",
+                "samples": 9,
+                "meanSignedDrift": 0,
+                "meanAbsoluteDrift": 0
+              },
+              {
+                "evaluatorId": "eval-patel",
+                "samples": 9,
+                "meanSignedDrift": 0,
+                "meanAbsoluteDrift": 0.111
+              },
+              {
+                "evaluatorId": "eval-okafor",
+                "samples": 9,
+                "meanSignedDrift": 0,
+                "meanAbsoluteDrift": 0.111
+              }
+            ],
+            "outliers": [],
+            "threshold": 0.75
+          }
+        },
+        {
+          "code": "criterion_drift_within_limit",
+          "severity": "warning",
+          "pass": true,
+          "message": "Criterion-level drift is within tolerance.",
+          "evidence": {
+            "criteria": [
+              {
+                "criterionId": "scientific-validity",
+                "samples": 9,
+                "meanAbsoluteDrift": 0.083
+              },
+              {
+                "criterionId": "reproducibility",
+                "samples": 9,
+                "meanAbsoluteDrift": 0.083
+              },
+              {
+                "criterionId": "impact",
+                "samples": 9,
+                "meanAbsoluteDrift": 0.056
+              }
+            ],
+            "outliers": [],
+            "threshold": 0.85
+          }
+        },
+        {
+          "code": "inter_rater_spread_within_limit",
+          "severity": "warning",
+          "pass": true,
+          "message": "Inter-rater spread stays within tolerance on seed submissions.",
+          "evidence": {
+            "pairs": [
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              },
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              },
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 0
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 0.25
+              }
+            ],
+            "outliers": [],
+            "threshold": 1.5
+          }
+        },
+        {
+          "code": "score_normalization_ready",
+          "severity": "critical",
+          "pass": true,
+          "message": "Score normalization anchors are ready for live scoring.",
+          "evidence": {
+            "missingCriteria": [],
+            "incompleteAnchors": [],
+            "requiredAnchorTypes": [
+              "low",
+              "target",
+              "high"
+            ]
+          }
+        }
+      ],
+      "findings": [],
+      "calibration": {
+        "coverage": {
+          "criterionCounts": [
+            {
+              "criterionId": "scientific-validity",
+              "seedCount": 3
+            },
+            {
+              "criterionId": "reproducibility",
+              "seedCount": 3
+            },
+            {
+              "criterionId": "impact",
+              "seedCount": 3
+            }
+          ],
+          "missingCriterionCoverage": [],
+          "observedOutcomes": [
+            "borderline",
+            "failing",
+            "passing"
+          ],
+          "missingOutcomes": []
+        },
+        "evaluatorStats": {
+          "evaluators": [
+            {
+              "evaluatorId": "eval-chen",
+              "samples": 9,
+              "meanSignedDrift": 0,
+              "meanAbsoluteDrift": 0
+            },
+            {
+              "evaluatorId": "eval-patel",
+              "samples": 9,
+              "meanSignedDrift": 0,
+              "meanAbsoluteDrift": 0.111
+            },
+            {
+              "evaluatorId": "eval-okafor",
+              "samples": 9,
+              "meanSignedDrift": 0,
+              "meanAbsoluteDrift": 0.111
+            }
+          ],
+          "outliers": [],
+          "threshold": 0.75
+        },
+        "criterionStats": {
+          "criteria": [
+            {
+              "criterionId": "scientific-validity",
+              "samples": 9,
+              "meanAbsoluteDrift": 0.083
+            },
+            {
+              "criterionId": "reproducibility",
+              "samples": 9,
+              "meanAbsoluteDrift": 0.083
+            },
+            {
+              "criterionId": "impact",
+              "samples": 9,
+              "meanAbsoluteDrift": 0.056
+            }
+          ],
+          "outliers": [],
+          "threshold": 0.85
+        },
+        "spreadStats": {
+          "pairs": [
+            {
+              "seedId": "seed-strong-model",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            },
+            {
+              "seedId": "seed-strong-model",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            },
+            {
+              "seedId": "seed-strong-model",
+              "criterionId": "impact",
+              "evaluatorCount": 3,
+              "spread": 0
+            },
+            {
+              "seedId": "seed-borderline-report",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            },
+            {
+              "seedId": "seed-borderline-report",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            },
+            {
+              "seedId": "seed-borderline-report",
+              "criterionId": "impact",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            },
+            {
+              "seedId": "seed-weak-notebook",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            },
+            {
+              "seedId": "seed-weak-notebook",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            },
+            {
+              "seedId": "seed-weak-notebook",
+              "criterionId": "impact",
+              "evaluatorCount": 3,
+              "spread": 0.25
+            }
+          ],
+          "outliers": [],
+          "threshold": 1.5
+        },
+        "normalization": {
+          "missingCriteria": [],
+          "incompleteAnchors": [],
+          "requiredAnchorTypes": [
+            "low",
+            "target",
+            "high"
+          ]
+        }
+      },
+      "reviewQueue": []
+    },
+    {
+      "challengeId": "materials-catalyst-prize",
+      "title": "Materials Catalyst Challenge",
+      "status": "hold_live_scoring",
+      "summary": {
+        "criteria": 3,
+        "seeds": 2,
+        "calibrationScores": 4,
+        "eligibleEvaluators": 1,
+        "criticalFindings": 4,
+        "warningFindings": 1
+      },
+      "checks": [
+        {
+          "code": "rubric_declared",
+          "severity": "critical",
+          "pass": true,
+          "message": "3 rubric criteria are declared for calibration.",
+          "evidence": {
+            "criteria": [
+              "scientific-validity",
+              "reproducibility",
+              "impact"
+            ]
+          }
+        },
+        {
+          "code": "seed_coverage_complete",
+          "severity": "critical",
+          "pass": false,
+          "message": "Seed submissions do not cover every criterion and required outcome bucket.",
+          "evidence": {
+            "criterionCounts": [
+              {
+                "criterionId": "scientific-validity",
+                "seedCount": 2
+              },
+              {
+                "criterionId": "reproducibility",
+                "seedCount": 1
+              },
+              {
+                "criterionId": "impact",
+                "seedCount": 2
+              }
+            ],
+            "missingCriterionCoverage": [
+              "reproducibility"
+            ],
+            "observedOutcomes": [
+              "failing",
+              "passing"
+            ],
+            "missingOutcomes": [
+              "borderline"
+            ]
+          }
+        },
+        {
+          "code": "evaluator_role_exclusion",
+          "severity": "critical",
+          "pass": false,
+          "message": "Calibration includes excluded or insufficient evaluator roles.",
+          "evidence": {
+            "eligibleEvaluatorIds": [
+              "eval-harsh"
+            ],
+            "invalidScoreIds": [
+              "catalyst-score-1",
+              "catalyst-score-3"
+            ]
+          }
+        },
+        {
+          "code": "conflict_free_scores",
+          "severity": "critical",
+          "pass": false,
+          "message": "1 calibration scores are affected by evaluator conflicts.",
+          "evidence": {
+            "conflictingScoreIds": [
+              "catalyst-score-3"
+            ]
+          }
+        },
+        {
+          "code": "evaluator_severity_drift_within_limit",
+          "severity": "warning",
+          "pass": true,
+          "message": "Evaluator severity drift stays within policy tolerance.",
+          "evidence": {
+            "evaluators": [
+              {
+                "evaluatorId": "eval-harsh",
+                "samples": 5,
+                "meanSignedDrift": -0.2,
+                "meanAbsoluteDrift": 1.8
+              }
+            ],
+            "outliers": [],
+            "threshold": 0.75
+          }
+        },
+        {
+          "code": "criterion_drift_within_limit",
+          "severity": "warning",
+          "pass": false,
+          "message": "3 criteria have calibration drift beyond tolerance.",
+          "evidence": {
+            "criteria": [
+              {
+                "criterionId": "scientific-validity",
+                "samples": 2,
+                "meanAbsoluteDrift": 2
+              },
+              {
+                "criterionId": "reproducibility",
+                "samples": 1,
+                "meanAbsoluteDrift": 2
+              },
+              {
+                "criterionId": "impact",
+                "samples": 2,
+                "meanAbsoluteDrift": 1.5
+              }
+            ],
+            "outliers": [
+              "scientific-validity",
+              "reproducibility",
+              "impact"
+            ],
+            "threshold": 0.85
+          }
+        },
+        {
+          "code": "inter_rater_spread_within_limit",
+          "severity": "warning",
+          "pass": true,
+          "message": "Inter-rater spread stays within tolerance on seed submissions.",
+          "evidence": {
+            "pairs": [
+              {
+                "seedId": "seed-catalyst-a",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 1,
+                "spread": 0
+              },
+              {
+                "seedId": "seed-catalyst-a",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 1,
+                "spread": 0
+              },
+              {
+                "seedId": "seed-catalyst-a",
+                "criterionId": "impact",
+                "evaluatorCount": 1,
+                "spread": 0
+              },
+              {
+                "seedId": "seed-catalyst-b",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 1,
+                "spread": 0
+              },
+              {
+                "seedId": "seed-catalyst-b",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 1,
+                "spread": 0
+              },
+              {
+                "seedId": "seed-catalyst-b",
+                "criterionId": "impact",
+                "evaluatorCount": 1,
+                "spread": 0
+              }
+            ],
+            "outliers": [],
+            "threshold": 1.5
+          }
+        },
+        {
+          "code": "score_normalization_ready",
+          "severity": "critical",
+          "pass": false,
+          "message": "Score normalization anchors are missing or incomplete.",
+          "evidence": {
+            "missingCriteria": [
+              "reproducibility",
+              "impact"
+            ],
+            "incompleteAnchors": [],
+            "requiredAnchorTypes": [
+              "low",
+              "target",
+              "high"
+            ]
+          }
+        }
+      ],
+      "findings": [
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "seed_coverage_complete",
+          "severity": "critical",
+          "message": "Seed submissions do not cover every criterion and required outcome bucket.",
+          "remediation": "Add synthetic seed submissions for each criterion and include passing, borderline, and failing examples.",
+          "evidence": {
+            "criterionCounts": [
+              {
+                "criterionId": "scientific-validity",
+                "seedCount": 2
+              },
+              {
+                "criterionId": "reproducibility",
+                "seedCount": 1
+              },
+              {
+                "criterionId": "impact",
+                "seedCount": 2
+              }
+            ],
+            "missingCriterionCoverage": [
+              "reproducibility"
+            ],
+            "observedOutcomes": [
+              "failing",
+              "passing"
+            ],
+            "missingOutcomes": [
+              "borderline"
+            ]
+          }
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "evaluator_role_exclusion",
+          "severity": "critical",
+          "message": "Calibration includes excluded or insufficient evaluator roles.",
+          "remediation": "Remove sponsor, solver, observer, or unknown-role scores and add enough independent evaluators.",
+          "evidence": {
+            "eligibleEvaluatorIds": [
+              "eval-harsh"
+            ],
+            "invalidScoreIds": [
+              "catalyst-score-1",
+              "catalyst-score-3"
+            ]
+          }
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "conflict_free_scores",
+          "severity": "critical",
+          "message": "1 calibration scores are affected by evaluator conflicts.",
+          "remediation": "Exclude conflicted evaluator scores and recollect calibration scores from independent reviewers.",
+          "evidence": {
+            "conflictingScoreIds": [
+              "catalyst-score-3"
+            ]
+          }
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "criterion_drift_within_limit",
+          "severity": "warning",
+          "message": "3 criteria have calibration drift beyond tolerance.",
+          "remediation": "Clarify rubric anchors and rescore affected seed submissions before live scoring.",
+          "evidence": {
+            "criteria": [
+              {
+                "criterionId": "scientific-validity",
+                "samples": 2,
+                "meanAbsoluteDrift": 2
+              },
+              {
+                "criterionId": "reproducibility",
+                "samples": 1,
+                "meanAbsoluteDrift": 2
+              },
+              {
+                "criterionId": "impact",
+                "samples": 2,
+                "meanAbsoluteDrift": 1.5
+              }
+            ],
+            "outliers": [
+              "scientific-validity",
+              "reproducibility",
+              "impact"
+            ],
+            "threshold": 0.85
+          }
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "score_normalization_ready",
+          "severity": "critical",
+          "message": "Score normalization anchors are missing or incomplete.",
+          "remediation": "Define low, target, and high anchors for each rubric criterion before opening live scoring.",
+          "evidence": {
+            "missingCriteria": [
+              "reproducibility",
+              "impact"
+            ],
+            "incompleteAnchors": [],
+            "requiredAnchorTypes": [
+              "low",
+              "target",
+              "high"
+            ]
+          }
+        }
+      ],
+      "calibration": {
+        "coverage": {
+          "criterionCounts": [
+            {
+              "criterionId": "scientific-validity",
+              "seedCount": 2
+            },
+            {
+              "criterionId": "reproducibility",
+              "seedCount": 1
+            },
+            {
+              "criterionId": "impact",
+              "seedCount": 2
+            }
+          ],
+          "missingCriterionCoverage": [
+            "reproducibility"
+          ],
+          "observedOutcomes": [
+            "failing",
+            "passing"
+          ],
+          "missingOutcomes": [
+            "borderline"
+          ]
+        },
+        "evaluatorStats": {
+          "evaluators": [
+            {
+              "evaluatorId": "eval-harsh",
+              "samples": 5,
+              "meanSignedDrift": -0.2,
+              "meanAbsoluteDrift": 1.8
+            }
+          ],
+          "outliers": [],
+          "threshold": 0.75
+        },
+        "criterionStats": {
+          "criteria": [
+            {
+              "criterionId": "scientific-validity",
+              "samples": 2,
+              "meanAbsoluteDrift": 2
+            },
+            {
+              "criterionId": "reproducibility",
+              "samples": 1,
+              "meanAbsoluteDrift": 2
+            },
+            {
+              "criterionId": "impact",
+              "samples": 2,
+              "meanAbsoluteDrift": 1.5
+            }
+          ],
+          "outliers": [
+            "scientific-validity",
+            "reproducibility",
+            "impact"
+          ],
+          "threshold": 0.85
+        },
+        "spreadStats": {
+          "pairs": [
+            {
+              "seedId": "seed-catalyst-a",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 1,
+              "spread": 0
+            },
+            {
+              "seedId": "seed-catalyst-a",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 1,
+              "spread": 0
+            },
+            {
+              "seedId": "seed-catalyst-a",
+              "criterionId": "impact",
+              "evaluatorCount": 1,
+              "spread": 0
+            },
+            {
+              "seedId": "seed-catalyst-b",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 1,
+              "spread": 0
+            },
+            {
+              "seedId": "seed-catalyst-b",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 1,
+              "spread": 0
+            },
+            {
+              "seedId": "seed-catalyst-b",
+              "criterionId": "impact",
+              "evaluatorCount": 1,
+              "spread": 0
+            }
+          ],
+          "outliers": [],
+          "threshold": 1.5
+        },
+        "normalization": {
+          "missingCriteria": [
+            "reproducibility",
+            "impact"
+          ],
+          "incompleteAnchors": [],
+          "requiredAnchorTypes": [
+            "low",
+            "target",
+            "high"
+          ]
+        }
+      },
+      "reviewQueue": [
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "seed_coverage_complete",
+          "severity": "critical",
+          "action": "add_seed_submission_coverage",
+          "remediation": "Add synthetic seed submissions for each criterion and include passing, borderline, and failing examples."
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "evaluator_role_exclusion",
+          "severity": "critical",
+          "action": "exclude_ineligible_evaluator_scores",
+          "remediation": "Remove sponsor, solver, observer, or unknown-role scores and add enough independent evaluators."
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "conflict_free_scores",
+          "severity": "critical",
+          "action": "remove_conflicted_scores",
+          "remediation": "Exclude conflicted evaluator scores and recollect calibration scores from independent reviewers."
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "criterion_drift_within_limit",
+          "severity": "warning",
+          "action": "clarify_rubric_anchors",
+          "remediation": "Clarify rubric anchors and rescore affected seed submissions before live scoring."
+        },
+        {
+          "challengeId": "materials-catalyst-prize",
+          "code": "score_normalization_ready",
+          "severity": "critical",
+          "action": "complete_score_normalization_anchors",
+          "remediation": "Define low, target, and high anchors for each rubric criterion before opening live scoring."
+        }
+      ]
+    },
+    {
+      "challengeId": "climate-forecast-prize",
+      "title": "Climate Forecast Benchmark",
+      "status": "recalibrate_before_live_scoring",
+      "summary": {
+        "criteria": 3,
+        "seeds": 3,
+        "calibrationScores": 9,
+        "eligibleEvaluators": 3,
+        "criticalFindings": 0,
+        "warningFindings": 2
+      },
+      "checks": [
+        {
+          "code": "rubric_declared",
+          "severity": "critical",
+          "pass": true,
+          "message": "3 rubric criteria are declared for calibration.",
+          "evidence": {
+            "criteria": [
+              "scientific-validity",
+              "reproducibility",
+              "impact"
+            ]
+          }
+        },
+        {
+          "code": "seed_coverage_complete",
+          "severity": "critical",
+          "pass": true,
+          "message": "Seed submissions cover every criterion and required outcome bucket.",
+          "evidence": {
+            "criterionCounts": [
+              {
+                "criterionId": "scientific-validity",
+                "seedCount": 3
+              },
+              {
+                "criterionId": "reproducibility",
+                "seedCount": 3
+              },
+              {
+                "criterionId": "impact",
+                "seedCount": 3
+              }
+            ],
+            "missingCriterionCoverage": [],
+            "observedOutcomes": [
+              "borderline",
+              "failing",
+              "passing"
+            ],
+            "missingOutcomes": []
+          }
+        },
+        {
+          "code": "evaluator_role_exclusion",
+          "severity": "critical",
+          "pass": true,
+          "message": "Calibration scores only come from eligible evaluators.",
+          "evidence": {
+            "eligibleEvaluatorIds": [
+              "eval-chen",
+              "eval-patel",
+              "eval-okafor"
+            ],
+            "invalidScoreIds": []
+          }
+        },
+        {
+          "code": "conflict_free_scores",
+          "severity": "critical",
+          "pass": true,
+          "message": "No calibration score is tied to an evaluator/seed conflict.",
+          "evidence": {
+            "conflictingScoreIds": []
+          }
+        },
+        {
+          "code": "evaluator_severity_drift_within_limit",
+          "severity": "warning",
+          "pass": false,
+          "message": "2 evaluators show severity drift beyond tolerance.",
+          "evidence": {
+            "evaluators": [
+              {
+                "evaluatorId": "eval-chen",
+                "samples": 9,
+                "meanSignedDrift": 1,
+                "meanAbsoluteDrift": 1
+              },
+              {
+                "evaluatorId": "eval-patel",
+                "samples": 9,
+                "meanSignedDrift": -1,
+                "meanAbsoluteDrift": 1
+              },
+              {
+                "evaluatorId": "eval-okafor",
+                "samples": 9,
+                "meanSignedDrift": 0,
+                "meanAbsoluteDrift": 0
+              }
+            ],
+            "outliers": [
+              "eval-chen",
+              "eval-patel"
+            ],
+            "threshold": 0.75
+          }
+        },
+        {
+          "code": "criterion_drift_within_limit",
+          "severity": "warning",
+          "pass": true,
+          "message": "Criterion-level drift is within tolerance.",
+          "evidence": {
+            "criteria": [
+              {
+                "criterionId": "scientific-validity",
+                "samples": 9,
+                "meanAbsoluteDrift": 0.667
+              },
+              {
+                "criterionId": "reproducibility",
+                "samples": 9,
+                "meanAbsoluteDrift": 0.667
+              },
+              {
+                "criterionId": "impact",
+                "samples": 9,
+                "meanAbsoluteDrift": 0.667
+              }
+            ],
+            "outliers": [],
+            "threshold": 0.85
+          }
+        },
+        {
+          "code": "inter_rater_spread_within_limit",
+          "severity": "warning",
+          "pass": false,
+          "message": "9 seed/criterion pairs have excessive inter-rater spread.",
+          "evidence": {
+            "pairs": [
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 2
+              }
+            ],
+            "outliers": [
+              "seed-strong-model:scientific-validity",
+              "seed-strong-model:reproducibility",
+              "seed-strong-model:impact",
+              "seed-borderline-report:scientific-validity",
+              "seed-borderline-report:reproducibility",
+              "seed-borderline-report:impact",
+              "seed-weak-notebook:scientific-validity",
+              "seed-weak-notebook:reproducibility",
+              "seed-weak-notebook:impact"
+            ],
+            "threshold": 1.5
+          }
+        },
+        {
+          "code": "score_normalization_ready",
+          "severity": "critical",
+          "pass": true,
+          "message": "Score normalization anchors are ready for live scoring.",
+          "evidence": {
+            "missingCriteria": [],
+            "incompleteAnchors": [],
+            "requiredAnchorTypes": [
+              "low",
+              "target",
+              "high"
+            ]
+          }
+        }
+      ],
+      "findings": [
+        {
+          "challengeId": "climate-forecast-prize",
+          "code": "evaluator_severity_drift_within_limit",
+          "severity": "warning",
+          "message": "2 evaluators show severity drift beyond tolerance.",
+          "remediation": "Run a calibration discussion, retrain the affected evaluators, or apply an approved normalization plan.",
+          "evidence": {
+            "evaluators": [
+              {
+                "evaluatorId": "eval-chen",
+                "samples": 9,
+                "meanSignedDrift": 1,
+                "meanAbsoluteDrift": 1
+              },
+              {
+                "evaluatorId": "eval-patel",
+                "samples": 9,
+                "meanSignedDrift": -1,
+                "meanAbsoluteDrift": 1
+              },
+              {
+                "evaluatorId": "eval-okafor",
+                "samples": 9,
+                "meanSignedDrift": 0,
+                "meanAbsoluteDrift": 0
+              }
+            ],
+            "outliers": [
+              "eval-chen",
+              "eval-patel"
+            ],
+            "threshold": 0.75
+          }
+        },
+        {
+          "challengeId": "climate-forecast-prize",
+          "code": "inter_rater_spread_within_limit",
+          "severity": "warning",
+          "message": "9 seed/criterion pairs have excessive inter-rater spread.",
+          "remediation": "Hold a reviewer calibration session and rescore high-spread seed submissions.",
+          "evidence": {
+            "pairs": [
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-strong-model",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-borderline-report",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "scientific-validity",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "reproducibility",
+                "evaluatorCount": 3,
+                "spread": 2
+              },
+              {
+                "seedId": "seed-weak-notebook",
+                "criterionId": "impact",
+                "evaluatorCount": 3,
+                "spread": 2
+              }
+            ],
+            "outliers": [
+              "seed-strong-model:scientific-validity",
+              "seed-strong-model:reproducibility",
+              "seed-strong-model:impact",
+              "seed-borderline-report:scientific-validity",
+              "seed-borderline-report:reproducibility",
+              "seed-borderline-report:impact",
+              "seed-weak-notebook:scientific-validity",
+              "seed-weak-notebook:reproducibility",
+              "seed-weak-notebook:impact"
+            ],
+            "threshold": 1.5
+          }
+        }
+      ],
+      "calibration": {
+        "coverage": {
+          "criterionCounts": [
+            {
+              "criterionId": "scientific-validity",
+              "seedCount": 3
+            },
+            {
+              "criterionId": "reproducibility",
+              "seedCount": 3
+            },
+            {
+              "criterionId": "impact",
+              "seedCount": 3
+            }
+          ],
+          "missingCriterionCoverage": [],
+          "observedOutcomes": [
+            "borderline",
+            "failing",
+            "passing"
+          ],
+          "missingOutcomes": []
+        },
+        "evaluatorStats": {
+          "evaluators": [
+            {
+              "evaluatorId": "eval-chen",
+              "samples": 9,
+              "meanSignedDrift": 1,
+              "meanAbsoluteDrift": 1
+            },
+            {
+              "evaluatorId": "eval-patel",
+              "samples": 9,
+              "meanSignedDrift": -1,
+              "meanAbsoluteDrift": 1
+            },
+            {
+              "evaluatorId": "eval-okafor",
+              "samples": 9,
+              "meanSignedDrift": 0,
+              "meanAbsoluteDrift": 0
+            }
+          ],
+          "outliers": [
+            "eval-chen",
+            "eval-patel"
+          ],
+          "threshold": 0.75
+        },
+        "criterionStats": {
+          "criteria": [
+            {
+              "criterionId": "scientific-validity",
+              "samples": 9,
+              "meanAbsoluteDrift": 0.667
+            },
+            {
+              "criterionId": "reproducibility",
+              "samples": 9,
+              "meanAbsoluteDrift": 0.667
+            },
+            {
+              "criterionId": "impact",
+              "samples": 9,
+              "meanAbsoluteDrift": 0.667
+            }
+          ],
+          "outliers": [],
+          "threshold": 0.85
+        },
+        "spreadStats": {
+          "pairs": [
+            {
+              "seedId": "seed-strong-model",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-strong-model",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-strong-model",
+              "criterionId": "impact",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-borderline-report",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-borderline-report",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-borderline-report",
+              "criterionId": "impact",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-weak-notebook",
+              "criterionId": "scientific-validity",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-weak-notebook",
+              "criterionId": "reproducibility",
+              "evaluatorCount": 3,
+              "spread": 2
+            },
+            {
+              "seedId": "seed-weak-notebook",
+              "criterionId": "impact",
+              "evaluatorCount": 3,
+              "spread": 2
+            }
+          ],
+          "outliers": [
+            "seed-strong-model:scientific-validity",
+            "seed-strong-model:reproducibility",
+            "seed-strong-model:impact",
+            "seed-borderline-report:scientific-validity",
+            "seed-borderline-report:reproducibility",
+            "seed-borderline-report:impact",
+            "seed-weak-notebook:scientific-validity",
+            "seed-weak-notebook:reproducibility",
+            "seed-weak-notebook:impact"
+          ],
+          "threshold": 1.5
+        },
+        "normalization": {
+          "missingCriteria": [],
+          "incompleteAnchors": [],
+          "requiredAnchorTypes": [
+            "low",
+            "target",
+            "high"
+          ]
+        }
+      },
+      "reviewQueue": [
+        {
+          "challengeId": "climate-forecast-prize",
+          "code": "evaluator_severity_drift_within_limit",
+          "severity": "warning",
+          "action": "recalibrate_evaluator_severity",
+          "remediation": "Run a calibration discussion, retrain the affected evaluators, or apply an approved normalization plan."
+        },
+        {
+          "challengeId": "climate-forecast-prize",
+          "code": "inter_rater_spread_within_limit",
+          "severity": "warning",
+          "action": "rescore_high_spread_seed_pairs",
+          "remediation": "Hold a reviewer calibration session and rescore high-spread seed submissions."
+        }
+      ]
+    }
+  ],
+  "reviewQueue": [
+    {
+      "challengeId": "materials-catalyst-prize",
+      "code": "seed_coverage_complete",
+      "severity": "critical",
+      "action": "add_seed_submission_coverage",
+      "remediation": "Add synthetic seed submissions for each criterion and include passing, borderline, and failing examples."
+    },
+    {
+      "challengeId": "materials-catalyst-prize",
+      "code": "evaluator_role_exclusion",
+      "severity": "critical",
+      "action": "exclude_ineligible_evaluator_scores",
+      "remediation": "Remove sponsor, solver, observer, or unknown-role scores and add enough independent evaluators."
+    },
+    {
+      "challengeId": "materials-catalyst-prize",
+      "code": "conflict_free_scores",
+      "severity": "critical",
+      "action": "remove_conflicted_scores",
+      "remediation": "Exclude conflicted evaluator scores and recollect calibration scores from independent reviewers."
+    },
+    {
+      "challengeId": "materials-catalyst-prize",
+      "code": "criterion_drift_within_limit",
+      "severity": "warning",
+      "action": "clarify_rubric_anchors",
+      "remediation": "Clarify rubric anchors and rescore affected seed submissions before live scoring."
+    },
+    {
+      "challengeId": "materials-catalyst-prize",
+      "code": "score_normalization_ready",
+      "severity": "critical",
+      "action": "complete_score_normalization_anchors",
+      "remediation": "Define low, target, and high anchors for each rubric criterion before opening live scoring."
+    },
+    {
+      "challengeId": "climate-forecast-prize",
+      "code": "evaluator_severity_drift_within_limit",
+      "severity": "warning",
+      "action": "recalibrate_evaluator_severity",
+      "remediation": "Run a calibration discussion, retrain the affected evaluators, or apply an approved normalization plan."
+    },
+    {
+      "challengeId": "climate-forecast-prize",
+      "code": "inter_rater_spread_within_limit",
+      "severity": "warning",
+      "action": "rescore_high_spread_seed_pairs",
+      "remediation": "Hold a reviewer calibration session and rescore high-spread seed submissions."
+    }
+  ],
+  "readyQueue": [
+    {
+      "challengeId": "neuro-imaging-prize",
+      "action": "open_live_scoring",
+      "eligibleEvaluators": 3
+    }
+  ],
+  "recalibrationQueue": [
+    {
+      "challengeId": "materials-catalyst-prize",
+      "action": "hold_and_repair_calibration",
+      "findingCodes": [
+        "seed_coverage_complete",
+        "evaluator_role_exclusion",
+        "conflict_free_scores",
+        "criterion_drift_within_limit",
+        "score_normalization_ready"
+      ]
+    },
+    {
+      "challengeId": "climate-forecast-prize",
+      "action": "recalibrate_before_live_scoring",
+      "findingCodes": [
+        "evaluator_severity_drift_within_limit",
+        "inter_rater_spread_within_limit"
+      ]
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "3ad47de3b19a94258f39925456ea503ef08ec88de42943fdea341fe66cdae36a",
+    "policyVersion": "challenge-evaluator-calibration-v1"
+  }
+}

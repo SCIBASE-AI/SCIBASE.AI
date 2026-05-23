@@ -1,0 +1,144 @@
+{
+  "graphId": "kg-biological-accession-demo",
+  "generatedAt": "2026-05-23T07:00:00Z",
+  "decision": "hold-for-curation",
+  "readinessScore": 0,
+  "summary": {
+    "nodeCount": 5,
+    "formatIssues": 1,
+    "duplicateTargets": 1,
+    "aliasIssues": 2,
+    "taxonIssues": 1,
+    "evidenceIssues": 2,
+    "recommendationSuppressions": 1
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "invalid-accession-format",
+      "nodeId": "node-gene-p53-alias",
+      "namespace": "NCBIGene",
+      "accession": "TP53",
+      "message": "NCBIGene accession TP53 does not match the namespace format.",
+      "action": "fix_accession_namespace"
+    },
+    {
+      "severity": "major",
+      "type": "deprecated-accession-alias",
+      "nodeId": "node-gene-p53-alias",
+      "namespace": "NCBIGene",
+      "accession": "TP53",
+      "canonicalTarget": "NCBIGene:7157",
+      "message": "Node uses a deprecated alias that should be replaced by the canonical accession before graph publication.",
+      "action": "replace_deprecated_alias"
+    },
+    {
+      "severity": "major",
+      "type": "deprecated-accession-alias",
+      "nodeId": "node-protein-old",
+      "namespace": "UniProtKB",
+      "accession": "Q9Y261",
+      "canonicalTarget": "UniProtKB:Q9Y261",
+      "message": "Node uses a deprecated alias that should be replaced by the canonical accession before graph publication.",
+      "action": "replace_deprecated_alias"
+    },
+    {
+      "severity": "major",
+      "type": "taxon-mismatch",
+      "nodeId": "node-protein-old",
+      "namespace": "UniProtKB",
+      "accession": "Q9Y261",
+      "expectedTaxon": "9606",
+      "taxon": "10090",
+      "message": "Taxon 10090 does not match expected taxon 9606.",
+      "action": "resolve_taxon_crosswalk"
+    },
+    {
+      "severity": "major",
+      "type": "missing-doi-evidence",
+      "nodeId": "node-protein-old",
+      "namespace": "UniProtKB",
+      "accession": "Q9Y261",
+      "message": "Crosswalk lacks DOI-backed evidence for the entity-page edge.",
+      "action": "attach_doi_evidence"
+    },
+    {
+      "severity": "major",
+      "type": "low-crosswalk-confidence",
+      "nodeId": "node-protein-old",
+      "namespace": "UniProtKB",
+      "accession": "Q9Y261",
+      "confidence": 0.61,
+      "message": "Crosswalk confidence is below the safe recommendation threshold.",
+      "action": "raise_crosswalk_confidence"
+    },
+    {
+      "severity": "critical",
+      "type": "duplicate-canonical-target",
+      "nodeId": "node-gene-tp53,node-gene-p53-alias",
+      "canonicalTarget": "NCBIGene:7157",
+      "message": "Multiple graph nodes resolve to NCBIGene:7157.",
+      "action": "merge_duplicate_canonical_nodes"
+    },
+    {
+      "severity": "major",
+      "type": "unsafe-recommendation-crosswalk",
+      "nodeId": "node-gene-p53-alias",
+      "namespace": "NCBIGene",
+      "accession": "TP53",
+      "message": "Recommendation path uses a node with unresolved crosswalk findings.",
+      "action": "suppress_unsafe_recommendation"
+    }
+  ],
+  "requiredActions": [
+    {
+      "type": "fix_accession_namespace",
+      "nodeId": "node-gene-p53-alias",
+      "findingType": "invalid-accession-format",
+      "message": "Correct the accession namespace or replace the node with a valid identifier."
+    },
+    {
+      "type": "replace_deprecated_alias",
+      "nodeId": "node-gene-p53-alias",
+      "findingType": "deprecated-accession-alias",
+      "message": "Replace deprecated aliases with the current canonical accession."
+    },
+    {
+      "type": "replace_deprecated_alias",
+      "nodeId": "node-protein-old",
+      "findingType": "deprecated-accession-alias",
+      "message": "Replace deprecated aliases with the current canonical accession."
+    },
+    {
+      "type": "resolve_taxon_crosswalk",
+      "nodeId": "node-protein-old",
+      "findingType": "taxon-mismatch",
+      "message": "Resolve taxon mismatch before recommendations use this node."
+    },
+    {
+      "type": "attach_doi_evidence",
+      "nodeId": "node-protein-old",
+      "findingType": "missing-doi-evidence",
+      "message": "Attach DOI-backed evidence for the crosswalk edge."
+    },
+    {
+      "type": "raise_crosswalk_confidence",
+      "nodeId": "node-protein-old",
+      "findingType": "low-crosswalk-confidence",
+      "message": "Add stronger evidence or curator approval to raise crosswalk confidence."
+    },
+    {
+      "type": "merge_duplicate_canonical_nodes",
+      "nodeId": "node-gene-tp53,node-gene-p53-alias",
+      "findingType": "duplicate-canonical-target",
+      "message": "Merge duplicate canonical nodes and preserve edge provenance."
+    },
+    {
+      "type": "suppress_unsafe_recommendation",
+      "nodeId": "node-gene-p53-alias",
+      "findingType": "unsafe-recommendation-crosswalk",
+      "message": "Suppress recommendations using unresolved crosswalk nodes."
+    }
+  ],
+  "auditDigest": "08f1b33b690fc649"
+}

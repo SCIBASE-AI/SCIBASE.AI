@@ -1,0 +1,12 @@
+{
+  "name": "biological-accession-crosswalk-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free biological accession crosswalk guard for SCIBASE issue #17.",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check demo.js && node --check render-video.js && node --check test.js",
+    "test": "node --test test.js",
+    "demo": "node demo.js",
+    "video": "node render-video.js"
+  }
+}

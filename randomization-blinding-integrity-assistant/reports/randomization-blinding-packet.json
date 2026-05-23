@@ -1,0 +1,106 @@
+{
+  "manuscriptId": "ms-randomized-review-demo",
+  "generatedAt": "2026-05-23T06:00:00Z",
+  "decision": "hold-for-review",
+  "readinessScore": 0,
+  "summary": {
+    "studyCount": 3,
+    "randomizationIssues": 2,
+    "blindingIssues": 3,
+    "exclusionIssues": 1,
+    "balanceIssues": 0
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "missing-randomization-sequence",
+      "studyId": "trial-microbiome-01",
+      "message": "Randomization sequence evidence is missing from the reviewer packet.",
+      "action": "attach_randomization_sequence"
+    },
+    {
+      "severity": "critical",
+      "type": "missing-allocation-concealment",
+      "studyId": "trial-microbiome-01",
+      "message": "Allocation concealment is not documented before outcome review.",
+      "action": "document_allocation_concealment"
+    },
+    {
+      "severity": "major",
+      "type": "missing-blinding-role",
+      "studyId": "animal-stroke-02",
+      "roles": [
+        "analyst"
+      ],
+      "message": "Blinding is missing for analyst.",
+      "action": "document_blinding_roles"
+    },
+    {
+      "severity": "major",
+      "type": "arm-label-leakage",
+      "studyId": "animal-stroke-02",
+      "artifacts": [
+        "analysis-notebook.ipynb"
+      ],
+      "message": "Arm labels are visible in analysis or reviewer artifacts before endpoint lock.",
+      "action": "mask_arm_labels_before_analysis"
+    },
+    {
+      "severity": "major",
+      "type": "early-unblinding-event",
+      "studyId": "animal-stroke-02",
+      "role": "analyst",
+      "occurredAt": "2026-04-11",
+      "message": "Unblinding occurred before primary endpoint lock.",
+      "action": "explain_unblinding_event"
+    },
+    {
+      "severity": "major",
+      "type": "unblinded-post-randomization-exclusion",
+      "studyId": "animal-stroke-02",
+      "participantId": "rat-17",
+      "reason": "outlier response",
+      "message": "Post-randomization exclusion lacks blinded decision evidence.",
+      "action": "justify_unblinded_exclusion"
+    }
+  ],
+  "requiredActions": [
+    {
+      "type": "attach_randomization_sequence",
+      "studyId": "trial-microbiome-01",
+      "findingType": "missing-randomization-sequence",
+      "message": "Attach sequence generation evidence or randomization service export."
+    },
+    {
+      "type": "document_allocation_concealment",
+      "studyId": "trial-microbiome-01",
+      "findingType": "missing-allocation-concealment",
+      "message": "Document who concealed allocation and when assignments became visible."
+    },
+    {
+      "type": "document_blinding_roles",
+      "studyId": "animal-stroke-02",
+      "findingType": "missing-blinding-role",
+      "message": "Document blinded roles or explain why a role could not be blinded."
+    },
+    {
+      "type": "mask_arm_labels_before_analysis",
+      "studyId": "animal-stroke-02",
+      "findingType": "arm-label-leakage",
+      "message": "Mask labels in notebooks, tables, and reviewer packets before endpoint lock."
+    },
+    {
+      "type": "explain_unblinding_event",
+      "studyId": "animal-stroke-02",
+      "findingType": "early-unblinding-event",
+      "message": "Explain unblinding timing, affected roles, and sensitivity analysis impact."
+    },
+    {
+      "type": "justify_unblinded_exclusion",
+      "studyId": "animal-stroke-02",
+      "findingType": "unblinded-post-randomization-exclusion",
+      "message": "Justify post-randomization exclusions with blinded adjudication evidence."
+    }
+  ],
+  "auditDigest": "d8ee0413885e0ff3"
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f6f1e8"/>
+  <rect x="64" y="56" width="1152" height="608" rx="24" fill="#ffffff" stroke="#202124" stroke-width="4"/>
+  <text x="104" y="124" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#202124">Randomization and blinding integrity</text>
+  <text x="104" y="166" font-family="Arial, sans-serif" font-size="22" fill="#5f6368">ms-randomized-review-demo • hold-for-review</text>
+  <g transform="translate(104 220)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">Readiness score</text>
+    <rect x="0" y="20" width="760" height="34" rx="17" fill="#e8eaed"/>
+    <rect x="0" y="20" width="20" height="34" rx="17" fill="#2e7d32"/>
+    <text x="792" y="47" font-family="Arial, sans-serif" font-size="26" fill="#202124">0/100</text>
+  </g>
+  <g transform="translate(104 314)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">Findings</text>
+    <rect x="0" y="20" width="760" height="34" rx="17" fill="#e8eaed"/>
+    <rect x="0" y="20" width="432" height="34" rx="17" fill="#c2410c"/>
+    <text x="792" y="47" font-family="Arial, sans-serif" font-size="26" fill="#202124">6</text>
+  </g>
+  <g transform="translate(104 408)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">Required actions</text>
+    <rect x="0" y="20" width="760" height="34" rx="17" fill="#e8eaed"/>
+    <rect x="0" y="20" width="540" height="34" rx="17" fill="#1565c0"/>
+    <text x="792" y="47" font-family="Arial, sans-serif" font-size="26" fill="#202124">6</text>
+  </g>
+  <text x="104" y="522" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#202124">Top reviewer checks</text>
+  <text x="128" y="562" font-family="Arial, sans-serif" font-size="21" fill="#202124">• missing-randomization-sequence in trial-microbiome-01</text>
+  <text x="128" y="592" font-family="Arial, sans-serif" font-size="21" fill="#202124">• missing-allocation-concealment in trial-microbiome-01</text>
+  <text x="128" y="622" font-family="Arial, sans-serif" font-size="21" fill="#202124">• missing-blinding-role in animal-stroke-02</text>
+  <text x="128" y="652" font-family="Arial, sans-serif" font-size="21" fill="#202124">• arm-label-leakage in animal-stroke-02</text>
+  <text x="128" y="682" font-family="Arial, sans-serif" font-size="21" fill="#202124">• early-unblinding-event in animal-stroke-02</text>
+  <text x="104" y="632" font-family="Arial, sans-serif" font-size="18" fill="#5f6368">Synthetic data only. No external services, credentials, patient data, or live manuscripts.</text>
+</svg>

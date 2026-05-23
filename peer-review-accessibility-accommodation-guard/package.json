@@ -1,0 +1,12 @@
+{
+  "name": "peer-review-accessibility-accommodation-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free peer-review accessibility accommodation guard for SCIBASE issue #15.",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check demo.js && node --check render-video.js && node --check test.js",
+    "test": "node --test test.js",
+    "demo": "node demo.js",
+    "video": "node render-video.js"
+  }
+}

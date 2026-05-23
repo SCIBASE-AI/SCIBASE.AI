@@ -254,9 +254,15 @@ function checkNetworkPolicy(pipeline, sandbox, policy, addCheck, addIssue) {
   const allowlist = [...(sandbox.egressAllowlist || [])].sort();
   const doiOnly =
     mode !== "doi-resolution-only" ||
-    allowlist.every((host) => policy.doiResolverAllowlist.includes(host));
+    (allowlist.length > 0 &&
+      allowlist.every((host) => policy.doiResolverAllowlist.includes(host)));
   const passed = allowedMode && doiOnly;
-  addCheck(pipeline.id, "NETWORK_EGRESS_POLICY", passed, mode);
+  addCheck(
+    pipeline.id,
+    "NETWORK_EGRESS_POLICY",
+    passed,
+    `mode=${mode}; allowlist=${allowlist.join(",") || "empty"}`,
+  );
 
   if (!allowedMode || !doiOnly) {
     addIssue(
@@ -356,7 +362,7 @@ function checkWritableMounts(pipeline, sandbox, policy, addCheck, addIssue) {
     const sizeOk = numberAtMost(mount.maxGb, policy.maxWritableGb);
     addCheck(
       pipeline.id,
-      `WRITABLE_MOUNT_${mount.path || "missing"}`,
+      "WRITABLE_MOUNT",
       allowedPath && sizeOk,
       `path=${mount.path}; maxGb=${mount.maxGb}`,
     );

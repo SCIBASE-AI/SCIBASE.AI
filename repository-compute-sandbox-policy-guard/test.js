@@ -35,6 +35,34 @@ assert.ok(
     (issue) => issue.code === "EXPECTED_ARTIFACT_HASH_MISSING",
   ),
 );
+assert.ok(
+  blocked.checks
+    .filter((check) => check.code === "WRITABLE_MOUNT")
+    .every((check) => check.detail.includes("path=")),
+);
+assert.ok(
+  !blocked.checks.some((check) => check.code.includes("/workspace")),
+);
+
+const missingDoiAllowlist = evaluateRepositoryComputePolicy({
+  ...sampleCandidates[0],
+  pipelines: [
+    {
+      ...sampleCandidates[0].pipelines[0],
+      sandbox: {
+        ...sampleCandidates[0].pipelines[0].sandbox,
+        networkEgress: "doi-resolution-only",
+        egressAllowlist: [],
+      },
+    },
+  ],
+});
+assert.equal(missingDoiAllowlist.status, "blocked");
+assert.ok(
+  missingDoiAllowlist.issues.some(
+    (issue) => issue.code === "NETWORK_EGRESS_TOO_BROAD",
+  ),
+);
 
 const needsReview = evaluateRepositoryComputePolicy(sampleCandidates[2]);
 assert.equal(needsReview.status, "needs_review");

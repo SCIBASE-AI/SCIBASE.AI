@@ -35,7 +35,7 @@
           "pipelineId": "gpu-ensemble-replay",
           "code": "NETWORK_EGRESS_POLICY",
           "passed": true,
-          "detail": "doi-resolution-only"
+          "detail": "mode=doi-resolution-only; allowlist=api.datacite.org,doi.org"
         },
         {
           "pipelineId": "gpu-ensemble-replay",
@@ -63,7 +63,7 @@
         },
         {
           "pipelineId": "gpu-ensemble-replay",
-          "code": "WRITABLE_MOUNT_/tmp/scibase-run/gpu-ensemble-replay",
+          "code": "WRITABLE_MOUNT",
           "passed": true,
           "detail": "path=/tmp/scibase-run/gpu-ensemble-replay; maxGb=2"
         },
@@ -143,7 +143,7 @@
           "pipelineId": "analysis-primary",
           "code": "NETWORK_EGRESS_POLICY",
           "passed": true,
-          "detail": "none"
+          "detail": "mode=none; allowlist=empty"
         },
         {
           "pipelineId": "analysis-primary",
@@ -165,7 +165,7 @@
         },
         {
           "pipelineId": "analysis-primary",
-          "code": "WRITABLE_MOUNT_/tmp/scibase-run/analysis-primary",
+          "code": "WRITABLE_MOUNT",
           "passed": true,
           "detail": "path=/tmp/scibase-run/analysis-primary; maxGb=1.5"
         },
@@ -236,7 +236,7 @@
           "pipelineId": "training-open-network",
           "code": "NETWORK_EGRESS_POLICY",
           "passed": false,
-          "detail": "open-internet"
+          "detail": "mode=open-internet; allowlist=example-data.invalid,pypi.org"
         },
         {
           "pipelineId": "training-open-network",
@@ -264,7 +264,7 @@
         },
         {
           "pipelineId": "training-open-network",
-          "code": "WRITABLE_MOUNT_/workspace",
+          "code": "WRITABLE_MOUNT",
           "passed": false,
           "detail": "path=/workspace; maxGb=12"
         },

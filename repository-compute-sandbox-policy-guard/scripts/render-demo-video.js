@@ -77,7 +77,9 @@ function getFontArg() {
   ];
   const font = candidates.find((candidate) => fs.existsSync(candidate));
   if (!font) {
-    return "font=Sans";
+    throw new Error(
+      `No supported TrueType font file found. Checked: ${candidates.join(", ")}`,
+    );
   }
   return `fontfile='${font.replaceAll(":", "\\:")}'`;
 }

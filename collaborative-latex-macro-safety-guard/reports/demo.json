@@ -1,0 +1,451 @@
+{
+  "generatedAt": "2026-05-22T00:00:00.000Z",
+  "guard": "collaborative-latex-macro-safety-guard",
+  "issue": "SCIBASE-AI/SCIBASE.AI#12",
+  "totals": {
+    "packets": 3,
+    "ready": 1,
+    "needsReview": 1,
+    "blocked": 1,
+    "blockingIssues": 10,
+    "warnings": 1
+  },
+  "evaluations": [
+    {
+      "generatedAt": "2026-05-22T00:00:00.000Z",
+      "packetId": "packet-safe-methods-v4",
+      "documentId": "shared-manuscript/neuro-methods",
+      "namedVersion": "Manuscript v4 Methods",
+      "sectionId": "methods-statistical-model",
+      "status": "ready",
+      "summary": {
+        "macros": 2,
+        "blocks": 2,
+        "checks": 11,
+        "passedChecks": 11,
+        "blockingIssues": 0,
+        "warnings": 0
+      },
+      "checks": [
+        {
+          "code": "MACRO_CONFLICT",
+          "passed": true,
+          "detail": "\\ci; definitions=1"
+        },
+        {
+          "code": "MACRO_CONFLICT",
+          "passed": true,
+          "detail": "\\mean; definitions=1"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": true,
+          "detail": "\\mean; commands=none"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": true,
+          "detail": "\\ci; commands=none"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": true,
+          "detail": "\\mean; cycle=none"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": true,
+          "detail": "\\ci; cycle=none"
+        },
+        {
+          "code": "RAW_HTML_BLOCK",
+          "passed": true,
+          "detail": "eq-primary-outcome; rawHtml=false"
+        },
+        {
+          "code": "EXTERNAL_RENDER_RESOURCE",
+          "passed": true,
+          "detail": "eq-primary-outcome; hosts=none"
+        },
+        {
+          "code": "RAW_HTML_BLOCK",
+          "passed": true,
+          "detail": "md-summary; rawHtml=false"
+        },
+        {
+          "code": "EXTERNAL_RENDER_RESOURCE",
+          "passed": true,
+          "detail": "md-summary; hosts=none"
+        },
+        {
+          "code": "LOCKED_SECTION_RENDER_HOLD",
+          "passed": true,
+          "detail": "lockedBlocks=0; renderRisk=false"
+        }
+      ],
+      "issues": [],
+      "renderDecision": {
+        "allowLivePreview": true,
+        "allowNamedVersionExport": true,
+        "allowTrustedKatexRender": true,
+        "requiresReviewerSignoff": false,
+        "remediationChecklist": [],
+        "status": "ready"
+      },
+      "requirementCoverage": {
+        "scientific_formatting": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+        "realtime_collaboration": "Real-Time Collaboration: multi-user edits with live render safety",
+        "locking": "Real-Time Collaboration: controlled sections and lock/unlock modes",
+        "version_history": "Version History & Autosave: safe named-version export"
+      }
+    },
+    {
+      "generatedAt": "2026-05-22T00:00:00.000Z",
+      "packetId": "packet-trusted-supplement-v2",
+      "documentId": "shared-manuscript/supplement",
+      "namedVersion": "Supplement Draft",
+      "sectionId": "appendix-derivations",
+      "status": "needs_review",
+      "summary": {
+        "macros": 1,
+        "blocks": 1,
+        "checks": 6,
+        "passedChecks": 6,
+        "blockingIssues": 0,
+        "warnings": 1
+      },
+      "checks": [
+        {
+          "code": "MACRO_CONFLICT",
+          "passed": true,
+          "detail": "\\annotate; definitions=1"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": true,
+          "detail": "\\annotate; commands=\\htmlId"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": true,
+          "detail": "\\annotate; cycle=none"
+        },
+        {
+          "code": "RAW_HTML_BLOCK",
+          "passed": true,
+          "detail": "appendix-equation; rawHtml=false"
+        },
+        {
+          "code": "EXTERNAL_RENDER_RESOURCE",
+          "passed": true,
+          "detail": "appendix-equation; hosts=none"
+        },
+        {
+          "code": "LOCKED_SECTION_RENDER_HOLD",
+          "passed": true,
+          "detail": "lockedBlocks=0; renderRisk=false"
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "TRUSTED_MACRO_REVIEW_REQUIRED",
+          "message": "Macro body uses a command that can escape plain equation rendering.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Keep the trusted-render justification with reviewer signoff.",
+          "target": "\\annotate"
+        }
+      ],
+      "renderDecision": {
+        "allowLivePreview": true,
+        "allowNamedVersionExport": true,
+        "allowTrustedKatexRender": false,
+        "requiresReviewerSignoff": true,
+        "remediationChecklist": [
+          {
+            "code": "TRUSTED_MACRO_REVIEW_REQUIRED",
+            "target": "\\annotate",
+            "action": "Keep the trusted-render justification with reviewer signoff."
+          }
+        ],
+        "status": "needs_review"
+      },
+      "requirementCoverage": {
+        "scientific_formatting": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+        "realtime_collaboration": "Real-Time Collaboration: multi-user edits with live render safety",
+        "locking": "Real-Time Collaboration: controlled sections and lock/unlock modes",
+        "version_history": "Version History & Autosave: safe named-version export"
+      }
+    },
+    {
+      "generatedAt": "2026-05-22T00:00:00.000Z",
+      "packetId": "packet-unsafe-results-v8",
+      "documentId": "shared-manuscript/results-live",
+      "namedVersion": "Final Submission",
+      "sectionId": "results-figures",
+      "status": "blocked",
+      "summary": {
+        "macros": 5,
+        "blocks": 3,
+        "checks": 21,
+        "passedChecks": 12,
+        "blockingIssues": 10,
+        "warnings": 0
+      },
+      "checks": [
+        {
+          "code": "MACRO_CONFLICT",
+          "passed": true,
+          "detail": "\\dataset; definitions=1"
+        },
+        {
+          "code": "MACRO_CONFLICT",
+          "passed": false,
+          "detail": "\\hazard; definitions=2"
+        },
+        {
+          "code": "MACRO_CONFLICT",
+          "passed": true,
+          "detail": "\\loopA; definitions=1"
+        },
+        {
+          "code": "MACRO_CONFLICT",
+          "passed": true,
+          "detail": "\\loopB; definitions=1"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": false,
+          "detail": "\\dataset; commands=\\href"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": true,
+          "detail": "\\loopA; commands=none"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": true,
+          "detail": "\\loopB; commands=none"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": false,
+          "detail": "\\hazard; commands=\\htmlClass"
+        },
+        {
+          "code": "MACRO_TRUST_COMMANDS",
+          "passed": true,
+          "detail": "\\hazard; commands=none"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": true,
+          "detail": "\\dataset; cycle=none"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": false,
+          "detail": "\\loopA; cycle=\\loopA -> \\loopB -> \\loopA"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": false,
+          "detail": "\\loopB; cycle=\\loopB -> \\loopA -> \\loopB"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": true,
+          "detail": "\\hazard; cycle=none"
+        },
+        {
+          "code": "MACRO_RECURSION",
+          "passed": true,
+          "detail": "\\hazard; cycle=none"
+        },
+        {
+          "code": "RAW_HTML_BLOCK",
+          "passed": true,
+          "detail": "eq-hazard-model; rawHtml=false"
+        },
+        {
+          "code": "EXTERNAL_RENDER_RESOURCE",
+          "passed": true,
+          "detail": "eq-hazard-model; hosts=none"
+        },
+        {
+          "code": "RAW_HTML_BLOCK",
+          "passed": true,
+          "detail": "figure-caption; rawHtml=false"
+        },
+        {
+          "code": "EXTERNAL_RENDER_RESOURCE",
+          "passed": false,
+          "detail": "figure-caption; hosts=private.example.invalid/figure.png"
+        },
+        {
+          "code": "RAW_HTML_BLOCK",
+          "passed": false,
+          "detail": "unsafe-inline-html; rawHtml=true"
+        },
+        {
+          "code": "EXTERNAL_RENDER_RESOURCE",
+          "passed": false,
+          "detail": "unsafe-inline-html; hosts=private.example.invalid/embed"
+        },
+        {
+          "code": "LOCKED_SECTION_RENDER_HOLD",
+          "passed": false,
+          "detail": "lockedBlocks=2; renderRisk=true"
+        }
+      ],
+      "issues": [
+        {
+          "severity": "error",
+          "code": "EXTERNAL_RENDER_RESOURCE_BLOCKED",
+          "message": "Collaborative render block references an unapproved external resource.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Replace external resources with repository-managed figure or citation assets.",
+          "target": "figure-caption"
+        },
+        {
+          "severity": "error",
+          "code": "EXTERNAL_RENDER_RESOURCE_BLOCKED",
+          "message": "Collaborative render block references an unapproved external resource.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Replace external resources with repository-managed figure or citation assets.",
+          "target": "unsafe-inline-html"
+        },
+        {
+          "severity": "error",
+          "code": "LOCKED_SECTION_RENDER_HOLD",
+          "message": "Locked section contains unapproved or external-resource macro changes.",
+          "requirement": "Real-Time Collaboration: controlled sections and lock/unlock modes",
+          "remediation": "Hold render/export until the section owner approves the macro packet.",
+          "target": "results-figures"
+        },
+        {
+          "severity": "error",
+          "code": "MACRO_DEFINITION_CONFLICT",
+          "message": "Collaborators submitted conflicting bodies for the same macro.",
+          "requirement": "Real-Time Collaboration: multi-user edits with live render safety",
+          "remediation": "Resolve the macro conflict before broadcasting the shared render state.",
+          "target": "\\hazard"
+        },
+        {
+          "severity": "error",
+          "code": "RAW_HTML_IN_COLLAB_BLOCK",
+          "message": "Collaborative block contains raw active HTML.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Strip active HTML before live preview or named-version export.",
+          "target": "unsafe-inline-html"
+        },
+        {
+          "severity": "error",
+          "code": "RECURSIVE_MACRO_EXPANSION",
+          "message": "Macro expansion forms a recursive cycle.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Break the macro cycle before live preview or export rendering.",
+          "target": "\\loopA"
+        },
+        {
+          "severity": "error",
+          "code": "RECURSIVE_MACRO_EXPANSION",
+          "message": "Macro expansion forms a recursive cycle.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Break the macro cycle before live preview or export rendering.",
+          "target": "\\loopB"
+        },
+        {
+          "severity": "error",
+          "code": "UNAPPROVED_MACRO_EDIT",
+          "message": "Macro edit has not been approved for the shared named version.",
+          "requirement": "Version History & Autosave: safe named-version export",
+          "remediation": "Require approval before autosave promotes this macro into the named version.",
+          "target": "\\dataset"
+        },
+        {
+          "severity": "error",
+          "code": "UNSAFE_MACRO_COMMAND",
+          "message": "Macro body uses a command that can escape plain equation rendering.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Remove the unsafe command or move it behind an approved trusted-render packet.",
+          "target": "\\dataset"
+        },
+        {
+          "severity": "error",
+          "code": "UNSAFE_MACRO_COMMAND",
+          "message": "Macro body uses a command that can escape plain equation rendering.",
+          "requirement": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+          "remediation": "Remove the unsafe command or move it behind an approved trusted-render packet.",
+          "target": "\\hazard"
+        }
+      ],
+      "renderDecision": {
+        "allowLivePreview": false,
+        "allowNamedVersionExport": false,
+        "allowTrustedKatexRender": false,
+        "requiresReviewerSignoff": false,
+        "remediationChecklist": [
+          {
+            "code": "EXTERNAL_RENDER_RESOURCE_BLOCKED",
+            "target": "figure-caption",
+            "action": "Replace external resources with repository-managed figure or citation assets."
+          },
+          {
+            "code": "EXTERNAL_RENDER_RESOURCE_BLOCKED",
+            "target": "unsafe-inline-html",
+            "action": "Replace external resources with repository-managed figure or citation assets."
+          },
+          {
+            "code": "LOCKED_SECTION_RENDER_HOLD",
+            "target": "results-figures",
+            "action": "Hold render/export until the section owner approves the macro packet."
+          },
+          {
+            "code": "MACRO_DEFINITION_CONFLICT",
+            "target": "\\hazard",
+            "action": "Resolve the macro conflict before broadcasting the shared render state."
+          },
+          {
+            "code": "RAW_HTML_IN_COLLAB_BLOCK",
+            "target": "unsafe-inline-html",
+            "action": "Strip active HTML before live preview or named-version export."
+          },
+          {
+            "code": "RECURSIVE_MACRO_EXPANSION",
+            "target": "\\loopA",
+            "action": "Break the macro cycle before live preview or export rendering."
+          },
+          {
+            "code": "RECURSIVE_MACRO_EXPANSION",
+            "target": "\\loopB",
+            "action": "Break the macro cycle before live preview or export rendering."
+          },
+          {
+            "code": "UNAPPROVED_MACRO_EDIT",
+            "target": "\\dataset",
+            "action": "Require approval before autosave promotes this macro into the named version."
+          },
+          {
+            "code": "UNSAFE_MACRO_COMMAND",
+            "target": "\\dataset",
+            "action": "Remove the unsafe command or move it behind an approved trusted-render packet."
+          },
+          {
+            "code": "UNSAFE_MACRO_COMMAND",
+            "target": "\\hazard",
+            "action": "Remove the unsafe command or move it behind an approved trusted-render packet."
+          }
+        ],
+        "status": "blocked"
+      },
+      "requirementCoverage": {
+        "scientific_formatting": "Rich Scientific Formatting: Markdown, LaTeX, equations, and cross references",
+        "realtime_collaboration": "Real-Time Collaboration: multi-user edits with live render safety",
+        "locking": "Real-Time Collaboration: controlled sections and lock/unlock modes",
+        "version_history": "Version History & Autosave: safe named-version export"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">Collaborative LaTeX macro safety guard</title>
+<desc id="desc">Deterministic status report for real-time editor macro render packets.</desc>
+<rect width="960" height="540" fill="#f6f8fa"/>
+<text x="40" y="70" fill="#111827" font-size="34" font-family="Arial, sans-serif" font-weight="700">Collaborative LaTeX Macro Safety Guard</text>
+<text x="40" y="108" fill="#4b5563" font-size="18" font-family="Arial, sans-serif">Blocks unsafe macros, raw HTML, recursive edits, and locked-section render risks.</text>
+<g>
+  <rect x="40" y="125" width="190" height="28" rx="6" fill="#e6f4ea"/>
+  <text x="54" y="145" fill="#157f57" font-size="14" font-family="Arial, sans-serif">Ready 1</text>
+  <rect x="250" y="125" width="190" height="28" rx="6" fill="#fff4d6"/>
+  <text x="264" y="145" fill="#8a5a00" font-size="14" font-family="Arial, sans-serif">Needs review 1</text>
+  <rect x="460" y="125" width="190" height="28" rx="6" fill="#ffebe9"/>
+  <text x="474" y="145" fill="#b42318" font-size="14" font-family="Arial, sans-serif">Blocked 1</text>
+</g>
+<g>
+  <rect x="40" y="170" width="280" height="230" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="40" y="170" width="280" height="10" rx="8" fill="#157f57"/>
+  <text x="58" y="215" fill="#111827" font-size="16" font-family="Arial, sans-serif">packet-safe-methods-v4</text>
+  <text x="58" y="245" fill="#4b5563" font-size="14" font-family="Arial, sans-serif">methods-statistical-model</text>
+  <text x="58" y="295" fill="#157f57" font-size="30" font-family="Arial, sans-serif" font-weight="700">ready</text>
+  <text x="58" y="340" fill="#111827" font-size="16" font-family="Arial, sans-serif">Checks: 11/11</text>
+  <text x="58" y="370" fill="#111827" font-size="16" font-family="Arial, sans-serif">Blocks: 0</text>
+</g>
+<g>
+  <rect x="340" y="170" width="280" height="230" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="340" y="170" width="280" height="10" rx="8" fill="#b7791f"/>
+  <text x="358" y="215" fill="#111827" font-size="16" font-family="Arial, sans-serif">packet-trusted-supplement-v2</text>
+  <text x="358" y="245" fill="#4b5563" font-size="14" font-family="Arial, sans-serif">appendix-derivations</text>
+  <text x="358" y="295" fill="#b7791f" font-size="30" font-family="Arial, sans-serif" font-weight="700">needs_review</text>
+  <text x="358" y="340" fill="#111827" font-size="16" font-family="Arial, sans-serif">Checks: 6/6</text>
+  <text x="358" y="370" fill="#111827" font-size="16" font-family="Arial, sans-serif">Blocks: 0</text>
+</g>
+<g>
+  <rect x="640" y="170" width="280" height="230" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="640" y="170" width="280" height="10" rx="8" fill="#b42318"/>
+  <text x="658" y="215" fill="#111827" font-size="16" font-family="Arial, sans-serif">packet-unsafe-results-v8</text>
+  <text x="658" y="245" fill="#4b5563" font-size="14" font-family="Arial, sans-serif">results-figures</text>
+  <text x="658" y="295" fill="#b42318" font-size="30" font-family="Arial, sans-serif" font-weight="700">blocked</text>
+  <text x="658" y="340" fill="#111827" font-size="16" font-family="Arial, sans-serif">Checks: 12/21</text>
+  <text x="658" y="370" fill="#111827" font-size="16" font-family="Arial, sans-serif">Blocks: 10</text>
+</g>
+<text x="40" y="470" fill="#4b5563" font-size="15" font-family="Arial, sans-serif">Issue mapping: real-time collaborative editor, Markdown/LaTeX rendering, live collaboration, versioned export.</text>
+</svg>

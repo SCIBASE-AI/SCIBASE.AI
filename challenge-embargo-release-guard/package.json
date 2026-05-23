@@ -1,0 +1,12 @@
+{
+  "name": "challenge-embargo-release-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test.js",
+    "check": "node --check index.js && node --check sample-data.js && node --check demo.js && node --check render-video.js && node --check test.js",
+    "demo": "node demo.js",
+    "video": "node render-video.js"
+  }
+}

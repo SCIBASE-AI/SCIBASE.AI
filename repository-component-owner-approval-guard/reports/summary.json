@@ -1,0 +1,490 @@
+{
+  "generatedAt": "2026-05-22T19:30:00.000Z",
+  "guard": "repository-component-owner-approval-guard",
+  "summary": {
+    "totalMergeRequests": 4,
+    "decisions": {
+      "approve-merge": 2,
+      "block-merge": 2
+    },
+    "findingCounts": {
+      "required-owner-role-missing": 2,
+      "approval-quorum-missing": 3,
+      "conflicted-self-approval": 1,
+      "stale-approval-after-change": 2
+    },
+    "blocked": [
+      "MR-2417",
+      "MR-2422"
+    ],
+    "approved": [
+      "MR-2401",
+      "MR-2430"
+    ]
+  },
+  "evaluations": [
+    {
+      "id": "MR-2401",
+      "title": "Refresh methods text and analysis notebook",
+      "authors": [
+        "lee"
+      ],
+      "changedAt": "2026-05-22T09:20:00Z",
+      "touchedComponents": [
+        "manuscript",
+        "notebooks",
+        "results"
+      ],
+      "decision": "approve-merge",
+      "score": 100,
+      "components": [
+        {
+          "component": "manuscript",
+          "files": [
+            "manuscript/methods.md"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "scientific-editor",
+            "corresponding-author"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "mira",
+              "role": "scientific-editor",
+              "approvedAt": "2026-05-22T09:52:00Z"
+            }
+          ],
+          "findings": []
+        },
+        {
+          "component": "notebooks",
+          "files": [
+            "notebooks/analysis.ipynb"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "analysis-lead",
+            "reproducibility-engineer"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "arun",
+              "role": "analysis-lead",
+              "approvedAt": "2026-05-22T10:04:00Z"
+            }
+          ],
+          "findings": []
+        },
+        {
+          "component": "results",
+          "files": [
+            "results/figure-2.svg"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "analysis-lead",
+            "scientific-editor"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "mira",
+              "role": "scientific-editor",
+              "approvedAt": "2026-05-22T09:52:00Z"
+            },
+            {
+              "user": "arun",
+              "role": "analysis-lead",
+              "approvedAt": "2026-05-22T10:04:00Z"
+            }
+          ],
+          "findings": []
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "MR-2417",
+      "title": "Publish restricted participant table with updated protocol",
+      "authors": [
+        "tess"
+      ],
+      "changedAt": "2026-05-22T11:45:00Z",
+      "touchedComponents": [
+        "data",
+        "protocols",
+        "metadata"
+      ],
+      "decision": "block-merge",
+      "score": 0,
+      "components": [
+        {
+          "component": "data",
+          "files": [
+            "data/participant_export.csv"
+          ],
+          "restricted": true,
+          "requiredRoles": [
+            "data-steward",
+            "privacy-reviewer",
+            "irb-liaison"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "noor",
+              "role": "data-steward",
+              "approvedAt": "2026-05-22T12:01:00Z"
+            }
+          ],
+          "findings": [
+            {
+              "severity": "critical",
+              "code": "required-owner-role-missing",
+              "message": "data is missing restricted-change escalation owner approval(s).",
+              "missingRoles": [
+                "privacy-reviewer",
+                "irb-liaison"
+              ]
+            }
+          ]
+        },
+        {
+          "component": "protocols",
+          "files": [
+            "protocols/collection-plan.md"
+          ],
+          "restricted": true,
+          "requiredRoles": [
+            "protocol-owner",
+            "lab-manager",
+            "irb-liaison"
+          ],
+          "eligibleApprovals": [],
+          "findings": [
+            {
+              "severity": "critical",
+              "code": "approval-quorum-missing",
+              "message": "protocols requires 1 eligible owner approval(s).",
+              "requiredRoles": [
+                "protocol-owner",
+                "lab-manager",
+                "irb-liaison"
+              ],
+              "eligibleRoles": []
+            },
+            {
+              "severity": "critical",
+              "code": "required-owner-role-missing",
+              "message": "protocols is missing restricted-change escalation owner approval(s).",
+              "missingRoles": [
+                "protocol-owner",
+                "irb-liaison"
+              ]
+            },
+            {
+              "severity": "critical",
+              "code": "conflicted-self-approval",
+              "message": "protocols includes approval from a merge request author.",
+              "approvals": [
+                {
+                  "user": "tess",
+                  "role": "protocol-owner"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "metadata",
+          "files": [
+            "metadata.json"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "repository-curator",
+            "corresponding-author"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "ivy",
+              "role": "repository-curator",
+              "approvedAt": "2026-05-22T12:08:00Z"
+            }
+          ],
+          "findings": []
+        }
+      ],
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "required-owner-role-missing",
+          "message": "data is missing restricted-change escalation owner approval(s).",
+          "missingRoles": [
+            "privacy-reviewer",
+            "irb-liaison"
+          ]
+        },
+        {
+          "severity": "critical",
+          "code": "approval-quorum-missing",
+          "message": "protocols requires 1 eligible owner approval(s).",
+          "requiredRoles": [
+            "protocol-owner",
+            "lab-manager",
+            "irb-liaison"
+          ],
+          "eligibleRoles": []
+        },
+        {
+          "severity": "critical",
+          "code": "required-owner-role-missing",
+          "message": "protocols is missing restricted-change escalation owner approval(s).",
+          "missingRoles": [
+            "protocol-owner",
+            "irb-liaison"
+          ]
+        },
+        {
+          "severity": "critical",
+          "code": "conflicted-self-approval",
+          "message": "protocols includes approval from a merge request author.",
+          "approvals": [
+            {
+              "user": "tess",
+              "role": "protocol-owner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MR-2422",
+      "title": "Retag code package after model output changes",
+      "authors": [
+        "omar"
+      ],
+      "changedAt": "2026-05-22T15:35:00Z",
+      "touchedComponents": [
+        "code",
+        "results",
+        "metadata"
+      ],
+      "decision": "block-merge",
+      "score": 0,
+      "components": [
+        {
+          "component": "code",
+          "files": [
+            "code/model/train.py"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "analysis-lead",
+            "reproducibility-engineer"
+          ],
+          "eligibleApprovals": [],
+          "findings": [
+            {
+              "severity": "critical",
+              "code": "approval-quorum-missing",
+              "message": "code requires 1 eligible owner approval(s).",
+              "requiredRoles": [
+                "analysis-lead",
+                "reproducibility-engineer"
+              ],
+              "eligibleRoles": []
+            },
+            {
+              "severity": "critical",
+              "code": "stale-approval-after-change",
+              "message": "code has approval(s) older than the latest changed file timestamp.",
+              "approvals": [
+                {
+                  "user": "arun",
+                  "role": "analysis-lead",
+                  "approvedAt": "2026-05-22T14:58:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "results",
+          "files": [
+            "results/model-card.md"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "analysis-lead",
+            "scientific-editor"
+          ],
+          "eligibleApprovals": [],
+          "findings": [
+            {
+              "severity": "critical",
+              "code": "approval-quorum-missing",
+              "message": "results requires 1 eligible owner approval(s).",
+              "requiredRoles": [
+                "analysis-lead",
+                "scientific-editor"
+              ],
+              "eligibleRoles": []
+            },
+            {
+              "severity": "critical",
+              "code": "stale-approval-after-change",
+              "message": "results has approval(s) older than the latest changed file timestamp.",
+              "approvals": [
+                {
+                  "user": "arun",
+                  "role": "analysis-lead",
+                  "approvedAt": "2026-05-22T14:58:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "metadata",
+          "files": [
+            "metadata.json"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "repository-curator",
+            "corresponding-author"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "ivy",
+              "role": "repository-curator",
+              "approvedAt": "2026-05-22T16:00:00Z"
+            }
+          ],
+          "findings": []
+        }
+      ],
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "approval-quorum-missing",
+          "message": "code requires 1 eligible owner approval(s).",
+          "requiredRoles": [
+            "analysis-lead",
+            "reproducibility-engineer"
+          ],
+          "eligibleRoles": []
+        },
+        {
+          "severity": "critical",
+          "code": "stale-approval-after-change",
+          "message": "code has approval(s) older than the latest changed file timestamp.",
+          "approvals": [
+            {
+              "user": "arun",
+              "role": "analysis-lead",
+              "approvedAt": "2026-05-22T14:58:00Z"
+            }
+          ]
+        },
+        {
+          "severity": "critical",
+          "code": "approval-quorum-missing",
+          "message": "results requires 1 eligible owner approval(s).",
+          "requiredRoles": [
+            "analysis-lead",
+            "scientific-editor"
+          ],
+          "eligibleRoles": []
+        },
+        {
+          "severity": "critical",
+          "code": "stale-approval-after-change",
+          "message": "results has approval(s) older than the latest changed file timestamp.",
+          "approvals": [
+            {
+              "user": "arun",
+              "role": "analysis-lead",
+              "approvedAt": "2026-05-22T14:58:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MR-2430",
+      "title": "Release curated dataset and citation metadata",
+      "authors": [
+        "nina"
+      ],
+      "changedAt": "2026-05-22T17:00:00Z",
+      "touchedComponents": [
+        "data",
+        "metadata",
+        "manuscript"
+      ],
+      "decision": "approve-merge",
+      "score": 100,
+      "components": [
+        {
+          "component": "data",
+          "files": [
+            "data/curated-measurements.parquet"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "data-steward",
+            "privacy-reviewer"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "noor",
+              "role": "data-steward",
+              "approvedAt": "2026-05-22T17:10:00Z"
+            }
+          ],
+          "findings": []
+        },
+        {
+          "component": "metadata",
+          "files": [
+            "metadata.json"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "repository-curator",
+            "corresponding-author"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "ivy",
+              "role": "repository-curator",
+              "approvedAt": "2026-05-22T17:15:00Z"
+            }
+          ],
+          "findings": []
+        },
+        {
+          "component": "manuscript",
+          "files": [
+            "manuscript/data-availability.md"
+          ],
+          "restricted": false,
+          "requiredRoles": [
+            "scientific-editor",
+            "corresponding-author"
+          ],
+          "eligibleApprovals": [
+            {
+              "user": "mira",
+              "role": "scientific-editor",
+              "approvedAt": "2026-05-22T17:18:00Z"
+            }
+          ],
+          "findings": []
+        }
+      ],
+      "findings": []
+    }
+  ]
+}

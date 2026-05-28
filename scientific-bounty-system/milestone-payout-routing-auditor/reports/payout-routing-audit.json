@@ -1,0 +1,185 @@
+{
+  "challenge": {
+    "id": "single-cell-biomarker-prize-2026",
+    "title": "Single-Cell Biomarker Discovery Prize",
+    "sponsor": "Northstar Therapeutics"
+  },
+  "summary": {
+    "decision": "hold-award-routing",
+    "riskScore": 100,
+    "auditDigest": "040ca7aa426f458a",
+    "findings": 11,
+    "criticalFindings": 3,
+    "highFindings": 4,
+    "prizeCents": 25000000,
+    "escrowedCents": 17500000,
+    "requiredEscrowCents": 27500000,
+    "milestoneTotalCents": 28000000,
+    "splitTotal": 105
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "recommendation": "Block launch until escrow equals the advertised prize and reserve.",
+      "code": "ESCROW_UNDERFUNDED",
+      "message": "Escrow $175,000.00 is below required $275,000.00.",
+      "evidence": {
+        "escrowedCents": 17500000,
+        "requiredEscrowCents": 27500000
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Reconcile milestone payouts with the published prize schedule.",
+      "code": "MILESTONE_TOTAL_MISMATCH",
+      "message": "Milestones total $280,000.00 but prize is $250,000.00.",
+      "evidence": {
+        "milestoneTotalCents": 28000000,
+        "prizeCents": 25000000
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Add objective acceptance criteria and due dates for every milestone.",
+      "code": "MILESTONE_ACCEPTANCE_GAP",
+      "message": "Milestone prototype is missing a due date.",
+      "evidence": {
+        "id": "prototype",
+        "amountCents": 9000000,
+        "dueDate": "",
+        "acceptanceCriteria": "Reproducible notebook and candidate marker list."
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Add objective acceptance criteria and due dates for every milestone.",
+      "code": "MILESTONE_ACCEPTANCE_GAP",
+      "message": "Milestone final is missing acceptance criteria.",
+      "evidence": {
+        "id": "final",
+        "amountCents": 15000000,
+        "dueDate": "2026-09-15",
+        "acceptanceCriteria": ""
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Require signed team allocation splits that total exactly 100%.",
+      "code": "SPLIT_TOTAL_INVALID",
+      "message": "Team split totals 105% instead of 100%.",
+      "evidence": {
+        "splitTotal": 105,
+        "teamSplits": [
+          {
+            "payeeId": "solver-alice",
+            "payeeType": "individual",
+            "percent": 55,
+            "payoutStatus": "ready",
+            "taxFormOnFile": true
+          },
+          {
+            "payeeId": "solver-bob",
+            "payeeType": "individual",
+            "percent": 35,
+            "payoutStatus": "kyc_pending",
+            "taxFormOnFile": false
+          },
+          {
+            "payeeId": "university-lab",
+            "payeeType": "institution",
+            "percent": 15,
+            "payoutStatus": "ready",
+            "taxFormOnFile": false
+          }
+        ]
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Collect payout readiness attestations before sponsor acceptance.",
+      "code": "PAYEE_PAYOUT_NOT_READY",
+      "message": "solver-bob is not ready for payout routing.",
+      "evidence": {
+        "payeeId": "solver-bob",
+        "payeeType": "individual",
+        "percent": 35,
+        "payoutStatus": "kyc_pending",
+        "taxFormOnFile": false
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Collect institution tax and routing metadata before routing funds.",
+      "code": "INSTITUTION_TAX_FORM_MISSING",
+      "message": "university-lab is an institution without a tax form on file.",
+      "evidence": {
+        "payeeId": "university-lab",
+        "payeeType": "institution",
+        "percent": 15,
+        "payoutStatus": "ready",
+        "taxFormOnFile": false
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Move IP transfer to a paid or escrow-released state.",
+      "code": "PREPAYMENT_IP_TRANSFER",
+      "message": "Challenge transfers solver IP before payment release.",
+      "evidence": {
+        "ipTransferTrigger": "on-submission"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Reserve funds for honorable mentions or remove the promise.",
+      "code": "UNBUDGETED_HONORABLE_MENTION",
+      "message": "Honorable mentions promise $20,000.00 without a reserve.",
+      "evidence": {
+        "honorableMentionCents": 2000000
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Require at least two independent reviewers for contested awards.",
+      "code": "WEAK_ARBITRATION_PANEL",
+      "message": "Contested awards have fewer than two independent reviewers.",
+      "evidence": {
+        "independentReviewers": 1,
+        "sponsorCanOverride": true,
+        "appealWindowDays": 2
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Attach an NDA template before accepting private submissions.",
+      "code": "NDA_TEMPLATE_MISSING",
+      "message": "Private challenge requires NDA support but has no template attached.",
+      "evidence": {
+        "visibility": "private",
+        "ndaRequired": true
+      }
+    }
+  ],
+  "releaseChecklist": [
+    {
+      "item": "Sponsor escrow covers prize, reserve, and promised mentions.",
+      "passed": false
+    },
+    {
+      "item": "Milestone payout schedule reconciles to the published prize.",
+      "passed": false
+    },
+    {
+      "item": "Solver team split agreement totals 100%.",
+      "passed": false
+    },
+    {
+      "item": "All payees are payout-ready before sponsor acceptance.",
+      "passed": false
+    },
+    {
+      "item": "IP transfer is gated on payment release.",
+      "passed": false
+    }
+  ]
+}

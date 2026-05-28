@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520">
+  <rect width="960" height="520" fill="#101827"/>
+  <text x="60" y="78" font-size="38" font-family="Arial" fill="#ffffff">Challenge Data-Use Agreement Guard</text>
+  <text x="60" y="122" font-size="22" font-family="Arial" fill="#9fb3c8">Sponsor review and payout gates for controlled scientific bounty materials</text>
+  <rect x="120" y="250" width="130" height="140" rx="10" fill="#36d399" />
+  <text x="185" y="232" text-anchor="middle" font-size="28" fill="#e5e7eb">1</text>
+  <text x="185" y="430" text-anchor="middle" font-size="22" fill="#cbd5e1">ready</text>
+<rect x="380" y="250" width="130" height="140" rx="10" fill="#fb7185" />
+  <text x="445" y="232" text-anchor="middle" font-size="28" fill="#e5e7eb">1</text>
+  <text x="445" y="430" text-anchor="middle" font-size="22" fill="#cbd5e1">hold</text>
+<rect x="640" y="250" width="130" height="140" rx="10" fill="#fbbf24" />
+  <text x="705" y="232" text-anchor="middle" font-size="28" fill="#e5e7eb">1</text>
+  <text x="705" y="430" text-anchor="middle" font-size="22" fill="#cbd5e1">manual-review</text>
+  <text x="60" y="485" font-size="18" font-family="Arial" fill="#9fb3c8">Synthetic data only. Contacts redacted before sponsor packet release.</text>
+</svg>

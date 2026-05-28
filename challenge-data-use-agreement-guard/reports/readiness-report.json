@@ -1,0 +1,130 @@
+{
+  "result": {
+    "challengeId": "scibase-challenge-18-dua-demo",
+    "title": "Controlled Omics Benchmark Challenge",
+    "summary": {
+      "ready": 1,
+      "hold": 1,
+      "manual-review": 1
+    },
+    "submissionReviews": [
+      {
+        "submissionId": "submission-green",
+        "teamId": "lab-green",
+        "decision": "ready",
+        "holds": [],
+        "releaseGates": {
+          "sponsorReview": "allow",
+          "payout": "allow",
+          "ipTransfer": "allow"
+        },
+        "remediation": [],
+        "reviewerPacketDigest": "sha256:1456a7cd03f263bd420cd0a7c3c4ee71a6db5a2428d4f23d1a954cf738d13a9a"
+      },
+      {
+        "submissionId": "submission-hold",
+        "teamId": "lab-hold",
+        "decision": "hold",
+        "holds": [
+          "missing-active-dua:controlled-omics",
+          "use-not-permitted:controlled-omics:public-release",
+          "retention-window-expired:controlled-omics",
+          "controlled-rows-in-artifact:derived-table.csv"
+        ],
+        "releaseGates": {
+          "sponsorReview": "hold",
+          "payout": "hold",
+          "ipTransfer": "hold"
+        },
+        "remediation": [
+          "collect active DUA coverage before sponsor review or payout release",
+          "revise the solver use plan to match permitted DUA purposes",
+          "return or destroy controlled data and attach retention evidence",
+          "redact or replace controlled rows before sponsor packet release"
+        ],
+        "reviewerPacketDigest": "sha256:be0f4913439d4c07dfd4e071e7df6d6c7ad9bbd3a5a98f93afd873a8c450e8e6"
+      },
+      {
+        "submissionId": "submission-compliance",
+        "teamId": "lab-export",
+        "decision": "manual-review",
+        "holds": [
+          "missing-export-clearance:restricted-assay-panel"
+        ],
+        "releaseGates": {
+          "sponsorReview": "hold",
+          "payout": "hold",
+          "ipTransfer": "not-requested"
+        },
+        "remediation": [
+          "route export-controlled materials to compliance review before award release"
+        ],
+        "reviewerPacketDigest": "sha256:7f8e8c40b8ab3704315ccd5076360e5eecc5713fc32b21d3248c6959a15d435d"
+      }
+    ],
+    "auditDigest": "sha256:1aa82ff153b3ed771e53440fabeb676b81e37546989abe8c49e9cf319ffdf107"
+  },
+  "packet": {
+    "challengeId": "scibase-challenge-18-dua-demo",
+    "generatedFor": "sponsor-review",
+    "auditDigest": "sha256:1aa82ff153b3ed771e53440fabeb676b81e37546989abe8c49e9cf319ffdf107",
+    "submissions": [
+      {
+        "submissionId": "submission-green",
+        "teamId": "lab-green",
+        "teamContact": "[redacted]",
+        "decision": "ready",
+        "holds": [],
+        "releaseGates": {
+          "sponsorReview": "allow",
+          "payout": "allow",
+          "ipTransfer": "allow"
+        },
+        "remediation": [],
+        "reviewerPacketDigest": "sha256:1456a7cd03f263bd420cd0a7c3c4ee71a6db5a2428d4f23d1a954cf738d13a9a"
+      },
+      {
+        "submissionId": "submission-hold",
+        "teamId": "lab-hold",
+        "teamContact": "[redacted]",
+        "decision": "hold",
+        "holds": [
+          "missing-active-dua:controlled-omics",
+          "use-not-permitted:controlled-omics:public-release",
+          "retention-window-expired:controlled-omics",
+          "controlled-rows-in-artifact:derived-table.csv"
+        ],
+        "releaseGates": {
+          "sponsorReview": "hold",
+          "payout": "hold",
+          "ipTransfer": "hold"
+        },
+        "remediation": [
+          "collect active DUA coverage before sponsor review or payout release",
+          "revise the solver use plan to match permitted DUA purposes",
+          "return or destroy controlled data and attach retention evidence",
+          "redact or replace controlled rows before sponsor packet release"
+        ],
+        "reviewerPacketDigest": "sha256:be0f4913439d4c07dfd4e071e7df6d6c7ad9bbd3a5a98f93afd873a8c450e8e6"
+      },
+      {
+        "submissionId": "submission-compliance",
+        "teamId": "lab-export",
+        "teamContact": "[redacted]",
+        "decision": "manual-review",
+        "holds": [
+          "missing-export-clearance:restricted-assay-panel"
+        ],
+        "releaseGates": {
+          "sponsorReview": "hold",
+          "payout": "hold",
+          "ipTransfer": "not-requested"
+        },
+        "remediation": [
+          "route export-controlled materials to compliance review before award release"
+        ],
+        "reviewerPacketDigest": "sha256:7f8e8c40b8ab3704315ccd5076360e5eecc5713fc32b21d3248c6959a15d435d"
+      }
+    ]
+  }
+}

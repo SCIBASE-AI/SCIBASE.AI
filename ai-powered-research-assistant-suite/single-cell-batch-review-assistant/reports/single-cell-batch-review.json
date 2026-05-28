@@ -1,0 +1,230 @@
+{
+  "studyId": "scrna-neuroinflammation-2026",
+  "title": "Synthetic Single-Cell Neuroinflammation Manuscript",
+  "generatedAt": "2026-05-28T21:45:00.000Z",
+  "decision": "hold-cell-state-claims",
+  "riskScore": 100,
+  "severityCounts": {
+    "high": 5,
+    "medium": 7,
+    "low": 0
+  },
+  "findingCount": 12,
+  "evidenceDigest": "a85d2437a6518a4e",
+  "summary": {
+    "samples": 3,
+    "cells": 10600,
+    "claims": 2,
+    "evidenceItems": 3,
+    "annotations": 2,
+    "clusters": 2
+  },
+  "findings": [
+    {
+      "code": "BATCH_CONFOUNDED_DESIGN",
+      "severity": "high",
+      "penalty": 17,
+      "message": "Batch library-chemistry is strongly confounded with biological condition.",
+      "evidence": {
+        "batchId": "library-chemistry",
+        "variable": "10x chemistry and run day",
+        "conditionCounts": {
+          "control": 1,
+          "disease": 2
+        },
+        "maxShare": 0.6666666666666666,
+        "conditionAssociation": 0.91,
+        "affectedSamples": [
+          "ctrl-01",
+          "case-01",
+          "case-02"
+        ]
+      },
+      "recommendation": "Balance condition across batches or add a limitation and batch-aware sensitivity analysis."
+    },
+    {
+      "code": "BATCH_CONFOUNDED_DESIGN",
+      "severity": "high",
+      "penalty": 17,
+      "message": "Batch sequencing-lane is strongly confounded with biological condition.",
+      "evidence": {
+        "batchId": "sequencing-lane",
+        "variable": "lane",
+        "conditionCounts": {
+          "control": 0,
+          "disease": 2
+        },
+        "maxShare": 1,
+        "conditionAssociation": 1,
+        "affectedSamples": [
+          "case-01",
+          "case-02"
+        ]
+      },
+      "recommendation": "Balance condition across batches or add a limitation and batch-aware sensitivity analysis."
+    },
+    {
+      "code": "DONOR_REPLICATION_GAP",
+      "severity": "high",
+      "penalty": 16,
+      "message": "Differential expression is not supported by donor-level replication.",
+      "evidence": {
+        "donorsByCondition": {
+          "control": 1,
+          "disease": 2
+        },
+        "minDonors": 1,
+        "deModel": "cell_level_wilcoxon",
+        "usesPseudobulk": false,
+        "randomEffect": null
+      },
+      "recommendation": "Use donor-level replication or pseudobulk models before claiming group-level biology."
+    },
+    {
+      "code": "DOUBLET_BURDEN_UNRESOLVED",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Sample ctrl-01 has unresolved doublet risk.",
+      "evidence": {
+        "sampleId": "ctrl-01",
+        "condition": "control",
+        "doubletDetectionRun": false,
+        "doubletRate": 0.12,
+        "cells": 2600
+      },
+      "recommendation": "Run doublet detection and report removal thresholds before interpreting rare clusters."
+    },
+    {
+      "code": "DOUBLET_BURDEN_UNRESOLVED",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Sample case-01 has unresolved doublet risk.",
+      "evidence": {
+        "sampleId": "case-01",
+        "condition": "disease",
+        "doubletDetectionRun": true,
+        "doubletRate": 0.11,
+        "cells": 4100
+      },
+      "recommendation": "Run doublet detection and report removal thresholds before interpreting rare clusters."
+    },
+    {
+      "code": "CELL_TYPE_MARKER_WEAK",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Cell type label novel inflammatory microglia has weak marker support.",
+      "evidence": {
+        "clusterId": "c7",
+        "label": "novel inflammatory microglia",
+        "positiveMarkerSupport": 0.46,
+        "negativeMarkerSupport": 0.32,
+        "ambiguousLabel": true,
+        "topMarkers": [
+          "C1QA",
+          "LYZ",
+          "MALAT1"
+        ]
+      },
+      "recommendation": "Support annotations with canonical markers, negative markers, and ambiguity notes."
+    },
+    {
+      "code": "INTEGRATION_OVERCORRECTION_RISK",
+      "severity": "medium",
+      "penalty": 9,
+      "message": "Integrated expression is used for differential expression without condition-preservation support.",
+      "evidence": {
+        "method": "Harmony",
+        "expressionUsedForDE": true,
+        "conditionPreservationDiagnostic": false,
+        "silhouetteDelta": -0.34
+      },
+      "recommendation": "Avoid testing differential expression on over-integrated expression values without condition-preservation diagnostics."
+    },
+    {
+      "code": "QC_THRESHOLD_GAP",
+      "severity": "medium",
+      "penalty": 7,
+      "message": "Single-cell QC thresholds are incomplete.",
+      "evidence": {
+        "missingFields": [
+          "ribosomalMax",
+          "maxGenes",
+          "minUmi",
+          "minCellsPerSample"
+        ],
+        "suppliedFields": [
+          "minGenes",
+          "mitochondrialMax"
+        ]
+      },
+      "recommendation": "Report mitochondrial, ribosomal, UMI, gene-count, and minimum-cell filters for every sample."
+    },
+    {
+      "code": "AMBIENT_RNA_UNCORRECTED",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Ambient RNA contamination is above threshold without correction evidence.",
+      "evidence": {
+        "estimatedContamination": 0.14,
+        "correctionRun": false,
+        "affectedMarkers": [
+          "C1QA",
+          "LYZ",
+          "MALAT1"
+        ]
+      },
+      "recommendation": "Correct or quantify ambient RNA contamination before assigning marker-driven clusters."
+    },
+    {
+      "code": "CLUSTER_STABILITY_GAP",
+      "severity": "medium",
+      "penalty": 7,
+      "message": "Highlighted cluster c7 is not stable across checks.",
+      "evidence": {
+        "clusterId": "c7",
+        "label": "novel inflammatory microglia",
+        "bootstrapJaccard": 0.41,
+        "resolutionConsistency": 0.48
+      },
+      "recommendation": "Add resolution sensitivity, bootstrap, or cross-donor stability checks for highlighted clusters."
+    },
+    {
+      "code": "DE_OVERCLAIM_UNSUPPORTED",
+      "severity": "high",
+      "penalty": 15,
+      "message": "Claim claim-c7-disease-driver overstates differential expression evidence.",
+      "evidence": {
+        "claimId": "claim-c7-disease-driver",
+        "text": "A novel inflammatory microglia state drives disease and is differentially expressed in the patient condition.",
+        "evidenceTypes": [
+          "cell_level_de",
+          "marker_panel"
+        ],
+        "usesPseudobulk": false,
+        "deModel": "cell_level_wilcoxon",
+        "hasDonorModel": false
+      },
+      "recommendation": "Downgrade differential-expression claims until donor-replicated models, FDR control, and effect sizes agree."
+    },
+    {
+      "code": "REPRODUCIBILITY_EVIDENCE_GAP",
+      "severity": "high",
+      "penalty": 13,
+      "message": "Single-cell analysis reproducibility evidence is incomplete.",
+      "evidence": {
+        "missingFields": [
+          "rawMatrixAccession",
+          "analysisCodeAvailable",
+          "pipelineVersion",
+          "randomSeed",
+          "parameterDigest",
+          "packageLockDigest"
+        ],
+        "rawMatrixAccession": null,
+        "pipelineVersion": null,
+        "randomSeed": null
+      },
+      "recommendation": "Provide raw matrix accessions, analysis code, random seeds, package versions, and parameter digests."
+    }
+  ]
+}

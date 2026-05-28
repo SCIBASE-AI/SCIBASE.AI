@@ -1,0 +1,72 @@
+[
+  {
+    "manuscriptId": "ms-clean-dose",
+    "title": "Dose-normalized response in engineered organoids",
+    "measurements": [
+      { "id": "baseline-dose", "value": 2, "unit": "mg/kg", "basis": ["body_mass"] },
+      { "id": "treatment-dose", "value": 4, "unit": "mg/kg", "basis": ["body_mass"] }
+    ],
+    "claims": [
+      {
+        "id": "claim-dose-doubles",
+        "text": "The treatment dose doubled while preserving body-mass normalization.",
+        "evidenceIds": ["baseline-dose", "treatment-dose"],
+        "expectedDimension": "dose_per_mass",
+        "requiredBasis": "body_mass",
+        "derivedFoldChange": { "value": 2, "tolerance": 0.01, "significantDigits": 1 }
+      }
+    ]
+  },
+  {
+    "manuscriptId": "ms-mixed-dimensions",
+    "title": "Transcript abundance and reagent mass in a shared claim",
+    "measurements": [
+      { "id": "reagent-mass", "value": 7.5, "unit": "mg", "basis": ["sample"] },
+      { "id": "signal-ratio", "value": 1.6, "unit": "ratio", "basis": ["sample"] }
+    ],
+    "claims": [
+      {
+        "id": "claim-mass-ratio-comparison",
+        "text": "Reagent mass increased at the same rate as normalized signal.",
+        "evidenceIds": ["reagent-mass", "signal-ratio"],
+        "expectedDimension": "ratio"
+      }
+    ]
+  },
+  {
+    "manuscriptId": "ms-rate-denominator",
+    "title": "Event-rate summary across monitoring windows",
+    "measurements": [
+      { "id": "short-window", "value": 18, "unit": "events/hour", "basis": ["instrument_runtime"] },
+      { "id": "daily-window", "value": 240, "unit": "events/day", "basis": ["instrument_runtime"] }
+    ],
+    "claims": [
+      {
+        "id": "claim-hourly-rate",
+        "text": "Both event rates were compared on an hourly basis.",
+        "evidenceIds": ["short-window", "daily-window"],
+        "expectedDimension": "event_rate",
+        "rateDenominator": "hour",
+        "derivedFoldChange": { "value": 13.3333, "tolerance": 0.1, "significantDigits": 5 }
+      }
+    ]
+  },
+  {
+    "manuscriptId": "ms-missing-basis",
+    "title": "Cell density without volume normalization",
+    "measurements": [
+      { "id": "well-a-density", "value": 12, "unit": "cells/ul", "basis": ["sample_count"] },
+      { "id": "well-b-density", "value": 18000, "unit": "cells/ml", "basis": ["sample_count", "volume"] }
+    ],
+    "claims": [
+      {
+        "id": "claim-cell-density",
+        "text": "Cell densities are directly comparable after volume normalization.",
+        "evidenceIds": ["well-a-density", "well-b-density"],
+        "expectedDimension": "cell_density",
+        "requiredBasis": "volume",
+        "derivedFoldChange": { "value": 1.5, "tolerance": 0.05, "significantDigits": 2 }
+      }
+    ]
+  }
+]

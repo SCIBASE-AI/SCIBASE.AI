@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="240" role="img" aria-label="Unit and dimension consistency assistant flow">
+  <rect width="820" height="240" fill="#111827"/>
+  <text x="32" y="42" fill="#f9fafb" font-family="Arial" font-size="22">Unit and Dimension Consistency Assistant</text>
+  <g font-family="Arial" font-size="14" fill="#e5e7eb">
+    <rect x="34" y="86" width="170" height="72" rx="8" fill="#1f2937" stroke="#38bdf8"/>
+    <text x="58" y="116">Measurement packet</text>
+    <text x="58" y="138">units + claims</text>
+    <path d="M204 122 H278" stroke="#9ca3af" stroke-width="2"/>
+    <rect x="278" y="86" width="210" height="72" rx="8" fill="#1f2937" stroke="#a78bfa"/>
+    <text x="304" y="112">Dimension, denominator,</text>
+    <text x="304" y="136">basis, precision checks</text>
+    <path d="M488 122 H562" stroke="#9ca3af" stroke-width="2"/>
+    <rect x="562" y="86" width="220" height="72" rx="8" fill="#1f2937" stroke="#f97316"/>
+    <text x="590" y="112">Ready 1 / Hold 3</text>
+    <text x="590" y="136">High findings 5</text>
+  </g>
+</svg>

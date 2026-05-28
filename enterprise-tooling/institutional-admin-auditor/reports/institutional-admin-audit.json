@@ -1,0 +1,214 @@
+{
+  "tenantId": "tenant-northstar-university",
+  "institutionName": "Northstar University Research Office",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "decision": "block-enterprise-rollout",
+  "riskScore": 100,
+  "adminCount": 2,
+  "webhookCount": 1,
+  "exportPipelineCount": 1,
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "OWNER_ADMIN_MISSING",
+      "title": "Institution tenant lacks an owner admin",
+      "evidence": "tenant-northstar-university has no owner admin role.",
+      "action": "Assign an accountable owner admin before enabling enterprise controls."
+    },
+    {
+      "severity": "high",
+      "code": "ADMIN_MFA_DISABLED",
+      "title": "Admin account does not enforce MFA",
+      "evidence": "ops@example.edu role=admin has MFA disabled.",
+      "action": "Require MFA for all enterprise admins before exposing organization-wide controls."
+    },
+    {
+      "severity": "medium",
+      "code": "LEAST_PRIVILEGE_REVIEW_MISSING",
+      "title": "Least-privilege role review is missing",
+      "evidence": "tenant-northstar-university has no recorded role-policy review.",
+      "action": "Schedule periodic role reviews for admins, lab leads, reviewers, and export operators."
+    },
+    {
+      "severity": "medium",
+      "code": "ADMIN_DASHBOARD_WIDGET_MISSING",
+      "title": "Institution admin dashboard is missing a required widget",
+      "evidence": "tenant-northstar-university lacks contributorAnalytics.",
+      "action": "Enable the required admin dashboard widget before enterprise rollout."
+    },
+    {
+      "severity": "high",
+      "code": "ADMIN_DASHBOARD_WIDGET_MISSING",
+      "title": "Institution admin dashboard is missing a required widget",
+      "evidence": "tenant-northstar-university lacks complianceTracking.",
+      "action": "Enable the required admin dashboard widget before enterprise rollout."
+    },
+    {
+      "severity": "medium",
+      "code": "ADMIN_DASHBOARD_WIDGET_MISSING",
+      "title": "Institution admin dashboard is missing a required widget",
+      "evidence": "tenant-northstar-university lacks exportPipelineHealth.",
+      "action": "Enable the required admin dashboard widget before enterprise rollout."
+    },
+    {
+      "severity": "medium",
+      "code": "ADMIN_DASHBOARD_STALE",
+      "title": "Admin dashboard data freshness exceeds target",
+      "evidence": "tenant-northstar-university freshness=180 minutes.",
+      "action": "Refresh usage, compliance, and project metrics at least hourly for enterprise reporting."
+    },
+    {
+      "severity": "high",
+      "code": "API_REQUIRED_SCOPE_MISSING",
+      "title": "Enterprise API lacks required project read scope",
+      "evidence": "tenant-northstar-university scopes=users:read.",
+      "action": "Add least-privilege project read scope for institutional reporting integrations."
+    },
+    {
+      "severity": "medium",
+      "code": "API_KEY_ROTATION_MISSING",
+      "title": "Enterprise API keys lack rotation policy",
+      "evidence": "tenant-northstar-university has no API key rotation interval.",
+      "action": "Set an API key rotation interval and notify integration owners before expiry."
+    },
+    {
+      "severity": "blocker",
+      "code": "WEBHOOK_SIGNATURE_MISSING",
+      "title": "Webhook lacks signature verification",
+      "evidence": "https://repo.example.edu/hooks/scibase has no signing secret configured.",
+      "action": "Configure signed webhooks before sending project, publication, or compliance events."
+    },
+    {
+      "severity": "medium",
+      "code": "WEBHOOK_RETRY_POLICY_MISSING",
+      "title": "Webhook lacks retry policy",
+      "evidence": "https://repo.example.edu/hooks/scibase has no retry attempts configured.",
+      "action": "Add retry/backoff so institutional systems do not miss critical events."
+    },
+    {
+      "severity": "high",
+      "code": "EXPORT_PIPELINE_DESTINATION_INCOMPLETE",
+      "title": "Export pipeline destination or format is incomplete",
+      "evidence": "pubmed-export destination=PubMed Central format=missing.",
+      "action": "Configure destination and format before one-click institutional exports are enabled."
+    },
+    {
+      "severity": "blocker",
+      "code": "EXPORT_PII_SCRUB_DISABLED",
+      "title": "Export pipeline requires PII scrub but it is disabled",
+      "evidence": "pubmed-export requires PII scrub for PubMed Central.",
+      "action": "Enable PII scrub and add an export reviewer before routing data to external systems."
+    },
+    {
+      "severity": "high",
+      "code": "EXPORT_PIPELINE_DRY_RUN_NOT_PASSING",
+      "title": "Export pipeline does not have a passing dry run",
+      "evidence": "pubmed-export dryRun=failed.",
+      "action": "Run a dry export and resolve validation errors before enabling production exports."
+    },
+    {
+      "severity": "blocker",
+      "code": "ENTERPRISE_AUDIT_LOGGING_DISABLED",
+      "title": "Enterprise audit logging is disabled",
+      "evidence": "tenant-northstar-university lacks audit logging for admin and export actions.",
+      "action": "Enable immutable audit logs before enterprise admin tooling is activated."
+    },
+    {
+      "severity": "medium",
+      "code": "FUNDER_MANDATE_TRACKING_DISABLED",
+      "title": "Funder mandate tracking is disabled",
+      "evidence": "tenant-northstar-university cannot surface open access or reproducibility mandate compliance.",
+      "action": "Enable funder mandate tracking for compliance dashboard coverage."
+    },
+    {
+      "severity": "medium",
+      "code": "SLA_PROFILE_INCOMPLETE",
+      "title": "Enterprise SLA profile is incomplete",
+      "evidence": "tenant-northstar-university tier=missing responseHours=missing.",
+      "action": "Attach the contracted SLA tier and response window to the tenant profile."
+    },
+    {
+      "severity": "blocker",
+      "code": "DPA_REQUIRED_BUT_MISSING",
+      "title": "Data-processing agreement is required but missing",
+      "evidence": "tenant-northstar-university contract requires DPA with no agreement ID.",
+      "action": "Collect the DPA before enabling cross-system data export or analytics."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "OWNER_ADMIN_MISSING",
+      "action": "Assign an accountable owner admin before enabling enterprise controls."
+    },
+    {
+      "code": "ADMIN_MFA_DISABLED",
+      "action": "Require MFA for all enterprise admins before exposing organization-wide controls."
+    },
+    {
+      "code": "LEAST_PRIVILEGE_REVIEW_MISSING",
+      "action": "Schedule periodic role reviews for admins, lab leads, reviewers, and export operators."
+    },
+    {
+      "code": "ADMIN_DASHBOARD_WIDGET_MISSING",
+      "action": "Enable the required admin dashboard widget before enterprise rollout."
+    },
+    {
+      "code": "ADMIN_DASHBOARD_WIDGET_MISSING",
+      "action": "Enable the required admin dashboard widget before enterprise rollout."
+    },
+    {
+      "code": "ADMIN_DASHBOARD_WIDGET_MISSING",
+      "action": "Enable the required admin dashboard widget before enterprise rollout."
+    },
+    {
+      "code": "ADMIN_DASHBOARD_STALE",
+      "action": "Refresh usage, compliance, and project metrics at least hourly for enterprise reporting."
+    },
+    {
+      "code": "API_REQUIRED_SCOPE_MISSING",
+      "action": "Add least-privilege project read scope for institutional reporting integrations."
+    },
+    {
+      "code": "API_KEY_ROTATION_MISSING",
+      "action": "Set an API key rotation interval and notify integration owners before expiry."
+    },
+    {
+      "code": "WEBHOOK_SIGNATURE_MISSING",
+      "action": "Configure signed webhooks before sending project, publication, or compliance events."
+    },
+    {
+      "code": "WEBHOOK_RETRY_POLICY_MISSING",
+      "action": "Add retry/backoff so institutional systems do not miss critical events."
+    },
+    {
+      "code": "EXPORT_PIPELINE_DESTINATION_INCOMPLETE",
+      "action": "Configure destination and format before one-click institutional exports are enabled."
+    },
+    {
+      "code": "EXPORT_PII_SCRUB_DISABLED",
+      "action": "Enable PII scrub and add an export reviewer before routing data to external systems."
+    },
+    {
+      "code": "EXPORT_PIPELINE_DRY_RUN_NOT_PASSING",
+      "action": "Run a dry export and resolve validation errors before enabling production exports."
+    },
+    {
+      "code": "ENTERPRISE_AUDIT_LOGGING_DISABLED",
+      "action": "Enable immutable audit logs before enterprise admin tooling is activated."
+    },
+    {
+      "code": "FUNDER_MANDATE_TRACKING_DISABLED",
+      "action": "Enable funder mandate tracking for compliance dashboard coverage."
+    },
+    {
+      "code": "SLA_PROFILE_INCOMPLETE",
+      "action": "Attach the contracted SLA tier and response window to the tenant profile."
+    },
+    {
+      "code": "DPA_REQUIRED_BUT_MISSING",
+      "action": "Collect the DPA before enabling cross-system data export or analytics."
+    }
+  ],
+  "generatedFrom": "synthetic-enterprise-tenant-only",
+  "auditDigest": "ad0b23a6aa1a8579"
+}

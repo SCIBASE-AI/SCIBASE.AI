@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="450" viewBox="0 0 960 450" role="img" aria-label="Institutional admin audit summary">
+  <rect width="960" height="450" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="402" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="36" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Institutional Admin Audit</text>
+  <rect x="36" y="98" width="390" height="48" rx="6" fill="#b42318"/>
+  <text x="56" y="129" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">block-enterprise-rollout</text>
+  <text x="456" y="129" font-family="Arial" font-size="22" fill="#101828">Risk score: 100</text>
+  <text x="36" y="166" font-family="Arial" font-size="18" fill="#667085">Audit digest: ad0b23a6aa1a8579</text>
+  <text x="36" y="200" font-family="Arial" font-size="18" fill="#344054">admins</text>
+  <rect x="190" y="178" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="178" width="51" height="28" rx="5" fill="#12b76a"/>
+  <text x="676" y="200" font-family="Arial" font-size="18" fill="#344054">2</text>
+<text x="36" y="254" font-family="Arial" font-size="18" fill="#344054">webhooks</text>
+  <rect x="190" y="232" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="232" width="26" height="28" rx="5" fill="#12b76a"/>
+  <text x="676" y="254" font-family="Arial" font-size="18" fill="#344054">1</text>
+<text x="36" y="308" font-family="Arial" font-size="18" fill="#344054">exports</text>
+  <rect x="190" y="286" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="286" width="26" height="28" rx="5" fill="#12b76a"/>
+  <text x="676" y="308" font-family="Arial" font-size="18" fill="#344054">1</text>
+<text x="36" y="362" font-family="Arial" font-size="18" fill="#344054">findings</text>
+  <rect x="190" y="340" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="340" width="460" height="28" rx="5" fill="#b42318"/>
+  <text x="676" y="362" font-family="Arial" font-size="18" fill="#344054">18</text>
+  <text x="36" y="416" font-family="Arial" font-size="18" fill="#667085">Synthetic tenant only. No institution system or webhook calls.</text>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="44" width="1184" height="632" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="72" y="98" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="700">Causal Adjustment Review Assistant</text>
+  <text x="72" y="140" fill="#475569" font-family="Arial, sans-serif" font-size="22">Observational Therapy Mortality Manuscript</text>
+  <text x="72" y="198" fill="#b91c1c" font-family="Arial, sans-serif" font-size="32" font-weight="700">hold-causal-claim</text>
+  <text x="72" y="242" fill="#334155" font-family="Arial, sans-serif" font-size="22">Risk 100/100 · findings 14 · digest 25f8dd674fddef74</text>
+  <rect x="72" y="270" width="560" height="24" rx="12" fill="#e2e8f0"/>
+  <rect x="72" y="270" width="560" height="24" rx="12" fill="#b91c1c"/>
+  <text x="72" y="324" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Top findings</text>
+  <text x="72" y="342" fill="#334155" font-family="Arial, sans-serif" font-size="20">MISSING_CONFOUNDER_ADJUSTMENT: Required confounder baseline-severity is missing from the primary adjustment set.</text>
+<text x="72" y="378" fill="#334155" font-family="Arial, sans-serif" font-size="20">MISSING_CONFOUNDER_ADJUSTMENT: Required confounder comorbidity-index is missing from the primary adjustment set.</text>
+<text x="72" y="414" fill="#334155" font-family="Arial, sans-serif" font-size="20">COLLIDER_ADJUSTMENT: Collider hospitalization is included in the primary adjustment set.</text>
+<text x="72" y="450" fill="#334155" font-family="Arial, sans-serif" font-size="20">POST_TREATMENT_ADJUSTMENT: Post-treatment variable hospitalization is included in the total-effect adjustment set.</text>
+<text x="72" y="486" fill="#334155" font-family="Arial, sans-serif" font-size="20">POST_TREATMENT_ADJUSTMENT: Post-treatment variable biomarker-response is included in the total-effect adjustment set.</text>
+  <text x="72" y="642" fill="#64748b" font-family="Arial, sans-serif" font-size="18">Synthetic manuscript packet only. No private data, external APIs, live patients, or model services.</text>
+</svg>

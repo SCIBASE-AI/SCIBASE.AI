@@ -1,0 +1,102 @@
+"use strict";
+
+const fs = require("fs");
+const path = require("path");
+const { spawnSync } = require("child_process");
+const { findResearchGaps } = require("./index");
+const { neuroInflammationCorpus } = require("./sample-data");
+
+const WIDTH = 1280;
+const HEIGHT = 720;
+const FPS = 12;
+const FRAMES = 48;
+
+function rgb(hex) {
+  const value = Number.parseInt(hex.replace("#", ""), 16);
+  return [(value >> 16) & 255, (value >> 8) & 255, value & 255];
+}
+
+function canvas(fill) {
+  const buffer = Buffer.alloc(WIDTH * HEIGHT * 3);
+  const [r, g, b] = rgb(fill);
+  for (let i = 0; i < buffer.length; i += 3) {
+    buffer[i] = r;
+    buffer[i + 1] = g;
+    buffer[i + 2] = b;
+  }
+  return buffer;
+}
+
+function rect(buffer, x, y, width, height, color) {
+  const [r, g, b] = rgb(color);
+  const left = Math.max(0, Math.floor(x));
+  const top = Math.max(0, Math.floor(y));
+  const right = Math.min(WIDTH, Math.floor(x + width));
+  const bottom = Math.min(HEIGHT, Math.floor(y + height));
+  for (let row = top; row < bottom; row += 1) {
+    for (let col = left; col < right; col += 1) {
+      const index = (row * WIDTH + col) * 3;
+      buffer[index] = r;
+      buffer[index + 1] = g;
+      buffer[index + 2] = b;
+    }
+  }
+}
+
+function writeFrame(file, buffer) {
+  fs.writeFileSync(file, Buffer.concat([Buffer.from(`P6\n${WIDTH} ${HEIGHT}\n255\n`), buffer]));
+}
+
+function main() {
+  const report = findResearchGaps(neuroInflammationCorpus, {
+    currentYear: 2026,
+    targetTopics: ["microglia", "wearables", "digital biomarkers"],
+    minIntersectionSize: 2,
+    maxIntersectionSize: 3,
+    limit: 8,
+  });
+  const reportsDir = path.join(__dirname, "reports");
+  const framesDir = path.join(reportsDir, "ppm-frames");
+  fs.rmSync(framesDir, { recursive: true, force: true });
+  fs.mkdirSync(framesDir, { recursive: true });
+
+  const opportunities = report.opportunities.slice(0, 4);
+  for (let frame = 0; frame < FRAMES; frame += 1) {
+    const progress = Math.min(1, (frame + 1) / 30);
+    const buffer = canvas("#07111f");
+    rect(buffer, 54, 52, 1172, 616, "#101c2f");
+    rect(buffer, 54, 52, 1172, 4, "#29415f");
+    rect(buffer, 54, 664, 1172, 4, "#29415f");
+    rect(buffer, 54, 52, 4, 616, "#29415f");
+    rect(buffer, 1222, 52, 4, 616, "#29415f");
+    rect(buffer, 88, 104, 520, 44, "#ffffff");
+    rect(buffer, 88, 170, 640, 22, "#b9c8dd");
+    rect(buffer, 88, 214, 360, 24, "#ffcf5a");
+    opportunities.forEach((opportunity, index) => {
+      const y = 286 + index * 86;
+      rect(buffer, 88, y, 860, 30, "#273854");
+      rect(buffer, 88, y, 860 * (opportunity.score / report.summary.topScore) * progress, 30, ["#ff6b6b", "#ffa94d", "#7cc4ff", "#8ce99a"][index]);
+      rect(buffer, 988, y - 8, 48, 48, ["#ff6b6b", "#ffa94d", "#7cc4ff", "#8ce99a"][index]);
+      rect(buffer, 1052, y - 8, 48, 48, "#273854");
+      rect(buffer, 1116, y - 8, 48, 48, "#273854");
+    });
+    rect(buffer, 88, 620, 260, 18, "#90a9c7");
+    writeFrame(path.join(framesDir, `frame-${String(frame).padStart(3, "0")}.ppm`), buffer);
+  }
+
+  const output = path.join(reportsDir, "demo.mp4");
+  const result = spawnSync(
+    "ffmpeg",
+    ["-y", "-framerate", String(FPS), "-i", path.join(framesDir, "frame-%03d.ppm"), "-pix_fmt", "yuv420p", "-movflags", "+faststart", output],
+    { stdio: "inherit" }
+  );
+  if (result.status !== 0) {
+    throw new Error("ffmpeg failed to create demo video");
+  }
+  fs.rmSync(framesDir, { recursive: true, force: true });
+  console.log(`demo video=${output}`);
+}
+
+if (require.main === module) {
+  main();
+}

@@ -1,0 +1,279 @@
+{
+  "corpus": {
+    "id": "neuro-inflammation-2026",
+    "title": "Neuroinflammation and Digital Biomarker Gap Scan",
+    "publications": 8,
+    "openQuestions": 4,
+    "labCapabilities": 3
+  },
+  "summary": {
+    "auditDigest": "2084363735f3a3ef",
+    "opportunitiesFound": 8,
+    "topScore": 107.6,
+    "targetTopics": [
+      "microglia",
+      "wearables",
+      "digital biomarkers"
+    ]
+  },
+  "opportunities": [
+    {
+      "key": "microglia + single-cell rna-seq",
+      "topics": [
+        "microglia",
+        "single-cell rna-seq"
+      ],
+      "score": 107.6,
+      "studyCount": 2,
+      "recentStudyCount": 2,
+      "replicationCount": 0,
+      "replicationRatio": 0,
+      "negativeOrMixedCount": 1,
+      "unresolvedQuestions": [
+        {
+          "id": "q1",
+          "text": "Which CRISPR-validated microglia regulators explain long-COVID neuroinflammatory signatures?",
+          "priority": 2
+        }
+      ],
+      "labCapabilities": [],
+      "citationMomentum": 72,
+      "totalCitations": 114,
+      "independentLabs": 2,
+      "reasons": [
+        "only 2 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "replication ratio 0%",
+        "1 negative or mixed result(s) suggest follow-up",
+        "72 citations in the last 24 months"
+      ],
+      "recommendedNextStep": "Create a seed grant or thesis prompt around the unresolved intersection."
+    },
+    {
+      "key": "crispr + microglia + single-cell rna-seq",
+      "topics": [
+        "crispr",
+        "microglia",
+        "single-cell rna-seq"
+      ],
+      "score": 93.2,
+      "studyCount": 1,
+      "recentStudyCount": 1,
+      "replicationCount": 0,
+      "replicationRatio": 0,
+      "negativeOrMixedCount": 0,
+      "unresolvedQuestions": [
+        {
+          "id": "q1",
+          "text": "Which CRISPR-validated microglia regulators explain long-COVID neuroinflammatory signatures?",
+          "priority": 2
+        }
+      ],
+      "labCapabilities": [
+        "Single-cell CRISPR Core"
+      ],
+      "citationMomentum": 44,
+      "totalCitations": 86,
+      "independentLabs": 1,
+      "reasons": [
+        "only 1 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "44 citations in the last 24 months",
+        "matched lab capability: Single-cell CRISPR Core"
+      ],
+      "recommendedNextStep": "Create a seed grant or thesis prompt around the unresolved intersection."
+    },
+    {
+      "key": "rural cohorts + sleep variability + wearables",
+      "topics": [
+        "wearables",
+        "sleep variability",
+        "rural cohorts"
+      ],
+      "score": 89.8,
+      "studyCount": 1,
+      "recentStudyCount": 1,
+      "replicationCount": 1,
+      "replicationRatio": 1,
+      "negativeOrMixedCount": 1,
+      "unresolvedQuestions": [
+        {
+          "id": "q2",
+          "text": "Why do wearable sleep signals fail in rural lupus flare prediction cohorts?",
+          "priority": 1.5
+        }
+      ],
+      "labCapabilities": [
+        "Rural Wearables Network"
+      ],
+      "citationMomentum": 12,
+      "totalCitations": 12,
+      "independentLabs": 1,
+      "reasons": [
+        "only 1 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "1 negative or mixed result(s) suggest follow-up",
+        "matched lab capability: Rural Wearables Network"
+      ],
+      "recommendedNextStep": "Design a targeted replication or adjudication study using available lab capability."
+    },
+    {
+      "key": "climate exposure + multiple sclerosis + wearables",
+      "topics": [
+        "climate exposure",
+        "multiple sclerosis",
+        "wearables"
+      ],
+      "score": 87.8,
+      "studyCount": 1,
+      "recentStudyCount": 1,
+      "replicationCount": 0,
+      "replicationRatio": 0,
+      "negativeOrMixedCount": 0,
+      "unresolvedQuestions": [
+        {
+          "id": "q3",
+          "text": "Can wearable-derived heat stress mediate symptom-burden changes in multiple sclerosis?",
+          "priority": 1.7
+        }
+      ],
+      "labCapabilities": [
+        "Climate Sensor Field Team"
+      ],
+      "citationMomentum": 30,
+      "totalCitations": 34,
+      "independentLabs": 1,
+      "reasons": [
+        "only 1 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "30 citations in the last 24 months",
+        "matched lab capability: Climate Sensor Field Team"
+      ],
+      "recommendedNextStep": "Create a seed grant or thesis prompt around the unresolved intersection."
+    },
+    {
+      "key": "long covid + microglia",
+      "topics": [
+        "long covid",
+        "microglia"
+      ],
+      "score": 87.2,
+      "studyCount": 1,
+      "recentStudyCount": 1,
+      "replicationCount": 0,
+      "replicationRatio": 0,
+      "negativeOrMixedCount": 1,
+      "unresolvedQuestions": [
+        {
+          "id": "q1",
+          "text": "Which CRISPR-validated microglia regulators explain long-COVID neuroinflammatory signatures?",
+          "priority": 2
+        }
+      ],
+      "labCapabilities": [],
+      "citationMomentum": 28,
+      "totalCitations": 28,
+      "independentLabs": 1,
+      "reasons": [
+        "only 1 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "1 negative or mixed result(s) suggest follow-up"
+      ],
+      "recommendedNextStep": "Create a seed grant or thesis prompt around the unresolved intersection."
+    },
+    {
+      "key": "long covid + microglia + single-cell rna-seq",
+      "topics": [
+        "single-cell rna-seq",
+        "long covid",
+        "microglia"
+      ],
+      "score": 87.2,
+      "studyCount": 1,
+      "recentStudyCount": 1,
+      "replicationCount": 0,
+      "replicationRatio": 0,
+      "negativeOrMixedCount": 1,
+      "unresolvedQuestions": [
+        {
+          "id": "q1",
+          "text": "Which CRISPR-validated microglia regulators explain long-COVID neuroinflammatory signatures?",
+          "priority": 2
+        }
+      ],
+      "labCapabilities": [],
+      "citationMomentum": 28,
+      "totalCitations": 28,
+      "independentLabs": 1,
+      "reasons": [
+        "only 1 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "1 negative or mixed result(s) suggest follow-up"
+      ],
+      "recommendedNextStep": "Create a seed grant or thesis prompt around the unresolved intersection."
+    },
+    {
+      "key": "lupus + sleep variability + wearables",
+      "topics": [
+        "wearables",
+        "sleep variability",
+        "lupus"
+      ],
+      "score": 86.2,
+      "studyCount": 2,
+      "recentStudyCount": 2,
+      "replicationCount": 1,
+      "replicationRatio": 0.5,
+      "negativeOrMixedCount": 1,
+      "unresolvedQuestions": [
+        {
+          "id": "q2",
+          "text": "Why do wearable sleep signals fail in rural lupus flare prediction cohorts?",
+          "priority": 1.5
+        }
+      ],
+      "labCapabilities": [],
+      "citationMomentum": 43,
+      "totalCitations": 54,
+      "independentLabs": 2,
+      "reasons": [
+        "only 2 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "1 negative or mixed result(s) suggest follow-up",
+        "43 citations in the last 24 months"
+      ],
+      "recommendedNextStep": "Create a seed grant or thesis prompt around the unresolved intersection."
+    },
+    {
+      "key": "lupus + wearables",
+      "topics": [
+        "wearables",
+        "lupus"
+      ],
+      "score": 86.2,
+      "studyCount": 2,
+      "recentStudyCount": 2,
+      "replicationCount": 1,
+      "replicationRatio": 0.5,
+      "negativeOrMixedCount": 1,
+      "unresolvedQuestions": [
+        {
+          "id": "q2",
+          "text": "Why do wearable sleep signals fail in rural lupus flare prediction cohorts?",
+          "priority": 1.5
+        }
+      ],
+      "labCapabilities": [],
+      "citationMomentum": 43,
+      "totalCitations": 54,
+      "independentLabs": 2,
+      "reasons": [
+        "only 2 directly matched studies",
+        "1 unresolved question(s) map to the intersection",
+        "1 negative or mixed result(s) suggest follow-up",
+        "43 citations in the last 24 months"
+      ],
+      "recommendedNextStep": "Create a seed grant or thesis prompt around the unresolved intersection."
+    }
+  ]
+}

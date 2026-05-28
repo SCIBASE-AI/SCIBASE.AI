@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "total": 4,
+    "ready": 2,
+    "blocked": 2,
+    "findings": 5
+  },
+  "reports": [
+    {
+      "manuscriptId": "ms-clean-pilot",
+      "audience": "patient advisory board",
+      "decision": "ready",
+      "findings": [],
+      "receipt": {
+        "requiredTerms": 1,
+        "blockedFindings": 0,
+        "heldFindings": 0,
+        "nextActions": []
+      }
+    },
+    {
+      "manuscriptId": "ms-causal-overreach",
+      "audience": "public newsletter",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "unsupported_causal_language",
+          "severity": "block",
+          "target": "prevents",
+          "message": "Lay summary uses 'prevents' without source support.",
+          "action": "Rewrite the explanation with association or uncertainty language."
+        },
+        {
+          "code": "unsupported_benefit_language",
+          "severity": "block",
+          "target": "will help patients",
+          "message": "Lay summary claims 'will help patients' without clinical support in the source.",
+          "action": "Remove clinical benefit wording or cite a source-backed outcome."
+        },
+        {
+          "code": "scope_broadening",
+          "severity": "block",
+          "target": "every test",
+          "message": "Lay summary broadens scope with 'every test'.",
+          "action": "Keep the claim limited to the observed assay cohort."
+        }
+      ],
+      "receipt": {
+        "requiredTerms": 0,
+        "blockedFindings": 3,
+        "heldFindings": 0,
+        "nextActions": [
+          "Rewrite the explanation with association or uncertainty language.",
+          "Remove clinical benefit wording or cite a source-backed outcome.",
+          "Keep the claim limited to the observed assay cohort."
+        ]
+      }
+    },
+    {
+      "manuscriptId": "ms-uncertainty-dropped",
+      "audience": "funder update",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "missing_uncertainty",
+          "severity": "block",
+          "target": "summary",
+          "message": "Source includes uncertainty or preliminary evidence, but the lay summary removes it.",
+          "action": "Add plain-language uncertainty, such as 'early evidence suggests' or 'may be associated'."
+        }
+      ],
+      "receipt": {
+        "requiredTerms": 1,
+        "blockedFindings": 1,
+        "heldFindings": 0,
+        "nextActions": [
+          "Add plain-language uncertainty, such as 'early evidence suggests' or 'may be associated'."
+        ]
+      }
+    },
+    {
+      "manuscriptId": "ms-jargon",
+      "audience": "community review panel",
+      "decision": "ready",
+      "findings": [
+        {
+          "code": "unexplained_term",
+          "severity": "hold",
+          "target": "cytokine",
+          "message": "Lay summary mentions 'cytokine' without the required plain-language explanation.",
+          "action": "Add the approved plain-language explanation or remove the technical term."
+        }
+      ],
+      "receipt": {
+        "requiredTerms": 1,
+        "blockedFindings": 0,
+        "heldFindings": 1,
+        "nextActions": [
+          "Add the approved plain-language explanation or remove the technical term."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "artifactId": "dataset-clean",
+    "filename": "single-cell-counts.parquet",
+    "declaredSizeBytes": 300,
+    "finalDigest": "sha256:dataset-clean",
+    "digestRegistry": {
+      "chunk-1": "sha256:a",
+      "chunk-2": "sha256:b",
+      "chunk-3": "sha256:c"
+    },
+    "chunks": [
+      { "id": "chunk-1", "start": 0, "end": 100, "digest": "sha256:a" },
+      { "id": "chunk-2", "start": 100, "end": 200, "digest": "sha256:b" },
+      { "id": "chunk-3", "start": 200, "end": 300, "digest": "sha256:c" }
+    ]
+  },
+  {
+    "artifactId": "dataset-gap",
+    "filename": "instrument-raw.bin",
+    "declaredSizeBytes": 300,
+    "finalDigest": "sha256:dataset-gap",
+    "digestRegistry": {
+      "chunk-1": "sha256:a",
+      "chunk-2": "sha256:b"
+    },
+    "chunks": [
+      { "id": "chunk-1", "start": 0, "end": 100, "digest": "sha256:a" },
+      { "id": "chunk-2", "start": 150, "end": 300, "digest": "sha256:b" }
+    ]
+  },
+  {
+    "artifactId": "dataset-overlap",
+    "filename": "microscopy-stack.tiff",
+    "declaredSizeBytes": 280,
+    "finalDigest": "sha256:dataset-overlap",
+    "digestRegistry": {
+      "chunk-1": "sha256:a",
+      "chunk-2": "sha256:b"
+    },
+    "chunks": [
+      { "id": "chunk-1", "start": 0, "end": 160, "digest": "sha256:a" },
+      { "id": "chunk-2", "start": 120, "end": 280, "digest": "sha256:b" }
+    ]
+  },
+  {
+    "artifactId": "dataset-digest",
+    "filename": "model-weights.bin",
+    "declaredSizeBytes": 200,
+    "finalDigest": "sha256:dataset-digest",
+    "digestRegistry": {
+      "chunk-1": "sha256:a",
+      "chunk-2": "sha256:expected-b"
+    },
+    "chunks": [
+      { "id": "chunk-1", "start": 0, "end": 100, "digest": "sha256:a" },
+      { "id": "chunk-2", "start": 100, "end": 200, "digest": "sha256:actual-b" }
+    ]
+  },
+  {
+    "artifactId": "dataset-hold",
+    "filename": "supplement.csv",
+    "declaredSizeBytes": 100,
+    "finalDigest": null,
+    "digestRegistry": {
+      "chunk-1": "sha256:a"
+    },
+    "chunks": [
+      { "id": "chunk-1", "start": 0, "end": 100, "digest": "sha256:a" }
+    ]
+  }
+]

@@ -1,0 +1,218 @@
+{
+  "studyId": "obs-therapy-mortality-2026",
+  "title": "Observational Therapy Mortality Manuscript",
+  "generatedAt": "2026-05-28T20:45:00.000Z",
+  "decision": "hold-causal-claim",
+  "riskScore": 100,
+  "severityCounts": {
+    "high": 7,
+    "medium": 7,
+    "low": 0
+  },
+  "findingCount": 14,
+  "evidenceDigest": "25f8dd674fddef74",
+  "summary": {
+    "variables": 9,
+    "claims": 2,
+    "requiredConfounders": 3,
+    "adjustedCovariates": 4,
+    "temporalChecks": 2,
+    "negativeControls": 1
+  },
+  "findings": [
+    {
+      "code": "MISSING_CONFOUNDER_ADJUSTMENT",
+      "severity": "high",
+      "penalty": 18,
+      "message": "Required confounder baseline-severity is missing from the primary adjustment set.",
+      "evidence": {
+        "variableId": "baseline-severity",
+        "label": "Baseline disease severity",
+        "role": "confounder",
+        "adjustedCovariates": [
+          "age",
+          "hospitalization",
+          "biomarker-response",
+          "clinic-preference"
+        ]
+      },
+      "recommendation": "Add the omitted baseline confounders to the adjustment set or downgrade causal language."
+    },
+    {
+      "code": "MISSING_CONFOUNDER_ADJUSTMENT",
+      "severity": "high",
+      "penalty": 18,
+      "message": "Required confounder comorbidity-index is missing from the primary adjustment set.",
+      "evidence": {
+        "variableId": "comorbidity-index",
+        "label": "Comorbidity index",
+        "role": "confounder",
+        "adjustedCovariates": [
+          "age",
+          "hospitalization",
+          "biomarker-response",
+          "clinic-preference"
+        ]
+      },
+      "recommendation": "Add the omitted baseline confounders to the adjustment set or downgrade causal language."
+    },
+    {
+      "code": "COLLIDER_ADJUSTMENT",
+      "severity": "high",
+      "penalty": 17,
+      "message": "Collider hospitalization is included in the primary adjustment set.",
+      "evidence": {
+        "variableId": "hospitalization",
+        "label": "Hospitalization after treatment decision",
+        "colliderReason": "affected by treatment access and early clinical decline"
+      },
+      "recommendation": "Remove collider variables from the primary adjustment set and rerun the sensitivity model."
+    },
+    {
+      "code": "POST_TREATMENT_ADJUSTMENT",
+      "severity": "high",
+      "penalty": 16,
+      "message": "Post-treatment variable hospitalization is included in the total-effect adjustment set.",
+      "evidence": {
+        "variableId": "hospitalization",
+        "label": "Hospitalization after treatment decision",
+        "role": "collider",
+        "measuredAfterExposure": true
+      },
+      "recommendation": "Do not adjust for mediators or post-treatment variables when estimating the total effect."
+    },
+    {
+      "code": "POST_TREATMENT_ADJUSTMENT",
+      "severity": "high",
+      "penalty": 16,
+      "message": "Post-treatment variable biomarker-response is included in the total-effect adjustment set.",
+      "evidence": {
+        "variableId": "biomarker-response",
+        "label": "Early biomarker response",
+        "role": "mediator",
+        "measuredAfterExposure": true
+      },
+      "recommendation": "Do not adjust for mediators or post-treatment variables when estimating the total effect."
+    },
+    {
+      "code": "TEMPORAL_ORDER_VIOLATION",
+      "severity": "high",
+      "penalty": 15,
+      "message": "Temporal ordering check failed for hospitalization-before-exposure.",
+      "evidence": {
+        "checkId": "hospitalization-before-exposure",
+        "expected": "all adjusted covariates measured before exposure",
+        "observed": "hospitalization is recorded after treatment decision for 38% of rows",
+        "affectedClaimIds": [
+          "claim-primary-causal"
+        ]
+      },
+      "recommendation": "Require exposure, confounder, and outcome timestamps that preserve causal ordering."
+    },
+    {
+      "code": "POSITIVITY_VIOLATION",
+      "severity": "high",
+      "penalty": 14,
+      "message": "Propensity overlap is too weak for the stated causal estimand.",
+      "evidence": {
+        "minPropensity": 0.02,
+        "maxPropensity": 0.98,
+        "threshold": 0.05
+      },
+      "recommendation": "Restrict to common-support regions or report the causal estimand as unsupported."
+    },
+    {
+      "code": "WEAK_BALANCE_DIAGNOSTIC",
+      "severity": "medium",
+      "penalty": 7,
+      "message": "Covariate baseline-severity remains imbalanced after adjustment.",
+      "evidence": {
+        "variableId": "baseline-severity",
+        "standardizedMeanDifference": 0.42,
+        "threshold": 0.25
+      },
+      "recommendation": "Improve matching/weighting or add balance caveats for imbalanced covariates."
+    },
+    {
+      "code": "WEAK_BALANCE_DIAGNOSTIC",
+      "severity": "medium",
+      "penalty": 7,
+      "message": "Covariate comorbidity-index remains imbalanced after adjustment.",
+      "evidence": {
+        "variableId": "comorbidity-index",
+        "standardizedMeanDifference": 0.31,
+        "threshold": 0.25
+      },
+      "recommendation": "Improve matching/weighting or add balance caveats for imbalanced covariates."
+    },
+    {
+      "code": "NEGATIVE_CONTROL_FAILURE",
+      "severity": "medium",
+      "penalty": 10,
+      "message": "Negative control negative-control-dental-visit shows a non-null effect.",
+      "evidence": {
+        "controlId": "negative-control-dental-visit",
+        "effectEstimate": -0.18,
+        "tolerance": 0.05,
+        "pValue": 0.012
+      },
+      "recommendation": "Investigate residual confounding before presenting the effect as causal."
+    },
+    {
+      "code": "INVALID_INSTRUMENT",
+      "severity": "medium",
+      "penalty": 9,
+      "message": "Instrument clinic-preference lacks required validity evidence.",
+      "evidence": {
+        "variableId": "clinic-preference",
+        "relevanceSupported": true,
+        "exclusionRestrictionSupported": false,
+        "concern": "clinic preference is associated with severity referral pathways"
+      },
+      "recommendation": "Remove the instrument claim or supply exclusion-restriction and relevance evidence."
+    },
+    {
+      "code": "EFFECT_MODIFIER_UNREPORTED",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Required effect modifier site-region is not reported as a stratum or interaction.",
+      "evidence": {
+        "variableId": "site-region",
+        "reason": "treatment access and mortality baseline vary across regions",
+        "reportedStrata": []
+      },
+      "recommendation": "Report stratified estimates or add a limitation for the uncovered effect modifier."
+    },
+    {
+      "code": "UNSUPPORTED_CAUSAL_LANGUAGE",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Claim claim-primary-causal uses causal language without sufficient design and adjustment evidence.",
+      "evidence": {
+        "claimId": "claim-primary-causal",
+        "text": "Early immunotherapy reduced 90-day mortality across the registry cohort.",
+        "designType": "observational_cohort",
+        "evidenceIds": [
+          "table-2",
+          "figure-3"
+        ]
+      },
+      "recommendation": "Replace causal wording with association language until design and adjustment evidence are sufficient."
+    },
+    {
+      "code": "UNSUPPORTED_CAUSAL_LANGUAGE",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Claim claim-mechanism uses causal language without sufficient design and adjustment evidence.",
+      "evidence": {
+        "claimId": "claim-mechanism",
+        "text": "The therapy prevents death by rapidly improving inflammatory biomarkers.",
+        "designType": "observational_cohort",
+        "evidenceIds": [
+          "figure-4"
+        ]
+      },
+      "recommendation": "Replace causal wording with association language until design and adjustment evidence are sufficient."
+    }
+  ]
+}

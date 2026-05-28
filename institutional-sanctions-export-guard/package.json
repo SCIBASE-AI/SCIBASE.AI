@@ -1,0 +1,12 @@
+{
+  "name": "institutional-sanctions-export-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free institutional sanctions and export-control guard for SCIBASE issue #20.",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "python make-demo-video.py",
+    "check": "node --check index.js && node --check test.js && node --check demo.js"
+  }
+}

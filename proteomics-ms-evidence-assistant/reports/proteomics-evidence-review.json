@@ -1,0 +1,291 @@
+{
+  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "requirementMap": [
+    "Auto peer review reports: flags proteomics-specific claims that need reviewer attention.",
+    "Claims versus evidence alignment: checks peptide/protein FDR, protein inference, PTM localization, and biomarker validation.",
+    "Reproducibility checker: verifies raw files, workflow files, environment locks, parameter manifests, and result checksums.",
+    "Adaptive domain template: specializes the assistant for LC-MS/MS, DIA, TMT, PTM, and biomarker manuscripts."
+  ],
+  "summary": {
+    "studiesReviewed": 4,
+    "reviewerReady": 1,
+    "targetedRevision": 0,
+    "majorRevision": 0,
+    "blocked": 3,
+    "averageEvidenceScore": 36
+  },
+  "results": [
+    {
+      "studyId": "proteome-clean-diapasef",
+      "title": "DIA-PASEF plasma biomarker validation",
+      "manuscriptType": "biomarker-validation",
+      "decision": "reviewer-ready",
+      "evidenceScore": 100,
+      "severityCounts": {},
+      "findingCount": 0,
+      "findings": [],
+      "actions": [
+        "Proceed to reviewer-ready peer-review packet with proteomics evidence attached."
+      ]
+    },
+    {
+      "studyId": "proteome-loose-fdr",
+      "title": "Discovery proteomics with loose FDR and weak inference",
+      "manuscriptType": "discovery",
+      "decision": "block-reviewer-ready-status",
+      "evidenceScore": 0,
+      "severityCounts": {
+        "critical": 3,
+        "high": 9,
+        "medium": 5
+      },
+      "findingCount": 17,
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "peptide-fdr-above-threshold",
+          "message": "Peptide-level FDR exceeds the standard 1% review threshold.",
+          "evidence": "0.025",
+          "action": "Tighten peptide-spectrum match filtering or qualify affected claims."
+        },
+        {
+          "severity": "critical",
+          "code": "protein-fdr-above-threshold",
+          "message": "Protein-level FDR exceeds the standard 1% review threshold.",
+          "evidence": "0.034",
+          "action": "Recompute protein groups at 1% FDR or downgrade protein-level conclusions."
+        },
+        {
+          "severity": "high",
+          "code": "missing-decoy-strategy",
+          "message": "Search packet does not document target-decoy or equivalent error control.",
+          "evidence": "proteome-loose-fdr",
+          "action": "Attach decoy strategy, FDR estimation method, and thresholding notes."
+        },
+        {
+          "severity": "high",
+          "code": "missing-protein-database-version",
+          "message": "Protein database version is missing from the manuscript packet.",
+          "evidence": "proteome-loose-fdr",
+          "action": "Record UniProt/refseq database version and contaminant database handling."
+        },
+        {
+          "severity": "medium",
+          "code": "wide-search-tolerance",
+          "message": "Mass tolerances are broad enough to require extra false-discovery justification.",
+          "evidence": "25 ppm / 0.8 Da",
+          "action": "Explain instrument mode and validate tolerance choices against decoy performance."
+        },
+        {
+          "severity": "high",
+          "code": "missing-normalization",
+          "message": "Quantification packet does not include a usable normalization strategy.",
+          "evidence": "proteome-loose-fdr",
+          "action": "Add normalization method and show effect on key protein estimates."
+        },
+        {
+          "severity": "high",
+          "code": "batch-control-gap",
+          "message": "Batch randomization or adjustment evidence is incomplete.",
+          "evidence": "randomized=false, adjusted=false",
+          "action": "Provide batch design, bridge samples, and adjusted sensitivity analysis."
+        },
+        {
+          "severity": "medium",
+          "code": "high-qc-cv",
+          "message": "QC coefficient of variation is above the 20% review target.",
+          "evidence": "28%",
+          "action": "Add QC trend plots and exclude unstable features or batches."
+        },
+        {
+          "severity": "high",
+          "code": "high-missingness",
+          "message": "Feature missingness is high enough to threaten claim stability.",
+          "evidence": "37%",
+          "action": "Report missingness handling and run sensitivity analysis for key claims."
+        },
+        {
+          "severity": "high",
+          "code": "weak-protein-inference",
+          "message": "Protein-level claim relies on weak unique-peptide or inference evidence.",
+          "evidence": "claim-single-peptide",
+          "action": "Require at least two unique peptides per claimed protein or qualify protein-group ambiguity."
+        },
+        {
+          "severity": "high",
+          "code": "missing-validation-cohort",
+          "message": "Biomarker claim lacks independent validation cohort evidence.",
+          "evidence": "claim-single-peptide",
+          "action": "Mark the finding as discovery-only or add validation cohort support."
+        },
+        {
+          "severity": "medium",
+          "code": "biomarker-effect-weak",
+          "message": "Biomarker claim has weak adjusted significance for reviewer-ready wording.",
+          "evidence": "claim-single-peptide: 0.031",
+          "action": "Calibrate claim wording and show correction method with confidence intervals."
+        },
+        {
+          "severity": "critical",
+          "code": "missing-raw-files",
+          "message": "Raw LC-MS/MS file count is lower than the sample manifest expects.",
+          "evidence": "42/60",
+          "action": "Block reviewer-ready status until raw files or documented exclusions are attached."
+        },
+        {
+          "severity": "high",
+          "code": "missing-public-raw-accession",
+          "message": "No public or controlled-access raw data accession is included.",
+          "evidence": "proteome-loose-fdr",
+          "action": "Deposit raw data in a proteomics repository or document controlled-access route."
+        },
+        {
+          "severity": "high",
+          "code": "missing-workflow-file",
+          "message": "No executable search or quantification workflow is listed.",
+          "evidence": "proteome-loose-fdr",
+          "action": "Attach workflow, scripts, and execution notes for reproducibility checking."
+        },
+        {
+          "severity": "medium",
+          "code": "missing-environment-lock",
+          "message": "Environment lockfile is missing.",
+          "evidence": "proteome-loose-fdr",
+          "action": "Add conda, container, lockfile, or versioned workflow environment evidence."
+        },
+        {
+          "severity": "medium",
+          "code": "incomplete-reproducibility-manifest",
+          "message": "Parameter manifest or result checksums are incomplete.",
+          "evidence": "proteome-loose-fdr",
+          "action": "Attach search parameters and digest output tables for rerun comparison."
+        }
+      ],
+      "actions": [
+        "Tighten peptide-spectrum match filtering or qualify affected claims.",
+        "Recompute protein groups at 1% FDR or downgrade protein-level conclusions.",
+        "Attach decoy strategy, FDR estimation method, and thresholding notes.",
+        "Record UniProt/refseq database version and contaminant database handling.",
+        "Explain instrument mode and validate tolerance choices against decoy performance.",
+        "Add normalization method and show effect on key protein estimates.",
+        "Provide batch design, bridge samples, and adjusted sensitivity analysis.",
+        "Add QC trend plots and exclude unstable features or batches.",
+        "Report missingness handling and run sensitivity analysis for key claims.",
+        "Require at least two unique peptides per claimed protein or qualify protein-group ambiguity.",
+        "Mark the finding as discovery-only or add validation cohort support.",
+        "Calibrate claim wording and show correction method with confidence intervals.",
+        "Block reviewer-ready status until raw files or documented exclusions are attached.",
+        "Deposit raw data in a proteomics repository or document controlled-access route.",
+        "Attach workflow, scripts, and execution notes for reproducibility checking.",
+        "Add conda, container, lockfile, or versioned workflow environment evidence.",
+        "Attach search parameters and digest output tables for rerun comparison."
+      ]
+    },
+    {
+      "studyId": "proteome-ptm-localization-gap",
+      "title": "Phosphoproteomics signaling claims without localization support",
+      "manuscriptType": "ptm-analysis",
+      "decision": "block-reviewer-ready-status",
+      "evidenceScore": 28,
+      "severityCounts": {
+        "critical": 2,
+        "high": 1,
+        "medium": 1
+      },
+      "findingCount": 4,
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "protein-fdr-above-threshold",
+          "message": "Protein-level FDR exceeds the standard 1% review threshold.",
+          "evidence": "0.011",
+          "action": "Recompute protein groups at 1% FDR or downgrade protein-level conclusions."
+        },
+        {
+          "severity": "high",
+          "code": "batch-control-gap",
+          "message": "Batch randomization or adjustment evidence is incomplete.",
+          "evidence": "randomized=true, adjusted=false",
+          "action": "Provide batch design, bridge samples, and adjusted sensitivity analysis."
+        },
+        {
+          "severity": "critical",
+          "code": "weak-ptm-localization",
+          "message": "PTM site claim lacks localization probability above 0.75.",
+          "evidence": "claim-phosphosite: 0.58",
+          "action": "Downgrade site-specific language or add site-localization evidence."
+        },
+        {
+          "severity": "medium",
+          "code": "missing-environment-lock",
+          "message": "Environment lockfile is missing.",
+          "evidence": "proteome-ptm-localization-gap",
+          "action": "Add conda, container, lockfile, or versioned workflow environment evidence."
+        }
+      ],
+      "actions": [
+        "Recompute protein groups at 1% FDR or downgrade protein-level conclusions.",
+        "Provide batch design, bridge samples, and adjusted sensitivity analysis.",
+        "Downgrade site-specific language or add site-localization evidence.",
+        "Add conda, container, lockfile, or versioned workflow environment evidence."
+      ]
+    },
+    {
+      "studyId": "proteome-dia-library-gap",
+      "title": "DIA cohort study missing library and raw package evidence",
+      "manuscriptType": "cohort-discovery",
+      "decision": "block-reviewer-ready-status",
+      "evidenceScore": 14,
+      "severityCounts": {
+        "critical": 2,
+        "high": 2,
+        "medium": 1
+      },
+      "findingCount": 5,
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "protein-fdr-above-threshold",
+          "message": "Protein-level FDR exceeds the standard 1% review threshold.",
+          "evidence": "0.012",
+          "action": "Recompute protein groups at 1% FDR or downgrade protein-level conclusions."
+        },
+        {
+          "severity": "high",
+          "code": "missing-dia-library",
+          "message": "DIA analysis lacks spectral library or library-free search evidence.",
+          "evidence": "proteome-dia-library-gap",
+          "action": "Attach spectral library, library-free settings, or library construction manifest."
+        },
+        {
+          "severity": "critical",
+          "code": "missing-raw-files",
+          "message": "Raw LC-MS/MS file count is lower than the sample manifest expects.",
+          "evidence": "118/123",
+          "action": "Block reviewer-ready status until raw files or documented exclusions are attached."
+        },
+        {
+          "severity": "high",
+          "code": "missing-public-raw-accession",
+          "message": "No public or controlled-access raw data accession is included.",
+          "evidence": "proteome-dia-library-gap",
+          "action": "Deposit raw data in a proteomics repository or document controlled-access route."
+        },
+        {
+          "severity": "medium",
+          "code": "incomplete-reproducibility-manifest",
+          "message": "Parameter manifest or result checksums are incomplete.",
+          "evidence": "proteome-dia-library-gap",
+          "action": "Attach search parameters and digest output tables for rerun comparison."
+        }
+      ],
+      "actions": [
+        "Recompute protein groups at 1% FDR or downgrade protein-level conclusions.",
+        "Attach spectral library, library-free settings, or library construction manifest.",
+        "Block reviewer-ready status until raw files or documented exclusions are attached.",
+        "Deposit raw data in a proteomics repository or document controlled-access route.",
+        "Attach search parameters and digest output tables for rerun comparison."
+      ]
+    }
+  ]
+}

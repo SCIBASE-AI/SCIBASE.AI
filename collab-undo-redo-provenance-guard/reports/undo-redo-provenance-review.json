@@ -1,0 +1,162 @@
+{
+  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "requirementMap": [
+    "Real-time collaboration: validates inverse operations before shared document mutation.",
+    "Version history and autosave: ties undo/redo to section versions and restore snapshots.",
+    "Rich scientific editing: protects notebook outputs, final-review sections, comments, and task anchors.",
+    "Audit logs: emits reviewer-ready allow, defer, or block decisions for every request."
+  ],
+  "summary": {
+    "requestCount": 6,
+    "allowed": 2,
+    "deferred": 0,
+    "blocked": 4,
+    "averageProvenanceScore": 60
+  },
+  "results": [
+    {
+      "requestId": "req-clean-own-undo",
+      "actor": "ava",
+      "type": "undo",
+      "targetOperationId": "op-099",
+      "decision": "allow",
+      "provenanceScore": 100,
+      "issueCounts": {},
+      "issues": [],
+      "actions": [
+        "Apply inverse operation and append an audit event with target operation, actor, and snapshot hash."
+      ]
+    },
+    {
+      "requestId": "req-other-author-hijack",
+      "actor": "ben",
+      "type": "undo",
+      "targetOperationId": "op-102",
+      "decision": "block",
+      "provenanceScore": 30,
+      "issueCounts": {
+        "critical": 2
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "cross-author-undo",
+          "message": "Author attempted to undo another collaborator's operation.",
+          "context": "op-102"
+        },
+        {
+          "severity": "critical",
+          "code": "intervening-range-conflict",
+          "message": "Newer edits overlap the target range.",
+          "context": "op-103"
+        }
+      ],
+      "actions": [
+        "Require explicit editor override before applying the inverse operation.",
+        "Open a conflict review instead of applying the undo automatically."
+      ]
+    },
+    {
+      "requestId": "req-stale-range",
+      "actor": "ava",
+      "type": "undo",
+      "targetOperationId": "op-102",
+      "decision": "block",
+      "provenanceScore": 50,
+      "issueCounts": {
+        "high": 1,
+        "critical": 1
+      },
+      "issues": [
+        {
+          "severity": "high",
+          "code": "stale-section-version",
+          "message": "Undo/redo request is based on an older section version.",
+          "context": "methods"
+        },
+        {
+          "severity": "critical",
+          "code": "intervening-range-conflict",
+          "message": "Newer edits overlap the target range.",
+          "context": "op-103"
+        }
+      ],
+      "actions": [
+        "Rebase the inverse operation against the latest section version.",
+        "Open a conflict review instead of applying the undo automatically."
+      ]
+    },
+    {
+      "requestId": "req-locked-notebook-redo",
+      "actor": "dia",
+      "type": "redo",
+      "targetOperationId": "op-104",
+      "decision": "block",
+      "provenanceScore": 50,
+      "issueCounts": {
+        "critical": 1,
+        "high": 1
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "locked-section-side-path",
+          "message": "Undo/redo would mutate a locked final-review section.",
+          "context": "results-figure-2"
+        },
+        {
+          "severity": "high",
+          "code": "missing-notebook-output-snapshot",
+          "message": "Notebook execution undo/redo lacks an output restore snapshot.",
+          "context": "op-104"
+        }
+      ],
+      "actions": [
+        "Require lock-owner approval before inverse operation application.",
+        "Attach notebook output and execution-count snapshot before mutation."
+      ]
+    },
+    {
+      "requestId": "req-editor-override",
+      "actor": "review-lead",
+      "type": "undo",
+      "targetOperationId": "op-104",
+      "decision": "allow",
+      "provenanceScore": 100,
+      "issueCounts": {},
+      "issues": [],
+      "actions": [
+        "Apply inverse operation and append an audit event with target operation, actor, and snapshot hash."
+      ]
+    },
+    {
+      "requestId": "req-comment-anchor-delete",
+      "actor": "ava",
+      "type": "undo",
+      "targetOperationId": "comment-200",
+      "decision": "block",
+      "provenanceScore": 30,
+      "issueCounts": {
+        "critical": 2
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "cross-author-undo",
+          "message": "Author attempted to undo another collaborator's operation.",
+          "context": "comment-200"
+        },
+        {
+          "severity": "critical",
+          "code": "protected-comment-anchor-delete",
+          "message": "Undo request would remove another reviewer's anchored comment.",
+          "context": "comment-200"
+        }
+      ],
+      "actions": [
+        "Require explicit editor override before applying the inverse operation.",
+        "Keep the reviewer comment and create a separate resolution task."
+      ]
+    }
+  ]
+}

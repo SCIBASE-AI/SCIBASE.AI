@@ -1,0 +1,150 @@
+{
+  "packetId": "challenge-closeout-demo-001",
+  "generatedAt": "2026-05-28T00:00:00Z",
+  "challenges": [
+    {
+      "id": "climate-model-prize",
+      "title": "Regional climate downscaling model prize",
+      "closeout": {
+        "outcome": "awarded",
+        "closedAt": "2026-05-20T00:00:00Z"
+      },
+      "policy": {
+        "revokeAccessWithinDays": 3,
+        "retainAppealRecordsDays": 45
+      },
+      "dataGrants": [
+        {
+          "actor": "solver-team-alpha",
+          "role": "solver",
+          "datasetId": "sponsor-weather-stations-v4",
+          "classification": "restricted",
+          "active": false,
+          "closeoutDisposition": "destroyed",
+          "evidenceId": "cert-8841"
+        },
+        {
+          "actor": "external-reviewer-2",
+          "role": "reviewer",
+          "datasetId": "public-baseline-archive",
+          "classification": "public",
+          "active": false,
+          "closeoutDisposition": "retained",
+          "evidenceId": "audit-9910"
+        }
+      ],
+      "settlement": {
+        "status": "funded"
+      },
+      "ipTransfer": {
+        "status": "transferred"
+      },
+      "solverProtection": {
+        "partialCompensationDecision": "not-needed",
+        "noAwardReasonPublished": true
+      },
+      "records": {
+        "appealRecordsRetainUntil": "2026-07-10T00:00:00Z",
+        "auditDigestStatus": "signed"
+      },
+      "publicDisclosure": {
+        "enabled": true,
+        "privateChallenge": false,
+        "redactionApproved": true
+      }
+    },
+    {
+      "id": "oncology-biomarker-private",
+      "title": "Private oncology biomarker discovery challenge",
+      "closeout": {
+        "outcome": "awarded",
+        "closedAt": "2026-05-14T00:00:00Z"
+      },
+      "policy": {
+        "revokeAccessWithinDays": 2,
+        "retainAppealRecordsDays": 60
+      },
+      "dataGrants": [
+        {
+          "actor": "solver-team-beta",
+          "role": "solver",
+          "datasetId": "sponsor-rnaseq-training-cohort",
+          "classification": "restricted",
+          "active": true,
+          "closeoutDisposition": "unresolved",
+          "evidenceId": null
+        },
+        {
+          "actor": "reviewer-panel-a",
+          "role": "reviewer",
+          "datasetId": "sponsor-clinical-labels",
+          "classification": "restricted",
+          "active": false,
+          "closeoutDisposition": "destroyed",
+          "evidenceId": null
+        }
+      ],
+      "settlement": {
+        "status": "pending"
+      },
+      "ipTransfer": {
+        "status": "transferred"
+      },
+      "solverProtection": {
+        "partialCompensationDecision": "not-needed",
+        "noAwardReasonPublished": true
+      },
+      "records": {
+        "appealRecordsRetainUntil": "2026-06-15T00:00:00Z",
+        "auditDigestStatus": "draft"
+      },
+      "publicDisclosure": {
+        "enabled": true,
+        "privateChallenge": true,
+        "redactionApproved": false
+      }
+    },
+    {
+      "id": "quantum-noise-cancelled",
+      "title": "Quantum noise mitigation prototype",
+      "closeout": {
+        "outcome": "cancelled",
+        "closedAt": "2026-05-25T00:00:00Z"
+      },
+      "policy": {
+        "revokeAccessWithinDays": 5,
+        "retainAppealRecordsDays": 30
+      },
+      "dataGrants": [
+        {
+          "actor": "solver-lab-gamma",
+          "role": "solver",
+          "datasetId": "public-noise-fixtures",
+          "classification": "public",
+          "active": false,
+          "closeoutDisposition": "retained",
+          "evidenceId": "audit-2237"
+        }
+      ],
+      "settlement": {
+        "status": "refund-pending"
+      },
+      "ipTransfer": {
+        "status": "blocked"
+      },
+      "solverProtection": {
+        "partialCompensationDecision": null,
+        "noAwardReasonPublished": false
+      },
+      "records": {
+        "appealRecordsRetainUntil": "2026-06-05T00:00:00Z",
+        "auditDigestStatus": "unsigned"
+      },
+      "publicDisclosure": {
+        "enabled": false,
+        "privateChallenge": false,
+        "redactionApproved": false
+      }
+    }
+  ]
+}

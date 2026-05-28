@@ -1,0 +1,74 @@
+{
+  "studyId": "SYN-PROT-042",
+  "title": "Synthetic kinase inhibitor proteome response in organoid culture",
+  "instrument": {
+    "platform": "Orbitrap synthetic run",
+    "gradientMinutes": 72,
+    "qcEveryNRuns": 12,
+    "retentionTimeMedianShiftSeconds": 38,
+    "calibrationStandard": null
+  },
+  "search": {
+    "engine": "SyntheticSearch 2.4",
+    "database": "UP000000-SYN reviewed plus contaminants",
+    "peptideFdrPercent": 1,
+    "proteinFdrPercent": null,
+    "decoyStrategy": "target-decoy",
+    "enzyme": "trypsin",
+    "missedCleavages": 2,
+    "fixedModifications": ["Carbamidomethyl C"],
+    "variableModifications": ["Oxidation M", "Phospho STY"],
+    "ptmLocalizationThreshold": null
+  },
+  "sampleDesign": {
+    "conditions": ["vehicle", "inhibitor"],
+    "biologicalReplicatesPerCondition": 3,
+    "technicalReplicatesPerCondition": 1,
+    "batchByCondition": true,
+    "randomizedRunOrder": false,
+    "pooledQcCount": 2
+  },
+  "quantification": {
+    "method": "label-free intensity",
+    "normalization": "median intensity",
+    "missingnessPercent": 31,
+    "missingnessHandling": "zero fill",
+    "proteinGroups": [
+      {
+        "protein": "SYNK1",
+        "uniquePeptides": 1,
+        "razorPeptides": 7,
+        "foldChange": 2.9,
+        "adjustedPValue": 0.018,
+        "claim": "kinase pathway is activated"
+      },
+      {
+        "protein": "SYNM2",
+        "uniquePeptides": 0,
+        "razorPeptides": 4,
+        "foldChange": 1.8,
+        "adjustedPValue": 0.07,
+        "claim": "mitochondrial remodeling is significant"
+      },
+      {
+        "protein": "SYNQ3",
+        "uniquePeptides": 2,
+        "razorPeptides": 3,
+        "foldChange": 0.62,
+        "adjustedPValue": 0.031,
+        "claim": "protein abundance is decreased"
+      }
+    ]
+  },
+  "dataAvailability": {
+    "rawFilesDeposited": false,
+    "repository": null,
+    "accession": null,
+    "searchParametersIncluded": false
+  },
+  "claims": [
+    "The inhibitor robustly activates SYNK1 signaling.",
+    "Mitochondrial remodeling is significant across the proteome.",
+    "The phosphoproteomics evidence identifies a direct kinase substrate."
+  ]
+}

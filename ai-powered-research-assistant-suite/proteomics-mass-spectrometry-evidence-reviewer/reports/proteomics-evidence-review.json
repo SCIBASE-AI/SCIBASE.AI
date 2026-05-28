@@ -1,0 +1,81 @@
+{
+  "studyId": "SYN-PROT-042",
+  "title": "Synthetic kinase inhibitor proteome response in organoid culture",
+  "reviewedAt": "2026-05-28T00:00:00.000Z",
+  "status": "block-ai-summary",
+  "riskScore": 100,
+  "readinessScore": 0,
+  "findingCount": 9,
+  "severityCounts": {
+    "critical": 1,
+    "high": 4,
+    "medium": 4,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "id": "protein-fdr-missing",
+      "title": "Protein-level FDR is not reported",
+      "evidence": "The packet reports peptide FDR but no protein-level false-discovery threshold.",
+      "remediation": "Report protein-level FDR control, decoy counting rules, and protein-group inference settings before accepting protein abundance claims."
+    },
+    {
+      "severity": "high",
+      "id": "peptide-protein-ambiguity",
+      "title": "Protein claims rely on weak unique-peptide support",
+      "evidence": "2 protein group(s) have fewer than two unique peptides or are dominated by razor/shared peptides.",
+      "remediation": "Require unique-peptide evidence, protein-group ambiguity flags, or claim wording that reflects indistinguishable protein families."
+    },
+    {
+      "severity": "high",
+      "id": "batch-confounded-design",
+      "title": "Batch structure is confounded with biological condition",
+      "evidence": "batchByCondition=true, randomizedRunOrder=false.",
+      "remediation": "Randomize run order or model batch explicitly; treat condition-level abundance claims as provisional until batch sensitivity is shown."
+    },
+    {
+      "severity": "medium",
+      "id": "instrument-drift",
+      "title": "Retention-time drift lacks calibration evidence",
+      "evidence": "Median shift is 38 seconds and no calibration standard is listed.",
+      "remediation": "Add pooled QC trend plots, retention-time alignment diagnostics, and acceptance thresholds for instrument drift."
+    },
+    {
+      "severity": "high",
+      "id": "missingness-handling",
+      "title": "Missing intensity handling can inflate differential abundance",
+      "evidence": "31% missingness with \"zero fill\" handling.",
+      "remediation": "Use left-censoring-aware imputation or sensitivity analyses; avoid zero-fill-driven significance claims."
+    },
+    {
+      "severity": "medium",
+      "id": "ptm-localization",
+      "title": "PTM localization confidence is absent",
+      "evidence": "Phosphorylation is searched, but no site-localization probability threshold is provided.",
+      "remediation": "Report localization score thresholds and site ambiguity before claiming a direct kinase substrate."
+    },
+    {
+      "severity": "medium",
+      "id": "replicate-adequacy",
+      "title": "Biological replicate count is low for broad pathway claims",
+      "evidence": "3 biological replicates per condition are listed.",
+      "remediation": "Limit claims to exploratory evidence or add independent biological replication."
+    },
+    {
+      "severity": "high",
+      "id": "raw-data-availability",
+      "title": "Raw data and search parameters are not reproducible",
+      "evidence": "The packet lacks a repository accession, raw-file deposition, or full search-parameter export.",
+      "remediation": "Provide raw files, peak lists where applicable, search-parameter exports, and a stable ProteomeXchange-style accession."
+    },
+    {
+      "severity": "medium",
+      "id": "claim-statistics-mismatch",
+      "title": "Narrative claims exceed statistical support",
+      "evidence": "1 protein-level claim(s) use strong wording despite adjusted p-values at or above 0.05.",
+      "remediation": "Align claim language with adjusted p-values, effect sizes, and confidence intervals."
+    }
+  ],
+  "safeSummary": "Synthetic proteomics evidence is not ready for strong AI-generated conclusions until FDR, protein-group ambiguity, batch design, missingness, PTM localization, and reproducibility gaps are resolved."
+}

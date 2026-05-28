@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "total": 3,
+    "approve": 1,
+    "hold": 2,
+    "heldAmount": 11300,
+    "rerouteAmount": 2000
+  },
+  "decisions": [
+    {
+      "id": "charge-eligible-ai-compute",
+      "institution": "Northbridge University",
+      "category": "ai_compute",
+      "decision": "approve",
+      "reasons": [],
+      "actions": [],
+      "amounts": {
+        "requested": 4200,
+        "direct": 3580,
+        "indirect": 620,
+        "approvedCostShare": 900,
+        "held": 0,
+        "reroute": 0
+      },
+      "evidence": {
+        "serviceDays": 31,
+        "award": "NIH-R01-2026-114",
+        "backupBillingSource": "institution-operating-ledger",
+        "auditDigest": "3b09f226"
+      }
+    },
+    {
+      "id": "charge-after-award-window",
+      "institution": "Northbridge University",
+      "category": "analytics_license",
+      "decision": "hold",
+      "reasons": [
+        "outside_award_period",
+        "missing_department_approval",
+        "cost_share_cap_exceeded",
+        "indirect_costs_excluded"
+      ],
+      "actions": [
+        "Move charges outside the award dates to unrestricted backup funding.",
+        "Collect department approval before revenue recognition.",
+        "Limit cost-share drawdown to the remaining cap and reroute the excess.",
+        "Strip indirect costs from the grant-funded invoice line."
+      ],
+      "amounts": {
+        "requested": 1800,
+        "direct": 1620,
+        "indirect": 180,
+        "approvedCostShare": 400,
+        "held": 1800,
+        "reroute": 200
+      },
+      "evidence": {
+        "serviceDays": 31,
+        "award": "NSF-CCRI-2026-778",
+        "backupBillingSource": "department-discretionary-fund",
+        "auditDigest": "15c91ca0"
+      }
+    },
+    {
+      "id": "charge-commercial-private-overage",
+      "institution": "Helix Translational Lab",
+      "category": "subscription",
+      "decision": "hold",
+      "reasons": [
+        "category_not_allowed",
+        "missing_pi_approval",
+        "private_project_restricted",
+        "commercial_use_restricted",
+        "cost_share_cap_exceeded",
+        "indirect_rate_above_cap"
+      ],
+      "actions": [
+        "Do not charge subscription to FOUNDATION-OPENSCI-42.",
+        "Collect PI approval before invoicing this line item.",
+        "Mask or reroute private-project usage away from restricted grant funding.",
+        "Route commercial partner work to contract or institutional billing.",
+        "Limit cost-share drawdown to the remaining cap and reroute the excess.",
+        "Apply the negotiated indirect-cost cap before billing."
+      ],
+      "amounts": {
+        "requested": 9500,
+        "direct": 8400,
+        "indirect": 1100,
+        "approvedCostShare": 1800,
+        "held": 9500,
+        "reroute": 1800
+      },
+      "evidence": {
+        "serviceDays": 31,
+        "award": "FOUNDATION-OPENSCI-42",
+        "backupBillingSource": "commercial-contract-billing",
+        "auditDigest": "9f45f6b7"
+      }
+    }
+  ]
+}

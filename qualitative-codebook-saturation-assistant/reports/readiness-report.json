@@ -1,0 +1,61 @@
+{
+  "studyId": "qualitative-ai-assistant-demo",
+  "title": "Remote Lab Onboarding Interviews",
+  "summary": {
+    "ready": 1,
+    "hold": 1
+  },
+  "reviews": [
+    {
+      "submissionId": "ready-pack",
+      "teamId": "team-indigo",
+      "decision": "ready",
+      "holds": [],
+      "metrics": {
+        "codedDomains": [
+          "data-sharing",
+          "mentorship",
+          "onboarding",
+          "tooling"
+        ],
+        "coderAgreement": 0.81,
+        "saturationRounds": 3,
+        "auditTrailItems": 3,
+        "transcriptCount": 4
+      },
+      "redactedQuotes": [
+        "Participant A: [redacted-email] asked for access."
+      ]
+    },
+    {
+      "submissionId": "hold-pack",
+      "teamId": "team-cobalt",
+      "decision": "hold",
+      "holds": [
+        "missing-required-domain:data-sharing",
+        "missing-required-domain:mentorship",
+        "coder-agreement-below-threshold",
+        "saturation-evidence-insufficient",
+        "missing-reflexivity-memo",
+        "member-checking-incomplete",
+        "member-checking-objections-unresolved",
+        "audit-trail-incomplete",
+        "unconsented-transcript:tx-999"
+      ],
+      "metrics": {
+        "codedDomains": [
+          "onboarding",
+          "tooling"
+        ],
+        "coderAgreement": 0.61,
+        "saturationRounds": 1,
+        "auditTrailItems": 1,
+        "transcriptCount": 2
+      },
+      "redactedQuotes": [
+        "Participant C shared a private phone number [redacted-phone]."
+      ]
+    }
+  ],
+  "digest": "sha256:92172136e344ddcfaacfbe4695b7df2d14fe120ade061f11458a48f642a5b1af"
+}

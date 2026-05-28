@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="450" viewBox="0 0 960 450" role="img" aria-label="Project deletion escrow audit summary">
+  <rect width="960" height="450" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="402" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="36" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Project Deletion Escrow Audit</text>
+  <rect x="36" y="98" width="430" height="48" rx="6" fill="#b42318"/>
+  <text x="56" y="129" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">block-destructive-project-action</text>
+  <text x="496" y="129" font-family="Arial" font-size="22" fill="#101828">Risk score: 100</text>
+  <text x="36" y="166" font-family="Arial" font-size="18" fill="#667085">Audit digest: dc9c67424bd6a288</text>
+  <text x="36" y="205" font-family="Arial" font-size="18" fill="#344054">blocker</text>
+  <rect x="190" y="183" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="183" width="307" height="28" rx="5" fill="#7a271a"/>
+  <text x="676" y="205" font-family="Arial" font-size="18" fill="#344054">4</text>
+<text x="36" y="257" font-family="Arial" font-size="18" fill="#344054">high</text>
+  <rect x="190" y="235" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="235" width="460" height="28" rx="5" fill="#b42318"/>
+  <text x="676" y="257" font-family="Arial" font-size="18" fill="#344054">6</text>
+<text x="36" y="309" font-family="Arial" font-size="18" fill="#344054">medium</text>
+  <rect x="190" y="287" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="287" width="153" height="28" rx="5" fill="#f79009"/>
+  <text x="676" y="309" font-family="Arial" font-size="18" fill="#344054">2</text>
+<text x="36" y="361" font-family="Arial" font-size="18" fill="#344054">low</text>
+  <rect x="190" y="339" width="460" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="339" width="0" height="28" rx="5" fill="#667085"/>
+  <text x="676" y="361" font-family="Arial" font-size="18" fill="#344054">0</text>
+  <text x="36" y="416" font-family="Arial" font-size="18" fill="#667085">Synthetic project administration data only. No destructive actions are executed.</text>
+</svg>

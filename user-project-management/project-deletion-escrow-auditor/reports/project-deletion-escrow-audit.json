@@ -1,0 +1,148 @@
+{
+  "projectId": "project-quantum-cell-archive",
+  "action": "delete",
+  "requestedBy": "user-editor",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "decision": "block-destructive-project-action",
+  "riskScore": 100,
+  "scheduledAt": "2026-05-29T12:00:00Z",
+  "activeMemberCount": 3,
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "REQUESTER_LACKS_DESTRUCTIVE_ROLE",
+      "title": "Requester lacks permission for destructive project action",
+      "evidence": "user-editor role=editor attempted delete.",
+      "action": "Require an owner/admin role and a fresh authorization event before deletion or archive."
+    },
+    {
+      "severity": "blocker",
+      "code": "ESCROW_WINDOW_TOO_SHORT",
+      "title": "Deletion escrow window is too short",
+      "evidence": "project-quantum-cell-archive escrow window is 36h, below 72h.",
+      "action": "Extend the scheduled deletion time or route to manual institutional review."
+    },
+    {
+      "severity": "high",
+      "code": "ROLLBACK_CHECKPOINT_MISSING",
+      "title": "No rollback checkpoint is attached",
+      "evidence": "project-quantum-cell-archive has no rollback checkpoint for delete.",
+      "action": "Create a recovery snapshot before irreversible archive/delete execution."
+    },
+    {
+      "severity": "high",
+      "code": "PRE_DELETE_EXPORT_MISSING",
+      "title": "No pre-delete export bundle is attached",
+      "evidence": "project-quantum-cell-archive has no export bundle for delete.",
+      "action": "Generate a manifest-backed export bundle before allowing destructive project changes."
+    },
+    {
+      "severity": "blocker",
+      "code": "DOI_TOMBSTONE_MISSING",
+      "title": "Published DOI project lacks a tombstone plan",
+      "evidence": "project-quantum-cell-archive DOI=10.1234/scibase.synthetic.11 without tombstone metadata.",
+      "action": "Prepare DOI tombstone and citation-preservation metadata before deletion."
+    },
+    {
+      "severity": "high",
+      "code": "INDEXED_PROJECT_REDIRECT_MISSING",
+      "title": "Indexed project lacks a redirect URL",
+      "evidence": "project-quantum-cell-archive is indexed with no redirectUrl.",
+      "action": "Add a persistent redirect for search engines, institutional repositories, and citations."
+    },
+    {
+      "severity": "high",
+      "code": "COLLABORATOR_NOTICE_MISSING",
+      "title": "Not all active collaborators were notified",
+      "evidence": "user-reviewer did not receive deletion notice.",
+      "action": "Notify all active collaborators and give them a chance to export, fork, or dispute the action."
+    },
+    {
+      "severity": "medium",
+      "code": "COLLABORATOR_NOTICE_TOO_SHORT",
+      "title": "Collaborator notice window is shorter than policy",
+      "evidence": "project-quantum-cell-archive notice window is 34h, below 48h.",
+      "action": "Delay execution until the configured collaborator notice period has elapsed."
+    },
+    {
+      "severity": "blocker",
+      "code": "LEGAL_HOLD_ACTIVE",
+      "title": "Project is under legal or compliance hold",
+      "evidence": "project-quantum-cell-archive legalHold=institutional records retention review.",
+      "action": "Block deletion until legal/compliance owners release the hold."
+    },
+    {
+      "severity": "high",
+      "code": "ACTIVE_REVIEW_DEPENDENCY",
+      "title": "Project has active review dependencies",
+      "evidence": "project-quantum-cell-archive has active reviews: peer-review-17, grant-closeout-04.",
+      "action": "Pause deletion until open peer review, grant, or institutional review dependencies are resolved."
+    },
+    {
+      "severity": "medium",
+      "code": "PRIVATE_FORK_ATTRIBUTION_PENDING",
+      "title": "Private fork attribution has not been migrated",
+      "evidence": "project-quantum-cell-archive has private forks without migrated attribution.",
+      "action": "Migrate attribution records so downstream forks keep provenance after deletion."
+    },
+    {
+      "severity": "high",
+      "code": "UNSETTLED_COMPUTE_CHARGES",
+      "title": "Project has unsettled compute charges",
+      "evidence": "project-quantum-cell-archive has $18.75 unsettled.",
+      "action": "Settle or waive compute charges before project deletion."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "REQUESTER_LACKS_DESTRUCTIVE_ROLE",
+      "action": "Require an owner/admin role and a fresh authorization event before deletion or archive."
+    },
+    {
+      "code": "ESCROW_WINDOW_TOO_SHORT",
+      "action": "Extend the scheduled deletion time or route to manual institutional review."
+    },
+    {
+      "code": "ROLLBACK_CHECKPOINT_MISSING",
+      "action": "Create a recovery snapshot before irreversible archive/delete execution."
+    },
+    {
+      "code": "PRE_DELETE_EXPORT_MISSING",
+      "action": "Generate a manifest-backed export bundle before allowing destructive project changes."
+    },
+    {
+      "code": "DOI_TOMBSTONE_MISSING",
+      "action": "Prepare DOI tombstone and citation-preservation metadata before deletion."
+    },
+    {
+      "code": "INDEXED_PROJECT_REDIRECT_MISSING",
+      "action": "Add a persistent redirect for search engines, institutional repositories, and citations."
+    },
+    {
+      "code": "COLLABORATOR_NOTICE_MISSING",
+      "action": "Notify all active collaborators and give them a chance to export, fork, or dispute the action."
+    },
+    {
+      "code": "COLLABORATOR_NOTICE_TOO_SHORT",
+      "action": "Delay execution until the configured collaborator notice period has elapsed."
+    },
+    {
+      "code": "LEGAL_HOLD_ACTIVE",
+      "action": "Block deletion until legal/compliance owners release the hold."
+    },
+    {
+      "code": "ACTIVE_REVIEW_DEPENDENCY",
+      "action": "Pause deletion until open peer review, grant, or institutional review dependencies are resolved."
+    },
+    {
+      "code": "PRIVATE_FORK_ATTRIBUTION_PENDING",
+      "action": "Migrate attribution records so downstream forks keep provenance after deletion."
+    },
+    {
+      "code": "UNSETTLED_COMPUTE_CHARGES",
+      "action": "Settle or waive compute charges before project deletion."
+    }
+  ],
+  "generatedFrom": "synthetic-project-admin-data-only",
+  "auditDigest": "dc9c67424bd6a288"
+}

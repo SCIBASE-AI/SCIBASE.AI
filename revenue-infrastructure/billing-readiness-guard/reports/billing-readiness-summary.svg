@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-label="Billing readiness guard summary">
+  <rect width="960" height="460" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="412" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="36" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Billing Readiness Guard</text>
+  <rect x="36" y="98" width="420" height="48" rx="6" fill="#b42318"/>
+  <text x="56" y="129" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">block-payment-provider-handoff</text>
+  <text x="486" y="129" font-family="Arial" font-size="22" fill="#101828">Total: $1704.10</text>
+  <text x="36" y="166" font-family="Arial" font-size="18" fill="#667085">Invoice digest: 3f2b8b021ae67a7c</text>
+  <text x="36" y="190" font-family="Arial" font-size="16" fill="#344054">subscription:lab:monthly</text>
+  <rect x="330" y="172" width="370" height="20" rx="4" fill="#eaecf0"/>
+  <rect x="330" y="172" width="123" height="20" rx="4" fill="#12b76a"/>
+  <text x="720" y="190" font-family="Arial" font-size="16" fill="#344054">$249.00</text>
+<text x="36" y="228" font-family="Arial" font-size="16" fill="#344054">subscription:extra-seats</text>
+  <rect x="330" y="210" width="370" height="20" rx="4" fill="#eaecf0"/>
+  <rect x="330" y="210" width="47" height="20" rx="4" fill="#12b76a"/>
+  <text x="720" y="228" font-family="Arial" font-size="16" fill="#344054">$96.00</text>
+<text x="36" y="266" font-family="Arial" font-size="16" fill="#344054">usage:ai-tokens</text>
+  <rect x="330" y="248" width="370" height="20" rx="4" fill="#eaecf0"/>
+  <rect x="330" y="248" width="32" height="20" rx="4" fill="#12b76a"/>
+  <text x="720" y="266" font-family="Arial" font-size="16" fill="#344054">$64.00</text>
+<text x="36" y="304" font-family="Arial" font-size="16" fill="#344054">usage:compute-hours</text>
+  <rect x="330" y="286" width="370" height="20" rx="4" fill="#eaecf0"/>
+  <rect x="330" y="286" width="95" height="20" rx="4" fill="#12b76a"/>
+  <text x="720" y="304" font-family="Arial" font-size="16" fill="#344054">$192.00</text>
+<text x="36" y="342" font-family="Arial" font-size="16" fill="#344054">usage:storage-gb</text>
+  <rect x="330" y="324" width="370" height="20" rx="4" fill="#eaecf0"/>
+  <rect x="330" y="324" width="21" height="20" rx="4" fill="#12b76a"/>
+  <text x="720" y="342" font-family="Arial" font-size="16" fill="#344054">$42.00</text>
+<text x="36" y="380" font-family="Arial" font-size="16" fill="#344054">usage:api-calls</text>
+  <rect x="330" y="362" width="370" height="20" rx="4" fill="#eaecf0"/>
+  <rect x="330" y="362" width="0" height="20" rx="4" fill="#12b76a"/>
+  <text x="720" y="380" font-family="Arial" font-size="16" fill="#344054">$0.45</text>
+  <text x="36" y="418" font-family="Arial" font-size="18" fill="#667085">Synthetic billing data only. No payment-provider calls.</text>
+</svg>

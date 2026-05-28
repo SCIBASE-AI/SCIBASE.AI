@@ -1,0 +1,231 @@
+{
+  "accountId": "lab-nova-omics",
+  "organizationName": "Nova Omics Lab",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "plan": {
+    "id": "lab",
+    "name": "Research Lab",
+    "billingCycle": "monthly"
+  },
+  "providerMode": "stripe",
+  "decision": "block-payment-provider-handoff",
+  "riskScore": 100,
+  "subtotalCents": 189345,
+  "totalCents": 170410,
+  "totalUsd": 1704.1,
+  "currency": "USD",
+  "lines": [
+    {
+      "code": "subscription:lab:monthly",
+      "description": "Research Lab monthly subscription",
+      "quantity": 1,
+      "unitCents": 24900,
+      "totalCents": 24900,
+      "metadata": {
+        "planId": "lab",
+        "billingCycle": "monthly"
+      }
+    },
+    {
+      "code": "subscription:extra-seats",
+      "description": "Additional lab or institution seats",
+      "quantity": 8,
+      "unitCents": 1200,
+      "totalCents": 9600,
+      "metadata": {
+        "includedSeats": 10,
+        "requestedSeats": 18
+      }
+    },
+    {
+      "code": "usage:ai-tokens",
+      "description": "AI token overage",
+      "quantity": 1600,
+      "unitCents": 4,
+      "totalCents": 6400,
+      "metadata": {
+        "included": 2000000,
+        "measured": 3600000
+      }
+    },
+    {
+      "code": "usage:compute-hours",
+      "description": "AI compute hour overage",
+      "quantity": 80,
+      "unitCents": 240,
+      "totalCents": 19200,
+      "metadata": {
+        "included": 40,
+        "measured": 120
+      }
+    },
+    {
+      "code": "usage:storage-gb",
+      "description": "Private research storage overage",
+      "quantity": 350,
+      "unitCents": 12,
+      "totalCents": 4200,
+      "metadata": {
+        "included": 500,
+        "measured": 850
+      }
+    },
+    {
+      "code": "usage:api-calls",
+      "description": "Licensing API call overage",
+      "quantity": 15,
+      "unitCents": 3,
+      "totalCents": 45,
+      "metadata": {
+        "included": 10000,
+        "measured": 25000
+      }
+    },
+    {
+      "code": "licensing:analytics-access",
+      "description": "Anonymized analytics licensing access",
+      "quantity": 1,
+      "unitCents": 75000,
+      "totalCents": 75000,
+      "metadata": {
+        "exportMode": "project-level"
+      }
+    },
+    {
+      "code": "licensing:api-package",
+      "description": "Structured metadata API package",
+      "quantity": 1,
+      "unitCents": 50000,
+      "totalCents": 50000,
+      "metadata": {
+        "package": "policy-dashboard"
+      }
+    },
+    {
+      "code": "discount:OPEN-SCIENCE-PILOT",
+      "description": "OPEN-SCIENCE-PILOT discount",
+      "quantity": 1,
+      "unitCents": -18935,
+      "totalCents": -18935,
+      "metadata": {
+        "percentOff": 0.1
+      }
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "NO_COLLECTABLE_PAYMENT_PATH",
+      "title": "No collectable payment path is configured",
+      "evidence": "lab-nova-omics has no payment provider customer and no invoice email.",
+      "action": "Collect a Stripe customer, verified payment method, or institutional invoice contact before handoff."
+    },
+    {
+      "severity": "high",
+      "code": "TAX_PROFILE_INCOMPLETE",
+      "title": "Billing tax profile is incomplete",
+      "evidence": "lab-nova-omics country=US taxId=missing.",
+      "action": "Hold the invoice until country and tax ID requirements are complete."
+    },
+    {
+      "severity": "blocker",
+      "code": "BUDGET_CAP_EXCEEDED",
+      "title": "Invoice total exceeds the approved budget cap",
+      "evidence": "$1704.10 exceeds approved cap $450.00.",
+      "action": "Require budget owner approval or reduce billable usage before collection."
+    },
+    {
+      "severity": "medium",
+      "code": "USAGE_SPIKE_REVIEW",
+      "title": "Usage spike should be reviewed before invoicing",
+      "evidence": "aiTokens rose from 800000 to 3600000.",
+      "action": "Review audit logs or usage annotations before sending the invoice."
+    },
+    {
+      "severity": "medium",
+      "code": "USAGE_SPIKE_REVIEW",
+      "title": "Usage spike should be reviewed before invoicing",
+      "evidence": "computeHours rose from 18 to 120.",
+      "action": "Review audit logs or usage annotations before sending the invoice."
+    },
+    {
+      "severity": "medium",
+      "code": "USAGE_SPIKE_REVIEW",
+      "title": "Usage spike should be reviewed before invoicing",
+      "evidence": "apiCalls rose from 4000 to 25000.",
+      "action": "Review audit logs or usage annotations before sending the invoice."
+    },
+    {
+      "severity": "high",
+      "code": "COMPUTE_OVERAGE_UNATTESTED",
+      "title": "Compute overage lacks reviewer attestation",
+      "evidence": "lab-nova-omics used 120 compute hours against 40 included.",
+      "action": "Ask the project owner to attest that the compute jobs were authorized."
+    },
+    {
+      "severity": "blocker",
+      "code": "LICENSING_EXPORT_NOT_ANONYMIZED",
+      "title": "Licensing export is not aggregate-anonymized",
+      "evidence": "lab-nova-omics requested project-level export mode.",
+      "action": "Allow only aggregate-anonymized metadata exports for licensing revenue."
+    },
+    {
+      "severity": "blocker",
+      "code": "PRIVATE_CONTENT_IN_LICENSING_EXPORT",
+      "title": "Private research content cannot be included in licensing exports",
+      "evidence": "lab-nova-omics licensing packet includes private content.",
+      "action": "Remove private project content and regenerate the export manifest before billing."
+    },
+    {
+      "severity": "high",
+      "code": "DPA_MISSING_FOR_LICENSING",
+      "title": "Data licensing requires a data-processing agreement",
+      "evidence": "lab-nova-omics has analytics licensing enabled without a DPA reference.",
+      "action": "Collect the institutional DPA before allowing analytics licensing billing."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "NO_COLLECTABLE_PAYMENT_PATH",
+      "action": "Collect a Stripe customer, verified payment method, or institutional invoice contact before handoff."
+    },
+    {
+      "code": "TAX_PROFILE_INCOMPLETE",
+      "action": "Hold the invoice until country and tax ID requirements are complete."
+    },
+    {
+      "code": "BUDGET_CAP_EXCEEDED",
+      "action": "Require budget owner approval or reduce billable usage before collection."
+    },
+    {
+      "code": "USAGE_SPIKE_REVIEW",
+      "action": "Review audit logs or usage annotations before sending the invoice."
+    },
+    {
+      "code": "USAGE_SPIKE_REVIEW",
+      "action": "Review audit logs or usage annotations before sending the invoice."
+    },
+    {
+      "code": "USAGE_SPIKE_REVIEW",
+      "action": "Review audit logs or usage annotations before sending the invoice."
+    },
+    {
+      "code": "COMPUTE_OVERAGE_UNATTESTED",
+      "action": "Ask the project owner to attest that the compute jobs were authorized."
+    },
+    {
+      "code": "LICENSING_EXPORT_NOT_ANONYMIZED",
+      "action": "Allow only aggregate-anonymized metadata exports for licensing revenue."
+    },
+    {
+      "code": "PRIVATE_CONTENT_IN_LICENSING_EXPORT",
+      "action": "Remove private project content and regenerate the export manifest before billing."
+    },
+    {
+      "code": "DPA_MISSING_FOR_LICENSING",
+      "action": "Collect the institutional DPA before allowing analytics licensing billing."
+    }
+  ],
+  "generatedFrom": "synthetic-billing-data-only",
+  "invoiceDigest": "3f2b8b021ae67a7c"
+}

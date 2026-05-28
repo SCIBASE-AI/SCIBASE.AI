@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="528" viewBox="0 0 1120 528">
+  <style>
+    .page { fill: #f8f9fa; }
+    .heading { font: 700 34px Arial, sans-serif; fill: #17202a; }
+    .sub { font: 16px Arial, sans-serif; fill: #495057; }
+    .title { font: 700 18px Arial, sans-serif; fill: #212529; }
+    .meta { font: 14px Arial, sans-serif; fill: #495057; }
+    .score { font: 700 18px Arial, sans-serif; fill: #212529; text-anchor: end; }
+  </style>
+  <rect class="page" width="1120" height="528"/>
+  <text x="40" y="54" class="heading">Scientific Bounty Deadline Fairness Guard</text>
+  <text x="40" y="84" class="sub">Equal extension notice, explicit timezones, late submission handling, and freeze-window audit checks.</text>
+
+  <g transform="translate(40 118)">
+    <text x="0" y="0" class="title">Regional Climate Catalyst Forecast</text>
+    <text x="0" y="26" class="meta">Decision: clear-for-scoring | Issues: 0</text>
+    <rect x="420" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="420" y="-18" width="520" height="22" rx="4" fill="#2f9e44"/>
+    <text x="980" y="0" class="score">100</text>
+  </g>
+
+  <g transform="translate(40 210)">
+    <text x="0" y="0" class="title">Single-cell Biomarker Race</text>
+    <text x="0" y="26" class="meta">Decision: hold-arbitration | Issues: 8</text>
+    <rect x="420" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="420" y="-18" width="24" height="22" rx="4" fill="#d6336c"/>
+    <text x="980" y="0" class="score">0</text>
+  </g>
+
+  <g transform="translate(40 302)">
+    <text x="0" y="0" class="title">Quantum Noise Reduction Sprint</text>
+    <text x="0" y="26" class="meta">Decision: reject-late-submissions | Issues: 0</text>
+    <rect x="420" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="420" y="-18" width="520" height="22" rx="4" fill="#f08c00"/>
+    <text x="980" y="0" class="score">100</text>
+  </g>
+
+  <g transform="translate(40 394)">
+    <text x="0" y="0" class="title">Materials Discovery Prototype</text>
+    <text x="0" y="26" class="meta">Decision: hold-arbitration | Issues: 8</text>
+    <rect x="420" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="420" y="-18" width="24" height="22" rx="4" fill="#d6336c"/>
+    <text x="980" y="0" class="score">0</text>
+  </g>
+</svg>

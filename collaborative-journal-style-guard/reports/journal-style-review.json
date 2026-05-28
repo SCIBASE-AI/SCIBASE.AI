@@ -1,0 +1,233 @@
+{
+  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "requirementMap": [
+    "Rich scientific formatting: validates journal-specific sections, declarations, references, figures, and tables.",
+    "Reference manager integration: checks target reference style before export.",
+    "Real-time collaboration: blocks export while comments, tracked changes, suggestions, or approvals are unresolved.",
+    "Jupyter integration: blocks stale notebook-derived outputs before publication export.",
+    "Publication templates: applies target journal abstract, word-count, figure, and table limits."
+  ],
+  "summary": {
+    "manuscriptsReviewed": 4,
+    "exportReady": 1,
+    "minorStyleFixes": 1,
+    "styleRevision": 1,
+    "blocked": 1,
+    "averageStyleScore": 56
+  },
+  "results": [
+    {
+      "manuscriptId": "manuscript-ready-export",
+      "title": "Collaborative neural organoid protocol validation",
+      "targetJournal": "Journal of Collaborative Neuroscience Methods",
+      "decision": "export-ready",
+      "styleScore": 100,
+      "findingCount": 0,
+      "severityCounts": {},
+      "findings": [],
+      "actions": [
+        "Generate journal export packet from the current collaborative manuscript hash."
+      ]
+    },
+    {
+      "manuscriptId": "manuscript-section-drift",
+      "title": "Methods manuscript with misplaced data statement",
+      "targetJournal": "Journal of Collaborative Neuroscience Methods",
+      "decision": "block-export",
+      "styleScore": 0,
+      "findingCount": 12,
+      "severityCounts": {
+        "critical": 5,
+        "medium": 2,
+        "high": 5
+      },
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "section-order-drift",
+          "message": "Manuscript sections do not match the target journal order.",
+          "evidence": "missing: data-availability",
+          "action": "Reorder manuscript blocks and restore missing required sections before export."
+        },
+        {
+          "severity": "medium",
+          "code": "abstract-word-limit-exceeded",
+          "message": "Abstract exceeds the target journal word limit.",
+          "evidence": "318/250",
+          "action": "Shorten abstract or move details into the main manuscript."
+        },
+        {
+          "severity": "high",
+          "code": "manuscript-word-limit-exceeded",
+          "message": "Main manuscript exceeds the target journal word limit.",
+          "evidence": "5412/5200",
+          "action": "Trim manuscript text or request an editor-approved exception."
+        },
+        {
+          "severity": "high",
+          "code": "figure-limit-exceeded",
+          "message": "Figure count exceeds the target journal limit.",
+          "evidence": "7/6",
+          "action": "Move lower-priority figures to supplements or request an exception."
+        },
+        {
+          "severity": "high",
+          "code": "reference-style-mismatch",
+          "message": "Reference style does not match the target journal instructions.",
+          "evidence": "author-year vs vancouver",
+          "action": "Regenerate references using the target journal style."
+        },
+        {
+          "severity": "critical",
+          "code": "missing-required-declaration",
+          "message": "Required publication declaration is missing.",
+          "evidence": "ethics",
+          "action": "Add and coauthor-review the ethics declaration block before export."
+        },
+        {
+          "severity": "critical",
+          "code": "missing-required-declaration",
+          "message": "Required publication declaration is missing.",
+          "evidence": "data-availability",
+          "action": "Add and coauthor-review the data-availability declaration block before export."
+        },
+        {
+          "severity": "critical",
+          "code": "blocking-comments-open",
+          "message": "Blocking collaborative comments remain unresolved.",
+          "evidence": "3",
+          "action": "Resolve blocking comments before generating a submission export."
+        },
+        {
+          "severity": "high",
+          "code": "tracked-changes-open",
+          "message": "Tracked changes remain unresolved in shared manuscript blocks.",
+          "evidence": "8",
+          "action": "Accept, reject, or explicitly defer tracked changes before export."
+        },
+        {
+          "severity": "medium",
+          "code": "many-unresolved-suggestions",
+          "message": "Many non-blocking suggestions remain open.",
+          "evidence": "6",
+          "action": "Triage open suggestions or mark them as intentionally deferred."
+        },
+        {
+          "severity": "high",
+          "code": "stale-notebook-output",
+          "message": "Notebook-derived manuscript outputs are stale relative to source cells.",
+          "evidence": "2",
+          "action": "Re-run or refresh notebook outputs before final export."
+        },
+        {
+          "severity": "critical",
+          "code": "missing-coauthor-approval",
+          "message": "Not all required coauthors have approved the current manuscript hash.",
+          "evidence": "3/5",
+          "action": "Collect coauthor approvals after final style and content changes are applied."
+        }
+      ],
+      "actions": [
+        "Reorder manuscript blocks and restore missing required sections before export.",
+        "Shorten abstract or move details into the main manuscript.",
+        "Trim manuscript text or request an editor-approved exception.",
+        "Move lower-priority figures to supplements or request an exception.",
+        "Regenerate references using the target journal style.",
+        "Add and coauthor-review the ethics declaration block before export.",
+        "Add and coauthor-review the data-availability declaration block before export.",
+        "Resolve blocking comments before generating a submission export.",
+        "Accept, reject, or explicitly defer tracked changes before export.",
+        "Triage open suggestions or mark them as intentionally deferred.",
+        "Re-run or refresh notebook outputs before final export.",
+        "Collect coauthor approvals after final style and content changes are applied."
+      ]
+    },
+    {
+      "manuscriptId": "manuscript-style-revision",
+      "title": "Bioengineering model with style revision gaps",
+      "targetJournal": "Open Bioengineering Reports",
+      "decision": "style-revision",
+      "styleScore": 30,
+      "findingCount": 6,
+      "severityCounts": {
+        "high": 5,
+        "medium": 1
+      },
+      "findings": [
+        {
+          "severity": "high",
+          "code": "manuscript-word-limit-exceeded",
+          "message": "Main manuscript exceeds the target journal word limit.",
+          "evidence": "7025/6500",
+          "action": "Trim manuscript text or request an editor-approved exception."
+        },
+        {
+          "severity": "high",
+          "code": "figure-limit-exceeded",
+          "message": "Figure count exceeds the target journal limit.",
+          "evidence": "9/8",
+          "action": "Move lower-priority figures to supplements or request an exception."
+        },
+        {
+          "severity": "high",
+          "code": "missing-required-declaration",
+          "message": "Required publication declaration is missing.",
+          "evidence": "author-contributions",
+          "action": "Add and coauthor-review the author-contributions declaration block before export."
+        },
+        {
+          "severity": "high",
+          "code": "tracked-changes-open",
+          "message": "Tracked changes remain unresolved in shared manuscript blocks.",
+          "evidence": "2",
+          "action": "Accept, reject, or explicitly defer tracked changes before export."
+        },
+        {
+          "severity": "medium",
+          "code": "many-unresolved-suggestions",
+          "message": "Many non-blocking suggestions remain open.",
+          "evidence": "4",
+          "action": "Triage open suggestions or mark them as intentionally deferred."
+        },
+        {
+          "severity": "high",
+          "code": "stale-notebook-output",
+          "message": "Notebook-derived manuscript outputs are stale relative to source cells.",
+          "evidence": "1",
+          "action": "Re-run or refresh notebook outputs before final export."
+        }
+      ],
+      "actions": [
+        "Trim manuscript text or request an editor-approved exception.",
+        "Move lower-priority figures to supplements or request an exception.",
+        "Add and coauthor-review the author-contributions declaration block before export.",
+        "Accept, reject, or explicitly defer tracked changes before export.",
+        "Triage open suggestions or mark them as intentionally deferred.",
+        "Re-run or refresh notebook outputs before final export."
+      ]
+    },
+    {
+      "manuscriptId": "manuscript-minor-fixes",
+      "title": "Short collaborative methods note",
+      "targetJournal": "Open Bioengineering Reports",
+      "decision": "minor-style-fixes",
+      "styleScore": 95,
+      "findingCount": 1,
+      "severityCounts": {
+        "medium": 1
+      },
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "abstract-word-limit-exceeded",
+          "message": "Abstract exceeds the target journal word limit.",
+          "evidence": "305/300",
+          "action": "Shorten abstract or move details into the main manuscript."
+        }
+      ],
+      "actions": [
+        "Shorten abstract or move details into the main manuscript."
+      ]
+    }
+  ]
+}

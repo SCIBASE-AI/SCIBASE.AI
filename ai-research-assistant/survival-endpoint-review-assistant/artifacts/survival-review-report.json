@@ -1,0 +1,134 @@
+{
+  "generatedBy": "survival-endpoint-review-assistant",
+  "packetId": "survival-peer-review-demo-001",
+  "title": "Synthetic Time-to-Event Manuscript Review Packet",
+  "reviewerDecision": "hold-for-survival-methods-review",
+  "riskScore": 25,
+  "severityCounts": {
+    "critical": 2,
+    "high": 3,
+    "medium": 3,
+    "low": 0
+  },
+  "studies": [
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "eventCount": 66,
+      "eventsPerVariable": 4.13,
+      "censoringSpread": 0.183,
+      "minFollowUpRatio": 0.69
+    },
+    {
+      "studyId": "device-safety-prospective",
+      "studyTitle": "Prospective device safety follow-up",
+      "eventCount": 22,
+      "eventsPerVariable": 22,
+      "censoringSpread": 0,
+      "minFollowUpRatio": 1.33
+    },
+    {
+      "studyId": "vaccine-durability-trial",
+      "studyTitle": "Randomized vaccine durability trial",
+      "eventCount": 183,
+      "eventsPerVariable": 22.88,
+      "censoringSpread": 0.014,
+      "minFollowUpRatio": 1.64
+    }
+  ],
+  "findings": [
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "immortal-time-bias-risk",
+      "severity": "critical",
+      "domain": "exposure time",
+      "evidence": "Exposure begins after baseline with a median start lag of 43 days, but the model treats exposure as baseline-fixed.",
+      "action": "Recast exposure as time-dependent or add a justified landmark analysis with sensitivity checks.",
+      "reviewerHold": true
+    },
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "proportional-hazards-unsupported",
+      "severity": "high",
+      "domain": "model assumptions",
+      "evidence": "Schoenfeld p=0.018 indicates a proportional-hazards violation, but no time-varying effect model is reported.",
+      "action": "Add proportional-hazards diagnostics and use stratified or time-varying coefficients when assumptions fail.",
+      "reviewerHold": true
+    },
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "censoring-imbalance",
+      "severity": "high",
+      "domain": "censoring",
+      "evidence": "Censoring differs by 18% across arms (immunotherapy: 32%, standard care: 14%).",
+      "action": "Report censoring reasons by arm and add inverse-probability or sensitivity analyses.",
+      "reviewerHold": true
+    },
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "missing-censoring-table",
+      "severity": "medium",
+      "domain": "censoring",
+      "evidence": "At least one arm has 32% censoring, but no censoring table is included.",
+      "action": "Add a table separating administrative censoring, withdrawal, loss to follow-up, and competing events.",
+      "reviewerHold": false
+    },
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "low-events-per-variable",
+      "severity": "critical",
+      "domain": "model support",
+      "evidence": "66 events across 16 modeled covariates gives 4.1 events per variable.",
+      "action": "Reduce model complexity, pre-specify covariates, or provide penalized-regression sensitivity analysis.",
+      "reviewerHold": true
+    },
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "competing-risk-model-mismatch",
+      "severity": "high",
+      "domain": "endpoint method",
+      "evidence": "A competing terminal event is present, but the analysis does not use cumulative incidence or cause-specific/subdistribution hazard methods.",
+      "action": "Add competing-risk analysis and show whether the treatment conclusion changes.",
+      "reviewerHold": true
+    },
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "follow-up-shorter-than-event-window",
+      "severity": "medium",
+      "domain": "follow-up",
+      "evidence": "The shortest follow-up-to-event-time ratio is 0.69, so median follow-up may not support the stated survival horizon.",
+      "action": "Extend follow-up or soften claims that depend on longer event windows.",
+      "reviewerHold": false
+    },
+    {
+      "studyId": "os-immunotherapy-registry",
+      "studyTitle": "Registry claim: immunotherapy extends overall survival",
+      "code": "claim-strength-exceeds-survival-evidence",
+      "severity": "medium",
+      "domain": "claim calibration",
+      "evidence": "The manuscript makes directional survival-benefit claims while high-severity survival review holds remain unresolved.",
+      "action": "Change the claim to hypothesis-generating language until endpoint and model assumptions are cleared.",
+      "reviewerHold": false
+    }
+  ],
+  "reproducibilityActions": [
+    "Add cumulative-incidence or competing-risk model output alongside Kaplan-Meier estimates.",
+    "Commit a model-specification manifest with event counts, covariate list, and penalization settings.",
+    "Export proportional-hazards diagnostics and time-varying coefficient sensitivity plots.",
+    "Publish arm-level censoring reasons and repeat estimates with censoring sensitivity weights.",
+    "Re-run the model with exposure encoded as time-dependent and compare hazard ratios."
+  ],
+  "researchGapPrompts": [
+    "Compare disease areas where informative censoring changes survival conclusions after inverse-probability weighting.",
+    "Find clinical trial families with recurring proportional-hazards violations and summarize accepted alternative estimands.",
+    "Identify endpoints where competing-risk models reverse ordinary Kaplan-Meier interpretations.",
+    "Map studies that treat post-baseline treatment initiation as baseline exposure and estimate the direction of immortal-time bias."
+  ]
+}

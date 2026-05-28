@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="44" width="1184" height="632" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="72" y="98" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="700">Reproducibility Attempt Auditor</text>
+  <text x="72" y="140" fill="#475569" font-family="Arial, sans-serif" font-size="22">CRISPR Single-Cell Survival Pipeline</text>
+  <text x="72" y="198" fill="#b91c1c" font-family="Arial, sans-serif" font-size="32" font-weight="700">hold-public-release</text>
+  <text x="72" y="242" fill="#334155" font-family="Arial, sans-serif" font-size="22">Confidence 0/100 · findings 13 · digest 56b751379ec55c9a</text>
+  <rect x="72" y="270" width="560" height="24" rx="12" fill="#e2e8f0"/>
+  <rect x="72" y="270" width="0" height="24" rx="12" fill="#b91c1c"/>
+  <text x="72" y="324" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Top findings</text>
+  <text x="72" y="342" fill="#334155" font-family="Arial, sans-serif" font-size="20">MISSING_RAW_DATA: Required raw dataset cohort-linkage is not available to the reproducibility runner.</text>
+<text x="72" y="378" fill="#334155" font-family="Arial, sans-serif" font-size="20">DATASET_DIGEST_MISMATCH: Dataset clean-analysis-table digest does not match the declared project manifest.</text>
+<text x="72" y="414" fill="#334155" font-family="Arial, sans-serif" font-size="20">MISSING_TEST_SET: Reviewer test set reviewer-test-set is missing or unavailable.</text>
+<text x="72" y="450" fill="#334155" font-family="Arial, sans-serif" font-size="20">DEPENDENCY_LOCK_DRIFT: Latest attempt attempt-2026-05-27 used a different dependency lock digest than the project m</text>
+<text x="72" y="486" fill="#334155" font-family="Arial, sans-serif" font-size="20">UNPINNED_DEPENDENCY: Dependency randomForestSRC is not pinned in environment renv-r-survival-2026.</text>
+  <text x="72" y="642" fill="#64748b" font-family="Arial, sans-serif" font-size="18">Synthetic data only. No credentials, private manuscripts, external APIs, or live execution sandboxes.</text>
+</svg>

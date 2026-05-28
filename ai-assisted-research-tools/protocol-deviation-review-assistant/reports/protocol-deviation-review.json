@@ -1,0 +1,136 @@
+{
+  "manuscriptId": "manuscript-neuro-042",
+  "protocolId": "protocol-neuro-042",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "decision": "hold-confirmatory-claim",
+  "riskScore": 100,
+  "plannedEndpointCount": 2,
+  "reportedEndpointCount": 2,
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "UNPLANNED_ENDPOINT_REPORTED",
+      "title": "Manuscript reports an endpoint not present in the protocol",
+      "evidence": "neural-response appears as primary but was not preregistered.",
+      "action": "Mark the endpoint exploratory unless a dated amendment explains the addition."
+    },
+    {
+      "severity": "high",
+      "code": "ENDPOINT_ROLE_CHANGED",
+      "title": "Endpoint role changed from the preregistered hierarchy",
+      "evidence": "memory-score planned=primary reported=secondary.",
+      "action": "Preserve the preregistered hierarchy in AI summaries or require amendment evidence."
+    },
+    {
+      "severity": "medium",
+      "code": "PLANNED_ENDPOINT_NOT_REPORTED",
+      "title": "Planned endpoint is missing from the manuscript",
+      "evidence": "reaction-time was preregistered as secondary but is absent.",
+      "action": "Ask authors to report the endpoint or explain why it was dropped."
+    },
+    {
+      "severity": "high",
+      "code": "UNPLANNED_ANALYSIS_MODEL",
+      "title": "Analysis model was not in the preregistered plan",
+      "evidence": "posthoc-random-forest appears in the manuscript but not the protocol.",
+      "action": "Label the analysis as post hoc unless a preregistered amendment covers it."
+    },
+    {
+      "severity": "blocker",
+      "code": "OUTCOME_INFORMED_MODEL_TUNING",
+      "title": "Model was tuned after outcome review without amendment",
+      "evidence": "posthoc-random-forest was tuned after outcome review with no amendment ID.",
+      "action": "Block high-confidence AI interpretation until model-tuning provenance is reviewed."
+    },
+    {
+      "severity": "high",
+      "code": "UNPLANNED_EXCLUSION_REASON",
+      "title": "Exclusion reason was not preregistered",
+      "evidence": "18 records excluded for low-response-cluster.",
+      "action": "Require sensitivity analysis with and without the unplanned exclusion."
+    },
+    {
+      "severity": "blocker",
+      "code": "OUTCOME_AWARE_EXCLUSION",
+      "title": "Exclusion was decided after outcome review without blinding",
+      "evidence": "low-response-cluster exclusions were outcome-aware.",
+      "action": "Block confirmatory language until an independent blinded review is documented."
+    },
+    {
+      "severity": "high",
+      "code": "AMENDMENT_TIMESTAMP_TOO_LATE",
+      "title": "Protocol amendment timestamp is missing or after analysis began",
+      "evidence": "amend-late timestamp=2026-05-01T00:00:00Z analysisStartedAt=2026-04-15T00:00:00Z.",
+      "action": "Treat the amendment as post hoc unless timestamp provenance is corrected."
+    },
+    {
+      "severity": "high",
+      "code": "DECLARED_AMENDMENT_NOT_FOUND",
+      "title": "Manuscript references an amendment missing from protocol records",
+      "evidence": "amend-missing is declared in the manuscript but absent from protocol amendments.",
+      "action": "Attach the dated protocol amendment or remove unsupported amendment language."
+    },
+    {
+      "severity": "high",
+      "code": "AI_SUMMARY_OVERSTATES_CONFIRMATORY_STATUS",
+      "title": "AI summary confidence is too high for protocol-deviation evidence",
+      "evidence": "The manuscript has high-risk protocol deviations while the AI summary reports high confidence.",
+      "action": "Lower AI summary confidence and surface preregistration caveats to reviewers."
+    },
+    {
+      "severity": "medium",
+      "code": "AI_SUMMARY_PROTOCOL_CAVEAT_MISSING",
+      "title": "AI summary omits protocol-deviation caveats",
+      "evidence": "Protocol deviation findings are present but the summary does not mention them.",
+      "action": "Add a structured protocol-deviation caveat to the AI-generated review."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "UNPLANNED_ENDPOINT_REPORTED",
+      "action": "Mark the endpoint exploratory unless a dated amendment explains the addition."
+    },
+    {
+      "code": "ENDPOINT_ROLE_CHANGED",
+      "action": "Preserve the preregistered hierarchy in AI summaries or require amendment evidence."
+    },
+    {
+      "code": "PLANNED_ENDPOINT_NOT_REPORTED",
+      "action": "Ask authors to report the endpoint or explain why it was dropped."
+    },
+    {
+      "code": "UNPLANNED_ANALYSIS_MODEL",
+      "action": "Label the analysis as post hoc unless a preregistered amendment covers it."
+    },
+    {
+      "code": "OUTCOME_INFORMED_MODEL_TUNING",
+      "action": "Block high-confidence AI interpretation until model-tuning provenance is reviewed."
+    },
+    {
+      "code": "UNPLANNED_EXCLUSION_REASON",
+      "action": "Require sensitivity analysis with and without the unplanned exclusion."
+    },
+    {
+      "code": "OUTCOME_AWARE_EXCLUSION",
+      "action": "Block confirmatory language until an independent blinded review is documented."
+    },
+    {
+      "code": "AMENDMENT_TIMESTAMP_TOO_LATE",
+      "action": "Treat the amendment as post hoc unless timestamp provenance is corrected."
+    },
+    {
+      "code": "DECLARED_AMENDMENT_NOT_FOUND",
+      "action": "Attach the dated protocol amendment or remove unsupported amendment language."
+    },
+    {
+      "code": "AI_SUMMARY_OVERSTATES_CONFIRMATORY_STATUS",
+      "action": "Lower AI summary confidence and surface preregistration caveats to reviewers."
+    },
+    {
+      "code": "AI_SUMMARY_PROTOCOL_CAVEAT_MISSING",
+      "action": "Add a structured protocol-deviation caveat to the AI-generated review."
+    }
+  ],
+  "generatedFrom": "synthetic-protocol-data-only",
+  "auditDigest": "e55f46a217008cfa"
+}

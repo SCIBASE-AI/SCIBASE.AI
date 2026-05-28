@@ -1,0 +1,290 @@
+{
+  "profile": {
+    "userId": "researcher-maya",
+    "displayName": "Dr. Maya Chen",
+    "institution": "Open Translational Science Lab"
+  },
+  "summary": {
+    "decision": "hold-reputation-publication",
+    "riskScore": 100,
+    "auditDigest": "ec99535e924cc18c",
+    "creditEventsReviewed": 5,
+    "peerReviewsReviewed": 3,
+    "badgesReviewed": 4,
+    "findings": 12,
+    "criticalFindings": 1,
+    "highFindings": 6,
+    "computedScore": 98,
+    "storedScore": 112
+  },
+  "computedReputation": {
+    "formulaVersion": "credit-ledger-v1",
+    "components": {
+      "contributionCredit": 36,
+      "attestationCoverage": 15,
+      "peerReviewQuality": 25,
+      "reproducibility": 12,
+      "bountyCompletion": 4,
+      "verifiedBadges": 6
+    },
+    "total": 98
+  },
+  "creditTotals": {
+    "data curation": 4,
+    "peer review leadership": 1.5,
+    "software": 3,
+    "validation": 2
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "recommendation": "Merge duplicate credit events or mark the later entry as a correction.",
+      "code": "DUPLICATE_CREDIT_EVENT",
+      "creditId": "credit-002",
+      "message": "Credit credit-002 duplicates credit-001.",
+      "evidence": {
+        "duplicateOf": "credit-001",
+        "credit": {
+          "id": "credit-002",
+          "projectId": "proj-immune-atlas",
+          "artifactId": "dataset-v2",
+          "contributorId": "researcher-maya",
+          "role": "Data Curation",
+          "weight": 2,
+          "contributionAt": "2026-03-01T10:00:00Z",
+          "loggedAt": "2026-03-04T12:00:00Z",
+          "contributorAttestedAt": "2026-03-04T13:00:00Z",
+          "disputeStatus": "none",
+          "commitSha": "abc123",
+          "timelineUrl": "https://scibase.example/projects/proj-immune-atlas/timeline#credit-002"
+        }
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Map the contribution to a valid CRediT role before publishing the profile.",
+      "code": "INVALID_CREDIT_ROLE",
+      "creditId": "credit-003",
+      "message": "Credit credit-003 uses non-CRediT role \"Peer Review Leadership\".",
+      "evidence": {
+        "id": "credit-003",
+        "projectId": "proj-neuro-review",
+        "artifactId": "review-round-1",
+        "contributorId": "researcher-maya",
+        "role": "Peer Review Leadership",
+        "weight": 1.5,
+        "contributionAt": "2026-01-10T10:00:00Z",
+        "loggedAt": "2026-02-18T10:00:00Z",
+        "contributorAttestedAt": "",
+        "disputeStatus": "under_review",
+        "authorApproval": false,
+        "timelineUrl": "",
+        "citationUrl": ""
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Require author approval and a visible audit note for late credit backfills.",
+      "code": "LATE_CREDIT_BACKFILL",
+      "creditId": "credit-003",
+      "message": "Credit credit-003 was backfilled 39 days after contribution.",
+      "evidence": {
+        "id": "credit-003",
+        "projectId": "proj-neuro-review",
+        "artifactId": "review-round-1",
+        "contributorId": "researcher-maya",
+        "role": "Peer Review Leadership",
+        "weight": 1.5,
+        "contributionAt": "2026-01-10T10:00:00Z",
+        "loggedAt": "2026-02-18T10:00:00Z",
+        "contributorAttestedAt": "",
+        "disputeStatus": "under_review",
+        "authorApproval": false,
+        "timelineUrl": "",
+        "citationUrl": ""
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Exclude disputed credit from reputation totals until arbitration closes.",
+      "code": "DISPUTED_CREDIT_INCLUDED",
+      "creditId": "credit-003",
+      "message": "Credit credit-003 is under_review but still present in reputation input.",
+      "evidence": {
+        "id": "credit-003",
+        "projectId": "proj-neuro-review",
+        "artifactId": "review-round-1",
+        "contributorId": "researcher-maya",
+        "role": "Peer Review Leadership",
+        "weight": 1.5,
+        "contributionAt": "2026-01-10T10:00:00Z",
+        "loggedAt": "2026-02-18T10:00:00Z",
+        "contributorAttestedAt": "",
+        "disputeStatus": "under_review",
+        "authorApproval": false,
+        "timelineUrl": "",
+        "citationUrl": ""
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Require contributor attestation for reputation-affecting credit.",
+      "code": "UNSIGNED_CONTRIBUTION",
+      "creditId": "credit-003",
+      "message": "Credit credit-003 has no contributor attestation timestamp.",
+      "evidence": {
+        "id": "credit-003",
+        "projectId": "proj-neuro-review",
+        "artifactId": "review-round-1",
+        "contributorId": "researcher-maya",
+        "role": "Peer Review Leadership",
+        "weight": 1.5,
+        "contributionAt": "2026-01-10T10:00:00Z",
+        "loggedAt": "2026-02-18T10:00:00Z",
+        "contributorAttestedAt": "",
+        "disputeStatus": "under_review",
+        "authorApproval": false,
+        "timelineUrl": "",
+        "citationUrl": ""
+      }
+    },
+    {
+      "severity": "low",
+      "recommendation": "Attach each credit event to a project timeline or citation page entry.",
+      "code": "MISSING_PROJECT_TIMELINE_LINK",
+      "creditId": "credit-003",
+      "message": "Credit credit-003 is not linked to a project timeline or citation page.",
+      "evidence": {
+        "id": "credit-003",
+        "projectId": "proj-neuro-review",
+        "artifactId": "review-round-1",
+        "contributorId": "researcher-maya",
+        "role": "Peer Review Leadership",
+        "weight": 1.5,
+        "contributionAt": "2026-01-10T10:00:00Z",
+        "loggedAt": "2026-02-18T10:00:00Z",
+        "contributorAttestedAt": "",
+        "disputeStatus": "under_review",
+        "authorApproval": false,
+        "timelineUrl": "",
+        "citationUrl": ""
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Require author approval and a visible audit note for late credit backfills.",
+      "code": "LATE_CREDIT_BACKFILL",
+      "creditId": "credit-005",
+      "message": "Credit credit-005 was backfilled 22 days after contribution.",
+      "evidence": {
+        "id": "credit-005",
+        "projectId": "proj-biomarker-code",
+        "artifactId": "validation-report",
+        "contributorId": "researcher-maya",
+        "role": "Validation",
+        "weight": 2,
+        "contributionAt": "2026-04-07T18:00:00Z",
+        "loggedAt": "2026-04-29T18:00:00Z",
+        "contributorAttestedAt": "2026-04-29T19:00:00Z",
+        "disputeStatus": "none",
+        "authorApproval": true,
+        "timelineUrl": "https://scibase.example/projects/proj-biomarker-code/timeline#credit-005"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Recompute score components from the ledger and store the formula version.",
+      "code": "REPUTATION_COMPONENT_MISMATCH",
+      "component": "contributionCredit",
+      "message": "Stored contributionCredit=40 differs from computed 36.",
+      "evidence": {
+        "stored": 40,
+        "computed": 36
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Recompute score components from the ledger and store the formula version.",
+      "code": "REPUTATION_COMPONENT_MISMATCH",
+      "component": "peerReviewQuality",
+      "message": "Stored peerReviewQuality=30 differs from computed 25.",
+      "evidence": {
+        "stored": 30,
+        "computed": 25
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Recompute score components from the ledger and store the formula version.",
+      "code": "REPUTATION_COMPONENT_MISMATCH",
+      "component": "bountyCompletion",
+      "message": "Stored bountyCompletion=8 differs from computed 4.",
+      "evidence": {
+        "stored": 8,
+        "computed": 4
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Revoke or hold badges whose eligibility inputs no longer pass thresholds.",
+      "code": "BADGE_ELIGIBILITY_DRIFT",
+      "badgeId": "regional-leader",
+      "message": "Badge Regional Leader no longer satisfies eligibility rules.",
+      "evidence": {
+        "badge": {
+          "id": "regional-leader",
+          "name": "Regional Leader",
+          "verified": false
+        },
+        "computed": {
+          "formulaVersion": "credit-ledger-v1",
+          "components": {
+            "contributionCredit": 36,
+            "attestationCoverage": 15,
+            "peerReviewQuality": 25,
+            "reproducibility": 12,
+            "bountyCompletion": 4,
+            "verifiedBadges": 6
+          },
+          "total": 98
+        }
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Route low-quality high-volume reviews for moderation before awarding reputation.",
+      "code": "REVIEW_QUALITY_OUTLIER",
+      "reviewId": "review-002",
+      "message": "Review review-002 earned reputation despite weak quality/helpfulness signals.",
+      "evidence": {
+        "id": "review-002",
+        "projectId": "proj-climate-neuro",
+        "qualityScore": 0.31,
+        "helpfulnessVotes": 0,
+        "reputationAwarded": 3
+      }
+    }
+  ],
+  "publicationGates": [
+    {
+      "gate": "All credit roles map to CRediT taxonomy.",
+      "passed": false
+    },
+    {
+      "gate": "Disputed credits are excluded from score inputs.",
+      "passed": false
+    },
+    {
+      "gate": "Stored reputation components match the transparent formula.",
+      "passed": false
+    },
+    {
+      "gate": "Badges match current score and verification inputs.",
+      "passed": false
+    },
+    {
+      "gate": "Peer review reputation is backed by quality/helpfulness signals.",
+      "passed": false
+    }
+  ]
+}

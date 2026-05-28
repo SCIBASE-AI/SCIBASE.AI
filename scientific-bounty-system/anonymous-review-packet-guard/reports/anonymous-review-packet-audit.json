@@ -1,0 +1,202 @@
+{
+  "submissionId": "submission-anon-biomarker-042",
+  "challengeId": "challenge-biomarker-single-cell",
+  "title": "Anonymous Biomarker Discovery Challenge",
+  "generatedAt": "2026-05-28T21:10:00.000Z",
+  "decision": "hold-review-packet",
+  "riskScore": 100,
+  "severityCounts": {
+    "high": 6,
+    "medium": 6,
+    "low": 0
+  },
+  "findingCount": 12,
+  "evidenceDigest": "2f3128eec95e4284",
+  "summary": {
+    "artifacts": 4,
+    "commits": 2,
+    "accessGrants": 2,
+    "redactionReceipts": 1,
+    "auditLogs": 2
+  },
+  "findings": [
+    {
+      "code": "FILE_PATH_IDENTITY_LEAK",
+      "severity": "high",
+      "penalty": 16,
+      "message": "Artifact notebook-main path contains identity-bearing text.",
+      "evidence": {
+        "artifactId": "notebook-main",
+        "path": "/Users/alice-nguyen/stanford-lab/bounty/submission/main.ipynb",
+        "detectedSignals": [
+          "home-directory",
+          "institution"
+        ]
+      },
+      "recommendation": "Replace local usernames, lab folders, and institution paths with neutral artifact paths."
+    },
+    {
+      "code": "DOCUMENT_METADATA_LEAK",
+      "severity": "high",
+      "penalty": 15,
+      "message": "Artifact notebook-main metadata can identify the solver team.",
+      "evidence": {
+        "artifactId": "notebook-main",
+        "metadata": {
+          "author": "Alice Nguyen",
+          "kernelspec": "python3",
+          "lastModifiedBy": "alice.nguyen@stanford.edu"
+        },
+        "detectedSignals": [
+          "email",
+          "institution",
+          "github-handle"
+        ]
+      },
+      "recommendation": "Strip document author, company, editor, and template metadata from review exports."
+    },
+    {
+      "code": "NOTEBOOK_OUTPUT_IDENTITY_LEAK",
+      "severity": "high",
+      "penalty": 15,
+      "message": "Notebook notebook-main output contains solver identity signals.",
+      "evidence": {
+        "artifactId": "notebook-main",
+        "outputHits": [
+          {
+            "index": 0,
+            "signals": [
+              "home-directory"
+            ],
+            "value": "Loaded cohort from /Users/alice-nguyen/private/cohort.csv"
+          }
+        ]
+      },
+      "recommendation": "Clear notebook outputs or redact user, host, and local path fragments before reviewer access."
+    },
+    {
+      "code": "DOCUMENT_METADATA_LEAK",
+      "severity": "high",
+      "penalty": 15,
+      "message": "Artifact manuscript-pdf metadata can identify the solver team.",
+      "evidence": {
+        "artifactId": "manuscript-pdf",
+        "metadata": {
+          "author": "A. Nguyen",
+          "company": "Stanford University",
+          "template": "lab-letterhead-v4"
+        },
+        "detectedSignals": [
+          "institution"
+        ]
+      },
+      "recommendation": "Strip document author, company, editor, and template metadata from review exports."
+    },
+    {
+      "code": "EXIF_GPS_OR_DEVICE_LEAK",
+      "severity": "medium",
+      "penalty": 10,
+      "message": "Media artifact figure-workflow contains identifying EXIF metadata.",
+      "evidence": {
+        "artifactId": "figure-workflow",
+        "exif": {
+          "gps": "37.4275,-122.1697",
+          "deviceOwner": "Alice Nguyen",
+          "serialNumber": "IMG-ALICE-9981"
+        }
+      },
+      "recommendation": "Remove EXIF GPS, serial, device owner, and capture metadata from figures and media."
+    },
+    {
+      "code": "COMMIT_AUTHOR_LEAK",
+      "severity": "high",
+      "penalty": 18,
+      "message": "Commit a1b2c3d exposes solver identity metadata.",
+      "evidence": {
+        "sha": "a1b2c3d",
+        "authorName": "Alice Nguyen",
+        "authorEmail": "alice.nguyen@stanford.edu",
+        "detectedSignals": [
+          "email",
+          "institution",
+          "github-handle"
+        ]
+      },
+      "recommendation": "Rewrite or mask commit author metadata before the sponsor review packet is released."
+    },
+    {
+      "code": "ACKNOWLEDGEMENT_IDENTITY_LEAK",
+      "severity": "medium",
+      "penalty": 9,
+      "message": "Review packet section acknowledgements can identify the solver team.",
+      "evidence": {
+        "sectionId": "acknowledgements",
+        "kind": "acknowledgements",
+        "redacted": false,
+        "detectedSignals": [
+          "institution",
+          "github-handle"
+        ]
+      },
+      "recommendation": "Move acknowledgements and institution references to the post-award disclosure packet."
+    },
+    {
+      "code": "UNBLINDED_REVIEWER_ROLE",
+      "severity": "high",
+      "penalty": 17,
+      "message": "Access grant grant-sponsor-review exposes an unredacted packet to sponsor.",
+      "evidence": {
+        "grantId": "grant-sponsor-review",
+        "role": "sponsor",
+        "principal": "pharma-sponsor",
+        "packetVariant": "unredacted"
+      },
+      "recommendation": "Remove sponsor/reviewer access until all anonymous review roles use the redacted packet."
+    },
+    {
+      "code": "REDACTION_EVIDENCE_MISSING",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Artifact notebook-main requires redaction but has no receipt.",
+      "evidence": {
+        "artifactId": "notebook-main",
+        "requiredReason": "local username and lab path in notebook metadata"
+      },
+      "recommendation": "Attach redaction receipts for every transformed artifact before review release."
+    },
+    {
+      "code": "REDACTION_EVIDENCE_MISSING",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Artifact manuscript-pdf requires redaction but has no receipt.",
+      "evidence": {
+        "artifactId": "manuscript-pdf",
+        "requiredReason": "office metadata contains company field"
+      },
+      "recommendation": "Attach redaction receipts for every transformed artifact before review release."
+    },
+    {
+      "code": "REDACTION_EVIDENCE_MISSING",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Artifact figure-workflow requires redaction but has no receipt.",
+      "evidence": {
+        "artifactId": "figure-workflow",
+        "requiredReason": "EXIF GPS/device owner present"
+      },
+      "recommendation": "Attach redaction receipts for every transformed artifact before review release."
+    },
+    {
+      "code": "AUDIT_LOG_UNPROTECTED",
+      "severity": "medium",
+      "penalty": 7,
+      "message": "Audit log identity-map contains identity data outside arbitrator-only visibility.",
+      "evidence": {
+        "logId": "identity-map",
+        "visibility": "reviewer-visible",
+        "containsIdentity": true
+      },
+      "recommendation": "Keep full identity audit logs restricted to arbitrators until award or dispute resolution."
+    }
+  ]
+}

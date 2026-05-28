@@ -1,0 +1,282 @@
+{
+  "document": {
+    "id": "ms-cardiometabolic-draft",
+    "title": "Cardiometabolic Manuscript Draft",
+    "activeUsers": [
+      "author-lee",
+      "stat-reviewer",
+      "editor-maya",
+      "guest-ravi"
+    ]
+  },
+  "summary": {
+    "decision": "hold-collaboration-sync",
+    "riskScore": 100,
+    "auditDigest": "a1ea7a73c9851476",
+    "sectionsReviewed": 3,
+    "eventsReviewed": 5,
+    "autosavesReviewed": 2,
+    "versionsReviewed": 3,
+    "findings": 11,
+    "criticalFindings": 4,
+    "highFindings": 4
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "recommendation": "Expire stale locks and notify the lock owner before accepting new edits.",
+      "code": "LOCK_LEASE_EXPIRED",
+      "sectionId": "methods-final-figures",
+      "eventId": null,
+      "message": "Lock for section methods-final-figures expired at 2026-05-28T17:40:00Z.",
+      "evidence": {
+        "sectionId": "methods-final-figures",
+        "mode": "hard",
+        "ownerUserId": "editor-maya",
+        "sectionOwnerUserIds": [
+          "author-lee"
+        ],
+        "maintainerUserIds": [
+          "science-admin"
+        ],
+        "acquiredAt": "2026-05-28T17:02:00Z",
+        "expiresAt": "2026-05-28T17:40:00Z",
+        "reason": "Final figure captions are frozen for journal submission."
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Reject the edit or require an explicit unlock approval before applying it.",
+      "code": "LOCKED_SECTION_EDIT",
+      "sectionId": "methods-final-figures",
+      "eventId": "evt-001",
+      "message": "guest-ravi edited locked section methods-final-figures owned by editor-maya.",
+      "evidence": {
+        "event": {
+          "id": "evt-001",
+          "type": "edit",
+          "sectionId": "methods-final-figures",
+          "userId": "guest-ravi",
+          "at": "2026-05-28T17:48:00Z",
+          "offline": false,
+          "patch": "Changed figure 2 caption from adjudicated to automated."
+        },
+        "lock": {
+          "sectionId": "methods-final-figures",
+          "mode": "hard",
+          "ownerUserId": "editor-maya",
+          "sectionOwnerUserIds": [
+            "author-lee"
+          ],
+          "maintainerUserIds": [
+            "science-admin"
+          ],
+          "acquiredAt": "2026-05-28T17:02:00Z",
+          "expiresAt": "2026-05-28T17:40:00Z",
+          "reason": "Final figure captions are frozen for journal submission."
+        }
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Require lock-owner, section-owner, or maintainer approval for unlock events.",
+      "code": "UNAUTHORIZED_UNLOCK",
+      "sectionId": "primary-results",
+      "eventId": "evt-002",
+      "message": "guest-ravi tried to unlock primary-results without authority.",
+      "evidence": {
+        "event": {
+          "id": "evt-002",
+          "type": "unlock",
+          "sectionId": "primary-results",
+          "userId": "guest-ravi",
+          "at": "2026-05-28T17:52:00Z"
+        },
+        "lock": {
+          "sectionId": "primary-results",
+          "mode": "hard",
+          "ownerUserId": "stat-reviewer",
+          "sectionOwnerUserIds": [
+            "author-lee"
+          ],
+          "maintainerUserIds": [
+            "science-admin"
+          ],
+          "acquiredAt": "2026-05-28T17:45:00Z",
+          "expiresAt": "2026-05-28T18:30:00Z",
+          "reason": "Statistician is validating table values."
+        }
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Reject the edit or require an explicit unlock approval before applying it.",
+      "code": "LOCKED_SECTION_EDIT",
+      "sectionId": "primary-results",
+      "eventId": "evt-003",
+      "message": "author-lee edited locked section primary-results owned by stat-reviewer.",
+      "evidence": {
+        "event": {
+          "id": "evt-003",
+          "type": "edit",
+          "sectionId": "primary-results",
+          "userId": "author-lee",
+          "at": "2026-05-28T17:55:00Z",
+          "offline": true,
+          "patch": "Pasted local table 1 values from offline draft."
+        },
+        "lock": {
+          "sectionId": "primary-results",
+          "mode": "hard",
+          "ownerUserId": "stat-reviewer",
+          "sectionOwnerUserIds": [
+            "author-lee"
+          ],
+          "maintainerUserIds": [
+            "science-admin"
+          ],
+          "acquiredAt": "2026-05-28T17:45:00Z",
+          "expiresAt": "2026-05-28T18:30:00Z",
+          "reason": "Statistician is validating table values."
+        }
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Queue offline edits behind server-side section-lock reconciliation.",
+      "code": "OFFLINE_EDIT_CONFLICT",
+      "sectionId": "primary-results",
+      "eventId": "evt-003",
+      "message": "Offline edit evt-003 arrived for locked section primary-results.",
+      "evidence": {
+        "id": "evt-003",
+        "type": "edit",
+        "sectionId": "primary-results",
+        "userId": "author-lee",
+        "at": "2026-05-28T17:55:00Z",
+        "offline": true,
+        "patch": "Pasted local table 1 values from offline draft."
+      }
+    },
+    {
+      "severity": "low",
+      "recommendation": "Show a read-only presence state when a user cursor enters a locked section.",
+      "code": "CURSOR_ON_LOCKED_REGION",
+      "sectionId": "primary-results",
+      "eventId": "evt-004",
+      "message": "guest-ravi presence entered locked section primary-results.",
+      "evidence": {
+        "start": 4200,
+        "end": 4212
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Create the named version only after all edits are autosaved.",
+      "code": "NAMED_VERSION_WITH_DIRTY_STATE",
+      "sectionId": "supplemental-code",
+      "eventId": "evt-005",
+      "message": "Named version v-submit-candidate was requested while the document had unsaved edits.",
+      "evidence": {
+        "id": "evt-005",
+        "type": "named-version",
+        "sectionId": "supplemental-code",
+        "userId": "author-lee",
+        "at": "2026-05-28T17:59:00Z",
+        "versionId": "v-submit-candidate"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Force a local snapshot before accepting more collaborative changes.",
+      "code": "AUTOSAVE_GAP",
+      "sectionId": "methods-final-figures",
+      "eventId": "evt-001",
+      "message": "Autosave lagged 14 minutes for methods-final-figures.",
+      "evidence": {
+        "sectionId": "methods-final-figures",
+        "eventId": "evt-001",
+        "lastLocalEditAt": "2026-05-28T17:48:00Z",
+        "savedAt": "2026-05-28T18:02:00Z"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Force a local snapshot before accepting more collaborative changes.",
+      "code": "AUTOSAVE_GAP",
+      "sectionId": "primary-results",
+      "eventId": "evt-003",
+      "message": "Autosave lagged 4 minutes for primary-results.",
+      "evidence": {
+        "sectionId": "primary-results",
+        "eventId": "evt-003",
+        "lastLocalEditAt": "2026-05-28T17:55:00Z",
+        "savedAt": "2026-05-28T17:59:00Z"
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Block restore/compare actions until the version chain is repaired.",
+      "code": "VERSION_PARENT_MISSING",
+      "versionId": "v-analysis-pass",
+      "sectionId": null,
+      "eventId": null,
+      "message": "Version v-analysis-pass points to missing parent v-missing-parent.",
+      "evidence": {
+        "id": "v-analysis-pass",
+        "parentId": "v-missing-parent",
+        "createdAt": "2026-05-28T17:20:00Z",
+        "authorUserId": "stat-reviewer"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Require an explicit conflict-resolution step before restoring the version.",
+      "code": "RESTORE_OVERWRITES_UNSAVED",
+      "versionId": "v-base",
+      "sectionId": "primary-results",
+      "eventId": "restore-001",
+      "message": "Restore restore-001 would overwrite 2 unsaved edits.",
+      "evidence": {
+        "restore": {
+          "id": "restore-001",
+          "targetVersionId": "v-base",
+          "requestedBy": "editor-maya",
+          "sectionId": "primary-results",
+          "unsavedEditIds": [
+            "evt-003",
+            "evt-005"
+          ]
+        },
+        "targetVersion": {
+          "id": "v-base",
+          "parentId": null,
+          "createdAt": "2026-05-28T16:00:00Z",
+          "authorUserId": "author-lee"
+        }
+      }
+    }
+  ],
+  "releaseGates": [
+    {
+      "gate": "No edits accepted inside hard-locked sections by non-owners.",
+      "passed": false
+    },
+    {
+      "gate": "Autosave lag stays within the project policy.",
+      "passed": false
+    },
+    {
+      "gate": "Version history has no missing parents.",
+      "passed": false
+    },
+    {
+      "gate": "Restore requests cannot overwrite unsaved work.",
+      "passed": false
+    },
+    {
+      "gate": "Unlock events are owner or maintainer approved.",
+      "passed": false
+    }
+  ]
+}

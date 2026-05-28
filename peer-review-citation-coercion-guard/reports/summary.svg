@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#13221c"/>
+  <rect x="60" y="70" width="1160" height="580" rx="18" fill="#1d342c" stroke="#8ee6b5" stroke-width="4"/>
+  <text x="100" y="145" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">Peer Review Citation Coercion Guard</text>
+  <text x="100" y="215" fill="#d9fff0" font-family="Arial, sans-serif" font-size="28">Flagged reviews: 3 / 4</text>
+  <text x="100" y="265" fill="#d9fff0" font-family="Arial, sans-serif" font-size="28">Held reviewer credit: 23</text>
+  <text x="100" y="315" fill="#d9fff0" font-family="Arial, sans-serif" font-size="28">Protected projects: 2</text>
+  <text x="100" y="365" fill="#ffe59a" font-family="Arial, sans-serif" font-size="28">Action: pause-coerced-citation-reputation-updates</text>
+  <text x="100" y="445" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">Detects self-citation demands, reciprocal pressure, and journal quota coercion.</text>
+  <text x="100" y="500" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">Blind reviewer labels are preserved without raw identity leakage.</text>
+  <text x="100" y="560" fill="#a8dcc8" font-family="Arial, sans-serif" font-size="18">sha256:637ed41ba3ea2b5506c1ee609c4ae56f1834c2670483849429566620b2402ecc</text>
+</svg>

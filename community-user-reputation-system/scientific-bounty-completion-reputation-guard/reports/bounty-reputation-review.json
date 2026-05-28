@@ -1,0 +1,81 @@
+{
+  "packetId": "SYN-BOUNTY-REP-015",
+  "challengeTitle": "Synthetic reproducibility benchmark prize",
+  "reviewedAt": "2026-05-28T00:00:00.000Z",
+  "status": "block-reputation-release",
+  "riskScore": 100,
+  "releaseReadiness": 0,
+  "findingCount": 9,
+  "severityCounts": {
+    "critical": 1,
+    "high": 3,
+    "medium": 4,
+    "low": 1
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "id": "unfunded-settlement",
+      "title": "Sponsor acceptance is not enough for reputation credit",
+      "evidence": "Settlement status is \"sponsor-accepted-unfunded\" and funded release evidence is missing.",
+      "remediation": "Hold badges, leaderboard points, and citation visibility until funded settlement evidence is attached."
+    },
+    {
+      "severity": "high",
+      "id": "appeal-window-open",
+      "title": "Appeal or hold window is still active",
+      "evidence": "appealOpen=true, holdUntil=2026-06-04T00:00:00.000Z.",
+      "remediation": "Queue the reputation update as pending until appeal and hold windows close without unresolved disputes."
+    },
+    {
+      "severity": "high",
+      "id": "milestone-scope-gap",
+      "title": "Accepted scope does not cover all declared milestones",
+      "evidence": "Missing accepted milestone(s): reproducibility report; acceptanceScope=partial.",
+      "remediation": "Award only milestone-scoped credit or request explicit sponsor acceptance for the remaining deliverables."
+    },
+    {
+      "severity": "high",
+      "id": "team-attribution-mismatch",
+      "title": "Team credit split is not supported by evidence",
+      "evidence": "2 contributor split(s) differ by at least 20 percentage points; splitAgreementSigned=false.",
+      "remediation": "Require signed split agreement or allocate provisional credit using evidence-backed contribution shares."
+    },
+    {
+      "severity": "medium",
+      "id": "duplicate-claim-risk",
+      "title": "Requested reputation update overlaps prior claims",
+      "evidence": "Duplicate or overlapping claim ids: SYN-BOUNTY-REP-011.",
+      "remediation": "Deduplicate badge and point events before reputation ledgers or citation pages are updated."
+    },
+    {
+      "severity": "medium",
+      "id": "post-submission-scope-change",
+      "title": "Scope changed after solver submission",
+      "evidence": "The packet marks scopeChangedAfterSubmission=true.",
+      "remediation": "Normalize reputation credit to the scope active at submission time or attach sponsor-approved change evidence."
+    },
+    {
+      "severity": "medium",
+      "id": "external-review-pending",
+      "title": "Independent review is not complete",
+      "evidence": "External review is still pending while reputation points and badges are requested.",
+      "remediation": "Hold expert-tier badges until the external reviewer decision is final."
+    },
+    {
+      "severity": "medium",
+      "id": "dispute-or-unfrozen-scores",
+      "title": "Disputes or mutable scorecards can distort reputation",
+      "evidence": "solverDisputeCount=1, reviewerScoresFrozen=true.",
+      "remediation": "Block leaderboard promotion until disputes close and the scorecard hash is frozen."
+    },
+    {
+      "severity": "low",
+      "id": "difficulty-tier-mismatch",
+      "title": "Requested leaderboard tier is stronger than challenge difficulty",
+      "evidence": "difficulty=advanced, leaderboardTier=gold.",
+      "remediation": "Apply difficulty-normalized points and reserve top-tier badges for expert-level challenges."
+    }
+  ],
+  "recommendedLedgerAction": "Keep reputation deltas pending until funded settlement, appeal closure, milestone parity, and evidence-backed team attribution are present."
+}

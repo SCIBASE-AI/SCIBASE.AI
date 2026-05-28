@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="80" y="86" font-family="Arial" font-size="34" font-weight="700" fill="#111827">Bounty completion reputation guard</text>
+  <text x="80" y="125" font-family="Arial" font-size="18" fill="#475569">SYN-BOUNTY-REP-015 - block-reputation-release</text>
+  <rect x="80" y="174" width="680" height="42" rx="8" fill="#e5e7eb"/>
+  <rect x="80" y="174" width="680" height="42" rx="8" fill="#dc2626"/>
+  <text x="785" y="203" font-family="Arial" font-size="30" font-weight="700" fill="#111827">100/100</text>
+  <text x="80" y="258" font-family="Arial" font-size="22" font-weight="700" fill="#111827">Finding severity mix</text>
+  <text x="120" y="310" font-family="Arial" font-size="20" fill="#111827">critical</text><rect x="270" y="290" width="50" height="22" rx="4" fill="#991b1b"/><text x="335" y="310" font-family="Arial" font-size="18" fill="#111827">1</text><text x="120" y="346" font-family="Arial" font-size="20" fill="#111827">high</text><rect x="270" y="326" width="150" height="22" rx="4" fill="#b45309"/><text x="435" y="346" font-family="Arial" font-size="18" fill="#111827">3</text><text x="120" y="382" font-family="Arial" font-size="20" fill="#111827">medium</text><rect x="270" y="362" width="200" height="22" rx="4" fill="#1d4ed8"/><text x="485" y="382" font-family="Arial" font-size="18" fill="#111827">4</text><text x="120" y="418" font-family="Arial" font-size="20" fill="#111827">low</text><rect x="270" y="398" width="50" height="22" rx="4" fill="#15803d"/><text x="335" y="418" font-family="Arial" font-size="18" fill="#111827">1</text>
+</svg>

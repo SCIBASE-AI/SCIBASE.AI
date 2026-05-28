@@ -1,0 +1,65 @@
+{
+  "packetId": "SYN-BOUNTY-REP-015",
+  "challenge": {
+    "title": "Synthetic reproducibility benchmark prize",
+    "difficulty": "advanced",
+    "domain": "scientific software validation",
+    "declaredMilestones": [
+      "benchmark harness",
+      "synthetic dataset",
+      "reproducibility report",
+      "reviewer demo"
+    ],
+    "acceptedMilestones": [
+      "benchmark harness",
+      "synthetic dataset",
+      "reviewer demo"
+    ]
+  },
+  "settlement": {
+    "status": "sponsor-accepted-unfunded",
+    "fundingEvidence": null,
+    "escrowReleaseId": null,
+    "settledAt": null,
+    "holdUntil": "2026-06-04T00:00:00.000Z",
+    "appealOpen": true
+  },
+  "sponsorEvidence": {
+    "acceptanceCommentId": "synthetic-comment-778",
+    "reviewerScoresFrozen": true,
+    "scorecardHash": "sha256:synthetic-scorecard",
+    "acceptanceScope": "partial",
+    "missingAcceptanceNotes": ["reproducibility report"]
+  },
+  "teamAttribution": {
+    "contributors": [
+      {
+        "handle": "synthetic-pi",
+        "declaredSharePercent": 80,
+        "evidenceSharePercent": 55,
+        "role": "implementation"
+      },
+      {
+        "handle": "synthetic-reviewer",
+        "declaredSharePercent": 20,
+        "evidenceSharePercent": 45,
+        "role": "validation"
+      }
+    ],
+    "splitAgreementSigned": false
+  },
+  "reputationUpdate": {
+    "requestedBadges": ["benchmark-winner", "reproducibility-lead"],
+    "requestedPoints": 120,
+    "leaderboardTier": "gold",
+    "citationPageVisible": true,
+    "duplicateClaimIds": ["SYN-BOUNTY-REP-011"]
+  },
+  "riskSignals": {
+    "scopeChangedAfterSubmission": true,
+    "privateDatasetUsed": false,
+    "externalReviewPending": true,
+    "sponsorConflictDeclared": false,
+    "solverDisputeCount": 1
+  }
+}

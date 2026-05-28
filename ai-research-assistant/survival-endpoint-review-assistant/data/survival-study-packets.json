@@ -1,0 +1,146 @@
+{
+  "packetId": "survival-peer-review-demo-001",
+  "title": "Synthetic Time-to-Event Manuscript Review Packet",
+  "studies": [
+    {
+      "id": "os-immunotherapy-registry",
+      "title": "Registry claim: immunotherapy extends overall survival",
+      "design": "retrospective registry",
+      "endpoint": {
+        "primary": "overall survival",
+        "definition": "Time from registry entry to death from any cause; censored at last verified contact.",
+        "origin": "registry entry",
+        "competingRisk": true
+      },
+      "arms": [
+        {
+          "name": "immunotherapy",
+          "participants": 118,
+          "events": 24,
+          "censored": 38,
+          "medianFollowUpMonths": 9,
+          "medianEventTimeMonths": 13
+        },
+        {
+          "name": "standard care",
+          "participants": 122,
+          "events": 42,
+          "censored": 17,
+          "medianFollowUpMonths": 14,
+          "medianEventTimeMonths": 12
+        }
+      ],
+      "model": {
+        "type": "Cox proportional hazards",
+        "covariates": 16,
+        "proportionalHazardsEvidence": "schoenfeld",
+        "schoenfeldP": 0.018,
+        "timeVaryingEffects": false
+      },
+      "exposure": {
+        "assignment": "post-baseline",
+        "medianStartLagDays": 43,
+        "modeling": "baseline-fixed"
+      },
+      "methods": {
+        "competingRiskModel": false,
+        "censoringTable": false,
+        "landmarkAnalysis": false
+      },
+      "claims": [
+        "Immunotherapy improves overall survival across the registry population.",
+        "The effect is robust after multivariable adjustment."
+      ]
+    },
+    {
+      "id": "device-safety-prospective",
+      "title": "Prospective device safety follow-up",
+      "design": "single-arm prospective cohort",
+      "endpoint": {
+        "primary": "revision-free survival",
+        "definition": "Time from device implantation to revision surgery, death, or last clinic follow-up.",
+        "origin": "implantation date",
+        "competingRisk": false
+      },
+      "arms": [
+        {
+          "name": "device cohort",
+          "participants": 180,
+          "events": 22,
+          "censored": 27,
+          "medianFollowUpMonths": 24,
+          "medianEventTimeMonths": 18
+        }
+      ],
+      "model": {
+        "type": "Kaplan-Meier",
+        "covariates": 0,
+        "proportionalHazardsEvidence": "not-applicable",
+        "schoenfeldP": null,
+        "timeVaryingEffects": false
+      },
+      "exposure": {
+        "assignment": "baseline",
+        "medianStartLagDays": 0,
+        "modeling": "baseline-fixed"
+      },
+      "methods": {
+        "competingRiskModel": false,
+        "censoringTable": true,
+        "landmarkAnalysis": false
+      },
+      "claims": [
+        "Revision-free survival is estimated with administrative censoring shown by follow-up month."
+      ]
+    },
+    {
+      "id": "vaccine-durability-trial",
+      "title": "Randomized vaccine durability trial",
+      "design": "randomized trial",
+      "endpoint": {
+        "primary": "infection-free survival",
+        "definition": "Time from randomization to laboratory-confirmed infection; censoring at withdrawal or study close.",
+        "origin": "randomization",
+        "competingRisk": false
+      },
+      "arms": [
+        {
+          "name": "booster",
+          "participants": 510,
+          "events": 78,
+          "censored": 41,
+          "medianFollowUpMonths": 18,
+          "medianEventTimeMonths": 11
+        },
+        {
+          "name": "control",
+          "participants": 506,
+          "events": 105,
+          "censored": 48,
+          "medianFollowUpMonths": 18,
+          "medianEventTimeMonths": 9
+        }
+      ],
+      "model": {
+        "type": "Cox proportional hazards",
+        "covariates": 8,
+        "proportionalHazardsEvidence": "schoenfeld",
+        "schoenfeldP": 0.41,
+        "timeVaryingEffects": false
+      },
+      "exposure": {
+        "assignment": "baseline",
+        "medianStartLagDays": 0,
+        "modeling": "baseline-fixed"
+      },
+      "methods": {
+        "competingRiskModel": false,
+        "censoringTable": true,
+        "landmarkAnalysis": false
+      },
+      "claims": [
+        "The booster arm shows longer infection-free survival with proportional-hazards diagnostics reported."
+      ]
+    }
+  ]
+}

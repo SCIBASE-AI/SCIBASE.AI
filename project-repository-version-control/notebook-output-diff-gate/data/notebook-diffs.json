@@ -1,0 +1,90 @@
+[
+  {
+    "repositoryId": "repo-clean-analysis",
+    "notebookPath": "notebooks/analysis.ipynb",
+    "commitSha": "abc1234",
+    "policy": { "largeOutputDeltaBytes": 50000 },
+    "environment": { "fingerprint": "sha256:env-clean" },
+    "cells": [
+      {
+        "id": "cell-1",
+        "codeChanged": true,
+        "inputChanged": false,
+        "outputChanged": true,
+        "executionRecordId": "run-2026-05-28-a",
+        "environmentChanged": false,
+        "outputBytesAdded": 1200,
+        "outputBytesRemoved": 900,
+        "beforeOutputDigest": "sha256:old-a",
+        "afterOutputDigest": "sha256:new-a",
+        "reviewerEvidence": ["run-log"]
+      }
+    ]
+  },
+  {
+    "repositoryId": "repo-stale-output",
+    "notebookPath": "notebooks/figures.ipynb",
+    "commitSha": "def5678",
+    "policy": { "largeOutputDeltaBytes": 50000 },
+    "environment": { "fingerprint": "sha256:env-stable" },
+    "cells": [
+      {
+        "id": "cell-figure",
+        "codeChanged": false,
+        "inputChanged": false,
+        "outputChanged": true,
+        "executionRecordId": null,
+        "environmentChanged": false,
+        "outputBytesAdded": 72000,
+        "outputBytesRemoved": 71000,
+        "beforeOutputDigest": "sha256:old-figure",
+        "afterOutputDigest": "sha256:new-figure",
+        "reviewerEvidence": []
+      }
+    ]
+  },
+  {
+    "repositoryId": "repo-missing-run",
+    "notebookPath": "notebooks/model.ipynb",
+    "commitSha": "987abcd",
+    "policy": { "largeOutputDeltaBytes": 50000 },
+    "environment": {},
+    "cells": [
+      {
+        "id": "cell-model",
+        "codeChanged": true,
+        "inputChanged": true,
+        "outputChanged": true,
+        "executionRecordId": null,
+        "environmentChanged": true,
+        "outputBytesAdded": 18000,
+        "outputBytesRemoved": 6000,
+        "beforeOutputDigest": "sha256:model-old",
+        "afterOutputDigest": "sha256:model-new",
+        "reviewerEvidence": ["table-digest"]
+      }
+    ]
+  },
+  {
+    "repositoryId": "repo-noisy-digest",
+    "notebookPath": "notebooks/supplement.ipynb",
+    "commitSha": "456efgh",
+    "policy": { "largeOutputDeltaBytes": 50000 },
+    "environment": { "fingerprint": "sha256:env-supplement" },
+    "cells": [
+      {
+        "id": "cell-supplement",
+        "codeChanged": false,
+        "inputChanged": false,
+        "outputChanged": true,
+        "executionRecordId": "run-2026-05-28-b",
+        "environmentChanged": false,
+        "outputBytesAdded": 400,
+        "outputBytesRemoved": 400,
+        "beforeOutputDigest": "sha256:same",
+        "afterOutputDigest": "sha256:same",
+        "reviewerEvidence": ["run-log"]
+      }
+    ]
+  }
+]

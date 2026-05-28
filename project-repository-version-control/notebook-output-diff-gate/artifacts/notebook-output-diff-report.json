@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "total": 4,
+    "ready": 2,
+    "blocked": 2,
+    "findings": 5
+  },
+  "reports": [
+    {
+      "repositoryId": "repo-clean-analysis",
+      "notebookPath": "notebooks/analysis.ipynb",
+      "commitSha": "abc1234",
+      "decision": "ready",
+      "findings": [],
+      "receipt": {
+        "changedCells": 1,
+        "executionRecords": [
+          "run-2026-05-28-a"
+        ],
+        "environmentFingerprint": "sha256:env-clean",
+        "blockedFindings": 0,
+        "heldFindings": 0,
+        "nextActions": []
+      }
+    },
+    {
+      "repositoryId": "repo-stale-output",
+      "notebookPath": "notebooks/figures.ipynb",
+      "commitSha": "def5678",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "stale_output_change",
+          "severity": "block",
+          "target": "cell-figure",
+          "message": "cell-figure changes notebook output without code/input changes or an execution record.",
+          "action": "Attach the execution record or revert the unproven output change."
+        },
+        {
+          "code": "large_output_without_evidence",
+          "severity": "hold",
+          "target": "cell-figure",
+          "message": "cell-figure changes 143000 output bytes without reviewer evidence.",
+          "action": "Add a figure checksum, table digest, screenshot, or run log."
+        }
+      ],
+      "receipt": {
+        "changedCells": 1,
+        "executionRecords": [],
+        "environmentFingerprint": "sha256:env-stable",
+        "blockedFindings": 1,
+        "heldFindings": 1,
+        "nextActions": [
+          "Attach the execution record or revert the unproven output change.",
+          "Add a figure checksum, table digest, screenshot, or run log."
+        ]
+      }
+    },
+    {
+      "repositoryId": "repo-missing-run",
+      "notebookPath": "notebooks/model.ipynb",
+      "commitSha": "987abcd",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "missing_execution_record",
+          "severity": "block",
+          "target": "cell-model",
+          "message": "cell-model changes executable content without a recorded run.",
+          "action": "Run the notebook or attach a reviewer-accepted execution receipt."
+        },
+        {
+          "code": "missing_environment_fingerprint",
+          "severity": "block",
+          "target": "cell-model",
+          "message": "cell-model depends on an environment change, but no environment fingerprint is present.",
+          "action": "Add a Dockerfile, lockfile, or environment digest to the diff receipt."
+        }
+      ],
+      "receipt": {
+        "changedCells": 1,
+        "executionRecords": [],
+        "environmentFingerprint": null,
+        "blockedFindings": 2,
+        "heldFindings": 0,
+        "nextActions": [
+          "Run the notebook or attach a reviewer-accepted execution receipt.",
+          "Add a Dockerfile, lockfile, or environment digest to the diff receipt."
+        ]
+      }
+    },
+    {
+      "repositoryId": "repo-noisy-digest",
+      "notebookPath": "notebooks/supplement.ipynb",
+      "commitSha": "456efgh",
+      "decision": "ready",
+      "findings": [
+        {
+          "code": "unchanged_output_digest",
+          "severity": "hold",
+          "target": "cell-supplement",
+          "message": "cell-supplement reports an output change but output digests are identical.",
+          "action": "Regenerate output digests or remove the noisy output diff."
+        }
+      ],
+      "receipt": {
+        "changedCells": 1,
+        "executionRecords": [
+          "run-2026-05-28-b"
+        ],
+        "environmentFingerprint": "sha256:env-supplement",
+        "blockedFindings": 0,
+        "heldFindings": 1,
+        "nextActions": [
+          "Regenerate output digests or remove the noisy output diff."
+        ]
+      }
+    }
+  ]
+}

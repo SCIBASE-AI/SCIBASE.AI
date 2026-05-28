@@ -1,0 +1,227 @@
+{
+  "account": {
+    "id": "acct-northstar-lab",
+    "name": "Northstar Translational Lab",
+    "tier": "lab"
+  },
+  "summary": {
+    "decision": "hold-revenue-close",
+    "riskScore": 100,
+    "auditDigest": "6facc076fcf01220",
+    "usageEventsReviewed": 4,
+    "invoicesReviewed": 2,
+    "licensingExportsReviewed": 1,
+    "totalComputeUnits": 1220,
+    "effectiveComputeQuota": 1200,
+    "findings": 11,
+    "criticalFindings": 2,
+    "highFindings": 6
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "recommendation": "Backfill usage into the current invoice preview or create an adjustment line.",
+      "code": "USAGE_NOT_BILLED",
+      "eventId": "usage-002",
+      "message": "usage-002 is billable but missing from invoice usage references.",
+      "evidence": {
+        "id": "usage-002",
+        "meter": "ai_compute",
+        "units": 420,
+        "billable": true,
+        "accountState": "paid",
+        "source": "notebook-reproducibility-runner"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Backfill usage into the current invoice preview or create an adjustment line.",
+      "code": "USAGE_NOT_BILLED",
+      "eventId": "usage-003",
+      "message": "usage-003 is billable but missing from invoice usage references.",
+      "evidence": {
+        "id": "usage-003",
+        "meter": "ai_compute",
+        "units": 60,
+        "billable": true,
+        "accountState": "trial",
+        "source": "foundation-model-finetune-preview"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Block paid compute features when trial entitlements are exhausted.",
+      "code": "FREE_TRIAL_COMPUTE_LEAK",
+      "eventId": "usage-003",
+      "message": "usage-003 consumed paid compute beyond trial entitlement.",
+      "evidence": {
+        "event": {
+          "id": "usage-003",
+          "meter": "ai_compute",
+          "units": 60,
+          "billable": true,
+          "accountState": "trial",
+          "source": "foundation-model-finetune-preview"
+        },
+        "trialRemaining": 25
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Bill analytics API overage or throttle the license key.",
+      "code": "LICENSED_API_OVERAGE",
+      "eventId": "usage-004",
+      "message": "usage-004 exceeded licensed analytics API allowance without overage billing.",
+      "evidence": {
+        "id": "usage-004",
+        "meter": "analytics_api",
+        "units": 14500,
+        "billable": true,
+        "overageBilled": false,
+        "source": "citation-network-api"
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Enforce compute quota gates before allowing additional jobs.",
+      "code": "OVER_QUOTA_NOT_BLOCKED",
+      "message": "Compute usage 1220 exceeds quota 1200 without hard-limit enforcement.",
+      "evidence": {
+        "totalComputeUnits": 1220,
+        "effectiveComputeQuota": 1200,
+        "enforcement": {
+          "computeHardLimitEnabled": false
+        }
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Reconcile plan entitlements with subscription tier before charging usage.",
+      "code": "PLAN_ENTITLEMENT_MISMATCH",
+      "message": "Active private projects 9 exceed lab plan limit 6.",
+      "evidence": {
+        "plan": {
+          "tier": "lab",
+          "computeUnitQuota": 1000,
+          "trialComputeUnitsRemaining": 25,
+          "analyticsApiMonthlyLimit": 10000,
+          "privateProjectLimit": 6,
+          "maxDiscountPercent": 20
+        },
+        "activePrivateProjects": 9
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Deduplicate top-up credits before producing quota or invoice totals.",
+      "code": "TOPUP_DOUBLE_COUNTED",
+      "topupId": "topup-002",
+      "message": "Top-up topup-002 duplicates topup-001.",
+      "evidence": {
+        "id": "topup-002",
+        "provider": "stripe",
+        "externalPaymentId": "pi_123",
+        "computeUnits": 200,
+        "duplicateOf": "topup-001"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Require revenue-ops approval for discount overrides above policy.",
+      "code": "DISCOUNT_EXCEEDS_POLICY",
+      "invoiceId": "inv-001",
+      "message": "Invoice inv-001 applies 35% discount above policy 20%.",
+      "evidence": {
+        "id": "inv-001",
+        "collectionMethod": "institutional_invoice",
+        "purchaseOrderId": "",
+        "discountPercent": 35,
+        "revenueOpsApprovalId": "",
+        "usageEventIds": [
+          "usage-001",
+          "usage-004"
+        ]
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Hold invoice finalization until purchase order metadata is attached.",
+      "code": "INSTITUTIONAL_PO_MISSING",
+      "invoiceId": "inv-001",
+      "message": "Institutional invoice inv-001 is missing purchase order metadata.",
+      "evidence": {
+        "id": "inv-001",
+        "collectionMethod": "institutional_invoice",
+        "purchaseOrderId": "",
+        "discountPercent": 35,
+        "revenueOpsApprovalId": "",
+        "usageEventIds": [
+          "usage-001",
+          "usage-004"
+        ]
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Remove private-content fields from analytics licensing exports.",
+      "code": "PRIVATE_CONTENT_LICENSED",
+      "exportId": "export-001",
+      "message": "Analytics export export-001 includes disallowed private fields: private_project_title, raw_content_excerpt.",
+      "evidence": {
+        "id": "export-001",
+        "customer": "National Research Policy Office",
+        "fields": [
+          "citation_network",
+          "dataset_reuse_score",
+          "private_project_title",
+          "raw_content_excerpt"
+        ]
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Reconcile Stripe, PayPal, and invoice ledger totals before revenue close.",
+      "code": "PAYMENT_PROVIDER_DRIFT",
+      "message": "Payment provider revenue totals differ by $230.00.",
+      "evidence": {
+        "totals": [
+          {
+            "provider": "stripe",
+            "cents": 1845025
+          },
+          {
+            "provider": "paypal",
+            "cents": 1844995
+          },
+          {
+            "provider": "institutional_ledger",
+            "cents": 1822025
+          }
+        ],
+        "spreadCents": 23000
+      }
+    }
+  ],
+  "reconciliationGates": [
+    {
+      "gate": "All billable usage appears on invoice previews.",
+      "passed": false
+    },
+    {
+      "gate": "Compute usage cannot exceed quota without enforcement.",
+      "passed": false
+    },
+    {
+      "gate": "Institutional invoices include purchase order metadata.",
+      "passed": false
+    },
+    {
+      "gate": "Analytics licensing exports exclude private content.",
+      "passed": false
+    },
+    {
+      "gate": "Payment provider totals reconcile before close.",
+      "passed": false
+    }
+  ]
+}

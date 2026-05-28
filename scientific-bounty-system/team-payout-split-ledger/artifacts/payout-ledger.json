@@ -1,0 +1,200 @@
+{
+  "summary": {
+    "total": 3,
+    "payable": 1,
+    "blocked": 2,
+    "held": 2,
+    "unlockedCents": 230000,
+    "lockedCents": 40000
+  },
+  "ledgers": [
+    {
+      "challengeId": "bio-marker-panel",
+      "title": "Biomarker validation panel",
+      "currency": "USD",
+      "totalPrizeCents": 120000,
+      "unlockedAmountCents": 80000,
+      "lockedAmountCents": 40000,
+      "payable": true,
+      "allocations": [
+        {
+          "contributorId": "solver-alpha",
+          "role": "analysis lead",
+          "payoutRouteStatus": "verified",
+          "grossCents": 44000,
+          "institutionCents": 8000,
+          "solverCents": 36000
+        },
+        {
+          "contributorId": "solver-beta",
+          "role": "wet-lab validation",
+          "payoutRouteStatus": "verified",
+          "grossCents": 24000,
+          "institutionCents": 4000,
+          "solverCents": 20000
+        },
+        {
+          "contributorId": "solver-gamma",
+          "role": "reproducibility reviewer",
+          "payoutRouteStatus": "verified",
+          "grossCents": 12000,
+          "institutionCents": 0,
+          "solverCents": 12000
+        }
+      ],
+      "findings": [
+        {
+          "code": "milestone_locked",
+          "severity": "hold",
+          "target": "replication",
+          "message": "replication is pending_sponsor_review; funds stay locked until sponsor acceptance.",
+          "action": "Wait for sponsor acceptance or revise the deliverable packet."
+        }
+      ],
+      "receipt": {
+        "awardBasis": "2 accepted milestone(s), 1 locked milestone(s)",
+        "releaseStatus": "ready_for_sponsor_review",
+        "acceptedMilestones": [
+          "proposal",
+          "prototype"
+        ],
+        "lockedMilestones": [
+          "replication"
+        ],
+        "totalAllocatedCents": 80000,
+        "nextActions": [
+          "Wait for sponsor acceptance or revise the deliverable packet."
+        ]
+      }
+    },
+    {
+      "challengeId": "climate-forecast",
+      "title": "Regional climate forecast benchmark",
+      "currency": "USD",
+      "totalPrizeCents": 90000,
+      "unlockedAmountCents": 90000,
+      "lockedAmountCents": 0,
+      "payable": false,
+      "allocations": [
+        {
+          "contributorId": "solver-delta",
+          "role": "model owner",
+          "payoutRouteStatus": "verified",
+          "grossCents": 63000,
+          "institutionCents": 22500,
+          "solverCents": 40500
+        },
+        {
+          "contributorId": "solver-epsilon",
+          "role": "data engineer",
+          "payoutRouteStatus": "pending",
+          "grossCents": 22500,
+          "institutionCents": 0,
+          "solverCents": 22500
+        }
+      ],
+      "findings": [
+        {
+          "code": "payout_route_unverified",
+          "severity": "block",
+          "target": "solver-epsilon",
+          "message": "solver-epsilon has payout route status pending.",
+          "action": "Hold release for this contributor until payout route verification is complete."
+        },
+        {
+          "code": "split_total_mismatch",
+          "severity": "block",
+          "target": "climate-forecast",
+          "message": "Contributor splits total 9500 basis points instead of 10000.",
+          "action": "Rebalance contributor splits before payout approval."
+        },
+        {
+          "code": "institution_overhead_exceeds_cap",
+          "severity": "block",
+          "target": "solver-delta",
+          "message": "solver-delta routes 2500 basis points to an institution, above the 1200 cap.",
+          "action": "Lower institution overhead or attach sponsor-approved exception evidence."
+        }
+      ],
+      "receipt": {
+        "awardBasis": "2 accepted milestone(s), 0 locked milestone(s)",
+        "releaseStatus": "blocked",
+        "acceptedMilestones": [
+          "proposal",
+          "forecast-model"
+        ],
+        "lockedMilestones": [],
+        "totalAllocatedCents": 85500,
+        "nextActions": [
+          "Hold release for this contributor until payout route verification is complete.",
+          "Rebalance contributor splits before payout approval.",
+          "Lower institution overhead or attach sponsor-approved exception evidence."
+        ]
+      }
+    },
+    {
+      "challengeId": "quantum-noise",
+      "title": "Quantum noise reduction challenge",
+      "currency": "USD",
+      "totalPrizeCents": 60000,
+      "unlockedAmountCents": 60000,
+      "lockedAmountCents": 0,
+      "payable": false,
+      "allocations": [
+        {
+          "contributorId": "solver-zeta",
+          "role": "principal investigator",
+          "payoutRouteStatus": "verified",
+          "grossCents": 54000,
+          "institutionCents": 48000,
+          "solverCents": 6000
+        },
+        {
+          "contributorId": "solver-eta",
+          "role": "experiment reviewer",
+          "payoutRouteStatus": "verified",
+          "grossCents": 6000,
+          "institutionCents": 0,
+          "solverCents": 6000
+        }
+      ],
+      "findings": [
+        {
+          "code": "institution_overhead_exceeds_cap",
+          "severity": "block",
+          "target": "solver-zeta",
+          "message": "solver-zeta routes 8000 basis points to an institution, above the 1500 cap.",
+          "action": "Lower institution overhead or attach sponsor-approved exception evidence."
+        },
+        {
+          "code": "solver_share_below_minimum",
+          "severity": "hold",
+          "target": "solver-zeta",
+          "message": "solver-zeta keeps 1000 basis points after overhead, below the 1200 minimum.",
+          "action": "Increase direct solver share or move institution recovery outside the bounty payout."
+        },
+        {
+          "code": "solver_share_below_minimum",
+          "severity": "hold",
+          "target": "solver-eta",
+          "message": "solver-eta keeps 1000 basis points after overhead, below the 1200 minimum.",
+          "action": "Increase direct solver share or move institution recovery outside the bounty payout."
+        }
+      ],
+      "receipt": {
+        "awardBasis": "2 accepted milestone(s), 0 locked milestone(s)",
+        "releaseStatus": "blocked",
+        "acceptedMilestones": [
+          "proposal",
+          "prototype"
+        ],
+        "lockedMilestones": [],
+        "totalAllocatedCents": 60000,
+        "nextActions": [
+          "Lower institution overhead or attach sponsor-approved exception evidence.",
+          "Increase direct solver share or move institution recovery outside the bounty payout."
+        ]
+      }
+    }
+  ]
+}

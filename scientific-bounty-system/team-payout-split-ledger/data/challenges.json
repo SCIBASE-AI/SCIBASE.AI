@@ -1,0 +1,100 @@
+[
+  {
+    "challengeId": "bio-marker-panel",
+    "title": "Biomarker validation panel",
+    "currency": "USD",
+    "totalPrizeCents": 120000,
+    "policy": {
+      "maxInstitutionOverheadBasisPoints": 1500,
+      "minSolverShareBasisPoints": 1000
+    },
+    "milestones": [
+      { "id": "proposal", "status": "accepted", "amountCents": 30000 },
+      { "id": "prototype", "status": "accepted", "amountCents": 50000 },
+      { "id": "replication", "status": "pending_sponsor_review", "amountCents": 40000 }
+    ],
+    "contributors": [
+      {
+        "id": "solver-alpha",
+        "role": "analysis lead",
+        "splitBasisPoints": 5500,
+        "institutionOverheadBasisPoints": 1000,
+        "payoutRouteStatus": "verified"
+      },
+      {
+        "id": "solver-beta",
+        "role": "wet-lab validation",
+        "splitBasisPoints": 3000,
+        "institutionOverheadBasisPoints": 500,
+        "payoutRouteStatus": "verified"
+      },
+      {
+        "id": "solver-gamma",
+        "role": "reproducibility reviewer",
+        "splitBasisPoints": 1500,
+        "institutionOverheadBasisPoints": 0,
+        "payoutRouteStatus": "verified"
+      }
+    ]
+  },
+  {
+    "challengeId": "climate-forecast",
+    "title": "Regional climate forecast benchmark",
+    "currency": "USD",
+    "totalPrizeCents": 90000,
+    "policy": {
+      "maxInstitutionOverheadBasisPoints": 1200,
+      "minSolverShareBasisPoints": 800
+    },
+    "milestones": [
+      { "id": "proposal", "status": "accepted", "amountCents": 20000 },
+      { "id": "forecast-model", "status": "accepted", "amountCents": 70000 }
+    ],
+    "contributors": [
+      {
+        "id": "solver-delta",
+        "role": "model owner",
+        "splitBasisPoints": 7000,
+        "institutionOverheadBasisPoints": 2500,
+        "payoutRouteStatus": "verified"
+      },
+      {
+        "id": "solver-epsilon",
+        "role": "data engineer",
+        "splitBasisPoints": 2500,
+        "institutionOverheadBasisPoints": 0,
+        "payoutRouteStatus": "pending"
+      }
+    ]
+  },
+  {
+    "challengeId": "quantum-noise",
+    "title": "Quantum noise reduction challenge",
+    "currency": "USD",
+    "totalPrizeCents": 60000,
+    "policy": {
+      "maxInstitutionOverheadBasisPoints": 1500,
+      "minSolverShareBasisPoints": 1200
+    },
+    "milestones": [
+      { "id": "proposal", "status": "accepted", "amountCents": 25000 },
+      { "id": "prototype", "status": "accepted", "amountCents": 35000 }
+    ],
+    "contributors": [
+      {
+        "id": "solver-zeta",
+        "role": "principal investigator",
+        "splitBasisPoints": 9000,
+        "institutionOverheadBasisPoints": 8000,
+        "payoutRouteStatus": "verified"
+      },
+      {
+        "id": "solver-eta",
+        "role": "experiment reviewer",
+        "splitBasisPoints": 1000,
+        "institutionOverheadBasisPoints": 0,
+        "payoutRouteStatus": "verified"
+      }
+    ]
+  }
+]

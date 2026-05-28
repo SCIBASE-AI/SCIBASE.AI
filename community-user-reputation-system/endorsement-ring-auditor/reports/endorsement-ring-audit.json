@@ -1,0 +1,180 @@
+{
+  "batchId": "reputation-batch-2026-05-ring",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "decision": "freeze-reputation-cluster",
+  "riskScore": 100,
+  "userCount": 4,
+  "eventCount": 5,
+  "reputationChangeCount": 1,
+  "findings": [
+    {
+      "severity": "high",
+      "code": "RECIPROCAL_ENDORSEMENT_WINDOW",
+      "title": "Reciprocal endorsements occurred inside the ring-risk window",
+      "evidence": "user-alpha<->user-beta within 72h via evt-1/evt-2.",
+      "action": "Hold the reputation delta until reviewers validate that the endorsements are independent."
+    },
+    {
+      "severity": "high",
+      "code": "RECIPROCAL_ENDORSEMENT_WINDOW",
+      "title": "Reciprocal endorsements occurred inside the ring-risk window",
+      "evidence": "user-beta<->user-alpha within 72h via evt-2/evt-1.",
+      "action": "Hold the reputation delta until reviewers validate that the endorsements are independent."
+    },
+    {
+      "severity": "high",
+      "code": "RECIPROCAL_ENDORSEMENT_WINDOW",
+      "title": "Reciprocal endorsements occurred inside the ring-risk window",
+      "evidence": "user-alpha<->user-beta within 72h via evt-5/evt-2.",
+      "action": "Hold the reputation delta until reviewers validate that the endorsements are independent."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "title": "Endorsement burst exceeds normal review cadence",
+      "evidence": "user-alpha created 4 endorsements within 24h near 2026-05-28T01:00:00Z.",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "title": "Endorsement burst exceeds normal review cadence",
+      "evidence": "user-alpha created 4 endorsements within 24h near 2026-05-28T04:00:00Z.",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "title": "Endorsement burst exceeds normal review cadence",
+      "evidence": "user-alpha created 4 endorsements within 24h near 2026-05-28T05:00:00Z.",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "title": "Endorsement burst exceeds normal review cadence",
+      "evidence": "user-alpha created 4 endorsements within 24h near 2026-05-28T06:00:00Z.",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "severity": "blocker",
+      "code": "SHARED_SIGNAL_ENDORSEMENT_CLUSTER",
+      "title": "Endorsement cluster shares too many identity or affiliation signals",
+      "evidence": "5 endorsement edges share device, recovery, invite, or affiliation signals.",
+      "action": "Freeze the cluster and require manual identity/reputation review before applying scores."
+    },
+    {
+      "severity": "high",
+      "code": "REVIEWER_OVERLAP_TOO_HIGH",
+      "title": "Reputation change relies on overlapping reviewers",
+      "evidence": "rep-1 overlap ratio=0.67 from 3 reviewer slots.",
+      "action": "Require independent reviewers before applying the reputation or badge delta."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "title": "Endorsement lacks project evidence",
+      "evidence": "evt-1 has no evidence URL or project contribution ID.",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "title": "Endorsement lacks project evidence",
+      "evidence": "evt-2 has no evidence URL or project contribution ID.",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "title": "Endorsement lacks project evidence",
+      "evidence": "evt-4 has no evidence URL or project contribution ID.",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "severity": "medium",
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "title": "Endorsement lacks project evidence",
+      "evidence": "evt-5 has no evidence URL or project contribution ID.",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "severity": "high",
+      "code": "BADGE_CRITERIA_SNAPSHOT_MISSING",
+      "title": "Badge award lacks criteria snapshot",
+      "evidence": "rep-1 awards trusted-reviewer without criteria evidence.",
+      "action": "Block badge publication until criteria and evidence snapshots are stored."
+    },
+    {
+      "severity": "high",
+      "code": "REPUTATION_DELTA_OUTPACES_EVIDENCE",
+      "title": "Reputation delta outpaces supporting evidence",
+      "evidence": "user-beta gained 55 reputation with few supporting events.",
+      "action": "Cap the daily reputation delta until more independent project evidence is present."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "RECIPROCAL_ENDORSEMENT_WINDOW",
+      "action": "Hold the reputation delta until reviewers validate that the endorsements are independent."
+    },
+    {
+      "code": "RECIPROCAL_ENDORSEMENT_WINDOW",
+      "action": "Hold the reputation delta until reviewers validate that the endorsements are independent."
+    },
+    {
+      "code": "RECIPROCAL_ENDORSEMENT_WINDOW",
+      "action": "Hold the reputation delta until reviewers validate that the endorsements are independent."
+    },
+    {
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "code": "ENDORSEMENT_BURST_PATTERN",
+      "action": "Rate-limit endorsement impact and ask for evidence on the bursted reputation events."
+    },
+    {
+      "code": "SHARED_SIGNAL_ENDORSEMENT_CLUSTER",
+      "action": "Freeze the cluster and require manual identity/reputation review before applying scores."
+    },
+    {
+      "code": "REVIEWER_OVERLAP_TOO_HIGH",
+      "action": "Require independent reviewers before applying the reputation or badge delta."
+    },
+    {
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "code": "ENDORSEMENT_EVIDENCE_MISSING",
+      "action": "Keep the endorsement visible as social context only until contribution evidence is attached."
+    },
+    {
+      "code": "BADGE_CRITERIA_SNAPSHOT_MISSING",
+      "action": "Block badge publication until criteria and evidence snapshots are stored."
+    },
+    {
+      "code": "REPUTATION_DELTA_OUTPACES_EVIDENCE",
+      "action": "Cap the daily reputation delta until more independent project evidence is present."
+    }
+  ],
+  "generatedFrom": "synthetic-reputation-events-only",
+  "auditDigest": "b6f7307c8ce9bf57"
+}

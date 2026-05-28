@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="450" viewBox="0 0 960 450" role="img" aria-label="Endorsement ring audit summary">
+  <rect width="960" height="450" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="402" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="36" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Endorsement Ring Audit</text>
+  <rect x="36" y="98" width="390" height="48" rx="6" fill="#b42318"/>
+  <text x="56" y="129" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">freeze-reputation-cluster</text>
+  <text x="456" y="129" font-family="Arial" font-size="22" fill="#101828">Risk score: 100</text>
+  <text x="36" y="166" font-family="Arial" font-size="18" fill="#667085">Audit digest: b6f7307c8ce9bf57</text>
+  <text x="36" y="202" font-family="Arial" font-size="18" fill="#344054">users</text>
+  <rect x="190" y="180" width="470" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="180" width="125" height="28" rx="5" fill="#12b76a"/>
+  <text x="686" y="202" font-family="Arial" font-size="18" fill="#344054">4</text>
+<text x="36" y="256" font-family="Arial" font-size="18" fill="#344054">events</text>
+  <rect x="190" y="234" width="470" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="234" width="157" height="28" rx="5" fill="#12b76a"/>
+  <text x="686" y="256" font-family="Arial" font-size="18" fill="#344054">5</text>
+<text x="36" y="310" font-family="Arial" font-size="18" fill="#344054">changes</text>
+  <rect x="190" y="288" width="470" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="288" width="31" height="28" rx="5" fill="#12b76a"/>
+  <text x="686" y="310" font-family="Arial" font-size="18" fill="#344054">1</text>
+<text x="36" y="364" font-family="Arial" font-size="18" fill="#344054">findings</text>
+  <rect x="190" y="342" width="470" height="28" rx="5" fill="#eaecf0"/>
+  <rect x="190" y="342" width="470" height="28" rx="5" fill="#b42318"/>
+  <text x="686" y="364" font-family="Arial" font-size="18" fill="#344054">15</text>
+  <text x="36" y="416" font-family="Arial" font-size="18" fill="#667085">Synthetic reputation events only. No live profile or device lookups.</text>
+</svg>

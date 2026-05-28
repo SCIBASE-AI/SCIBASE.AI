@@ -1,0 +1,337 @@
+{
+  "graph": {
+    "id": "graph-neuro-discovery",
+    "title": "Neuroinflammation Discovery Graph",
+    "userId": "researcher-maya"
+  },
+  "summary": {
+    "decision": "hold-recommendations",
+    "riskScore": 100,
+    "auditDigest": "0a7733f83578eac8",
+    "nodesReviewed": 6,
+    "edgesReviewed": 4,
+    "recommendationsReviewed": 5,
+    "findings": 15,
+    "criticalFindings": 3,
+    "highFindings": 4
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "recommendation": "Remove private or embargoed graph nodes from recommendations and digest payloads.",
+      "code": "PRIVATE_NODE_LEAK",
+      "recommendationId": "rec-001",
+      "message": "rec-001 exposes private or embargoed nodes: dataset-raw-phi, dataset-raw-phi.",
+      "evidence": [
+        {
+          "id": "dataset-raw-phi",
+          "type": "dataset",
+          "canonicalName": "Private clinical cytokine panel",
+          "schemaOrgType": "Dataset",
+          "domain": "immunology",
+          "year": 2025,
+          "visibility": "private",
+          "reproducibilityScore": 0.72,
+          "sourceIds": [
+            "internal:cytokine-panel"
+          ]
+        },
+        {
+          "id": "dataset-raw-phi",
+          "type": "dataset",
+          "canonicalName": "Private clinical cytokine panel",
+          "schemaOrgType": "Dataset",
+          "domain": "immunology",
+          "year": 2025,
+          "visibility": "private",
+          "reproducibilityScore": 0.72,
+          "sourceIds": [
+            "internal:cytokine-panel"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "high",
+      "recommendation": "Apply user domain, institution, date, and reproducibility filters before ranking.",
+      "code": "FILTER_VIOLATION",
+      "recommendationId": "rec-002",
+      "message": "rec-002 target paper-retracted violates applied user filters.",
+      "evidence": {
+        "target": {
+          "id": "paper-retracted",
+          "type": "paper",
+          "canonicalName": "Retracted cytokine inference model",
+          "schemaOrgType": "ScholarlyArticle",
+          "domain": "neuroscience",
+          "year": 2022,
+          "visibility": "public",
+          "reproducibilityScore": 0.22,
+          "sourceIds": [
+            "doi:10.1000/retracted"
+          ]
+        },
+        "filters": {
+          "domain": "neuroscience",
+          "minReproducibilityScore": 0.5
+        },
+        "userContext": {
+          "userId": "researcher-maya",
+          "institution": "Northstar University",
+          "domains": [
+            "neuroscience",
+            "immunology"
+          ]
+        }
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Suppress recommendations whose path depends on retracted or blocked citations.",
+      "code": "RETRACTED_SOURCE_USED",
+      "recommendationId": "rec-002",
+      "message": "rec-002 depends on retracted or blocked evidence edges.",
+      "evidence": [
+        {
+          "from": "paper-001",
+          "to": "paper-retracted",
+          "relation": "cites",
+          "citations": 4,
+          "weight": 3,
+          "directed": true,
+          "retracted": true
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Require stronger citation, reuse, or co-occurrence evidence for this suggestion.",
+      "code": "WEAK_EVIDENCE_SCORE",
+      "recommendationId": "rec-002",
+      "message": "rec-002 evidence score 12 is below policy minimum.",
+      "evidence": {
+        "evidenceScore": 12,
+        "policyMinimum": 55
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Refresh trend features before using the recommendation in a weekly digest.",
+      "code": "STALE_TREND_SIGNAL",
+      "recommendationId": "rec-002",
+      "message": "rec-002 uses trend features 31 days old.",
+      "evidence": "2026-04-28T00:00:00Z"
+    },
+    {
+      "severity": "high",
+      "recommendation": "Store the user-facing reason and feature weights for personalized recommendations.",
+      "code": "UNEXPLAINED_PERSONALIZATION",
+      "recommendationId": "rec-002",
+      "message": "rec-002 lacks explainable personalization details.",
+      "evidence": {
+        "id": "rec-002",
+        "targetNodeId": "paper-retracted",
+        "surface": "weekly_digest",
+        "explanationPath": [
+          "paper-001",
+          "paper-retracted"
+        ],
+        "appliedFilters": {
+          "domain": "neuroscience",
+          "minReproducibilityScore": 0.5
+        },
+        "trendFeaturesUpdatedAt": "2026-04-28T00:00:00Z",
+        "userFacingReason": "",
+        "featureWeights": {}
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Apply user domain, institution, date, and reproducibility filters before ranking.",
+      "code": "FILTER_VIOLATION",
+      "recommendationId": "rec-003",
+      "message": "rec-003 target method-graph-rag violates applied user filters.",
+      "evidence": {
+        "target": {
+          "id": "method-graph-rag",
+          "type": "method",
+          "canonicalName": "Graph RAG literature ranking",
+          "schemaOrgType": "SoftwareSourceCode",
+          "domain": "computer science",
+          "year": 2023,
+          "visibility": "public",
+          "reproducibilityScore": 0.58,
+          "sourceIds": [
+            "doi:10.1000/graphrag"
+          ]
+        },
+        "filters": {
+          "domain": "neuroscience",
+          "institutionOnly": true
+        },
+        "userContext": {
+          "userId": "researcher-maya",
+          "institution": "Northstar University",
+          "domains": [
+            "neuroscience",
+            "immunology"
+          ]
+        }
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Require stronger citation, reuse, or co-occurrence evidence for this suggestion.",
+      "code": "WEAK_EVIDENCE_SCORE",
+      "recommendationId": "rec-003",
+      "message": "rec-003 evidence score 8 is below policy minimum.",
+      "evidence": {
+        "evidenceScore": 8,
+        "policyMinimum": 55
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Refresh trend features before using the recommendation in a weekly digest.",
+      "code": "STALE_TREND_SIGNAL",
+      "recommendationId": "rec-003",
+      "message": "rec-003 uses trend features 19 days old.",
+      "evidence": "2026-05-10T00:00:00Z"
+    },
+    {
+      "severity": "high",
+      "recommendation": "Regenerate the recommendation path from existing graph edges before surfacing it.",
+      "code": "EXPLANATION_PATH_BROKEN",
+      "recommendationId": "rec-004",
+      "message": "rec-004 explanation path cannot be reconstructed from graph edges.",
+      "evidence": [
+        "paper-001",
+        "protocol-lps",
+        "tool-missing-schema"
+      ]
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Require stronger citation, reuse, or co-occurrence evidence for this suggestion.",
+      "code": "WEAK_EVIDENCE_SCORE",
+      "recommendationId": "rec-004",
+      "message": "rec-004 evidence score 35 is below policy minimum.",
+      "evidence": {
+        "evidenceScore": 35,
+        "policyMinimum": 55
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Attach schema.org-compatible entity metadata before publishing the node.",
+      "code": "MISSING_SCHEMA_METADATA",
+      "recommendationId": "rec-004",
+      "nodeId": "tool-missing-schema",
+      "message": "tool-missing-schema is missing schema.org-compatible metadata.",
+      "evidence": {
+        "id": "tool-missing-schema",
+        "type": "tool",
+        "canonicalName": "",
+        "schemaOrgType": "",
+        "domain": "neuroscience",
+        "year": 2025,
+        "visibility": "public",
+        "reproducibilityScore": 0.49,
+        "sourceIds": []
+      }
+    },
+    {
+      "severity": "low",
+      "recommendation": "Deduplicate equivalent target nodes across workspace sidebar and email digest.",
+      "code": "DUPLICATE_RECOMMENDATION",
+      "recommendationId": "rec-005",
+      "message": "rec-005 duplicates target from rec-001.",
+      "evidence": {
+        "id": "rec-005",
+        "targetNodeId": "dataset-raw-phi",
+        "surface": "weekly_digest",
+        "explanationPath": [
+          "paper-001",
+          "protocol-lps",
+          "dataset-raw-phi"
+        ],
+        "appliedFilters": {
+          "domain": "immunology"
+        },
+        "trendFeaturesUpdatedAt": "2026-05-26T00:00:00Z",
+        "userFacingReason": "Duplicate digest candidate for dedupe testing.",
+        "featureWeights": {
+          "sharedProtocol": 2.1
+        }
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Remove private or embargoed graph nodes from recommendations and digest payloads.",
+      "code": "PRIVATE_NODE_LEAK",
+      "recommendationId": "rec-005",
+      "message": "rec-005 exposes private or embargoed nodes: dataset-raw-phi, dataset-raw-phi.",
+      "evidence": [
+        {
+          "id": "dataset-raw-phi",
+          "type": "dataset",
+          "canonicalName": "Private clinical cytokine panel",
+          "schemaOrgType": "Dataset",
+          "domain": "immunology",
+          "year": 2025,
+          "visibility": "private",
+          "reproducibilityScore": 0.72,
+          "sourceIds": [
+            "internal:cytokine-panel"
+          ]
+        },
+        {
+          "id": "dataset-raw-phi",
+          "type": "dataset",
+          "canonicalName": "Private clinical cytokine panel",
+          "schemaOrgType": "Dataset",
+          "domain": "immunology",
+          "year": 2025,
+          "visibility": "private",
+          "reproducibilityScore": 0.72,
+          "sourceIds": [
+            "internal:cytokine-panel"
+          ]
+        }
+      ]
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Require stronger citation, reuse, or co-occurrence evidence for this suggestion.",
+      "code": "WEAK_EVIDENCE_SCORE",
+      "recommendationId": "rec-005",
+      "message": "rec-005 evidence score 49 is below policy minimum.",
+      "evidence": {
+        "evidenceScore": 49,
+        "policyMinimum": 55
+      }
+    }
+  ],
+  "recommendationGates": [
+    {
+      "gate": "Recommendation paths do not leak private or embargoed nodes.",
+      "passed": false
+    },
+    {
+      "gate": "Every explanation path is reconstructable from graph edges.",
+      "passed": false
+    },
+    {
+      "gate": "Applied filters are enforced before ranking.",
+      "passed": false
+    },
+    {
+      "gate": "No recommendation depends on retracted or blocked evidence.",
+      "passed": false
+    },
+    {
+      "gate": "Personalized suggestions include user-facing reasons and feature weights.",
+      "passed": false
+    }
+  ]
+}

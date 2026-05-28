@@ -1,0 +1,141 @@
+{
+  "manuscriptId": "ms-synthetic-power-001",
+  "title": "Synthetic Biomarker Response Study",
+  "reviewedAt": "2026-05-28",
+  "decision": "hold-claim-for-power-review",
+  "riskScore": 100,
+  "endpointReviews": [
+    {
+      "endpointId": "primary-response",
+      "role": "primary",
+      "enrolledN": 72,
+      "effectiveN": 56,
+      "requiredN": 131,
+      "plannedPower": 0.72
+    },
+    {
+      "endpointId": "secondary-quality-of-life",
+      "role": "secondary",
+      "enrolledN": 72,
+      "effectiveN": 56,
+      "requiredN": 64,
+      "plannedPower": 0.81
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "code": "MISSING_SAMPLE_SIZE_JUSTIFICATION",
+      "title": "Endpoint lacks a sample-size justification",
+      "evidence": "primary-response reports n=72 without a prospective sample-size rationale.",
+      "action": "Ask authors to add a prospective sample-size calculation or downgrade the AI summary confidence."
+    },
+    {
+      "severity": "high",
+      "code": "PLANNED_POWER_BELOW_THRESHOLD",
+      "title": "Planned power is below the review threshold",
+      "evidence": "primary-response planned power is 0.72, below required 0.8.",
+      "action": "Hold strong efficacy or reproducibility claims until the manuscript explains the lower power target."
+    },
+    {
+      "severity": "blocker",
+      "code": "EFFECTIVE_N_BELOW_REQUIRED",
+      "title": "Effective sample size is below the required level",
+      "evidence": "primary-response effective n=56 after attrition/exclusions, below required n=131.",
+      "action": "Flag the endpoint as underpowered and require either more data, narrower claims, or an exploratory label."
+    },
+    {
+      "severity": "medium",
+      "code": "ATTRITION_SENSITIVITY_MISSING",
+      "title": "Attrition risk is not reflected in a sensitivity analysis",
+      "evidence": "primary-response attrition is 18% without a sensitivity check.",
+      "action": "Request an attrition-adjusted sensitivity analysis before AI summaries treat the result as stable."
+    },
+    {
+      "severity": "medium",
+      "code": "EFFECT_SIZE_SOURCE_MISMATCH",
+      "title": "Effect-size source does not match the manuscript domain",
+      "evidence": "primary-response uses effect-size evidence from metabolic-screening for oncology-biomarker.",
+      "action": "Ask reviewers to verify transferability or replace the effect-size prior with domain-matched evidence."
+    },
+    {
+      "severity": "high",
+      "code": "EFFECTIVE_N_BELOW_REQUIRED",
+      "title": "Effective sample size is below the required level",
+      "evidence": "secondary-quality-of-life effective n=56 after attrition/exclusions, below required n=64.",
+      "action": "Flag the endpoint as underpowered and require either more data, narrower claims, or an exploratory label."
+    },
+    {
+      "severity": "medium",
+      "code": "SECONDARY_ENDPOINT_HEADLINE_CLAIM",
+      "title": "Headline claim relies on a secondary endpoint",
+      "evidence": "secondary-quality-of-life is secondary but appears in the manuscript headline claim.",
+      "action": "Keep the claim visible only as exploratory unless authors realign the endpoint hierarchy."
+    },
+    {
+      "severity": "high",
+      "code": "SUBGROUP_N_TOO_SMALL",
+      "title": "Subgroup claim is based on too few observations",
+      "evidence": "subgroup-young-adults uses subgroup n=18, below minimum n=30.",
+      "action": "Downgrade subgroup language and request a larger confirmatory cohort before profile summaries endorse it."
+    },
+    {
+      "severity": "high",
+      "code": "EVENTS_PER_PARAMETER_TOO_LOW",
+      "title": "Model has too few events per parameter",
+      "evidence": "subgroup-young-adults has 6 events for 2 model parameters.",
+      "action": "Hold model-performance claims until event-count adequacy or penalized modeling evidence is provided."
+    },
+    {
+      "severity": "high",
+      "code": "AI_SUMMARY_CONFIDENCE_TOO_HIGH",
+      "title": "AI summary confidence exceeds statistical-power evidence",
+      "evidence": "At least one high-confidence manuscript claim depends on underpowered or weakly justified evidence.",
+      "action": "Reduce AI summary confidence and surface the statistical-power caveat to reviewers."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "MISSING_SAMPLE_SIZE_JUSTIFICATION",
+      "action": "Ask authors to add a prospective sample-size calculation or downgrade the AI summary confidence."
+    },
+    {
+      "code": "PLANNED_POWER_BELOW_THRESHOLD",
+      "action": "Hold strong efficacy or reproducibility claims until the manuscript explains the lower power target."
+    },
+    {
+      "code": "EFFECTIVE_N_BELOW_REQUIRED",
+      "action": "Flag the endpoint as underpowered and require either more data, narrower claims, or an exploratory label."
+    },
+    {
+      "code": "ATTRITION_SENSITIVITY_MISSING",
+      "action": "Request an attrition-adjusted sensitivity analysis before AI summaries treat the result as stable."
+    },
+    {
+      "code": "EFFECT_SIZE_SOURCE_MISMATCH",
+      "action": "Ask reviewers to verify transferability or replace the effect-size prior with domain-matched evidence."
+    },
+    {
+      "code": "EFFECTIVE_N_BELOW_REQUIRED",
+      "action": "Flag the endpoint as underpowered and require either more data, narrower claims, or an exploratory label."
+    },
+    {
+      "code": "SECONDARY_ENDPOINT_HEADLINE_CLAIM",
+      "action": "Keep the claim visible only as exploratory unless authors realign the endpoint hierarchy."
+    },
+    {
+      "code": "SUBGROUP_N_TOO_SMALL",
+      "action": "Downgrade subgroup language and request a larger confirmatory cohort before profile summaries endorse it."
+    },
+    {
+      "code": "EVENTS_PER_PARAMETER_TOO_LOW",
+      "action": "Hold model-performance claims until event-count adequacy or penalized modeling evidence is provided."
+    },
+    {
+      "code": "AI_SUMMARY_CONFIDENCE_TOO_HIGH",
+      "action": "Reduce AI summary confidence and surface the statistical-power caveat to reviewers."
+    }
+  ],
+  "generatedFrom": "synthetic-data-only",
+  "auditDigest": "6b1e7ba57f47e1f0"
+}

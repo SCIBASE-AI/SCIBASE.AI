@@ -1,0 +1,137 @@
+{
+  "manuscriptId": "clinic-ae-demo-16",
+  "title": "Phase II kinase inhibitor safety manuscript",
+  "reviewDate": "2026-05-28",
+  "summary": {
+    "decision": "hold",
+    "findings": 7,
+    "arms": 2
+  },
+  "armReviews": [
+    {
+      "armId": "control",
+      "label": "Control",
+      "metrics": {
+        "participants": 120,
+        "exposurePatientYears": 92,
+        "eventCount": 16,
+        "eventRate": 0.1333,
+        "grade3PlusEvents": 2,
+        "grade3PlusRate": 0.0167,
+        "seriousAdverseEvents": 1,
+        "reportedSeriousAdverseEvents": 1,
+        "seriousAeExposureRate": 0.0109,
+        "missingDenominatorTerms": []
+      }
+    },
+    {
+      "armId": "treatment",
+      "label": "Treatment",
+      "metrics": {
+        "participants": 118,
+        "exposurePatientYears": 88,
+        "eventCount": 34,
+        "eventRate": 0.2881,
+        "grade3PlusEvents": 15,
+        "grade3PlusRate": 0.1271,
+        "seriousAdverseEvents": 6,
+        "reportedSeriousAdverseEvents": 2,
+        "seriousAeExposureRate": 0.0682,
+        "missingDenominatorTerms": [
+          "infection"
+        ]
+      }
+    }
+  ],
+  "findings": [
+    {
+      "code": "serious-ae-underreported",
+      "severity": "critical",
+      "message": "Treatment reports fewer serious adverse events than captured in source counts.",
+      "evidence": {
+        "armId": "treatment",
+        "captured": 6,
+        "reported": 2
+      },
+      "action": "reconcile-serious-adverse-event-table"
+    },
+    {
+      "code": "missing-event-denominator",
+      "severity": "high",
+      "message": "Treatment has adverse-event rows without participant denominators.",
+      "evidence": {
+        "armId": "treatment",
+        "terms": [
+          "infection"
+        ]
+      },
+      "action": "add-participants-at-risk-denominators"
+    },
+    {
+      "code": "arm-level-ae-imbalance",
+      "severity": "high",
+      "message": "Grade 3+ adverse-event burden differs materially across study arms.",
+      "evidence": {
+        "highestArmId": "treatment",
+        "lowestArmId": "control",
+        "highestRate": 0.1271,
+        "lowestRate": 0.0167
+      },
+      "action": "explain-arm-level-ae-imbalance"
+    },
+    {
+      "code": "exposure-adjusted-incidence-gap",
+      "severity": "high",
+      "message": "Exposure-adjusted serious adverse-event incidence is not discussed across arms.",
+      "evidence": {
+        "highestArmId": "treatment",
+        "lowestArmId": "control",
+        "highestRate": 0.0682,
+        "lowestRate": 0.0109
+      },
+      "action": "add-exposure-adjusted-safety-analysis"
+    },
+    {
+      "code": "oversight-follow-up-missing",
+      "severity": "high",
+      "message": "DSMB or IRB follow-up is not linked before safety language is marked ready.",
+      "evidence": {
+        "dsmbReviewLinked": false,
+        "irbFollowUpStatus": "pending"
+      },
+      "action": "link-dsmb-or-irb-follow-up-before-ready"
+    },
+    {
+      "code": "severity-grade-claim-mismatch",
+      "severity": "critical",
+      "message": "Safety claim understates the highest linked adverse-event severity grade.",
+      "evidence": {
+        "claimId": "claim-safe",
+        "maxLinkedGrade": 4
+      },
+      "action": "revise-safety-claim-to-match-severity-grades"
+    },
+    {
+      "code": "claim-downplays-safety-uncertainty",
+      "severity": "medium",
+      "message": "Manuscript wording downplays unresolved safety uncertainty.",
+      "evidence": {
+        "claimIds": [
+          "claim-safe"
+        ]
+      },
+      "action": "qualify-safety-language-before-release"
+    }
+  ],
+  "actions": [
+    "reconcile-serious-adverse-event-table",
+    "add-participants-at-risk-denominators",
+    "explain-arm-level-ae-imbalance",
+    "add-exposure-adjusted-safety-analysis",
+    "link-dsmb-or-irb-follow-up-before-ready",
+    "revise-safety-claim-to-match-severity-grades",
+    "qualify-safety-language-before-release"
+  ],
+  "redactedOversightAuditLog": "reviewer [redacted-email] noted token=[redacted] before DSMB review",
+  "digest": "sha256:629cb1eb83373c402aa3e743d6385e1e003eb0fc6a7b1cf043577f8cb22a6fe1"
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="620" viewBox="0 0 1160 620">
+  <rect width="1160" height="620" fill="#f8fafc"/>
+  <rect x="40" y="40" width="1080" height="540" rx="16" fill="#ffffff" stroke="#0f172a" stroke-width="3"/>
+  <text x="64" y="92" font-family="Arial" font-size="34" font-weight="700" fill="#0f172a">Clinical adverse-event safety assistant</text>
+  <text x="64" y="126" font-family="Arial" font-size="20" fill="#475569">Issue #16 AI-Powered Research Assistant Suite - synthetic reviewer packet</text>
+  <text x="64" y="156" font-family="Arial" font-size="22" fill="#b91c1c">Decision: HOLD until safety evidence is reconciled</text>
+  <rect x="64" y="151" width="1010" height="36" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+<text x="84" y="176" font-family="Arial" font-size="18" fill="#7c2d12">serious-ae-underreported: reconcile-serious-adverse-event-table</text>
+<rect x="64" y="199" width="1010" height="36" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+<text x="84" y="224" font-family="Arial" font-size="18" fill="#7c2d12">missing-event-denominator: add-participants-at-risk-denominators</text>
+<rect x="64" y="247" width="1010" height="36" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+<text x="84" y="272" font-family="Arial" font-size="18" fill="#7c2d12">arm-level-ae-imbalance: explain-arm-level-ae-imbalance</text>
+<rect x="64" y="295" width="1010" height="36" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+<text x="84" y="320" font-family="Arial" font-size="18" fill="#7c2d12">exposure-adjusted-incidence-gap: add-exposure-adjusted-safety-analysis</text>
+<rect x="64" y="343" width="1010" height="36" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+<text x="84" y="368" font-family="Arial" font-size="18" fill="#7c2d12">oversight-follow-up-missing: link-dsmb-or-irb-follow-up-before-ready</text>
+<rect x="64" y="391" width="1010" height="36" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+<text x="84" y="416" font-family="Arial" font-size="18" fill="#7c2d12">severity-grade-claim-mismatch: revise-safety-claim-to-match-severity-grades</text>
+<rect x="64" y="439" width="1010" height="36" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+<text x="84" y="464" font-family="Arial" font-size="18" fill="#7c2d12">claim-downplays-safety-uncertainty: qualify-safety-language-before-release</text>
+  <text x="64" y="558" font-family="Arial" font-size="18" fill="#475569">Digest: sha256:629cb1eb83373c402aa3e743d6385e1e003eb0fc6a7b1cf043577f8cb22a6fe1</text>
+</svg>

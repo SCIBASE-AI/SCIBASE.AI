@@ -1,0 +1,219 @@
+{
+  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "requirementMap": [
+    "Tiered subscription billing: validates seats, discounts, annual terms, and institutional order form evidence.",
+    "AI compute billing: holds below-margin or unapproved compute packs before entitlement activation.",
+    "Licensing APIs and analytics: requires privacy/data-use addenda before analytics license activation.",
+    "Secure payment integrations and invoicing: reconciles quote totals, invoice lines, PO evidence, and payment currency."
+  ],
+  "summary": {
+    "quoteCount": 4,
+    "approvedForActivation": 1,
+    "financeReview": 0,
+    "held": 3,
+    "averageQuoteScore": 25
+  },
+  "results": [
+    {
+      "quoteId": "quote-clean-institutional",
+      "customer": "Northbridge University",
+      "decision": "approve-activation",
+      "quoteScore": 100,
+      "expectedQuoteTotal": 90114,
+      "invoiceTotal": 90114,
+      "issueCounts": {},
+      "issues": [],
+      "actions": [
+        "Activate invoice, subscription entitlements, compute credits, and analytics license from approved quote."
+      ]
+    },
+    {
+      "quoteId": "quote-discount-overreach",
+      "customer": "Helix Bio Lab",
+      "decision": "hold-quote",
+      "quoteScore": 0,
+      "expectedQuoteTotal": 9198,
+      "invoiceTotal": 9000,
+      "issueCounts": {
+        "critical": 6,
+        "high": 1
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "missing-required-approval",
+          "message": "Missing required finance approval.",
+          "context": "finance"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-nonstandard-approval",
+          "message": "Non-standard terms require legal approval.",
+          "context": "legal"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-nonstandard-approval",
+          "message": "Non-standard terms require finance approval.",
+          "context": "finance"
+        },
+        {
+          "severity": "critical",
+          "code": "discount-exceeds-approval",
+          "message": "Discount exceeds approved threshold.",
+          "context": "lab-plan"
+        },
+        {
+          "severity": "high",
+          "code": "compute-margin-floor-risk",
+          "message": "AI compute unit price appears below margin floor.",
+          "context": "ai-compute-pack"
+        },
+        {
+          "severity": "critical",
+          "code": "invoice-total-drift",
+          "message": "Invoice total does not match approved quote lines.",
+          "context": "9198 vs 9000"
+        },
+        {
+          "severity": "critical",
+          "code": "seat-entitlement-overage",
+          "message": "Seat entitlement exceeds signed quote scope.",
+          "context": "quote-discount-overreach"
+        }
+      ],
+      "actions": [
+        "Collect finance approval before invoice or entitlement activation.",
+        "Route non-standard term packet to legal.",
+        "Route non-standard term packet to finance.",
+        "Reduce lab-plan discount or collect discount exception approval.",
+        "Reprice ai-compute-pack or attach finance-approved margin exception.",
+        "Regenerate invoice from approved quote line items.",
+        "Reduce seat entitlement to approved quote scope."
+      ]
+    },
+    {
+      "quoteId": "quote-invoice-drift",
+      "customer": "Civic Climate Consortium",
+      "decision": "hold-quote",
+      "quoteScore": 0,
+      "expectedQuoteTotal": 193500,
+      "invoiceTotal": 210000,
+      "issueCounts": {
+        "high": 2,
+        "critical": 5
+      },
+      "issues": [
+        {
+          "severity": "high",
+          "code": "missing-purchase-order",
+          "message": "Institutional invoice route lacks purchase-order evidence.",
+          "context": "Civic Climate Consortium"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-required-approval",
+          "message": "Missing required sponsor approval.",
+          "context": "sponsor"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-license-privacy-addendum",
+          "message": "Analytics license lacks privacy or data-use addendum.",
+          "context": "analytics-license"
+        },
+        {
+          "severity": "critical",
+          "code": "invoice-total-drift",
+          "message": "Invoice total does not match approved quote lines.",
+          "context": "193500 vs 210000"
+        },
+        {
+          "severity": "critical",
+          "code": "unquoted-invoice-line",
+          "message": "Invoice contains a SKU not present on the approved quote.",
+          "context": "premium-support"
+        },
+        {
+          "severity": "critical",
+          "code": "analytics-entitlement-overage",
+          "message": "Analytics seat entitlement exceeds signed quote scope.",
+          "context": "quote-invoice-drift"
+        },
+        {
+          "severity": "high",
+          "code": "entitlement-term-drift",
+          "message": "Entitlement dates differ from quote contract dates.",
+          "context": "quote-invoice-drift"
+        }
+      ],
+      "actions": [
+        "Hold institutional invoice until PO evidence is attached.",
+        "Collect sponsor approval before invoice or entitlement activation.",
+        "Attach privacy/data-use addendum before analytics license activation.",
+        "Regenerate invoice from approved quote line items.",
+        "Remove unquoted invoice line premium-support or reapprove quote.",
+        "Hold analytics activation until quote is amended.",
+        "Align entitlement dates to signed order form dates."
+      ]
+    },
+    {
+      "quoteId": "quote-missing-legal-entity",
+      "customer": "Quantum Methods Group",
+      "decision": "hold-quote",
+      "quoteScore": 0,
+      "expectedQuoteTotal": 8496,
+      "invoiceTotal": 8496,
+      "issueCounts": {
+        "critical": 4,
+        "high": 2
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "quote-not-approved",
+          "message": "Quote is not in an approved state.",
+          "context": "draft"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-legal-entity",
+          "message": "Legal billing entity is missing.",
+          "context": "Quantum Methods Group"
+        },
+        {
+          "severity": "high",
+          "code": "missing-billing-contact",
+          "message": "Billing contact is missing.",
+          "context": "Quantum Methods Group"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-required-approval",
+          "message": "Missing required finance approval.",
+          "context": "finance"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-required-approval",
+          "message": "Missing required sponsor approval.",
+          "context": "sponsor"
+        },
+        {
+          "severity": "high",
+          "code": "invoice-currency-drift",
+          "message": "Invoice currency differs from payment route currency.",
+          "context": "USD"
+        }
+      ],
+      "actions": [
+        "Hold entitlement activation until quote status is approved.",
+        "Collect legal entity before invoice creation.",
+        "Collect accounts-payable contact before quote acceptance.",
+        "Collect finance approval before invoice or entitlement activation.",
+        "Collect sponsor approval before invoice or entitlement activation.",
+        "Confirm currency and FX treatment before issuing invoice."
+      ]
+    }
+  ]
+}

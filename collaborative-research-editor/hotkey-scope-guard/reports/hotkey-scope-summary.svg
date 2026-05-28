@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="44" width="1184" height="632" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="72" y="98" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="700">Collaborative Hotkey Scope Guard</text>
+  <text x="72" y="140" fill="#475569" font-family="Arial, sans-serif" font-size="22">Collaborative CRISPR Preprint Editor</text>
+  <text x="72" y="198" fill="#b91c1c" font-family="Arial, sans-serif" font-size="32" font-weight="700">hold-hotkey-map</text>
+  <text x="72" y="242" fill="#334155" font-family="Arial, sans-serif" font-size="22">Risk 100/100 · findings 15 · digest ea72c70419e0ab48</text>
+  <rect x="72" y="270" width="560" height="24" rx="12" fill="#e2e8f0"/>
+  <rect x="72" y="270" width="560" height="24" rx="12" fill="#b91c1c"/>
+  <text x="72" y="324" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Top findings</text>
+  <text x="72" y="342" fill="#334155" font-family="Arial, sans-serif" font-size="20">GLOBAL_BROWSER_COLLISION: Binding bind-refresh-preview collides with a browser-reserved shortcut.</text>
+<text x="72" y="378" fill="#334155" font-family="Arial, sans-serif" font-size="20">MISSING_FOCUS_GUARD: Binding bind-refresh-preview does not require editor focus before execution.</text>
+<text x="72" y="414" fill="#334155" font-family="Arial, sans-serif" font-size="20">MODE_UNSCOPED_FORMATTING: Binding bind-refresh-preview mutates content without mode-specific scoping.</text>
+<text x="72" y="450" fill="#334155" font-family="Arial, sans-serif" font-size="20">APP_NAVIGATION_COLLISION: Binding bind-go-comments can hijack workspace navigation outside the editor.</text>
+<text x="72" y="486" fill="#334155" font-family="Arial, sans-serif" font-size="20">MISSING_FOCUS_GUARD: Binding bind-go-comments does not require editor focus before execution.</text>
+  <text x="72" y="642" fill="#64748b" font-family="Arial, sans-serif" font-size="18">Synthetic collaboration packet only. No live users, private manuscripts, or external services.</text>
+</svg>

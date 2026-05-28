@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="Researcher identity impersonation review summary">
+  <rect width="960" height="420" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="372" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="32" y="70" font-family="Arial" font-size="28" font-weight="700" fill="#101828">Researcher Identity Impersonation Guard</text>
+  <rect x="32" y="96" width="360" height="48" rx="6" fill="#b42318"/>
+  <text x="52" y="127" font-family="Arial" font-size="22" font-weight="700" fill="#ffffff">hold-profile-trust</text>
+  <text x="420" y="127" font-family="Arial" font-size="22" fill="#101828">Risk score: 100</text>
+  <text x="32" y="164" font-family="Arial" font-size="20" fill="#475467">Audit digest: 38379a53025543a7</text>
+  <text x="32" y="188" font-family="Arial" font-size="18" fill="#344054">STALE_IDENTIFIER_VERIFICATION - medium</text>
+<text x="32" y="224" font-family="Arial" font-size="18" fill="#344054">DUPLICATE_IDENTIFIER_CLAIM - blocker</text>
+<text x="32" y="260" font-family="Arial" font-size="18" fill="#344054">UNVERIFIED_IDENTIFIER - high</text>
+<text x="32" y="296" font-family="Arial" font-size="18" fill="#344054">AFFILIATION_DOMAIN_MISMATCH - high</text>
+<text x="32" y="332" font-family="Arial" font-size="18" fill="#344054">STALE_AFFILIATION_VERIFICATION - medium</text>
+  <text x="32" y="366" font-family="Arial" font-size="18" fill="#667085">Synthetic profile data only. No live identity provider calls.</text>
+</svg>

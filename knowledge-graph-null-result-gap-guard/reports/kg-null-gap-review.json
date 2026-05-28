@@ -1,0 +1,78 @@
+{
+  "graphId": "kg-demo-17",
+  "title": "Neuroimmune Discovery Graph",
+  "reviewDate": "2026-05-28",
+  "summary": {
+    "ready": 1,
+    "hold": 1,
+    "gaps": 1
+  },
+  "edges": [
+    {
+      "edgeId": "edge-recommend-ready",
+      "source": "CRISPR protocol A",
+      "relation": "supports",
+      "target": "neuronal clustering assay",
+      "decision": "ready",
+      "holds": [],
+      "metrics": {
+        "evidenceCount": 2,
+        "polarityCounts": {
+          "positive": 2
+        },
+        "recommendationCandidate": true
+      },
+      "actions": {
+        "surfaceRecommendation": true,
+        "attachNullResultSummary": false,
+        "requireCuratorReview": false
+      },
+      "redactedAuditLog": "curator [redacted-email] accepted edge"
+    },
+    {
+      "edgeId": "edge-null-hidden",
+      "source": "Model X",
+      "relation": "predicts",
+      "target": "therapy response Y",
+      "decision": "hold",
+      "holds": [
+        "negative-evidence-hidden",
+        "failed-replication-present",
+        "null-result-missing-citation",
+        "null-result-missing-context"
+      ],
+      "metrics": {
+        "evidenceCount": 3,
+        "polarityCounts": {
+          "positive": 1,
+          "null": 1,
+          "failed-replication": 1
+        },
+        "recommendationCandidate": true
+      },
+      "actions": {
+        "surfaceRecommendation": false,
+        "attachNullResultSummary": true,
+        "requireCuratorReview": true
+      },
+      "redactedAuditLog": "token=[redacted] [redacted-email] hid null result"
+    }
+  ],
+  "knowledgeGaps": [
+    {
+      "intersectionId": "gap-neuroimmune-materials",
+      "concepts": [
+        "neuroimmune marker",
+        "biomaterial scaffold"
+      ],
+      "decision": "surface-gap",
+      "citationCount": 2,
+      "unresolvedQuestionCount": 1,
+      "actions": [
+        "surface-underexplored-intersection",
+        "attach-unresolved-question-summary"
+      ]
+    }
+  ],
+  "digest": "sha256:cb22ac4fb2b631b101db334c7dea6b92cd1fa5d6a83acfaabe0685d478b27cf3"
+}

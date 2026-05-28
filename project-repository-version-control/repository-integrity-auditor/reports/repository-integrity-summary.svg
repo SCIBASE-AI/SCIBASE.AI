@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-label="Repository integrity audit summary">
+  <rect width="960" height="440" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="392" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="36" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Repository Integrity Audit</text>
+  <rect x="36" y="98" width="380" height="48" rx="6" fill="#b42318"/>
+  <text x="56" y="129" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">block-project-release</text>
+  <text x="446" y="129" font-family="Arial" font-size="22" fill="#101828">Risk score: 100</text>
+  <text x="36" y="166" font-family="Arial" font-size="18" fill="#667085">Audit digest: 9f62f657f4b3c516</text>
+  <rect x="130" y="245" width="92" height="105" rx="6" fill="#7a271a"/>
+  <text x="130" y="382" font-family="Arial" font-size="18" fill="#344054">blocker</text>
+  <text x="164" y="230" font-family="Arial" font-size="20" font-weight="700" fill="#101828">4</text>
+<rect x="310" y="140" width="92" height="210" rx="6" fill="#b42318"/>
+  <text x="310" y="382" font-family="Arial" font-size="18" fill="#344054">high</text>
+  <text x="344" y="125" font-family="Arial" font-size="20" font-weight="700" fill="#101828">8</text>
+<rect x="490" y="245" width="92" height="105" rx="6" fill="#f79009"/>
+  <text x="490" y="382" font-family="Arial" font-size="18" fill="#344054">medium</text>
+  <text x="524" y="230" font-family="Arial" font-size="20" font-weight="700" fill="#101828">4</text>
+<rect x="670" y="350" width="92" height="0" rx="6" fill="#667085"/>
+  <text x="670" y="382" font-family="Arial" font-size="18" fill="#344054">low</text>
+  <text x="704" y="335" font-family="Arial" font-size="20" font-weight="700" fill="#101828">0</text>
+  <text x="36" y="408" font-family="Arial" font-size="18" fill="#667085">Synthetic repository manifest only. No remote writes or external API calls.</text>
+</svg>

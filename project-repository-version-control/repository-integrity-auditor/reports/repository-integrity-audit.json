@@ -1,0 +1,199 @@
+{
+  "projectId": "proj-neuro-marker-001",
+  "title": "Neuro Marker Reproducibility Study",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "decision": "block-project-release",
+  "riskScore": 100,
+  "fileCount": 5,
+  "areasPresent": [
+    "manuscript",
+    "data",
+    "code",
+    "results",
+    "metadata"
+  ],
+  "releaseVersion": "release-one",
+  "findings": [
+    {
+      "severity": "high",
+      "code": "REQUIRED_REPOSITORY_AREA_MISSING",
+      "title": "Required project repository area is missing",
+      "evidence": "proj-neuro-marker-001 has no files in notebooks/.",
+      "action": "Add at least one tracked artifact under notebooks/ before tagging this project version."
+    },
+    {
+      "severity": "high",
+      "code": "REQUIRED_REPOSITORY_AREA_MISSING",
+      "title": "Required project repository area is missing",
+      "evidence": "proj-neuro-marker-001 has no files in protocols/.",
+      "action": "Add at least one tracked artifact under protocols/ before tagging this project version."
+    },
+    {
+      "severity": "blocker",
+      "code": "CONTENT_HASH_MISMATCH",
+      "title": "Tracked file hash does not match content",
+      "evidence": "data/raw-observations.csv digest does not match the current content payload.",
+      "action": "Recompute the manifest after the file is saved, or block the export as tampered/stale."
+    },
+    {
+      "severity": "high",
+      "code": "LARGE_FILE_NOT_IN_LFS",
+      "title": "Large artifact is not marked for Git LFS",
+      "evidence": "data/raw-observations.csv is 1800000 bytes and exceeds the LFS threshold.",
+      "action": "Store large datasets, notebooks with embedded outputs, and model artifacts through Git LFS."
+    },
+    {
+      "severity": "medium",
+      "code": "SCHEMA_ORG_TYPE_MISSING",
+      "title": "schema.org metadata type is missing or unexpected",
+      "evidence": "proj-neuro-marker-001 schemaOrgType=Dataset.",
+      "action": "Add schema.org ScholarlyArticle metadata to improve discoverability and export quality."
+    },
+    {
+      "severity": "medium",
+      "code": "AUTHOR_ORCID_MISSING",
+      "title": "Author metadata lacks ORCID",
+      "evidence": "Jordan Park has no ORCID in metadata.json.",
+      "action": "Request ORCID or mark the author as externally unverified before DOI minting."
+    },
+    {
+      "severity": "high",
+      "code": "PUBLIC_RELEASE_WITHOUT_DOI",
+      "title": "Public release lacks DOI metadata",
+      "evidence": "proj-neuro-marker-001 is marked public but has no DOI.",
+      "action": "Mint or reserve a DOI before publishing the tagged release."
+    },
+    {
+      "severity": "blocker",
+      "code": "SEMVER_TAG_INVALID",
+      "title": "Release tag is not a valid semantic version",
+      "evidence": "proj-neuro-marker-001 release version=release-one.",
+      "action": "Use a vMAJOR.MINOR.PATCH tag before export or DOI citation."
+    },
+    {
+      "severity": "blocker",
+      "code": "VERSION_HISTORY_INCOMPLETE",
+      "title": "Version history lacks base or head commit",
+      "evidence": "proj-neuro-marker-001 base=missing head=7c8b9d0.",
+      "action": "Record base and head commits so rollback, provenance, and export bundle verification work."
+    },
+    {
+      "severity": "high",
+      "code": "UNREVIEWED_CHANGES_PRESENT",
+      "title": "Release contains unreviewed changes",
+      "evidence": "proj-neuro-marker-001 has 3 unreviewed changes.",
+      "action": "Require merge request review before tagging the project repository."
+    },
+    {
+      "severity": "high",
+      "code": "FORK_ATTRIBUTION_MISSING",
+      "title": "Fork provenance lacks attribution",
+      "evidence": "proj-neuro-marker-001 is a fork without parent project attribution.",
+      "action": "Store parent project ID and attribution text before allowing publication or export."
+    },
+    {
+      "severity": "high",
+      "code": "MERGE_REQUEST_REVIEW_MISSING",
+      "title": "Merge request has no reviewer approval",
+      "evidence": "proj-neuro-marker-001 requires MR review but has no reviewers.",
+      "action": "Require at least one reviewer approval before merging research changes into a release branch."
+    },
+    {
+      "severity": "medium",
+      "code": "MERGE_DISCUSSIONS_UNRESOLVED",
+      "title": "Merge request still has unresolved discussions",
+      "evidence": "proj-neuro-marker-001 has 2 unresolved discussions.",
+      "action": "Resolve open review discussions before tagging the release."
+    },
+    {
+      "severity": "high",
+      "code": "REPRODUCIBILITY_PIPELINE_MISSING",
+      "title": "No reproducibility pipeline is configured",
+      "evidence": "proj-neuro-marker-001 has no pipeline path for auto-execution.",
+      "action": "Add a reproducibility pipeline that rebuilds results from raw data and code."
+    },
+    {
+      "severity": "blocker",
+      "code": "REPRODUCIBILITY_RUN_FAILED",
+      "title": "Last reproducibility run did not pass",
+      "evidence": "proj-neuro-marker-001 last run status=failed.",
+      "action": "Block citation/export until the sandboxed reproducibility run passes."
+    },
+    {
+      "severity": "medium",
+      "code": "RUNTIME_ENVIRONMENT_UNPINNED",
+      "title": "Runtime environment is not pinned",
+      "evidence": "proj-neuro-marker-001 lacks a container image or conda environment file.",
+      "action": "Pin a container image or conda environment before claiming reproducible results."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "REQUIRED_REPOSITORY_AREA_MISSING",
+      "action": "Add at least one tracked artifact under notebooks/ before tagging this project version."
+    },
+    {
+      "code": "REQUIRED_REPOSITORY_AREA_MISSING",
+      "action": "Add at least one tracked artifact under protocols/ before tagging this project version."
+    },
+    {
+      "code": "CONTENT_HASH_MISMATCH",
+      "action": "Recompute the manifest after the file is saved, or block the export as tampered/stale."
+    },
+    {
+      "code": "LARGE_FILE_NOT_IN_LFS",
+      "action": "Store large datasets, notebooks with embedded outputs, and model artifacts through Git LFS."
+    },
+    {
+      "code": "SCHEMA_ORG_TYPE_MISSING",
+      "action": "Add schema.org ScholarlyArticle metadata to improve discoverability and export quality."
+    },
+    {
+      "code": "AUTHOR_ORCID_MISSING",
+      "action": "Request ORCID or mark the author as externally unverified before DOI minting."
+    },
+    {
+      "code": "PUBLIC_RELEASE_WITHOUT_DOI",
+      "action": "Mint or reserve a DOI before publishing the tagged release."
+    },
+    {
+      "code": "SEMVER_TAG_INVALID",
+      "action": "Use a vMAJOR.MINOR.PATCH tag before export or DOI citation."
+    },
+    {
+      "code": "VERSION_HISTORY_INCOMPLETE",
+      "action": "Record base and head commits so rollback, provenance, and export bundle verification work."
+    },
+    {
+      "code": "UNREVIEWED_CHANGES_PRESENT",
+      "action": "Require merge request review before tagging the project repository."
+    },
+    {
+      "code": "FORK_ATTRIBUTION_MISSING",
+      "action": "Store parent project ID and attribution text before allowing publication or export."
+    },
+    {
+      "code": "MERGE_REQUEST_REVIEW_MISSING",
+      "action": "Require at least one reviewer approval before merging research changes into a release branch."
+    },
+    {
+      "code": "MERGE_DISCUSSIONS_UNRESOLVED",
+      "action": "Resolve open review discussions before tagging the release."
+    },
+    {
+      "code": "REPRODUCIBILITY_PIPELINE_MISSING",
+      "action": "Add a reproducibility pipeline that rebuilds results from raw data and code."
+    },
+    {
+      "code": "REPRODUCIBILITY_RUN_FAILED",
+      "action": "Block citation/export until the sandboxed reproducibility run passes."
+    },
+    {
+      "code": "RUNTIME_ENVIRONMENT_UNPINNED",
+      "action": "Pin a container image or conda environment before claiming reproducible results."
+    }
+  ],
+  "exportBundleMode": "manifest-preview-only",
+  "generatedFrom": "synthetic-project-repository-only",
+  "auditDigest": "9f62f657f4b3c516"
+}

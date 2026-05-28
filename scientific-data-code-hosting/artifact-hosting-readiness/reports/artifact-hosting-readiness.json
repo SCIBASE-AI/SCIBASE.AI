@@ -1,0 +1,218 @@
+{
+  "bundleId": "bundle-multimodal-assay-001",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "decision": "block-artifact-publication",
+  "riskScore": 100,
+  "artifactCounts": {
+    "dataset": 1,
+    "code": 1,
+    "model": 1
+  },
+  "artifactCount": 3,
+  "visibility": "public",
+  "runtimeMode": "missing",
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "ARTIFACT_DIGEST_MISSING",
+      "title": "Artifact lacks an integrity digest",
+      "evidence": "data/raw-assay.csv has no sha256 digest.",
+      "action": "Generate an integrity digest before storing, diffing, or executing the artifact."
+    },
+    {
+      "severity": "high",
+      "code": "ARTIFACT_EXCEEDS_STORAGE_LIMIT",
+      "title": "Artifact exceeds configured storage limits",
+      "evidence": "data/raw-assay.csv is 1200000 bytes, above 1000000.",
+      "action": "Route the artifact through large-object storage with resumable upload and quota approval."
+    },
+    {
+      "severity": "medium",
+      "code": "DATASET_SCHEMA_PREVIEW_MISSING",
+      "title": "Dataset lacks a metadata-aware schema preview",
+      "evidence": "data/raw-assay.csv has no inferred schema preview.",
+      "action": "Infer columns, types, and row counts before showing the dataset as reusable."
+    },
+    {
+      "severity": "medium",
+      "code": "CODE_DIFF_DISABLED",
+      "title": "Code artifact lacks diff support",
+      "evidence": "code/train_model.py cannot be diffed across upload versions.",
+      "action": "Enable code-aware diffs for scripts, notebooks, and environment files."
+    },
+    {
+      "severity": "high",
+      "code": "UNSUPPORTED_ARTIFACT_TYPE",
+      "title": "Artifact file type is not supported by the hosting preview layer",
+      "evidence": "models/checkpoint.bin has type=bin.",
+      "action": "Add a supported preview/execution handler or reject the upload before publication."
+    },
+    {
+      "severity": "high",
+      "code": "PERSISTENT_IDENTIFIER_MISSING",
+      "title": "Hosted artifact bundle lacks a persistent identifier",
+      "evidence": "bundle-multimodal-assay-001 identifier=missing.",
+      "action": "Attach a DOI or UUID before indexing the bundle as findable."
+    },
+    {
+      "severity": "high",
+      "code": "REUSE_LICENSE_MISSING",
+      "title": "Reusable artifact bundle lacks a license",
+      "evidence": "bundle-multimodal-assay-001 has no reuse license.",
+      "action": "Set a data/code license before public sharing or API export."
+    },
+    {
+      "severity": "high",
+      "code": "STRUCTURED_METADATA_INCOMPLETE",
+      "title": "Structured metadata is incomplete",
+      "evidence": "bundle-multimodal-assay-001 datacite=false jsonLd=true schemaOrg=false.",
+      "action": "Generate DataCite, JSON-LD, and schema.org metadata before DOI registration or discovery indexing."
+    },
+    {
+      "severity": "medium",
+      "code": "FAIR_KEYWORDS_OR_VARIABLES_MISSING",
+      "title": "FAIR discovery metadata is thin",
+      "evidence": "bundle-multimodal-assay-001 keywords=0 variables=0.",
+      "action": "Add scientific keywords, variables, instruments, organisms, or method tags."
+    },
+    {
+      "severity": "blocker",
+      "code": "RESTRICTED_DATA_PUBLIC",
+      "title": "Public bundle contains restricted data",
+      "evidence": "bundle-multimodal-assay-001 is public while at least one artifact is restricted.",
+      "action": "Keep restricted artifacts private or remove them from the public bundle."
+    },
+    {
+      "severity": "medium",
+      "code": "ACCESS_AUDIT_LOGGING_DISABLED",
+      "title": "Artifact access audit logging is disabled",
+      "evidence": "bundle-multimodal-assay-001 has no access audit log.",
+      "action": "Enable audit logs for downloads, previews, and execution events."
+    },
+    {
+      "severity": "high",
+      "code": "EXECUTION_ENVIRONMENT_MISSING",
+      "title": "Executable artifacts lack a runtime environment",
+      "evidence": "bundle-multimodal-assay-001 has no container image or environment file.",
+      "action": "Attach a Docker image, Dockerfile, or environment.yml before enabling execution."
+    },
+    {
+      "severity": "blocker",
+      "code": "EXECUTION_SANDBOX_DISABLED",
+      "title": "Execution sandbox is disabled",
+      "evidence": "bundle-multimodal-assay-001 would run code without sandbox enforcement.",
+      "action": "Enable sandbox isolation before notebooks, scripts, or model workflows can execute."
+    },
+    {
+      "severity": "medium",
+      "code": "SANDBOX_LIMITS_EXCEED_POLICY",
+      "title": "Sandbox limits exceed policy",
+      "evidence": "bundle-multimodal-assay-001 cpu=16 memoryGb=64.",
+      "action": "Require compute approval or reduce resource limits before scheduled runs."
+    },
+    {
+      "severity": "high",
+      "code": "REPRODUCIBILITY_TRIGGER_MISSING",
+      "title": "No reproducibility trigger is configured",
+      "evidence": "bundle-multimodal-assay-001 has no run-analysis or reproduce-results trigger path.",
+      "action": "Add a notebook, script, or workflow trigger that rebuilds results from hosted artifacts."
+    },
+    {
+      "severity": "high",
+      "code": "ARTIFACT_VERSION_INVALID",
+      "title": "Artifact bundle version is invalid",
+      "evidence": "bundle-multimodal-assay-001 currentVersion=first-release.",
+      "action": "Use a semantic version tag for data/code bundle publication."
+    },
+    {
+      "severity": "medium",
+      "code": "DIFF_MANIFEST_MISSING",
+      "title": "Upload diff manifest is missing",
+      "evidence": "bundle-multimodal-assay-001 has no diff manifest for the current upload.",
+      "action": "Generate a file-level diff manifest so reviewers can inspect changes across versions."
+    },
+    {
+      "severity": "medium",
+      "code": "ROLLBACK_CHECKPOINT_MISSING",
+      "title": "Rollback checkpoint is missing",
+      "evidence": "bundle-multimodal-assay-001 cannot roll back to a known-good artifact state.",
+      "action": "Create a rollback checkpoint before accepting large artifact changes."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "ARTIFACT_DIGEST_MISSING",
+      "action": "Generate an integrity digest before storing, diffing, or executing the artifact."
+    },
+    {
+      "code": "ARTIFACT_EXCEEDS_STORAGE_LIMIT",
+      "action": "Route the artifact through large-object storage with resumable upload and quota approval."
+    },
+    {
+      "code": "DATASET_SCHEMA_PREVIEW_MISSING",
+      "action": "Infer columns, types, and row counts before showing the dataset as reusable."
+    },
+    {
+      "code": "CODE_DIFF_DISABLED",
+      "action": "Enable code-aware diffs for scripts, notebooks, and environment files."
+    },
+    {
+      "code": "UNSUPPORTED_ARTIFACT_TYPE",
+      "action": "Add a supported preview/execution handler or reject the upload before publication."
+    },
+    {
+      "code": "PERSISTENT_IDENTIFIER_MISSING",
+      "action": "Attach a DOI or UUID before indexing the bundle as findable."
+    },
+    {
+      "code": "REUSE_LICENSE_MISSING",
+      "action": "Set a data/code license before public sharing or API export."
+    },
+    {
+      "code": "STRUCTURED_METADATA_INCOMPLETE",
+      "action": "Generate DataCite, JSON-LD, and schema.org metadata before DOI registration or discovery indexing."
+    },
+    {
+      "code": "FAIR_KEYWORDS_OR_VARIABLES_MISSING",
+      "action": "Add scientific keywords, variables, instruments, organisms, or method tags."
+    },
+    {
+      "code": "RESTRICTED_DATA_PUBLIC",
+      "action": "Keep restricted artifacts private or remove them from the public bundle."
+    },
+    {
+      "code": "ACCESS_AUDIT_LOGGING_DISABLED",
+      "action": "Enable audit logs for downloads, previews, and execution events."
+    },
+    {
+      "code": "EXECUTION_ENVIRONMENT_MISSING",
+      "action": "Attach a Docker image, Dockerfile, or environment.yml before enabling execution."
+    },
+    {
+      "code": "EXECUTION_SANDBOX_DISABLED",
+      "action": "Enable sandbox isolation before notebooks, scripts, or model workflows can execute."
+    },
+    {
+      "code": "SANDBOX_LIMITS_EXCEED_POLICY",
+      "action": "Require compute approval or reduce resource limits before scheduled runs."
+    },
+    {
+      "code": "REPRODUCIBILITY_TRIGGER_MISSING",
+      "action": "Add a notebook, script, or workflow trigger that rebuilds results from hosted artifacts."
+    },
+    {
+      "code": "ARTIFACT_VERSION_INVALID",
+      "action": "Use a semantic version tag for data/code bundle publication."
+    },
+    {
+      "code": "DIFF_MANIFEST_MISSING",
+      "action": "Generate a file-level diff manifest so reviewers can inspect changes across versions."
+    },
+    {
+      "code": "ROLLBACK_CHECKPOINT_MISSING",
+      "action": "Create a rollback checkpoint before accepting large artifact changes."
+    }
+  ],
+  "generatedFrom": "synthetic-artifact-bundle-only",
+  "auditDigest": "11d239be28b2ac0a"
+}

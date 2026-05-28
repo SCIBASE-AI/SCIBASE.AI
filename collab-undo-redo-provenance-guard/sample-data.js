@@ -1,0 +1,95 @@
+const documentState = {
+  documentId: "draft-immunology-manuscript",
+  sections: [
+    { id: "abstract", version: 12, locked: false },
+    { id: "methods", version: 19, locked: false },
+    { id: "results-figure-2", version: 31, locked: true, lockOwner: "review-lead", lockReason: "final-review" },
+  ],
+  operations: [
+    { id: "op-099", actor: "ava", sectionId: "abstract", range: [4, 22], type: "insert-text", version: 9 },
+    { id: "op-100", actor: "ava", sectionId: "abstract", range: [44, 80], type: "insert-text", version: 10 },
+    { id: "op-101", actor: "ben", sectionId: "abstract", range: [66, 92], type: "insert-text", version: 11 },
+    { id: "op-102", actor: "ava", sectionId: "methods", range: [110, 160], type: "replace-text", version: 17 },
+    { id: "op-103", actor: "cora", sectionId: "methods", range: [130, 180], type: "insert-text", version: 18 },
+    {
+      id: "op-104",
+      actor: "dia",
+      sectionId: "results-figure-2",
+      range: [0, 0],
+      type: "execute-notebook-cell",
+      version: 30,
+      outputHash: "sha256:old-output",
+    },
+    { id: "undo-104", actor: "dia", sectionId: "results-figure-2", range: [0, 0], type: "undo", inverseOf: "op-104", version: 31 },
+    {
+      id: "comment-200",
+      actor: "reviewer-one",
+      sectionId: "abstract",
+      range: [60, 74],
+      type: "comment",
+      version: 12,
+      protectedAnchor: true,
+    },
+  ],
+  users: [
+    { id: "ava", roles: ["author"] },
+    { id: "ben", roles: ["author"] },
+    { id: "cora", roles: ["author"] },
+    { id: "dia", roles: ["author"] },
+    { id: "review-lead", roles: ["editor"] },
+  ],
+};
+
+const requests = [
+  {
+    id: "req-clean-own-undo",
+    actor: "ava",
+    type: "undo",
+    targetOperationId: "op-099",
+    baseSectionVersion: 12,
+    restoreSnapshot: "sha256:abstract-v9",
+  },
+  {
+    id: "req-other-author-hijack",
+    actor: "ben",
+    type: "undo",
+    targetOperationId: "op-102",
+    baseSectionVersion: 19,
+    restoreSnapshot: "sha256:methods-v16",
+  },
+  {
+    id: "req-stale-range",
+    actor: "ava",
+    type: "undo",
+    targetOperationId: "op-102",
+    baseSectionVersion: 17,
+    restoreSnapshot: "sha256:methods-v16",
+  },
+  {
+    id: "req-locked-notebook-redo",
+    actor: "dia",
+    type: "redo",
+    targetOperationId: "op-104",
+    priorUndoId: "undo-104",
+    baseSectionVersion: 31,
+    restoreSnapshot: null,
+  },
+  {
+    id: "req-editor-override",
+    actor: "review-lead",
+    type: "undo",
+    targetOperationId: "op-104",
+    baseSectionVersion: 31,
+    restoreSnapshot: "sha256:notebook-output-v29",
+  },
+  {
+    id: "req-comment-anchor-delete",
+    actor: "ava",
+    type: "undo",
+    targetOperationId: "comment-200",
+    baseSectionVersion: 12,
+    restoreSnapshot: "sha256:abstract-v11",
+  },
+];
+
+module.exports = { documentState, requests };

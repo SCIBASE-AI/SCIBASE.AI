@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="614" viewBox="0 0 1120 614">
+  <style>
+    .page { fill: #f8f9fa; }
+    .heading { font: 700 34px Arial, sans-serif; fill: #17202a; }
+    .sub { font: 16px Arial, sans-serif; fill: #495057; }
+    .title { font: 700 18px Arial, sans-serif; fill: #212529; }
+    .meta { font: 14px Arial, sans-serif; fill: #495057; }
+    .score { font: 700 18px Arial, sans-serif; fill: #212529; text-anchor: end; }
+  </style>
+  <rect class="page" width="1120" height="614"/>
+  <text x="40" y="54" class="heading">Collaborative Undo Redo Provenance Guard</text>
+  <text x="40" y="84" class="sub">Blocks unsafe inverse operations before shared manuscript mutation.</text>
+
+  <g transform="translate(40 110)">
+    <text x="0" y="0" class="title">req-clean-own-undo</text>
+    <text x="0" y="24" class="meta">Decision: allow | Issues: 0</text>
+    <rect x="430" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="430" y="-18" width="520" height="22" rx="4" fill="#2f9e44"/>
+    <text x="990" y="0" class="score">100</text>
+  </g>
+
+  <g transform="translate(40 188)">
+    <text x="0" y="0" class="title">req-other-author-hijack</text>
+    <text x="0" y="24" class="meta">Decision: block | Issues: 2</text>
+    <rect x="430" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="430" y="-18" width="156" height="22" rx="4" fill="#d6336c"/>
+    <text x="990" y="0" class="score">30</text>
+  </g>
+
+  <g transform="translate(40 266)">
+    <text x="0" y="0" class="title">req-stale-range</text>
+    <text x="0" y="24" class="meta">Decision: block | Issues: 2</text>
+    <rect x="430" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="430" y="-18" width="260" height="22" rx="4" fill="#d6336c"/>
+    <text x="990" y="0" class="score">50</text>
+  </g>
+
+  <g transform="translate(40 344)">
+    <text x="0" y="0" class="title">req-locked-notebook-redo</text>
+    <text x="0" y="24" class="meta">Decision: block | Issues: 2</text>
+    <rect x="430" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="430" y="-18" width="260" height="22" rx="4" fill="#d6336c"/>
+    <text x="990" y="0" class="score">50</text>
+  </g>
+
+  <g transform="translate(40 422)">
+    <text x="0" y="0" class="title">req-editor-override</text>
+    <text x="0" y="24" class="meta">Decision: allow | Issues: 0</text>
+    <rect x="430" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="430" y="-18" width="520" height="22" rx="4" fill="#2f9e44"/>
+    <text x="990" y="0" class="score">100</text>
+  </g>
+
+  <g transform="translate(40 500)">
+    <text x="0" y="0" class="title">req-comment-anchor-delete</text>
+    <text x="0" y="24" class="meta">Decision: block | Issues: 2</text>
+    <rect x="430" y="-18" width="540" height="22" rx="4" fill="#e9ecef"/>
+    <rect x="430" y="-18" width="156" height="22" rx="4" fill="#d6336c"/>
+    <text x="990" y="0" class="score">30</text>
+  </g>
+</svg>

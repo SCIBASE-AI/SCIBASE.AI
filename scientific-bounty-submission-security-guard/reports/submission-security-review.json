@@ -1,0 +1,166 @@
+{
+  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "requirementMap": [
+    "Submission engine: screens solver packages before reviewer or sponsor access.",
+    "Secure project space: prevents workspace escape, host mounts, and unsafe execution requests.",
+    "Arbitration readiness: emits deterministic hold, quarantine, sanitize, or release actions.",
+    "Audit logs: preserves reviewer-facing issue codes and remediation steps without executing submitted code."
+  ],
+  "summary": {
+    "submissionCount": 4,
+    "clearForReview": 1,
+    "sanitizeBeforeReview": 0,
+    "quarantined": 1,
+    "heldForSponsorReview": 2,
+    "averageSecurityScore": 43
+  },
+  "results": [
+    {
+      "submissionId": "sub-clean-model",
+      "challengeId": "biomarker-single-cell",
+      "teamId": "atlas-lab",
+      "decision": "clear-for-review",
+      "securityScore": 100,
+      "issueCounts": {},
+      "issues": [],
+      "actions": [
+        "Release package to the reviewer sandbox with network disabled."
+      ]
+    },
+    {
+      "submissionId": "sub-network-notebook",
+      "challengeId": "climate-forecast",
+      "teamId": "helix-models",
+      "decision": "hold-sponsor-review",
+      "securityScore": 0,
+      "issueCounts": {
+        "critical": 5,
+        "high": 1
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "undeclared-executable",
+          "message": "Executable artifact is not allowed by the reviewer sandbox.",
+          "context": "bin/postprocess.sh"
+        },
+        {
+          "severity": "critical",
+          "code": "notebook-network-call",
+          "message": "Notebook attempts network access while sandbox network is disabled.",
+          "context": "analysis.ipynb:cell-1"
+        },
+        {
+          "severity": "critical",
+          "code": "shell-notebook-cell",
+          "message": "Notebook contains a shell cell in the review packet.",
+          "context": "analysis.ipynb:cell-2"
+        },
+        {
+          "severity": "critical",
+          "code": "notebook-network-call",
+          "message": "Notebook attempts network access while sandbox network is disabled.",
+          "context": "analysis.ipynb:cell-2"
+        },
+        {
+          "severity": "critical",
+          "code": "bundled-secret-like-env",
+          "message": "Secret-like environment value is bundled with the submission.",
+          "context": "API_TOKEN"
+        },
+        {
+          "severity": "high",
+          "code": "container-network-enabled",
+          "message": "Container network mode is not compatible with the reviewer sandbox.",
+          "context": "bridge"
+        }
+      ],
+      "actions": [
+        "Block executable artifact bin/postprocess.sh before sponsor or reviewer access.",
+        "Run analysis.ipynb:cell-1 in a no-network sandbox or require offline fixture replacement.",
+        "Disable shell execution in analysis.ipynb:cell-2.",
+        "Run analysis.ipynb:cell-2 in a no-network sandbox or require offline fixture replacement.",
+        "Remove API_TOKEN from the review packet and rotate if it was real.",
+        "Force container network mode to none unless the sponsor grants a documented waiver."
+      ]
+    },
+    {
+      "submissionId": "sub-dependency-hook",
+      "challengeId": "quantum-noise",
+      "teamId": "phase-labs",
+      "decision": "quarantine-submission",
+      "securityScore": 70,
+      "issueCounts": {
+        "critical": 1
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "dependency-lifecycle-script",
+          "message": "Dependency lifecycle script postinstall must not run during reviewer install.",
+          "context": "postinstall"
+        }
+      ],
+      "actions": [
+        "Strip or sandbox npm postinstall before reviewer installation."
+      ]
+    },
+    {
+      "submissionId": "sub-escape-and-privileged-container",
+      "challengeId": "materials-discovery",
+      "teamId": "cobalt-bio",
+      "decision": "hold-sponsor-review",
+      "securityScore": 0,
+      "issueCounts": {
+        "critical": 4,
+        "high": 2
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "path-escape",
+          "message": "File path can escape the reviewer workspace.",
+          "context": "../outside-workspace.csv"
+        },
+        {
+          "severity": "high",
+          "code": "macro-enabled-document",
+          "message": "Macro-enabled document requires redaction or isolated review.",
+          "context": "report.docm"
+        },
+        {
+          "severity": "critical",
+          "code": "bundled-secret-like-env",
+          "message": "Secret-like environment value is bundled with the submission.",
+          "context": "AWS_SECRET_ACCESS_KEY"
+        },
+        {
+          "severity": "critical",
+          "code": "privileged-container",
+          "message": "Container requests privileged execution.",
+          "context": "ubuntu:latest"
+        },
+        {
+          "severity": "critical",
+          "code": "host-mount-request",
+          "message": "Container requests host mounts.",
+          "context": "/var/run/docker.sock"
+        },
+        {
+          "severity": "high",
+          "code": "container-network-enabled",
+          "message": "Container network mode is not compatible with the reviewer sandbox.",
+          "context": "host"
+        }
+      ],
+      "actions": [
+        "Quarantine ../outside-workspace.csv and require a normalized manifest path.",
+        "Convert or strip macros from report.docm before release.",
+        "Remove AWS_SECRET_ACCESS_KEY from the review packet and rotate if it was real.",
+        "Reject privileged container mode for reviewer execution.",
+        "Remove host mounts before sandbox review.",
+        "Force container network mode to none unless the sponsor grants a documented waiver."
+      ]
+    }
+  ]
+}

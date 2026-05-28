@@ -1,0 +1,198 @@
+{
+  "packetId": "notebook-output-packet-unsafe",
+  "workspaceId": "workspace-neuro-42",
+  "manuscriptId": "ms-neuro-response",
+  "status": "hold_notebook_outputs",
+  "acceptanceLanes": {
+    "manuscriptInsertion": "blocked",
+    "reviewerPreview": "sanitized",
+    "auditRetention": "reproducibility_hold"
+  },
+  "assessedAt": "2026-05-28T10:15:00Z",
+  "cells": [
+    {
+      "id": "cell-load-data",
+      "notebookId": "nb-response-model",
+      "sectionId": "results",
+      "sectionVersion": "sec-results-v8",
+      "executionCount": 12,
+      "lastExecutedAt": "2026-05-28T09:30:00Z",
+      "kernel": {
+        "name": "python",
+        "version": "3.11.8"
+      },
+      "dependencyLock": {
+        "manager": "pip-tools",
+        "digest": "sha256:lockfile-old-12b"
+      },
+      "stochastic": false,
+      "inputs": [
+        {
+          "id": "cohort-export",
+          "path": "restricted-dataset/cohort.csv"
+        }
+      ],
+      "outputs": [
+        {
+          "mime": "text/plain",
+          "content": "Loaded cohort from [redacted-local-path]",
+          "trusted": true
+        }
+      ],
+      "reviewState": "reproducibility_review_required"
+    },
+    {
+      "id": "cell-fit-model",
+      "notebookId": "nb-response-model",
+      "sectionId": "results",
+      "sectionVersion": "sec-results-v9",
+      "executionCount": 14,
+      "lastExecutedAt": "2026-05-28T10:00:00Z",
+      "kernel": {
+        "name": "python",
+        "version": "3.11.8",
+        "runtimeDigest": "sha256:runtime-current"
+      },
+      "dependencyLock": {
+        "manager": "pip-tools",
+        "digest": "sha256:lockfile-current-77a"
+      },
+      "stochastic": true,
+      "inputs": [
+        {
+          "id": "cohort-export",
+          "digest": "sha256:cohort-stable"
+        }
+      ],
+      "outputs": [
+        {
+          "mime": "text/html",
+          "content": "<img src=\"plot.png\"https://tracker.example')\">[removed-script]",
+          "trusted": false
+        }
+      ],
+      "reviewState": "reproducibility_review_required"
+    },
+    {
+      "id": "cell-render-figure",
+      "notebookId": "nb-response-model",
+      "sectionId": "results",
+      "sectionVersion": "sec-results-v9",
+      "executionCount": 14,
+      "lastExecutedAt": "2026-05-28T10:04:00Z",
+      "kernel": {
+        "name": "python",
+        "version": "3.11.8",
+        "runtimeDigest": "sha256:runtime-current"
+      },
+      "dependencyLock": {
+        "manager": "pip-tools",
+        "digest": "sha256:lockfile-current-77a"
+      },
+      "stochastic": false,
+      "inputs": [
+        {
+          "id": "model-summary",
+          "digest": "sha256:model-summary"
+        }
+      ],
+      "outputs": [
+        {
+          "mime": "image/svg+xml",
+          "content": "<svg><text>Response model</text></svg>",
+          "trusted": true
+        }
+      ],
+      "reviewState": "ready_for_collaborative_acceptance"
+    }
+  ],
+  "findings": [
+    {
+      "code": "DUPLICATE_EXECUTION_COUNT",
+      "severity": "blocker",
+      "cellId": "cell-fit-model",
+      "message": "Execution count 14 appears more than once in nb-response-model."
+    },
+    {
+      "code": "EXECUTION_ORDER_GAP",
+      "severity": "blocker",
+      "cellId": "cell-fit-model",
+      "message": "Notebook nb-response-model output sequence is not a clean rerun from a continuous kernel."
+    },
+    {
+      "code": "MISSING_RANDOM_SEED",
+      "severity": "blocker",
+      "cellId": "cell-fit-model",
+      "message": "Stochastic notebook cell output cannot be accepted without a captured random seed."
+    },
+    {
+      "code": "UNTRUSTED_RICH_HTML_OUTPUT",
+      "severity": "blocker",
+      "cellId": "cell-fit-model",
+      "message": "Notebook rich output contains untrusted HTML or scriptable attributes."
+    },
+    {
+      "code": "DEPENDENCY_LOCK_MISMATCH",
+      "severity": "blocker",
+      "cellId": "cell-load-data",
+      "message": "Notebook output was created with dependency lock sha256:lockfile-old-12b, expected sha256:lockfile-current-77a."
+    },
+    {
+      "code": "MISSING_INPUT_FINGERPRINT",
+      "severity": "blocker",
+      "cellId": "cell-load-data",
+      "message": "1 notebook input artifact(s) lack a content fingerprint."
+    },
+    {
+      "code": "PRIVATE_OUTPUT_PATH",
+      "severity": "blocker",
+      "cellId": "cell-load-data",
+      "message": "Notebook output references a local or private filesystem path."
+    },
+    {
+      "code": "SECTION_VERSION_MISMATCH",
+      "severity": "blocker",
+      "cellId": "cell-load-data",
+      "message": "Output targets section version sec-results-v8, expected sec-results-v9."
+    },
+    {
+      "code": "STALE_NOTEBOOK_OUTPUT",
+      "severity": "blocker",
+      "cellId": "cell-load-data",
+      "message": "Notebook output predates the current data, dependency, or manuscript section revision."
+    },
+    {
+      "code": "DUPLICATE_EXECUTION_COUNT",
+      "severity": "blocker",
+      "cellId": "cell-render-figure",
+      "message": "Execution count 14 appears more than once in nb-response-model."
+    },
+    {
+      "code": "MISSING_RUNTIME_DIGEST",
+      "severity": "warning",
+      "cellId": "cell-load-data",
+      "message": "Kernel version is present but the runtime digest was not captured."
+    }
+  ],
+  "actions": [
+    "attach_input_fingerprints:cell-load-data",
+    "capture_runtime_digest:cell-load-data",
+    "hold_notebook_outputs:notebook-output-packet-unsafe",
+    "rebase_output_to_current_section:cell-load-data",
+    "record_random_seed:cell-fit-model",
+    "redact_private_output_paths:cell-load-data",
+    "refresh_dependency_lock:cell-load-data",
+    "rerun_notebook_from_clean_kernel",
+    "rerun_stale_cell:cell-load-data",
+    "reset_kernel_and_run_all_cells",
+    "sanitize_rich_output:cell-fit-model"
+  ],
+  "reproducibilitySummary": {
+    "notebooks": 1,
+    "cells": 3,
+    "trustedOutputs": 2,
+    "blockers": 10,
+    "warnings": 1
+  },
+  "auditDigest": "93a4bc47b453aef1692c052c2ec1493e8b7d0457e2f983f30a16abb6c74fec50"
+}

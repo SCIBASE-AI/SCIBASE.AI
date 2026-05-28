@@ -1,0 +1,64 @@
+{
+  "packetId": "notebook-output-packet-warning",
+  "workspaceId": "workspace-neuro-42",
+  "manuscriptId": "ms-neuro-response",
+  "status": "stage_for_reproducibility_review",
+  "acceptanceLanes": {
+    "manuscriptInsertion": "review_required",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "standard"
+  },
+  "assessedAt": "2026-05-28T10:25:00Z",
+  "cells": [
+    {
+      "id": "cell-methods-summary",
+      "notebookId": "nb-methods-audit",
+      "sectionId": "methods",
+      "sectionVersion": "sec-methods-v3",
+      "executionCount": 1,
+      "lastExecutedAt": "2026-05-28T10:20:00Z",
+      "kernel": {
+        "name": "python",
+        "version": "3.11.8"
+      },
+      "dependencyLock": {
+        "manager": "pip-tools",
+        "digest": "sha256:lockfile-methods"
+      },
+      "stochastic": false,
+      "inputs": [
+        {
+          "id": "protocol-yaml",
+          "digest": "sha256:protocol-v3"
+        }
+      ],
+      "outputs": [
+        {
+          "mime": "text/markdown",
+          "content": "Protocol audit matched the locked methods section.",
+          "trusted": true
+        }
+      ],
+      "reviewState": "reproducibility_review_required"
+    }
+  ],
+  "findings": [
+    {
+      "code": "MISSING_RUNTIME_DIGEST",
+      "severity": "warning",
+      "cellId": "cell-methods-summary",
+      "message": "Kernel version is present but the runtime digest was not captured."
+    }
+  ],
+  "actions": [
+    "capture_runtime_digest:cell-methods-summary"
+  ],
+  "reproducibilitySummary": {
+    "notebooks": 1,
+    "cells": 1,
+    "trustedOutputs": 1,
+    "blockers": 0,
+    "warnings": 1
+  },
+  "auditDigest": "d9019926c34ff26cfb97dc1caad437a788edd94336aad7efc3e48042846a9fe8"
+}

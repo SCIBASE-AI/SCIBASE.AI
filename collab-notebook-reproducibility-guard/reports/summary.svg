@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="320" viewBox="0 0 880 320">
+<rect width="880" height="320" fill="#f8fafc"/>
+<text x="28" y="48" font-size="28" font-family="Arial" font-weight="700" fill="#0f172a">Notebook Output Reproducibility Guard</text>
+<text x="28" y="74" font-size="15" font-family="Arial" fill="#475569">Pre-acceptance validation for collaborative Jupyter-style output packets</text>
+<rect x="28" y="92" width="244" height="172" rx="10" fill="#ffffff" stroke="#b91c1c" stroke-width="3"/>
+<text x="50" y="130" font-size="24" font-family="Arial" font-weight="700" fill="#b91c1c">Unsafe</text>
+<text x="50" y="165" font-size="15" font-family="Arial" fill="#111827">hold_notebook_outputs</text>
+<text x="50" y="202" font-size="15" font-family="Arial" fill="#374151">Cells: 3</text>
+<text x="50" y="226" font-size="15" font-family="Arial" fill="#374151">Blockers: 10</text>
+<text x="50" y="250" font-size="15" font-family="Arial" fill="#374151">Warnings: 1</text>
+<rect x="318" y="92" width="244" height="172" rx="10" fill="#ffffff" stroke="#b45309" stroke-width="3"/>
+<text x="340" y="130" font-size="24" font-family="Arial" font-weight="700" fill="#b45309">Warning</text>
+<text x="340" y="165" font-size="15" font-family="Arial" fill="#111827">stage_for_reproducibility_review</text>
+<text x="340" y="202" font-size="15" font-family="Arial" fill="#374151">Cells: 1</text>
+<text x="340" y="226" font-size="15" font-family="Arial" fill="#374151">Blockers: 0</text>
+<text x="340" y="250" font-size="15" font-family="Arial" fill="#374151">Warnings: 1</text>
+<rect x="608" y="92" width="244" height="172" rx="10" fill="#ffffff" stroke="#047857" stroke-width="3"/>
+<text x="630" y="130" font-size="24" font-family="Arial" font-weight="700" fill="#047857">Clean</text>
+<text x="630" y="165" font-size="15" font-family="Arial" fill="#111827">accept_notebook_outputs</text>
+<text x="630" y="202" font-size="15" font-family="Arial" fill="#374151">Cells: 2</text>
+<text x="630" y="226" font-size="15" font-family="Arial" fill="#374151">Blockers: 0</text>
+<text x="630" y="250" font-size="15" font-family="Arial" fill="#374151">Warnings: 0</text>
+</svg>

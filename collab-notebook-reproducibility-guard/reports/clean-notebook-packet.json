@@ -1,0 +1,94 @@
+{
+  "packetId": "notebook-output-packet-clean",
+  "workspaceId": "workspace-neuro-42",
+  "manuscriptId": "ms-neuro-response",
+  "status": "accept_notebook_outputs",
+  "acceptanceLanes": {
+    "manuscriptInsertion": "allowed",
+    "reviewerPreview": "allowed",
+    "auditRetention": "standard"
+  },
+  "assessedAt": "2026-05-28T10:35:00Z",
+  "cells": [
+    {
+      "id": "cell-clean-load",
+      "notebookId": "nb-response-model",
+      "sectionId": "results",
+      "sectionVersion": "sec-results-v9",
+      "executionCount": 1,
+      "lastExecutedAt": "2026-05-28T10:05:00Z",
+      "kernel": {
+        "name": "python",
+        "version": "3.11.8",
+        "runtimeDigest": "sha256:runtime-current"
+      },
+      "dependencyLock": {
+        "manager": "pip-tools",
+        "digest": "sha256:lockfile-current-77a"
+      },
+      "stochastic": false,
+      "inputs": [
+        {
+          "id": "cohort-export",
+          "digest": "sha256:cohort-stable"
+        }
+      ],
+      "outputs": [
+        {
+          "mime": "text/plain",
+          "content": "Loaded 128 anonymized rows from cohort artifact sha256:cohort-stable.",
+          "trusted": true
+        }
+      ],
+      "reviewState": "ready_for_collaborative_acceptance"
+    },
+    {
+      "id": "cell-clean-fit",
+      "notebookId": "nb-response-model",
+      "sectionId": "results",
+      "sectionVersion": "sec-results-v9",
+      "executionCount": 2,
+      "lastExecutedAt": "2026-05-28T10:08:00Z",
+      "kernel": {
+        "name": "python",
+        "version": "3.11.8",
+        "runtimeDigest": "sha256:runtime-current"
+      },
+      "dependencyLock": {
+        "manager": "pip-tools",
+        "digest": "sha256:lockfile-current-77a"
+      },
+      "stochastic": true,
+      "randomSeed": {
+        "value": 20260528,
+        "capturedAt": "2026-05-28T10:07:59Z"
+      },
+      "inputs": [
+        {
+          "id": "cohort-export",
+          "digest": "sha256:cohort-stable"
+        }
+      ],
+      "outputs": [
+        {
+          "mime": "text/markdown",
+          "content": "Model AUC: 0.82. Bootstrap CI generated with seed 20260528.",
+          "trusted": true
+        }
+      ],
+      "reviewState": "ready_for_collaborative_acceptance"
+    }
+  ],
+  "findings": [],
+  "actions": [
+    "accept_notebook_outputs:notebook-output-packet-clean"
+  ],
+  "reproducibilitySummary": {
+    "notebooks": 1,
+    "cells": 2,
+    "trustedOutputs": 2,
+    "blockers": 0,
+    "warnings": 0
+  },
+  "auditDigest": "2c600c8f6698badf782674dc103ce798936b00df1db2fab78b357c18fdcd88d6"
+}

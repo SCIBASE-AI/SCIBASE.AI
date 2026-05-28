@@ -1,0 +1,44 @@
+[
+  {
+    "manuscriptId": "ms-clean-pilot",
+    "audience": "patient advisory board",
+    "source": "This pilot study found that the biomarker was associated with faster screening in a small cohort. The confidence interval remains wide, and follow-up validation is needed.",
+    "summary": "In a small pilot study, this biomarker, a measurable signal, may be associated with faster screening. The result is still uncertain and needs follow-up validation.",
+    "requiredTerms": [
+      { "term": "biomarker", "explanation": "measurable signal" }
+    ],
+    "scopeRules": [
+      { "forbiddenPhrase": "all patients", "allowedScope": "the small pilot cohort" }
+    ]
+  },
+  {
+    "manuscriptId": "ms-causal-overreach",
+    "audience": "public newsletter",
+    "source": "The observational analysis found an association between protocol adherence and lower assay failure rates.",
+    "summary": "The new protocol prevents assay failures and will help patients by making every test reliable.",
+    "requiredTerms": [],
+    "scopeRules": [
+      { "forbiddenPhrase": "every test", "allowedScope": "the observed assay cohort" }
+    ]
+  },
+  {
+    "manuscriptId": "ms-uncertainty-dropped",
+    "audience": "funder update",
+    "source": "Preliminary results suggest that the intervention may reduce turnaround time, but confidence intervals overlap the baseline workflow.",
+    "summary": "The intervention reduces turnaround time compared with the baseline workflow.",
+    "requiredTerms": [
+      { "term": "confidence intervals", "explanation": "range of plausible results" }
+    ],
+    "scopeRules": []
+  },
+  {
+    "manuscriptId": "ms-jargon",
+    "audience": "community review panel",
+    "source": "The assay measured cytokine response in cultured cells.",
+    "summary": "The assay measured cytokine response in cultured cells.",
+    "requiredTerms": [
+      { "term": "cytokine", "explanation": "immune system signal" }
+    ],
+    "scopeRules": []
+  }
+]

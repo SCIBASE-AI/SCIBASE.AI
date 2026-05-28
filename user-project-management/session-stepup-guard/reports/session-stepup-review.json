@@ -1,0 +1,92 @@
+{
+  "userId": "user-research-admin-17",
+  "projectId": "project-restricted-neuro-42",
+  "actionType": "restricted-data-export",
+  "decision": "deny-until-step-up",
+  "riskScore": 100,
+  "sensitive": true,
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "STEP_UP_REQUIRED",
+      "title": "Sensitive project action lacks fresh MFA or passkey evidence",
+      "evidence": "restricted-data-export on dataset/raw-neuro-export has MFA age 993 minutes and passkey age Infinity minutes.",
+      "action": "Require fresh MFA/passkey verification before allowing the action."
+    },
+    {
+      "severity": "high",
+      "code": "UNTRUSTED_DEVICE",
+      "title": "Sensitive action originates from an untrusted device",
+      "evidence": "Device device-new-browser-9 is not remembered/trusted for user-research-admin-17.",
+      "action": "Hold the action until the user completes device verification or uses a known managed device."
+    },
+    {
+      "severity": "medium",
+      "code": "NEW_DEVICE_FOR_SENSITIVE_ACTION",
+      "title": "New device is attempting a sensitive project action",
+      "evidence": "Device first seen 0.1 days ago.",
+      "action": "Require owner notification and step-up before granting project changes from a new device."
+    },
+    {
+      "severity": "high",
+      "code": "IMPOSSIBLE_TRAVEL",
+      "title": "Session geography is inconsistent with recent access",
+      "evidence": "Austin, US to Frankfurt, DE: 7300 km in 1.3 hours.",
+      "action": "Require step-up verification, revoke remembered-device trust, and notify project owners."
+    },
+    {
+      "severity": "high",
+      "code": "STALE_SESSION",
+      "title": "Session is too old or idle for the requested action",
+      "evidence": "Session age 16.6 hours; idle 115 minutes.",
+      "action": "Refresh the session and rerun permission evaluation before project state changes."
+    },
+    {
+      "severity": "high",
+      "code": "MANAGED_DEVICE_REQUIRED",
+      "title": "Project policy requires a managed device",
+      "evidence": "project-restricted-neuro-42 requires managed-device posture for restricted project actions.",
+      "action": "Use a managed device or request an explicit data-steward exception."
+    },
+    {
+      "severity": "medium",
+      "code": "HARDWARE_KEY_GAP",
+      "title": "Restricted project action lacks hardware-key enrollment",
+      "evidence": "user-research-admin-17 has no hardware-key enrollment for restricted-human-subjects.",
+      "action": "Enroll a hardware key before persistent elevated project administration."
+    }
+  ],
+  "actions": [
+    {
+      "code": "STEP_UP_REQUIRED",
+      "action": "Require fresh MFA/passkey verification before allowing the action."
+    },
+    {
+      "code": "UNTRUSTED_DEVICE",
+      "action": "Hold the action until the user completes device verification or uses a known managed device."
+    },
+    {
+      "code": "NEW_DEVICE_FOR_SENSITIVE_ACTION",
+      "action": "Require owner notification and step-up before granting project changes from a new device."
+    },
+    {
+      "code": "IMPOSSIBLE_TRAVEL",
+      "action": "Require step-up verification, revoke remembered-device trust, and notify project owners."
+    },
+    {
+      "code": "STALE_SESSION",
+      "action": "Refresh the session and rerun permission evaluation before project state changes."
+    },
+    {
+      "code": "MANAGED_DEVICE_REQUIRED",
+      "action": "Use a managed device or request an explicit data-steward exception."
+    },
+    {
+      "code": "HARDWARE_KEY_GAP",
+      "action": "Enroll a hardware key before persistent elevated project administration."
+    }
+  ],
+  "sessionDigest": "bb45b20f6b133718",
+  "generatedFrom": "synthetic-data-only",
+  "auditDigest": "2c562795f582ba24"
+}

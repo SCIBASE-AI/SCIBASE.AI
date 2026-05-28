@@ -1,0 +1,391 @@
+{
+  "packetId": "citation-coercion-review-batch-2026-05-28",
+  "generatedAt": "2026-05-28T12:30:00Z",
+  "reviewDecisions": [
+    {
+      "id": "review-r1-self-citation",
+      "projectId": "project-neuro-open",
+      "reviewer": "reviewer:orcid:0000-0001-reviewer-alpha",
+      "mode": "public",
+      "submittedAt": "2026-05-28T09:00:00Z",
+      "decision": "steward-review-required",
+      "highestSeverity": "high",
+      "flags": [
+        "unsupported-self-citation-demand",
+        "off-topic-citation-cluster"
+      ],
+      "citationFindings": [
+        {
+          "citationId": "cite-alpha-2024",
+          "title": "Alpha Lab Editorial Notes On Cognitive Maps",
+          "relevanceScore": 0.22,
+          "requestedByReviewerAuthor": true,
+          "requestedByEditorOrVenue": false,
+          "requiredForAcceptance": true,
+          "flags": [
+            "unsupported-self-citation-demand"
+          ],
+          "reasons": [
+            "reviewer-authored citation is mandatory but weakly related to the manuscript"
+          ],
+          "reviewMode": "public"
+        },
+        {
+          "citationId": "cite-alpha-2023",
+          "title": "Unrelated Rodent Navigation Commentary",
+          "relevanceScore": 0.18,
+          "requestedByReviewerAuthor": true,
+          "requestedByEditorOrVenue": false,
+          "requiredForAcceptance": true,
+          "flags": [
+            "unsupported-self-citation-demand"
+          ],
+          "reasons": [
+            "reviewer-authored citation is mandatory but weakly related to the manuscript"
+          ],
+          "reviewMode": "public"
+        },
+        {
+          "citationId": "cite-domain-2019",
+          "title": "Domain Background Review",
+          "relevanceScore": 0.71,
+          "requestedByReviewerAuthor": false,
+          "requestedByEditorOrVenue": false,
+          "requiredForAcceptance": false,
+          "flags": [],
+          "reasons": [],
+          "reviewMode": "public"
+        }
+      ],
+      "requiredStewardAction": "review-citation-demands-before-score-or-badge-update"
+    },
+    {
+      "id": "review-r2-reciprocal-pressure",
+      "projectId": "project-neuro-open",
+      "reviewer": "anonymous-reviewer-42",
+      "mode": "double-blind",
+      "submittedAt": "2026-05-28T09:30:00Z",
+      "decision": "steward-review-required",
+      "highestSeverity": "high",
+      "flags": [
+        "reciprocal-citation-pressure"
+      ],
+      "citationFindings": [
+        {
+          "citationId": "cite-mutual-2025",
+          "title": "Mutual Citation Network Preprint",
+          "relevanceScore": 0.55,
+          "requestedByReviewerAuthor": true,
+          "requestedByEditorOrVenue": false,
+          "requiredForAcceptance": true,
+          "flags": [
+            "reciprocal-citation-pressure"
+          ],
+          "reasons": [
+            "citation request offers or implies reciprocal citation benefit"
+          ],
+          "reviewMode": "double-blind"
+        }
+      ],
+      "requiredStewardAction": "review-citation-demands-before-score-or-badge-update"
+    },
+    {
+      "id": "review-r3-quota-pressure",
+      "projectId": "project-protein-open",
+      "reviewer": "reviewer:orcid:0000-0003-editorial-pressure",
+      "mode": "semi-private",
+      "submittedAt": "2026-05-28T10:00:00Z",
+      "decision": "steward-review-required",
+      "highestSeverity": "high",
+      "flags": [
+        "journal-citation-quota-pressure"
+      ],
+      "citationFindings": [
+        {
+          "citationId": "cite-journal-quota-2026",
+          "title": "Recent Articles From The Target Journal",
+          "relevanceScore": 0.42,
+          "requestedByReviewerAuthor": false,
+          "requestedByEditorOrVenue": true,
+          "requiredForAcceptance": true,
+          "flags": [
+            "journal-citation-quota-pressure"
+          ],
+          "reasons": [
+            "citation request appears tied to journal or editor citation quota pressure"
+          ],
+          "reviewMode": "semi-private"
+        }
+      ],
+      "requiredStewardAction": "review-citation-demands-before-score-or-badge-update"
+    },
+    {
+      "id": "review-r4-legitimate-context",
+      "projectId": "project-microbiome-open",
+      "reviewer": "reviewer:orcid:0000-0004-methods-reviewer",
+      "mode": "public",
+      "submittedAt": "2026-05-28T10:30:00Z",
+      "decision": "allow-reputation-update",
+      "highestSeverity": "none",
+      "flags": [],
+      "citationFindings": [
+        {
+          "citationId": "cite-methods-2021",
+          "title": "Benchmark Dataset Normalization Methods",
+          "relevanceScore": 0.91,
+          "requestedByReviewerAuthor": false,
+          "requestedByEditorOrVenue": false,
+          "requiredForAcceptance": false,
+          "flags": [],
+          "reasons": [],
+          "reviewMode": "public"
+        }
+      ],
+      "requiredStewardAction": "none"
+    }
+  ],
+  "reputationActions": [
+    {
+      "id": "hold-review-r1-self-citation",
+      "reviewId": "review-r1-self-citation",
+      "reviewer": "reviewer:orcid:0000-0001-reviewer-alpha",
+      "action": "hold-reviewer-credit",
+      "originalReviewerDelta": 10,
+      "effectiveReviewerDelta": 0,
+      "blockedUpdates": [
+        "reviewer-reputation",
+        "trusted-reviewer-badge",
+        "leaderboards",
+        "project-timeline"
+      ],
+      "evidenceDigest": "sha256:e47ae057aab045d09cd71b67fae4e71de856f625be2db42d63520c006e978017"
+    },
+    {
+      "id": "hold-review-r2-reciprocal-pressure",
+      "reviewId": "review-r2-reciprocal-pressure",
+      "reviewer": "anonymous-reviewer-42",
+      "action": "hold-reviewer-credit",
+      "originalReviewerDelta": 7,
+      "effectiveReviewerDelta": 0,
+      "blockedUpdates": [
+        "reviewer-reputation",
+        "trusted-reviewer-badge",
+        "leaderboards",
+        "project-timeline"
+      ],
+      "evidenceDigest": "sha256:65f2d44483fc7d53bfbe65a59c7c36f485d33c3d291c7a4047f4b739e349fc94"
+    },
+    {
+      "id": "hold-review-r3-quota-pressure",
+      "reviewId": "review-r3-quota-pressure",
+      "reviewer": "reviewer:orcid:0000-0003-editorial-pressure",
+      "action": "hold-reviewer-credit",
+      "originalReviewerDelta": 6,
+      "effectiveReviewerDelta": 0,
+      "blockedUpdates": [
+        "reviewer-reputation",
+        "trusted-reviewer-badge",
+        "leaderboards",
+        "project-timeline"
+      ],
+      "evidenceDigest": "sha256:4815f9ae8aa71fd9fd867004fdd7546fbb886c875bc54fbd916b2f659c039f74"
+    },
+    {
+      "id": "apply-review-r4-legitimate-context",
+      "reviewId": "review-r4-legitimate-context",
+      "reviewer": "reviewer:orcid:0000-0004-methods-reviewer",
+      "action": "apply-reviewer-credit",
+      "originalReviewerDelta": 8,
+      "effectiveReviewerDelta": 8,
+      "evidenceDigest": "sha256:f01205e6060ee151fd289a95dbcf7980d47357160a93edd1bad26fc88b6b18ab"
+    }
+  ],
+  "stewardTasks": [
+    {
+      "id": "task-review-r1-self-citation",
+      "reviewId": "review-r1-self-citation",
+      "projectId": "project-neuro-open",
+      "reviewer": "reviewer:orcid:0000-0001-reviewer-alpha",
+      "priority": "high",
+      "requiredAction": "remove-or-justify-coercive-citation-requests",
+      "blockedUpdates": [
+        "reviewer-reputation",
+        "trusted-reviewer-badge",
+        "leaderboards",
+        "project-timeline"
+      ],
+      "flags": [
+        "unsupported-self-citation-demand",
+        "off-topic-citation-cluster"
+      ],
+      "citationIds": [
+        "cite-alpha-2024",
+        "cite-alpha-2023"
+      ]
+    },
+    {
+      "id": "task-review-r2-reciprocal-pressure",
+      "reviewId": "review-r2-reciprocal-pressure",
+      "projectId": "project-neuro-open",
+      "reviewer": "anonymous-reviewer-42",
+      "priority": "high",
+      "requiredAction": "remove-or-justify-coercive-citation-requests",
+      "blockedUpdates": [
+        "reviewer-reputation",
+        "trusted-reviewer-badge",
+        "leaderboards",
+        "project-timeline"
+      ],
+      "flags": [
+        "reciprocal-citation-pressure"
+      ],
+      "citationIds": [
+        "cite-mutual-2025"
+      ]
+    },
+    {
+      "id": "task-review-r3-quota-pressure",
+      "reviewId": "review-r3-quota-pressure",
+      "projectId": "project-protein-open",
+      "reviewer": "reviewer:orcid:0000-0003-editorial-pressure",
+      "priority": "high",
+      "requiredAction": "remove-or-justify-coercive-citation-requests",
+      "blockedUpdates": [
+        "reviewer-reputation",
+        "trusted-reviewer-badge",
+        "leaderboards",
+        "project-timeline"
+      ],
+      "flags": [
+        "journal-citation-quota-pressure"
+      ],
+      "citationIds": [
+        "cite-journal-quota-2026"
+      ]
+    }
+  ],
+  "authorProtections": [
+    {
+      "id": "protect-project-neuro-open",
+      "projectId": "project-neuro-open",
+      "action": "block-author-penalty",
+      "reasons": [
+        "citation-pressure-under-review"
+      ],
+      "blockedUpdates": [
+        "author-response-penalty",
+        "project-quality-badge-decay",
+        "timeline-negative-review-event"
+      ],
+      "relatedReviewIds": [
+        "review-r1-self-citation",
+        "review-r2-reciprocal-pressure"
+      ]
+    },
+    {
+      "id": "protect-project-protein-open",
+      "projectId": "project-protein-open",
+      "action": "block-author-penalty",
+      "reasons": [
+        "citation-pressure-under-review"
+      ],
+      "blockedUpdates": [
+        "author-response-penalty",
+        "project-quality-badge-decay",
+        "timeline-negative-review-event"
+      ],
+      "relatedReviewIds": [
+        "review-r3-quota-pressure"
+      ]
+    }
+  ],
+  "auditPacket": {
+    "packetId": "citation-coercion-review-batch-2026-05-28",
+    "generatedAt": "2026-05-28T12:30:00Z",
+    "events": [
+      {
+        "type": "citation-pressure-held",
+        "reviewId": "review-r1-self-citation",
+        "projectId": "project-neuro-open",
+        "reviewer": "reviewer:orcid:0000-0001-reviewer-alpha",
+        "flags": [
+          "unsupported-self-citation-demand",
+          "off-topic-citation-cluster"
+        ],
+        "decision": "steward-review-required"
+      },
+      {
+        "type": "citation-pressure-held",
+        "reviewId": "review-r2-reciprocal-pressure",
+        "projectId": "project-neuro-open",
+        "reviewer": "anonymous-reviewer-42",
+        "flags": [
+          "reciprocal-citation-pressure"
+        ],
+        "decision": "steward-review-required"
+      },
+      {
+        "type": "citation-pressure-held",
+        "reviewId": "review-r3-quota-pressure",
+        "projectId": "project-protein-open",
+        "reviewer": "reviewer:orcid:0000-0003-editorial-pressure",
+        "flags": [
+          "journal-citation-quota-pressure"
+        ],
+        "decision": "steward-review-required"
+      },
+      {
+        "type": "citation-review-allowed",
+        "reviewId": "review-r4-legitimate-context",
+        "projectId": "project-microbiome-open",
+        "reviewer": "reviewer:orcid:0000-0004-methods-reviewer",
+        "flags": [],
+        "decision": "allow-reputation-update"
+      },
+      {
+        "type": "steward-task-created",
+        "taskId": "task-review-r1-self-citation",
+        "reviewId": "review-r1-self-citation",
+        "projectId": "project-neuro-open",
+        "priority": "high"
+      },
+      {
+        "type": "steward-task-created",
+        "taskId": "task-review-r2-reciprocal-pressure",
+        "reviewId": "review-r2-reciprocal-pressure",
+        "projectId": "project-neuro-open",
+        "priority": "high"
+      },
+      {
+        "type": "steward-task-created",
+        "taskId": "task-review-r3-quota-pressure",
+        "reviewId": "review-r3-quota-pressure",
+        "projectId": "project-protein-open",
+        "priority": "high"
+      },
+      {
+        "type": "author-protection-applied",
+        "projectId": "project-neuro-open",
+        "relatedReviewIds": [
+          "review-r1-self-citation",
+          "review-r2-reciprocal-pressure"
+        ]
+      },
+      {
+        "type": "author-protection-applied",
+        "projectId": "project-protein-open",
+        "relatedReviewIds": [
+          "review-r3-quota-pressure"
+        ]
+      }
+    ],
+    "auditDigest": "sha256:637ed41ba3ea2b5506c1ee609c4ae56f1834c2670483849429566620b2402ecc"
+  },
+  "summary": {
+    "totalReviews": 4,
+    "flaggedReviews": 3,
+    "heldReviewerCredit": 23,
+    "protectedProjects": 2,
+    "recommendedAction": "pause-coerced-citation-reputation-updates"
+  }
+}

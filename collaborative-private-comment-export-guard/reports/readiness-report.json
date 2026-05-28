@@ -1,0 +1,74 @@
+{
+  "workspaceId": "collab-editor-demo-12",
+  "title": "Quantum Materials Draft",
+  "summary": {
+    "ready": 2,
+    "hold": 1
+  },
+  "documents": [
+    {
+      "documentId": "public-ready",
+      "exportProfile": "publicPdf",
+      "decision": "ready",
+      "holds": [],
+      "metrics": {
+        "threadCount": 1,
+        "privateThreadCount": 0,
+        "unresolvedThreadCount": 0,
+        "inlineAnnotationCount": 1
+      },
+      "redactedThreadText": [
+        {
+          "threadId": "th-ready",
+          "visibility": "public",
+          "text": "Clarify method wording before public release."
+        }
+      ]
+    },
+    {
+      "documentId": "public-hold",
+      "exportProfile": "publicPdf",
+      "decision": "hold",
+      "holds": [
+        "visibility-not-allowed:th-private:private",
+        "unresolved-thread:th-private",
+        "uninvited-mention:th-private:rv-gamma",
+        "sensitive-inline-annotation",
+        "missing-redaction-evidence"
+      ],
+      "metrics": {
+        "threadCount": 1,
+        "privateThreadCount": 1,
+        "unresolvedThreadCount": 1,
+        "inlineAnnotationCount": 1
+      },
+      "redactedThreadText": [
+        {
+          "threadId": "th-private",
+          "visibility": "private",
+          "text": "Do not publish reviewer phone +[redacted-phone] or [redacted-email]"
+        }
+      ]
+    },
+    {
+      "documentId": "reviewer-ready",
+      "exportProfile": "reviewerPackage",
+      "decision": "ready",
+      "holds": [],
+      "metrics": {
+        "threadCount": 1,
+        "privateThreadCount": 1,
+        "unresolvedThreadCount": 1,
+        "inlineAnnotationCount": 0
+      },
+      "redactedThreadText": [
+        {
+          "threadId": "th-reviewer",
+          "visibility": "reviewer-only",
+          "text": "Reviewer package can retain this note."
+        }
+      ]
+    }
+  ],
+  "digest": "sha256:07d4784e7a2f3704db1c3c0d2ed31dc661509397de13d07e88558cbea205858e"
+}

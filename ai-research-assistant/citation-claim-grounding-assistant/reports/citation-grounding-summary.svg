@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Citation grounding review summary">
+  <rect width="1200" height="720" fill="#07111f"/>
+  <rect x="52" y="52" width="1096" height="616" rx="18" fill="#101c2f" stroke="#29415f"/>
+  <text x="86" y="118" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">Citation Claim Grounding Review</text>
+  <text x="86" y="166" fill="#b9c8dd" font-family="Arial, sans-serif" font-size="22">NeuroCalm AI Triage Trial</text>
+  <text x="86" y="236" fill="#ffcf5a" font-family="Arial, sans-serif" font-size="34" font-weight="700">Decision: revise-before-submission</text>
+  <text x="86" y="286" fill="#ffffff" font-family="Arial, sans-serif" font-size="28">Risk score 100 / 100</text>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#d9e5f5">
+    <text x="86" y="372">Critical findings</text>
+    <rect x="340" y="348" width="169" height="34" fill="#ff6b6b"/>
+    <text x="529" y="372">4</text>
+    <text x="86" y="432">High findings</text>
+    <rect x="340" y="408" width="338" height="34" fill="#ffa94d"/>
+    <text x="698" y="432">8</text>
+    <text x="86" y="492">Unsupported or contradicted claims</text>
+    <rect x="340" y="468" width="608" height="34" fill="#7cc4ff"/>
+    <text x="968" y="492">4/5</text>
+  </g>
+  <text x="86" y="592" fill="#90a9c7" font-family="Arial, sans-serif" font-size="18">Audit digest a4cb9b1d437de92a</text>
+</svg>

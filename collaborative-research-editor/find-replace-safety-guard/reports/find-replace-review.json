@@ -1,0 +1,141 @@
+{
+  "documentId": "collab-doc-12-find-replace",
+  "operation": {
+    "find": "alpha",
+    "replace": "omega",
+    "mode": "wysiwyg",
+    "wholeWord": false,
+    "scopeSections": [
+      "methods",
+      "references",
+      "final-figures"
+    ]
+  },
+  "decision": "hold-batch-edit",
+  "riskScore": 100,
+  "changedBlocks": [
+    {
+      "sectionId": "methods",
+      "blockId": "methods-p1",
+      "type": "paragraph",
+      "matches": 2,
+      "beforeDigest": "a7c02b6adacc531c",
+      "afterDigest": "b604f6421a609783"
+    },
+    {
+      "sectionId": "methods",
+      "blockId": "methods-eq1",
+      "type": "latex",
+      "matches": 2,
+      "beforeDigest": "f32017986cd1ba0f",
+      "afterDigest": "89c44468bc1034ed"
+    },
+    {
+      "sectionId": "methods",
+      "blockId": "methods-code1",
+      "type": "notebook",
+      "matches": 1,
+      "beforeDigest": "8391629e63709c74",
+      "afterDigest": "c8645a8d6004fe0e"
+    },
+    {
+      "sectionId": "references",
+      "blockId": "ref-key",
+      "type": "citation",
+      "matches": 2,
+      "beforeDigest": "473fe626bbfe0c64",
+      "afterDigest": "94126d50ed228c79"
+    },
+    {
+      "sectionId": "final-figures",
+      "blockId": "fig1-caption",
+      "type": "cross-reference",
+      "matches": 2,
+      "beforeDigest": "0853df185fc30260",
+      "afterDigest": "40b70db10eaf56eb"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "code": "LATEX_COMMAND_MUTATION",
+      "title": "Replacement would alter LaTeX command or equation source",
+      "evidence": "methods/methods-eq1 is a LaTeX block with 2 match(es).",
+      "action": "Preview equation output and require formula-owner approval before applying source-mode replacements."
+    },
+    {
+      "severity": "high",
+      "code": "CODE_CELL_MUTATION",
+      "title": "Replacement would mutate notebook or code cell source",
+      "evidence": "methods/methods-code1 is notebook source with 1 match(es).",
+      "action": "Create a code-review task and rerun the notebook before sharing updated outputs."
+    },
+    {
+      "severity": "high",
+      "code": "CITATION_KEY_MUTATION",
+      "title": "Replacement would alter citation keys or reference anchors",
+      "evidence": "references/ref-key contains citation/reference text matching \"alpha\".",
+      "action": "Route citation-key changes through the reference manager merge workflow instead of direct replacement."
+    },
+    {
+      "severity": "blocker",
+      "code": "LOCKED_SECTION_MATCH",
+      "title": "Batch replacement touches a locked or final-review section",
+      "evidence": "final-figures/fig1-caption has 2 match(es) while section state is locked.",
+      "action": "Exclude the section, unlock with an audit reason, or convert matches to explicit suggestions."
+    },
+    {
+      "severity": "medium",
+      "code": "CROSS_REFERENCE_TOUCH",
+      "title": "Replacement touches cross-reference anchors",
+      "evidence": "final-figures/fig1-caption contains figure, table, or equation anchors.",
+      "action": "Regenerate cross-reference maps and hold export until anchors resolve."
+    },
+    {
+      "severity": "medium",
+      "code": "COMMENT_ANCHOR_DRIFT",
+      "title": "Replacement would invalidate an inline comment quote anchor",
+      "evidence": "Comment cmt-17 anchors to text that would be replaced in block methods-p1.",
+      "action": "Convert the edit to a suggestion and re-anchor or resolve the comment before applying."
+    },
+    {
+      "severity": "medium",
+      "code": "WYSIWYG_SCOPE_MISMATCH",
+      "title": "WYSIWYG replacement crosses source-only content",
+      "evidence": "The operation starts in WYSIWYG mode but reaches LaTeX, citation, or code source blocks.",
+      "action": "Split the operation by block type so source-mode changes receive explicit review."
+    }
+  ],
+  "actions": [
+    {
+      "code": "LATEX_COMMAND_MUTATION",
+      "action": "Preview equation output and require formula-owner approval before applying source-mode replacements."
+    },
+    {
+      "code": "CODE_CELL_MUTATION",
+      "action": "Create a code-review task and rerun the notebook before sharing updated outputs."
+    },
+    {
+      "code": "CITATION_KEY_MUTATION",
+      "action": "Route citation-key changes through the reference manager merge workflow instead of direct replacement."
+    },
+    {
+      "code": "LOCKED_SECTION_MATCH",
+      "action": "Exclude the section, unlock with an audit reason, or convert matches to explicit suggestions."
+    },
+    {
+      "code": "CROSS_REFERENCE_TOUCH",
+      "action": "Regenerate cross-reference maps and hold export until anchors resolve."
+    },
+    {
+      "code": "COMMENT_ANCHOR_DRIFT",
+      "action": "Convert the edit to a suggestion and re-anchor or resolve the comment before applying."
+    },
+    {
+      "code": "WYSIWYG_SCOPE_MISMATCH",
+      "action": "Split the operation by block type so source-mode changes receive explicit review."
+    }
+  ],
+  "generatedFrom": "synthetic-data-only",
+  "auditDigest": "855bf874ddecf9aa"
+}

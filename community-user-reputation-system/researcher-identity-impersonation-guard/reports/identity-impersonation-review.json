@@ -1,0 +1,163 @@
+{
+  "profileId": "profile-provisional-884",
+  "displayName": "Elena Voss",
+  "handle": "elena-v0ss-lab",
+  "reviewedAt": "2026-05-28",
+  "decision": "hold-profile-trust",
+  "riskScore": 100,
+  "findings": [
+    {
+      "severity": "medium",
+      "code": "STALE_IDENTIFIER_VERIFICATION",
+      "title": "External identifier verification is stale",
+      "evidence": "ORCID:SYNTH-ORCID-ELENA-0001 was last verified 501 days before review.",
+      "action": "Refresh the ORCID, institutional, or external-profile verification before publishing profile trust signals."
+    },
+    {
+      "severity": "blocker",
+      "code": "DUPLICATE_IDENTIFIER_CLAIM",
+      "title": "Identifier is already bound to another profile",
+      "evidence": "ORCID:SYNTH-ORCID-ELENA-0001 is already claimed by researcher-elena-voss.",
+      "action": "Block trust updates and open an identity-resolution case before endorsements or badges are applied."
+    },
+    {
+      "severity": "high",
+      "code": "UNVERIFIED_IDENTIFIER",
+      "title": "External identifier is not verified",
+      "evidence": "INSTITUTIONAL_EMAIL:evoss@northstar-labs.example is marked pending for profile profile-provisional-884.",
+      "action": "Hold reputation-bearing actions until the identifier is verified through an approved channel."
+    },
+    {
+      "severity": "high",
+      "code": "AFFILIATION_DOMAIN_MISMATCH",
+      "title": "Institutional affiliation does not match verified email domain",
+      "evidence": "Elena Voss claims Northstar Institute, but email domain northstar-labs.example is outside northstar.edu, research.northstar.edu.",
+      "action": "Require fresh affiliation proof or show the affiliation as unverified before profile exports or reputation changes."
+    },
+    {
+      "severity": "medium",
+      "code": "STALE_AFFILIATION_VERIFICATION",
+      "title": "Affiliation verification is stale",
+      "evidence": "Affiliation was last verified 493 days before review.",
+      "action": "Refresh affiliation evidence before using the institution in leaderboards or citation pages."
+    },
+    {
+      "severity": "high",
+      "code": "RESERVED_NAME_COLLISION",
+      "title": "Profile uses a reserved or high-trust researcher display name",
+      "evidence": "Elena Voss matches a reserved researcher name without an approval record.",
+      "action": "Hold public trust badges and route the profile through manual identity review."
+    },
+    {
+      "severity": "high",
+      "code": "LOOKALIKE_HANDLE_COLLISION",
+      "title": "Profile handle is visually close to a trusted researcher profile",
+      "evidence": "elena-v0ss-lab is distance 1 from trusted handle elena-voss-lab.",
+      "action": "Hold endorsements and require reviewer confirmation that the profile is not impersonating the trusted account."
+    },
+    {
+      "severity": "medium",
+      "code": "DISPLAY_NAME_AMBIGUITY",
+      "title": "Display name is ambiguous with an existing researcher profile",
+      "evidence": "Elena Voss has 98% similarity with researcher-elena-voss.",
+      "action": "Render an ambiguity warning and require stronger verified identifiers before reputation deltas are shown."
+    },
+    {
+      "severity": "medium",
+      "code": "RECENT_PROFILE_REBRAND_NEAR_TRUST_EVENT",
+      "title": "Profile identity fields changed shortly before a reputation-bearing event",
+      "evidence": "handle changed from ev-lab-provisional to elena-v0ss-lab 4 days before review.",
+      "action": "Freeze the affected reputation event until the changed identity field is acknowledged in the audit trail."
+    },
+    {
+      "severity": "medium",
+      "code": "RECENT_PROFILE_REBRAND_NEAR_TRUST_EVENT",
+      "title": "Profile identity fields changed shortly before a reputation-bearing event",
+      "evidence": "displayName changed from E. Voss Research to Elena Voss 3 days before review.",
+      "action": "Freeze the affected reputation event until the changed identity field is acknowledged in the audit trail."
+    },
+    {
+      "severity": "blocker",
+      "code": "ANONYMOUS_REVIEW_IDENTITY_LINKAGE",
+      "title": "Trust event would reveal an anonymous or double-blind reviewer identity",
+      "evidence": "review-credit-19 links profile identity into a double-blind review context.",
+      "action": "Block the public profile update and issue an anonymous-review-safe receipt instead."
+    },
+    {
+      "severity": "medium",
+      "code": "WEAK_EXTERNAL_PROFILE_EVIDENCE",
+      "title": "External profile evidence is weak",
+      "evidence": "GitHub confidence is 0.52 with proof profile-url-only.",
+      "action": "Show the external profile as unverified and exclude it from reputation calculations."
+    }
+  ],
+  "heldEvents": [
+    {
+      "id": "endorsement-77",
+      "type": "endorsement",
+      "action": "block"
+    },
+    {
+      "id": "review-credit-19",
+      "type": "peer-review-credit",
+      "action": "block"
+    },
+    {
+      "id": "badge-open-science",
+      "type": "badge",
+      "action": "block"
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "STALE_IDENTIFIER_VERIFICATION",
+      "action": "Refresh the ORCID, institutional, or external-profile verification before publishing profile trust signals."
+    },
+    {
+      "code": "DUPLICATE_IDENTIFIER_CLAIM",
+      "action": "Block trust updates and open an identity-resolution case before endorsements or badges are applied."
+    },
+    {
+      "code": "UNVERIFIED_IDENTIFIER",
+      "action": "Hold reputation-bearing actions until the identifier is verified through an approved channel."
+    },
+    {
+      "code": "AFFILIATION_DOMAIN_MISMATCH",
+      "action": "Require fresh affiliation proof or show the affiliation as unverified before profile exports or reputation changes."
+    },
+    {
+      "code": "STALE_AFFILIATION_VERIFICATION",
+      "action": "Refresh affiliation evidence before using the institution in leaderboards or citation pages."
+    },
+    {
+      "code": "RESERVED_NAME_COLLISION",
+      "action": "Hold public trust badges and route the profile through manual identity review."
+    },
+    {
+      "code": "LOOKALIKE_HANDLE_COLLISION",
+      "action": "Hold endorsements and require reviewer confirmation that the profile is not impersonating the trusted account."
+    },
+    {
+      "code": "DISPLAY_NAME_AMBIGUITY",
+      "action": "Render an ambiguity warning and require stronger verified identifiers before reputation deltas are shown."
+    },
+    {
+      "code": "RECENT_PROFILE_REBRAND_NEAR_TRUST_EVENT",
+      "action": "Freeze the affected reputation event until the changed identity field is acknowledged in the audit trail."
+    },
+    {
+      "code": "RECENT_PROFILE_REBRAND_NEAR_TRUST_EVENT",
+      "action": "Freeze the affected reputation event until the changed identity field is acknowledged in the audit trail."
+    },
+    {
+      "code": "ANONYMOUS_REVIEW_IDENTITY_LINKAGE",
+      "action": "Block the public profile update and issue an anonymous-review-safe receipt instead."
+    },
+    {
+      "code": "WEAK_EXTERNAL_PROFILE_EVIDENCE",
+      "action": "Show the external profile as unverified and exclude it from reputation calculations."
+    }
+  ],
+  "generatedFrom": "synthetic-data-only",
+  "auditDigest": "38379a53025543a7"
+}

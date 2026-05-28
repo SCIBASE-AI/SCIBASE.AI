@@ -1,0 +1,126 @@
+{
+  "studyId": "trial-mda-001",
+  "title": "Digital biomarker therapy trial with incomplete twelve-week outcomes",
+  "decision": "hold-review",
+  "riskScore": 100,
+  "attritionRates": [
+    {
+      "arm": "Control",
+      "rate": 0.08333333333333333
+    },
+    {
+      "arm": "Intervention",
+      "rate": 0.288135593220339
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "code": "ATTRITION_IMBALANCE",
+      "title": "Attrition is high or imbalanced across arms",
+      "evidence": "Arm attrition ranges from 8.3% to 28.8%; spread is 20.5%.",
+      "action": "Add a CONSORT-style attrition table, explain arm-specific loss, and run an attrition sensitivity analysis.",
+      "requirement": "Auto peer-review reports should flag reproducibility and statistical rigor risks."
+    },
+    {
+      "severity": "high",
+      "code": "NO_MISSING_DATA_PLAN",
+      "title": "Primary outcome missingness lacks a prespecified handling plan",
+      "evidence": "week12-functional-score has 44 missing values (18.5% of randomized participants).",
+      "action": "Specify the missing-data estimand, assumptions, imputation model, and sensitivity analyses before reviewer-ready claims are generated.",
+      "requirement": "Assistant must produce reviewer-ready action packets for reproducibility gaps."
+    },
+    {
+      "severity": "high",
+      "code": "WEAK_IMPUTATION_METHOD",
+      "title": "Confirmatory analysis relies on weak imputation",
+      "evidence": "Configured imputation method is \"single mean imputation\".",
+      "action": "Use multiple imputation or a justified likelihood-based model, report diagnostics, and compare complete-case, imputed, and MNAR scenarios.",
+      "requirement": "Assistant should detect statistical methodology risks before peer-review packets are shown."
+    },
+    {
+      "severity": "high",
+      "code": "MISSING_MNAR_SENSITIVITY",
+      "title": "Outcome-related missingness has no MNAR sensitivity analysis",
+      "evidence": "week12-functional-score: intervention dropouts had worse week-four scores and more adverse-event discontinuations",
+      "action": "Add delta-adjusted, tipping-point, pattern-mixture, or selection-model sensitivity scenarios and calibrate claim strength to the worst credible scenario.",
+      "requirement": "Research-gap and reproducibility checks should surface missing sensitivity evidence."
+    },
+    {
+      "severity": "high",
+      "code": "ESTIMATE_INSTABILITY",
+      "title": "Complete-case and imputed estimates materially disagree",
+      "evidence": "Complete-case estimate 0.42; imputed estimate 0.21; relative shift 100%.",
+      "action": "Report both estimates, explain the assumed missingness mechanism, and avoid definitive language until sensitivity estimates are reconciled.",
+      "requirement": "AI review output should calibrate claims against analysis stability."
+    },
+    {
+      "severity": "high",
+      "code": "SENSITIVITY_UNDERCUTS_CLAIM",
+      "title": "Worst credible missing-data scenario undercuts the main claim",
+      "evidence": "delta-adjusted scenario reduces the effect to 0.05 and crosses the null threshold",
+      "action": "Downgrade the conclusion, disclose the sensitivity result, and mark the finding as exploratory or unresolved.",
+      "requirement": "Assistant should connect analysis checks to claim-strength calibration."
+    },
+    {
+      "severity": "medium",
+      "code": "UNEXPLAINED_DROPOUT",
+      "title": "Dropout reasons are not reviewer-ready",
+      "evidence": "24 of 44 dropout reasons are unknown or not reported.",
+      "action": "Resolve or group dropout reasons and identify whether missingness is plausibly independent of outcome.",
+      "requirement": "Peer-review assistant should surface documentation gaps."
+    },
+    {
+      "severity": "medium",
+      "code": "OVERSTATED_COMPLETE_CASE_CLAIM",
+      "title": "Claim wording is stronger than the missing-data evidence supports",
+      "evidence": "Claim \"The intervention conclusively improves twelve-week functional recovery.\" relies on complete-case-only evidence while primary outcome missingness is 18.5%.",
+      "action": "Calibrate language to conditional complete-case evidence or require imputed and MNAR sensitivity support.",
+      "requirement": "Assistant should produce reviewer-ready claim revision tasks."
+    }
+  ],
+  "actions": [
+    {
+      "code": "ATTRITION_IMBALANCE",
+      "owner": "statistical-reviewer",
+      "action": "Add a CONSORT-style attrition table, explain arm-specific loss, and run an attrition sensitivity analysis."
+    },
+    {
+      "code": "NO_MISSING_DATA_PLAN",
+      "owner": "statistical-reviewer",
+      "action": "Specify the missing-data estimand, assumptions, imputation model, and sensitivity analyses before reviewer-ready claims are generated."
+    },
+    {
+      "code": "WEAK_IMPUTATION_METHOD",
+      "owner": "statistical-reviewer",
+      "action": "Use multiple imputation or a justified likelihood-based model, report diagnostics, and compare complete-case, imputed, and MNAR scenarios."
+    },
+    {
+      "code": "MISSING_MNAR_SENSITIVITY",
+      "owner": "statistical-reviewer",
+      "action": "Add delta-adjusted, tipping-point, pattern-mixture, or selection-model sensitivity scenarios and calibrate claim strength to the worst credible scenario."
+    },
+    {
+      "code": "ESTIMATE_INSTABILITY",
+      "owner": "statistical-reviewer",
+      "action": "Report both estimates, explain the assumed missingness mechanism, and avoid definitive language until sensitivity estimates are reconciled."
+    },
+    {
+      "code": "SENSITIVITY_UNDERCUTS_CLAIM",
+      "owner": "statistical-reviewer",
+      "action": "Downgrade the conclusion, disclose the sensitivity result, and mark the finding as exploratory or unresolved."
+    },
+    {
+      "code": "UNEXPLAINED_DROPOUT",
+      "owner": "author",
+      "action": "Resolve or group dropout reasons and identify whether missingness is plausibly independent of outcome."
+    },
+    {
+      "code": "OVERSTATED_COMPLETE_CASE_CLAIM",
+      "owner": "author",
+      "action": "Calibrate language to conditional complete-case evidence or require imputed and MNAR sensitivity support."
+    }
+  ],
+  "generatedFrom": "synthetic-data-only",
+  "auditDigest": "4971fd0e71fc4738"
+}

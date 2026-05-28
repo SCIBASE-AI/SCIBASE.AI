@@ -1,0 +1,103 @@
+[
+  {
+    "documentId": "doc-clean-methods",
+    "revisionId": "rev-001",
+    "policy": { "maxTrustedOffsetDelta": 120 },
+    "sections": [
+      { "id": "methods", "label": "Methods", "text": "Cells were seeded at 20,000 cells per well before treatment." }
+    ],
+    "comments": [
+      {
+        "id": "comment-1",
+        "anchorType": "text",
+        "expectedSectionId": "methods",
+        "currentSectionId": "methods",
+        "quotedText": "20,000 cells per well",
+        "offsetDelta": 24,
+        "executionRecordChanged": false,
+        "reviewerConfirmed": false
+      }
+    ]
+  },
+  {
+    "documentId": "doc-missing-anchor",
+    "revisionId": "rev-002",
+    "policy": { "maxTrustedOffsetDelta": 120 },
+    "sections": [
+      { "id": "results", "label": "Results", "text": "The revised figure reports normalized response values." }
+    ],
+    "comments": [
+      {
+        "id": "comment-2",
+        "anchorType": "text",
+        "expectedSectionId": "results",
+        "currentSectionId": "results",
+        "quotedText": "raw fluorescence increased threefold",
+        "offsetDelta": 18,
+        "executionRecordChanged": false,
+        "reviewerConfirmed": false
+      }
+    ]
+  },
+  {
+    "documentId": "doc-section-drift",
+    "revisionId": "rev-003",
+    "policy": { "maxTrustedOffsetDelta": 120 },
+    "sections": [
+      { "id": "discussion", "label": "Discussion", "text": "The limitation now appears in discussion text." },
+      { "id": "limitations", "label": "Limitations", "text": "Sample size limitations remain important." }
+    ],
+    "comments": [
+      {
+        "id": "comment-3",
+        "anchorType": "text",
+        "expectedSectionId": "limitations",
+        "currentSectionId": "discussion",
+        "quotedText": "limitation",
+        "offsetDelta": 220,
+        "executionRecordChanged": false,
+        "reviewerConfirmed": false
+      }
+    ]
+  },
+  {
+    "documentId": "doc-notebook-output",
+    "revisionId": "rev-004",
+    "policy": { "maxTrustedOffsetDelta": 120 },
+    "sections": [
+      { "id": "notebook-cell-7", "label": "Notebook cell 7", "text": "Mean response table output: 1.8, 2.1, 2.4." }
+    ],
+    "comments": [
+      {
+        "id": "comment-4",
+        "anchorType": "notebook-output",
+        "expectedSectionId": "notebook-cell-7",
+        "currentSectionId": "notebook-cell-7",
+        "quotedText": "Mean response table output",
+        "offsetDelta": 42,
+        "executionRecordChanged": true,
+        "reviewerConfirmed": false
+      }
+    ]
+  },
+  {
+    "documentId": "doc-manual-confirmation",
+    "revisionId": "rev-005",
+    "policy": { "maxTrustedOffsetDelta": 120 },
+    "sections": [
+      { "id": "protocol", "label": "Protocol", "text": "The revised protocol includes the centrifuge speed and duration." }
+    ],
+    "comments": [
+      {
+        "id": "comment-5",
+        "anchorType": "text",
+        "expectedSectionId": "protocol",
+        "currentSectionId": "protocol",
+        "quotedText": "centrifuge speed and duration",
+        "offsetDelta": 360,
+        "executionRecordChanged": false,
+        "reviewerConfirmed": true
+      }
+    ]
+  }
+]

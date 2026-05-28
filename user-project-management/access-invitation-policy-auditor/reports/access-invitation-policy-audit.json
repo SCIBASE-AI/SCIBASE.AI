@@ -1,0 +1,332 @@
+{
+  "project": {
+    "id": "project-clinical-dataset",
+    "title": "Clinical Biomarker Collaboration Workspace",
+    "visibility": "institutional-only"
+  },
+  "summary": {
+    "decision": "hold-project-access",
+    "riskScore": 100,
+    "auditDigest": "9164efd10da8a9b9",
+    "invitationsReviewed": 2,
+    "membershipsReviewed": 4,
+    "objectPermissionsReviewed": 3,
+    "findings": 16,
+    "criticalFindings": 6,
+    "highFindings": 4
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "recommendation": "Disable the invitation and rotate the access token.",
+      "code": "EXPIRED_INVITE_ACTIVE",
+      "inviteId": "invite-001",
+      "userId": "external-ravi",
+      "message": "Invitation invite-001 is active after expiry 2026-05-20T00:00:00Z.",
+      "evidence": {
+        "id": "invite-001",
+        "userId": "external-ravi",
+        "status": "active",
+        "requestedRole": "reviewer",
+        "role": "admin",
+        "ownerApprovalId": "",
+        "expiresAt": "2026-05-20T00:00:00Z"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Require owner approval before increasing collaborator role scope.",
+      "code": "ROLE_ESCALATION_WITHOUT_APPROVAL",
+      "inviteId": "invite-001",
+      "userId": "external-ravi",
+      "message": "Invitation invite-001 grants admin after reviewer request without owner approval.",
+      "evidence": {
+        "id": "invite-001",
+        "userId": "external-ravi",
+        "status": "active",
+        "requestedRole": "reviewer",
+        "role": "admin",
+        "ownerApprovalId": "",
+        "expiresAt": "2026-05-20T00:00:00Z"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Require ORCID or institutional verification before granting elevated roles.",
+      "code": "UNVERIFIED_IDENTITY_PRIVILEGE",
+      "inviteId": "invite-001",
+      "userId": "external-ravi",
+      "message": "external-ravi has elevated role admin without verified ORCID or SAML identity.",
+      "evidence": {
+        "invite": {
+          "id": "invite-001",
+          "userId": "external-ravi",
+          "status": "active",
+          "requestedRole": "reviewer",
+          "role": "admin",
+          "ownerApprovalId": "",
+          "expiresAt": "2026-05-20T00:00:00Z"
+        },
+        "identity": {
+          "userId": "external-ravi",
+          "orcidVerified": false,
+          "samlVerified": false,
+          "institutionDomain": ""
+        }
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Write an immutable audit-log event for every invite, role, and object-permission change.",
+      "code": "AUDIT_LOG_GAP",
+      "inviteId": "invite-001",
+      "userId": "external-ravi",
+      "message": "Invitation invite-001 has no immutable audit-log event.",
+      "evidence": {
+        "id": "invite-001",
+        "userId": "external-ravi",
+        "status": "active",
+        "requestedRole": "reviewer",
+        "role": "admin",
+        "ownerApprovalId": "",
+        "expiresAt": "2026-05-20T00:00:00Z"
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Restrict institutional-only access to verified SAML domains.",
+      "code": "INSTITUTION_SCOPE_MISMATCH",
+      "userId": "external-ravi",
+      "message": "external-ravi has institutional-only access without matching verified SAML domain.",
+      "evidence": {
+        "membership": {
+          "userId": "external-ravi",
+          "role": "admin",
+          "external": true,
+          "anonymous": false,
+          "lastActiveAt": "2026-04-01T18:00:00Z"
+        },
+        "identity": {
+          "userId": "external-ravi",
+          "orcidVerified": false,
+          "samlVerified": false,
+          "institutionDomain": ""
+        },
+        "institutionDomain": "northstar.edu"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Expire external collaborator access after inactivity or invite window close.",
+      "code": "STALE_EXTERNAL_COLLABORATOR",
+      "userId": "external-ravi",
+      "message": "External collaborator external-ravi has 57 inactive days with admin role.",
+      "evidence": {
+        "userId": "external-ravi",
+        "role": "admin",
+        "external": true,
+        "anonymous": false,
+        "lastActiveAt": "2026-04-01T18:00:00Z"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Write an immutable audit-log event for every invite, role, and object-permission change.",
+      "code": "AUDIT_LOG_GAP",
+      "userId": "external-ravi",
+      "message": "Membership external-ravi/admin has no role audit-log event.",
+      "evidence": {
+        "userId": "external-ravi",
+        "role": "admin",
+        "external": true,
+        "anonymous": false,
+        "lastActiveAt": "2026-04-01T18:00:00Z"
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Restrict institutional-only access to verified SAML domains.",
+      "code": "INSTITUTION_SCOPE_MISMATCH",
+      "userId": "guest-anon",
+      "message": "guest-anon has institutional-only access without matching verified SAML domain.",
+      "evidence": {
+        "membership": {
+          "userId": "guest-anon",
+          "role": "viewer",
+          "external": true,
+          "anonymous": true,
+          "lastActiveAt": "2026-05-27T18:00:00Z"
+        },
+        "identity": {
+          "userId": "guest-anon",
+          "orcidVerified": false,
+          "samlVerified": false,
+          "institutionDomain": ""
+        },
+        "institutionDomain": "northstar.edu"
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Block anonymous sessions from private or invitation-only workspaces.",
+      "code": "ANONYMOUS_PRIVATE_ACCESS",
+      "userId": "guest-anon",
+      "message": "Anonymous membership guest-anon can access institutional-only project.",
+      "evidence": {
+        "userId": "guest-anon",
+        "role": "viewer",
+        "external": true,
+        "anonymous": true,
+        "lastActiveAt": "2026-05-27T18:00:00Z"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Write an immutable audit-log event for every invite, role, and object-permission change.",
+      "code": "AUDIT_LOG_GAP",
+      "userId": "guest-anon",
+      "message": "Membership guest-anon/viewer has no role audit-log event.",
+      "evidence": {
+        "userId": "guest-anon",
+        "role": "viewer",
+        "external": true,
+        "anonymous": true,
+        "lastActiveAt": "2026-05-27T18:00:00Z"
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Restrict institutional-only access to verified SAML domains.",
+      "code": "INSTITUTION_SCOPE_MISMATCH",
+      "userId": "partner-lee",
+      "message": "partner-lee has institutional-only access without matching verified SAML domain.",
+      "evidence": {
+        "membership": {
+          "userId": "partner-lee",
+          "role": "contributor",
+          "external": true,
+          "anonymous": false,
+          "lastActiveAt": "2026-05-26T18:00:00Z"
+        },
+        "identity": {
+          "userId": "partner-lee",
+          "orcidVerified": true,
+          "samlVerified": true,
+          "institutionDomain": "partnerlab.org"
+        },
+        "institutionDomain": "northstar.edu"
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Apply object-level deny rules before project-level role grants.",
+      "code": "OBJECT_PERMISSION_BYPASS",
+      "userId": "external-ravi",
+      "objectId": "dataset-phi-raw",
+      "message": "external-ravi can download restricted dataset dataset-phi-raw.",
+      "evidence": {
+        "rule": {
+          "id": "rule-001",
+          "userId": "external-ravi",
+          "objectType": "dataset",
+          "objectId": "dataset-phi-raw",
+          "action": "download",
+          "effect": "allow"
+        },
+        "membership": {
+          "userId": "external-ravi",
+          "role": "admin",
+          "external": true,
+          "anonymous": false,
+          "lastActiveAt": "2026-04-01T18:00:00Z"
+        }
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Set explicit deny-download policy for restricted datasets.",
+      "code": "DATA_DOWNLOAD_NOT_RESTRICTED",
+      "userId": "external-ravi",
+      "objectId": "dataset-phi-raw",
+      "message": "dataset-phi-raw lacks explicit download deny for external-ravi.",
+      "evidence": {
+        "id": "rule-001",
+        "userId": "external-ravi",
+        "objectType": "dataset",
+        "objectId": "dataset-phi-raw",
+        "action": "download",
+        "effect": "allow"
+      }
+    },
+    {
+      "severity": "low",
+      "recommendation": "Write an immutable audit-log event for every invite, role, and object-permission change.",
+      "code": "AUDIT_LOG_GAP",
+      "userId": "external-ravi",
+      "objectId": "dataset-phi-raw",
+      "message": "Object permission rule-001 has no audit-log event.",
+      "evidence": {
+        "id": "rule-001",
+        "userId": "external-ravi",
+        "objectType": "dataset",
+        "objectId": "dataset-phi-raw",
+        "action": "download",
+        "effect": "allow"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Set explicit deny-download policy for restricted datasets.",
+      "code": "DATA_DOWNLOAD_NOT_RESTRICTED",
+      "userId": "partner-lee",
+      "objectId": "dataset-consent-linkage",
+      "message": "dataset-consent-linkage lacks explicit download deny for partner-lee.",
+      "evidence": {
+        "id": "rule-002",
+        "userId": "partner-lee",
+        "objectType": "dataset",
+        "objectId": "dataset-consent-linkage",
+        "action": "view",
+        "effect": "allow"
+      }
+    },
+    {
+      "severity": "low",
+      "recommendation": "Write an immutable audit-log event for every invite, role, and object-permission change.",
+      "code": "AUDIT_LOG_GAP",
+      "userId": "partner-lee",
+      "objectId": "dataset-consent-linkage",
+      "message": "Object permission rule-002 has no audit-log event.",
+      "evidence": {
+        "id": "rule-002",
+        "userId": "partner-lee",
+        "objectType": "dataset",
+        "objectId": "dataset-consent-linkage",
+        "action": "view",
+        "effect": "allow"
+      }
+    }
+  ],
+  "accessGates": [
+    {
+      "gate": "Invitations expire and cannot silently escalate roles.",
+      "passed": false
+    },
+    {
+      "gate": "Institutional and private workspaces reject anonymous or mismatched identities.",
+      "passed": false
+    },
+    {
+      "gate": "Restricted datasets cannot be downloaded by object-permission bypass.",
+      "passed": false
+    },
+    {
+      "gate": "Elevated roles require verified identity.",
+      "passed": false
+    },
+    {
+      "gate": "Invite, membership, and object-permission changes are audit logged.",
+      "passed": false
+    }
+  ]
+}

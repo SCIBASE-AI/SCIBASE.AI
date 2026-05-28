@@ -1,0 +1,176 @@
+{
+  "projectId": "proj-crispr-neuro-graph",
+  "reviewedAt": "2026-05-28T00:00:00Z",
+  "decision": "block-graph-publication",
+  "riskScore": 100,
+  "entityCounts": {
+    "paper": 1,
+    "author": 1,
+    "dataset": 1,
+    "method": 1,
+    "concept": 1
+  },
+  "relationshipCount": 2,
+  "recommendationCount": 1,
+  "exportFormat": "csv",
+  "findings": [
+    {
+      "severity": "high",
+      "code": "REQUIRED_ENTITY_TYPE_MISSING",
+      "title": "Required knowledge graph entity type is missing",
+      "evidence": "proj-crispr-neuro-graph has no extracted software entities.",
+      "action": "Add at least one reviewed software entity before publishing this graph slice."
+    },
+    {
+      "severity": "high",
+      "code": "ENTITY_IDENTIFIER_INVALID",
+      "title": "Entity identifier does not match the expected namespace",
+      "evidence": "paper:paper-1 identifier=missing-doi.",
+      "action": "Normalize the entity to DOI, ORCID, DataCite, MeSH, PubChem, UniProt, Wikidata, SWH, or GitHub form."
+    },
+    {
+      "severity": "high",
+      "code": "ENTITY_IDENTIFIER_INVALID",
+      "title": "Entity identifier does not match the expected namespace",
+      "evidence": "author:author-1 identifier=orcid-pending.",
+      "action": "Normalize the entity to DOI, ORCID, DataCite, MeSH, PubChem, UniProt, Wikidata, SWH, or GitHub form."
+    },
+    {
+      "severity": "high",
+      "code": "ENTITY_CONFIDENCE_BELOW_THRESHOLD",
+      "title": "Extracted entity confidence is below threshold",
+      "evidence": "dataset:dataset-1 confidence=0.7, threshold=0.78.",
+      "action": "Route the entity to human review or hide it from recommendations until verified."
+    },
+    {
+      "severity": "blocker",
+      "code": "PRIVATE_ENTITY_SCOPE_MISSING",
+      "title": "Private entity lacks a project scope",
+      "evidence": "dataset:dataset-1 is private without a privateProjectId.",
+      "action": "Attach private graph nodes to a project scope or exclude them from shared graph exports."
+    },
+    {
+      "severity": "high",
+      "code": "RELATIONSHIP_PROVENANCE_MISSING",
+      "title": "Relationship lacks extraction provenance",
+      "evidence": "edge-1 has incomplete source document or extractor metadata.",
+      "action": "Store source document, span, extractor version, and review state for every edge."
+    },
+    {
+      "severity": "medium",
+      "code": "RELATIONSHIP_EVIDENCE_WEAK",
+      "title": "Relationship has weak evidence support",
+      "evidence": "edge-1 has 1 evidence items, below 2.",
+      "action": "Require more evidence or mark the edge as tentative in graph navigation."
+    },
+    {
+      "severity": "blocker",
+      "code": "PRIVATE_CONTENT_EDGE_PUBLIC",
+      "title": "Public relationship is derived from private content",
+      "evidence": "edge-1 is public but cites private source content.",
+      "action": "Downgrade the edge to private scope or re-extract it from public evidence."
+    },
+    {
+      "severity": "blocker",
+      "code": "RELATIONSHIP_ENDPOINT_MISSING",
+      "title": "Relationship references a missing entity",
+      "evidence": "edge-2 links paper:paper-1 -> software:software-missing, but at least one endpoint is absent.",
+      "action": "Create the missing entity or remove the relationship before graph export."
+    },
+    {
+      "severity": "high",
+      "code": "RECOMMENDATION_EVIDENCE_INSUFFICIENT",
+      "title": "AI recommendation lacks enough graph evidence",
+      "evidence": "rec-1 has 1 evidence edges.",
+      "action": "Hide or label the recommendation until enough verified graph evidence supports it."
+    },
+    {
+      "severity": "blocker",
+      "code": "PRIVATE_SIGNAL_IN_PUBLIC_RECOMMENDATION",
+      "title": "Public recommendation uses private user or project signals",
+      "evidence": "rec-1 combines private signals with public visibility.",
+      "action": "Keep private-signal recommendations in the user workspace only."
+    },
+    {
+      "severity": "medium",
+      "code": "GRAPH_EXPORT_FORMAT_UNSUPPORTED",
+      "title": "Graph export format is missing or unsupported",
+      "evidence": "proj-crispr-neuro-graph export format=csv.",
+      "action": "Choose jsonld, rdf, or graphml for downstream graph consumers."
+    },
+    {
+      "severity": "high",
+      "code": "PUBLIC_GRAPH_LICENSE_MISSING",
+      "title": "Public graph export lacks a license",
+      "evidence": "proj-crispr-neuro-graph is configured for public graph export without a license.",
+      "action": "Set a graph metadata license before publishing reusable linked data."
+    },
+    {
+      "severity": "medium",
+      "code": "GRAPH_SCHEMA_VERSION_MISSING",
+      "title": "Graph export lacks a schema version",
+      "evidence": "proj-crispr-neuro-graph has no schema version in exportConfig.",
+      "action": "Pin a schema version so downstream consumers can validate graph payloads."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "REQUIRED_ENTITY_TYPE_MISSING",
+      "action": "Add at least one reviewed software entity before publishing this graph slice."
+    },
+    {
+      "code": "ENTITY_IDENTIFIER_INVALID",
+      "action": "Normalize the entity to DOI, ORCID, DataCite, MeSH, PubChem, UniProt, Wikidata, SWH, or GitHub form."
+    },
+    {
+      "code": "ENTITY_IDENTIFIER_INVALID",
+      "action": "Normalize the entity to DOI, ORCID, DataCite, MeSH, PubChem, UniProt, Wikidata, SWH, or GitHub form."
+    },
+    {
+      "code": "ENTITY_CONFIDENCE_BELOW_THRESHOLD",
+      "action": "Route the entity to human review or hide it from recommendations until verified."
+    },
+    {
+      "code": "PRIVATE_ENTITY_SCOPE_MISSING",
+      "action": "Attach private graph nodes to a project scope or exclude them from shared graph exports."
+    },
+    {
+      "code": "RELATIONSHIP_PROVENANCE_MISSING",
+      "action": "Store source document, span, extractor version, and review state for every edge."
+    },
+    {
+      "code": "RELATIONSHIP_EVIDENCE_WEAK",
+      "action": "Require more evidence or mark the edge as tentative in graph navigation."
+    },
+    {
+      "code": "PRIVATE_CONTENT_EDGE_PUBLIC",
+      "action": "Downgrade the edge to private scope or re-extract it from public evidence."
+    },
+    {
+      "code": "RELATIONSHIP_ENDPOINT_MISSING",
+      "action": "Create the missing entity or remove the relationship before graph export."
+    },
+    {
+      "code": "RECOMMENDATION_EVIDENCE_INSUFFICIENT",
+      "action": "Hide or label the recommendation until enough verified graph evidence supports it."
+    },
+    {
+      "code": "PRIVATE_SIGNAL_IN_PUBLIC_RECOMMENDATION",
+      "action": "Keep private-signal recommendations in the user workspace only."
+    },
+    {
+      "code": "GRAPH_EXPORT_FORMAT_UNSUPPORTED",
+      "action": "Choose jsonld, rdf, or graphml for downstream graph consumers."
+    },
+    {
+      "code": "PUBLIC_GRAPH_LICENSE_MISSING",
+      "action": "Set a graph metadata license before publishing reusable linked data."
+    },
+    {
+      "code": "GRAPH_SCHEMA_VERSION_MISSING",
+      "action": "Pin a schema version so downstream consumers can validate graph payloads."
+    }
+  ],
+  "generatedFrom": "synthetic-knowledge-graph-only",
+  "auditDigest": "0589aebec7ba5969"
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-label="Knowledge graph ingestion audit summary">
+  <rect width="960" height="460" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="412" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="36" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Knowledge Graph Ingestion Audit</text>
+  <rect x="36" y="98" width="410" height="48" rx="6" fill="#b42318"/>
+  <text x="56" y="129" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">block-graph-publication</text>
+  <text x="476" y="129" font-family="Arial" font-size="22" fill="#101828">Risk score: 100</text>
+  <text x="36" y="166" font-family="Arial" font-size="18" fill="#667085">Audit digest: 0589aebec7ba5969</text>
+  <text x="36" y="195" font-family="Arial" font-size="17" fill="#344054">author</text>
+  <rect x="180" y="175" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="180" y="175" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="632" y="195" font-family="Arial" font-size="17" fill="#344054">1</text>
+<text x="36" y="237" font-family="Arial" font-size="17" fill="#344054">concept</text>
+  <rect x="180" y="217" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="180" y="217" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="632" y="237" font-family="Arial" font-size="17" fill="#344054">1</text>
+<text x="36" y="279" font-family="Arial" font-size="17" fill="#344054">dataset</text>
+  <rect x="180" y="259" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="180" y="259" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="632" y="279" font-family="Arial" font-size="17" fill="#344054">1</text>
+<text x="36" y="321" font-family="Arial" font-size="17" fill="#344054">method</text>
+  <rect x="180" y="301" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="180" y="301" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="632" y="321" font-family="Arial" font-size="17" fill="#344054">1</text>
+<text x="36" y="363" font-family="Arial" font-size="17" fill="#344054">paper</text>
+  <rect x="180" y="343" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="180" y="343" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="632" y="363" font-family="Arial" font-size="17" fill="#344054">1</text>
+  <text x="36" y="428" font-family="Arial" font-size="18" fill="#667085">Synthetic graph packet only. No ontology or recommendation service calls.</text>
+</svg>

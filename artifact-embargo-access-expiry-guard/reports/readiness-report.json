@@ -1,0 +1,54 @@
+{
+  "projectId": "artifact-hosting-demo-14",
+  "title": "Cryo-EM Artifact Release",
+  "reviewDate": "2026-05-28",
+  "summary": {
+    "ready": 1,
+    "hold": 1
+  },
+  "artifacts": [
+    {
+      "artifactId": "dataset-ready",
+      "type": "dataset",
+      "decision": "ready",
+      "holds": [],
+      "metrics": {
+        "reviewerLinkCount": 1,
+        "accessionEvidenceCount": 1,
+        "embargoEndsOn": "2026-05-01",
+        "publicReleaseRequested": true
+      },
+      "actions": {
+        "releasePublicExport": true,
+        "revokeExpiredLinks": false,
+        "routeToLegalReview": false,
+        "requireAccessionEvidence": false
+      },
+      "redactedAccessLog": "[redacted-email] downloaded preview from 10.0.0.4"
+    },
+    {
+      "artifactId": "model-held",
+      "type": "model",
+      "decision": "hold",
+      "holds": [
+        "embargo-active",
+        "reviewer-link-expired:rv-expired",
+        "missing-accession-evidence"
+      ],
+      "metrics": {
+        "reviewerLinkCount": 1,
+        "accessionEvidenceCount": 0,
+        "embargoEndsOn": "2026-08-01",
+        "publicReleaseRequested": true
+      },
+      "actions": {
+        "releasePublicExport": false,
+        "revokeExpiredLinks": true,
+        "routeToLegalReview": false,
+        "requireAccessionEvidence": true
+      },
+      "redactedAccessLog": "token=[redacted] [redacted-email] exported model"
+    }
+  ],
+  "digest": "sha256:239d4ab64deabe131d69538ad45acbf7a987eb8e6eda2f5a50b0c07deeac339d"
+}

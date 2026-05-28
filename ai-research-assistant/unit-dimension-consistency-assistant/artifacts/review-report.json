@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "total": 4,
+    "ready": 1,
+    "hold": 3,
+    "highFindings": 5,
+    "mediumFindings": 1
+  },
+  "reports": [
+    {
+      "manuscriptId": "ms-clean-dose",
+      "title": "Dose-normalized response in engineered organoids",
+      "decision": "ready",
+      "findings": [],
+      "summary": {
+        "total": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    {
+      "manuscriptId": "ms-mixed-dimensions",
+      "title": "Transcript abundance and reagent mass in a shared claim",
+      "decision": "hold",
+      "findings": [
+        {
+          "claimId": "claim-mass-ratio-comparison",
+          "code": "incompatible_dimensions",
+          "severity": "high",
+          "message": "Claim compares mass, ratio measurements without a conversion model.",
+          "action": "Add a validated conversion model or split the claim by dimension."
+        },
+        {
+          "claimId": "claim-mass-ratio-comparison",
+          "code": "unexpected_dimension",
+          "severity": "high",
+          "message": "reagent-mass uses mass, but the claim expects ratio.",
+          "action": "Correct the unit or rewrite the claim to match the measured dimension."
+        }
+      ],
+      "summary": {
+        "total": 2,
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    {
+      "manuscriptId": "ms-rate-denominator",
+      "title": "Event-rate summary across monitoring windows",
+      "decision": "hold",
+      "findings": [
+        {
+          "claimId": "claim-hourly-rate",
+          "code": "rate_denominator_mismatch",
+          "severity": "high",
+          "message": "daily-window is normalized per day, but the claim is per hour.",
+          "action": "Normalize all evidence to the same denominator."
+        },
+        {
+          "claimId": "claim-hourly-rate",
+          "code": "derived_value_mismatch",
+          "severity": "high",
+          "message": "Claim reports 13.3333x, but evidence supports 0.56x.",
+          "action": "Recalculate the derived result from source measurements."
+        },
+        {
+          "claimId": "claim-hourly-rate",
+          "code": "over_precise_derived_claim",
+          "severity": "medium",
+          "message": "Derived fold change uses more significant digits than the source measurements justify.",
+          "action": "Round the claim to precision supported by source measurements."
+        }
+      ],
+      "summary": {
+        "total": 3,
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      }
+    },
+    {
+      "manuscriptId": "ms-missing-basis",
+      "title": "Cell density without volume normalization",
+      "decision": "hold",
+      "findings": [
+        {
+          "claimId": "claim-cell-density",
+          "code": "missing_normalization_basis",
+          "severity": "high",
+          "message": "well-a-density is missing required volume normalization evidence.",
+          "action": "Add the missing normalization basis before review."
+        }
+      ],
+      "summary": {
+        "total": 1,
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      }
+    }
+  ]
+}

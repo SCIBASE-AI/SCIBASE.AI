@@ -1,0 +1,143 @@
+{
+  "generatedBy": "challenge-closeout-retention-guard",
+  "packetId": "challenge-closeout-demo-001",
+  "generatedAt": "2026-05-28T00:00:00Z",
+  "decision": "hold-closeout",
+  "riskScore": 32,
+  "severityCounts": {
+    "critical": 2,
+    "high": 6,
+    "medium": 2,
+    "low": 0
+  },
+  "challenges": [
+    {
+      "challengeId": "climate-model-prize",
+      "challengeTitle": "Regional climate downscaling model prize",
+      "outcome": "awarded",
+      "daysSinceClose": 8
+    },
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "outcome": "awarded",
+      "daysSinceClose": 14
+    },
+    {
+      "challengeId": "quantum-noise-cancelled",
+      "challengeTitle": "Quantum noise mitigation prototype",
+      "outcome": "cancelled",
+      "daysSinceClose": 3
+    }
+  ],
+  "findings": [
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "code": "active-data-room-access-after-closeout",
+      "severity": "critical",
+      "domain": "access revocation",
+      "evidence": "solver-team-beta still has solver access to sponsor-rnaseq-training-cohort 14 days after closeout; policy requires revocation within 2 days.",
+      "action": "Revoke access, rotate shared credentials, and record the revocation event before closeout is accepted.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "code": "restricted-data-disposition-missing",
+      "severity": "high",
+      "domain": "data retention",
+      "evidence": "sponsor-rnaseq-training-cohort is restricted and has no destruction, return, or legal-hold disposition.",
+      "action": "Collect a destruction certificate, return receipt, or legal-hold order for the restricted dataset.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "code": "destruction-evidence-missing",
+      "severity": "high",
+      "domain": "data retention",
+      "evidence": "sponsor-clinical-labels is marked destroyed without a certificate or audit evidence identifier.",
+      "action": "Attach the destruction certificate hash or reviewer-verifiable evidence identifier.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "code": "ip-transferred-before-funded-settlement",
+      "severity": "critical",
+      "domain": "IP transfer",
+      "evidence": "IP status is transferred while settlement status is pending.",
+      "action": "Reverse the transfer state or block sponsor use until funded settlement is recorded.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "code": "appeal-record-retention-too-short",
+      "severity": "high",
+      "domain": "appeal records",
+      "evidence": "Appeal records are retained for 32 days, below the 60-day policy.",
+      "action": "Extend arbitration and appeal record retention before deleting review evidence.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "code": "private-challenge-disclosure-unredacted",
+      "severity": "high",
+      "domain": "public disclosure",
+      "evidence": "Public disclosure is enabled for a private challenge without approved redactions.",
+      "action": "Block announcement until sponsor data, solver trade secrets, and reviewer identities are redacted.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "oncology-biomarker-private",
+      "challengeTitle": "Private oncology biomarker discovery challenge",
+      "code": "closeout-audit-digest-unsigned",
+      "severity": "medium",
+      "domain": "audit evidence",
+      "evidence": "Closeout audit digest status is draft.",
+      "action": "Sign the closeout digest after revocation, retention, and settlement checks complete.",
+      "closeoutHold": false
+    },
+    {
+      "challengeId": "quantum-noise-cancelled",
+      "challengeTitle": "Quantum noise mitigation prototype",
+      "code": "cancelled-challenge-compensation-missing",
+      "severity": "high",
+      "domain": "solver protection",
+      "evidence": "The challenge was cancelled after work started, but no partial-compensation decision is recorded.",
+      "action": "Record partial compensation, refund, or no-compensation rationale before final closeout.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "quantum-noise-cancelled",
+      "challengeTitle": "Quantum noise mitigation prototype",
+      "code": "appeal-record-retention-too-short",
+      "severity": "high",
+      "domain": "appeal records",
+      "evidence": "Appeal records are retained for 11 days, below the 30-day policy.",
+      "action": "Extend arbitration and appeal record retention before deleting review evidence.",
+      "closeoutHold": true
+    },
+    {
+      "challengeId": "quantum-noise-cancelled",
+      "challengeTitle": "Quantum noise mitigation prototype",
+      "code": "closeout-audit-digest-unsigned",
+      "severity": "medium",
+      "domain": "audit evidence",
+      "evidence": "Closeout audit digest status is unsigned.",
+      "action": "Sign the closeout digest after revocation, retention, and settlement checks complete.",
+      "closeoutHold": false
+    }
+  ],
+  "closeoutActions": [
+    "Approve redactions before publishing private-challenge outcomes.",
+    "Collect destruction, return, or legal-hold evidence for restricted sponsor datasets.",
+    "Gate IP transfer and sponsor use until funded settlement is recorded.",
+    "Publish solver-facing closeout rationale and compensation decisions.",
+    "Retain arbitration records through the policy appeal window.",
+    "Revoke stale data-room and reviewer access, then rotate shared challenge credentials."
+  ]
+}

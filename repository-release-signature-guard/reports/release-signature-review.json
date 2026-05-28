@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "requirementMap": [
+    "File and metadata versioning: verifies immutable signed tags and commit targets.",
+    "Repository identifiers and citation: blocks DOI/citation publication when tag or commit evidence drifts.",
+    "Programmatic access and export: binds export bundle manifests to signed release attestations.",
+    "Collaboration and forking: preserves upstream fork attribution inside the signed provenance packet."
+  ],
+  "summary": {
+    "releaseCount": 4,
+    "publishable": 1,
+    "resignBeforePublication": 0,
+    "held": 3,
+    "averageSignatureScore": 47
+  },
+  "results": [
+    {
+      "releaseId": "rel-clean-preprint-v2",
+      "repositoryId": "neuro-imaging-atlas",
+      "tag": "preprint-v2.0.0",
+      "commit": "9f41c2a7",
+      "doi": "10.5555/scibase.neuro-atlas.v2",
+      "decision": "publish",
+      "signatureScore": 100,
+      "issueCounts": {},
+      "issues": [],
+      "actions": [
+        "Publish release, DOI metadata, citation badge, and export bundle from the signed target."
+      ]
+    },
+    {
+      "releaseId": "rel-unsigned-tag",
+      "repositoryId": "catalyst-screening",
+      "tag": "v1.0.0",
+      "commit": "11aa22bb",
+      "doi": "10.5555/scibase.catalyst.v1",
+      "decision": "hold-release",
+      "signatureScore": 64,
+      "issueCounts": {
+        "critical": 1,
+        "low": 2
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "missing-tag-signature",
+          "message": "tag signature is missing.",
+          "context": "rel-unsigned-tag"
+        },
+        {
+          "severity": "low",
+          "code": "optional-component-absent",
+          "message": "Core repository component protocols is absent from this release bundle.",
+          "context": "protocols"
+        },
+        {
+          "severity": "low",
+          "code": "optional-component-absent",
+          "message": "Core repository component results is absent from this release bundle.",
+          "context": "results"
+        }
+      ],
+      "actions": [
+        "Create a trusted tag signature before publishing v1.0.0."
+      ]
+    },
+    {
+      "releaseId": "rel-attestation-drift",
+      "repositoryId": "rna-benchmark",
+      "tag": "v1.4.1",
+      "commit": "abc123ef",
+      "doi": "10.5555/scibase.rna-benchmark.v1",
+      "decision": "hold-release",
+      "signatureScore": 24,
+      "issueCounts": {
+        "high": 3,
+        "critical": 1,
+        "low": 1
+      },
+      "issues": [
+        {
+          "severity": "high",
+          "code": "citation-target-drift",
+          "message": "Citation metadata references a different tag or commit.",
+          "context": "10.5555/scibase.rna-benchmark.v1"
+        },
+        {
+          "severity": "critical",
+          "code": "attestation-manifest-drift",
+          "message": "Attestation manifest hash does not match the export bundle.",
+          "context": "sha256:bundle-rna-current"
+        },
+        {
+          "severity": "high",
+          "code": "component-not-attested",
+          "message": "Component notebooks is present in the bundle but absent from the attestation.",
+          "context": "notebooks"
+        },
+        {
+          "severity": "high",
+          "code": "component-not-attested",
+          "message": "Component results is present in the bundle but absent from the attestation.",
+          "context": "results"
+        },
+        {
+          "severity": "low",
+          "code": "optional-component-absent",
+          "message": "Core repository component protocols is absent from this release bundle.",
+          "context": "protocols"
+        }
+      ],
+      "actions": [
+        "Update citation metadata before DOI publication.",
+        "Rebuild or re-sign the export bundle attestation.",
+        "Add notebooks hash evidence to the release attestation.",
+        "Add results hash evidence to the release attestation."
+      ]
+    },
+    {
+      "releaseId": "rel-expired-untrusted-signer",
+      "repositoryId": "materials-protocols",
+      "tag": "release-2026-06",
+      "commit": "ffee1122",
+      "doi": "10.5555/scibase.materials.release.2026",
+      "decision": "hold-release",
+      "signatureScore": 0,
+      "issueCounts": {
+        "critical": 3,
+        "high": 2
+      },
+      "issues": [
+        {
+          "severity": "critical",
+          "code": "untrusted-tag-signer",
+          "message": "tag signature signer is not trusted for this repository.",
+          "context": "external:unknown"
+        },
+        {
+          "severity": "high",
+          "code": "expired-tag-signature",
+          "message": "tag signature expired before release review.",
+          "context": "external:unknown"
+        },
+        {
+          "severity": "critical",
+          "code": "untrusted-commit-signer",
+          "message": "commit signature signer is not trusted for this repository.",
+          "context": "external:unknown"
+        },
+        {
+          "severity": "high",
+          "code": "expired-commit-signature",
+          "message": "commit signature expired before release review.",
+          "context": "external:unknown"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-release-attestation",
+          "message": "Signed release attestation is missing.",
+          "context": "rel-expired-untrusted-signer"
+        }
+      ],
+      "actions": [
+        "Rotate tag signing identity to an approved project signer.",
+        "Re-sign release-2026-06 with a current trusted key.",
+        "Rotate commit signing identity to an approved project signer.",
+        "Generate a release attestation that covers the tag, commit, bundle, and component hashes."
+      ]
+    }
+  ]
+}

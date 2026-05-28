@@ -1,0 +1,263 @@
+{
+  "manuscript": {
+    "id": "neurocalm-claims-2026",
+    "title": "NeuroCalm AI Triage Trial",
+    "domain": "digital mental health"
+  },
+  "summary": {
+    "decision": "revise-before-submission",
+    "riskScore": 100,
+    "auditDigest": "a4cb9b1d437de92a",
+    "claimsReviewed": 5,
+    "sourcesReviewed": 5,
+    "criticalFindings": 4,
+    "highFindings": 8,
+    "unsupportedOrContradictedClaims": 4
+  },
+  "claimReviews": [
+    {
+      "claimId": "C1",
+      "section": "Abstract",
+      "text": "NeuroCalm proves a 42% reduction in relapse and is superior to standard CBT triage for adolescent anxiety.",
+      "citationCount": 2,
+      "supportedBy": [],
+      "contradictedBy": [
+        "pilot-2023",
+        "meta-review-2025"
+      ],
+      "weakMatches": [],
+      "missingCitations": false
+    },
+    {
+      "claimId": "C2",
+      "section": "Safety",
+      "text": "No adverse events occurred in the deployment cohort of n=812 participants.",
+      "citationCount": 0,
+      "supportedBy": [],
+      "contradictedBy": [],
+      "weakMatches": [],
+      "missingCitations": true
+    },
+    {
+      "claimId": "C3",
+      "section": "Discussion",
+      "text": "The AI triage workflow eliminated waitlist inequity across rural clinics.",
+      "citationCount": 1,
+      "supportedBy": [],
+      "contradictedBy": [],
+      "weakMatches": [],
+      "missingCitations": false
+    },
+    {
+      "claimId": "C4",
+      "section": "Clinical Implications",
+      "text": "The intervention is ready for national deployment across adolescents.",
+      "citationCount": 1,
+      "supportedBy": [],
+      "contradictedBy": [
+        "adult-rct-2018"
+      ],
+      "weakMatches": [
+        {
+          "sourceId": "adult-rct-2018",
+          "relevance": 0
+        }
+      ],
+      "missingCitations": false
+    },
+    {
+      "claimId": "C5",
+      "section": "Mechanism",
+      "text": "fMRI activation patterns suggest the intervention may improve emotion regulation.",
+      "citationCount": 1,
+      "supportedBy": [
+        "fmri-preprint-2026"
+      ],
+      "contradictedBy": [],
+      "weakMatches": [],
+      "missingCitations": false
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "sourceId": "pilot-2023",
+      "evidence": "Feasibility signal only; no superiority claim.",
+      "recommendation": "Revise the manuscript claim to match the cited evidence direction.",
+      "code": "CONTRADICTED_CLAIM",
+      "claimId": "C1",
+      "message": "Claim C1 conflicts with pilot-2023."
+    },
+    {
+      "severity": "high",
+      "sourceId": "pilot-2023",
+      "evidence": "pilot trial from 2023",
+      "recommendation": "Use peer-reviewed support for central scientific claims.",
+      "code": "NON_PEER_REVIEWED_FOUNDATION",
+      "claimId": "C1",
+      "message": "Central claim C1 relies on non-peer-reviewed source pilot-2023."
+    },
+    {
+      "severity": "critical",
+      "sourceId": "meta-review-2025",
+      "evidence": "No current evidence supports replacing CBT triage with AI intake.",
+      "recommendation": "Revise the manuscript claim to match the cited evidence direction.",
+      "code": "CONTRADICTED_CLAIM",
+      "claimId": "C1",
+      "message": "Claim C1 conflicts with meta-review-2025."
+    },
+    {
+      "severity": "high",
+      "sourceId": null,
+      "evidence": "NeuroCalm proves a 42% reduction in relapse and is superior to standard CBT triage for adolescent anxiety.",
+      "recommendation": "Attach a peer-reviewed source or downgrade the claim.",
+      "code": "MISSING_CITATION",
+      "claimId": "C1",
+      "message": "No cited source directly supports claim C1."
+    },
+    {
+      "severity": "high",
+      "sourceId": null,
+      "evidence": "NeuroCalm proves a 42% reduction in relapse and is superior to standard CBT triage for adolescent anxiety.",
+      "recommendation": "Add uncertainty language and separate hypothesis from demonstrated result.",
+      "code": "OVERSTATED_CERTAINTY",
+      "claimId": "C1",
+      "message": "Claim C1 uses certainty language not justified by the evidence set."
+    },
+    {
+      "severity": "medium",
+      "sourceId": null,
+      "evidence": "NeuroCalm proves a 42% reduction in relapse and is superior to standard CBT triage for adolescent anxiety.",
+      "recommendation": "Add a limitations caveat near the claim and in the conclusion.",
+      "code": "MISSING_LIMITATIONS_CAVEAT",
+      "claimId": "C1",
+      "message": "Claim C1 requires a limitations caveat near the assertion."
+    },
+    {
+      "severity": "critical",
+      "sourceId": null,
+      "evidence": "No adverse events occurred in the deployment cohort of n=812 participants.",
+      "recommendation": "Attach a peer-reviewed source or downgrade the claim.",
+      "code": "MISSING_CITATION",
+      "claimId": "C2",
+      "message": "Claim C2 has no citations."
+    },
+    {
+      "severity": "high",
+      "sourceId": null,
+      "evidence": "No adverse events occurred in the deployment cohort of n=812 participants.",
+      "recommendation": "Trace the statistic to a cited table, registry, or reproducible artifact.",
+      "code": "NUMERIC_VALUE_UNGROUNDED",
+      "claimId": "C2",
+      "message": "Claim C2 includes a numeric result without a source."
+    },
+    {
+      "severity": "high",
+      "sourceId": "implementation-blog",
+      "evidence": "blog from 2024",
+      "recommendation": "Use peer-reviewed support for central scientific claims.",
+      "code": "NON_PEER_REVIEWED_FOUNDATION",
+      "claimId": "C3",
+      "message": "Central claim C3 relies on non-peer-reviewed source implementation-blog."
+    },
+    {
+      "severity": "high",
+      "sourceId": null,
+      "evidence": "The AI triage workflow eliminated waitlist inequity across rural clinics.",
+      "recommendation": "Attach a peer-reviewed source or downgrade the claim.",
+      "code": "MISSING_CITATION",
+      "claimId": "C3",
+      "message": "No cited source directly supports claim C3."
+    },
+    {
+      "severity": "medium",
+      "sourceId": null,
+      "evidence": "The AI triage workflow eliminated waitlist inequity across rural clinics.",
+      "recommendation": "Add a limitations caveat near the claim and in the conclusion.",
+      "code": "MISSING_LIMITATIONS_CAVEAT",
+      "claimId": "C3",
+      "message": "Claim C3 requires a limitations caveat near the assertion."
+    },
+    {
+      "severity": "critical",
+      "sourceId": "adult-rct-2018",
+      "evidence": "Adult intake results should not be generalized to adolescents without validation.",
+      "recommendation": "Revise the manuscript claim to match the cited evidence direction.",
+      "code": "CONTRADICTED_CLAIM",
+      "claimId": "C4",
+      "message": "Claim C4 conflicts with adult-rct-2018."
+    },
+    {
+      "severity": "medium",
+      "sourceId": "adult-rct-2018",
+      "evidence": "keyword overlap 0.00",
+      "recommendation": "Replace or supplement this citation with a directly matched source.",
+      "code": "LOW_RELEVANCE_CITATION",
+      "claimId": "C4",
+      "message": "Citation adult-rct-2018 is weakly matched to claim C4."
+    },
+    {
+      "severity": "high",
+      "sourceId": null,
+      "evidence": "The intervention is ready for national deployment across adolescents.",
+      "recommendation": "Attach a peer-reviewed source or downgrade the claim.",
+      "code": "MISSING_CITATION",
+      "claimId": "C4",
+      "message": "No cited source directly supports claim C4."
+    },
+    {
+      "severity": "high",
+      "sourceId": null,
+      "evidence": "The intervention is ready for national deployment across adolescents.",
+      "recommendation": "Add uncertainty language and separate hypothesis from demonstrated result.",
+      "code": "OVERSTATED_CERTAINTY",
+      "claimId": "C4",
+      "message": "Claim C4 uses certainty language not justified by the evidence set."
+    },
+    {
+      "severity": "medium",
+      "sourceId": null,
+      "evidence": "currentYear=2026",
+      "recommendation": "Check whether newer evidence changes the claim.",
+      "code": "STALE_CORE_EVIDENCE",
+      "claimId": "C4",
+      "message": "Claim C4 has no cited evidence newer than 2018."
+    },
+    {
+      "severity": "medium",
+      "sourceId": null,
+      "evidence": "The intervention is ready for national deployment across adolescents.",
+      "recommendation": "Add a limitations caveat near the claim and in the conclusion.",
+      "code": "MISSING_LIMITATIONS_CAVEAT",
+      "claimId": "C4",
+      "message": "Claim C4 requires a limitations caveat near the assertion."
+    },
+    {
+      "severity": "medium",
+      "sourceId": null,
+      "evidence": "NeuroCalm is ready for national deployment across adolescent anxiety clinics and should replace standard intake triage.",
+      "recommendation": "Add a limitations caveat near the claim and in the conclusion.",
+      "code": "MISSING_LIMITATIONS_CAVEAT",
+      "claimId": "conclusion",
+      "message": "Conclusion does not carry forward citation and uncertainty limitations."
+    }
+  ],
+  "reviewerChecklist": [
+    {
+      "item": "Resolve missing and indirect citation support before submission.",
+      "required": true
+    },
+    {
+      "item": "Downgrade certainty where evidence is preliminary or contradicted.",
+      "required": true
+    },
+    {
+      "item": "Replace non-peer-reviewed support for primary or safety claims.",
+      "required": true
+    },
+    {
+      "item": "Carry limitations language into the conclusion and local claim context.",
+      "required": true
+    }
+  ]
+}

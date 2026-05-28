@@ -1,0 +1,284 @@
+{
+  "batchId": "institutional-eligibility-2026-05-28",
+  "generatedAt": "2026-05-28T12:55:00Z",
+  "customerDecisions": [
+    {
+      "id": "license-cryo-bio-east",
+      "buyer": "buyer-ref:cryo-bio-east",
+      "jurisdiction": "restricted-region",
+      "customerType": "government-lab",
+      "amountUsd": 120000,
+      "decision": "compliance-hold",
+      "flags": [
+        "restricted-party-match",
+        "restricted-jurisdiction",
+        "export-controlled-compute",
+        "missing-export-clearance"
+      ],
+      "requestedEntitlements": [
+        "institutional-license",
+        "ai-compute-bundle",
+        "analytics-api-export"
+      ],
+      "evidenceDigest": "sha256:b5c34f1e1733a812dd7a1d543a1e1fe2c28816659d15a05fe851db2f235ee9a6"
+    },
+    {
+      "id": "license-quantum-lab",
+      "buyer": "buyer-ref:quantum-lab",
+      "jurisdiction": "permitted-region",
+      "customerType": "institutional-license",
+      "amountUsd": 64000,
+      "decision": "compliance-hold",
+      "flags": [
+        "export-controlled-compute",
+        "missing-export-clearance"
+      ],
+      "requestedEntitlements": [
+        "institutional-license",
+        "ai-compute-bundle"
+      ],
+      "evidenceDigest": "sha256:783eb7d059f9bc8c867355c97858741fc25634ee88e0ff22771586fbc6d998fd"
+    },
+    {
+      "id": "license-field-consortium",
+      "buyer": "buyer-ref:field-consortium",
+      "jurisdiction": "permitted-region",
+      "customerType": "academic-consortium",
+      "amountUsd": 18000,
+      "decision": "manual-billing-review",
+      "flags": [
+        "payment-rail-unavailable"
+      ],
+      "requestedEntitlements": [
+        "institutional-license",
+        "analytics-api-export"
+      ],
+      "evidenceDigest": "sha256:547a30030f792ccd1f1bd6091ec20cf627e2b107c70bab4c3c2f751bab275c71"
+    },
+    {
+      "id": "license-open-neuro",
+      "buyer": "buyer-ref:open-neuro",
+      "jurisdiction": "permitted-region",
+      "customerType": "university",
+      "amountUsd": 24000,
+      "decision": "activate-revenue",
+      "flags": [],
+      "requestedEntitlements": [
+        "institutional-license",
+        "ai-compute-bundle",
+        "analytics-api-export"
+      ],
+      "evidenceDigest": "sha256:56429705181faa284b45fb55a385546a886406905a3778384b536f9b872c51ac"
+    }
+  ],
+  "revenueActions": [
+    {
+      "id": "hold-license-cryo-bio-east",
+      "requestId": "license-cryo-bio-east",
+      "buyer": "buyer-ref:cryo-bio-east",
+      "invoiceAction": "hold-invoice",
+      "entitlementAction": "block-entitlements",
+      "recognizableAmountUsd": 0,
+      "deferredAmountUsd": 120000,
+      "blockedEntitlements": [
+        "institutional-license",
+        "ai-compute-bundle",
+        "analytics-api-export"
+      ],
+      "holdReasons": [
+        "restricted-party-match",
+        "restricted-jurisdiction",
+        "export-controlled-compute",
+        "missing-export-clearance"
+      ]
+    },
+    {
+      "id": "hold-license-quantum-lab",
+      "requestId": "license-quantum-lab",
+      "buyer": "buyer-ref:quantum-lab",
+      "invoiceAction": "hold-invoice",
+      "entitlementAction": "block-entitlements",
+      "recognizableAmountUsd": 0,
+      "deferredAmountUsd": 64000,
+      "blockedEntitlements": [
+        "institutional-license",
+        "ai-compute-bundle",
+        "analytics-api-export"
+      ],
+      "holdReasons": [
+        "export-controlled-compute",
+        "missing-export-clearance"
+      ]
+    },
+    {
+      "id": "review-license-field-consortium",
+      "requestId": "license-field-consortium",
+      "buyer": "buyer-ref:field-consortium",
+      "invoiceAction": "manual-review",
+      "entitlementAction": "defer-activation",
+      "recognizableAmountUsd": 0,
+      "deferredAmountUsd": 18000,
+      "reviewReasons": [
+        "payment-rail-unavailable"
+      ]
+    },
+    {
+      "id": "activate-license-open-neuro",
+      "requestId": "license-open-neuro",
+      "buyer": "buyer-ref:open-neuro",
+      "invoiceAction": "issue-invoice",
+      "entitlementAction": "activate-entitlements",
+      "recognizableAmountUsd": 24000,
+      "deferredAmountUsd": 0
+    }
+  ],
+  "complianceTasks": [
+    {
+      "id": "task-license-cryo-bio-east",
+      "requestId": "license-cryo-bio-east",
+      "buyer": "buyer-ref:cryo-bio-east",
+      "priority": "high",
+      "requiredAction": "collect-export-clearance-before-revenue-activation",
+      "flags": [
+        "restricted-party-match",
+        "restricted-jurisdiction",
+        "export-controlled-compute",
+        "missing-export-clearance"
+      ],
+      "blockedUntilResolved": true
+    },
+    {
+      "id": "task-license-quantum-lab",
+      "requestId": "license-quantum-lab",
+      "buyer": "buyer-ref:quantum-lab",
+      "priority": "high",
+      "requiredAction": "collect-export-clearance-before-revenue-activation",
+      "flags": [
+        "export-controlled-compute",
+        "missing-export-clearance"
+      ],
+      "blockedUntilResolved": true
+    },
+    {
+      "id": "task-license-field-consortium",
+      "requestId": "license-field-consortium",
+      "buyer": "buyer-ref:field-consortium",
+      "priority": "normal",
+      "requiredAction": "route-to-supported-institutional-payment-rail",
+      "flags": [
+        "payment-rail-unavailable"
+      ],
+      "blockedUntilResolved": false
+    }
+  ],
+  "auditPacket": {
+    "batchId": "institutional-eligibility-2026-05-28",
+    "generatedAt": "2026-05-28T12:55:00Z",
+    "events": [
+      {
+        "type": "eligibility-decision",
+        "requestId": "license-cryo-bio-east",
+        "buyer": "buyer-ref:cryo-bio-east",
+        "decision": "compliance-hold",
+        "flags": [
+          "restricted-party-match",
+          "restricted-jurisdiction",
+          "export-controlled-compute",
+          "missing-export-clearance"
+        ]
+      },
+      {
+        "type": "eligibility-decision",
+        "requestId": "license-quantum-lab",
+        "buyer": "buyer-ref:quantum-lab",
+        "decision": "compliance-hold",
+        "flags": [
+          "export-controlled-compute",
+          "missing-export-clearance"
+        ]
+      },
+      {
+        "type": "eligibility-decision",
+        "requestId": "license-field-consortium",
+        "buyer": "buyer-ref:field-consortium",
+        "decision": "manual-billing-review",
+        "flags": [
+          "payment-rail-unavailable"
+        ]
+      },
+      {
+        "type": "eligibility-decision",
+        "requestId": "license-open-neuro",
+        "buyer": "buyer-ref:open-neuro",
+        "decision": "activate-revenue",
+        "flags": []
+      },
+      {
+        "type": "revenue-action",
+        "requestId": "license-cryo-bio-east",
+        "buyer": "buyer-ref:cryo-bio-east",
+        "invoiceAction": "hold-invoice",
+        "entitlementAction": "block-entitlements",
+        "recognizableAmountUsd": 0,
+        "deferredAmountUsd": 120000
+      },
+      {
+        "type": "revenue-action",
+        "requestId": "license-quantum-lab",
+        "buyer": "buyer-ref:quantum-lab",
+        "invoiceAction": "hold-invoice",
+        "entitlementAction": "block-entitlements",
+        "recognizableAmountUsd": 0,
+        "deferredAmountUsd": 64000
+      },
+      {
+        "type": "revenue-action",
+        "requestId": "license-field-consortium",
+        "buyer": "buyer-ref:field-consortium",
+        "invoiceAction": "manual-review",
+        "entitlementAction": "defer-activation",
+        "recognizableAmountUsd": 0,
+        "deferredAmountUsd": 18000
+      },
+      {
+        "type": "revenue-action",
+        "requestId": "license-open-neuro",
+        "buyer": "buyer-ref:open-neuro",
+        "invoiceAction": "issue-invoice",
+        "entitlementAction": "activate-entitlements",
+        "recognizableAmountUsd": 24000,
+        "deferredAmountUsd": 0
+      },
+      {
+        "type": "compliance-task",
+        "taskId": "task-license-cryo-bio-east",
+        "requestId": "license-cryo-bio-east",
+        "priority": "high",
+        "requiredAction": "collect-export-clearance-before-revenue-activation"
+      },
+      {
+        "type": "compliance-task",
+        "taskId": "task-license-quantum-lab",
+        "requestId": "license-quantum-lab",
+        "priority": "high",
+        "requiredAction": "collect-export-clearance-before-revenue-activation"
+      },
+      {
+        "type": "compliance-task",
+        "taskId": "task-license-field-consortium",
+        "requestId": "license-field-consortium",
+        "priority": "normal",
+        "requiredAction": "route-to-supported-institutional-payment-rail"
+      }
+    ],
+    "auditDigest": "sha256:32c9498352303c377a36cca197d413edce926ebac3c8d1d29d778e41192d3e44"
+  },
+  "summary": {
+    "totalRequests": 4,
+    "complianceHolds": 2,
+    "manualReviews": 1,
+    "recognizableRevenueUsd": 24000,
+    "deferredRevenueUsd": 202000,
+    "recommendedAction": "pause-institutional-revenue-activation"
+  }
+}

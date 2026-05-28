@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="450" viewBox="0 0 960 450" role="img" aria-label="Artifact hosting readiness summary">
+  <rect width="960" height="450" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="402" rx="12" fill="#ffffff" stroke="#d0d5dd"/>
+  <text x="36" y="72" font-family="Arial" font-size="30" font-weight="700" fill="#101828">Artifact Hosting Readiness</text>
+  <rect x="36" y="98" width="410" height="48" rx="6" fill="#b42318"/>
+  <text x="56" y="129" font-family="Arial" font-size="21" font-weight="700" fill="#ffffff">block-artifact-publication</text>
+  <text x="476" y="129" font-family="Arial" font-size="22" fill="#101828">Risk score: 100</text>
+  <text x="36" y="166" font-family="Arial" font-size="18" fill="#667085">Audit digest: 11d239be28b2ac0a</text>
+  <text x="36" y="198" font-family="Arial" font-size="17" fill="#344054">code</text>
+  <rect x="190" y="178" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="190" y="178" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="642" y="198" font-family="Arial" font-size="17" fill="#344054">1</text>
+<text x="36" y="242" font-family="Arial" font-size="17" fill="#344054">dataset</text>
+  <rect x="190" y="222" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="190" y="222" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="642" y="242" font-family="Arial" font-size="17" fill="#344054">1</text>
+<text x="36" y="286" font-family="Arial" font-size="17" fill="#344054">model</text>
+  <rect x="190" y="266" width="430" height="24" rx="4" fill="#eaecf0"/>
+  <rect x="190" y="266" width="430" height="24" rx="4" fill="#12b76a"/>
+  <text x="642" y="286" font-family="Arial" font-size="17" fill="#344054">1</text>
+  <text x="36" y="416" font-family="Arial" font-size="18" fill="#667085">Synthetic artifact bundle only. No storage or execution service calls.</text>
+</svg>

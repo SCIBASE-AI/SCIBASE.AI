@@ -1,0 +1,195 @@
+{
+  "repository": {
+    "id": "repo-neuro-derived",
+    "title": "Derived Neuro Biomarker Repository",
+    "forkedFrom": "repo-neuro-base"
+  },
+  "summary": {
+    "decision": "hold-publication-export",
+    "riskScore": 100,
+    "auditDigest": "922a03cd0afd1781",
+    "commitsReviewed": 3,
+    "mergeRequestsReviewed": 2,
+    "tagsReviewed": 1,
+    "exportBundlesReviewed": 1,
+    "findings": 8,
+    "criticalFindings": 3,
+    "highFindings": 3
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "recommendation": "Restore contributor attribution from the upstream fork lineage.",
+      "code": "ATTRIBUTION_DROPPED",
+      "contributorId": "lin",
+      "message": "Upstream contributor lin is absent from derived repository attribution.",
+      "evidence": {
+        "upstreamContributor": "lin"
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Require a single merge base or explicit conflict-resolution provenance.",
+      "code": "MERGE_BASE_AMBIGUOUS",
+      "mergeRequestId": "mr-101",
+      "message": "Merge request mr-101 has missing or unknown merge base missing-base.",
+      "evidence": {
+        "id": "mr-101",
+        "sourceBranch": "hypothesis-retinal-panel",
+        "targetBranch": "main",
+        "mergeBase": "missing-base",
+        "historyRewrite": false
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Require maintainer review for history rewrites affecting provenance.",
+      "code": "UNREVIEWED_PROVENANCE_REWRITE",
+      "mergeRequestId": "mr-102",
+      "message": "Merge request mr-102 rewrites history without maintainer provenance review.",
+      "evidence": {
+        "id": "mr-102",
+        "sourceBranch": "rewrite-manuscript-history",
+        "targetBranch": "main",
+        "mergeBase": "base-001",
+        "historyRewrite": true,
+        "maintainerReviewId": ""
+      }
+    },
+    {
+      "severity": "high",
+      "recommendation": "Reissue or correct DOI metadata for the tagged repository version.",
+      "code": "DOI_VERSION_DRIFT",
+      "tag": "preprint-v2.1",
+      "message": "DOI metadata for preprint-v2.1 does not match tag commit or metadata hash.",
+      "evidence": {
+        "tag": {
+          "name": "preprint-v2.1",
+          "commitSha": "tag-200",
+          "metadataHash": "meta-good"
+        },
+        "doi": {
+          "tag": "preprint-v2.1",
+          "doi": "10.5555/scibase.neuro.2.1",
+          "commitSha": "exp-101",
+          "metadataHash": "meta-old"
+        }
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Regenerate the export manifest from the committed files.",
+      "code": "EXPORT_MANIFEST_HASH_MISMATCH",
+      "exportId": "export-001",
+      "message": "Export export-001 manifest hash not-the-real-hash does not match computed 01898eb9e33b80d5.",
+      "evidence": {
+        "exportBundle": {
+          "id": "export-001",
+          "tag": "preprint-v2.1",
+          "commitSha": "exp-101",
+          "manifestHash": "not-the-real-hash",
+          "files": [
+            {
+              "path": "manuscript/main.md",
+              "sha256": "a1"
+            },
+            {
+              "path": "data/retina.csv",
+              "sha256": "b2"
+            },
+            {
+              "path": "code/run_analysis.py",
+              "sha256": "c3"
+            }
+          ]
+        },
+        "computedHash": "01898eb9e33b80d5"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Reissue or correct DOI metadata for the tagged repository version.",
+      "code": "DOI_VERSION_DRIFT",
+      "exportId": "export-001",
+      "message": "Export export-001 points to exp-101 while tag preprint-v2.1 points to tag-200.",
+      "evidence": {
+        "exportBundle": {
+          "id": "export-001",
+          "tag": "preprint-v2.1",
+          "commitSha": "exp-101",
+          "manifestHash": "not-the-real-hash",
+          "files": [
+            {
+              "path": "manuscript/main.md",
+              "sha256": "a1"
+            },
+            {
+              "path": "data/retina.csv",
+              "sha256": "b2"
+            },
+            {
+              "path": "code/run_analysis.py",
+              "sha256": "c3"
+            }
+          ]
+        },
+        "tag": {
+          "name": "preprint-v2.1",
+          "commitSha": "tag-200",
+          "metadataHash": "meta-good"
+        }
+      }
+    },
+    {
+      "severity": "critical",
+      "recommendation": "Block export until derivative licensing is compatible with upstream terms.",
+      "code": "DERIVATION_LICENSE_CONFLICT",
+      "message": "Derived license proprietary conflicts with upstream CC-BY-4.0.",
+      "evidence": {
+        "upstream": "CC-BY-4.0",
+        "derived": "proprietary"
+      }
+    },
+    {
+      "severity": "medium",
+      "recommendation": "Regenerate citation badge metadata from the latest tagged version.",
+      "code": "CITATION_BADGE_STALE",
+      "badgeId": "cite-preprint-v2",
+      "message": "Citation badge cite-preprint-v2 is stale for tag preprint-v2.1.",
+      "evidence": {
+        "badge": {
+          "id": "cite-preprint-v2",
+          "tag": "preprint-v2.1",
+          "metadataHash": "meta-old"
+        },
+        "tag": {
+          "name": "preprint-v2.1",
+          "commitSha": "tag-200",
+          "metadataHash": "meta-good"
+        }
+      }
+    }
+  ],
+  "provenanceGates": [
+    {
+      "gate": "Fork lineage points to an upstream project and commit.",
+      "passed": true
+    },
+    {
+      "gate": "Derived repository preserves upstream contributor attribution.",
+      "passed": false
+    },
+    {
+      "gate": "Merge requests have clear bases and reviewed history rewrites.",
+      "passed": false
+    },
+    {
+      "gate": "DOI, tag, citation, and export metadata agree.",
+      "passed": false
+    },
+    {
+      "gate": "Derivative license is compatible with upstream terms.",
+      "passed": false
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "studyId": "genomic-neurodev-variant-2026",
+  "title": "Synthetic Neurodevelopmental Variant Manuscript",
+  "generatedAt": "2026-05-28T21:15:00.000Z",
+  "decision": "hold-pathogenicity-claim",
+  "riskScore": 100,
+  "severityCounts": {
+    "high": 4,
+    "medium": 7,
+    "low": 0
+  },
+  "findingCount": 11,
+  "evidenceDigest": "e98131f8bcb58383",
+  "summary": {
+    "variants": 2,
+    "claims": 4,
+    "evidenceItems": 5,
+    "caseControlComparisons": 1,
+    "referenceGenomeBuild": "GRCh38",
+    "transcripts": 1
+  },
+  "findings": [
+    {
+      "code": "REFERENCE_BUILD_MISMATCH",
+      "severity": "high",
+      "penalty": 14,
+      "message": "Variant var-syn1-p841l is not normalized to the manuscript reference build.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "methodBuild": "GRCh38",
+        "variantBuild": "GRCh37",
+        "coordinate": "X:47582391C>T"
+      },
+      "recommendation": "Normalize every variant to the manuscript reference build and report any liftover or remapping evidence."
+    },
+    {
+      "code": "TRANSCRIPT_EVIDENCE_GAP",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Variant var-syn1-p841l uses a transcript not declared in the methods.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "transcript": "NM_006950.4",
+        "methodTranscripts": [
+          "NM_001256799.3"
+        ]
+      },
+      "recommendation": "State the canonical transcript and ensure HGVS claims use a transcript named in the methods."
+    },
+    {
+      "code": "HGVS_NOMENCLATURE_GAP",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Variant var-syn1-p841l has incomplete HGVS nomenclature.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "hgvsCdna": "c.2522C>T",
+        "hgvsProtein": null,
+        "cdnaReady": true,
+        "proteinReady": false
+      },
+      "recommendation": "Provide complete HGVS cDNA and protein nomenclature before the claim is reviewer-ready."
+    },
+    {
+      "code": "POPULATION_FREQUENCY_CONFLICT",
+      "severity": "high",
+      "penalty": 18,
+      "message": "Variant var-syn1-p841l exceeds the rare-disease allele frequency threshold used by the manuscript.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "maxFrequency": 0.032,
+        "threshold": 0.01,
+        "claimIds": [
+          "claim-syn1-pathogenic",
+          "claim-syn1-functional",
+          "claim-syn1-computational-only"
+        ],
+        "frequencies": {
+          "gnomad": 0.018,
+          "ancestryMax": 0.032,
+          "localControl": 0.021
+        }
+      },
+      "recommendation": "Downgrade pathogenicity language or explain why population frequency is compatible with disease prevalence and penetrance."
+    },
+    {
+      "code": "CLINVAR_CONFLICT_UNRESOLVED",
+      "severity": "high",
+      "penalty": 15,
+      "message": "Variant var-syn1-p841l has unresolved ClinVar evidence that conflicts with strong pathogenicity language.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "classification": "Conflicting interpretations of pathogenicity",
+        "reviewStatus": "criteria provided, multiple submitters",
+        "conflictingSubmissions": true,
+        "claimIds": [
+          "claim-syn1-pathogenic",
+          "claim-syn1-functional",
+          "claim-syn1-computational-only"
+        ]
+      },
+      "recommendation": "Add an adjudication note for ClinVar benign/conflicting evidence or revise the variant classification."
+    },
+    {
+      "code": "SEGREGATION_UNDERPOWERED",
+      "severity": "medium",
+      "penalty": 9,
+      "message": "Variant var-syn1-p841l is described with family segregation support, but the pedigree evidence is underpowered.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "lodScore": 1.2,
+        "informativeMeioses": 4,
+        "unaffectedCarriers": 2,
+        "claimIds": [
+          "claim-syn1-pathogenic"
+        ]
+      },
+      "recommendation": "Treat segregation as supportive only after reporting informative meioses, LOD support, and unaffected-carrier checks."
+    },
+    {
+      "code": "FUNCTIONAL_ASSAY_WEAK_SUPPORT",
+      "severity": "medium",
+      "penalty": 9,
+      "message": "Claim claim-syn1-functional relies on functional evidence that is not reviewer-ready.",
+      "evidence": {
+        "claimId": "claim-syn1-functional",
+        "evidenceId": "ev-functional-syn1",
+        "assayType": "functional_assay",
+        "positiveControl": false,
+        "negativeControl": true,
+        "replicates": 1,
+        "validatedProtocol": false
+      },
+      "recommendation": "Require replicated functional assays with positive and negative controls before using functional rescue language."
+    },
+    {
+      "code": "ANCESTRY_COMPARISON_UNSUPPORTED",
+      "severity": "medium",
+      "penalty": 7,
+      "message": "Comparison burden-syn1-cohort uses frequency enrichment without ancestry-matched support.",
+      "evidence": {
+        "comparisonId": "burden-syn1-cohort",
+        "variantId": "var-syn1-p841l",
+        "ancestryMatched": false,
+        "stratifiedAnalysis": false,
+        "cases": 42,
+        "controls": 760
+      },
+      "recommendation": "Match ancestry or stratify frequency comparisons before presenting case-control enrichment as variant evidence."
+    },
+    {
+      "code": "COMPUTATIONAL_ONLY_OVERCLAIM",
+      "severity": "medium",
+      "penalty": 10,
+      "message": "Claim claim-syn1-computational-only uses strong pathogenicity language without orthogonal variant evidence.",
+      "evidence": {
+        "claimId": "claim-syn1-computational-only",
+        "variantId": "var-syn1-p841l",
+        "evidenceTypes": [
+          "in_silico"
+        ],
+        "text": "Computational prediction alone confirms this SYN1 change is a disease-causing variant."
+      },
+      "recommendation": "Replace pathogenic or causal language with candidate-variant language until orthogonal evidence is supplied."
+    },
+    {
+      "code": "PHENOTYPE_MATCH_WEAK",
+      "severity": "medium",
+      "penalty": 8,
+      "message": "Variant var-syn1-p841l is claimed as disease-relevant with weak phenotype overlap.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "hpoOverlap": 0.38,
+        "expectedThreshold": 0.5,
+        "assertedPhenotype": "early infantile epileptic encephalopathy",
+        "claimIds": [
+          "claim-syn1-pathogenic",
+          "claim-syn1-functional",
+          "claim-syn1-computational-only"
+        ]
+      },
+      "recommendation": "Add HPO-level phenotype support or soften the asserted genotype-phenotype match."
+    },
+    {
+      "code": "REPRODUCIBILITY_EVIDENCE_GAP",
+      "severity": "high",
+      "penalty": 14,
+      "message": "Variant var-syn1-p841l is missing callset reproducibility evidence.",
+      "evidence": {
+        "variantId": "var-syn1-p841l",
+        "missingOrWeakFields": [
+          "vcf",
+          "pipelineVersion",
+          "parameterDigest",
+          "validationMethod",
+          "readDepthMedian"
+        ],
+        "vcfAvailable": false,
+        "pipelineVersion": null,
+        "parameterDigest": null,
+        "validationMethod": null,
+        "readDepthMedian": 14
+      },
+      "recommendation": "Provide callset availability, validation method, pipeline version, and parameter digests for reviewer reproduction."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="44" width="1184" height="632" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="72" y="98" fill="#0f172a" font-family="Arial, sans-serif" font-size="34" font-weight="700">Genomic Variant Evidence Assistant</text>
+  <text x="72" y="140" fill="#475569" font-family="Arial, sans-serif" font-size="22">Synthetic Neurodevelopmental Variant Manuscript</text>
+  <text x="72" y="198" fill="#b91c1c" font-family="Arial, sans-serif" font-size="32" font-weight="700">hold-pathogenicity-claim</text>
+  <text x="72" y="242" fill="#334155" font-family="Arial, sans-serif" font-size="22">Risk 100/100 · findings 11 · digest e98131f8bcb58383</text>
+  <rect x="72" y="270" width="560" height="24" rx="12" fill="#e2e8f0"/>
+  <rect x="72" y="270" width="560" height="24" rx="12" fill="#b91c1c"/>
+  <text x="72" y="324" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Top findings</text>
+  <text x="72" y="342" fill="#334155" font-family="Arial, sans-serif" font-size="19">REFERENCE_BUILD_MISMATCH: Variant var-syn1-p841l is not normalized to the manuscript reference build.</text>
+<text x="72" y="376" fill="#334155" font-family="Arial, sans-serif" font-size="19">TRANSCRIPT_EVIDENCE_GAP: Variant var-syn1-p841l uses a transcript not declared in the methods.</text>
+<text x="72" y="410" fill="#334155" font-family="Arial, sans-serif" font-size="19">HGVS_NOMENCLATURE_GAP: Variant var-syn1-p841l has incomplete HGVS nomenclature.</text>
+<text x="72" y="444" fill="#334155" font-family="Arial, sans-serif" font-size="19">POPULATION_FREQUENCY_CONFLICT: Variant var-syn1-p841l exceeds the rare-disease allele frequency threshold used by the manuscr</text>
+<text x="72" y="478" fill="#334155" font-family="Arial, sans-serif" font-size="19">CLINVAR_CONFLICT_UNRESOLVED: Variant var-syn1-p841l has unresolved ClinVar evidence that conflicts with strong pathogenicit</text>
+<text x="72" y="512" fill="#334155" font-family="Arial, sans-serif" font-size="19">SEGREGATION_UNDERPOWERED: Variant var-syn1-p841l is described with family segregation support, but the pedigree evidence</text>
+  <text x="72" y="642" fill="#64748b" font-family="Arial, sans-serif" font-size="18">Synthetic variant packet only. No private genomic data, external APIs, patients, or model services.</text>
+</svg>

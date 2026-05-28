@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "total": 5,
+    "ready": 2,
+    "blocked": 3,
+    "findings": 4
+  },
+  "reports": [
+    {
+      "documentId": "doc-clean-methods",
+      "revisionId": "rev-001",
+      "decision": "ready",
+      "findings": [],
+      "receipt": {
+        "commentsReviewed": 1,
+        "blockedFindings": 0,
+        "heldFindings": 0,
+        "nextActions": []
+      }
+    },
+    {
+      "documentId": "doc-missing-anchor",
+      "revisionId": "rev-002",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "missing_anchor_quote",
+          "severity": "block",
+          "target": "comment-2",
+          "message": "comment-2 quoted text no longer exists and no replacement anchor was provided.",
+          "action": "Re-anchor the comment to exact current text or mark it resolved."
+        }
+      ],
+      "receipt": {
+        "commentsReviewed": 1,
+        "blockedFindings": 1,
+        "heldFindings": 0,
+        "nextActions": [
+          "Re-anchor the comment to exact current text or mark it resolved."
+        ]
+      }
+    },
+    {
+      "documentId": "doc-section-drift",
+      "revisionId": "rev-003",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "section_drift",
+          "severity": "block",
+          "target": "comment-3",
+          "message": "comment-3 moved from Limitations to Discussion.",
+          "action": "Confirm the comment still applies or re-anchor it in the expected section."
+        },
+        {
+          "code": "large_anchor_movement",
+          "severity": "hold",
+          "target": "comment-3",
+          "message": "comment-3 moved 220 characters, above the trusted movement threshold.",
+          "action": "Ask the reviewer to confirm or manually re-anchor the comment."
+        }
+      ],
+      "receipt": {
+        "commentsReviewed": 1,
+        "blockedFindings": 1,
+        "heldFindings": 1,
+        "nextActions": [
+          "Confirm the comment still applies or re-anchor it in the expected section.",
+          "Ask the reviewer to confirm or manually re-anchor the comment."
+        ]
+      }
+    },
+    {
+      "documentId": "doc-notebook-output",
+      "revisionId": "rev-004",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "stale_notebook_output_anchor",
+          "severity": "block",
+          "target": "comment-4",
+          "message": "comment-4 targets notebook output whose execution record changed.",
+          "action": "Re-run output review and confirm the comment still applies to the new output."
+        }
+      ],
+      "receipt": {
+        "commentsReviewed": 1,
+        "blockedFindings": 1,
+        "heldFindings": 0,
+        "nextActions": [
+          "Re-run output review and confirm the comment still applies to the new output."
+        ]
+      }
+    },
+    {
+      "documentId": "doc-manual-confirmation",
+      "revisionId": "rev-005",
+      "decision": "ready",
+      "findings": [],
+      "receipt": {
+        "commentsReviewed": 1,
+        "blockedFindings": 0,
+        "heldFindings": 0,
+        "nextActions": []
+      }
+    }
+  ]
+}

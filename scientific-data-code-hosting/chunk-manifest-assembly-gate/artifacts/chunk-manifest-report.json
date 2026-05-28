@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "total": 5,
+    "ready": 2,
+    "blocked": 3,
+    "findings": 4
+  },
+  "reports": [
+    {
+      "artifactId": "dataset-clean",
+      "filename": "single-cell-counts.parquet",
+      "decision": "ready",
+      "findings": [],
+      "receipt": {
+        "chunkCount": 3,
+        "declaredSizeBytes": 300,
+        "assembledEndByte": 300,
+        "blockedFindings": 0,
+        "heldFindings": 0,
+        "nextActions": []
+      }
+    },
+    {
+      "artifactId": "dataset-gap",
+      "filename": "instrument-raw.bin",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "chunk_gap",
+          "severity": "block",
+          "target": "chunk-2",
+          "message": "dataset-gap is missing bytes 100-149.",
+          "action": "Upload or repair the missing chunk range before release."
+        }
+      ],
+      "receipt": {
+        "chunkCount": 2,
+        "declaredSizeBytes": 300,
+        "assembledEndByte": 300,
+        "blockedFindings": 1,
+        "heldFindings": 0,
+        "nextActions": [
+          "Upload or repair the missing chunk range before release."
+        ]
+      }
+    },
+    {
+      "artifactId": "dataset-overlap",
+      "filename": "microscopy-stack.tiff",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "chunk_overlap",
+          "severity": "block",
+          "target": "chunk-2",
+          "message": "chunk-2 overlaps an earlier chunk at byte 120.",
+          "action": "Replace overlapping chunks with a non-overlapping manifest."
+        }
+      ],
+      "receipt": {
+        "chunkCount": 2,
+        "declaredSizeBytes": 280,
+        "assembledEndByte": 280,
+        "blockedFindings": 1,
+        "heldFindings": 0,
+        "nextActions": [
+          "Replace overlapping chunks with a non-overlapping manifest."
+        ]
+      }
+    },
+    {
+      "artifactId": "dataset-digest",
+      "filename": "model-weights.bin",
+      "decision": "block",
+      "findings": [
+        {
+          "code": "chunk_digest_mismatch",
+          "severity": "block",
+          "target": "chunk-2",
+          "message": "chunk-2 digest sha256:actual-b does not match registry sha256:expected-b.",
+          "action": "Re-upload the chunk or update the registry from a trusted checksum source."
+        }
+      ],
+      "receipt": {
+        "chunkCount": 2,
+        "declaredSizeBytes": 200,
+        "assembledEndByte": 200,
+        "blockedFindings": 1,
+        "heldFindings": 0,
+        "nextActions": [
+          "Re-upload the chunk or update the registry from a trusted checksum source."
+        ]
+      }
+    },
+    {
+      "artifactId": "dataset-hold",
+      "filename": "supplement.csv",
+      "decision": "ready",
+      "findings": [
+        {
+          "code": "missing_final_digest",
+          "severity": "hold",
+          "target": "dataset-hold",
+          "message": "dataset-hold does not include a final artifact digest.",
+          "action": "Attach the assembled artifact digest before public release."
+        }
+      ],
+      "receipt": {
+        "chunkCount": 1,
+        "declaredSizeBytes": 100,
+        "assembledEndByte": 100,
+        "blockedFindings": 0,
+        "heldFindings": 1,
+        "nextActions": [
+          "Attach the assembled artifact digest before public release."
+        ]
+      }
+    }
+  ]
+}

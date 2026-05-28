@@ -1,0 +1,74 @@
+[
+  {
+    "id": "charge-eligible-ai-compute",
+    "institution": "Northbridge University",
+    "category": "ai_compute",
+    "amount": 4200,
+    "servicePeriod": { "start": "2026-03-01", "end": "2026-03-31" },
+    "requiresPiApproval": true,
+    "requiresDepartmentApproval": false,
+    "approvals": { "pi": true, "department": false },
+    "usage": { "privateProject": false, "commercialPartner": false },
+    "fundingSource": {
+      "id": "NIH-R01-2026-114",
+      "awardStart": "2026-01-01",
+      "awardEnd": "2026-12-31",
+      "allowedCategories": ["ai_compute", "analytics_license", "storage"],
+      "allowPrivateProjectUsage": true,
+      "allowCommercialUse": false,
+      "indirectCostPolicy": "capped",
+      "indirectCostRateCap": 0.18
+    },
+    "indirectCosts": { "amount": 620, "rate": 0.15 },
+    "costShare": { "requestedAmount": 900, "cap": 5000, "alreadyCommitted": 1200 },
+    "backupBillingSource": "institution-operating-ledger"
+  },
+  {
+    "id": "charge-after-award-window",
+    "institution": "Northbridge University",
+    "category": "analytics_license",
+    "amount": 1800,
+    "servicePeriod": { "start": "2027-01-01", "end": "2027-01-31" },
+    "requiresPiApproval": true,
+    "requiresDepartmentApproval": true,
+    "approvals": { "pi": true, "department": false },
+    "usage": { "privateProject": false, "commercialPartner": false },
+    "fundingSource": {
+      "id": "NSF-CCRI-2026-778",
+      "awardStart": "2026-02-01",
+      "awardEnd": "2026-12-31",
+      "allowedCategories": ["analytics_license"],
+      "allowPrivateProjectUsage": false,
+      "allowCommercialUse": false,
+      "indirectCostPolicy": "excluded",
+      "indirectCostRateCap": 0
+    },
+    "indirectCosts": { "amount": 180, "rate": 0.1 },
+    "costShare": { "requestedAmount": 600, "cap": 2000, "alreadyCommitted": 1600 },
+    "backupBillingSource": "department-discretionary-fund"
+  },
+  {
+    "id": "charge-commercial-private-overage",
+    "institution": "Helix Translational Lab",
+    "category": "subscription",
+    "amount": 9500,
+    "servicePeriod": { "start": "2026-05-01", "end": "2026-05-31" },
+    "requiresPiApproval": true,
+    "requiresDepartmentApproval": true,
+    "approvals": { "pi": false, "department": true },
+    "usage": { "privateProject": true, "commercialPartner": true },
+    "fundingSource": {
+      "id": "FOUNDATION-OPENSCI-42",
+      "awardStart": "2026-01-01",
+      "awardEnd": "2026-09-30",
+      "allowedCategories": ["ai_compute", "storage"],
+      "allowPrivateProjectUsage": false,
+      "allowCommercialUse": false,
+      "indirectCostPolicy": "capped",
+      "indirectCostRateCap": 0.08
+    },
+    "indirectCosts": { "amount": 1100, "rate": 0.12 },
+    "costShare": { "requestedAmount": 3600, "cap": 7000, "alreadyCommitted": 5200 },
+    "backupBillingSource": "commercial-contract-billing"
+  }
+]

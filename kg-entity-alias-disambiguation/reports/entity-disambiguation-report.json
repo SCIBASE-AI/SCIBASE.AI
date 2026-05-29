@@ -1,0 +1,147 @@
+{
+  "batchId": "kg-batch-2026-05-29",
+  "generatedAt": "2026-05-29T12:42:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 3,
+    "publish-canonical-node": 2,
+    "hold-for-curation": 2
+  },
+  "mentions": [
+    {
+      "mention": "APC",
+      "source": "paper-neuro-17",
+      "doi": "10.5555/neuro.17",
+      "decision": "publish-canonical-node",
+      "canonicalCandidate": "NCBIGene:324",
+      "canonicalLabel": "APC gene",
+      "margin": 0.17,
+      "rankedCandidates": [
+        {
+          "id": "NCBIGene:324",
+          "label": "APC gene",
+          "ontology": "NCBI Gene",
+          "score": 0.91,
+          "contextOverlap": 0,
+          "adjustedScore": 0.91
+        },
+        {
+          "id": "MeSH:D000073878",
+          "label": "Antigen-presenting cells",
+          "ontology": "MeSH",
+          "score": 0.74,
+          "contextOverlap": 0,
+          "adjustedScore": 0.74
+        }
+      ],
+      "findings": [],
+      "actions": [
+        "merge mention into NCBIGene:324",
+        "publish proposed graph edge"
+      ]
+    },
+    {
+      "mention": "ALS",
+      "source": "paper-neuro-18",
+      "doi": "10.5555/neuro.18",
+      "decision": "publish-canonical-node",
+      "canonicalCandidate": "MeSH:D000690",
+      "canonicalLabel": "Amyotrophic Lateral Sclerosis",
+      "margin": 0.37,
+      "rankedCandidates": [
+        {
+          "id": "MeSH:D000690",
+          "label": "Amyotrophic Lateral Sclerosis",
+          "ontology": "MeSH",
+          "score": 0.89,
+          "contextOverlap": 1,
+          "adjustedScore": 1.01
+        },
+        {
+          "id": "CHEBI:456216",
+          "label": "Acetolactate synthase",
+          "ontology": "ChEBI",
+          "score": 0.64,
+          "contextOverlap": 0,
+          "adjustedScore": 0.64
+        }
+      ],
+      "findings": [],
+      "actions": [
+        "merge mention into MeSH:D000690",
+        "publish proposed graph edge"
+      ]
+    },
+    {
+      "mention": "Java",
+      "source": "software-methods-02",
+      "doi": "10.5555/software.02",
+      "decision": "hold-for-curation",
+      "canonicalCandidate": "GeoNames:1643084",
+      "canonicalLabel": "Java island",
+      "margin": 0.01,
+      "rankedCandidates": [
+        {
+          "id": "GeoNames:1643084",
+          "label": "Java island",
+          "ontology": "GeoNames",
+          "score": 0.82,
+          "contextOverlap": 0.5,
+          "adjustedScore": 0.88
+        },
+        {
+          "id": "Wikidata:Q251",
+          "label": "Java programming language",
+          "ontology": "Wikidata",
+          "score": 0.83,
+          "contextOverlap": 0.3333333333333333,
+          "adjustedScore": 0.87
+        }
+      ],
+      "findings": [
+        "candidate margin 0.01 is below 0.05"
+      ],
+      "actions": [
+        "block graph edge publication",
+        "route mention to ontology curator",
+        "keep candidate GeoNames:1643084 as provisional"
+      ]
+    },
+    {
+      "mention": "Mercury",
+      "source": "materials-09",
+      "doi": "10.5555/materials.09",
+      "decision": "hold-for-curation",
+      "canonicalCandidate": "PubChem:23931",
+      "canonicalLabel": "Mercury element",
+      "margin": 0.03,
+      "rankedCandidates": [
+        {
+          "id": "PubChem:23931",
+          "label": "Mercury element",
+          "ontology": "PubChem",
+          "score": 0.88,
+          "contextOverlap": 0.5,
+          "adjustedScore": 0.94
+        },
+        {
+          "id": "MeSH:D008628",
+          "label": "Mercury compounds",
+          "ontology": "MeSH",
+          "score": 0.85,
+          "contextOverlap": 0.5,
+          "adjustedScore": 0.91
+        }
+      ],
+      "findings": [
+        "candidate margin 0.03 is below 0.05",
+        "multiple ontology edges proposed for an ambiguous mention"
+      ],
+      "actions": [
+        "block graph edge publication",
+        "route mention to ontology curator",
+        "keep candidate PubChem:23931 as provisional"
+      ]
+    }
+  ]
+}

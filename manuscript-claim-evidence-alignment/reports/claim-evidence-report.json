@@ -1,0 +1,92 @@
+{
+  "manuscriptId": "ms-neuro-042",
+  "title": "Adaptive Neural Stimulation Improves Memory Recall",
+  "generatedAt": "2026-05-29T12:24:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 4,
+    "supported": 1,
+    "overclaimed": 1,
+    "weakly-supported": 2
+  },
+  "claims": [
+    {
+      "id": "claim-1",
+      "text": "Adaptive stimulation significantly improved delayed recall compared with sham controls.",
+      "decision": "supported",
+      "evidenceRefs": [
+        "fig-2b",
+        "table-1"
+      ],
+      "linkedEvidence": [
+        "Figure 2B",
+        "Table 1"
+      ],
+      "missingSignals": [],
+      "findings": [],
+      "actions": [
+        "keep claim with evidence links"
+      ]
+    },
+    {
+      "id": "claim-2",
+      "text": "The intervention completely eliminates cognitive fatigue in older adults.",
+      "decision": "overclaimed",
+      "evidenceRefs": [
+        "fig-3a"
+      ],
+      "linkedEvidence": [
+        "Figure 3A"
+      ],
+      "missingSignals": [],
+      "findings": [
+        "claim wording is stronger than the linked evidence"
+      ],
+      "actions": [
+        "soften absolute wording",
+        "add precise limitation"
+      ]
+    },
+    {
+      "id": "claim-3",
+      "text": "No adverse events were observed during the trial.",
+      "decision": "weakly-supported",
+      "evidenceRefs": [
+        "supp-safety"
+      ],
+      "linkedEvidence": [
+        "Supplemental Safety Table"
+      ],
+      "missingSignals": [
+        "monitoring-window"
+      ],
+      "findings": [
+        "missing required signals: monitoring-window"
+      ],
+      "actions": [
+        "add missing evidence signal or soften claim"
+      ]
+    },
+    {
+      "id": "claim-4",
+      "text": "This is the first closed-loop stimulation study in human memory research.",
+      "decision": "weakly-supported",
+      "evidenceRefs": [
+        "intro-prior-work"
+      ],
+      "linkedEvidence": [
+        "Introduction Prior Work"
+      ],
+      "missingSignals": [
+        "scope-limitation"
+      ],
+      "findings": [
+        "missing required signals: scope-limitation",
+        "novelty claim needs a narrower scope limitation"
+      ],
+      "actions": [
+        "add missing evidence signal or soften claim"
+      ]
+    }
+  ]
+}

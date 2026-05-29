@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f6f0df"/>
+  <rect x="52" y="48" width="856" height="444" rx="10" fill="#fffaf0" stroke="#614a2f" stroke-width="3"/>
+  <text x="92" y="116" font-family="Georgia, serif" font-size="38" fill="#2f2418">Data Residency Transfer Guard</text>
+  <text x="94" y="160" font-family="Menlo, monospace" font-size="18" fill="#5c4630">Synthetic reviewer artifact for SCIBASE User &amp; Project Management</text>
+  <g font-family="Menlo, monospace" font-size="22">
+    <rect x="96" y="214" width="224" height="54" fill="#2f855a"/>
+    <text x="112" y="249" fill="#fff">approved 2</text>
+    <rect x="96" y="290" width="112" height="54" fill="#b7791f"/>
+    <text x="112" y="325" fill="#fff">review 0</text>
+    <rect x="96" y="366" width="224" height="54" fill="#b83232"/>
+    <text x="112" y="401" fill="#fff">blocked 2</text>
+  </g>
+  <text x="94" y="462" font-family="Menlo, monospace" font-size="16" fill="#614a2f">Report digest: df69e10d399a5cdd39225df47e8e67c7...</text>
+</svg>

@@ -1,0 +1,64 @@
+{
+  "batchId": "suggestion-provenance-2026-05-29",
+  "generatedAt": "2026-05-29T14:02:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 4,
+    "accept-or-display": 2,
+    "hold-suggestion": 2
+  },
+  "suggestions": [
+    {
+      "id": "sug-1",
+      "documentId": "manuscript-v3",
+      "sectionId": "methods-2",
+      "decision": "accept-or-display",
+      "findings": [],
+      "actions": [
+        "preserve suggestion provenance",
+        "allow tracked-change workflow"
+      ]
+    },
+    {
+      "id": "sug-2",
+      "documentId": "manuscript-v3",
+      "sectionId": "results-4",
+      "decision": "hold-suggestion",
+      "findings": [
+        "anonymous review suggestion exposes author identity"
+      ],
+      "actions": [
+        "hold suggestion",
+        "request provenance remediation",
+        "prevent acceptance audit write"
+      ]
+    },
+    {
+      "id": "sug-3",
+      "documentId": "manuscript-v3",
+      "sectionId": "figure-caption-2",
+      "decision": "hold-suggestion",
+      "findings": [
+        "suggestion target range is stale after document edits",
+        "insufficient permission for tracked-change acceptance: commenter",
+        "accepted suggestion is missing provenance lineage"
+      ],
+      "actions": [
+        "hold suggestion",
+        "request provenance remediation",
+        "prevent acceptance audit write"
+      ]
+    },
+    {
+      "id": "sug-4",
+      "documentId": "protocol-v1",
+      "sectionId": "sampling-step-5",
+      "decision": "accept-or-display",
+      "findings": [],
+      "actions": [
+        "preserve suggestion provenance",
+        "allow tracked-change workflow"
+      ]
+    }
+  ]
+}

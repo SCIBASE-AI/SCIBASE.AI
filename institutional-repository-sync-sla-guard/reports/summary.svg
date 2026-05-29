@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#eef3f7"/>
+  <rect x="54" y="52" width="852" height="436" rx="8" fill="#ffffff" stroke="#1f3349" stroke-width="3"/>
+  <text x="86" y="112" font-family="Georgia, serif" font-size="34" fill="#1f3349">Institutional Repository Sync SLA Guard</text>
+  <text x="88" y="156" font-family="Menlo, monospace" font-size="18" fill="#42566f">Enterprise export-pipeline reviewer artifact</text>
+  <rect x="96" y="210" width="120" height="54" fill="#2f855a"/>
+  <rect x="96" y="292" width="120" height="54" fill="#b7791f"/>
+  <rect x="96" y="374" width="360" height="54" fill="#b83232"/>
+  <text x="112" y="245" font-family="Menlo, monospace" font-size="22" fill="#ffffff">ready 1</text>
+  <text x="112" y="327" font-family="Menlo, monospace" font-size="22" fill="#ffffff">review 0</text>
+  <text x="112" y="409" font-family="Menlo, monospace" font-size="22" fill="#ffffff">blocked 3</text>
+  <text x="86" y="464" font-family="Menlo, monospace" font-size="16" fill="#42566f">Digest b694760bd00672e8fd0c17f288c6007b...</text>
+</svg>

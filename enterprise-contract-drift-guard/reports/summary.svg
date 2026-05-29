@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" role="img" aria-label="Enterprise contract drift summary">
+  <rect width="760" height="260" fill="#101820"/>
+  <text x="32" y="48" fill="#f2f7f2" font-family="Arial" font-size="24">Enterprise Contract Drift Guard</text>
+  <text x="32" y="86" fill="#b6c2c9" font-family="Arial" font-size="15">Synthetic institutional integration contract review</text>
+  <rect x="32" y="122" width="360" height="42" fill="#d64545"/>
+  <text x="40" y="149" fill="#fff" font-family="Arial" font-size="16">3 release holds</text>
+  <rect x="32" y="178" width="120" height="42" fill="#35a66f"/>
+  <text x="40" y="205" fill="#fff" font-family="Arial" font-size="16">1 approvals</text>
+</svg>

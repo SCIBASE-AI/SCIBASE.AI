@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f7f8fb"/>
+  <text x="48" y="64" font-family="Arial" font-size="28" font-weight="700" fill="#172033">Section Lock Arbiter</text>
+  <text x="48" y="102" font-family="Arial" font-size="16" fill="#4f5d75">Real-time editor controlled-section decisions</text>
+  <rect x="48" y="116" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="142" font-family="Arial" font-size="18" font-weight="700" fill="#172033">Final Figure 3</text>
+  <text x="72" y="166" font-family="Arial" font-size="14" fill="#c2410c">block-conflicting-edit</text>
+  <text x="330" y="166" font-family="Arial" font-size="14" fill="#4f5d75">3 finding(s), 2 action(s)</text>
+  <rect x="48" y="198" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="224" font-family="Arial" font-size="18" font-weight="700" fill="#172033">Locked Raw Dataset Table</text>
+  <text x="72" y="248" font-family="Arial" font-size="14" fill="#047857">release-stale-lock</text>
+  <text x="330" y="248" font-family="Arial" font-size="14" fill="#4f5d75">1 finding(s), 2 action(s)</text>
+  <rect x="48" y="280" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="306" font-family="Arial" font-size="18" font-weight="700" fill="#172033">Sampling Protocol</text>
+  <text x="72" y="330" font-family="Arial" font-size="14" fill="#2563eb">allow-reviewed-override</text>
+  <text x="330" y="330" font-family="Arial" font-size="14" fill="#4f5d75">0 finding(s), 2 action(s)</text>
+  <rect x="48" y="362" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="388" font-family="Arial" font-size="18" font-weight="700" fill="#172033">Notebook Cell 12</text>
+  <text x="72" y="412" font-family="Arial" font-size="14" fill="#2563eb">allow-edit</text>
+  <text x="330" y="412" font-family="Arial" font-size="14" fill="#4f5d75">0 finding(s), 1 action(s)</text>
+</svg>

@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-05-29T00:00:00.000Z",
+  "guard": "project-data-residency-transfer-guard",
+  "summary": {
+    "total": 4,
+    "approved": 2,
+    "needs_review": 0,
+    "blocked": 2,
+    "findingCount": 5
+  },
+  "decisions": [
+    {
+      "id": "pub-seq-archive-eu-review",
+      "projectId": "project-atlas-42",
+      "action": "grant_dataset_read",
+      "targetObject": "dataset:human-genomes-v3",
+      "classification": "restricted-human-genomic",
+      "homeRegion": "EU",
+      "destinationRegion": "US",
+      "crossRegion": true,
+      "externalInstitution": true,
+      "decision": "blocked",
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "missing-cross-region-dpa",
+          "message": "Sensitive project data cannot cross residency boundaries without an approved DPA."
+        },
+        {
+          "severity": "blocker",
+          "code": "active-export-embargo",
+          "message": "Export embargo remains active for 33 day(s)."
+        },
+        {
+          "severity": "review",
+          "code": "missing-data-steward-approval",
+          "message": "Sensitive object access requires data-steward approval evidence."
+        }
+      ],
+      "auditDigest": "5833dcf52dc90fd540b3b5805320322a1be5204e3081ef44bc4dda04539e542d"
+    },
+    {
+      "id": "open-metadata-catalogue",
+      "projectId": "project-open-19",
+      "action": "publish_metadata_snapshot",
+      "targetObject": "metadata:materials-index",
+      "classification": "public-metadata",
+      "homeRegion": "US",
+      "destinationRegion": "US",
+      "crossRegion": false,
+      "externalInstitution": false,
+      "decision": "approved",
+      "findings": [
+        {
+          "severity": "info",
+          "code": "public-metadata-safe",
+          "message": "Public non-sensitive metadata transfer is allowed with current evidence."
+        }
+      ],
+      "auditDigest": "671f131e434ab50a1548feae1bd9389942765501defd705319c546a7566c50a7"
+    },
+    {
+      "id": "private-clinical-partner-sync",
+      "projectId": "project-clinical-7",
+      "action": "export_analysis_notebook",
+      "targetObject": "notebook:clinical-endpoint-model",
+      "classification": "clinical-derived-sensitive",
+      "homeRegion": "US",
+      "destinationRegion": "EU",
+      "crossRegion": true,
+      "externalInstitution": true,
+      "decision": "blocked",
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "expired-data-use-agreement",
+          "message": "The data-use agreement is expired for the requested transfer."
+        }
+      ],
+      "auditDigest": "7edb86c12360ad8342e565634a529b704bd90a972effe71eeac92b02ddd6bbb7"
+    },
+    {
+      "id": "institutional-only-student-handoff",
+      "projectId": "project-field-23",
+      "action": "grant_document_comment",
+      "targetObject": "document:field-protocol-draft",
+      "classification": "internal-collaboration",
+      "homeRegion": "EU",
+      "destinationRegion": "EU",
+      "crossRegion": false,
+      "externalInstitution": false,
+      "decision": "approved",
+      "findings": [],
+      "auditDigest": "b5064e73fafbfd1e2c9d756868baca9f8af162c5d9b98c44454382fd0ea9c184"
+    }
+  ],
+  "reportDigest": "df69e10d399a5cdd39225df47e8e67c725a226b0e1eaf6c9540afe12ce467573"
+}

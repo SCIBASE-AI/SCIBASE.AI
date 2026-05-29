@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="48" y="64" font-family="Arial" font-size="28" font-weight="700" fill="#172033">KG Entity Disambiguation</text>
+  <text x="48" y="102" font-family="Arial" font-size="16" fill="#4f5d75">Alias collision guard before graph edge publication</text>
+  <rect x="48" y="116" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="142" font-family="Arial" font-size="18" font-weight="700" fill="#172033">APC</text>
+  <text x="72" y="166" font-family="Arial" font-size="14" fill="#047857">publish-canonical-node</text>
+  <text x="300" y="166" font-family="Arial" font-size="14" fill="#4f5d75">NCBIGene:324, margin 0.17</text>
+  <rect x="48" y="198" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="224" font-family="Arial" font-size="18" font-weight="700" fill="#172033">ALS</text>
+  <text x="72" y="248" font-family="Arial" font-size="14" fill="#047857">publish-canonical-node</text>
+  <text x="300" y="248" font-family="Arial" font-size="14" fill="#4f5d75">MeSH:D000690, margin 0.37</text>
+  <rect x="48" y="280" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="306" font-family="Arial" font-size="18" font-weight="700" fill="#172033">Java</text>
+  <text x="72" y="330" font-family="Arial" font-size="14" fill="#b45309">hold-for-curation</text>
+  <text x="300" y="330" font-family="Arial" font-size="14" fill="#4f5d75">GeoNames:1643084, margin 0.01</text>
+  <rect x="48" y="362" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="388" font-family="Arial" font-size="18" font-weight="700" fill="#172033">Mercury</text>
+  <text x="72" y="412" font-family="Arial" font-size="14" fill="#b45309">hold-for-curation</text>
+  <text x="300" y="412" font-family="Arial" font-size="14" fill="#4f5d75">PubChem:23931, margin 0.03</text>
+</svg>

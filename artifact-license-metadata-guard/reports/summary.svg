@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#fafafa"/>
+  <text x="48" y="64" font-family="Arial" font-size="28" font-weight="700" fill="#172033">Artifact License Metadata Guard</text>
+  <text x="48" y="102" font-family="Arial" font-size="16" fill="#4f5d75">FAIR release readiness for hosted data and code</text>
+  <rect x="48" y="116" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="142" font-family="Arial" font-size="18" font-weight="700" fill="#172033">dataset-river-001</text>
+  <text x="72" y="166" font-family="Arial" font-size="14" fill="#047857">release-ready</text>
+  <text x="300" y="166" font-family="Arial" font-size="14" fill="#4f5d75">dataset, 0 finding(s)</text>
+  <rect x="48" y="198" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="224" font-family="Arial" font-size="18" font-weight="700" fill="#172033">model-clinical-002</text>
+  <text x="72" y="248" font-family="Arial" font-size="14" fill="#b45309">hold-for-curation</text>
+  <text x="300" y="248" font-family="Arial" font-size="14" fill="#4f5d75">model, 5 finding(s)</text>
+  <rect x="48" y="280" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="306" font-family="Arial" font-size="18" font-weight="700" fill="#172033">code-analysis-003</text>
+  <text x="72" y="330" font-family="Arial" font-size="14" fill="#047857">release-ready</text>
+  <text x="300" y="330" font-family="Arial" font-size="14" fill="#4f5d75">code, 0 finding(s)</text>
+  <rect x="48" y="362" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="388" font-family="Arial" font-size="18" font-weight="700" fill="#172033">supplement-004</text>
+  <text x="72" y="412" font-family="Arial" font-size="14" fill="#b45309">hold-for-curation</text>
+  <text x="300" y="412" font-family="Arial" font-size="14" fill="#4f5d75">supplement, 2 finding(s)</text>
+</svg>

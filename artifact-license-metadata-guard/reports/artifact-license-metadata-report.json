@@ -1,0 +1,77 @@
+{
+  "batchId": "artifact-batch-2026-05-29",
+  "generatedAt": "2026-05-29T13:22:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 7,
+    "release-ready": 2,
+    "hold-for-curation": 2
+  },
+  "artifacts": [
+    {
+      "id": "dataset-river-001",
+      "kind": "dataset",
+      "filename": "river-sediment-metals.csv",
+      "decision": "release-ready",
+      "missingMetadata": [],
+      "findings": [],
+      "actions": [
+        "publish artifact",
+        "include in FAIR export manifest"
+      ]
+    },
+    {
+      "id": "model-clinical-002",
+      "kind": "model",
+      "filename": "clinical-risk-model.bin",
+      "decision": "hold-for-curation",
+      "missingMetadata": [
+        "publisher",
+        "publicationYear",
+        "schema.org"
+      ],
+      "findings": [
+        "license proprietary is not public-release compatible",
+        "missing checksum coverage",
+        "missing persistent identifier",
+        "missing metadata fields: publisher, publicationYear, schema.org",
+        "sensitive artifact marked public: clinical-derived"
+      ],
+      "actions": [
+        "hold artifact release",
+        "request metadata/license remediation",
+        "exclude from public FAIR bundle"
+      ]
+    },
+    {
+      "id": "code-analysis-003",
+      "kind": "code",
+      "filename": "run_analysis.py",
+      "decision": "release-ready",
+      "missingMetadata": [],
+      "findings": [],
+      "actions": [
+        "publish artifact",
+        "include in FAIR export manifest"
+      ]
+    },
+    {
+      "id": "supplement-004",
+      "kind": "supplement",
+      "filename": "interview-notes-redacted.pdf",
+      "decision": "hold-for-curation",
+      "missingMetadata": [
+        "schema.org"
+      ],
+      "findings": [
+        "missing metadata fields: schema.org",
+        "human-subjects supplement should not use unrestricted CC0 release"
+      ],
+      "actions": [
+        "hold artifact release",
+        "request metadata/license remediation",
+        "exclude from public FAIR bundle"
+      ]
+    }
+  ]
+}

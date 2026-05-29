@@ -1,0 +1,69 @@
+{
+  "batchId": "citation-fit-2026-05-29",
+  "generatedAt": "2026-05-29T13:42:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 5,
+    "insert-citation": 2,
+    "hold-citation": 2
+  },
+  "recommendations": [
+    {
+      "id": "rec-1",
+      "decision": "insert-citation",
+      "title": "Attention-based protein contact prediction from amino acid sequences",
+      "doi": "10.5555/protein.001",
+      "contextOverlap": 0.727,
+      "findings": [],
+      "actions": [
+        "insert citation",
+        "record citation rationale"
+      ]
+    },
+    {
+      "id": "rec-2",
+      "decision": "hold-citation",
+      "title": "Pilot stimulation study reports mixed fatigue outcomes",
+      "doi": "10.5555/fatigue.002",
+      "contextOverlap": 0.222,
+      "findings": [
+        "candidate contradicts context: does not eliminate fatigue; underpowered pilot",
+        "strong manuscript claim should be softened before citation insertion"
+      ],
+      "actions": [
+        "hold recommendation",
+        "request closer supporting source",
+        "show remediation note to author"
+      ]
+    },
+    {
+      "id": "rec-3",
+      "decision": "insert-citation",
+      "title": "Controlling the false discovery rate",
+      "doi": "10.2307/2346101",
+      "contextOverlap": 0.4,
+      "findings": [],
+      "actions": [
+        "insert citation",
+        "record citation rationale"
+      ]
+    },
+    {
+      "id": "rec-4",
+      "decision": "hold-citation",
+      "title": "Base editing specificity in plant chloroplasts",
+      "doi": null,
+      "contextOverlap": 0.1,
+      "findings": [
+        "candidate citation is missing DOI metadata",
+        "low context overlap 0.10",
+        "candidate may be stale for applied domain support"
+      ],
+      "actions": [
+        "hold recommendation",
+        "request closer supporting source",
+        "show remediation note to author"
+      ]
+    }
+  ]
+}

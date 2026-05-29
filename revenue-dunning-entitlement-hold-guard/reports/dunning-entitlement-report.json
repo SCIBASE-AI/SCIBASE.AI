@@ -1,0 +1,61 @@
+{
+  "batchId": "revenue-dunning-2026-05-29",
+  "generatedAt": "2026-05-29T15:04:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 7,
+    "keep-active": 1,
+    "finance-exception": 1,
+    "hold-entitlements": 2
+  },
+  "accounts": [
+    {
+      "id": "acct-lab-1",
+      "decision": "keep-active",
+      "findings": [],
+      "actions": [
+        "keep entitlements active",
+        "allow queued exports"
+      ]
+    },
+    {
+      "id": "acct-inst-2",
+      "decision": "finance-exception",
+      "findings": [
+        "analytics license export queued for unpaid account",
+        "institutional invoice should route to finance exception workflow"
+      ],
+      "actions": [
+        "route to institutional billing desk",
+        "pause analytics export until invoice evidence is attached"
+      ]
+    },
+    {
+      "id": "acct-ai-3",
+      "decision": "hold-entitlements",
+      "findings": [
+        "retry limit exceeded",
+        "active entitlement beyond grace window",
+        "compute credits should be held after repeated payment failure"
+      ],
+      "actions": [
+        "hold risky entitlements",
+        "pause compute credits or exports",
+        "send remediation notice"
+      ]
+    },
+    {
+      "id": "acct-api-4",
+      "decision": "hold-entitlements",
+      "findings": [
+        "missing day-7 dunning notice",
+        "analytics license export queued for unpaid account"
+      ],
+      "actions": [
+        "hold risky entitlements",
+        "pause compute credits or exports",
+        "send remediation notice"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "generatedAt": "2026-05-29T00:00:00.000Z",
+  "totalContracts": 4,
+  "releaseHolds": 3,
+  "stagedNotices": 0,
+  "approvals": 1,
+  "reports": [
+    {
+      "id": "dspace-repository-export",
+      "system": "DSpace",
+      "owner": "University Library",
+      "currentVersion": "2026.05",
+      "proposedVersion": "2026.06",
+      "decision": "hold-release",
+      "highestSeverity": "critical",
+      "findings": [
+        {
+          "field": "license",
+          "type": "type-changed",
+          "current": "string",
+          "proposed": "enum:cc-by|cc0",
+          "severity": "high"
+        },
+        {
+          "field": "embargoUntil",
+          "type": "removed-field",
+          "current": "date",
+          "proposed": null,
+          "severity": "high"
+        },
+        {
+          "field": "embargoUntil",
+          "type": "missing-required-field",
+          "severity": "critical",
+          "current": "date",
+          "proposed": null
+        }
+      ],
+      "remediation": [
+        "Version-gate license and keep the old type available for pinned consumers.",
+        "Restore embargoUntil or publish a compatibility alias for 2026.05.",
+        "Keep embargoUntil in the proposed DSpace payload until all consumers migrate."
+      ]
+    },
+    {
+      "id": "canvas-course-publication-webhook",
+      "system": "Canvas",
+      "owner": "Graduate School",
+      "currentVersion": "2026.04",
+      "proposedVersion": "2026.06",
+      "decision": "hold-release",
+      "highestSeverity": "high",
+      "findings": [
+        {
+          "field": "courseId",
+          "type": "type-changed",
+          "current": "string",
+          "proposed": "number",
+          "severity": "high"
+        },
+        {
+          "field": "eventType",
+          "type": "enum-narrowed",
+          "current": "enum:created|published|reviewed",
+          "proposed": "enum:created|published|retracted",
+          "severity": "medium"
+        },
+        {
+          "field": "deprecationDays",
+          "type": "short-deprecation-window",
+          "severity": "medium",
+          "current": 30,
+          "proposed": ">=90"
+        }
+      ],
+      "remediation": [
+        "Version-gate courseId and keep the old type available for pinned consumers.",
+        "Do not remove enum values without a documented migration and replay fixture.",
+        "Extend the deprecation period to at least 90 days for enterprise integrations."
+      ]
+    },
+    {
+      "id": "orcid-hris-identity-sync",
+      "system": "ORCID-HRIS",
+      "owner": "Research HR",
+      "currentVersion": "2026.03",
+      "proposedVersion": "2026.06",
+      "decision": "approve",
+      "highestSeverity": "clear",
+      "findings": [],
+      "remediation": []
+    },
+    {
+      "id": "eln-inventory-review-export",
+      "system": "ELN",
+      "owner": "Lab Operations",
+      "currentVersion": "2026.05",
+      "proposedVersion": "2026.06",
+      "decision": "hold-release",
+      "highestSeverity": "high",
+      "findings": [
+        {
+          "field": "payloadPolicy.redactsEmails",
+          "type": "pii-redaction-disabled",
+          "severity": "high",
+          "current": false,
+          "proposed": true
+        }
+      ],
+      "remediation": [
+        "Enable email redaction before exporting review or roster payloads."
+      ]
+    }
+  ]
+}

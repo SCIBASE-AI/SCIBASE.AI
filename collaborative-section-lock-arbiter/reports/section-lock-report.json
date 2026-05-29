@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-05-29T12:10:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 4,
+    "block-conflicting-edit": 1,
+    "release-stale-lock": 1,
+    "allow-reviewed-override": 1,
+    "allow-edit": 1
+  },
+  "decisions": [
+    {
+      "id": "fig-3-final",
+      "title": "Final Figure 3",
+      "decision": "block-conflicting-edit",
+      "findings": [
+        "freeze window active until 2026-05-29T16:00:00.000Z",
+        "2 pending suggestions need resolution",
+        "requester ravi cannot bypass maya's lock"
+      ],
+      "actions": [
+        "keep section locked",
+        "route request to lock owner or reviewer queue"
+      ]
+    },
+    {
+      "id": "dataset-table-raw",
+      "title": "Locked Raw Dataset Table",
+      "decision": "release-stale-lock",
+      "findings": [
+        "lock heartbeat stale by 185 minutes"
+      ],
+      "actions": [
+        "release stale lock",
+        "grant li unlock-stale-section"
+      ]
+    },
+    {
+      "id": "protocol-sampling",
+      "title": "Sampling Protocol",
+      "decision": "allow-reviewed-override",
+      "findings": [],
+      "actions": [
+        "record reviewer override",
+        "preserve lock audit trail before edit"
+      ]
+    },
+    {
+      "id": "notebook-cell-12",
+      "title": "Notebook Cell 12",
+      "decision": "allow-edit",
+      "findings": [],
+      "actions": [
+        "grant chen edit-code-cell"
+      ]
+    }
+  ]
+}

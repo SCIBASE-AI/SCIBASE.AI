@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <text x="48" y="64" font-family="Arial" font-size="28" font-weight="700" fill="#172033">Repository Embargo Release Guard</text>
+  <text x="48" y="102" font-family="Arial" font-size="16" fill="#4f5d75">Tagged release checks for embargoed scientific assets</text>
+  <rect x="48" y="116" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="142" font-family="Arial" font-size="18" font-weight="700" fill="#172033">asset-1</text>
+  <text x="72" y="166" font-family="Arial" font-size="14" fill="#047857">release-ready</text>
+  <text x="292" y="166" font-family="Arial" font-size="14" fill="#4f5d75">dataset, 0 finding(s)</text>
+  <rect x="48" y="198" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="224" font-family="Arial" font-size="18" font-weight="700" fill="#172033">asset-2</text>
+  <text x="72" y="248" font-family="Arial" font-size="14" fill="#b45309">hold-release</text>
+  <text x="292" y="248" font-family="Arial" font-size="14" fill="#4f5d75">manuscript, 2 finding(s)</text>
+  <rect x="48" y="280" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="306" font-family="Arial" font-size="18" font-weight="700" fill="#172033">asset-3</text>
+  <text x="72" y="330" font-family="Arial" font-size="14" fill="#047857">release-ready</text>
+  <text x="292" y="330" font-family="Arial" font-size="14" fill="#4f5d75">results, 0 finding(s)</text>
+  <rect x="48" y="362" width="864" height="58" rx="6" fill="#ffffff" stroke="#d7dce6"/>
+  <text x="72" y="388" font-family="Arial" font-size="18" font-weight="700" fill="#172033">asset-4</text>
+  <text x="72" y="412" font-family="Arial" font-size="14" fill="#b45309">hold-release</text>
+  <text x="292" y="412" font-family="Arial" font-size="14" fill="#4f5d75">dataset, 3 finding(s)</text>
+</svg>

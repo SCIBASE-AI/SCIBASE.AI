@@ -1,0 +1,66 @@
+{
+  "batchId": "embargo-release-2026-05-29",
+  "generatedAt": "2026-05-29T14:18:00.000Z",
+  "releaseDate": "2026-05-29",
+  "summary": {
+    "total": 4,
+    "findingCount": 5,
+    "release-ready": 2,
+    "hold-release": 2
+  },
+  "assets": [
+    {
+      "id": "asset-1",
+      "path": "data/protein-folds-public.csv",
+      "kind": "dataset",
+      "decision": "release-ready",
+      "findings": [],
+      "actions": [
+        "include asset in tagged release",
+        "publish citation/export metadata"
+      ]
+    },
+    {
+      "id": "asset-2",
+      "path": "manuscript/sponsor-results.md",
+      "kind": "manuscript",
+      "decision": "hold-release",
+      "findings": [
+        "embargo active until 2026-08-15",
+        "public access group assigned before embargo expiry"
+      ],
+      "actions": [
+        "hold asset from public release",
+        "repair embargo metadata",
+        "exclude from export bundle until clean"
+      ]
+    },
+    {
+      "id": "asset-3",
+      "path": "results/funder-required-summary.md",
+      "kind": "results",
+      "decision": "release-ready",
+      "findings": [],
+      "actions": [
+        "include asset in tagged release",
+        "publish citation/export metadata"
+      ]
+    },
+    {
+      "id": "asset-4",
+      "path": "data/clinical-derived.tsv",
+      "kind": "dataset",
+      "decision": "hold-release",
+      "findings": [
+        "expired embargo still lacks public access group",
+        "DOI target does not match export bundle target",
+        "citation badge hidden after embargo expiry"
+      ],
+      "actions": [
+        "hold asset from public release",
+        "repair embargo metadata",
+        "exclude from export bundle until clean"
+      ]
+    }
+  ]
+}

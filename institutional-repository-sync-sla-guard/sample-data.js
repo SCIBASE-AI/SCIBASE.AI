@@ -1,0 +1,128 @@
+const syncJobs = [
+  {
+    id: "zenodo-open-access-overdue",
+    project: "Single-cell reproducibility atlas",
+    target: {
+      repository: "Zenodo",
+      type: "indexed-repository",
+      region: "EU",
+    },
+    mandate: {
+      funder: "Horizon EU",
+      dueInHours: -18,
+      requiresOpenAccess: true,
+      requiresDoi: true,
+      requiresOrcid: true,
+    },
+    package: {
+      metadataComplete: true,
+      doiPresent: true,
+      orcidCoveragePercent: 94,
+      license: "CC-BY-4.0",
+      embargoUntil: null,
+      artifactHashPinned: true,
+    },
+    operations: {
+      queuedHours: 42,
+      retryCount: 5,
+      lastWebhookStatus: "failed",
+      lastWebhookAgeHours: 13,
+      adminOwner: "research-office",
+    },
+  },
+  {
+    id: "pubmed-metadata-gap",
+    project: "Clinical review supplement",
+    target: {
+      repository: "PubMed Central",
+      type: "funder-portal",
+      region: "US",
+    },
+    mandate: {
+      funder: "NIH",
+      dueInHours: 36,
+      requiresOpenAccess: true,
+      requiresDoi: true,
+      requiresOrcid: true,
+    },
+    package: {
+      metadataComplete: false,
+      doiPresent: true,
+      orcidCoveragePercent: 67,
+      license: "CC-BY-4.0",
+      embargoUntil: null,
+      artifactHashPinned: true,
+    },
+    operations: {
+      queuedHours: 8,
+      retryCount: 1,
+      lastWebhookStatus: "delivered",
+      lastWebhookAgeHours: 2,
+      adminOwner: "compliance-desk",
+    },
+  },
+  {
+    id: "arxiv-ready",
+    project: "Materials preprint export",
+    target: {
+      repository: "arXiv",
+      type: "preprint-repository",
+      region: "US",
+    },
+    mandate: {
+      funder: "Internal",
+      dueInHours: 120,
+      requiresOpenAccess: false,
+      requiresDoi: false,
+      requiresOrcid: true,
+    },
+    package: {
+      metadataComplete: true,
+      doiPresent: false,
+      orcidCoveragePercent: 100,
+      license: "MIT",
+      embargoUntil: null,
+      artifactHashPinned: true,
+    },
+    operations: {
+      queuedHours: 3,
+      retryCount: 0,
+      lastWebhookStatus: "delivered",
+      lastWebhookAgeHours: 1,
+      adminOwner: "lab-admin",
+    },
+  },
+  {
+    id: "embargoed-dataset-hold",
+    project: "Corporate R&D catalyst screen",
+    target: {
+      repository: "Invenio",
+      type: "institutional-repository",
+      region: "US",
+    },
+    mandate: {
+      funder: "Industry sponsor",
+      dueInHours: 72,
+      requiresOpenAccess: false,
+      requiresDoi: true,
+      requiresOrcid: false,
+    },
+    package: {
+      metadataComplete: true,
+      doiPresent: true,
+      orcidCoveragePercent: 50,
+      license: "proprietary-review",
+      embargoUntil: "2026-06-15",
+      artifactHashPinned: true,
+    },
+    operations: {
+      queuedHours: 15,
+      retryCount: 0,
+      lastWebhookStatus: "not-sent",
+      lastWebhookAgeHours: null,
+      adminOwner: "sponsor-ops",
+    },
+  },
+];
+
+module.exports = { syncJobs };

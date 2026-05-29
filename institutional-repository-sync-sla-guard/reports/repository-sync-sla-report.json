@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-05-29T00:00:00.000Z",
+  "guard": "institutional-repository-sync-sla-guard",
+  "summary": {
+    "total": 4,
+    "ready": 1,
+    "needs_review": 0,
+    "blocked": 3,
+    "findingCount": 7
+  },
+  "decisions": [
+    {
+      "id": "zenodo-open-access-overdue",
+      "project": "Single-cell reproducibility atlas",
+      "targetRepository": "Zenodo",
+      "targetType": "indexed-repository",
+      "adminOwner": "research-office",
+      "decision": "blocked",
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "mandate-deadline-missed",
+          "message": "Horizon EU repository sync is 18 hour(s) overdue."
+        },
+        {
+          "severity": "review",
+          "code": "sync-backlog-risk",
+          "message": "Sync has queued for 42 hour(s) with 5 retry attempt(s)."
+        },
+        {
+          "severity": "review",
+          "code": "webhook-delivery-failed",
+          "message": "Last institutional webhook delivery failed and requires admin visibility."
+        }
+      ],
+      "escalation": "route-to-research-office",
+      "auditDigest": "036ab26e31a2ab0b83954569ca3998b69bb6cd2bce0093b3cd974220502ac3b4"
+    },
+    {
+      "id": "pubmed-metadata-gap",
+      "project": "Clinical review supplement",
+      "targetRepository": "PubMed Central",
+      "targetType": "funder-portal",
+      "adminOwner": "compliance-desk",
+      "decision": "blocked",
+      "findings": [
+        {
+          "severity": "review",
+          "code": "mandate-deadline-near",
+          "message": "NIH deadline is within 36 hour(s)."
+        },
+        {
+          "severity": "blocker",
+          "code": "metadata-incomplete",
+          "message": "Repository export metadata is incomplete."
+        },
+        {
+          "severity": "review",
+          "code": "low-orcid-coverage",
+          "message": "ORCID coverage is 67%, below the 90% admin threshold."
+        }
+      ],
+      "escalation": "route-to-compliance-desk",
+      "auditDigest": "bf9ad08c2157beaaea1dd31169920d21829fc2303995826c52ec76d99e794c4e"
+    },
+    {
+      "id": "arxiv-ready",
+      "project": "Materials preprint export",
+      "targetRepository": "arXiv",
+      "targetType": "preprint-repository",
+      "adminOwner": "lab-admin",
+      "decision": "ready",
+      "findings": [],
+      "escalation": "release-to-sync-worker",
+      "auditDigest": "3c91a1816a086dc468584e4a6ff2c56657516e24b1f686f0616e69679d81a5ff"
+    },
+    {
+      "id": "embargoed-dataset-hold",
+      "project": "Corporate R&D catalyst screen",
+      "targetRepository": "Invenio",
+      "targetType": "institutional-repository",
+      "adminOwner": "sponsor-ops",
+      "decision": "blocked",
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "active-embargo",
+          "message": "Repository sync is blocked by an active embargo for 17 day(s)."
+        }
+      ],
+      "escalation": "route-to-sponsor-ops",
+      "auditDigest": "301fa177eba873f9fc1b77bd7521aaa2f725acccf76d8b033d8f59536aa03c22"
+    }
+  ],
+  "reportDigest": "b694760bd00672e8fd0c17f288c6007b5b4312d327f0eff8adf051b753d581a8"
+}

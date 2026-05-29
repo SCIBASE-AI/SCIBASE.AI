@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-05-29T00:00:00.000Z",
+  "totalAssignments": 4,
+  "payoutHolds": 2,
+  "recusals": 1,
+  "disclosures": 1,
+  "allowed": 0,
+  "reports": [
+    {
+      "challengeId": "rna-biomarker-prize",
+      "evaluatorId": "reviewer-17",
+      "teamId": "team-alpha",
+      "decision": "recuse-evaluator",
+      "highestSeverity": "high",
+      "findings": [
+        {
+          "type": "recent-coauthorship",
+          "severity": "high",
+          "detail": "Coauthorship 8 months ago requires recusal or independent review."
+        }
+      ],
+      "remediation": [
+        "Assign an independent reviewer and record coauthorship disclosure."
+      ]
+    },
+    {
+      "challengeId": "materials-catalyst-model",
+      "evaluatorId": "sponsor-scientist-4",
+      "teamId": "team-boron",
+      "decision": "hold-payout-decision",
+      "highestSeverity": "critical",
+      "findings": [
+        {
+          "type": "sponsor-employment",
+          "severity": "high",
+          "detail": "Sponsor employee cannot be the sole scoring reviewer for payout decisions."
+        },
+        {
+          "type": "material-financial-interest",
+          "severity": "critical",
+          "detail": "Material financial interest requires payout decision hold and alternate reviewer."
+        }
+      ],
+      "remediation": [
+        "Limit sponsor employee to observer notes or require independent scoring.",
+        "Hold payout decision until an alternate evaluator signs off."
+      ]
+    },
+    {
+      "challengeId": "climate-forecasting-open",
+      "evaluatorId": "faculty-panel-2",
+      "teamId": "team-delta",
+      "decision": "require-disclosure",
+      "highestSeverity": "medium",
+      "findings": [
+        {
+          "type": "same-institution",
+          "severity": "medium",
+          "detail": "Evaluator and team share an institution; require disclosure and secondary reviewer."
+        }
+      ],
+      "remediation": [
+        "Add a secondary external reviewer before sponsor-visible scoring."
+      ]
+    },
+    {
+      "challengeId": "quantum-noise-reduction",
+      "evaluatorId": "solver-advisor-9",
+      "teamId": "team-qubit",
+      "decision": "hold-payout-decision",
+      "highestSeverity": "critical",
+      "findings": [
+        {
+          "type": "competing-team-membership",
+          "severity": "critical",
+          "detail": "Evaluator belongs to a competing team and must be removed from scoring."
+        },
+        {
+          "type": "anonymity-breach",
+          "severity": "high",
+          "detail": "Anonymous challenge identity was shared with sponsor before scoring lock."
+        }
+      ],
+      "remediation": [
+        "Remove evaluator from the panel and quarantine prior scores.",
+        "Freeze sponsor access, rotate reviewer packet, and log breach review."
+      ]
+    }
+  ]
+}

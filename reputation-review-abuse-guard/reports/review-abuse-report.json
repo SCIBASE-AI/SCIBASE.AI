@@ -1,0 +1,71 @@
+{
+  "batchId": "reputation-batch-2026-05-29",
+  "generatedAt": "2026-05-29T13:02:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 7,
+    "count-reputation-credit": 2,
+    "hold-reputation-credit": 2
+  },
+  "reviews": [
+    {
+      "id": "review-101",
+      "reviewer": "ana",
+      "targetProject": "proj-climate-7",
+      "decision": "count-reputation-credit",
+      "scoreDelta": 8,
+      "findings": [],
+      "actions": [
+        "apply reputation credit",
+        "record review audit"
+      ]
+    },
+    {
+      "id": "review-102",
+      "reviewer": "chen",
+      "targetProject": "proj-neuro-4",
+      "decision": "hold-reputation-credit",
+      "scoreDelta": 15,
+      "findings": [
+        "reviewer shares affiliation with target author",
+        "high reputation delta from low-effort review text",
+        "reciprocal review link detected: review-099",
+        "reviewer and target author appear in same endorsement cluster"
+      ],
+      "actions": [
+        "hold reputation credit",
+        "route to trust-and-safety review",
+        "suppress leaderboard update"
+      ]
+    },
+    {
+      "id": "review-103",
+      "reviewer": "eli",
+      "targetProject": "proj-math-2",
+      "decision": "hold-reputation-credit",
+      "scoreDelta": 11,
+      "findings": [
+        "high reputation delta from low-effort review text",
+        "anonymous review contains identity leakage",
+        "reviewer and target author appear in same endorsement cluster"
+      ],
+      "actions": [
+        "hold reputation credit",
+        "route to trust-and-safety review",
+        "suppress leaderboard update"
+      ]
+    },
+    {
+      "id": "review-104",
+      "reviewer": "hugo",
+      "targetProject": "proj-protein-8",
+      "decision": "count-reputation-credit",
+      "scoreDelta": 5,
+      "findings": [],
+      "actions": [
+        "apply reputation credit",
+        "record review audit"
+      ]
+    }
+  ]
+}

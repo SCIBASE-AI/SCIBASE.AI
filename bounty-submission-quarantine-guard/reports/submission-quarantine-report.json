@@ -1,0 +1,67 @@
+{
+  "batchId": "bounty-submission-quarantine-2026-05-29",
+  "generatedAt": "2026-05-29T14:34:00.000Z",
+  "summary": {
+    "total": 4,
+    "findingCount": 7,
+    "release-to-review": 2,
+    "quarantine-submission": 2
+  },
+  "submissions": [
+    {
+      "id": "sub-1",
+      "challengeId": "challenge-bio-17",
+      "teamId": "team-alpha",
+      "decision": "release-to-review",
+      "findings": [],
+      "actions": [
+        "release package to reviewer queue",
+        "keep sponsor access gated until award decision"
+      ]
+    },
+    {
+      "id": "sub-2",
+      "challengeId": "challenge-ml-04",
+      "teamId": "team-beta",
+      "decision": "quarantine-submission",
+      "findings": [
+        "submission package manifest is incomplete",
+        "unsafe artifact flags: macro-enabled-document",
+        "sponsor visibility is enabled before quarantine clearance",
+        "reviewer-safe preview is missing",
+        "IP handoff statement is missing"
+      ],
+      "actions": [
+        "quarantine package",
+        "disable sponsor visibility",
+        "request manifest and safety remediation"
+      ]
+    },
+    {
+      "id": "sub-3",
+      "challengeId": "challenge-climate-09",
+      "teamId": "team-gamma",
+      "decision": "quarantine-submission",
+      "findings": [
+        "submission artifacts are missing hashes",
+        "unsafe artifact flags: executable-binary"
+      ],
+      "actions": [
+        "quarantine package",
+        "disable sponsor visibility",
+        "request manifest and safety remediation"
+      ]
+    },
+    {
+      "id": "sub-4",
+      "challengeId": "challenge-quantum-02",
+      "teamId": "team-delta",
+      "decision": "release-to-review",
+      "findings": [],
+      "actions": [
+        "release package to reviewer queue",
+        "keep sponsor access gated until award decision"
+      ]
+    }
+  ]
+}

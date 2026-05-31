@@ -1,0 +1,316 @@
+{
+  "guard": "scientific-image-metadata-provenance-guard",
+  "records": [
+    {
+      "decision": "publish",
+      "findings": [],
+      "image_id": "IMG-CELL-001",
+      "redactions": [],
+      "release_scope": "public_kg",
+      "safe_edges": [
+        {
+          "evidence": "metadata",
+          "object": "dataset:DS-ASTROCYTE-ATLAS-2026",
+          "predicate": "member_of_dataset",
+          "subject": "image:IMG-CELL-001",
+          "visibility": "public"
+        },
+        {
+          "evidence": "metadata",
+          "object": "protocol:PR-IMMUNO-STAIN-V2",
+          "predicate": "uses_protocol",
+          "subject": "image:IMG-CELL-001",
+          "visibility": "public"
+        },
+        {
+          "evidence": "metadata",
+          "object": "instrument:INST-CONFOCAL-A1",
+          "predicate": "captured_by",
+          "subject": "image:IMG-CELL-001",
+          "visibility": "public"
+        },
+        {
+          "evidence": "metadata",
+          "object": "artifact:s3://scibase-lab/raw/astrocyte/IMG-CELL-001.ome.tiff",
+          "predicate": "has_source_artifact",
+          "subject": "image:IMG-CELL-001",
+          "visibility": "public"
+        },
+        {
+          "evidence": "metadata",
+          "object": "license:CC-BY-4.0",
+          "predicate": "released_under",
+          "subject": "image:IMG-CELL-001",
+          "visibility": "public"
+        }
+      ],
+      "title": "Confocal astrocyte culture panel"
+    },
+    {
+      "decision": "review",
+      "findings": [
+        {
+          "code": "MISSING_CHANNELS",
+          "field": "channels",
+          "message": "Microscopy image should include channel metadata before KG recommendation use.",
+          "severity": "review"
+        },
+        {
+          "code": "MISSING_PIXEL_SIZE",
+          "field": "pixel_size_um",
+          "message": "Microscopy image should include pixel_size_um for scale-aware graph navigation.",
+          "severity": "review"
+        }
+      ],
+      "image_id": "IMG-SLIDE-002",
+      "redactions": [],
+      "release_scope": "review_queue",
+      "safe_edges": [
+        {
+          "evidence": "metadata",
+          "object": "dataset:DS-EMBRYO-STAIN-2026",
+          "predicate": "member_of_dataset",
+          "subject": "image:IMG-SLIDE-002",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "protocol:PR-EMBRYO-STAIN-V1",
+          "predicate": "uses_protocol",
+          "subject": "image:IMG-SLIDE-002",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "instrument:INST-WIDEFIELD-7",
+          "predicate": "captured_by",
+          "subject": "image:IMG-SLIDE-002",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "artifact:s3://scibase-lab/raw/embryo/IMG-SLIDE-002.tiff",
+          "predicate": "has_source_artifact",
+          "subject": "image:IMG-SLIDE-002",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "license:CC-BY-4.0",
+          "predicate": "released_under",
+          "subject": "image:IMG-SLIDE-002",
+          "visibility": "internal"
+        }
+      ],
+      "title": "Widefield embryo slide"
+    },
+    {
+      "decision": "block",
+      "findings": [
+        {
+          "code": "ACQUIRED_AFTER_PUBLICATION",
+          "field": "acquired_at",
+          "message": "Image acquisition date is later than the publication date.",
+          "severity": "block"
+        },
+        {
+          "code": "NON_PUBLIC_ACCESS",
+          "field": "access",
+          "message": "Image is not public and should be kept out of the public KG release.",
+          "severity": "review"
+        },
+        {
+          "code": "LICENSE_REVIEW_REQUIRED",
+          "field": "license",
+          "message": "Image license is missing or not clearly open for graph publication.",
+          "severity": "review"
+        },
+        {
+          "code": "PRIVATE_TAG_PRESENT",
+          "field": "privacy_tags",
+          "message": "Privacy tags indicate private identifiers that must not enter public KG nodes.",
+          "severity": "block"
+        },
+        {
+          "code": "PRIVATE_VALUE_IN_FILENAME",
+          "field": "filename",
+          "message": "Filename appears to contain private identifiers.",
+          "severity": "block"
+        },
+        {
+          "code": "PRIVATE_METADATA_FIELD",
+          "field": "metadata.mrn",
+          "message": "Metadata contains a private field name or value.",
+          "severity": "block"
+        },
+        {
+          "code": "PRIVATE_METADATA_FIELD",
+          "field": "metadata.patient_name",
+          "message": "Metadata contains a private field name or value.",
+          "severity": "block"
+        }
+      ],
+      "image_id": "IMG-PATH-003",
+      "redactions": [
+        {
+          "action": "remove from public graph payload",
+          "field": "privacy_tags"
+        },
+        {
+          "action": "replace with stable image_id",
+          "field": "filename"
+        },
+        {
+          "action": "drop before KG release",
+          "field": "metadata.mrn"
+        },
+        {
+          "action": "drop before KG release",
+          "field": "metadata.patient_name"
+        }
+      ],
+      "release_scope": "do_not_publish",
+      "safe_edges": [
+        {
+          "evidence": "metadata",
+          "object": "dataset:DS-PATHOLOGY-RESTRICTED",
+          "predicate": "member_of_dataset",
+          "subject": "image:IMG-PATH-003",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "protocol:PR-HISTOLOGY-REVIEW",
+          "predicate": "uses_protocol",
+          "subject": "image:IMG-PATH-003",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "instrument:INST-SLIDE-SCANNER-2",
+          "predicate": "captured_by",
+          "subject": "image:IMG-PATH-003",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "artifact:s3://restricted-lab/raw/pathology/IMG-PATH-003.svs",
+          "predicate": "has_source_artifact",
+          "subject": "image:IMG-PATH-003",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "license:restricted",
+          "predicate": "released_under",
+          "subject": "image:IMG-PATH-003",
+          "visibility": "internal"
+        }
+      ],
+      "title": "Clinical pathology field with leaked identifiers"
+    },
+    {
+      "decision": "block",
+      "findings": [
+        {
+          "code": "MISSING_DERIVED_SOURCE",
+          "field": "derived_from",
+          "message": "Derived figure cannot enter the KG without source image or artifact lineage.",
+          "severity": "block"
+        }
+      ],
+      "image_id": "FIG-DERIVED-004",
+      "redactions": [],
+      "release_scope": "do_not_publish",
+      "safe_edges": [
+        {
+          "evidence": "metadata",
+          "object": "dataset:DS-CELL-MIGRATION-2026",
+          "predicate": "member_of_dataset",
+          "subject": "image:FIG-DERIVED-004",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "protocol:PR-FIGURE-ASSEMBLY",
+          "predicate": "uses_protocol",
+          "subject": "image:FIG-DERIVED-004",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "license:CC-BY-4.0",
+          "predicate": "released_under",
+          "subject": "image:FIG-DERIVED-004",
+          "visibility": "internal"
+        }
+      ],
+      "title": "Composite figure without source chain"
+    },
+    {
+      "decision": "review",
+      "findings": [
+        {
+          "code": "MISSING_CHANNELS",
+          "field": "channels",
+          "message": "Microscopy image should include channel metadata before KG recommendation use.",
+          "severity": "review"
+        },
+        {
+          "code": "NON_PUBLIC_ACCESS",
+          "field": "access",
+          "message": "Image is not public and should be kept out of the public KG release.",
+          "severity": "review"
+        },
+        {
+          "code": "LICENSE_REVIEW_REQUIRED",
+          "field": "license",
+          "message": "Image license is missing or not clearly open for graph publication.",
+          "severity": "review"
+        }
+      ],
+      "image_id": "IMG-EMBARGO-005",
+      "redactions": [],
+      "release_scope": "internal_review_only",
+      "safe_edges": [
+        {
+          "evidence": "metadata",
+          "object": "dataset:DS-CRYOEM-EMBARGO-2026",
+          "predicate": "member_of_dataset",
+          "subject": "image:IMG-EMBARGO-005",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "protocol:PR-CRYOEM-CAPTURE-V4",
+          "predicate": "uses_protocol",
+          "subject": "image:IMG-EMBARGO-005",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "instrument:INST-CRYOEM-4",
+          "predicate": "captured_by",
+          "subject": "image:IMG-EMBARGO-005",
+          "visibility": "internal"
+        },
+        {
+          "evidence": "metadata",
+          "object": "artifact:s3://scibase-lab/embargo/cryo/IMG-EMBARGO-005.mrc",
+          "predicate": "has_source_artifact",
+          "subject": "image:IMG-EMBARGO-005",
+          "visibility": "internal"
+        }
+      ],
+      "title": "Embargoed cryo-EM map preview"
+    }
+  ],
+  "summary": {
+    "block": 2,
+    "publish": 1,
+    "redaction_count": 4,
+    "review": 2,
+    "safe_edge_count": 22,
+    "total": 5
+  }
+}

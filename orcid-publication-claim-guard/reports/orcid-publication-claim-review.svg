@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#eef2ff"/>
+  <rect x="34" y="34" width="1132" height="652" rx="18" fill="white" stroke="#c7d2fe"/>
+  <text x="60" y="92" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">ORCID Publication Claim Guard</text>
+  <text x="60" y="130" font-family="Arial, sans-serif" font-size="20" fill="#475569">Ada Kim - 0000-0002-1825-0097</text>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="18" fill="#64748b">Accepted 1 / Review 1 / Quarantine 3</text>
+  <g font-family="Arial, sans-serif">
+        <g transform="translate(60 190)">
+          <rect width="1080" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="28" cy="31" r="10" fill="#059669"/>
+          <text x="54" y="25" font-size="20" font-weight="700">pub-exact-orcid - auto_accept</text>
+          <text x="54" y="49" font-size="15" fill="#475569">Reproducible notebooks for kinase pathway triage</text>
+          <text x="850" y="38" font-size="18" font-weight="700" fill="#059669">score 86</text>
+        </g>
+        <g transform="translate(60 276)">
+          <rect width="1080" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="28" cy="31" r="10" fill="#dc2626"/>
+          <text x="54" y="25" font-size="20" font-weight="700">pub-homonym-orcid-mismatch - quarantine</text>
+          <text x="54" y="49" font-size="15" fill="#475569">Hydrogen electrolyzer scheduling in microgrids</text>
+          <text x="850" y="38" font-size="18" font-weight="700" fill="#dc2626">score 14</text>
+        </g>
+        <g transform="translate(60 362)">
+          <rect width="1080" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="28" cy="31" r="10" fill="#d97706"/>
+          <text x="54" y="25" font-size="20" font-weight="700">pub-weak-but-reviewable - review</text>
+          <text x="54" y="49" font-size="15" fill="#475569">Sparse pathway graphs for reproducibility audits</text>
+          <text x="850" y="38" font-size="18" font-weight="700" fill="#d97706">score 59</text>
+        </g>
+        <g transform="translate(60 448)">
+          <rect width="1080" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="28" cy="31" r="10" fill="#dc2626"/>
+          <text x="54" y="25" font-size="20" font-weight="700">pub-duplicate-doi - quarantine</text>
+          <text x="54" y="49" font-size="15" fill="#475569">Grid-scale battery dispatch under volatile demand</text>
+          <text x="850" y="38" font-size="18" font-weight="700" fill="#dc2626">score 32</text>
+        </g>
+        <g transform="translate(60 534)">
+          <rect width="1080" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="28" cy="31" r="10" fill="#dc2626"/>
+          <text x="54" y="25" font-size="20" font-weight="700">pub-retracted - quarantine</text>
+          <text x="54" y="49" font-size="15" fill="#475569">Automated profile scoring from unreconciled citations</text>
+          <text x="850" y="38" font-size="18" font-weight="700" fill="#dc2626">score 59</text>
+        </g></g>
+</svg>

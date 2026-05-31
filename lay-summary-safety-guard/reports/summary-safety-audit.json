@@ -1,0 +1,189 @@
+{
+  "title": "Early biomarker screen for inflammatory flare risk",
+  "audience": {
+    "name": "patient and funder lay audience",
+    "maxGradeLevel": 8,
+    "jargonTerms": [
+      "cytokine",
+      "proteomic",
+      "longitudinal"
+    ]
+  },
+  "decision": "block-public-share",
+  "shareable": false,
+  "summary": {
+    "sentences": 3,
+    "readingGrade": 13.8,
+    "blockers": 4,
+    "holds": 9,
+    "evidenceItems": 3
+  },
+  "findings": [
+    {
+      "severity": "hold",
+      "code": "reading-level-too-high",
+      "message": "Lay summary reads at grade 13.8, above the target grade 8.",
+      "evidence": {
+        "grade": 13.8,
+        "targetGrade": 8
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "jargon-not-explained",
+      "message": "Jargon term needs plain-language explanation: cytokine",
+      "evidence": {
+        "term": "cytokine"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "jargon-not-explained",
+      "message": "Jargon term needs plain-language explanation: proteomic",
+      "evidence": {
+        "term": "proteomic"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "jargon-not-explained",
+      "message": "Jargon term needs plain-language explanation: longitudinal",
+      "evidence": {
+        "term": "longitudinal"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "benefit-claim-weakly-supported",
+      "message": "A public-facing benefit claim lacks enough source-evidence overlap.",
+      "evidence": {
+        "sentence": "This proteomic cytokine breakthrough proves doctors can prevent inflammatory flares before they happen.",
+        "bestEvidence": {
+          "id": "E3",
+          "score": 0.11,
+          "matchedTerms": [
+            "before"
+          ]
+        }
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "causal-overstatement",
+      "message": "Lay summary uses stronger causal wording than the evidence supports.",
+      "evidence": {
+        "sentence": "This proteomic cytokine breakthrough proves doctors can prevent inflammatory flares before they happen."
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "uncertainty-missing",
+      "message": "Benefit-oriented sentence should preserve uncertainty for a public audience.",
+      "evidence": {
+        "sentence": "This proteomic cytokine breakthrough proves doctors can prevent inflammatory flares before they happen."
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "medical-advice-risk",
+      "message": "Lay summary risks sounding like clinical or medical advice.",
+      "evidence": {
+        "sentence": "Patients should ask their doctor to replace treatment with this simple blood test because it works for everyone."
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "uncertainty-missing",
+      "message": "Benefit-oriented sentence should preserve uncertainty for a public audience.",
+      "evidence": {
+        "sentence": "Patients should ask their doctor to replace treatment with this simple blood test because it works for everyone."
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "causal-overstatement",
+      "message": "Lay summary uses stronger causal wording than the evidence supports.",
+      "evidence": {
+        "sentence": "The longitudinal model identifies immune dysregulation and delivers actionable clinical certainty."
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "required-limitation-missing",
+      "message": "Required limitation is missing: small observational cohort",
+      "evidence": {
+        "limitation": "small observational cohort"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "required-limitation-missing",
+      "message": "Required limitation is missing: external validation pending",
+      "evidence": {
+        "limitation": "external validation pending"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "required-limitation-missing",
+      "message": "Required limitation is missing: not a treatment recommendation",
+      "evidence": {
+        "limitation": "not a treatment recommendation"
+      }
+    }
+  ],
+  "sentenceReports": [
+    {
+      "sentence": "This proteomic cytokine breakthrough proves doctors can prevent inflammatory flares before they happen.",
+      "bestEvidence": {
+        "id": "E3",
+        "score": 0.11,
+        "matchedTerms": [
+          "before"
+        ]
+      },
+      "findings": [
+        "benefit-claim-weakly-supported",
+        "causal-overstatement",
+        "uncertainty-missing"
+      ]
+    },
+    {
+      "sentence": "Patients should ask their doctor to replace treatment with this simple blood test because it works for everyone.",
+      "bestEvidence": {
+        "id": "E2",
+        "score": 0.33,
+        "matchedTerms": [
+          "patients",
+          "treatment",
+          "test"
+        ]
+      },
+      "findings": [
+        "medical-advice-risk",
+        "uncertainty-missing"
+      ]
+    },
+    {
+      "sentence": "The longitudinal model identifies immune dysregulation and delivers actionable clinical certainty.",
+      "bestEvidence": {
+        "id": "E3",
+        "score": 0.11,
+        "matchedTerms": [
+          "clinical"
+        ]
+      },
+      "findings": [
+        "causal-overstatement"
+      ]
+    }
+  ],
+  "rewriteActions": [
+    "Remove or narrow unsupported benefit claims and attach a specific evidence span.",
+    "Replace causal verbs such as \"proves\" or \"will prevent\" with cautious language such as \"suggests\" or \"may\".",
+    "Remove treatment instructions and add a human-clinician disclaimer when health content is present.",
+    "Add uncertainty, study-size, and population context to benefit-oriented sentences.",
+    "Rewrite with shorter sentences and define scientific terms in everyday language.",
+    "Add the missing study limitations before the summary is shared with non-specialists."
+  ]
+}

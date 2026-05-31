@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f6f8fb"/>
+  <rect x="44" y="44" width="1192" height="632" rx="12" fill="#ffffff" stroke="#d7dde5"/>
+  <text x="72" y="105" font-size="38" font-family="Arial" font-weight="700" fill="#1d2939">Revenue Refund Liability Reserve Guard</text>
+  <text x="72" y="145" font-size="22" font-family="Arial" fill="#667085">Refund exposure and reserve sufficiency review</text>
+  <rect x="72" y="188" width="320" height="108" rx="8" fill="#ffffff" stroke="#d7dde5"/>
+<rect x="72" y="188" width="10" height="108" rx="4" fill="#355c7d"/>
+<text x="102" y="230" font-size="24" font-family="Arial" fill="#2f3b4a">Packets</text>
+<text x="102" y="270" font-size="34" font-family="Arial" font-weight="700" fill="#355c7d">4</text>
+<rect x="452" y="188" width="320" height="108" rx="8" fill="#ffffff" stroke="#d7dde5"/>
+<rect x="452" y="188" width="10" height="108" rx="4" fill="#2a9d8f"/>
+<text x="482" y="230" font-size="24" font-family="Arial" fill="#2f3b4a">Approved</text>
+<text x="482" y="270" font-size="34" font-family="Arial" font-weight="700" fill="#2a9d8f">0</text>
+<rect x="832" y="188" width="320" height="108" rx="8" fill="#ffffff" stroke="#d7dde5"/>
+<rect x="832" y="188" width="10" height="108" rx="4" fill="#e9c46a"/>
+<text x="862" y="230" font-size="24" font-family="Arial" fill="#2f3b4a">Adjusted</text>
+<text x="862" y="270" font-size="34" font-family="Arial" font-weight="700" fill="#e9c46a">2</text>
+<rect x="72" y="338" width="320" height="108" rx="8" fill="#ffffff" stroke="#d7dde5"/>
+<rect x="72" y="338" width="10" height="108" rx="4" fill="#e76f51"/>
+<text x="102" y="380" font-size="24" font-family="Arial" fill="#2f3b4a">Held</text>
+<text x="102" y="420" font-size="34" font-family="Arial" font-weight="700" fill="#e76f51">2</text>
+<rect x="452" y="338" width="320" height="108" rx="8" fill="#ffffff" stroke="#d7dde5"/>
+<rect x="452" y="338" width="10" height="108" rx="4" fill="#457b9d"/>
+<text x="482" y="380" font-size="24" font-family="Arial" fill="#2f3b4a">Refundable</text>
+<text x="482" y="420" font-size="34" font-family="Arial" font-weight="700" fill="#457b9d">$9498</text>
+<rect x="832" y="338" width="320" height="108" rx="8" fill="#ffffff" stroke="#d7dde5"/>
+<rect x="832" y="338" width="10" height="108" rx="4" fill="#b56576"/>
+<text x="862" y="380" font-size="24" font-family="Arial" fill="#2f3b4a">Held value</text>
+<text x="862" y="420" font-size="34" font-family="Arial" font-weight="700" fill="#b56576">$7600</text>
+  <text x="72" y="500" font-size="27" font-family="Arial" font-weight="700" fill="#1d2939">Finance queue</text>
+  <text x="82" y="545" font-size="21" font-family="Arial" fill="#344054">refund:annual-pro-cancel-clean - approve_with_adjustments - approve refund for payment queue</text>
+<text x="82" y="577" font-size="21" font-family="Arial" fill="#344054">refund:institutional-invoice-missing-po - hold - hold refund until evidence packet is complete</text>
+<text x="82" y="609" font-size="21" font-family="Arial" fill="#344054">refund:compute-credit-over-request - approve_with_adjustments - cap refundable service amount at unused value</text>
+  <text x="72" y="655" font-size="18" font-family="Arial" fill="#667085">Audit digest 6c51ddbe808a1a8cacb81a52cfd1e832</text>
+</svg>

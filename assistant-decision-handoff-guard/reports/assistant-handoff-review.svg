@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f7f8fb"/>
+  <rect x="44" y="44" width="1192" height="632" rx="12" fill="#ffffff" stroke="#d8dee8"/>
+  <text x="72" y="104" font-size="38" font-family="Arial" font-weight="700" fill="#182230">Assistant Decision Handoff Guard</text>
+  <text x="72" y="145" font-size="22" font-family="Arial" fill="#667085">Safe promotion checks for AI assistant outputs</text>
+  <rect x="70" y="184" width="322" height="108" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+<rect x="70" y="184" width="10" height="108" rx="4" fill="#264653"/>
+<text x="100" y="226" font-size="24" font-family="Arial" fill="#344054">Packets</text>
+<text x="100" y="266" font-size="34" font-family="Arial" font-weight="700" fill="#264653">5</text>
+<rect x="452" y="184" width="322" height="108" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+<rect x="452" y="184" width="10" height="108" rx="4" fill="#2a9d8f"/>
+<text x="482" y="226" font-size="24" font-family="Arial" fill="#344054">Release</text>
+<text x="482" y="266" font-size="34" font-family="Arial" font-weight="700" fill="#2a9d8f">1</text>
+<rect x="834" y="184" width="322" height="108" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+<rect x="834" y="184" width="10" height="108" rx="4" fill="#e9c46a"/>
+<text x="864" y="226" font-size="24" font-family="Arial" fill="#344054">Revise</text>
+<text x="864" y="266" font-size="34" font-family="Arial" font-weight="700" fill="#e9c46a">1</text>
+<rect x="70" y="332" width="322" height="108" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+<rect x="70" y="332" width="10" height="108" rx="4" fill="#e76f51"/>
+<text x="100" y="374" font-size="24" font-family="Arial" fill="#344054">Hold</text>
+<text x="100" y="414" font-size="34" font-family="Arial" font-weight="700" fill="#e76f51">3</text>
+<rect x="452" y="332" width="322" height="108" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+<rect x="452" y="332" width="10" height="108" rx="4" fill="#8d3b72"/>
+<text x="482" y="374" font-size="24" font-family="Arial" fill="#344054">Blockers</text>
+<text x="482" y="414" font-size="34" font-family="Arial" font-weight="700" fill="#8d3b72">9</text>
+<rect x="834" y="332" width="322" height="108" rx="8" fill="#ffffff" stroke="#d8dee8"/>
+<rect x="834" y="332" width="10" height="108" rx="4" fill="#457b9d"/>
+<text x="864" y="374" font-size="24" font-family="Arial" fill="#344054">Max age</text>
+<text x="864" y="414" font-size="34" font-family="Arial" font-weight="700" fill="#457b9d">50d</text>
+  <text x="72" y="486" font-size="27" font-family="Arial" font-weight="700" fill="#182230">Held or revision queue</text>
+  <text x="82" y="528" font-size="20" font-family="Arial" fill="#344054">handoff:reproducibility-badge-release - hold - attach required evidence anchors before release</text>
+<text x="82" y="559" font-size="20" font-family="Arial" fill="#344054">handoff:gap-opportunity-corpus-drift - hold - refresh assistant context against the current artifact revision</text>
+<text x="82" y="590" font-size="20" font-family="Arial" fill="#344054">handoff:gap-opportunity-low-confidence - revise - keep the output in draft until more support is attached</text>
+<text x="82" y="621" font-size="20" font-family="Arial" fill="#344054">handoff:peer-review-private-note - hold - resolve cross-assistant conflict before user-facing handoff</text>
+  <text x="72" y="655" font-size="18" font-family="Arial" fill="#667085">Audit digest 57569e4993e08c385bc9dcf05b6bf586</text>
+</svg>

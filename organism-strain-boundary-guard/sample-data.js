@@ -1,0 +1,153 @@
+const graph = {
+  graphId: "scibase-organism-boundary-demo",
+  generatedAt: "2026-05-31T00:00:00Z",
+  entities: [
+    {
+      id: "organism:homo-sapiens",
+      type: "organism",
+      label: "Homo sapiens",
+      taxonId: "NCBITaxon:9606",
+    },
+    {
+      id: "organism:mus-musculus",
+      type: "organism",
+      label: "Mus musculus",
+      taxonId: "NCBITaxon:10090",
+    },
+    {
+      id: "strain:balb-c",
+      type: "strain",
+      label: "BALB/c mouse",
+      taxonId: "NCBITaxon:10090-BALBC",
+      parentTaxonId: "NCBITaxon:10090",
+      aliasEvidenceIds: ["ev:jax-strain-registry"],
+    },
+    {
+      id: "pathogen:sars-cov-2",
+      type: "pathogen",
+      label: "SARS-CoV-2 isolate SCB-31",
+      taxonId: "NCBITaxon:2697049",
+      supportedHostTaxonIds: ["NCBITaxon:9606", "NCBITaxon:9544"],
+    },
+    {
+      id: "cell-line:hela",
+      type: "cell_line",
+      label: "HeLa",
+      speciesTaxonId: "NCBITaxon:9606",
+      cultureCollectionId: "ATCC:CCL-2",
+    },
+    {
+      id: "sample:human-lung-01",
+      type: "sample",
+      label: "Human lung biopsy 01",
+      taxonId: "NCBITaxon:9606",
+      voucherId: "SCB-VCH-001",
+      observedTaxonIds: ["NCBITaxon:9606"],
+    },
+    {
+      id: "sample:mixed-airway-02",
+      type: "sample",
+      label: "Mixed airway culture 02",
+      taxonId: "NCBITaxon:9606",
+      voucherId: "SCB-VCH-044",
+      observedTaxonIds: ["NCBITaxon:9606", "NCBITaxon:2697049"],
+      contaminationReview: false,
+    },
+    {
+      id: "dataset:airway-atlas",
+      type: "dataset",
+      label: "Airway infection atlas",
+      doi: "10.5555/scibase.airway",
+    },
+  ],
+  evidence: [
+    {
+      id: "ev:human-voucher",
+      type: "voucher",
+      label: "Human specimen voucher SCB-VCH-001",
+      taxonId: "NCBITaxon:9606",
+    },
+    {
+      id: "ev:jax-strain-registry",
+      type: "strain_registry",
+      label: "JAX BALB/c strain registry",
+      taxonId: "NCBITaxon:10090-BALBC",
+      parentTaxonId: "NCBITaxon:10090",
+    },
+    {
+      id: "ev:host-range-review",
+      type: "host_range",
+      label: "Curated SARS-CoV-2 host range",
+      supportedHostTaxonIds: ["NCBITaxon:9606", "NCBITaxon:9544"],
+    },
+    {
+      id: "ev:hela-atcc",
+      type: "cell_line_registry",
+      label: "ATCC HeLa registry",
+      speciesTaxonId: "NCBITaxon:9606",
+      cultureCollectionId: "ATCC:CCL-2",
+    },
+    {
+      id: "ev:dataset-doi",
+      type: "dataset_doi",
+      label: "Dataset DOI landing page",
+      doi: "10.5555/scibase.airway",
+    },
+  ],
+  edges: [
+    {
+      id: "edge:human-sample-organism",
+      type: "sample_of_organism",
+      source: "sample:human-lung-01",
+      target: "organism:homo-sapiens",
+      evidenceIds: ["ev:human-voucher"],
+    },
+    {
+      id: "edge:balbc-strain-human-parent",
+      type: "strain_of_species",
+      source: "strain:balb-c",
+      target: "organism:homo-sapiens",
+      evidenceIds: ["ev:jax-strain-registry"],
+    },
+    {
+      id: "edge:pathogen-mouse-host",
+      type: "pathogen_in_host",
+      source: "pathogen:sars-cov-2",
+      target: "organism:mus-musculus",
+      evidenceIds: ["ev:host-range-review"],
+    },
+    {
+      id: "edge:hela-human-cell-line",
+      type: "cell_line_from_species",
+      source: "cell-line:hela",
+      target: "organism:homo-sapiens",
+      evidenceIds: ["ev:hela-atcc"],
+    },
+    {
+      id: "edge:mixed-sample-dataset",
+      type: "dataset_contains_sample",
+      source: "dataset:airway-atlas",
+      target: "sample:mixed-airway-02",
+      evidenceIds: ["ev:dataset-doi"],
+    },
+  ],
+  recommendations: [
+    {
+      id: "rec:human-cell-line-context",
+      label: "Show human sample and HeLa context on entity page",
+      pathEdgeIds: ["edge:human-sample-organism", "edge:hela-human-cell-line"],
+    },
+    {
+      id: "rec:bad-strain-parent",
+      label: "Recommend BALB/c as human organism evidence",
+      pathEdgeIds: ["edge:balbc-strain-human-parent"],
+    },
+    {
+      id: "rec:mixed-sample-notice",
+      label: "Recommend mixed airway culture with contamination notice",
+      pathEdgeIds: ["edge:mixed-sample-dataset"],
+    },
+  ],
+};
+
+module.exports = graph;

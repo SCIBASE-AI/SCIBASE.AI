@@ -1,0 +1,198 @@
+{
+  "generatedAt": "2026-05-31T06:08:32.018Z",
+  "overallDecision": "hold",
+  "reviews": [
+    {
+      "packetId": "packet-hold-001",
+      "title": "Unsupported Sepsis Biomarker Review",
+      "decision": "hold",
+      "summary": {
+        "high": 7,
+        "medium": 2,
+        "low": 1,
+        "total": 10
+      },
+      "findings": [
+        {
+          "severity": "high",
+          "code": "review_comment_missing_evidence",
+          "message": "comment-1 has no manuscript or artifact evidence pointers.",
+          "evidence": {
+            "commentId": "comment-1"
+          }
+        },
+        {
+          "severity": "high",
+          "code": "severity_not_calibrated",
+          "message": "comment-1 is high severity without strong evidence.",
+          "evidence": {
+            "commentId": "comment-1",
+            "severity": "critical",
+            "bestEvidenceStrength": 0
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "low_confidence_blocker",
+          "message": "comment-1 blocks release with low assistant confidence.",
+          "evidence": {
+            "commentId": "comment-1",
+            "confidence": 0.42
+          }
+        },
+        {
+          "severity": "high",
+          "code": "unsupported_accusation_language",
+          "message": "comment-1 uses accusation language without strong evidence.",
+          "evidence": {
+            "commentId": "comment-1"
+          }
+        },
+        {
+          "severity": "high",
+          "code": "private_review_note_leak",
+          "message": "comment-1 exposes internal review notes to the author-facing packet.",
+          "evidence": {
+            "commentId": "comment-1",
+            "visibility": "author"
+          }
+        },
+        {
+          "severity": "high",
+          "code": "blind_review_identity_leak",
+          "message": "comment-1 leaks reviewer identity in a blinded review packet.",
+          "evidence": {
+            "commentId": "comment-1"
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "missing_actionable_remediation",
+          "message": "comment-1 does not give the author an actionable fix.",
+          "evidence": {
+            "commentId": "comment-1"
+          }
+        },
+        {
+          "severity": "high",
+          "code": "evidence_artifact_missing",
+          "message": "comment-2 references missing evidence artifact missing-appendix.",
+          "evidence": {
+            "commentId": "comment-2",
+            "artifactId": "missing-appendix"
+          }
+        },
+        {
+          "severity": "high",
+          "code": "severity_not_calibrated",
+          "message": "comment-2 is high severity without strong evidence.",
+          "evidence": {
+            "commentId": "comment-2",
+            "severity": "high",
+            "bestEvidenceStrength": 1
+          }
+        },
+        {
+          "severity": "low",
+          "code": "review_comment_too_thin",
+          "message": "comment-2 is too terse for a reviewer-ready author comment.",
+          "evidence": {
+            "commentId": "comment-2"
+          }
+        }
+      ],
+      "releaseActions": [
+        "Bind each review comment to concrete manuscript, figure, table, data, or code evidence.",
+        "Downgrade unsupported severity or add strong evidence before release.",
+        "Redact private reviewer notes and identity details from author-visible output.",
+        "Add author-facing remediation tasks for each critique."
+      ],
+      "requirementMap": {
+        "autoPeerReview": "AI-generated review comments are checked before release to authors",
+        "evidenceLinkedReports": "Every finding must cite manuscript, table, figure, code, or data evidence",
+        "hallucinationControl": "Unsupported accusations and missing evidence references force a hold",
+        "privacy": "Blinded-review identity details and private reviewer notes are blocked",
+        "reviewerReadyArtifacts": "Deterministic digests and reports make the review packet auditable"
+      },
+      "auditDigest": "48ca305f18af34ea"
+    },
+    {
+      "packetId": "packet-revise-002",
+      "title": "Incomplete Neuroimaging Review",
+      "decision": "revise",
+      "summary": {
+        "high": 0,
+        "medium": 3,
+        "low": 0,
+        "total": 3
+      },
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "evidence_topic_mismatch",
+          "message": "comment-3 cites evidence outside its stated topic.",
+          "evidence": {
+            "commentId": "comment-3",
+            "topic": "methods",
+            "artifactId": "figure-qc",
+            "artifactTopics": [
+              "quality-control"
+            ]
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "low_confidence_blocker",
+          "message": "comment-3 blocks release with low assistant confidence.",
+          "evidence": {
+            "commentId": "comment-3",
+            "confidence": 0.58
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "missing_actionable_remediation",
+          "message": "comment-3 does not give the author an actionable fix.",
+          "evidence": {
+            "commentId": "comment-3"
+          }
+        }
+      ],
+      "releaseActions": [
+        "Add author-facing remediation tasks for each critique."
+      ],
+      "requirementMap": {
+        "autoPeerReview": "AI-generated review comments are checked before release to authors",
+        "evidenceLinkedReports": "Every finding must cite manuscript, table, figure, code, or data evidence",
+        "hallucinationControl": "Unsupported accusations and missing evidence references force a hold",
+        "privacy": "Blinded-review identity details and private reviewer notes are blocked",
+        "reviewerReadyArtifacts": "Deterministic digests and reports make the review packet auditable"
+      },
+      "auditDigest": "9d100b472ff37be1"
+    },
+    {
+      "packetId": "packet-release-003",
+      "title": "Release-Ready Materials Review",
+      "decision": "release",
+      "summary": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "findings": [],
+      "releaseActions": [
+        "Release AI review packet to authors with audit digest attached."
+      ],
+      "requirementMap": {
+        "autoPeerReview": "AI-generated review comments are checked before release to authors",
+        "evidenceLinkedReports": "Every finding must cite manuscript, table, figure, code, or data evidence",
+        "hallucinationControl": "Unsupported accusations and missing evidence references force a hold",
+        "privacy": "Blinded-review identity details and private reviewer notes are blocked",
+        "reviewerReadyArtifacts": "Deterministic digests and reports make the review packet auditable"
+      },
+      "auditDigest": "71cf1006d4db929b"
+    }
+  ],
+  "packetDigest": "c1eb5bdf69d31590"
+}

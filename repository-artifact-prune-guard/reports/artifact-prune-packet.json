@@ -1,0 +1,77 @@
+{
+  "status": "blocked",
+  "checkedAt": "2026-05-31T04:45:00.000Z",
+  "policy": {
+    "minimumUnreferencedAgeDays": 30
+  },
+  "summary": {
+    "candidates": 5,
+    "approved": 1,
+    "blocked": 4,
+    "warnings": 0
+  },
+  "approvedPrunes": [
+    {
+      "artifactId": "orphan-scratch-plot",
+      "path": "results/tmp/orphan-scratch-plot.png",
+      "reason": "unreferenced for 118 days and no release evidence depends on it"
+    }
+  ],
+  "blockedPrunes": [
+    {
+      "artifactId": "fig-survival-curve",
+      "path": "results/figures/survival-curve.svg",
+      "blockers": [
+        {
+          "code": "CITATION_EVIDENCE_BOUND",
+          "message": "fig-survival-curve (results/figures/survival-curve.svg) is still required by manuscript/citations.json#figure-2",
+          "source": "manuscript/citations.json#figure-2"
+        },
+        {
+          "code": "DOI_VERSION_BOUND",
+          "message": "fig-survival-curve (results/figures/survival-curve.svg) is still required by metadata.json#doi:10.5555/scibase.demo.v1",
+          "source": "metadata.json#doi:10.5555/scibase.demo.v1"
+        }
+      ]
+    },
+    {
+      "artifactId": "raw-screening-table",
+      "path": "data/raw/screening-table.csv",
+      "blockers": [
+        {
+          "code": "EXPORT_MANIFEST_BOUND",
+          "message": "raw-screening-table (data/raw/screening-table.csv) is still required by exports/release-v1/manifest.json",
+          "source": "exports/release-v1/manifest.json"
+        }
+      ]
+    },
+    {
+      "artifactId": "notebook-run-packet",
+      "path": "notebooks/run-2026-05-01/replay-packet.json",
+      "blockers": [
+        {
+          "code": "REPRODUCIBILITY_PACKET_BOUND",
+          "message": "notebook-run-packet (notebooks/run-2026-05-01/replay-packet.json) is still required by results/reproducibility/run-2026-05-01.json",
+          "source": "results/reproducibility/run-2026-05-01.json"
+        },
+        {
+          "code": "MINIMUM_AGE_NOT_MET",
+          "message": "notebook-run-packet (notebooks/run-2026-05-01/replay-packet.json) is 29 days old; policy requires 30",
+          "source": "repository policy"
+        }
+      ]
+    },
+    {
+      "artifactId": "protocol-appendix",
+      "path": "protocols/appendix-a.md",
+      "blockers": [
+        {
+          "code": "RETENTION_HOLD",
+          "message": "protocol-appendix (protocols/appendix-a.md) has an active retention hold: IRB audit window closes 2026-12-31",
+          "source": "repository policy"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

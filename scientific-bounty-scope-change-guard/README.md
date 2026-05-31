@@ -20,6 +20,7 @@ The module reviews sponsor-requested changes after a scientific bounty is launch
 - `test.js` - dependency-free tests using Node's built-in `assert`
 - `demo.js` - generates reviewer JSON, Markdown, and SVG reports
 - `render-video.js` - renders a short MP4 with `ffmpeg`, or an animated GIF fallback with ImageMagick
+- `reports/demo.mp4` / `reports/demo.gif` - reviewer demo artifact
 
 ## Validation
 

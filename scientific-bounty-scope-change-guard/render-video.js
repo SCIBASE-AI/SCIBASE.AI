@@ -4,47 +4,57 @@ const { spawnSync } = require('child_process');
 
 const output = path.join(__dirname, 'reports', 'demo.mp4');
 const gifOutput = path.join(__dirname, 'reports', 'demo.gif');
-const filter = [
-  "drawtext=fontcolor=white:fontsize=36:x=48:y=60:text='SCIBASE scientific bounty scope guard'",
-  "drawtext=fontcolor=white:fontsize=28:x=48:y=140:text='HOLD unsafe post-launch changes'",
-  "drawtext=fontcolor=0xCBD5E1:fontsize=24:x=48:y=210:text='Checks rubric, deliverables, prize, eligibility, NDA, notices'",
-  "drawtext=fontcolor=0xCBD5E1:fontsize=24:x=48:y=260:text='Grandfathers submitted work and requires equal solver notice'",
-  "drawtext=fontcolor=0xFCA5A5:fontsize=30:x=48:y=350:text='Demo output: one hold, one review, one allow'"
-].join(',');
+const reportsDir = path.join(__dirname, 'reports');
 
-const ffmpegReady = spawnSync('ffmpeg', ['-version'], { stdio: 'ignore' }).status === 0;
-const result = ffmpegReady
-  ? spawnSync(
-      'ffmpeg',
-      [
-        '-y',
-        '-f',
-        'lavfi',
-        '-i',
-        'color=c=0f172a:s=960x540:d=5',
-        '-vf',
-        filter,
-        '-pix_fmt',
-        'yuv420p',
-        output
-      ],
-      { stdio: 'inherit' }
-    )
-  : { status: 1 };
+function main() {
+  fs.mkdirSync(reportsDir, { recursive: true });
+  const ffmpegReady = spawnSync('ffmpeg', ['-version'], { stdio: 'ignore' }).status === 0;
+  const frames = writeFrames();
 
-if (result.status === 0) {
-  console.log(`Rendered ${output}`);
-  process.exit(0);
+  try {
+    if (ffmpegReady) {
+      const result = spawnSync(
+        'ffmpeg',
+        [
+          '-y',
+          '-framerate',
+          '1',
+          '-i',
+          path.join(reportsDir, 'frame-%02d.ppm'),
+          '-vf',
+          'scale=960:540:flags=neighbor,format=yuv420p',
+          '-movflags',
+          '+faststart',
+          '-r',
+          '24',
+          output
+        ],
+        { stdio: 'inherit' }
+      );
+
+      if (result.status === 0) {
+        console.log(`Rendered ${output}`);
+        return;
+      }
+    }
+
+    console.log(ffmpegReady ? 'ffmpeg render failed; trying ImageMagick GIF fallback.' : 'ffmpeg is unavailable; trying ImageMagick GIF fallback.');
+    const magick = spawnSync('magick', ['-delay', '140', '-loop', '0', ...frames, gifOutput], {
+      stdio: 'inherit'
+    });
+
+    if (magick.status !== 0) {
+      process.exit(magick.status || 1);
+    }
+
+    console.log(`Rendered ${gifOutput}`);
+  } finally {
+    cleanupFrames(frames);
+  }
 }
 
-console.log('ffmpeg is unavailable; trying ImageMagick GIF fallback.');
-setImmediate(renderGifFallback);
-
-function renderGifFallback() {
-  const reportsDir = path.join(__dirname, 'reports');
-  fs.mkdirSync(reportsDir, { recursive: true });
-
-  const frames = [
+function writeFrames() {
+  return [
     {
       name: 'frame-01.ppm',
       title: 'SCOPE GUARD',
@@ -74,20 +84,14 @@ function renderGifFallback() {
     fs.writeFileSync(file, ppmFrame(frame.title, frame.subtitle, frame.accent));
     return file;
   });
+}
 
-  const magick = spawnSync('magick', ['-delay', '140', '-loop', '0', ...frames, gifOutput], {
-    stdio: 'inherit'
-  });
-
-  if (magick.status !== 0) {
-    process.exit(magick.status || 1);
-  }
-
+function cleanupFrames(frames) {
   for (const frame of frames) {
-    fs.unlinkSync(frame);
+    if (fs.existsSync(frame)) {
+      fs.unlinkSync(frame);
+    }
   }
-
-  console.log(`Rendered ${gifOutput}`);
 }
 
 function ppmFrame(title, subtitle, accent) {
@@ -171,3 +175,5 @@ const FONT = {
   8: ['01110', '10001', '10001', '01110', '10001', '10001', '01110'],
   '?': ['11110', '00001', '00010', '00100', '00100', '00000', '00100']
 };
+
+main();

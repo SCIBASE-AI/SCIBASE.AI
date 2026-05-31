@@ -1,0 +1,283 @@
+{
+  "generatedAt": "2026-05-31T05:58:00Z",
+  "challengeId": "sci-bounty-biomarker-2026",
+  "title": "Single-cell biomarker discovery challenge",
+  "overallDecision": "hold",
+  "requestCount": 3,
+  "results": [
+    {
+      "challengeId": "sci-bounty-biomarker-2026",
+      "requestId": "scope-change-unsafe-rubric-and-prize",
+      "decision": "hold",
+      "materialFields": [
+        "deliverables",
+        "rubric",
+        "prizeSchedule",
+        "eligibility"
+      ],
+      "freezeDigestBefore": "7a32fcee4f40698d",
+      "freezeDigestAfter": "93aee97327cc7a96",
+      "findingCounts": {
+        "medium": 2,
+        "critical": 5,
+        "high": 3
+      },
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "MATERIAL_CHANGE_AFTER_LAUNCH",
+          "message": "Material challenge fields changed after public launch.",
+          "evidence": {
+            "changedFields": [
+              "deliverables",
+              "scoring rubric",
+              "prize schedule",
+              "solver eligibility"
+            ],
+            "requestedAt": "2026-05-22T09:00:00Z",
+            "launchedAt": "2026-05-01T12:00:00Z"
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "MISSING_CHANGE_APPROVALS",
+          "message": "Post-launch material changes need sponsor, reviewer, and audit evidence.",
+          "evidence": {
+            "missing": [
+              "independent reviewer approval",
+              "immutable audit log"
+            ]
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "UNEQUAL_SOLVER_NOTICE",
+          "message": "Active solver teams were not all notified before the change takes effect.",
+          "evidence": {
+            "teams": [
+              "team-beta",
+              "solo-gamma"
+            ]
+          }
+        },
+        {
+          "severity": "high",
+          "code": "SHORT_NOTICE_WINDOW",
+          "message": "Material changes need at least 72 hours notice or an explicit deadline extension.",
+          "evidence": {
+            "noticeHours": 21,
+            "minimumHours": 72,
+            "deadlineExtensionHours": 0
+          }
+        },
+        {
+          "severity": "high",
+          "code": "MISSING_SOLVER_CONSENT",
+          "message": "Material scope changes requiring consent are missing active-team acknowledgements.",
+          "evidence": {
+            "teams": [
+              "lab-alpha",
+              "team-beta",
+              "solo-gamma"
+            ]
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "SUBMITTED_WORK_NOT_GRANDFATHERED",
+          "message": "Teams that already submitted work must be scored under the original scope or explicitly grandfathered.",
+          "evidence": {
+            "submittedTeams": [
+              "lab-alpha"
+            ]
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "RUBRIC_WEIGHT_TOTAL_INVALID",
+          "message": "Changed rubric weights must total 100 before scoring.",
+          "evidence": {
+            "afterTotal": 90
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "RUBRIC_CRITERIA_CHANGED",
+          "message": "Rubric criteria changed and must be visible in the reviewer packet.",
+          "evidence": {
+            "added": [
+              "wetlab"
+            ],
+            "removed": [
+              "novelty"
+            ],
+            "changed": [
+              {
+                "id": "accuracy",
+                "before": {
+                  "label": "Scientific accuracy",
+                  "weight": 35,
+                  "maxPoints": 35
+                },
+                "after": {
+                  "label": "Scientific accuracy",
+                  "weight": 30,
+                  "maxPoints": 30
+                }
+              },
+              {
+                "id": "reproducibility",
+                "before": {
+                  "label": "Reproducibility evidence",
+                  "weight": 30,
+                  "maxPoints": 30
+                },
+                "after": {
+                  "label": "Reproducibility evidence",
+                  "weight": 20,
+                  "maxPoints": 20
+                }
+              },
+              {
+                "id": "delivery",
+                "before": {
+                  "label": "Deliverable completeness",
+                  "weight": 15,
+                  "maxPoints": 15
+                },
+                "after": {
+                  "label": "Deliverable completeness",
+                  "weight": 10,
+                  "maxPoints": 10
+                }
+              }
+            ],
+            "beforeTotal": 100,
+            "afterTotal": 90
+          }
+        },
+        {
+          "severity": "high",
+          "code": "ELIGIBILITY_NARROWED_WITHOUT_GRANDFATHERING",
+          "message": "Eligibility changes must not disqualify already registered teams without grandfathering.",
+          "evidence": {
+            "activeTeams": [
+              "lab-alpha",
+              "team-beta",
+              "solo-gamma"
+            ]
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "PRIZE_CHANGE_WITHOUT_ESCROW_EVIDENCE",
+          "message": "Prize or payout schedule changes need finance/escrow evidence before scoring proceeds.",
+          "evidence": {
+            "prizeSchedule": {
+              "totalUsd": 90000,
+              "milestones": [
+                {
+                  "name": "winner",
+                  "usd": 90000
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "actions": [
+        "Pause scoring for affected challenge",
+        "Publish reviewer-visible change packet",
+        "Attach sponsor, independent reviewer, and immutable audit approvals",
+        "Notify every active solver team",
+        "Collect consent or extend/reopen the deadline",
+        "Grandfather submitted work under original scope",
+        "Attach finance escrow evidence",
+        "Add a deadline extension matching the notice window"
+      ]
+    },
+    {
+      "challengeId": "sci-bounty-biomarker-2026",
+      "requestId": "scope-change-safe-copy-clarification",
+      "decision": "allow",
+      "materialFields": [],
+      "freezeDigestBefore": "7a32fcee4f40698d",
+      "freezeDigestAfter": "7bbf4208019cb364",
+      "findingCounts": {
+        "info": 1
+      },
+      "findings": [
+        {
+          "severity": "info",
+          "code": "NON_MATERIAL_CHANGE",
+          "message": "Only non-material copy or metadata fields changed.",
+          "evidence": {
+            "changedFields": [
+              "faq"
+            ]
+          }
+        }
+      ],
+      "actions": [
+        "Record audit digest",
+        "Publish change packet",
+        "Continue normal scoring"
+      ]
+    },
+    {
+      "challengeId": "sci-bounty-biomarker-2026",
+      "requestId": "scope-change-reviewed-data-room-update",
+      "decision": "review",
+      "materialFields": [
+        "ndaTerms",
+        "dataRoomTerms"
+      ],
+      "freezeDigestBefore": "7a32fcee4f40698d",
+      "freezeDigestAfter": "a1cc38a8c0ddb8bb",
+      "findingCounts": {
+        "medium": 1
+      },
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "MATERIAL_CHANGE_AFTER_LAUNCH",
+          "message": "Material challenge fields changed after public launch.",
+          "evidence": {
+            "changedFields": [
+              "NDA terms",
+              "data-room terms"
+            ],
+            "requestedAt": "2026-05-10T10:00:00Z",
+            "launchedAt": "2026-05-01T12:00:00Z"
+          }
+        }
+      ],
+      "actions": [
+        "Pause scoring for affected challenge",
+        "Publish reviewer-visible change packet"
+      ]
+    }
+  ],
+  "reviewerPacket": {
+    "challengeId": "sci-bounty-biomarker-2026",
+    "launchedAt": "2026-05-01T12:00:00Z",
+    "baselineDigest": "7a32fcee4f40698d",
+    "activeTeams": [
+      "lab-alpha",
+      "team-beta",
+      "solo-gamma"
+    ],
+    "submittedTeams": [
+      "lab-alpha"
+    ],
+    "heldRequests": [
+      "scope-change-unsafe-rubric-and-prize"
+    ],
+    "reviewRequests": [
+      "scope-change-reviewed-data-room-update"
+    ],
+    "allowRequests": [
+      "scope-change-safe-copy-clarification"
+    ]
+  }
+}

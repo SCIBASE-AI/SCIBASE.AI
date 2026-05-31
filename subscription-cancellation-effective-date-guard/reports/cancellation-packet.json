@@ -1,0 +1,85 @@
+{
+  "accountId": "inst-lab-204",
+  "cancellationId": "can-2026-05-alpha",
+  "decision": "block-cancellation-close",
+  "summary": {
+    "blockers": 3,
+    "holds": 4,
+    "warnings": 0,
+    "findings": 7
+  },
+  "findings": [
+    {
+      "severity": "hold",
+      "id": "late-cancellation-notice",
+      "message": "Cancellation notice provides 17 days, below the required 30 days.",
+      "action": "Route to finance/legal for late-notice approval before suppressing renewal revenue.",
+      "evidence": {
+        "noticeDays": 17,
+        "requiredNoticeDays": 30
+      }
+    },
+    {
+      "severity": "block",
+      "id": "unapproved-effective-date",
+      "message": "Cancellation effective date differs from the contract end date without early-termination approval.",
+      "action": "Attach early-termination approval or align the effective date with the contract end date.",
+      "evidence": {
+        "effectiveDate": "2026-05-31",
+        "contractEndDate": "2026-06-01"
+      }
+    },
+    {
+      "severity": "block",
+      "id": "scheduled-renewal-invoice:inv-renew-991",
+      "message": "Renewal invoice inv-renew-991 is still scheduled after cancellation takes effect.",
+      "action": "Cancel or hold the renewal invoice before finalizing the cancellation.",
+      "evidence": {
+        "id": "inv-renew-991",
+        "issueDate": "2026-06-01",
+        "status": "scheduled",
+        "amountCents": 4800000
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "refund-without-review",
+      "message": "A refund or service credit is due but no finance review is attached.",
+      "action": "Create a finance review before issuing credit notes or refund payments.",
+      "evidence": {
+        "refundDueCents": 125000
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "compute-credit-overhang:cc-ai-771",
+      "message": "Compute credit lot cc-ai-771 remains usable after the wind-down date.",
+      "action": "Expire, refund, or convert the remaining compute credits before cancellation close.",
+      "evidence": {
+        "id": "cc-ai-771",
+        "remainingUnits": 430,
+        "expiresAt": "2026-07-31"
+      }
+    },
+    {
+      "severity": "block",
+      "id": "analytics-export-overhang:lic-export-44",
+      "message": "Analytics export grant lic-export-44 outlives the cancellation cutoff.",
+      "action": "Revoke or shorten export access before confirming cancellation.",
+      "evidence": {
+        "id": "lic-export-44",
+        "dataset": "citation-network",
+        "accessUntil": "2026-06-30"
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "po-closeout-missing",
+      "message": "Institutional purchase-order exception is present without a closeout record.",
+      "action": "Attach PO closeout evidence before marking the account cancelled.",
+      "evidence": {
+        "institutionalPoException": true
+      }
+    }
+  ]
+}

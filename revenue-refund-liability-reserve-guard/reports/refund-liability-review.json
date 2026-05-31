@@ -1,0 +1,109 @@
+{
+  "generatedAt": "2026-05-31T00:00:00.000Z",
+  "summary": {
+    "total": 4,
+    "approve": 0,
+    "approve_with_adjustments": 2,
+    "hold": 2,
+    "requestedRefund": 11100,
+    "refundableAmount": 9498,
+    "reserveDraw": 9498,
+    "heldRefunds": 7600
+  },
+  "decisions": [
+    {
+      "refundId": "refund:annual-pro-cancel-clean",
+      "customer": "Northbridge Lab",
+      "revenueStream": "subscription",
+      "currency": "USD",
+      "requestedRefund": 900,
+      "refundableAmount": 938,
+      "reserveAvailable": 1200,
+      "reserveAfter": 262,
+      "decision": "approve_with_adjustments",
+      "blockers": [],
+      "warnings": [
+        "processor fee 34 USD is non-refundable"
+      ],
+      "actions": [
+        "approve refund for payment queue",
+        "record reserve draw and revenue reversal"
+      ],
+      "auditDigest": "39dbf4dd893713fc64b55d5d5ef6de4669a088120c01b5074ec3ed851de81155"
+    },
+    {
+      "refundId": "refund:institutional-invoice-missing-po",
+      "customer": "East Valley University",
+      "revenueStream": "institutional_invoice",
+      "currency": "USD",
+      "requestedRefund": 7000,
+      "refundableAmount": 6200,
+      "reserveAvailable": 5000,
+      "reserveAfter": -1200,
+      "decision": "hold",
+      "blockers": [
+        "missing evidence: entitlement-rollback, finance-approval, po-or-invoice-evidence",
+        "approval status is pending",
+        "entitlements are not rolled back",
+        "refund reserve short by 1200 USD"
+      ],
+      "warnings": [
+        "requested refund exceeds unused service value by 800 USD"
+      ],
+      "actions": [
+        "hold refund until evidence packet is complete",
+        "route to finance approver before cash release",
+        "rollback entitlements before refund release",
+        "cap refundable service amount at unused value",
+        "top up refund reserve before release"
+      ],
+      "auditDigest": "7705b511278e5888ce93be1264ae43da26dd26d8c441be69fbef7d6e50c351d1"
+    },
+    {
+      "refundId": "refund:compute-credit-over-request",
+      "customer": "Helix AI Core",
+      "revenueStream": "ai_compute",
+      "currency": "USD",
+      "requestedRefund": 2600,
+      "refundableAmount": 1815,
+      "reserveAvailable": 2400,
+      "reserveAfter": 585,
+      "decision": "approve_with_adjustments",
+      "blockers": [],
+      "warnings": [
+        "requested refund exceeds unused service value by 700 USD",
+        "processor fee 85 USD is non-refundable"
+      ],
+      "actions": [
+        "cap refundable service amount at unused value",
+        "approve refund for payment queue",
+        "record reserve draw and revenue reversal"
+      ],
+      "auditDigest": "f8c6f3e25b3e20063c04d6ff23ce2c88a6a2975967f406763ccd19049e41aa49"
+    },
+    {
+      "refundId": "refund:restricted-grant-compute",
+      "customer": "Civic Bio Grant",
+      "revenueStream": "ai_compute",
+      "currency": "USD",
+      "requestedRefund": 600,
+      "refundableAmount": 545,
+      "reserveAvailable": 1000,
+      "reserveAfter": 455,
+      "decision": "hold",
+      "blockers": [
+        "missing evidence: grant-refund-approval",
+        "restricted grant-funded compute lacks refund approval"
+      ],
+      "warnings": [
+        "processor fee 55 USD is non-refundable"
+      ],
+      "actions": [
+        "hold refund until evidence packet is complete",
+        "hold refund for grant compliance review"
+      ],
+      "auditDigest": "adda46759e57cf7997019364e7c8467be44025f767d05debfcf68a612fa8798d"
+    }
+  ],
+  "auditDigest": "6c51ddbe808a1a8cacb81a52cfd1e832b78f82bbfc31c0e4df4bb16a373022af"
+}

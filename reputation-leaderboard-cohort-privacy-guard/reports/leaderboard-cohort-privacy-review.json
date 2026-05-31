@@ -1,0 +1,127 @@
+{
+  "generatedAt": "2026-05-31T00:00:00.000Z",
+  "summary": {
+    "total": 5,
+    "publish": 1,
+    "redact": 1,
+    "hold": 3,
+    "blockers": 7,
+    "warnings": 1,
+    "maxPrivacyRiskScore": 89
+  },
+  "decisions": [
+    {
+      "cohortId": "leaderboard:bioinformatics-global",
+      "leaderboardType": "domain",
+      "label": "Bioinformatics global reputation",
+      "domain": "bioinformatics",
+      "region": "global",
+      "institution": "mixed",
+      "contributorCount": 48,
+      "institutionCount": 4,
+      "largestInstitutionShare": 0.38,
+      "privacyRiskScore": 0,
+      "decision": "publish",
+      "blockers": [],
+      "warnings": [],
+      "actions": [
+        "publish leaderboard cohort"
+      ],
+      "auditDigest": "81bb07b74f811e668edfb85c8329e8aac2bd26f526692d74fe64385ff9a4f7a8"
+    },
+    {
+      "cohortId": "leaderboard:rare-disease-region",
+      "leaderboardType": "region",
+      "label": "Rare disease research in small region",
+      "domain": "rare-disease",
+      "region": "Nordfjord",
+      "institution": "mixed",
+      "contributorCount": 6,
+      "institutionCount": 2,
+      "largestInstitutionShare": 0.67,
+      "privacyRiskScore": 89,
+      "decision": "hold",
+      "blockers": [
+        "cohort has 6 contributors, below 10 minimum",
+        "institution diversity 2 is below 3",
+        "largest institution share 0.67 exceeds 0.65",
+        "2 sparse badge combinations can identify contributors"
+      ],
+      "warnings": [],
+      "actions": [
+        "hold public leaderboard until cohort has enough contributors",
+        "aggregate with a broader cohort before publication",
+        "redact institution-specific rank signals",
+        "collapse rare badge combinations into aggregate labels"
+      ],
+      "auditDigest": "095c589444d10b9e44cb8bc333f894c3646c4387645b4dfbccfec7ddd0e89bf2"
+    },
+    {
+      "cohortId": "leaderboard:institution-anonymous-review",
+      "leaderboardType": "institution",
+      "label": "Institution peer review reputation",
+      "domain": "clinical-trials",
+      "region": "US",
+      "institution": "East Valley University",
+      "contributorCount": 18,
+      "institutionCount": 1,
+      "largestInstitutionShare": 1,
+      "privacyRiskScore": 28,
+      "decision": "hold",
+      "blockers": [
+        "1 sparse badge combinations can identify contributors",
+        "anonymous review credit share 0.5 is too high for public ranking"
+      ],
+      "warnings": [],
+      "actions": [
+        "collapse rare badge combinations into aggregate labels",
+        "publish anonymous review credit as aggregate only"
+      ],
+      "auditDigest": "ab5fd8da2bc43bb5d615a273fc2602a3b5b4e2bd7720357f3461a482a4f709a3"
+    },
+    {
+      "cohortId": "leaderboard:open-science-optout",
+      "leaderboardType": "domain",
+      "label": "Open science champion ranking",
+      "domain": "open-science",
+      "region": "global",
+      "institution": "mixed",
+      "contributorCount": 26,
+      "institutionCount": 4,
+      "largestInstitutionShare": 0.31,
+      "privacyRiskScore": 25,
+      "decision": "hold",
+      "blockers": [
+        "2 contributors opted out of leaderboard display"
+      ],
+      "warnings": [],
+      "actions": [
+        "remove opted-out contributors before release"
+      ],
+      "auditDigest": "be9eff7033f9a6889acbf8ce998c6cd8b3334cd1a4b5b3e9fa300b3b6204754f"
+    },
+    {
+      "cohortId": "leaderboard:quantum-score-spike",
+      "leaderboardType": "domain",
+      "label": "Quantum methods score spike",
+      "domain": "quantum-methods",
+      "region": "global",
+      "institution": "mixed",
+      "contributorCount": 22,
+      "institutionCount": 4,
+      "largestInstitutionShare": 0.32,
+      "privacyRiskScore": 15,
+      "decision": "redact",
+      "blockers": [],
+      "warnings": [
+        "max score delta 18.5 needs moderation review"
+      ],
+      "actions": [
+        "queue score spike for moderator review",
+        "publish after moderation review"
+      ],
+      "auditDigest": "7ffc7a270f005a4a14da48d843a530b610960d2ec496385777fb9cf228928d40"
+    }
+  ],
+  "auditDigest": "9b5f103aef0c21f36be638441092c61d467485681d272c3b02b80f66038f9e1f"
+}

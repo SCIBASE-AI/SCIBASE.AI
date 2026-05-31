@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#ecfeff"/>
+  <rect x="34" y="34" width="1132" height="652" rx="18" fill="white" stroke="#a5f3fc"/>
+  <text x="60" y="92" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">Scientific Bounty Escrow Readiness</text>
+  <text x="60" y="130" font-family="Arial, sans-serif" font-size="20" fill="#475569">Publish 1 / Notice 0 / Hold 2</text>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="18" fill="#64748b">Required 303000 - deposits 258000 - deficit 48000</text>
+  <g font-family="Arial, sans-serif">
+        <g transform="translate(60 190)">
+          <rect width="1080" height="86" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="30" cy="43" r="11" fill="#059669"/>
+          <text x="58" y="30" font-size="20" font-weight="700">challenge-funded-biomarker - publish</text>
+          <text x="58" y="56" font-size="15" fill="#475569">Identify plasma biomarkers from synthetic single-cell data</text>
+          <text x="58" y="76" font-size="14" fill="#64748b">required 138000 / deposit 141000 / deficit 0</text>
+        </g>
+        <g transform="translate(60 300)">
+          <rect width="1080" height="86" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="30" cy="43" r="11" fill="#dc2626"/>
+          <text x="58" y="30" font-size="20" font-weight="700">challenge-underfunded-climate - hold</text>
+          <text x="58" y="56" font-size="15" fill="#475569">Regional wildfire smoke forecasting benchmark</text>
+          <text x="58" y="76" font-size="14" fill="#64748b">required 109000 / deposit 61000 / deficit 48000</text>
+        </g>
+        <g transform="translate(60 410)">
+          <rect width="1080" height="86" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="30" cy="43" r="11" fill="#dc2626"/>
+          <text x="58" y="30" font-size="20" font-weight="700">challenge-invalid-milestones - hold</text>
+          <text x="58" y="56" font-size="15" fill="#475569">Quantum noise reduction synthetic benchmark</text>
+          <text x="58" y="76" font-size="14" fill="#64748b">required 56000 / deposit 56000 / deficit 0</text>
+        </g></g>
+</svg>

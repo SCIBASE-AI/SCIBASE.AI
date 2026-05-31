@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<rect width="900" height="360" fill="#f8fafc"/>
+<rect x="32" y="32" width="836" height="296" rx="8" fill="#ffffff" stroke="#d8dee7"/>
+<text x="64" y="82" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="#0f172a">Software Dependency Provenance Guard</text>
+<text x="64" y="112" font-size="16" font-family="Arial, sans-serif" fill="#475569">Decision: block_publication | Digest: 9d225e0644bd803a</text>
+<g font-family="Arial, sans-serif"><text x="64" y="162" font-size="18" fill="#334155">Clear</text>
+<rect x="176" y="138" width="260" height="32" rx="4" fill="#176b3a" />
+<text x="450" y="161" font-size="18" fill="#0f172a">1</text>
+<text x="64" y="220" font-size="18" fill="#334155">Hold</text>
+<rect x="176" y="196" width="260" height="32" rx="4" fill="#8a5a00" />
+<text x="450" y="219" font-size="18" fill="#0f172a">1</text>
+<text x="64" y="278" font-size="18" fill="#334155">Block</text>
+<rect x="176" y="254" width="520" height="32" rx="4" fill="#9d1c2f" />
+<text x="710" y="277" font-size="18" fill="#0f172a">2</text></g>
+<text x="64" y="314" font-size="15" font-family="Arial, sans-serif" fill="#475569">Dependency edges: 5 | Recommendations: 4 | Findings: 11</text>
+</svg>

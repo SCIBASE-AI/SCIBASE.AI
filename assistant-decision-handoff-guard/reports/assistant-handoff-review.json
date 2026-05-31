@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-05-31T00:00:00.000Z",
+  "summary": {
+    "total": 5,
+    "release": 1,
+    "revise": 1,
+    "hold": 3,
+    "blockers": 9,
+    "warnings": 1,
+    "maxSnapshotAgeDays": 50
+  },
+  "decisions": [
+    {
+      "handoffId": "handoff:peer-review-methods-clarity",
+      "assistant": "auto-peer-review",
+      "outputType": "peer_review_comment",
+      "title": "Methods section clarity request",
+      "targetArtifact": "manuscript.md",
+      "targetRevision": "ms-v12",
+      "snapshotRevision": "ms-v12",
+      "snapshotAgeDays": 1,
+      "impact": "medium",
+      "confidence": 0.82,
+      "decision": "release",
+      "blockers": [],
+      "warnings": [],
+      "actions": [
+        "release handoff to researcher-facing queue"
+      ],
+      "auditDigest": "421868aaa57b79f52841dbf0504c34e679406471ab77d6dd856799548199bb36"
+    },
+    {
+      "handoffId": "handoff:reproducibility-badge-release",
+      "assistant": "reproducibility-checker",
+      "outputType": "reproducibility_release",
+      "title": "Publish reproducibility badge",
+      "targetArtifact": "analysis/notebook.ipynb",
+      "targetRevision": "analysis-v8",
+      "snapshotRevision": "analysis-v8",
+      "snapshotAgeDays": 0,
+      "impact": "high",
+      "confidence": 0.91,
+      "decision": "hold",
+      "blockers": [
+        "missing evidence anchors: environment-lock",
+        "notebook-runner reported block: cell 18 remains nondeterministic",
+        "human approval is pending"
+      ],
+      "warnings": [],
+      "actions": [
+        "attach required evidence anchors before release",
+        "resolve cross-assistant conflict before user-facing handoff",
+        "obtain responsible human approval for high-impact handoff"
+      ],
+      "auditDigest": "574cb0e6776fee74eff6f72e05cfc152078a2b5ed932214200125423b8cc75ef"
+    },
+    {
+      "handoffId": "handoff:gap-opportunity-corpus-drift",
+      "assistant": "research-gap-finder",
+      "outputType": "research_gap_opportunity",
+      "title": "Suggest CRISPR organoid replication gap",
+      "targetArtifact": "gap-feed.json",
+      "targetRevision": "corpus-2026-05",
+      "snapshotRevision": "corpus-2026-04",
+      "snapshotAgeDays": 50,
+      "impact": "medium",
+      "confidence": 0.76,
+      "decision": "hold",
+      "blockers": [
+        "artifact revision drift: assistant used corpus-2026-04, current target is corpus-2026-05",
+        "snapshot is 50 days old, above 30 day limit",
+        "missing evidence anchors: novelty-check"
+      ],
+      "warnings": [],
+      "actions": [
+        "refresh assistant context against the current artifact revision",
+        "refresh source snapshot before handoff",
+        "attach required evidence anchors before release"
+      ],
+      "auditDigest": "ef7b59e2be719c3f573cf059171dfbcf8d4496c521f75ef3f7363d2e844166ac"
+    },
+    {
+      "handoffId": "handoff:gap-opportunity-low-confidence",
+      "assistant": "research-gap-finder",
+      "outputType": "research_gap_opportunity",
+      "title": "Suggest weakly supported imaging opportunity",
+      "targetArtifact": "gap-feed.json",
+      "targetRevision": "corpus-2026-05",
+      "snapshotRevision": "corpus-2026-05",
+      "snapshotAgeDays": 6,
+      "impact": "low",
+      "confidence": 0.64,
+      "decision": "revise",
+      "blockers": [],
+      "warnings": [
+        "assistant confidence 0.64 needs strengthening"
+      ],
+      "actions": [
+        "keep the output in draft until more support is attached",
+        "revise handoff before promotion"
+      ],
+      "auditDigest": "e8b49c282d105781c1287a607ecb7bda0a84245d219fe67567ef562637e91850"
+    },
+    {
+      "handoffId": "handoff:peer-review-private-note",
+      "assistant": "auto-peer-review",
+      "outputType": "peer_review_comment",
+      "title": "Reviewer concern copied from private note",
+      "targetArtifact": "manuscript.md",
+      "targetRevision": "ms-v12",
+      "snapshotRevision": "ms-v12",
+      "snapshotAgeDays": 0,
+      "impact": "high",
+      "confidence": 0.88,
+      "decision": "hold",
+      "blockers": [
+        "review-redaction reported block: private reviewer rationale was copied",
+        "private reviewer notes are present",
+        "reviewer identity leakage risk detected"
+      ],
+      "warnings": [],
+      "actions": [
+        "resolve cross-assistant conflict before user-facing handoff",
+        "redact private reviewer notes before author-visible release",
+        "remove identity-bearing details from the handoff"
+      ],
+      "auditDigest": "c5ad64bf782f11ceae2da3bb73bea57bb753df660acdea82b341d4b2ae2d15d9"
+    }
+  ],
+  "auditDigest": "57569e4993e08c385bc9dcf05b6bf58625f7449b8d7cda2d519acfa3a7e4366a"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f0f9ff"/>
+  <rect x="34" y="34" width="1132" height="652" rx="18" fill="white" stroke="#bae6fd"/>
+  <text x="60" y="92" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">Collaborative Equation Anchor Guard</text>
+  <text x="60" y="130" font-family="Arial, sans-serif" font-size="20" fill="#475569">Allow 1 / Notice 0 / Hold 2</text>
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="18" fill="#64748b">5 equations and 5 references checked</text>
+  <g font-family="Arial, sans-serif">
+        <g transform="translate(60 190)">
+          <rect width="1080" height="86" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="30" cy="43" r="11" fill="#059669"/>
+          <text x="58" y="30" font-size="20" font-weight="700">manuscript-ready - allow_export</text>
+          <text x="58" y="56" font-size="15" fill="#475569">Bayesian calibration of synthetic assay controls</text>
+          <text x="58" y="76" font-size="14" fill="#64748b">equations 2 / references 2 / blockers 0</text>
+        </g>
+        <g transform="translate(60 300)">
+          <rect width="1080" height="86" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="30" cy="43" r="11" fill="#dc2626"/>
+          <text x="58" y="30" font-size="20" font-weight="700">duplicate-labels - hold_export</text>
+          <text x="58" y="56" font-size="15" fill="#475569">Collaborative model appendix</text>
+          <text x="58" y="76" font-size="14" fill="#64748b">equations 2 / references 2 / blockers 2</text>
+        </g>
+        <g transform="translate(60 410)">
+          <rect width="1080" height="86" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="30" cy="43" r="11" fill="#dc2626"/>
+          <text x="58" y="30" font-size="20" font-weight="700">locked-private-leak - hold_export</text>
+          <text x="58" y="56" font-size="15" fill="#475569">Submission-ready manuscript draft</text>
+          <text x="58" y="76" font-size="14" fill="#64748b">equations 1 / references 1 / blockers 2</text>
+        </g></g>
+</svg>

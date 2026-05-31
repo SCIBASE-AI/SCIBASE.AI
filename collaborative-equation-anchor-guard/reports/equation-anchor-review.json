@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-05-31T06:52:02.718Z",
+  "summary": {
+    "total": 3,
+    "allow_export": 1,
+    "allow_with_notice": 0,
+    "hold_export": 2,
+    "equations": 5,
+    "references": 5
+  },
+  "decisions": [
+    {
+      "sessionId": "manuscript-ready",
+      "title": "Bayesian calibration of synthetic assay controls",
+      "journalStyle": "numbered-by-section",
+      "decision": "allow_export",
+      "equationCount": 2,
+      "referenceCount": 2,
+      "evidence": [
+        "reference eq:posterior resolves",
+        "reference eq:loss resolves",
+        "eq:posterior should render as (2.1)",
+        "eq:loss should render as (2.2)"
+      ],
+      "blockers": [],
+      "warnings": [],
+      "actions": [
+        "allow manuscript export with equation anchors preserved"
+      ],
+      "auditDigest": "7fe66eb5302522bd554a7f676d6163fd836cc7dcc5b6daf0df0165cb3076ee46"
+    },
+    {
+      "sessionId": "duplicate-labels",
+      "title": "Collaborative model appendix",
+      "journalStyle": "numbered-by-section",
+      "decision": "hold_export",
+      "equationCount": 2,
+      "referenceCount": 2,
+      "evidence": [
+        "reference eq:model-score resolves",
+        "eq:model-score should render as (3.1)",
+        "eq:model-score should render as (3.2)"
+      ],
+      "blockers": [
+        "duplicate equation label eq:model-score appears 2 times",
+        "section results references missing eq:missing-threshold"
+      ],
+      "warnings": [],
+      "actions": [
+        "rename duplicate equation labels before export",
+        "repair stale equation references before export"
+      ],
+      "auditDigest": "77f4938a7e13350bf9d83b77e6f7b65d28f617999109dcbfa5e6dd202aa7d5ee"
+    },
+    {
+      "sessionId": "locked-private-leak",
+      "title": "Submission-ready manuscript draft",
+      "journalStyle": "numbered-by-section",
+      "decision": "hold_export",
+      "equationCount": 1,
+      "referenceCount": 1,
+      "evidence": [
+        "reference eq:final-estimator resolves",
+        "eq:final-estimator should render as (4.1)"
+      ],
+      "blockers": [
+        "private reviewer comment c-private-equation-note remains on eq:final-estimator",
+        "locked section final-figures equation eq:final-estimator was modified by external-reviewer"
+      ],
+      "warnings": [],
+      "actions": [
+        "resolve or redact private reviewer equation comments",
+        "obtain section-owner approval for locked equation changes"
+      ],
+      "auditDigest": "a4d9ddbe01aad7cc4570f0ab643db47615071322275fbd7ff881518f6110eccf"
+    }
+  ]
+}

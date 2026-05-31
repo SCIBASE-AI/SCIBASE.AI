@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-05-31T06:47:18.878Z",
+  "summary": {
+    "total": 3,
+    "publish": 1,
+    "publish_with_notice": 0,
+    "hold": 2,
+    "totalRequiredCoverage": 303000,
+    "totalDeposits": 258000,
+    "totalDeficit": 48000
+  },
+  "decisions": [
+    {
+      "challengeId": "challenge-funded-biomarker",
+      "title": "Identify plasma biomarkers from synthetic single-cell data",
+      "sponsor": "Northbridge Translational Lab",
+      "currency": "USD",
+      "decision": "publish",
+      "requiredCoverage": 138000,
+      "sponsorDeposit": 141000,
+      "surplus": 3000,
+      "deficit": 0,
+      "evidence": [
+        "required coverage 138000 USD",
+        "sponsor deposit 141000 USD",
+        "funding surplus 3000 USD"
+      ],
+      "blockers": [],
+      "warnings": [],
+      "actions": [
+        "publish funding-ready challenge",
+        "freeze escrow coverage snapshot for reviewer audit"
+      ],
+      "auditDigest": "0eac7f9b719a766a48c63b44cbb3e2e006162857f8c77bac9f2836d02998450a"
+    },
+    {
+      "challengeId": "challenge-underfunded-climate",
+      "title": "Regional wildfire smoke forecasting benchmark",
+      "sponsor": "Open Climate Fund",
+      "currency": "USD",
+      "decision": "hold",
+      "requiredCoverage": 109000,
+      "sponsorDeposit": 61000,
+      "surplus": 0,
+      "deficit": 48000,
+      "evidence": [
+        "required coverage 109000 USD",
+        "sponsor deposit 61000 USD"
+      ],
+      "blockers": [
+        "deposit is short by 48000 USD",
+        "refund lock 7 days is shorter than 14 day minimum",
+        "milestone percentages sum to 0.85, expected 1",
+        "team smoke-lab requires 120% minimum member shares"
+      ],
+      "warnings": [],
+      "actions": [
+        "hold challenge before submissions open",
+        "request sponsor top-up or lower published awards",
+        "extend refund lock before solver work starts"
+      ],
+      "auditDigest": "6ff5610fa8e52c7f7f9b9cc2ece9309b46d4872f5df3c71583256199e98b2f19"
+    },
+    {
+      "challengeId": "challenge-invalid-milestones",
+      "title": "Quantum noise reduction synthetic benchmark",
+      "sponsor": "Qubit Methods Consortium",
+      "currency": "USD",
+      "decision": "hold",
+      "requiredCoverage": 56000,
+      "sponsorDeposit": 56000,
+      "surplus": 0,
+      "deficit": 0,
+      "evidence": [
+        "required coverage 56000 USD",
+        "sponsor deposit 56000 USD",
+        "funding surplus 0 USD"
+      ],
+      "blockers": [
+        "milestone percentages sum to 1.1, expected 1"
+      ],
+      "warnings": [],
+      "actions": [],
+      "auditDigest": "4b27ee358936909889641b952c810a3d1d644922deb41f5d6e38126f34a9c231"
+    }
+  ]
+}

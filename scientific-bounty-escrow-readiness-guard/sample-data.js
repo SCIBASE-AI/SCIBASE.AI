@@ -1,0 +1,70 @@
+const challenges = [
+  {
+    id: "challenge-funded-biomarker",
+    title: "Identify plasma biomarkers from synthetic single-cell data",
+    sponsor: "Northbridge Translational Lab",
+    status: "draft",
+    currency: "USD",
+    prizeAmount: 120000,
+    platformReserve: 6000,
+    sponsorDeposit: 141000,
+    cancellationRefundHold: 3000,
+    honorableMentionBudget: 9000,
+    minSubmissionWindowDays: 45,
+    refundLockedUntilDaysAfterOpen: 21,
+    milestones: [
+      { id: "proposal", percent: 0.15, dueDay: 15 },
+      { id: "prototype", percent: 0.35, dueDay: 35 },
+      { id: "final", percent: 0.5, dueDay: 60 },
+    ],
+    teamSplits: [
+      { teamId: "lab-alpha", maxMembers: 5, minMemberSharePercent: 10 },
+      { teamId: "independent-team", maxMembers: 3, minMemberSharePercent: 12 },
+    ],
+  },
+  {
+    id: "challenge-underfunded-climate",
+    title: "Regional wildfire smoke forecasting benchmark",
+    sponsor: "Open Climate Fund",
+    status: "draft",
+    currency: "USD",
+    prizeAmount: 80000,
+    platformReserve: 4000,
+    sponsorDeposit: 61000,
+    cancellationRefundHold: 15000,
+    honorableMentionBudget: 10000,
+    minSubmissionWindowDays: 28,
+    refundLockedUntilDaysAfterOpen: 7,
+    milestones: [
+      { id: "proposal", percent: 0.2, dueDay: 12 },
+      { id: "prototype", percent: 0.3, dueDay: 24 },
+      { id: "final", percent: 0.35, dueDay: 42 },
+    ],
+    teamSplits: [
+      { teamId: "smoke-lab", maxMembers: 6, minMemberSharePercent: 20 },
+    ],
+  },
+  {
+    id: "challenge-invalid-milestones",
+    title: "Quantum noise reduction synthetic benchmark",
+    sponsor: "Qubit Methods Consortium",
+    status: "draft",
+    currency: "USD",
+    prizeAmount: 50000,
+    platformReserve: 2500,
+    sponsorDeposit: 56000,
+    cancellationRefundHold: 1000,
+    honorableMentionBudget: 2500,
+    minSubmissionWindowDays: 35,
+    refundLockedUntilDaysAfterOpen: 20,
+    milestones: [
+      { id: "prototype", percent: 0.4, dueDay: 20 },
+      { id: "final", percent: 0.7, dueDay: 35 },
+    ],
+    teamSplits: [
+      { teamId: "quantum-team", maxMembers: 4, minMemberSharePercent: 8 },
+    ],
+  },
+];
+
+module.exports = { challenges };

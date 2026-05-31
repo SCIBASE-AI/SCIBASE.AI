@@ -1,0 +1,138 @@
+[
+  {
+    "invoice_id": "INV-DELIV-001",
+    "account_id": "ACCT-UNIV-ASTRO",
+    "invoice_number": "SCB-2026-0001",
+    "issued_at": "2026-05-01",
+    "due_at": "2026-06-01",
+    "amount_cents": 1250000,
+    "currency": "USD",
+    "invoice_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "delivered_pdf_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "terms_require_po": true,
+    "purchase_order_id": "PO-ASTRO-2026-44",
+    "po_attachment_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ap_contact_verified_at": "2026-04-24",
+    "finance_owner": "finance-owner-astro",
+    "delivery_channels": [
+      {
+        "type": "email",
+        "address": "ap@astro-university.edu",
+        "status": "accepted",
+        "attempted_at": "2026-05-01T10:12:00Z"
+      },
+      {
+        "type": "portal",
+        "portal_name": "Coupa",
+        "status": "uploaded",
+        "receipt_id": "COUPA-RECEIPT-9912",
+        "attempted_at": "2026-05-01T10:30:00Z"
+      }
+    ]
+  },
+  {
+    "invoice_id": "INV-BOUNCE-002",
+    "account_id": "ACCT-NATIONAL-LAB",
+    "invoice_number": "SCB-2026-0002",
+    "issued_at": "2026-05-03",
+    "due_at": "2026-06-03",
+    "amount_cents": 4800000,
+    "currency": "USD",
+    "invoice_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    "delivered_pdf_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    "terms_require_po": false,
+    "purchase_order_id": "",
+    "po_attachment_hash": "",
+    "ap_contact_verified_at": "2025-05-01",
+    "finance_owner": "finance-owner-lab",
+    "delivery_channels": [
+      {
+        "type": "email",
+        "address": "old-ap@national-lab.example",
+        "status": "hard_bounce",
+        "attempted_at": "2026-05-03T09:05:00Z",
+        "bounce_code": "550 mailbox unavailable"
+      }
+    ]
+  },
+  {
+    "invoice_id": "INV-PORTAL-003",
+    "account_id": "ACCT-EU-CONSORTIUM",
+    "invoice_number": "SCB-2026-0003",
+    "issued_at": "2026-05-06",
+    "due_at": "2026-06-06",
+    "amount_cents": 2150000,
+    "currency": "EUR",
+    "invoice_hash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+    "delivered_pdf_hash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+    "terms_require_po": true,
+    "purchase_order_id": "EU-PO-2026-17",
+    "po_attachment_hash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "ap_contact_verified_at": "2026-04-10",
+    "finance_owner": "finance-owner-eu",
+    "requires_portal_receipt": true,
+    "delivery_channels": [
+      {
+        "type": "email",
+        "address": "ap@eu-consortium.example",
+        "status": "accepted",
+        "attempted_at": "2026-05-06T08:00:00Z"
+      },
+      {
+        "type": "portal",
+        "portal_name": "Ariba",
+        "status": "pending",
+        "receipt_id": "",
+        "attempted_at": "2026-05-06T08:20:00Z"
+      }
+    ]
+  },
+  {
+    "invoice_id": "INV-PO-004",
+    "account_id": "ACCT-MED-SCHOOL",
+    "invoice_number": "SCB-2026-0004",
+    "issued_at": "2026-05-10",
+    "due_at": "2026-06-10",
+    "amount_cents": 3300000,
+    "currency": "USD",
+    "invoice_hash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+    "delivered_pdf_hash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+    "terms_require_po": true,
+    "purchase_order_id": "PO-MED-009",
+    "po_attachment_hash": "",
+    "ap_contact_verified_at": "2026-04-18",
+    "finance_owner": "finance-owner-med",
+    "delivery_channels": [
+      {
+        "type": "email",
+        "address": "ap@med-school.example",
+        "status": "accepted",
+        "attempted_at": "2026-05-10T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "invoice_id": "INV-HASH-005",
+    "account_id": "ACCT-CLOUD-LAB",
+    "invoice_number": "SCB-2026-0005",
+    "issued_at": "2026-05-12",
+    "due_at": "2026-06-12",
+    "amount_cents": 760000,
+    "currency": "USD",
+    "invoice_hash": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+    "delivered_pdf_hash": "sha256:9999999999999999999999999999999999999999999999999999999999999999",
+    "terms_require_po": false,
+    "purchase_order_id": "",
+    "po_attachment_hash": "",
+    "ap_contact_verified_at": "2026-05-01",
+    "finance_owner": "",
+    "delivery_channels": [
+      {
+        "type": "email",
+        "address": "ap@cloud-lab.example",
+        "status": "accepted",
+        "attempted_at": "2026-05-12T14:00:00Z"
+      }
+    ]
+  }
+]

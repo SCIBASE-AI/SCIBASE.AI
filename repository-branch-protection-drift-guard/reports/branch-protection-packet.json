@@ -1,0 +1,76 @@
+{
+  "repositoryId": "project-repo-neuro-77",
+  "decision": "block-release-export",
+  "summary": {
+    "branches": 3,
+    "exportBundles": 2,
+    "blockers": 3,
+    "holds": 3,
+    "findings": 6
+  },
+  "findings": [
+    {
+      "severity": "block",
+      "id": "missing-status-checks:release/v1.2-dataset",
+      "message": "Release branch release/v1.2-dataset is missing required status checks.",
+      "action": "Restore the required release status checks before citation or export actions.",
+      "evidence": {
+        "branch": "release/v1.2-dataset",
+        "missingChecks": [
+          "citation-metadata"
+        ]
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "review-count-drift:release/v1.2-dataset",
+      "message": "Release branch release/v1.2-dataset requires fewer than 2 approving reviews.",
+      "action": "Reset branch protection to the project release-review baseline.",
+      "evidence": {
+        "branch": "release/v1.2-dataset",
+        "requiredApprovingReviews": 1,
+        "minReviews": 2
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "signed-commit-drift:release/v1.2-dataset",
+      "message": "Release branch release/v1.2-dataset does not require signed commits.",
+      "action": "Require signed commits or attach a release-manager exception.",
+      "evidence": {
+        "branch": "release/v1.2-dataset"
+      }
+    },
+    {
+      "severity": "block",
+      "id": "destructive-branch-setting:release/v1.2-dataset",
+      "message": "Release branch release/v1.2-dataset allows force pushes or deletion.",
+      "action": "Disable destructive branch settings before release or export.",
+      "evidence": {
+        "branch": "release/v1.2-dataset",
+        "allowForcePushes": false,
+        "allowDeletions": true
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "admin-bypass:release/v1.2-dataset",
+      "message": "Release branch release/v1.2-dataset allows admin bypass without an exception record.",
+      "action": "Attach the exception record or disable admin bypass.",
+      "evidence": {
+        "branch": "release/v1.2-dataset"
+      }
+    },
+    {
+      "severity": "block",
+      "id": "export-on-drifted-branch:export-v1.2",
+      "message": "Export bundle export-v1.2 is marked ready while branch release/v1.2-dataset has protection drift.",
+      "action": "Hold export until branch protection drift is resolved.",
+      "evidence": {
+        "id": "export-v1.2",
+        "branch": "release/v1.2-dataset",
+        "status": "ready"
+      }
+    }
+  ]
+}

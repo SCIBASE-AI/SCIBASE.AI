@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="32" y="28" width="896" height="96" rx="12" fill="#0f172a"/>
+  <text x="64" y="72" font-size="30" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700">AI Contribution Disclosure Guard</text>
+  <text x="64" y="104" font-size="17" fill="#cbd5e1" font-family="Arial, sans-serif">Inflammatory flare reproducibility review</text>
+  <circle cx="760" cy="76" r="22" fill="#dc2626"/>
+  <text x="796" y="83" font-size="20" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700">hold-reputation-update</text>
+  <text x="64" y="154" font-size="20" fill="#334155" font-family="Arial, sans-serif">4 blockers; 3 holds; 109 reputation points withheld</text>
+  <text x="64" y="190" font-size="18" fill="#0f172a">review-104 dr-avery</text><text x="654" y="190" font-size="18" fill="#16a34a" font-weight="700">allow-reputation-credit</text>
+<text x="64" y="226" font-size="18" fill="#0f172a">review-105 casey-lab</text><text x="654" y="226" font-size="18" fill="#dc2626" font-weight="700">hold-reputation-credit</text>
+<text x="64" y="262" font-size="18" fill="#0f172a">rerun-210 morgan-data</text><text x="654" y="262" font-size="18" fill="#dc2626" font-weight="700">hold-reputation-credit</text>
+<text x="64" y="298" font-size="18" fill="#0f172a">credit-314 taylor-orcid</text><text x="654" y="298" font-size="18" fill="#ca8a04" font-weight="700">reduce-credit-pending-evidence</text>
+  <rect x="32" y="470" width="896" height="42" rx="8" fill="#e2e8f0"/>
+  <text x="64" y="497" font-size="18" fill="#334155" font-family="Arial, sans-serif">Requires disclosure and human verification before AI-assisted work changes reputation.</text>
+</svg>

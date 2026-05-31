@@ -1,0 +1,216 @@
+{
+  "project": {
+    "id": "proj-sci-2026-flare",
+    "name": "Inflammatory flare reproducibility review"
+  },
+  "generatedAt": "2026-05-31T07:40:00Z",
+  "decision": "hold-reputation-update",
+  "summary": {
+    "contributionsChecked": 4,
+    "contributors": 4,
+    "blockers": 4,
+    "holds": 3,
+    "basePoints": 160,
+    "awardedPoints": 51,
+    "withheldPoints": 109
+  },
+  "contributionResults": [
+    {
+      "id": "review-104",
+      "contributor": "dr-avery",
+      "type": "peer-review",
+      "decision": "allow-reputation-credit",
+      "basePoints": 40,
+      "awardedPoints": 40,
+      "aiUsed": true,
+      "disclosed": true,
+      "humanVerified": true,
+      "findings": []
+    },
+    {
+      "id": "review-105",
+      "contributor": "casey-lab",
+      "type": "peer-review",
+      "decision": "hold-reputation-credit",
+      "basePoints": 35,
+      "awardedPoints": 0,
+      "aiUsed": true,
+      "disclosed": false,
+      "humanVerified": false,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "ai-assistance-undisclosed",
+          "subjectId": "review-105",
+          "message": "AI assistance is marked as used but was not disclosed on the reputation-bearing contribution.",
+          "evidence": {
+            "contributor": "casey-lab",
+            "type": "peer-review"
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "human-verification-missing",
+          "subjectId": "review-105",
+          "message": "High-impact AI-assisted contribution lacks human verification before reputation credit.",
+          "evidence": {
+            "type": "peer-review"
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "generated-text-signal-undisclosed",
+          "subjectId": "review-105",
+          "message": "Contribution text contains generated-text signals while AI disclosure is absent.",
+          "evidence": {
+            "excerpt": "As an AI, I cannot verify the raw data, but this review recommends acceptance."
+          }
+        },
+        {
+          "severity": "hold",
+          "code": "artifact-provenance-missing",
+          "subjectId": "review-105",
+          "message": "Reputation-bearing contribution is missing artifact provenance links.",
+          "evidence": {
+            "type": "peer-review"
+          }
+        },
+        {
+          "severity": "hold",
+          "code": "credit-role-evidence-missing",
+          "subjectId": "review-105",
+          "message": "One or more CRediT-style roles lacks supporting evidence.",
+          "evidence": {
+            "roles": [
+              "review"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "rerun-210",
+      "contributor": "morgan-data",
+      "type": "reproducibility-rerun",
+      "decision": "hold-reputation-credit",
+      "basePoints": 55,
+      "awardedPoints": 0,
+      "aiUsed": true,
+      "disclosed": true,
+      "humanVerified": false,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "human-verification-missing",
+          "subjectId": "rerun-210",
+          "message": "High-impact AI-assisted contribution lacks human verification before reputation credit.",
+          "evidence": {
+            "type": "reproducibility-rerun"
+          }
+        }
+      ]
+    },
+    {
+      "id": "credit-314",
+      "contributor": "taylor-orcid",
+      "type": "credit-claim",
+      "decision": "reduce-credit-pending-evidence",
+      "basePoints": 30,
+      "awardedPoints": 11,
+      "aiUsed": false,
+      "disclosed": false,
+      "humanVerified": true,
+      "findings": [
+        {
+          "severity": "hold",
+          "code": "credit-role-evidence-missing",
+          "subjectId": "credit-314",
+          "message": "One or more CRediT-style roles lacks supporting evidence.",
+          "evidence": {
+            "roles": [
+              "conceptualization",
+              "data-curation"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "ai-assistance-undisclosed",
+      "subjectId": "review-105",
+      "message": "AI assistance is marked as used but was not disclosed on the reputation-bearing contribution.",
+      "evidence": {
+        "contributor": "casey-lab",
+        "type": "peer-review"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "human-verification-missing",
+      "subjectId": "review-105",
+      "message": "High-impact AI-assisted contribution lacks human verification before reputation credit.",
+      "evidence": {
+        "type": "peer-review"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "generated-text-signal-undisclosed",
+      "subjectId": "review-105",
+      "message": "Contribution text contains generated-text signals while AI disclosure is absent.",
+      "evidence": {
+        "excerpt": "As an AI, I cannot verify the raw data, but this review recommends acceptance."
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "artifact-provenance-missing",
+      "subjectId": "review-105",
+      "message": "Reputation-bearing contribution is missing artifact provenance links.",
+      "evidence": {
+        "type": "peer-review"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "credit-role-evidence-missing",
+      "subjectId": "review-105",
+      "message": "One or more CRediT-style roles lacks supporting evidence.",
+      "evidence": {
+        "roles": [
+          "review"
+        ]
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "human-verification-missing",
+      "subjectId": "rerun-210",
+      "message": "High-impact AI-assisted contribution lacks human verification before reputation credit.",
+      "evidence": {
+        "type": "reproducibility-rerun"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "credit-role-evidence-missing",
+      "subjectId": "credit-314",
+      "message": "One or more CRediT-style roles lacks supporting evidence.",
+      "evidence": {
+        "roles": [
+          "conceptualization",
+          "data-curation"
+        ]
+      }
+    }
+  ],
+  "remediation": [
+    "Require explicit AI-assistance disclosure before contribution points can affect reputation.",
+    "Collect human verifier attestation for high-impact reviews, reruns, datasets, and credit claims.",
+    "Attach artifact ids, commit ids, dataset ids, or review ids to every reputation-bearing event.",
+    "Add evidence for each CRediT role or remove unsupported roles from the reputation event."
+  ]
+}

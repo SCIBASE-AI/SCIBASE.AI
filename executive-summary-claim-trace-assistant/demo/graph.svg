@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" viewBox="0 0 560 300" role="img" aria-label="Executive summary claim trace report">
+  <rect width="560" height="300" fill="#f8fafc"/>
+  <text x="32" y="42" font-size="22" font-family="Arial, sans-serif" fill="#1a202c">Executive Summary Claim Trace</text>
+  <text x="32" y="64" font-size="13" font-family="Arial, sans-serif" fill="#4a5568">Evidence coverage for AI-generated summary bullets</text>
+  <text x="32" y="102" font-size="15" fill="#1a202c">publish</text><rect x="130" y="82" width="300" height="30" rx="4" fill="#2f855a" /><text x="442" y="102" font-size="15" fill="#1a202c">2</text><text x="32" y="160" font-size="15" fill="#1a202c">revise</text><rect x="130" y="140" width="300" height="30" rx="4" fill="#b7791f" /><text x="442" y="160" font-size="15" fill="#1a202c">2</text><text x="32" y="218" font-size="15" fill="#1a202c">block</text><rect x="130" y="198" width="300" height="30" rx="4" fill="#c53030" /><text x="442" y="218" font-size="15" fill="#1a202c">2</text>
+  <text x="32" y="270" font-size="13" font-family="Arial, sans-serif" fill="#4a5568">Evidence traces: 6</text>
+</svg>

@@ -1,0 +1,134 @@
+{
+  "assistant": "executive-summary-claim-trace-assistant",
+  "bullet_reviews": [
+    {
+      "bullet_id": "SUM-001",
+      "decision": "publish",
+      "evidence_trace": [
+        {
+          "evidence_id": "EV-RESULT-001",
+          "section": "Results",
+          "type": "result"
+        }
+      ],
+      "findings": [],
+      "mode": "key_finding",
+      "rewrite": ""
+    },
+    {
+      "bullet_id": "SUM-002",
+      "decision": "publish",
+      "evidence_trace": [
+        {
+          "evidence_id": "EV-RESULT-001",
+          "section": "Results",
+          "type": "result"
+        },
+        {
+          "evidence_id": "EV-FIG-002",
+          "section": "Figure 2",
+          "type": "figure"
+        },
+        {
+          "evidence_id": "EV-METHOD-003",
+          "section": "Methods",
+          "type": "method"
+        }
+      ],
+      "findings": [],
+      "mode": "implication",
+      "rewrite": ""
+    },
+    {
+      "bullet_id": "SUM-003",
+      "decision": "revise",
+      "evidence_trace": [
+        {
+          "evidence_id": "EV-RESULT-001",
+          "section": "Results",
+          "type": "result"
+        }
+      ],
+      "findings": [
+        {
+          "code": "OVERBROAD_LANGUAGE",
+          "message": "Summary uses universal or definitive language beyond the evidence.",
+          "severity": "revise"
+        },
+        {
+          "code": "CLINICAL_CLAIM_NEEDS_SAFETY_CONTEXT",
+          "message": "Clinical claims need methods, ethics, trial, or limitation evidence.",
+          "severity": "revise"
+        }
+      ],
+      "mode": "next_step",
+      "rewrite": "The tool could be evaluated across similar clinical publishing workflows."
+    },
+    {
+      "bullet_id": "SUM-004",
+      "decision": "block",
+      "evidence_trace": [],
+      "findings": [
+        {
+          "code": "UNKNOWN_EVIDENCE_ID",
+          "message": "Summary references evidence IDs that are absent from the packet: EV-MISSING-999",
+          "severity": "block"
+        }
+      ],
+      "mode": "key_finding",
+      "rewrite": "Hold this bullet until the source evidence IDs are added or corrected."
+    },
+    {
+      "bullet_id": "SUM-005",
+      "decision": "block",
+      "evidence_trace": [],
+      "findings": [
+        {
+          "code": "MISSING_EVIDENCE_TRACE",
+          "message": "Summary bullet has no source evidence IDs.",
+          "severity": "block"
+        },
+        {
+          "code": "OVERBROAD_LANGUAGE",
+          "message": "Summary uses universal or definitive language beyond the evidence.",
+          "severity": "revise"
+        }
+      ],
+      "mode": "implication",
+      "rewrite": "Hold this bullet until the source evidence IDs are added or corrected."
+    },
+    {
+      "bullet_id": "SUM-006",
+      "decision": "revise",
+      "evidence_trace": [
+        {
+          "evidence_id": "EV-RESULT-001",
+          "section": "Results",
+          "type": "result"
+        }
+      ],
+      "findings": [
+        {
+          "code": "UNSUPPORTED_NUMERIC_DETAIL",
+          "message": "Summary includes numeric details absent from traced evidence: 50",
+          "severity": "revise"
+        },
+        {
+          "code": "OVERBROAD_LANGUAGE",
+          "message": "Summary uses universal or definitive language beyond the evidence.",
+          "severity": "revise"
+        }
+      ],
+      "mode": "key_finding",
+      "rewrite": "Replace unsupported numbers with the exact values in the traced evidence or remove the numeric detail."
+    }
+  ],
+  "manuscript_id": "MS-EXEC-SUMMARY-2026",
+  "summary": {
+    "block": 2,
+    "publish": 2,
+    "revise": 2,
+    "total": 6,
+    "trace_count": 6
+  }
+}

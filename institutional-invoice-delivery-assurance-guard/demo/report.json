@@ -1,0 +1,195 @@
+{
+  "guard": "institutional-invoice-delivery-assurance-guard",
+  "invoices": [
+    {
+      "accepted_routes": [
+        {
+          "evidence": "ap@astro-university.edu",
+          "status": "accepted",
+          "type": "email"
+        },
+        {
+          "evidence": "COUPA-RECEIPT-9912",
+          "status": "uploaded",
+          "type": "portal"
+        }
+      ],
+      "account_id": "ACCT-UNIV-ASTRO",
+      "actions": [
+        {
+          "action": "release-invoice-to-ar-aging",
+          "owner": "finance-owner-astro",
+          "reason": "accepted delivery evidence present"
+        }
+      ],
+      "ar_status": "start_ar_aging",
+      "decision": "release_to_ar",
+      "findings": [],
+      "invoice_id": "INV-DELIV-001"
+    },
+    {
+      "accepted_routes": [],
+      "account_id": "ACCT-NATIONAL-LAB",
+      "actions": [
+        {
+          "action": "pause-ar-aging-and-dunning",
+          "owner": "finance-owner-lab",
+          "reason": "delivery evidence is incomplete or unsafe"
+        },
+        {
+          "action": "refresh-ap-route-and-redeliver",
+          "owner": "finance-owner-lab",
+          "reason": "invoice did not reach a verified AP route"
+        },
+        {
+          "action": "reverify-ap-contact",
+          "owner": "finance-owner-lab",
+          "reason": "AP route verification is stale or absent"
+        }
+      ],
+      "ar_status": "do_not_age_or_dun",
+      "decision": "hold_for_finance",
+      "findings": [
+        {
+          "code": "STALE_AP_CONTACT",
+          "field": "ap_contact_verified_at",
+          "message": "AP contact verification is older than 180 days.",
+          "severity": "review"
+        },
+        {
+          "code": "HARD_DELIVERY_BOUNCE",
+          "field": "delivery_channels[0].status",
+          "message": "Invoice route produced a hard delivery bounce.",
+          "severity": "block"
+        },
+        {
+          "code": "NO_ACCEPTED_DELIVERY_ROUTE",
+          "field": "delivery_channels",
+          "message": "Invoice has no accepted email or portal delivery evidence.",
+          "severity": "block"
+        }
+      ],
+      "invoice_id": "INV-BOUNCE-002"
+    },
+    {
+      "accepted_routes": [
+        {
+          "evidence": "ap@eu-consortium.example",
+          "status": "accepted",
+          "type": "email"
+        }
+      ],
+      "account_id": "ACCT-EU-CONSORTIUM",
+      "actions": [
+        {
+          "action": "pause-ar-aging-and-dunning",
+          "owner": "finance-owner-eu",
+          "reason": "delivery evidence is incomplete or unsafe"
+        },
+        {
+          "action": "upload-to-customer-portal",
+          "owner": "finance-owner-eu",
+          "reason": "portal receipt is required"
+        }
+      ],
+      "ar_status": "pause_ar_aging_until_delivery_evidence",
+      "decision": "retry_delivery",
+      "findings": [
+        {
+          "code": "DELIVERY_RETRY_PENDING",
+          "field": "delivery_channels[1].status",
+          "message": "Invoice route is still pending retry evidence.",
+          "severity": "review"
+        },
+        {
+          "code": "MISSING_PORTAL_RECEIPT",
+          "field": "delivery_channels",
+          "message": "Customer requires a portal receipt before invoice can enter AR aging.",
+          "severity": "review"
+        }
+      ],
+      "invoice_id": "INV-PORTAL-003"
+    },
+    {
+      "accepted_routes": [
+        {
+          "evidence": "ap@med-school.example",
+          "status": "accepted",
+          "type": "email"
+        }
+      ],
+      "account_id": "ACCT-MED-SCHOOL",
+      "actions": [
+        {
+          "action": "pause-ar-aging-and-dunning",
+          "owner": "finance-owner-med",
+          "reason": "delivery evidence is incomplete or unsafe"
+        },
+        {
+          "action": "attach-po-evidence-before-redelivery",
+          "owner": "finance-owner-med",
+          "reason": "PO-required account lacks auditable evidence"
+        }
+      ],
+      "ar_status": "do_not_age_or_dun",
+      "decision": "hold_for_finance",
+      "findings": [
+        {
+          "code": "MISSING_PO_ATTACHMENT",
+          "field": "po_attachment_hash",
+          "message": "PO-required account has no auditable PO attachment hash.",
+          "severity": "block"
+        }
+      ],
+      "invoice_id": "INV-PO-004"
+    },
+    {
+      "accepted_routes": [
+        {
+          "evidence": "ap@cloud-lab.example",
+          "status": "accepted",
+          "type": "email"
+        }
+      ],
+      "account_id": "ACCT-CLOUD-LAB",
+      "actions": [
+        {
+          "action": "pause-ar-aging-and-dunning",
+          "owner": "finance-ops",
+          "reason": "delivery evidence is incomplete or unsafe"
+        },
+        {
+          "action": "regenerate-and-redeliver-approved-pdf",
+          "owner": "finance-ops",
+          "reason": "delivered PDF does not match approved invoice"
+        }
+      ],
+      "ar_status": "do_not_age_or_dun",
+      "decision": "hold_for_finance",
+      "findings": [
+        {
+          "code": "DELIVERED_PDF_HASH_MISMATCH",
+          "field": "delivered_pdf_hash",
+          "message": "Delivered PDF hash does not match the approved invoice payload.",
+          "severity": "block"
+        },
+        {
+          "code": "MISSING_FINANCE_OWNER",
+          "field": "finance_owner",
+          "message": "Failed delivery packets need an accountable finance owner.",
+          "severity": "review"
+        }
+      ],
+      "invoice_id": "INV-HASH-005"
+    }
+  ],
+  "review_as_of": "2026-05-31",
+  "summary": {
+    "accepted_route_count": 5,
+    "action_count": 10,
+    "hold_for_finance": 3,
+    "release_to_ar": 1,
+    "retry_delivery": 1,
+    "total": 5
+  }
+}

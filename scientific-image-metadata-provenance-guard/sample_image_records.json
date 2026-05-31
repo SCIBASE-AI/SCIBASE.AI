@@ -1,0 +1,128 @@
+[
+  {
+    "image_id": "IMG-CELL-001",
+    "title": "Confocal astrocyte culture panel",
+    "image_kind": "raw_image",
+    "modality": "confocal_microscopy",
+    "source_artifact": "s3://scibase-lab/raw/astrocyte/IMG-CELL-001.ome.tiff",
+    "dataset_id": "DS-ASTROCYTE-ATLAS-2026",
+    "protocol_id": "PR-IMMUNO-STAIN-V2",
+    "instrument_id": "INST-CONFOCAL-A1",
+    "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "acquired_at": "2026-02-11",
+    "publication_date": "2026-03-08",
+    "license": "CC-BY-4.0",
+    "access": "public",
+    "filename": "astrocyte_culture_a1_ome.tiff",
+    "privacy_tags": [],
+    "metadata": {
+      "operator": "lab-tech-17",
+      "objective": "63x oil",
+      "ome_model": "2016-06"
+    },
+    "channels": [
+      {
+        "name": "DAPI",
+        "wavelength_nm": 405
+      },
+      {
+        "name": "GFAP",
+        "wavelength_nm": 488
+      }
+    ],
+    "pixel_size_um": 0.108
+  },
+  {
+    "image_id": "IMG-SLIDE-002",
+    "title": "Widefield embryo slide",
+    "image_kind": "raw_image",
+    "modality": "fluorescence_microscopy",
+    "source_artifact": "s3://scibase-lab/raw/embryo/IMG-SLIDE-002.tiff",
+    "dataset_id": "DS-EMBRYO-STAIN-2026",
+    "protocol_id": "PR-EMBRYO-STAIN-V1",
+    "instrument_id": "INST-WIDEFIELD-7",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "acquired_at": "2026-01-15",
+    "publication_date": "2026-03-01",
+    "license": "CC-BY-4.0",
+    "access": "public",
+    "filename": "embryo_slide_002.tiff",
+    "privacy_tags": [],
+    "metadata": {
+      "operator": "lab-tech-22"
+    },
+    "channels": [],
+    "pixel_size_um": null
+  },
+  {
+    "image_id": "IMG-PATH-003",
+    "title": "Clinical pathology field with leaked identifiers",
+    "image_kind": "raw_image",
+    "modality": "pathology_slide",
+    "source_artifact": "s3://restricted-lab/raw/pathology/IMG-PATH-003.svs",
+    "dataset_id": "DS-PATHOLOGY-RESTRICTED",
+    "protocol_id": "PR-HISTOLOGY-REVIEW",
+    "instrument_id": "INST-SLIDE-SCANNER-2",
+    "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "acquired_at": "2026-06-12",
+    "publication_date": "2026-05-01",
+    "license": "restricted",
+    "access": "private",
+    "filename": "Jane_Doe_MRN_1938472_biopsy.svs",
+    "privacy_tags": [
+      "phi"
+    ],
+    "metadata": {
+      "patient_name": "Jane Doe",
+      "mrn": "1938472",
+      "operator": "clinical-tech-3"
+    },
+    "channels": [],
+    "pixel_size_um": 0.24
+  },
+  {
+    "image_id": "FIG-DERIVED-004",
+    "title": "Composite figure without source chain",
+    "image_kind": "derived_figure",
+    "modality": "composite_figure",
+    "source_artifact": "",
+    "dataset_id": "DS-CELL-MIGRATION-2026",
+    "protocol_id": "PR-FIGURE-ASSEMBLY",
+    "instrument_id": "",
+    "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "acquired_at": "2026-02-05",
+    "publication_date": "2026-04-01",
+    "license": "CC-BY-4.0",
+    "access": "public",
+    "filename": "figure_2_panel_c.png",
+    "privacy_tags": [],
+    "metadata": {
+      "assembly_tool": "imagej"
+    },
+    "channels": [],
+    "pixel_size_um": null,
+    "derived_from": []
+  },
+  {
+    "image_id": "IMG-EMBARGO-005",
+    "title": "Embargoed cryo-EM map preview",
+    "image_kind": "raw_image",
+    "modality": "electron_microscopy",
+    "source_artifact": "s3://scibase-lab/embargo/cryo/IMG-EMBARGO-005.mrc",
+    "dataset_id": "DS-CRYOEM-EMBARGO-2026",
+    "protocol_id": "PR-CRYOEM-CAPTURE-V4",
+    "instrument_id": "INST-CRYOEM-4",
+    "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "acquired_at": "2026-03-04",
+    "publication_date": "2026-07-01",
+    "license": "",
+    "access": "embargoed",
+    "filename": "cryoem_preview_005.mrc",
+    "privacy_tags": [],
+    "metadata": {
+      "magnification": "105000x"
+    },
+    "channels": [],
+    "pixel_size_um": 1.08
+  }
+]

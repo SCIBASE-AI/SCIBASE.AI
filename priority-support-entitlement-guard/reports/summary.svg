@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="32" y="28" width="896" height="96" rx="12" fill="#0f172a"/>
+  <text x="64" y="72" font-size="30" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700">Priority Support Entitlement Guard</text>
+  <text x="64" y="104" font-size="17" fill="#cbd5e1" font-family="Arial, sans-serif">Revenue infrastructure premium support routing</text>
+  <circle cx="744" cy="76" r="22" fill="#dc2626"/>
+  <text x="780" y="83" font-size="20" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700">hold-priority-support-routing</text>
+  <text x="64" y="154" font-size="20" fill="#334155" font-family="Arial, sans-serif">3 blockers; 5 holds; $340.00 support overage</text>
+  <text x="64" y="190" font-size="18" fill="#0f172a">case-enterprise-p1-clean institution-enterprise</text><text x="640" y="190" font-size="18" fill="#16a34a" font-weight="700">allow-priority-support</text>
+<text x="64" y="226" font-size="18" fill="#0f172a">case-lab-unpaid-priority individual-pro</text><text x="640" y="226" font-size="18" fill="#dc2626" font-weight="700">hold-premium-support</text>
+<text x="64" y="262" font-size="18" fill="#0f172a">case-lab-overage-approved lab-plus</text><text x="640" y="262" font-size="18" fill="#16a34a" font-weight="700">allow-with-overage-billing</text>
+<text x="64" y="298" font-size="18" fill="#0f172a">case-government-sensitive-hold government-enterprise</text><text x="640" y="298" font-size="18" fill="#dc2626" font-weight="700">hold-premium-support</text>
+  <rect x="32" y="470" width="896" height="42" rx="8" fill="#e2e8f0"/>
+  <text x="64" y="497" font-size="18" fill="#334155" font-family="Arial, sans-serif">Premium support is granted only when paid entitlements, finance state, SLA, and secure routing align.</text>
+</svg>

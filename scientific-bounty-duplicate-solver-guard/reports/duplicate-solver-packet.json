@@ -1,0 +1,67 @@
+{
+  "status": "blocked",
+  "checkedAt": "2026-05-31T07:05:00.000Z",
+  "policy": {
+    "maxSubmissionSimilarity": 0.72,
+    "maxSharedArtifactRatio": 0.35
+  },
+  "summary": {
+    "submissions": 4,
+    "blockers": 3,
+    "reviewItems": 2,
+    "eligible": 0,
+    "warnings": 0
+  },
+  "blocked": [
+    {
+      "code": "SOLVER_MULTI_SUBMISSION",
+      "severity": "blocker",
+      "submissionIds": [
+        "sub-alpha",
+        "sub-beta"
+      ],
+      "message": "Solver solver-one appears on multiple submissions for the same bounty phase."
+    },
+    {
+      "code": "TEAM_MULTI_SUBMISSION",
+      "severity": "blocker",
+      "submissionIds": [
+        "sub-alpha",
+        "sub-beta"
+      ],
+      "message": "Team team-redwood submitted more than once in this challenge phase."
+    },
+    {
+      "code": "ARTIFACT_HASH_OVERLAP",
+      "severity": "blocker",
+      "submissionIds": [
+        "sub-alpha",
+        "sub-beta"
+      ],
+      "score": 1,
+      "message": "sub-alpha and sub-beta share too many artifact hashes for independent scoring."
+    }
+  ],
+  "review": [
+    {
+      "code": "PAYMENT_ROUTE_REUSED",
+      "severity": "review",
+      "submissionIds": [
+        "sub-alpha",
+        "sub-beta"
+      ],
+      "message": "Payment route stripe:acct_redwood is shared by multiple submissions and needs sponsor review."
+    },
+    {
+      "code": "PAYMENT_ROUTE_REUSED",
+      "severity": "review",
+      "submissionIds": [
+        "sub-gamma",
+        "sub-delta"
+      ],
+      "message": "Payment route bank:institutional-lab-42 is shared by multiple submissions and needs sponsor review."
+    }
+  ],
+  "pass": [],
+  "warnings": []
+}

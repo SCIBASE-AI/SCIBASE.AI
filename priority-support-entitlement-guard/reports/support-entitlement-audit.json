@@ -1,0 +1,253 @@
+{
+  "program": {
+    "id": "rev-support-2026",
+    "name": "Revenue infrastructure premium support routing"
+  },
+  "generatedAt": "2026-05-31T07:55:00Z",
+  "decision": "hold-priority-support-routing",
+  "summary": {
+    "casesChecked": 4,
+    "blockers": 3,
+    "holds": 5,
+    "billableOverage": 340,
+    "allowedPriorityCases": 1,
+    "standardRoutedCases": 0
+  },
+  "caseResults": [
+    {
+      "id": "case-enterprise-p1-clean",
+      "accountId": "acct-oxford-enterprise",
+      "plan": "institution-enterprise",
+      "severity": "p1",
+      "targetTier": "enterprise",
+      "decision": "allow-priority-support",
+      "priorityRequested": true,
+      "entitledResponseMinutes": 30,
+      "requestedResponseMinutes": 30,
+      "overageMinutes": 0,
+      "billableOverage": 0,
+      "findings": []
+    },
+    {
+      "id": "case-lab-unpaid-priority",
+      "accountId": "acct-small-lab",
+      "plan": "individual-pro",
+      "severity": "p1",
+      "targetTier": "standard",
+      "decision": "hold-premium-support",
+      "priorityRequested": true,
+      "entitledResponseMinutes": 480,
+      "requestedResponseMinutes": 45,
+      "overageMinutes": 80,
+      "billableOverage": 0,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "priority-support-not-entitled",
+          "caseId": "case-lab-unpaid-priority",
+          "message": "Case requests paid priority handling but the account lacks a premium plan or support add-on.",
+          "evidence": {
+            "plan": "individual-pro",
+            "supportAddOn": false
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "unpaid-invoice-premium-hold",
+          "caseId": "case-lab-unpaid-priority",
+          "message": "Unpaid invoices exceed the hold threshold for premium support handling.",
+          "evidence": {
+            "unpaidBalance": 275,
+            "threshold": 100
+          }
+        },
+        {
+          "severity": "hold",
+          "code": "requester-not-on-support-roster",
+          "caseId": "case-lab-unpaid-priority",
+          "message": "Requester is not on the paid support roster or institution-admin role.",
+          "evidence": {
+            "requesterId": "postdoc-177",
+            "requesterRole": "researcher"
+          }
+        },
+        {
+          "severity": "hold",
+          "code": "requested-sla-exceeds-entitlement",
+          "caseId": "case-lab-unpaid-priority",
+          "message": "Requested SLA response is faster than the account entitlement allows.",
+          "evidence": {
+            "requestedResponseMinutes": 45,
+            "entitledResponseMinutes": 480,
+            "targetTier": "standard",
+            "severity": "p1"
+          }
+        },
+        {
+          "severity": "hold",
+          "code": "support-overage-approval-missing",
+          "caseId": "case-lab-unpaid-priority",
+          "message": "Support minutes would exceed the paid allowance without overage approval.",
+          "evidence": {
+            "overageMinutes": 80,
+            "supportMinutesIncluded": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-lab-overage-approved",
+      "accountId": "acct-neuro-lab",
+      "plan": "lab-plus",
+      "severity": "p2",
+      "targetTier": "priority",
+      "decision": "allow-with-overage-billing",
+      "priorityRequested": true,
+      "entitledResponseMinutes": 240,
+      "requestedResponseMinutes": 240,
+      "overageMinutes": 80,
+      "billableOverage": 340,
+      "findings": []
+    },
+    {
+      "id": "case-government-sensitive-hold",
+      "accountId": "acct-gov-health",
+      "plan": "government-enterprise",
+      "severity": "p1",
+      "targetTier": "enterprise",
+      "decision": "hold-premium-support",
+      "priorityRequested": true,
+      "entitledResponseMinutes": 30,
+      "requestedResponseMinutes": 15,
+      "overageMinutes": 0,
+      "billableOverage": 0,
+      "findings": [
+        {
+          "severity": "hold",
+          "code": "requested-sla-exceeds-entitlement",
+          "caseId": "case-government-sensitive-hold",
+          "message": "Requested SLA response is faster than the account entitlement allows.",
+          "evidence": {
+            "requestedResponseMinutes": 15,
+            "entitledResponseMinutes": 30,
+            "targetTier": "enterprise",
+            "severity": "p1"
+          }
+        },
+        {
+          "severity": "blocker",
+          "code": "sensitive-data-routing-missing",
+          "caseId": "case-government-sensitive-hold",
+          "message": "Sensitive support case is missing secure routing approval before premium handling.",
+          "evidence": {
+            "classification": "export-controlled"
+          }
+        },
+        {
+          "severity": "hold",
+          "code": "enterprise-escalation-approval-missing",
+          "caseId": "case-government-sensitive-hold",
+          "message": "Enterprise escalation was requested without an approval record.",
+          "evidence": {
+            "severity": "p1",
+            "plan": "government-enterprise"
+          }
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "priority-support-not-entitled",
+      "caseId": "case-lab-unpaid-priority",
+      "message": "Case requests paid priority handling but the account lacks a premium plan or support add-on.",
+      "evidence": {
+        "plan": "individual-pro",
+        "supportAddOn": false
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "unpaid-invoice-premium-hold",
+      "caseId": "case-lab-unpaid-priority",
+      "message": "Unpaid invoices exceed the hold threshold for premium support handling.",
+      "evidence": {
+        "unpaidBalance": 275,
+        "threshold": 100
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "requester-not-on-support-roster",
+      "caseId": "case-lab-unpaid-priority",
+      "message": "Requester is not on the paid support roster or institution-admin role.",
+      "evidence": {
+        "requesterId": "postdoc-177",
+        "requesterRole": "researcher"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "requested-sla-exceeds-entitlement",
+      "caseId": "case-lab-unpaid-priority",
+      "message": "Requested SLA response is faster than the account entitlement allows.",
+      "evidence": {
+        "requestedResponseMinutes": 45,
+        "entitledResponseMinutes": 480,
+        "targetTier": "standard",
+        "severity": "p1"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "support-overage-approval-missing",
+      "caseId": "case-lab-unpaid-priority",
+      "message": "Support minutes would exceed the paid allowance without overage approval.",
+      "evidence": {
+        "overageMinutes": 80,
+        "supportMinutesIncluded": 0
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "requested-sla-exceeds-entitlement",
+      "caseId": "case-government-sensitive-hold",
+      "message": "Requested SLA response is faster than the account entitlement allows.",
+      "evidence": {
+        "requestedResponseMinutes": 15,
+        "entitledResponseMinutes": 30,
+        "targetTier": "enterprise",
+        "severity": "p1"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "sensitive-data-routing-missing",
+      "caseId": "case-government-sensitive-hold",
+      "message": "Sensitive support case is missing secure routing approval before premium handling.",
+      "evidence": {
+        "classification": "export-controlled"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "enterprise-escalation-approval-missing",
+      "caseId": "case-government-sensitive-hold",
+      "message": "Enterprise escalation was requested without an approval record.",
+      "evidence": {
+        "severity": "p1",
+        "plan": "government-enterprise"
+      }
+    }
+  ],
+  "remediation": [
+    "Route non-entitled cases to standard support or require a paid support add-on.",
+    "Hold premium handling until finance clears unpaid invoices or grants an exception.",
+    "Ask an institution admin to add the requester to the paid support roster.",
+    "Adjust the SLA target to the account tier or record an approved paid escalation.",
+    "Send sensitive cases through the approved restricted-data support queue before engineering access.",
+    "Attach an enterprise escalation approval before using premium escalation resources.",
+    "Collect overage approval or defer non-urgent support work until the next included allowance period."
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "releaseDecision": "block_publication",
+  "summary": {
+    "generatedAt": "2026-06-01T00:00:00.000Z",
+    "projectCount": 4,
+    "dependencyCount": 5,
+    "recommendationCount": 4,
+    "clearCount": 1,
+    "holdCount": 1,
+    "blockCount": 2,
+    "findingCount": 11,
+    "criticalCount": 6,
+    "warningCount": 5
+  },
+  "projects": [
+    {
+      "projectId": "project-neuro-crispr",
+      "title": "Neuro CRISPR Single-cell Notebook",
+      "owner": "Tokyo Molecular Atlas Lab",
+      "status": "clear",
+      "dependencyCount": 2,
+      "findingCount": 0,
+      "criticalCount": 0,
+      "warningCount": 0
+    },
+    {
+      "projectId": "project-quantum-cavity",
+      "title": "Quantum Cavity Simulation Graph",
+      "owner": "Materials Consortium",
+      "status": "hold_recommendations",
+      "dependencyCount": 1,
+      "findingCount": 5,
+      "criticalCount": 0,
+      "warningCount": 5
+    },
+    {
+      "projectId": "project-clinical-proteomics",
+      "title": "Clinical Proteomics Cohort Linkage",
+      "owner": "Kyoto Translational Proteomics",
+      "status": "block_publication",
+      "dependencyCount": 1,
+      "findingCount": 3,
+      "criticalCount": 3,
+      "warningCount": 0
+    },
+    {
+      "projectId": "project-legacy-climate",
+      "title": "Legacy Climate Reuse Map",
+      "owner": "Oceanic Reanalysis Group",
+      "status": "block_publication",
+      "dependencyCount": 1,
+      "findingCount": 3,
+      "criticalCount": 3,
+      "warningCount": 0
+    }
+  ],
+  "graphEdges": [
+    {
+      "edgeId": "project-neuro-crispr->pypi:scanpy",
+      "projectId": "project-neuro-crispr",
+      "dependencyKey": "pypi:scanpy",
+      "dependencyName": "scanpy",
+      "ecosystem": "pypi",
+      "version": "1.10.1",
+      "status": "publishable",
+      "provenanceDigest": "28885d96ee9f84ea50bc440122c45cd4462bd9e24e94a241b441bbb7a41a4037"
+    },
+    {
+      "edgeId": "project-neuro-crispr->pypi:scipy",
+      "projectId": "project-neuro-crispr",
+      "dependencyKey": "pypi:scipy",
+      "dependencyName": "scipy",
+      "ecosystem": "pypi",
+      "version": "1.13.0",
+      "status": "publishable",
+      "provenanceDigest": "6941987fd84885317ff500a8b659d17b56994a8553f3bce7901e3a409af10ede"
+    },
+    {
+      "edgeId": "project-quantum-cavity->pypi:qutip",
+      "projectId": "project-quantum-cavity",
+      "dependencyKey": "pypi:qutip",
+      "dependencyName": "qutip",
+      "ecosystem": "pypi",
+      "version": "4.7.6",
+      "status": "review",
+      "provenanceDigest": "484e6f960fe06b2e69327b7afc5e2ddfe34ae49d458a3942b11e366eab1ab8fc"
+    },
+    {
+      "edgeId": "project-clinical-proteomics->npm:clinic-cohort-linker",
+      "projectId": "project-clinical-proteomics",
+      "dependencyKey": "npm:clinic-cohort-linker",
+      "dependencyName": "clinic-cohort-linker",
+      "ecosystem": "npm",
+      "version": "2.4.0",
+      "status": "block",
+      "provenanceDigest": "d5dd9673872e988cc352fbeb5ebd4e4bb972d14badc86dac009ad83cfcc40da9"
+    },
+    {
+      "edgeId": "project-legacy-climate->npm:node-sass",
+      "projectId": "project-legacy-climate",
+      "dependencyKey": "npm:node-sass",
+      "dependencyName": "node-sass",
+      "ecosystem": "npm",
+      "version": "4.14.1",
+      "status": "block",
+      "provenanceDigest": "375eb2d8873d21ffc0bf6cb0e499ae1b00abaa69feaf47d9ce0a7a486bf331c6"
+    }
+  ],
+  "recommendations": [
+    {
+      "projectId": "project-neuro-crispr",
+      "recommendationId": "rec-single-cell-pipeline",
+      "public": true,
+      "title": "Recommend the single-cell preprocessing pipeline",
+      "dependencyKeys": [
+        "pypi:scanpy",
+        "pypi:scipy"
+      ],
+      "status": "publishable"
+    },
+    {
+      "projectId": "project-quantum-cavity",
+      "recommendationId": "rec-cavity-operators",
+      "public": true,
+      "title": "Suggest cavity-operator examples for adjacent projects",
+      "dependencyKeys": [
+        "pypi:qutip"
+      ],
+      "status": "hold_for_review"
+    },
+    {
+      "projectId": "project-clinical-proteomics",
+      "recommendationId": "rec-clinical-cohort",
+      "public": true,
+      "title": "Recommend the cohort-linkage workflow to public labs",
+      "dependencyKeys": [
+        "npm:clinic-cohort-linker"
+      ],
+      "status": "suppress"
+    },
+    {
+      "projectId": "project-legacy-climate",
+      "recommendationId": "rec-climate-dashboard",
+      "public": true,
+      "title": "Recommend the legacy dashboard build chain",
+      "dependencyKeys": [
+        "npm:node-sass"
+      ],
+      "status": "suppress"
+    }
+  ],
+  "findings": [
+    {
+      "projectId": "project-quantum-cavity",
+      "projectTitle": "Quantum Cavity Simulation Graph",
+      "severity": "warning",
+      "code": "stale_runtime_execution_evidence",
+      "message": "The runtime execution evidence is older than the allowed freshness window.",
+      "evidence": {
+        "executedAt": "2026-03-01T00:00:00.000Z",
+        "ageDays": 92,
+        "maxRuntimeAgeDays": 45
+      },
+      "remediation": "Re-run the notebook or code artifact and refresh the dependency provenance packet."
+    },
+    {
+      "projectId": "project-quantum-cavity",
+      "projectTitle": "Quantum Cavity Simulation Graph",
+      "severity": "warning",
+      "code": "missing_sbom_reference",
+      "message": "The dependency graph edge has no SBOM reference.",
+      "evidence": {
+        "dependencyKey": "pypi:qutip"
+      },
+      "remediation": "Attach a CycloneDX or SPDX SBOM reference so curators can audit dependency provenance."
+    },
+    {
+      "projectId": "project-quantum-cavity",
+      "projectTitle": "Quantum Cavity Simulation Graph",
+      "severity": "warning",
+      "code": "stale_dependency_resolution_evidence",
+      "message": "The dependency resolution evidence is older than the allowed freshness window.",
+      "evidence": {
+        "dependencyKey": "pypi:qutip",
+        "resolvedAt": "2026-01-20T00:00:00.000Z",
+        "ageDays": 132,
+        "maxEvidenceAgeDays": 120
+      },
+      "remediation": "Refresh the dependency evidence packet and review deprecation or advisory state."
+    },
+    {
+      "projectId": "project-quantum-cavity",
+      "projectTitle": "Quantum Cavity Simulation Graph",
+      "severity": "warning",
+      "code": "deprecated_dependency_edge",
+      "message": "The dependency is deprecated in the software provenance graph.",
+      "evidence": {
+        "dependencyKey": "pypi:qutip",
+        "deprecatedAt": "2026-01-15T00:00:00.000Z",
+        "replacement": "qutip>=5.0.0"
+      },
+      "remediation": "Route recommendations through the replacement dependency and keep the deprecated edge for historical context only."
+    },
+    {
+      "projectId": "project-quantum-cavity",
+      "projectTitle": "Quantum Cavity Simulation Graph",
+      "severity": "warning",
+      "code": "public_recommendation_needs_dependency_review",
+      "message": "A public recommendation path depends on software edges that require curator review.",
+      "evidence": {
+        "recommendationId": "rec-cavity-operators",
+        "reviewDependencyKeys": [
+          "pypi:qutip"
+        ]
+      },
+      "remediation": "Hold the recommendation until stale, missing, or deprecated dependency evidence is refreshed."
+    },
+    {
+      "projectId": "project-clinical-proteomics",
+      "projectTitle": "Clinical Proteomics Cohort Linkage",
+      "severity": "critical",
+      "code": "private_dependency_in_public_recommendation",
+      "message": "A private dependency is used by a public graph edge or recommendation.",
+      "evidence": {
+        "dependencyKey": "npm:clinic-cohort-linker",
+        "repository": "ssh://git.example/private/clinic-cohort-linker"
+      },
+      "remediation": "Suppress the public recommendation or replace the edge with a public, reviewable software dependency."
+    },
+    {
+      "projectId": "project-clinical-proteomics",
+      "projectTitle": "Clinical Proteomics Cohort Linkage",
+      "severity": "critical",
+      "code": "restricted_license_public_recommendation",
+      "message": "A dependency with a restricted or unknown license is exposed through a public recommendation path.",
+      "evidence": {
+        "dependencyKey": "npm:clinic-cohort-linker",
+        "license": "Proprietary"
+      },
+      "remediation": "Hold the recommendation until licensing metadata allows public graph reuse."
+    },
+    {
+      "projectId": "project-clinical-proteomics",
+      "projectTitle": "Clinical Proteomics Cohort Linkage",
+      "severity": "critical",
+      "code": "public_recommendation_uses_blocked_dependency",
+      "message": "A public recommendation path depends on blocked software provenance edges.",
+      "evidence": {
+        "recommendationId": "rec-clinical-cohort",
+        "blockedDependencyKeys": [
+          "npm:clinic-cohort-linker"
+        ]
+      },
+      "remediation": "Suppress the recommendation until all dependency edges are publishable."
+    },
+    {
+      "projectId": "project-legacy-climate",
+      "projectTitle": "Legacy Climate Reuse Map",
+      "severity": "critical",
+      "code": "deprecated_dependency_edge",
+      "message": "The dependency is deprecated in the software provenance graph.",
+      "evidence": {
+        "dependencyKey": "npm:node-sass",
+        "deprecatedAt": "2024-07-24T00:00:00.000Z",
+        "replacement": null
+      },
+      "remediation": "Suppress public recommendations until a supported replacement dependency is recorded."
+    },
+    {
+      "projectId": "project-legacy-climate",
+      "projectTitle": "Legacy Climate Reuse Map",
+      "severity": "critical",
+      "code": "high_risk_dependency_advisory",
+      "message": "A high-risk dependency advisory affects the graph edge.",
+      "evidence": {
+        "dependencyKey": "npm:node-sass",
+        "advisoryId": "GHSA-node-sass-legacy-build-chain",
+        "severity": "critical",
+        "fixedVersion": null
+      },
+      "remediation": "Block public graph publication until a patched or replacement dependency is available."
+    },
+    {
+      "projectId": "project-legacy-climate",
+      "projectTitle": "Legacy Climate Reuse Map",
+      "severity": "critical",
+      "code": "public_recommendation_uses_blocked_dependency",
+      "message": "A public recommendation path depends on blocked software provenance edges.",
+      "evidence": {
+        "recommendationId": "rec-climate-dashboard",
+        "blockedDependencyKeys": [
+          "npm:node-sass"
+        ]
+      },
+      "remediation": "Suppress the recommendation until all dependency edges are publishable."
+    }
+  ],
+  "auditDigest": "9d225e0644bd803a63a317f957bfeafe1697e9515a855b6d6db674da43323985"
+}

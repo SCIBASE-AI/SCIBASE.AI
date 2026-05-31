@@ -1,0 +1,99 @@
+{
+  "workspaceId": "editor-room-ms-042",
+  "checkedAt": "2026-05-30T19:30:00.000Z",
+  "decision": "block-export",
+  "summary": {
+    "sections": 3,
+    "notes": 4,
+    "markers": 4,
+    "blockers": 3,
+    "holds": 4,
+    "warnings": 1
+  },
+  "findings": [
+    {
+      "id": "orphan-marker:fn-5",
+      "severity": "block",
+      "message": "Marker fn-5 is present in the manuscript without matching note text.",
+      "evidence": {
+        "marker": "fn-5"
+      },
+      "action": "Add the missing note text or remove the marker before export."
+    },
+    {
+      "id": "private-note:fn-2",
+      "severity": "block",
+      "message": "Private note fn-2 would be included in the export packet.",
+      "evidence": {
+        "noteId": "fn-2",
+        "owner": "reviewer-7",
+        "visibility": "private"
+      },
+      "action": "Redact the note or convert it to an export-safe public note after review."
+    },
+    {
+      "id": "locked-section-note-edit:fn-2",
+      "severity": "block",
+      "message": "Note fn-2 changed after section methods entered final-review lock.",
+      "evidence": {
+        "noteId": "fn-2",
+        "sectionId": "methods",
+        "lockReason": "final-review"
+      },
+      "action": "Ask the section owner to unlock, approve, or roll back the note edit."
+    },
+    {
+      "id": "missing-citation:fn-3",
+      "severity": "hold",
+      "message": "Source-backed note fn-3 is missing a citation binding.",
+      "evidence": {
+        "noteId": "fn-3"
+      },
+      "action": "Bind the note to an approved bibliography entry before export."
+    },
+    {
+      "id": "unused-note:fn-4",
+      "severity": "warn",
+      "message": "Note fn-4 has text but no visible manuscript marker.",
+      "evidence": {
+        "noteId": "fn-4"
+      },
+      "action": "Either insert the marker in the manuscript or exclude the unused note from export."
+    },
+    {
+      "id": "duplicate-marker:fn-2",
+      "severity": "hold",
+      "message": "Footnote marker fn-2 appears in multiple manuscript sections.",
+      "evidence": {
+        "marker": "fn-2",
+        "sectionIds": [
+          "methods",
+          "results"
+        ]
+      },
+      "action": "Assign unique note markers or confirm that repeated references use an explicit shared-note alias."
+    },
+    {
+      "id": "endnote-order:fn-2",
+      "severity": "hold",
+      "message": "Endnote fn-2 is exported as 3, but first appears at position 2.",
+      "evidence": {
+        "id": "fn-2",
+        "expectedOrder": 2,
+        "exportedOrder": 3
+      },
+      "action": "Rebuild the endnote list from first marker appearance before journal export."
+    },
+    {
+      "id": "endnote-order:fn-3",
+      "severity": "hold",
+      "message": "Endnote fn-3 is exported as 2, but first appears at position 3.",
+      "evidence": {
+        "id": "fn-3",
+        "expectedOrder": 3,
+        "exportedOrder": 2
+      },
+      "action": "Rebuild the endnote list from first marker appearance before journal export."
+    }
+  ]
+}

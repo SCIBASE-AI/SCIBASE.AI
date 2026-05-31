@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-label="Footnote export guard summary">
+<rect width="720" height="220" fill="#f8fafc"/>
+<rect x="28" y="28" width="664" height="164" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="52" y="72" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#111827">Footnote Export Guard</text>
+<text x="52" y="112" font-family="Arial, sans-serif" font-size="18" fill="#b42318">Decision: block export</text>
+<text x="52" y="146" font-family="Arial, sans-serif" font-size="16" fill="#374151">Blockers: 3 | Holds: 4 | Warnings: 1</text>
+<text x="52" y="174" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Workspace editor-room-ms-042 checked 2026-05-30T19:30:00.000Z</text>
+</svg>

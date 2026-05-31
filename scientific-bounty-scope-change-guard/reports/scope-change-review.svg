@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<rect width="960" height="540" fill="#ffffff"/>
+<rect x="0" y="0" width="960" height="112" fill="#0f172a"/>
+<text x="48" y="58" font-size="30" font-family="Arial" font-weight="700" fill="#f8fafc">Scientific bounty scope-change guard</text>
+<text x="48" y="88" font-size="16" font-family="Arial" fill="#cbd5e1">Overall decision: HOLD | Requests: 3</text>
+<text x="48" y="142" font-size="18" font-family="Arial" font-weight="700" fill="#334155">Reviewer queue</text>
+<rect x="48" y="140" width="864" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/><text x="68" y="166" font-size="18" font-family="Arial" fill="#0f172a">scope-change-unsafe-rubric-and-prize</text><text x="270" y="166" font-size="18" font-family="Arial" font-weight="700" fill="#b91c1c">HOLD</text><text x="420" y="166" font-size="15" font-family="Arial" fill="#475569">Pause scoring for affected challenge</text><rect x="48" y="198" width="864" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/><text x="68" y="224" font-size="18" font-family="Arial" fill="#0f172a">scope-change-safe-copy-clarification</text><text x="270" y="224" font-size="18" font-family="Arial" font-weight="700" fill="#15803d">ALLOW</text><text x="420" y="224" font-size="15" font-family="Arial" fill="#475569">Record audit digest</text><rect x="48" y="256" width="864" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/><text x="68" y="282" font-size="18" font-family="Arial" fill="#0f172a">scope-change-reviewed-data-room-update</text><text x="270" y="282" font-size="18" font-family="Arial" font-weight="700" fill="#a16207">REVIEW</text><text x="420" y="282" font-size="15" font-family="Arial" fill="#475569">Pause scoring for affected challenge</text>
+<text x="48" y="502" font-size="14" font-family="Arial" fill="#64748b">Synthetic data only. Blocks goalpost-moving changes before scoring or payout.</text>
+</svg>

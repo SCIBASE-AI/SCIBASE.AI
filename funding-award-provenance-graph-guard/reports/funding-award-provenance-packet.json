@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-05-31T12:55:00.000Z",
+  "status": "hold",
+  "summary": {
+    "records": 5,
+    "release": 1,
+    "review": 1,
+    "hold": 3,
+    "findings": 7
+  },
+  "decisions": [
+    {
+      "recordId": "funding-clean-nih",
+      "projectId": "project-neuro-graph",
+      "awardId": "R01-NS-2048",
+      "resolvedFunderId": "funder-nih",
+      "decision": "release",
+      "graphAction": "publish funding graph edges",
+      "findings": []
+    },
+    {
+      "recordId": "funding-coi-review",
+      "projectId": "project-ai-reuse",
+      "awardId": "HE-REUSE-8842",
+      "resolvedFunderId": "funder-eu-horizon",
+      "decision": "review",
+      "graphAction": "route to curator review",
+      "findings": [
+        {
+          "code": "COI_RECOMMENDATION_NEEDS_REVIEW",
+          "severity": "review",
+          "message": "funding-coi-review recommendation edge edge-coi-1 has an unresolved conflict-of-interest flag."
+        }
+      ]
+    },
+    {
+      "recordId": "funding-missing-award",
+      "projectId": "project-cell-line",
+      "awardId": null,
+      "resolvedFunderId": "funder-jsps",
+      "decision": "hold",
+      "graphAction": "block graph publication",
+      "findings": [
+        {
+          "code": "MISSING_AWARD_ID",
+          "severity": "hold",
+          "message": "funding-missing-award is missing a grant or award identifier for graph publication."
+        },
+        {
+          "code": "MISSING_REQUIRED_ACKNOWLEDGEMENT",
+          "severity": "hold",
+          "message": "funding-missing-award lacks the required funding acknowledgement phrase."
+        }
+      ]
+    },
+    {
+      "recordId": "funding-doi-mismatch",
+      "projectId": "project-climate-model",
+      "awardId": "R01-CLIMATE-12",
+      "resolvedFunderId": "funder-nih",
+      "decision": "hold",
+      "graphAction": "block graph publication",
+      "findings": [
+        {
+          "code": "DOI_PROJECT_MISMATCH",
+          "severity": "hold",
+          "message": "funding-doi-mismatch links 10.5555/climate.model.2026 to project-other, not project-climate-model."
+        },
+        {
+          "code": "AWARD_WINDOW_MISMATCH",
+          "severity": "review",
+          "message": "funding-doi-mismatch output 10.5555/climate.model.2026 falls outside the award active window."
+        }
+      ]
+    },
+    {
+      "recordId": "funding-private-path",
+      "projectId": "project-private-consortium",
+      "awardId": "CONSORT-77",
+      "resolvedFunderId": "funder-private-consortium",
+      "decision": "hold",
+      "graphAction": "block graph publication",
+      "findings": [
+        {
+          "code": "UNKNOWN_FUNDER_ALIAS",
+          "severity": "hold",
+          "message": "funding-private-path uses an unrecognized funder name: Unlisted Consortium Fund."
+        },
+        {
+          "code": "PRIVATE_FUNDER_PATH_EXPOSED",
+          "severity": "hold",
+          "message": "funding-private-path exposes a private funding path in recommendation edge edge-private-1."
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

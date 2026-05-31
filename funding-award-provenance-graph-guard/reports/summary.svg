@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#101827"/>
+  <text x="56" y="76" fill="#ffffff" font-family="Arial" font-size="34" font-weight="700">Funding award provenance graph guard</text>
+  <text x="56" y="126" fill="#9cc9ff" font-family="Arial" font-size="24">Status: HOLD</text>
+  <rect x="56" y="176" width="190" height="118" rx="8" fill="#1f3442"/>
+  <text x="86" y="226" fill="#ffffff" font-family="Arial" font-size="42">5</text>
+  <text x="86" y="264" fill="#c7d7df" font-family="Arial" font-size="19">records checked</text>
+  <rect x="276" y="176" width="190" height="118" rx="8" fill="#18382f"/>
+  <text x="306" y="226" fill="#ffffff" font-family="Arial" font-size="42">1</text>
+  <text x="306" y="264" fill="#bde4d7" font-family="Arial" font-size="19">release</text>
+  <rect x="496" y="176" width="190" height="118" rx="8" fill="#3c3218"/>
+  <text x="526" y="226" fill="#ffffff" font-family="Arial" font-size="42">1</text>
+  <text x="526" y="264" fill="#f2dc92" font-family="Arial" font-size="19">review</text>
+  <rect x="716" y="176" width="190" height="118" rx="8" fill="#3d1f2b"/>
+  <text x="746" y="226" fill="#ffffff" font-family="Arial" font-size="42">3</text>
+  <text x="746" y="264" fill="#f0b7c0" font-family="Arial" font-size="19">hold</text>
+  <text x="56" y="366" fill="#dbe5ea" font-family="Arial" font-size="21">Validates funder aliases, award IDs, acknowledgements, DOI/project links, dates, COI flags, and private funding paths.</text>
+  <text x="56" y="414" fill="#dbe5ea" font-family="Arial" font-size="21">Graph action: publish, curator review, or block before recommendation release.</text>
+</svg>

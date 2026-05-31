@@ -1,0 +1,114 @@
+{
+  "documentId": "problem-manuscript",
+  "auditedAt": "2026-05-31T21:30:00Z",
+  "decision": "hold-export",
+  "summary": {
+    "high": 6,
+    "medium": 1,
+    "low": 0,
+    "total": 7
+  },
+  "issues": [
+    {
+      "code": "BROKEN_TABLE_FORMULA_REFERENCE",
+      "severity": "high",
+      "sectionId": "locked-results",
+      "tableId": "collaborative-derived-values",
+      "cell": "D3",
+      "message": "Formula in D3 references missing cells: C4.",
+      "evidence": {
+        "formula": "=C4/B3",
+        "missingRefs": [
+          "C4"
+        ]
+      }
+    },
+    {
+      "code": "LOCKED_SECTION_FORMULA_MUTATION",
+      "severity": "high",
+      "sectionId": "locked-results",
+      "tableId": "collaborative-derived-values",
+      "cell": "D2",
+      "message": "Formula-affecting edit formula-change occurred after section lock.",
+      "evidence": {
+        "edit": {
+          "type": "formula-change",
+          "cell": "D2",
+          "actor": "coauthor-b",
+          "at": "2026-05-30T11:00:00Z",
+          "formula": "=C2/B2"
+        },
+        "lockedAt": "2026-05-30T10:00:00Z",
+        "lockedBy": "lead-author"
+      }
+    },
+    {
+      "code": "NOTEBOOK_OUTPUT_DRIFT",
+      "severity": "high",
+      "sectionId": "locked-results",
+      "tableId": "collaborative-derived-values",
+      "cell": null,
+      "message": "Table Collaborative derived endpoint rates is sourced from notebook cell nb-cell-9 whose output hash changed after review.",
+      "evidence": {
+        "reviewedOutputHash": "sha256:old",
+        "currentOutputHash": "sha256:new"
+      }
+    },
+    {
+      "code": "PRIVATE_NOTE_TABLE_EXPORT_LEAK",
+      "severity": "high",
+      "sectionId": "locked-results",
+      "tableId": "collaborative-derived-values",
+      "cell": "A4",
+      "message": "Exported table cell A4 contains private or reviewer-only context.",
+      "evidence": {
+        "privateNoteCount": 1,
+        "matchedText": "PRIVATE: check anomaly before sharing"
+      }
+    },
+    {
+      "code": "STALE_TABLE_DERIVED_VALUE",
+      "severity": "high",
+      "sectionId": "locked-results",
+      "tableId": "collaborative-derived-values",
+      "cell": "D2",
+      "message": "Formula cell D2 is stale: expected 0.25, exported 0.29.",
+      "evidence": {
+        "formula": "=C2/B2",
+        "actual": 0.29,
+        "expected": 0.25,
+        "delta": 0.03999999999999998
+      }
+    },
+    {
+      "code": "UNREVIEWED_NOTEBOOK_OUTPUT",
+      "severity": "high",
+      "sectionId": "locked-results",
+      "tableId": "collaborative-derived-values",
+      "cell": null,
+      "message": "Table Collaborative derived endpoint rates uses notebook output generated after the latest table review.",
+      "evidence": {
+        "reviewedAt": "2026-05-30T10:00:00Z",
+        "outputGeneratedAt": "2026-05-30T10:30:00Z"
+      }
+    },
+    {
+      "code": "HIDDEN_CELL_EXPORT_LEAK",
+      "severity": "medium",
+      "sectionId": "locked-results",
+      "tableId": "collaborative-derived-values",
+      "cell": "E2",
+      "message": "Hidden table cell E2 is still marked for export.",
+      "evidence": {
+        "value": "seed"
+      }
+    }
+  ],
+  "remediation": [
+    "Repair formula references or bind them to explicit table rows before accepting the collaborative change.",
+    "Route formula-affecting edits in locked sections through reviewer approval or unlock the section intentionally.",
+    "Refresh notebook-derived table outputs and require a new review hash before release.",
+    "Strip private notes and hidden helper cells from the manuscript table export.",
+    "Recompute stale derived table cells from the latest referenced inputs before export."
+  ]
+}

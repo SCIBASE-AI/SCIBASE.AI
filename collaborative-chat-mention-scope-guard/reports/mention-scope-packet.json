@@ -1,0 +1,97 @@
+{
+  "workspaceId": "editor-room-chat-118",
+  "decision": "block-mention-fanout",
+  "summary": {
+    "threads": 2,
+    "blockers": 2,
+    "holds": 6,
+    "findings": 8
+  },
+  "findings": [
+    {
+      "severity": "hold",
+      "id": "section-scope:thread-1:u-reviewer",
+      "message": "Reviewer B is mentioned outside their allowed section scope.",
+      "action": "Invite the collaborator to the section or remove the mention.",
+      "evidence": {
+        "threadId": "thread-1",
+        "sectionId": "methods",
+        "mentionId": "u-reviewer"
+      }
+    },
+    {
+      "severity": "block",
+      "id": "blinded-reviewer-leak:thread-1:u-reviewer",
+      "message": "Author-visible thread thread-1 would reveal blinded reviewer Reviewer B.",
+      "action": "Redact the reviewer mention or move the message to a reviewer-only thread.",
+      "evidence": {
+        "threadId": "thread-1",
+        "mentionId": "u-reviewer"
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "notebook-cell-scope:thread-1:u-reviewer",
+      "message": "Reviewer B is mentioned on notebook cell cell-qc-4 without cell access.",
+      "action": "Grant cell access or move the mention to a document-level thread.",
+      "evidence": {
+        "threadId": "thread-1",
+        "notebookCellId": "cell-qc-4",
+        "mentionId": "u-reviewer"
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "section-scope:thread-1:u-contractor",
+      "message": "External Analyst is mentioned outside their allowed section scope.",
+      "action": "Invite the collaborator to the section or remove the mention.",
+      "evidence": {
+        "threadId": "thread-1",
+        "sectionId": "methods",
+        "mentionId": "u-contractor"
+      }
+    },
+    {
+      "severity": "block",
+      "id": "external-restricted-section:thread-1:u-contractor",
+      "message": "External collaborator External Analyst is mentioned in restricted section methods.",
+      "action": "Remove the mention or approve restricted-section access before fanout.",
+      "evidence": {
+        "threadId": "thread-1",
+        "sectionId": "methods",
+        "mentionId": "u-contractor"
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "notebook-cell-scope:thread-1:u-contractor",
+      "message": "External Analyst is mentioned on notebook cell cell-qc-4 without cell access.",
+      "action": "Grant cell access or move the mention to a document-level thread.",
+      "evidence": {
+        "threadId": "thread-1",
+        "notebookCellId": "cell-qc-4",
+        "mentionId": "u-contractor"
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "locked-section-mention:thread-1",
+      "message": "Thread thread-1 mentions collaborators inside locked section methods without owner approval.",
+      "action": "Ask the section owner to approve the mention fanout or defer it until unlock.",
+      "evidence": {
+        "threadId": "thread-1",
+        "sectionId": "methods"
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "private-title-preview:thread-1",
+      "message": "Thread thread-1 fanout preview includes a private section title.",
+      "action": "Redact the section title in the mention preview before alerting collaborators.",
+      "evidence": {
+        "threadId": "thread-1",
+        "sectionId": "methods"
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-05-31T05:59:18.640Z",
+  "overallDecision": "hold",
+  "reviews": [
+    {
+      "projectId": "proj-public-genomics",
+      "title": "Public Genomics Replication Workspace",
+      "decision": "hold",
+      "summary": {
+        "high": 4,
+        "medium": 4,
+        "low": 0,
+        "total": 8
+      },
+      "findings": [
+        {
+          "severity": "high",
+          "code": "stale_notebook_code",
+          "message": "notebooks/analysis.ipynb was not executed against the current code artifact.",
+          "evidence": {
+            "notebookId": "nb-analysis",
+            "codeArtifactId": "code-stats",
+            "expected": "sha256:code-current",
+            "recorded": "sha256:code-old"
+          }
+        },
+        {
+          "severity": "high",
+          "code": "stale_notebook_dataset",
+          "message": "notebooks/analysis.ipynb was not executed against the current dataset checksum.",
+          "evidence": {
+            "notebookId": "nb-analysis",
+            "datasetArtifactId": "data-participant",
+            "expected": "sha256:data-current",
+            "recorded": "sha256:data-old"
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "environment_not_pinned",
+          "message": "Reproducibility manifest does not pin the execution environment.",
+          "evidence": {}
+        },
+        {
+          "severity": "medium",
+          "code": "missing_doi",
+          "message": "Public publication target is missing DOI or pre-registration identifier.",
+          "evidence": {}
+        },
+        {
+          "severity": "high",
+          "code": "citation_contributor_not_attribution_ready",
+          "message": "Ben Malik lacks ORCID-backed attribution consent.",
+          "evidence": {
+            "contributorId": "u-ben",
+            "orcid": null,
+            "attributionConsent": false
+          }
+        },
+        {
+          "severity": "high",
+          "code": "restricted_dataset_public_reference",
+          "message": "manuscripts/main.md references restricted data without a public disclosure note.",
+          "evidence": {
+            "manuscriptId": "ms-main",
+            "artifactId": "data-participant",
+            "path": "data/participant-derived.csv"
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "discussion_signoff_missing",
+          "message": "manuscripts/main.md is waiting on discussion signoff evidence.",
+          "evidence": {
+            "artifactId": "ms-main",
+            "decisionId": "decision-release",
+            "missing": [
+              "u-ben"
+            ]
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "discussion_signoff_missing",
+          "message": "notebooks/analysis.ipynb is waiting on discussion signoff evidence.",
+          "evidence": {
+            "artifactId": "nb-analysis",
+            "decisionId": "decision-release",
+            "missing": [
+              "u-ben"
+            ]
+          }
+        }
+      ],
+      "requirementMap": {
+        "projectSpaces": "documents, code, datasets, discussion decisions, metadata, and citations are represented as artifacts",
+        "authoring": "Markdown/LaTeX/Jupyter-native provenance is checked with source checksums and notebook execution manifests",
+        "attribution": "ORCID-ready collaborator attribution and funding/institution metadata are validated",
+        "accessControl": "restricted dataset references are blocked from accidental public manuscript release",
+        "auditLog": "decision, artifact, and manifest digests create reviewer-ready audit evidence"
+      },
+      "auditDigest": "669c98e63184c219"
+    },
+    {
+      "projectId": "proj-field-notes",
+      "title": "Field Notes Workspace Handoff",
+      "decision": "review",
+      "summary": {
+        "high": 0,
+        "medium": 3,
+        "low": 0,
+        "total": 3
+      },
+      "findings": [
+        {
+          "severity": "medium",
+          "code": "artifact_missing_source_checksum",
+          "message": "manuscripts/field-notes.tex is missing source provenance checksum.",
+          "evidence": {
+            "artifactId": "ms-field",
+            "type": "manuscript"
+          }
+        },
+        {
+          "severity": "medium",
+          "code": "missing_license",
+          "message": "Citation metadata is missing a license.",
+          "evidence": {}
+        },
+        {
+          "severity": "medium",
+          "code": "missing_funding_sources",
+          "message": "Project citation metadata has no funding source acknowledgement.",
+          "evidence": {}
+        }
+      ],
+      "requirementMap": {
+        "projectSpaces": "documents, code, datasets, discussion decisions, metadata, and citations are represented as artifacts",
+        "authoring": "Markdown/LaTeX/Jupyter-native provenance is checked with source checksums and notebook execution manifests",
+        "attribution": "ORCID-ready collaborator attribution and funding/institution metadata are validated",
+        "accessControl": "restricted dataset references are blocked from accidental public manuscript release",
+        "auditLog": "decision, artifact, and manifest digests create reviewer-ready audit evidence"
+      },
+      "auditDigest": "c103dbf3b16cefe0"
+    },
+    {
+      "projectId": "proj-clean-room",
+      "title": "Clean Room Notebook Release",
+      "decision": "allow",
+      "summary": {
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total": 0
+      },
+      "findings": [],
+      "requirementMap": {
+        "projectSpaces": "documents, code, datasets, discussion decisions, metadata, and citations are represented as artifacts",
+        "authoring": "Markdown/LaTeX/Jupyter-native provenance is checked with source checksums and notebook execution manifests",
+        "attribution": "ORCID-ready collaborator attribution and funding/institution metadata are validated",
+        "accessControl": "restricted dataset references are blocked from accidental public manuscript release",
+        "auditLog": "decision, artifact, and manifest digests create reviewer-ready audit evidence"
+      },
+      "auditDigest": "f2e81888aa407468"
+    }
+  ],
+  "packetDigest": "1cd3e116486fdff2"
+}

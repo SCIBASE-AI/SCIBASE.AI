@@ -1,0 +1,127 @@
+{
+  "status": "hold",
+  "checkedAt": "2026-05-31T09:15:00.000Z",
+  "policy": {
+    "defaultMaxIncreaseBps": 800,
+    "minimumNoticeDays": 45,
+    "maxCpiStalenessDays": 120,
+    "maxUnsupportedIncreaseBps": 0
+  },
+  "summary": {
+    "renewals": 5,
+    "release": 1,
+    "review": 1,
+    "hold": 3,
+    "currentAnnualCents": 5080000,
+    "proposedAnnualCents": 5406000
+  },
+  "decisions": [
+    {
+      "renewalId": "ren-clean-cpi",
+      "customer": "Northlake Genomics Lab",
+      "segment": "institutional",
+      "currentAnnualCents": 1200000,
+      "proposedAnnualCents": 1260000,
+      "increaseBps": 500,
+      "contractCapBps": 600,
+      "decision": "release",
+      "findings": [],
+      "remediation": [
+        "Release renewal uplift to invoice staging."
+      ]
+    },
+    {
+      "renewalId": "ren-over-cap",
+      "customer": "East Harbor Quant Lab",
+      "segment": "institutional",
+      "currentAnnualCents": 900000,
+      "proposedAnnualCents": 1017000,
+      "increaseBps": 1300,
+      "contractCapBps": 800,
+      "decision": "hold",
+      "findings": [
+        {
+          "code": "CONTRACT_CAP_EXCEEDED",
+          "severity": "hold",
+          "message": "ren-over-cap proposes 1300 bps uplift over the 800 bps contract cap."
+        },
+        {
+          "code": "UPLIFT_ABOVE_CPI_AND_CAP",
+          "severity": "hold",
+          "message": "ren-over-cap uplift exceeds both CPI evidence and contract cap."
+        }
+      ],
+      "remediation": [
+        "Reduce uplift to contract cap or collect signed exception approval.",
+        "Resolve uplift evidence and rerun the escalation cap guard."
+      ]
+    },
+    {
+      "renewalId": "ren-stale-cpi",
+      "customer": "Alpine Neuroimaging Institute",
+      "segment": "institutional",
+      "currentAnnualCents": 460000,
+      "proposedAnnualCents": 483000,
+      "increaseBps": 500,
+      "contractCapBps": 700,
+      "decision": "review",
+      "findings": [
+        {
+          "code": "STALE_CPI_EVIDENCE",
+          "severity": "review",
+          "message": "ren-stale-cpi CPI evidence is 152 days old."
+        }
+      ],
+      "remediation": [
+        "Refresh CPI/source evidence before releasing uplift."
+      ]
+    },
+    {
+      "renewalId": "ren-late-notice",
+      "customer": "Cedar Clinical Trials Office",
+      "segment": "institutional",
+      "currentAnnualCents": 320000,
+      "proposedAnnualCents": 336000,
+      "increaseBps": 500,
+      "contractCapBps": 600,
+      "decision": "hold",
+      "findings": [
+        {
+          "code": "NOTICE_WINDOW_SHORT",
+          "severity": "hold",
+          "message": "ren-late-notice has 31 notice days, below required 45."
+        }
+      ],
+      "remediation": [
+        "Delay renewal invoice or restart customer notice window."
+      ]
+    },
+    {
+      "renewalId": "ren-price-locked",
+      "customer": "Riverbend Consortium",
+      "segment": "consortium",
+      "currentAnnualCents": 2200000,
+      "proposedAnnualCents": 2310000,
+      "increaseBps": 500,
+      "contractCapBps": 500,
+      "decision": "hold",
+      "findings": [
+        {
+          "code": "PRICE_LOCK_ACTIVE",
+          "severity": "hold",
+          "message": "ren-price-locked proposes an uplift while the contract price lock is still active."
+        },
+        {
+          "code": "EXCLUDED_ACCOUNT_APPROVAL_REVIEW",
+          "severity": "review",
+          "message": "ren-price-locked has an exception approval that finance should verify before release."
+        }
+      ],
+      "remediation": [
+        "Keep current price until lock expires or attach signed amendment.",
+        "Verify exception approval scope before invoice release."
+      ]
+    }
+  ],
+  "warnings": []
+}

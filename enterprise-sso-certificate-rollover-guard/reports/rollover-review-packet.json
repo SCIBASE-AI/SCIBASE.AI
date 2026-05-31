@@ -1,0 +1,296 @@
+{
+  "summary": {
+    "generatedAt": "2026-06-01T00:00:00.000Z",
+    "tenantCount": 4,
+    "findingCount": 19,
+    "criticalCount": 8,
+    "warningCount": 11,
+    "clearCount": 1,
+    "rotateCount": 0,
+    "holdCount": 2,
+    "blockCount": 1
+  },
+  "releaseDecision": "block_metadata_release",
+  "tenants": [
+    {
+      "tenantId": "tenant-tokyo-molecular",
+      "tenantName": "Tokyo Molecular Imaging Lab",
+      "status": "clear",
+      "primaryCertificateId": "tokyo-2026",
+      "stagedCertificateId": "tokyo-2027",
+      "findingCount": 0,
+      "criticalCount": 0,
+      "warningCount": 0
+    },
+    {
+      "tenantId": "tenant-kyoto-research",
+      "tenantName": "Kyoto Research Office",
+      "status": "hold_rollover",
+      "primaryCertificateId": "kyoto-2026",
+      "stagedCertificateId": "kyoto-2027",
+      "findingCount": 5,
+      "criticalCount": 1,
+      "warningCount": 4
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "status": "block_metadata_release",
+      "primaryCertificateId": "materials-legacy",
+      "stagedCertificateId": null,
+      "findingCount": 10,
+      "criticalCount": 5,
+      "warningCount": 5
+    },
+    {
+      "tenantId": "tenant-oceanic-biocore",
+      "tenantName": "Oceanic BioCore Institute",
+      "status": "hold_rollover",
+      "primaryCertificateId": "oceanic-2026",
+      "stagedCertificateId": "oceanic-2027",
+      "findingCount": 4,
+      "criticalCount": 2,
+      "warningCount": 2
+    }
+  ],
+  "findings": [
+    {
+      "tenantId": "tenant-kyoto-research",
+      "tenantName": "Kyoto Research Office",
+      "severity": "critical",
+      "code": "primary_certificate_expires_during_freeze",
+      "message": "The primary signing certificate expires inside the hard rollover freeze window.",
+      "evidence": {
+        "certId": "kyoto-2026",
+        "notAfter": "2026-06-13T00:00:00.000Z",
+        "expiresInDays": 12
+      },
+      "remediation": "Stage and test replacement metadata immediately, then hold release until overlap and fallback checks pass."
+    },
+    {
+      "tenantId": "tenant-kyoto-research",
+      "tenantName": "Kyoto Research Office",
+      "severity": "warning",
+      "code": "short_lived_staged_certificate",
+      "message": "The staged certificate expires too soon after the current primary certificate.",
+      "evidence": {
+        "primaryCertId": "kyoto-2026",
+        "stagedCertId": "kyoto-2027",
+        "stagedExpiresAfterPrimaryDays": 341
+      },
+      "remediation": "Use replacement signing material with enough future validity to avoid a second near-term rollover."
+    },
+    {
+      "tenantId": "tenant-kyoto-research",
+      "tenantName": "Kyoto Research Office",
+      "severity": "warning",
+      "code": "stale_fallback_login_test",
+      "message": "Emergency fallback-login evidence is stale for this SSO rollover.",
+      "evidence": {
+        "fallbackLoginTestedAt": "2026-05-01T00:00:00.000Z",
+        "fallbackAgeDays": 31
+      },
+      "remediation": "Retest emergency admin access before changing identity-provider metadata."
+    },
+    {
+      "tenantId": "tenant-kyoto-research",
+      "tenantName": "Kyoto Research Office",
+      "severity": "warning",
+      "code": "stale_metadata_fetch_evidence",
+      "message": "IdP metadata fetch evidence is older than the freshness policy.",
+      "evidence": {
+        "lastFetchedAt": "2026-05-20T00:00:00.000Z",
+        "metadataAgeDays": 12
+      },
+      "remediation": "Refresh IdP metadata and rerun the guard before release."
+    },
+    {
+      "tenantId": "tenant-kyoto-research",
+      "tenantName": "Kyoto Research Office",
+      "severity": "warning",
+      "code": "connected_system_stale_refresh",
+      "message": "A connected enterprise system has stale metadata refresh evidence.",
+      "evidence": {
+        "system": "Invenio institutional archive",
+        "lastMetadataRefreshAt": "2026-05-15T00:00:00.000Z",
+        "refreshAgeDays": 17
+      },
+      "remediation": "Refresh metadata for the connected system before the rollover release window."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "critical",
+      "code": "primary_certificate_expires_during_freeze",
+      "message": "The primary signing certificate expires inside the hard rollover freeze window.",
+      "evidence": {
+        "certId": "materials-legacy",
+        "notAfter": "2026-06-05T00:00:00.000Z",
+        "expiresInDays": 4
+      },
+      "remediation": "Stage and test replacement metadata immediately, then hold release until overlap and fallback checks pass."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "critical",
+      "code": "unsafe_signing_algorithm",
+      "message": "The signing certificate metadata uses an unsupported or weak algorithm.",
+      "evidence": {
+        "certId": "materials-legacy",
+        "algorithm": "RSA-SHA1"
+      },
+      "remediation": "Use RSA-SHA256 or stronger, or ECDSA-SHA256 or stronger, before release."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "critical",
+      "code": "weak_rsa_key_size",
+      "message": "The signing certificate has an RSA key below the minimum enterprise size.",
+      "evidence": {
+        "certId": "materials-legacy",
+        "keySize": 1024
+      },
+      "remediation": "Regenerate signing material with a 2048-bit or stronger RSA key."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "warning",
+      "code": "unverifiable_certificate_fingerprint",
+      "message": "The certificate fingerprint is not recorded as a SHA-256 digest.",
+      "evidence": {
+        "certId": "materials-legacy",
+        "fingerprint": "sha1:legacy-materials-fingerprint"
+      },
+      "remediation": "Store a SHA-256 fingerprint so reviewers can compare metadata without handling raw certificates."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "warning",
+      "code": "missing_rollover_owner_or_ticket",
+      "message": "The rollover plan is missing an owner or release ticket.",
+      "evidence": {
+        "owner": null,
+        "ticketId": null
+      },
+      "remediation": "Assign an accountable enterprise admin and reference the release ticket before metadata changes."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "critical",
+      "code": "missing_staged_rollover_certificate",
+      "message": "The tenant is in the rotation window but has no staged replacement certificate.",
+      "evidence": {
+        "primaryCertId": "materials-legacy",
+        "expiresInDays": 4,
+        "notifyBeforeDays": 60
+      },
+      "remediation": "Stage a replacement signing certificate and publish dual-cert metadata for the overlap period."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "warning",
+      "code": "missing_fallback_login_test",
+      "message": "No emergency fallback-login test is attached to the rollover plan.",
+      "evidence": {
+        "rolloverTicket": null
+      },
+      "remediation": "Attach a recent break-glass login test before release."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "warning",
+      "code": "stale_metadata_fetch_evidence",
+      "message": "IdP metadata fetch evidence is older than the freshness policy.",
+      "evidence": {
+        "lastFetchedAt": "2026-04-24T00:00:00.000Z",
+        "metadataAgeDays": 38
+      },
+      "remediation": "Refresh IdP metadata and rerun the guard before release."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "critical",
+      "code": "entity_id_drift",
+      "message": "The IdP entity ID differs from the expected enterprise SSO entity ID.",
+      "evidence": {
+        "metadataEntityId": "https://idp.materials-consortium.example/legacy",
+        "expectedEntityId": "https://idp.materials-consortium.example/saml"
+      },
+      "remediation": "Pause release and reconcile the IdP metadata source with the enterprise SSO configuration."
+    },
+    {
+      "tenantId": "tenant-materials-consortium",
+      "tenantName": "National Materials Consortium",
+      "severity": "warning",
+      "code": "connected_system_stale_refresh",
+      "message": "A connected enterprise system has stale metadata refresh evidence.",
+      "evidence": {
+        "system": "Lab inventory bridge",
+        "lastMetadataRefreshAt": "2026-04-30T00:00:00.000Z",
+        "refreshAgeDays": 32
+      },
+      "remediation": "Refresh metadata for the connected system before the rollover release window."
+    },
+    {
+      "tenantId": "tenant-oceanic-biocore",
+      "tenantName": "Oceanic BioCore Institute",
+      "severity": "warning",
+      "code": "primary_certificate_rotation_due",
+      "message": "The primary signing certificate is inside the recommended rotation notice window.",
+      "evidence": {
+        "certId": "oceanic-2026",
+        "notAfter": "2026-07-01T00:00:00.000Z",
+        "expiresInDays": 30
+      },
+      "remediation": "Notify admins and complete the staged rollover before the hard freeze window begins."
+    },
+    {
+      "tenantId": "tenant-oceanic-biocore",
+      "tenantName": "Oceanic BioCore Institute",
+      "severity": "critical",
+      "code": "insufficient_certificate_overlap",
+      "message": "The staged certificate does not overlap the primary certificate long enough.",
+      "evidence": {
+        "primaryCertId": "oceanic-2026",
+        "stagedCertId": "oceanic-2027",
+        "overlapRequiredDays": 21,
+        "stagedActiveBeforeExpiryDays": 6
+      },
+      "remediation": "Publish staged metadata early enough to provide the required overlap before the primary certificate expires."
+    },
+    {
+      "tenantId": "tenant-oceanic-biocore",
+      "tenantName": "Oceanic BioCore Institute",
+      "severity": "warning",
+      "code": "short_lived_staged_certificate",
+      "message": "The staged certificate expires too soon after the current primary certificate.",
+      "evidence": {
+        "primaryCertId": "oceanic-2026",
+        "stagedCertId": "oceanic-2027",
+        "stagedExpiresAfterPrimaryDays": 359
+      },
+      "remediation": "Use replacement signing material with enough future validity to avoid a second near-term rollover."
+    },
+    {
+      "tenantId": "tenant-oceanic-biocore",
+      "tenantName": "Oceanic BioCore Institute",
+      "severity": "critical",
+      "code": "acs_url_drift",
+      "message": "The IdP ACS URL differs from the expected enterprise SSO ACS URL.",
+      "evidence": {
+        "metadataAcsUrl": "https://scibase.example/saml/acs/oceanic-biocore-v2",
+        "expectedAcsUrl": "https://scibase.example/saml/acs/oceanic-biocore"
+      },
+      "remediation": "Pause release until ACS URL drift is resolved and tested with a non-production login."
+    }
+  ],
+  "auditDigest": "ccab61ff4ae3d58c244abd793cdafa209c0dfd6a6ae9e06bb01a629f43bc17d2"
+}

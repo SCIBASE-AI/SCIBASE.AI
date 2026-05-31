@@ -1,0 +1,85 @@
+{
+  "documentId": "manuscript-editor-309",
+  "fromMode": "wysiwyg",
+  "toMode": "markdown",
+  "decision": "block-mode-toggle-edit",
+  "summary": {
+    "blocks": 2,
+    "blockers": 3,
+    "holds": 3,
+    "findings": 6
+  },
+  "findings": [
+    {
+      "severity": "block",
+      "id": "equation-loss:methods-p2",
+      "message": "Block methods-p2 lost equation tokens during mode toggle.",
+      "action": "Keep the pre-toggle equation tokens or require manual equation review.",
+      "evidence": {
+        "blockId": "methods-p2",
+        "lostEquations": [
+          "eq-growth-rate"
+        ]
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "citation-loss:methods-p2",
+      "message": "Block methods-p2 lost citation keys during mode toggle.",
+      "action": "Rebind citation keys before accepting the converted edit.",
+      "evidence": {
+        "blockId": "methods-p2",
+        "lostCitations": [
+          "patel2025model"
+        ]
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "notebook-link-loss:methods-p2",
+      "message": "Block methods-p2 lost notebook-cell links during mode toggle.",
+      "action": "Restore notebook-cell anchors before shared edit acceptance.",
+      "evidence": {
+        "blockId": "methods-p2",
+        "lostNotebookLinks": [
+          "cell-fit-12"
+        ]
+      }
+    },
+    {
+      "severity": "hold",
+      "id": "comment-anchor-loss:methods-p2",
+      "message": "Block methods-p2 lost comment anchors during mode toggle.",
+      "action": "Re-anchor comments or defer accepting the converted block.",
+      "evidence": {
+        "blockId": "methods-p2",
+        "lostCommentAnchors": [
+          "cmt-44"
+        ]
+      }
+    },
+    {
+      "severity": "block",
+      "id": "suggestion-loss:methods-p2",
+      "message": "Block methods-p2 lost tracked suggestions during mode toggle.",
+      "action": "Reject the conversion or preserve suggestion provenance.",
+      "evidence": {
+        "blockId": "methods-p2",
+        "lostSuggestions": [
+          "sug-91"
+        ]
+      }
+    },
+    {
+      "severity": "block",
+      "id": "locked-block-mutation:methods-p2",
+      "message": "Locked block methods-p2 changed during mode toggle without owner approval.",
+      "action": "Require lock-owner approval before accepting the converted edit.",
+      "evidence": {
+        "blockId": "methods-p2",
+        "beforeHash": "hash-before-methods",
+        "afterHash": "hash-after-methods"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "manuscript_id": "MS-EXEC-SUMMARY-2026",
+  "evidence": [
+    {
+      "id": "EV-RESULT-001",
+      "type": "result",
+      "section": "Results",
+      "text": "The screened model reduced annotation time from 42 minutes to 31 minutes across 84 benchmark manuscripts.",
+      "metrics": {
+        "baseline_minutes": 42,
+        "intervention_minutes": 31,
+        "n": 84
+      }
+    },
+    {
+      "id": "EV-FIG-002",
+      "type": "figure",
+      "section": "Figure 2",
+      "text": "Figure 2 shows lower reviewer disagreement for biomedical manuscripts after the checklist prompt was enabled."
+    },
+    {
+      "id": "EV-METHOD-003",
+      "type": "method",
+      "section": "Methods",
+      "text": "Evaluation used a retrospective corpus and did not include prospective clinical deployment."
+    },
+    {
+      "id": "EV-LIMIT-004",
+      "type": "limitation",
+      "section": "Limitations",
+      "text": "The study was conducted in English-language manuscripts only."
+    }
+  ],
+  "summary_bullets": [
+    {
+      "id": "SUM-001",
+      "mode": "key_finding",
+      "text": "The assistant reduced annotation time by roughly one quarter in the benchmark set.",
+      "evidence_ids": [
+        "EV-RESULT-001"
+      ]
+    },
+    {
+      "id": "SUM-002",
+      "mode": "implication",
+      "text": "These results suggest the workflow may reduce reviewer triage friction for similar manuscript review settings.",
+      "evidence_ids": [
+        "EV-RESULT-001",
+        "EV-FIG-002",
+        "EV-METHOD-003"
+      ]
+    },
+    {
+      "id": "SUM-003",
+      "mode": "next_step",
+      "text": "The tool should now be deployed across all clinical publishing workflows.",
+      "evidence_ids": [
+        "EV-RESULT-001"
+      ]
+    },
+    {
+      "id": "SUM-004",
+      "mode": "key_finding",
+      "text": "The assistant works equally well for multilingual manuscripts.",
+      "evidence_ids": [
+        "EV-MISSING-999"
+      ]
+    },
+    {
+      "id": "SUM-005",
+      "mode": "implication",
+      "text": "This will eliminate peer-review bottlenecks.",
+      "evidence_ids": []
+    },
+    {
+      "id": "SUM-006",
+      "mode": "key_finding",
+      "text": "The assistant reduced workload by 50% across all manuscripts.",
+      "evidence_ids": [
+        "EV-RESULT-001"
+      ]
+    }
+  ]
+}

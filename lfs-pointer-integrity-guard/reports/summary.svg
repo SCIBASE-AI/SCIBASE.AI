@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="32" y="28" width="896" height="96" rx="12" fill="#0f172a"/>
+  <text x="64" y="72" font-size="30" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700">Git LFS Pointer Integrity Guard</text>
+  <text x="64" y="104" font-size="17" fill="#cbd5e1" font-family="Arial, sans-serif">SCIBASE.AI reproducibility-demo preprint-v2.1</text>
+  <circle cx="798" cy="76" r="22" fill="#dc2626"/>
+  <text x="834" y="83" font-size="20" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700">block-release</text>
+  <text x="64" y="154" font-size="20" fill="#334155" font-family="Arial, sans-serif">Checked 7 LFS files: 4 blockers, 4 holds, 1 pass</text>
+  <text x="64" y="178" font-size="18" fill="#0f172a">data/trial-baseline.csv</text><text x="742" y="178" font-size="18" fill="#16a34a" font-weight="700">PASS</text>
+<text x="64" y="212" font-size="18" fill="#0f172a">models/cell-segmentation.bin</text><text x="742" y="212" font-size="18" fill="#dc2626" font-weight="700">BLOCK</text>
+<text x="64" y="246" font-size="18" fill="#0f172a">results/calibration-video.mov</text><text x="742" y="246" font-size="18" fill="#dc2626" font-weight="700">BLOCK</text>
+<text x="64" y="280" font-size="18" fill="#0f172a">results/microscopy-stack.tif</text><text x="742" y="280" font-size="18" fill="#dc2626" font-weight="700">BLOCK</text>
+<text x="64" y="314" font-size="18" fill="#0f172a">results/highres-figure.tiff</text><text x="742" y="314" font-size="18" fill="#dc2626" font-weight="700">BLOCK</text>
+<text x="64" y="348" font-size="18" fill="#0f172a">data/supplementary-sensors.parquet</text><text x="742" y="348" font-size="18" fill="#ca8a04" font-weight="700">HOLD</text>
+<text x="64" y="382" font-size="18" fill="#0f172a">data/private-cohort-dictionary.xlsx</text><text x="742" y="382" font-size="18" fill="#ca8a04" font-weight="700">HOLD</text>
+  <rect x="32" y="470" width="896" height="42" rx="8" fill="#e2e8f0"/>
+  <text x="64" y="497" font-size="18" fill="#334155" font-family="Arial, sans-serif">Projected LFS usage: 268 MB of 260 MB</text>
+</svg>

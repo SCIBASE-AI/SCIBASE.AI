@@ -1,0 +1,253 @@
+{
+  "repository": {
+    "name": "SCIBASE.AI reproducibility-demo",
+    "releaseTag": "preprint-v2.1",
+    "releaseDate": "2026-05-31T00:00:00Z",
+    "lfsQuota": "260 MB",
+    "projectedLfsUsage": "268 MB"
+  },
+  "decision": "block-release",
+  "releaseEligible": false,
+  "summary": {
+    "lfsFilesChecked": 7,
+    "blockers": 4,
+    "holds": 4,
+    "passed": 1,
+    "projectedLfsUsageBytes": 281018368,
+    "lfsQuotaBytes": 272629760
+  },
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "lfs-checksum-mismatch",
+      "path": "models/cell-segmentation.bin",
+      "message": "Stored large-object checksum does not match the pointer object id.",
+      "evidence": {
+        "pointerSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "storedSha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "lfs-size-mismatch",
+      "path": "results/calibration-video.mov",
+      "message": "Stored large-object byte size does not match the pointer size.",
+      "evidence": {
+        "pointerSize": 23068672,
+        "storedSize": 15728640
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "lfs-object-missing",
+      "path": "results/microscopy-stack.tif",
+      "message": "Pointer references an object that is absent from large-object storage.",
+      "evidence": {
+        "oid": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "expectedSize": 150994944
+      }
+    },
+    {
+      "severity": "blocker",
+      "code": "pointer-malformed",
+      "path": "results/highres-figure.tiff",
+      "message": "Git LFS pointer is malformed: oid-invalid-sha256, size-invalid",
+      "evidence": {
+        "errors": [
+          "oid-invalid-sha256",
+          "size-invalid"
+        ]
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "lfs-retention-too-short",
+      "path": "data/supplementary-sensors.parquet",
+      "message": "Large-object retention expires before the repository citation retention window.",
+      "evidence": {
+        "expiresAt": "2028-01-01T00:00:00Z",
+        "retentionDays": 580,
+        "requiredDays": 3650
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "release-manifest-missing",
+      "path": "data/supplementary-sensors.parquet",
+      "message": "Git LFS file is not represented in the tagged release/export manifest.",
+      "evidence": {
+        "releaseTag": "preprint-v2.1"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "doi-export-coverage-missing",
+      "path": "data/private-cohort-dictionary.xlsx",
+      "message": "Large object is omitted from the DOI/export bundle coverage map.",
+      "evidence": {
+        "releaseTag": "preprint-v2.1"
+      }
+    },
+    {
+      "severity": "hold",
+      "code": "lfs-quota-risk",
+      "path": "preprint-v2.1",
+      "message": "Tagged release would exceed the configured Git LFS storage quota after pending uploads.",
+      "evidence": {
+        "currentUsage": 239075328,
+        "pendingBytes": 41943040,
+        "quotaBytes": 272629760
+      }
+    }
+  ],
+  "fileResults": [
+    {
+      "path": "data/trial-baseline.csv",
+      "status": "pass",
+      "oid": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "pointerSize": 12582912,
+      "manifestCovered": true,
+      "storagePresent": true,
+      "findings": []
+    },
+    {
+      "path": "models/cell-segmentation.bin",
+      "status": "block",
+      "oid": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "pointerSize": 134217728,
+      "manifestCovered": true,
+      "storagePresent": true,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "lfs-checksum-mismatch",
+          "path": "models/cell-segmentation.bin",
+          "message": "Stored large-object checksum does not match the pointer object id.",
+          "evidence": {
+            "pointerSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "storedSha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          }
+        }
+      ]
+    },
+    {
+      "path": "results/calibration-video.mov",
+      "status": "block",
+      "oid": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "pointerSize": 23068672,
+      "manifestCovered": true,
+      "storagePresent": true,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "lfs-size-mismatch",
+          "path": "results/calibration-video.mov",
+          "message": "Stored large-object byte size does not match the pointer size.",
+          "evidence": {
+            "pointerSize": 23068672,
+            "storedSize": 15728640
+          }
+        }
+      ]
+    },
+    {
+      "path": "results/microscopy-stack.tif",
+      "status": "block",
+      "oid": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "pointerSize": 150994944,
+      "manifestCovered": true,
+      "storagePresent": false,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "lfs-object-missing",
+          "path": "results/microscopy-stack.tif",
+          "message": "Pointer references an object that is absent from large-object storage.",
+          "evidence": {
+            "oid": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "expectedSize": 150994944
+          }
+        }
+      ]
+    },
+    {
+      "path": "results/highres-figure.tiff",
+      "status": "block",
+      "oid": "not-a-valid-sha",
+      "pointerSize": null,
+      "manifestCovered": false,
+      "storagePresent": false,
+      "findings": [
+        {
+          "severity": "blocker",
+          "code": "pointer-malformed",
+          "path": "results/highres-figure.tiff",
+          "message": "Git LFS pointer is malformed: oid-invalid-sha256, size-invalid",
+          "evidence": {
+            "errors": [
+              "oid-invalid-sha256",
+              "size-invalid"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "data/supplementary-sensors.parquet",
+      "status": "hold",
+      "oid": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "pointerSize": 57671680,
+      "manifestCovered": false,
+      "storagePresent": true,
+      "findings": [
+        {
+          "severity": "hold",
+          "code": "lfs-retention-too-short",
+          "path": "data/supplementary-sensors.parquet",
+          "message": "Large-object retention expires before the repository citation retention window.",
+          "evidence": {
+            "expiresAt": "2028-01-01T00:00:00Z",
+            "retentionDays": 580,
+            "requiredDays": 3650
+          }
+        },
+        {
+          "severity": "hold",
+          "code": "release-manifest-missing",
+          "path": "data/supplementary-sensors.parquet",
+          "message": "Git LFS file is not represented in the tagged release/export manifest.",
+          "evidence": {
+            "releaseTag": "preprint-v2.1"
+          }
+        }
+      ]
+    },
+    {
+      "path": "data/private-cohort-dictionary.xlsx",
+      "status": "hold",
+      "oid": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "pointerSize": 18874368,
+      "manifestCovered": true,
+      "storagePresent": true,
+      "findings": [
+        {
+          "severity": "hold",
+          "code": "doi-export-coverage-missing",
+          "path": "data/private-cohort-dictionary.xlsx",
+          "message": "Large object is omitted from the DOI/export bundle coverage map.",
+          "evidence": {
+            "releaseTag": "preprint-v2.1"
+          }
+        }
+      ]
+    }
+  ],
+  "remediation": [
+    "Regenerate malformed pointer files with git-lfs pointer canonical output before tagging.",
+    "Upload or restore missing large objects, then re-run pointer verification from a clean clone.",
+    "Quarantine mismatched large objects and republish from verified source artifacts.",
+    "Add every Git LFS artifact to the DOI/export coverage map or document an explicit exclusion.",
+    "Move release artifacts to a retention tier that satisfies the citation retention window.",
+    "Resolve pending large uploads, archive superseded objects, or raise quota before release."
+  ]
+}

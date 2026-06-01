@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-06-01T10:45:00.000Z",
+  "status": "READY",
+  "summary": "All 1 sample node(s) have custody, preservation, cold-chain, and quality evidence for graph publication.",
+  "findingCounts": {},
+  "findings": [],
+  "safeEdges": [
+    {
+      "sampleId": "SAMPLE-ALPHA",
+      "publishableEdges": [
+        {
+          "type": "sample-to-protocol",
+          "target": "PROTO-CRYO-1"
+        },
+        {
+          "type": "sample-to-dataset",
+          "target": "DATASET-77"
+        },
+        {
+          "type": "sample-to-assay",
+          "target": "ASSAY-RNA-2"
+        }
+      ],
+      "qualityTier": "verified-custody"
+    }
+  ],
+  "heldEdges": [],
+  "remediationActions": [],
+  "fingerprint": "4fc0bc78f8608fad"
+}

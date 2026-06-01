@@ -1,0 +1,26 @@
+{
+  "module": "sample-custody-quality-graph-guard",
+  "issue": 17,
+  "generatedAt": "2026-06-01T10:45:00.000Z",
+  "scenarios": [
+    {
+      "name": "clean",
+      "status": "READY",
+      "fingerprint": "4fc0bc78f8608fad",
+      "findings": 0
+    },
+    {
+      "name": "risky",
+      "status": "HOLD",
+      "fingerprint": "92285cf83c973c8e",
+      "findings": 11
+    }
+  ],
+  "artifacts": [
+    "reports/clean-audit.json",
+    "reports/risky-audit.json",
+    "reports/risky-review.md",
+    "reports/summary.svg",
+    "reports/demo.mp4"
+  ]
+}

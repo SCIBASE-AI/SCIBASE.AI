@@ -1,0 +1,231 @@
+{
+  "generatedAt": "2026-06-01T10:45:00.000Z",
+  "status": "HOLD",
+  "summary": "Sample graph publication is hold with 3 critical, 6 high, and 2 warning finding(s).",
+  "findingCounts": {
+    "critical": 3,
+    "high": 6,
+    "warning": 2
+  },
+  "findings": [
+    {
+      "code": "COLD_CHAIN_TEMPERATURE_EXCURSION",
+      "severity": "critical",
+      "message": "SAMPLE-BETA has 1 temperature excursion(s) outside policy.",
+      "impact": "Temperature excursions can invalidate assay/sample relationships.",
+      "path": "samples[0].temperatureLog",
+      "remediation": "Hold graph edges until excursion review and assay impact notes are attached.",
+      "owner": "quality reviewer",
+      "sampleId": "SAMPLE-BETA"
+    },
+    {
+      "code": "CUSTODY_CHAIN_BREAK",
+      "severity": "critical",
+      "message": "SAMPLE-BETA custody chain breaks between events 0 and 1.",
+      "impact": "Unexplained custody gaps undermine sample identity and provenance.",
+      "path": "samples[0].custodyEvents[1]",
+      "remediation": "Insert the missing transfer or hold graph publication for the sample.",
+      "owner": "custody officer",
+      "sampleId": "SAMPLE-BETA"
+    },
+    {
+      "code": "CUSTODY_CHAIN_MISSING",
+      "severity": "critical",
+      "message": "SAMPLE-GAMMA has no chain-of-custody events.",
+      "impact": "Graph edges should not trust sample identity without custody evidence.",
+      "path": "samples[1].custodyEvents",
+      "remediation": "Attach signed handoff events from collection through analysis.",
+      "owner": "custody officer",
+      "sampleId": "SAMPLE-GAMMA"
+    },
+    {
+      "code": "COLLECTION_TO_PRESERVATION_DELAY",
+      "severity": "high",
+      "message": "SAMPLE-BETA waited 9.5 hours before preservation.",
+      "impact": "Long delays can degrade molecular measurements and mislead graph recommendations.",
+      "path": "samples[0].preservation.preservedAt",
+      "remediation": "Hold sample edges until degradation impact is reviewed or replacement evidence is supplied.",
+      "owner": "biobank curator",
+      "sampleId": "SAMPLE-BETA"
+    },
+    {
+      "code": "CUSTODY_HANDOFF_INCOMPLETE",
+      "severity": "high",
+      "message": "SAMPLE-BETA has an incomplete custody handoff at event 1.",
+      "impact": "Each transfer should identify source, recipient, timestamp, and signature.",
+      "path": "samples[0].custodyEvents[1]",
+      "remediation": "Complete the signed custody handoff record.",
+      "owner": "custody officer",
+      "sampleId": "SAMPLE-BETA"
+    },
+    {
+      "code": "FREEZE_THAW_LIMIT_EXCEEDED",
+      "severity": "high",
+      "message": "SAMPLE-BETA exceeds the allowed freeze-thaw cycle limit.",
+      "impact": "Repeated thawing can degrade sample analytes and invalidate reuse recommendations.",
+      "path": "samples[0].quality.freezeThawCycles",
+      "remediation": "Suppress reuse/recommendation edges or attach validated degradation analysis.",
+      "owner": "quality reviewer",
+      "sampleId": "SAMPLE-BETA"
+    },
+    {
+      "code": "PRESERVATION_PROTOCOL_MISSING",
+      "severity": "high",
+      "message": "SAMPLE-GAMMA is missing preservation protocol evidence.",
+      "impact": "Samples should not create trusted graph edges without preservation records.",
+      "path": "samples[1].preservation",
+      "remediation": "Attach preservation protocol id and timestamp.",
+      "owner": "biobank curator",
+      "sampleId": "SAMPLE-GAMMA"
+    },
+    {
+      "code": "SAMPLE_INTEGRITY_BELOW_THRESHOLD",
+      "severity": "high",
+      "message": "SAMPLE-BETA has integrity score 0.69, below policy threshold.",
+      "impact": "Low-integrity samples should not be recommended as high-confidence evidence.",
+      "path": "samples[0].quality.integrityScore",
+      "remediation": "Downgrade or hold sample graph edges until a curator reviews quality evidence.",
+      "owner": "quality reviewer",
+      "sampleId": "SAMPLE-BETA"
+    },
+    {
+      "code": "TEMPERATURE_LOG_MISSING",
+      "severity": "high",
+      "message": "SAMPLE-GAMMA has no cold-chain temperature log.",
+      "impact": "Cold-chain evidence protects downstream graph conclusions from degraded samples.",
+      "path": "samples[1].temperatureLog",
+      "remediation": "Attach temperature logger evidence before publishing sample edges.",
+      "owner": "biobank curator",
+      "sampleId": "SAMPLE-GAMMA"
+    },
+    {
+      "code": "REQUIRED_SAMPLE_GRAPH_EDGE_MISSING",
+      "severity": "warning",
+      "message": "SAMPLE-BETA is missing required graph edge type(s): sample-to-assay.",
+      "impact": "Entity pages need complete sample-to-protocol/dataset/evidence linkage.",
+      "path": "samples[0].graphEdges",
+      "remediation": "Attach the missing edge evidence or mark the sample as partial provenance.",
+      "owner": "graph curator",
+      "sampleId": "SAMPLE-BETA"
+    },
+    {
+      "code": "REQUIRED_SAMPLE_GRAPH_EDGE_MISSING",
+      "severity": "warning",
+      "message": "SAMPLE-GAMMA is missing required graph edge type(s): sample-to-dataset, sample-to-assay.",
+      "impact": "Entity pages need complete sample-to-protocol/dataset/evidence linkage.",
+      "path": "samples[1].graphEdges",
+      "remediation": "Attach the missing edge evidence or mark the sample as partial provenance.",
+      "owner": "graph curator",
+      "sampleId": "SAMPLE-GAMMA"
+    }
+  ],
+  "safeEdges": [],
+  "heldEdges": [
+    {
+      "sampleId": "SAMPLE-BETA",
+      "heldEdges": [
+        {
+          "type": "sample-to-protocol",
+          "target": "PROTO-CRYO-1"
+        },
+        {
+          "type": "sample-to-dataset",
+          "target": "DATASET-88"
+        }
+      ],
+      "reasonCodes": [
+        "COLD_CHAIN_TEMPERATURE_EXCURSION",
+        "CUSTODY_CHAIN_BREAK",
+        "COLLECTION_TO_PRESERVATION_DELAY",
+        "CUSTODY_HANDOFF_INCOMPLETE",
+        "FREEZE_THAW_LIMIT_EXCEEDED",
+        "SAMPLE_INTEGRITY_BELOW_THRESHOLD",
+        "REQUIRED_SAMPLE_GRAPH_EDGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "SAMPLE-GAMMA",
+      "heldEdges": [
+        {
+          "type": "sample-to-protocol",
+          "target": "PROTO-CRYO-1"
+        }
+      ],
+      "reasonCodes": [
+        "CUSTODY_CHAIN_MISSING",
+        "PRESERVATION_PROTOCOL_MISSING",
+        "TEMPERATURE_LOG_MISSING",
+        "REQUIRED_SAMPLE_GRAPH_EDGE_MISSING"
+      ]
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "COLD_CHAIN_TEMPERATURE_EXCURSION",
+      "sampleId": "SAMPLE-BETA",
+      "owner": "quality reviewer",
+      "action": "Hold graph edges until excursion review and assay impact notes are attached."
+    },
+    {
+      "code": "CUSTODY_CHAIN_BREAK",
+      "sampleId": "SAMPLE-BETA",
+      "owner": "custody officer",
+      "action": "Insert the missing transfer or hold graph publication for the sample."
+    },
+    {
+      "code": "CUSTODY_CHAIN_MISSING",
+      "sampleId": "SAMPLE-GAMMA",
+      "owner": "custody officer",
+      "action": "Attach signed handoff events from collection through analysis."
+    },
+    {
+      "code": "COLLECTION_TO_PRESERVATION_DELAY",
+      "sampleId": "SAMPLE-BETA",
+      "owner": "biobank curator",
+      "action": "Hold sample edges until degradation impact is reviewed or replacement evidence is supplied."
+    },
+    {
+      "code": "CUSTODY_HANDOFF_INCOMPLETE",
+      "sampleId": "SAMPLE-BETA",
+      "owner": "custody officer",
+      "action": "Complete the signed custody handoff record."
+    },
+    {
+      "code": "FREEZE_THAW_LIMIT_EXCEEDED",
+      "sampleId": "SAMPLE-BETA",
+      "owner": "quality reviewer",
+      "action": "Suppress reuse/recommendation edges or attach validated degradation analysis."
+    },
+    {
+      "code": "PRESERVATION_PROTOCOL_MISSING",
+      "sampleId": "SAMPLE-GAMMA",
+      "owner": "biobank curator",
+      "action": "Attach preservation protocol id and timestamp."
+    },
+    {
+      "code": "SAMPLE_INTEGRITY_BELOW_THRESHOLD",
+      "sampleId": "SAMPLE-BETA",
+      "owner": "quality reviewer",
+      "action": "Downgrade or hold sample graph edges until a curator reviews quality evidence."
+    },
+    {
+      "code": "TEMPERATURE_LOG_MISSING",
+      "sampleId": "SAMPLE-GAMMA",
+      "owner": "biobank curator",
+      "action": "Attach temperature logger evidence before publishing sample edges."
+    },
+    {
+      "code": "REQUIRED_SAMPLE_GRAPH_EDGE_MISSING",
+      "sampleId": "SAMPLE-BETA",
+      "owner": "graph curator",
+      "action": "Attach the missing edge evidence or mark the sample as partial provenance."
+    },
+    {
+      "code": "REQUIRED_SAMPLE_GRAPH_EDGE_MISSING",
+      "sampleId": "SAMPLE-GAMMA",
+      "owner": "graph curator",
+      "action": "Attach the missing edge evidence or mark the sample as partial provenance."
+    }
+  ],
+  "fingerprint": "92285cf83c973c8e"
+}

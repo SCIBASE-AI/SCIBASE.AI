@@ -1,0 +1,21 @@
+{
+  "name": "sample-custody-quality-graph-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic sample custody and cold-chain quality guard for scientific knowledge graph edges.",
+  "main": "index.js",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && node --check make-demo-video.js",
+    "test": "node test.js",
+    "demo": "node demo.js && node make-demo-video.js",
+    "verify-video": "ffprobe -v error -show_entries stream=codec_name,width,height,duration -of default=nokey=1:noprint_wrappers=1 reports/demo.mp4"
+  },
+  "keywords": [
+    "scientific-knowledge-graph",
+    "sample-custody",
+    "cold-chain",
+    "provenance",
+    "synthetic"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Glossary acronym guard summary">
+<rect width="960" height="540" fill="#111827"/>
+<rect x="48" y="48" width="864" height="444" rx="18" fill="#f8fafc"/>
+<text x="82" y="118" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Collaborative glossary guard</text>
+<text x="82" y="164" font-family="Arial, sans-serif" font-size="20" fill="#475569">Status HOLD - fingerprint 2f92e5168084871a</text>
+<rect x="82" y="220" width="60" height="62" fill="#16794c"/>
+<rect x="142" y="220" width="55" height="62" fill="#a15c00"/>
+<rect x="197" y="220" width="300" height="62" fill="#a11b32"/>
+<text x="96" y="260" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">READY 0</text>
+<text x="82" y="346" font-family="Arial, sans-serif" font-size="22" fill="#334155">Critical/high blockers: 14</text>
+<text x="82" y="386" font-family="Arial, sans-serif" font-size="22" fill="#334155">Warnings: 1</text>
+<text x="82" y="426" font-family="Arial, sans-serif" font-size="22" fill="#334155">Export glossary entries: 2</text>
+</svg>

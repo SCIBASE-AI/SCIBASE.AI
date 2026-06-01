@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-06-01T10:00:00.000Z",
+  "status": "READY",
+  "summary": "Glossary, acronym, and terminology export checks passed for the collaborative manuscript.",
+  "findingCounts": {},
+  "findings": [],
+  "exportGlossary": [
+    {
+      "id": "term-crispr",
+      "term": "CRISPR",
+      "acronym": "CRISPR",
+      "expansion": "Clustered Regularly Interspaced Short Palindromic Repeats",
+      "definition": "Genome-editing screen technology used to perturb target genes in pooled experiments.",
+      "discipline": "genomics"
+    },
+    {
+      "id": "term-snr",
+      "term": "SNR",
+      "acronym": "SNR",
+      "expansion": "Signal-to-noise ratio",
+      "definition": "Quantitative ratio comparing measured signal strength against background measurement noise.",
+      "discipline": "imaging"
+    },
+    {
+      "id": "term-batch-effect",
+      "term": "batch effect",
+      "acronym": null,
+      "expansion": null,
+      "definition": "Systematic measurement variation introduced by processing samples in different experimental batches.",
+      "discipline": "statistics"
+    }
+  ],
+  "remediationActions": [],
+  "fingerprint": "08b581cfd1de1ccc"
+}

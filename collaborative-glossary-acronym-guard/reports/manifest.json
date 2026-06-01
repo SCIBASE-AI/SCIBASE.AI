@@ -1,0 +1,26 @@
+{
+  "module": "collaborative-glossary-acronym-guard",
+  "issue": 12,
+  "generatedAt": "2026-06-01T10:00:00.000Z",
+  "scenarios": [
+    {
+      "name": "clean",
+      "status": "READY",
+      "fingerprint": "08b581cfd1de1ccc",
+      "findings": 0
+    },
+    {
+      "name": "risky",
+      "status": "HOLD",
+      "fingerprint": "2f92e5168084871a",
+      "findings": 15
+    }
+  ],
+  "artifacts": [
+    "reports/clean-audit.json",
+    "reports/risky-audit.json",
+    "reports/risky-review.md",
+    "reports/summary.svg",
+    "reports/demo.mp4"
+  ]
+}

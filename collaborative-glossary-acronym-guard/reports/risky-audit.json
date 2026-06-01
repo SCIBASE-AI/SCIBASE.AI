@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-06-01T10:00:00.000Z",
+  "status": "HOLD",
+  "summary": "Glossary export is hold with 2 critical, 12 high, and 1 warning finding(s).",
+  "findingCounts": {
+    "critical": 2,
+    "high": 12,
+    "warning": 1
+  },
+  "findings": [
+    {
+      "code": "ACRONYM_EXPANSION_COLLISION",
+      "severity": "critical",
+      "message": "SNR has multiple approved expansions: signal-to-noise ratio; single nucleus rna.",
+      "impact": "Readers and downstream exports cannot know which definition applies in each section.",
+      "path": "glossaryEntries.SNR",
+      "remediation": "Split the acronym by discipline or choose one canonical manuscript-level expansion.",
+      "owner": "lead editor"
+    },
+    {
+      "code": "PRIVATE_TERMINOLOGY_NOTE_LEAK",
+      "severity": "critical",
+      "message": "Glossary entry \"SNR\" would leak private reviewer or collaborator terminology notes.",
+      "impact": "Anonymous review notes, local paths, and private comments must not appear in manuscript exports.",
+      "path": "glossaryEntries[1].exportNote",
+      "remediation": "Redact private terminology notes and export only public glossary text.",
+      "owner": "export owner"
+    },
+    {
+      "code": "ACRONYM_FIRST_USE_UNEXPANDED",
+      "severity": "high",
+      "message": "CRISPR first appears in section intro without its expansion.",
+      "impact": "Publication exports should define acronyms at first use for readers and reviewers.",
+      "path": "sections.intro",
+      "remediation": "Introduce \"Clustered Regularly Interspaced Short Palindromic Repeats (CRISPR)\" at first use or move the first mention after the definition.",
+      "owner": "section author"
+    },
+    {
+      "code": "ACRONYM_FIRST_USE_UNEXPANDED",
+      "severity": "high",
+      "message": "SNR first appears in section methods without its expansion.",
+      "impact": "Publication exports should define acronyms at first use for readers and reviewers.",
+      "path": "sections.methods",
+      "remediation": "Introduce \"Signal-to-noise ratio (SNR)\" at first use or move the first mention after the definition.",
+      "owner": "section author"
+    },
+    {
+      "code": "ACRONYM_FIRST_USE_UNEXPANDED",
+      "severity": "high",
+      "message": "SNR first appears in section methods without its expansion.",
+      "impact": "Publication exports should define acronyms at first use for readers and reviewers.",
+      "path": "sections.methods",
+      "remediation": "Introduce \"Single nucleus RNA (SNR)\" at first use or move the first mention after the definition.",
+      "owner": "section author"
+    },
+    {
+      "code": "BLOCKING_TERMINOLOGY_COMMENT",
+      "severity": "high",
+      "message": "Unresolved terminology comment blocks export for batch effect.",
+      "impact": "The collaborative editor should not publish terminology while blocking review threads are open.",
+      "path": "comments[0]",
+      "remediation": "Resolve the terminology comment or mark it non-blocking before export.",
+      "owner": "review owner"
+    },
+    {
+      "code": "GLOSSARY_EXPORT_INCOMPLETE",
+      "severity": "high",
+      "message": "Exportable glossary entry \"SNR\" is missing from the export glossary manifest.",
+      "impact": "Readers will see terminology in the manuscript without a matching glossary definition.",
+      "path": "glossaryEntries[2].exportable",
+      "remediation": "Add the entry id to export.includeGlossaryIds or mark it as internal-only.",
+      "owner": "export owner"
+    },
+    {
+      "code": "GLOSSARY_EXPORT_INCOMPLETE",
+      "severity": "high",
+      "message": "Exportable glossary entry \"batch effect\" is missing from the export glossary manifest.",
+      "impact": "Readers will see terminology in the manuscript without a matching glossary definition.",
+      "path": "glossaryEntries[3].exportable",
+      "remediation": "Add the entry id to export.includeGlossaryIds or mark it as internal-only.",
+      "owner": "export owner"
+    },
+    {
+      "code": "LOCKED_SECTION_TERM_EDIT_UNAPPROVED",
+      "severity": "high",
+      "message": "Terminology edit edit-locked-snr targets locked section methods without current approval.",
+      "impact": "Locked final-review sections should not accept glossary changes without explicit approval.",
+      "path": "proposedEdits[0]",
+      "remediation": "Obtain approval for SNR against section version methods-v8.",
+      "owner": "section owner"
+    },
+    {
+      "code": "MENTIONED_TERM_NOT_EXPORTED",
+      "severity": "high",
+      "message": "\"SNR\" appears in section methods but is absent from the exported glossary.",
+      "impact": "Collaborators can accidentally remove a needed term from the reader-facing glossary.",
+      "path": "sections.methods",
+      "remediation": "Include the mentioned term in the export glossary or remove the stale manuscript mention.",
+      "owner": "export owner"
+    },
+    {
+      "code": "MENTIONED_TERM_NOT_EXPORTED",
+      "severity": "high",
+      "message": "\"batch effect\" appears in section intro but is absent from the exported glossary.",
+      "impact": "Collaborators can accidentally remove a needed term from the reader-facing glossary.",
+      "path": "sections.intro",
+      "remediation": "Include the mentioned term in the export glossary or remove the stale manuscript mention.",
+      "owner": "export owner"
+    },
+    {
+      "code": "TERM_DEFINITION_INCOMPLETE",
+      "severity": "high",
+      "message": "Glossary entry \"SNR\" has an incomplete definition.",
+      "impact": "Short or missing definitions create discipline-specific ambiguity during review.",
+      "path": "glossaryEntries[1].definition",
+      "remediation": "Add a concise, reviewer-ready definition with enough scientific context.",
+      "owner": "terminology editor"
+    },
+    {
+      "code": "TERM_DEFINITION_INCOMPLETE",
+      "severity": "high",
+      "message": "Glossary entry \"batch effect\" has an incomplete definition.",
+      "impact": "Short or missing definitions create discipline-specific ambiguity during review.",
+      "path": "glossaryEntries[3].definition",
+      "remediation": "Add a concise, reviewer-ready definition with enough scientific context.",
+      "owner": "terminology editor"
+    },
+    {
+      "code": "UNAPPROVED_GLOSSARY_TERM",
+      "severity": "high",
+      "message": "Glossary entry \"SNR\" is exportable but not approved.",
+      "impact": "Collaborative manuscripts should not export provisional terminology.",
+      "path": "glossaryEntries[2].status",
+      "remediation": "Route the term through collaborator approval or hold it from export.",
+      "owner": "lead editor"
+    },
+    {
+      "code": "STALE_TERM_SECTION_ANCHOR",
+      "severity": "warning",
+      "message": "Glossary entry \"CRISPR\" was approved against an older version of section intro.",
+      "impact": "Collaborative edits may have changed the term context since approval.",
+      "path": "glossaryEntries[0].sectionVersionHash",
+      "remediation": "Refresh the term anchor against the current section version.",
+      "owner": "section author"
+    }
+  ],
+  "exportGlossary": [
+    {
+      "id": "term-crispr",
+      "term": "CRISPR",
+      "acronym": "CRISPR",
+      "expansion": "Clustered Regularly Interspaced Short Palindromic Repeats",
+      "definition": "Genome editing screen technology used by the manuscript collaborators.",
+      "discipline": "genomics"
+    },
+    {
+      "id": "term-snr-imaging",
+      "term": "SNR",
+      "acronym": "SNR",
+      "expansion": "Signal-to-noise ratio",
+      "definition": "Image metric.",
+      "discipline": "imaging"
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "ACRONYM_EXPANSION_COLLISION",
+      "owner": "lead editor",
+      "action": "Split the acronym by discipline or choose one canonical manuscript-level expansion."
+    },
+    {
+      "code": "PRIVATE_TERMINOLOGY_NOTE_LEAK",
+      "owner": "export owner",
+      "action": "Redact private terminology notes and export only public glossary text."
+    },
+    {
+      "code": "ACRONYM_FIRST_USE_UNEXPANDED",
+      "owner": "section author",
+      "action": "Introduce \"Clustered Regularly Interspaced Short Palindromic Repeats (CRISPR)\" at first use or move the first mention after the definition."
+    },
+    {
+      "code": "ACRONYM_FIRST_USE_UNEXPANDED",
+      "owner": "section author",
+      "action": "Introduce \"Signal-to-noise ratio (SNR)\" at first use or move the first mention after the definition."
+    },
+    {
+      "code": "ACRONYM_FIRST_USE_UNEXPANDED",
+      "owner": "section author",
+      "action": "Introduce \"Single nucleus RNA (SNR)\" at first use or move the first mention after the definition."
+    },
+    {
+      "code": "BLOCKING_TERMINOLOGY_COMMENT",
+      "owner": "review owner",
+      "action": "Resolve the terminology comment or mark it non-blocking before export."
+    },
+    {
+      "code": "GLOSSARY_EXPORT_INCOMPLETE",
+      "owner": "export owner",
+      "action": "Add the entry id to export.includeGlossaryIds or mark it as internal-only."
+    },
+    {
+      "code": "GLOSSARY_EXPORT_INCOMPLETE",
+      "owner": "export owner",
+      "action": "Add the entry id to export.includeGlossaryIds or mark it as internal-only."
+    },
+    {
+      "code": "LOCKED_SECTION_TERM_EDIT_UNAPPROVED",
+      "owner": "section owner",
+      "action": "Obtain approval for SNR against section version methods-v8."
+    },
+    {
+      "code": "MENTIONED_TERM_NOT_EXPORTED",
+      "owner": "export owner",
+      "action": "Include the mentioned term in the export glossary or remove the stale manuscript mention."
+    },
+    {
+      "code": "MENTIONED_TERM_NOT_EXPORTED",
+      "owner": "export owner",
+      "action": "Include the mentioned term in the export glossary or remove the stale manuscript mention."
+    },
+    {
+      "code": "TERM_DEFINITION_INCOMPLETE",
+      "owner": "terminology editor",
+      "action": "Add a concise, reviewer-ready definition with enough scientific context."
+    },
+    {
+      "code": "TERM_DEFINITION_INCOMPLETE",
+      "owner": "terminology editor",
+      "action": "Add a concise, reviewer-ready definition with enough scientific context."
+    },
+    {
+      "code": "UNAPPROVED_GLOSSARY_TERM",
+      "owner": "lead editor",
+      "action": "Route the term through collaborator approval or hold it from export."
+    },
+    {
+      "code": "STALE_TERM_SECTION_ANCHOR",
+      "owner": "section author",
+      "action": "Refresh the term anchor against the current section version."
+    }
+  ],
+  "fingerprint": "2f92e5168084871a"
+}

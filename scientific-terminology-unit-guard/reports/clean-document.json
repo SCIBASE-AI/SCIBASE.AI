@@ -1,0 +1,20 @@
+{
+  "documentId": "editor-term-001",
+  "title": "Collaborative catalyst manuscript",
+  "decision": "release",
+  "summary": {
+    "blocksReviewed": 2,
+    "suggestionsReviewed": 1,
+    "findings": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "releaseCriteria": [
+    "Shared glossary acronyms keep one expansion across all blocks and suggestions.",
+    "Scientific quantities use the canonical unit selected for the collaborative document.",
+    "Equation variables keep one meaning before WYSIWYG, Markdown, LaTeX, or export render.",
+    "Suggestions cannot introduce terminology drift while being accepted into the manuscript."
+  ]
+}

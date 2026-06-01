@@ -1,0 +1,13 @@
+{
+  "name": "scientific-terminology-unit-guard",
+  "version": "1.0.0",
+  "description": "Collaborative terminology and unit consistency guard for SCIBASE editor issue #12",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "python demo_video.py"
+  },
+  "license": "MIT"
+}

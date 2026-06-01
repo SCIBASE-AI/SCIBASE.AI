@@ -26,6 +26,7 @@ Running the demo generates:
 - `reports/summary.svg`
 - `reports/demo-script.txt`
 - `reports/demo.gif`
+- `reports/demo.mp4`
 
 The generated reviewer packet is synthetic only. It does not call external APIs, run live models, use credentials, or include private research data.
 
@@ -37,4 +38,4 @@ npm run demo
 npm run demo:video
 ```
 
-`demo:video` renders a small local GIF demo from generated synthetic frames when Pillow is available.
+`demo:video` renders small local GIF and MP4 demos from generated synthetic frames.

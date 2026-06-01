@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import imageio.v3 as iio
+import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -37,8 +39,8 @@ for title, subtitle in slides:
 
 gif_path = REPORTS / "demo.gif"
 frames[0].save(gif_path, save_all=True, append_images=frames[1:], duration=120, loop=0)
+mp4_path = REPORTS / "demo.mp4"
+iio.imwrite(mp4_path, [np.asarray(frame) for frame in frames], fps=8, codec="libx264")
 
-# A GIF is committed as the visual demo artifact because this repository has no
-# video toolchain. Keep an MP4-named placeholder out of the PR rather than
-# pretending a non-video binary is playable.
 print(f"wrote {gif_path}")
+print(f"wrote {mp4_path}")

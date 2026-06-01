@@ -1,0 +1,109 @@
+{
+  "researcherId": "researcher-claim-risk-002",
+  "displayName": "R. Example",
+  "profileMode": "public",
+  "decision": "hold",
+  "summary": {
+    "affiliationsReviewed": 3,
+    "publicAffiliations": 3,
+    "grantsReviewed": 1,
+    "publicGrants": 1,
+    "findings": 12,
+    "high": 8,
+    "medium": 4,
+    "low": 0
+  },
+  "findings": [
+    {
+      "code": "PUBLIC_PROFILE_WITHOUT_ORCID",
+      "severity": "medium",
+      "sourceId": "researcher-claim-risk-002",
+      "message": "R. Example has a public profile without an ORCID identifier.",
+      "remediation": "Link ORCID or keep profile credentials private until identity evidence is complete."
+    },
+    {
+      "code": "UNTRUSTED_AFFILIATION_SOURCE",
+      "severity": "high",
+      "sourceId": "aff-expired",
+      "message": "Northbridge Institute affiliation uses untrusted source manual.",
+      "remediation": "Require ORCID, institutional SSO, or admin attestation before publishing affiliation claims."
+    },
+    {
+      "code": "EXPIRED_PUBLIC_AFFILIATION",
+      "severity": "high",
+      "sourceId": "aff-expired",
+      "message": "Northbridge Institute affiliation expired on 2024-12-31.",
+      "remediation": "Hide or refresh expired appointments before they influence invitations, grants, or reputation."
+    },
+    {
+      "code": "AFFILIATION_DOMAIN_MISMATCH",
+      "severity": "high",
+      "sourceId": "aff-expired",
+      "message": "Northbridge Institute requires northbridge.edu, but no verified email matches that domain.",
+      "remediation": "Verify an institutional email domain or remove the public affiliation claim."
+    },
+    {
+      "code": "AFFILIATION_WITHOUT_EVIDENCE",
+      "severity": "medium",
+      "sourceId": "aff-expired",
+      "message": "Northbridge Institute public affiliation lacks evidence references.",
+      "remediation": "Attach ORCID records, SSO assertions, appointment receipts, or admin attestations."
+    },
+    {
+      "code": "AFFILIATION_DOMAIN_MISMATCH",
+      "severity": "high",
+      "sourceId": "aff-active-conflict",
+      "message": "West River Labs requires westriver.example, but no verified email matches that domain.",
+      "remediation": "Verify an institutional email domain or remove the public affiliation claim."
+    },
+    {
+      "code": "AFFILIATION_DOMAIN_MISMATCH",
+      "severity": "high",
+      "sourceId": "aff-second-active",
+      "message": "East Valley University requires evu.example, but no verified email matches that domain.",
+      "remediation": "Verify an institutional email domain or remove the public affiliation claim."
+    },
+    {
+      "code": "MULTIPLE_ACTIVE_PUBLIC_INSTITUTIONS",
+      "severity": "medium",
+      "sourceId": "affiliations",
+      "message": "Profile has multiple active public institutions: West River Labs, East Valley University.",
+      "remediation": "Require primary affiliation selection and conflict disclosure before institutional trust is applied."
+    },
+    {
+      "code": "GRANT_WITHOUT_PUBLIC_CONSENT",
+      "severity": "high",
+      "sourceId": "grant-private-77",
+      "message": "Private Foundation grant is public but consent is private.",
+      "remediation": "Collect funder/PI consent before exposing grant claims or using them in reputation scoring."
+    },
+    {
+      "code": "GRANT_WITHOUT_EVIDENCE",
+      "severity": "medium",
+      "sourceId": "grant-private-77",
+      "message": "Private Foundation grant lacks evidence references.",
+      "remediation": "Attach award IDs, public grant pages, or institutional award receipts."
+    },
+    {
+      "code": "UNVERIFIED_AFFILIATION_USED_FOR_INVITES",
+      "severity": "high",
+      "sourceId": "trustInputs.useAffiliationsForInvites",
+      "message": "Affiliation claims have blockers but are enabled for project invitation trust.",
+      "remediation": "Disable affiliation-derived invitations until all public affiliation findings are resolved."
+    },
+    {
+      "code": "UNVERIFIED_GRANT_USED_FOR_REPUTATION",
+      "severity": "high",
+      "sourceId": "trustInputs.useGrantsForReputation",
+      "message": "Grant claims have blockers but are enabled for reputation scoring.",
+      "remediation": "Disable grant-derived reputation inputs until grant consent and evidence are verified."
+    }
+  ],
+  "releaseCriteria": [
+    "Public affiliations come from ORCID, institutional SSO, or admin attestation.",
+    "Expired appointments are hidden or refreshed before trust decisions.",
+    "Verified email domains match claimed institutional affiliations.",
+    "Public grant claims have consent and evidence references.",
+    "Unverified affiliations and grants do not feed invitations, trust, or reputation scoring."
+  ]
+}

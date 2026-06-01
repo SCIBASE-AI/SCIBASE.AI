@@ -1,0 +1,24 @@
+{
+  "researcherId": "researcher-ada-001",
+  "displayName": "Ada Rivera",
+  "profileMode": "public",
+  "decision": "release",
+  "summary": {
+    "affiliationsReviewed": 1,
+    "publicAffiliations": 1,
+    "grantsReviewed": 1,
+    "publicGrants": 1,
+    "findings": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "releaseCriteria": [
+    "Public affiliations come from ORCID, institutional SSO, or admin attestation.",
+    "Expired appointments are hidden or refreshed before trust decisions.",
+    "Verified email domains match claimed institutional affiliations.",
+    "Public grant claims have consent and evidence references.",
+    "Unverified affiliations and grants do not feed invitations, trust, or reputation scoring."
+  ]
+}

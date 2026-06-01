@@ -1,0 +1,105 @@
+{
+  "clusterId": "cluster-rho-17",
+  "reviewWindow": "2026-06",
+  "decision": "quarantine-cluster",
+  "riskScore": 100,
+  "summary": {
+    "blockCount": 4,
+    "warnCount": 3,
+    "findingCount": 7,
+    "userCount": 4,
+    "endorsementCount": 4,
+    "reviewCount": 3
+  },
+  "findings": [
+    {
+      "code": "MISSING_CLUSTER_QUARANTINE",
+      "severity": "block",
+      "message": "Blocking sybil signals exist but reputation, ranking, or payout controls are not fully paused.",
+      "evidence": {
+        "quarantineApplied": false,
+        "manualReviewTicket": null,
+        "leaderboardSuppressed": false,
+        "payoutEligibilityPaused": false
+      },
+      "remediation": "Apply quarantine, suppress leaderboard rank, pause payout eligibility, and open a manual review ticket."
+    },
+    {
+      "code": "RECYCLED_DEVICE_FINGERPRINT",
+      "severity": "block",
+      "message": "Three or more accounts share a device fingerprint inside the same review window.",
+      "evidence": {
+        "fingerprint": "fp-77",
+        "userIds": [
+          "u-104",
+          "u-105",
+          "u-106"
+        ]
+      },
+      "remediation": "Quarantine the cluster and suppress leaderboard movement until reviewed."
+    },
+    {
+      "code": "SELF_REVIEW_RING_RISK",
+      "severity": "block",
+      "message": "Reviewer and submitter relationships form a high-score ring across bounty projects.",
+      "evidence": {
+        "edges": [
+          "u-104->u-105@bounty-1",
+          "u-105->u-106@bounty-1",
+          "u-106->u-104@bounty-2"
+        ]
+      },
+      "remediation": "Suppress review-derived reputation and route the cluster to trust-and-safety review."
+    },
+    {
+      "code": "SHARED_PAYOUT_HANDLE",
+      "severity": "block",
+      "message": "Multiple reputation accounts share the same payout handle.",
+      "evidence": {
+        "payoutHandle": "wallet-alpha",
+        "userIds": [
+          "u-104",
+          "u-105"
+        ]
+      },
+      "remediation": "Pause payout eligibility and require identity review before reputation points affect bounty access."
+    },
+    {
+      "code": "BURST_ENDORSEMENT_RING",
+      "severity": "warn",
+      "message": "Several endorsements were created immediately after signup.",
+      "evidence": {
+        "count": 4,
+        "edges": [
+          "u-104->u-105",
+          "u-105->u-106",
+          "u-106->u-104",
+          "u-107->u-104"
+        ]
+      },
+      "remediation": "Delay endorsement credit until accounts age past the configured trust window."
+    },
+    {
+      "code": "HIGH_REPUTATION_DELTA_UNDER_RISK",
+      "severity": "warn",
+      "message": "The cluster gained enough reputation to affect rankings or bounty eligibility while risk signals are present.",
+      "evidence": {
+        "totalReputationDelta": 119
+      },
+      "remediation": "Hold reputation deltas until the cluster review is resolved."
+    },
+    {
+      "code": "SUSPICIOUS_INVITATION_CHAIN",
+      "severity": "warn",
+      "message": "A non-seed account invited multiple high-velocity reputation accounts.",
+      "evidence": {
+        "inviter": "u-101",
+        "invitees": [
+          "u-104",
+          "u-105"
+        ]
+      },
+      "remediation": "Require manual review before granting invitation-derived reputation boosts."
+    }
+  ]
+}

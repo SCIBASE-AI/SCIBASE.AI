@@ -1,0 +1,266 @@
+{
+  "summary": {
+    "decision": "escalate_withdrawal_dispute",
+    "challengeCount": 1,
+    "affectedSolvers": 3,
+    "recommendedReimbursementUsd": 2586,
+    "fundedShortfallUsd": 2286,
+    "findingCount": 21,
+    "criticalFindings": 3,
+    "highOrCriticalFindings": 15,
+    "auditDigest": "sha256:af101fe0baa90544d8acc9069ccfa1524ccfc6c133806eeff1bb088088a48cb1"
+  },
+  "challenges": [
+    {
+      "id": "BNTY-WITHDRAW-RISK",
+      "status": "canceled",
+      "bountyAmountUsd": 9000,
+      "action": "hold_for_solver_reimbursement",
+      "affectedSolvers": 3,
+      "recommendedReimbursementUsd": 2586,
+      "fundedShortfallUsd": 2286,
+      "recommendations": [
+        {
+          "teamId": "team-lovelace",
+          "documentedCostsUsd": 720,
+          "irreversibleCostsUsd": 720,
+          "milestoneCreditUsd": 729,
+          "reimbursementCapUsd": 2600,
+          "recommendedUsd": 1449,
+          "recordedUsd": 500,
+          "shortfallUsd": 949,
+          "action": "hold_and_reimburse_solver_costs"
+        },
+        {
+          "teamId": "team-hopper",
+          "documentedCostsUsd": 310,
+          "irreversibleCostsUsd": 310,
+          "milestoneCreditUsd": 324,
+          "reimbursementCapUsd": 2600,
+          "recommendedUsd": 634,
+          "recordedUsd": 0,
+          "shortfallUsd": 634,
+          "action": "hold_and_reimburse_solver_costs"
+        },
+        {
+          "teamId": "team-johnson",
+          "documentedCostsUsd": 260,
+          "irreversibleCostsUsd": 260,
+          "milestoneCreditUsd": 243,
+          "reimbursementCapUsd": 2600,
+          "recommendedUsd": 503,
+          "recordedUsd": 0,
+          "shortfallUsd": 503,
+          "action": "hold_and_reimburse_solver_costs"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "code": "CANCELLATION_AUTHORITY_MISSING",
+      "message": "BNTY-WITHDRAW-RISK does not show a sponsor-authorized cancellation decision.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK"
+      ],
+      "action": "verify_sponsor_cancellation_authority_before_closeout"
+    },
+    {
+      "severity": "critical",
+      "code": "DISPUTE_HOLD_WINDOW_TOO_SHORT",
+      "message": "BNTY-WITHDRAW-RISK has a dispute hold of 4 days.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK"
+      ],
+      "action": "extend_dispute_hold_before_refund_or_closeout"
+    },
+    {
+      "severity": "critical",
+      "code": "REIMBURSEMENT_RESERVE_SHORTFALL",
+      "message": "BNTY-WITHDRAW-RISK reserve is short by $2286.00 for solver reimbursement.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK"
+      ],
+      "action": "fund_solver_reimbursement_reserve_before_releasing_sponsor_refund"
+    },
+    {
+      "severity": "high",
+      "code": "APPEAL_DEADLINE_MISSING",
+      "message": "BNTY-WITHDRAW-RISK has no solver appeal deadline.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK"
+      ],
+      "action": "set_solver_appeal_deadline_before_withdrawal_closeout"
+    },
+    {
+      "severity": "high",
+      "code": "COST_CLAIM_EVIDENCE_MISSING",
+      "message": "team-lovelace cost claim annotation-vendor lacks evidence.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "attach_cost_claim_evidence_before_reimbursement"
+    },
+    {
+      "severity": "high",
+      "code": "COST_CLAIM_PATH_NOT_IN_NOTICE",
+      "message": "team-lovelace notice omits the cost-claim path.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "include_solver_cost_claim_path_in_notice"
+    },
+    {
+      "severity": "high",
+      "code": "MILESTONE_EVIDENCE_HASH_MISSING",
+      "message": "team-lovelace milestone baseline-model lacks an evidence hash.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "hash_milestone_evidence_before_solver_cost_review"
+    },
+    {
+      "severity": "high",
+      "code": "NONREFUNDABLE_RECEIPT_MISSING",
+      "message": "team-lovelace non-refundable cost claim gpu-reservation lacks a receipt hash.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "attach_receipt_hash_for_nonrefundable_solver_spend"
+    },
+    {
+      "severity": "high",
+      "code": "NONREFUNDABLE_RECEIPT_MISSING",
+      "message": "team-lovelace non-refundable cost claim annotation-vendor lacks a receipt hash.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "attach_receipt_hash_for_nonrefundable_solver_spend"
+    },
+    {
+      "severity": "high",
+      "code": "NONREFUNDABLE_RECEIPT_MISSING",
+      "message": "team-hopper non-refundable cost claim secure-workspace lacks a receipt hash.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-hopper"
+      ],
+      "action": "attach_receipt_hash_for_nonrefundable_solver_spend"
+    },
+    {
+      "severity": "high",
+      "code": "NOTICE_PARITY_GAP",
+      "message": "team-hopper received withdrawal notice 20 hours after the first notified solver.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-hopper"
+      ],
+      "action": "restart_closeout_clock_after_equal_solver_notice"
+    },
+    {
+      "severity": "high",
+      "code": "REIMBURSEMENT_DECISION_MISSING",
+      "message": "team-hopper has an eligible reimbursement recommendation but no recorded decision.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-hopper"
+      ],
+      "action": "record_solver_reimbursement_decision_before_challenge_closeout"
+    },
+    {
+      "severity": "high",
+      "code": "REIMBURSEMENT_DECISION_MISSING",
+      "message": "team-johnson has an eligible reimbursement recommendation but no recorded decision.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-johnson"
+      ],
+      "action": "record_solver_reimbursement_decision_before_challenge_closeout"
+    },
+    {
+      "severity": "high",
+      "code": "REIMBURSEMENT_SHORTFALL",
+      "message": "team-lovelace reimbursement is short by $949.00.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "fund_reimbursement_shortfall_or_escalate_dispute"
+    },
+    {
+      "severity": "high",
+      "code": "SOLVER_WITHDRAWAL_NOTICE_MISSING",
+      "message": "team-johnson has no direct withdrawal notice.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-johnson"
+      ],
+      "action": "send_equal_withdrawal_notice_to_all_started_solvers"
+    },
+    {
+      "severity": "medium",
+      "code": "APPEAL_WINDOW_NOT_IN_NOTICE",
+      "message": "team-lovelace notice omits the appeal window.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "include_appeal_deadline_in_solver_notice"
+    },
+    {
+      "severity": "medium",
+      "code": "APPEAL_WINDOW_NOT_IN_NOTICE",
+      "message": "team-hopper notice omits the appeal window.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-hopper"
+      ],
+      "action": "include_appeal_deadline_in_solver_notice"
+    },
+    {
+      "severity": "medium",
+      "code": "IP_DATA_RETURN_ATTESTATION_MISSING",
+      "message": "team-lovelace has no complete IP return and data-destruction attestation.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-lovelace"
+      ],
+      "action": "collect_ip_return_and_data_destruction_attestation"
+    },
+    {
+      "severity": "medium",
+      "code": "IP_DATA_RETURN_ATTESTATION_MISSING",
+      "message": "team-hopper has no complete IP return and data-destruction attestation.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-hopper"
+      ],
+      "action": "collect_ip_return_and_data_destruction_attestation"
+    },
+    {
+      "severity": "medium",
+      "code": "IP_DATA_RETURN_ATTESTATION_MISSING",
+      "message": "team-johnson has no complete IP return and data-destruction attestation.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK",
+        "team-johnson"
+      ],
+      "action": "collect_ip_return_and_data_destruction_attestation"
+    },
+    {
+      "severity": "medium",
+      "code": "WITHDRAWAL_REASON_TOO_THIN",
+      "message": "BNTY-WITHDRAW-RISK has no reviewer-ready reason for withdrawal or material reduction.",
+      "refs": [
+        "BNTY-WITHDRAW-RISK"
+      ],
+      "action": "record_specific_withdrawal_reason_for_audit"
+    }
+  ]
+}

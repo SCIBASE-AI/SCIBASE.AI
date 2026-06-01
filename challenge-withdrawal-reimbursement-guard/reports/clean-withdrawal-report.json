@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "decision": "release_withdrawal_closeout",
+    "challengeCount": 1,
+    "affectedSolvers": 2,
+    "recommendedReimbursementUsd": 1076,
+    "fundedShortfallUsd": 0,
+    "findingCount": 0,
+    "criticalFindings": 0,
+    "highOrCriticalFindings": 0,
+    "auditDigest": "sha256:11141c6fc5ef8c4eb1259853baad8680c7925329d6be3f4dfa10c347fb95d4c4"
+  },
+  "challenges": [
+    {
+      "id": "BNTY-WITHDRAW-ALPHA",
+      "status": "withdrawn",
+      "bountyAmountUsd": 6000,
+      "action": "release_withdrawal_closeout",
+      "affectedSolvers": 2,
+      "recommendedReimbursementUsd": 1076,
+      "fundedShortfallUsd": 0,
+      "recommendations": [
+        {
+          "teamId": "team-curie",
+          "documentedCostsUsd": 180,
+          "irreversibleCostsUsd": 180,
+          "milestoneCreditUsd": 453.6,
+          "reimbursementCapUsd": 2100,
+          "recommendedUsd": 633.6,
+          "recordedUsd": 633.6,
+          "shortfallUsd": 0,
+          "action": "release_reimbursement_closeout"
+        },
+        {
+          "teamId": "team-noether",
+          "documentedCostsUsd": 140,
+          "irreversibleCostsUsd": 140,
+          "milestoneCreditUsd": 302.4,
+          "reimbursementCapUsd": 2100,
+          "recommendedUsd": 442.4,
+          "recordedUsd": 442.4,
+          "shortfallUsd": 0,
+          "action": "release_reimbursement_closeout"
+        }
+      ]
+    }
+  ],
+  "findings": []
+}

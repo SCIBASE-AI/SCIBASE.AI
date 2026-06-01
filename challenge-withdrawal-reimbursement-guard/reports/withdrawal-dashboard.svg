@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="48" y="44" width="864" height="452" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="48" y="44" width="864" height="8" rx="4" fill="#0f172a"/>
+  <text x="84" y="94" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Challenge withdrawal reimbursement guard</text>
+  <text x="84" y="126" font-family="Arial, sans-serif" font-size="15" fill="#475569">Deterministic closeout review for sponsor cancellations after solvers have started work.</text>
+  <text x="96" y="180" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Clean closeout</text>
+  <rect x="96" y="196" width="300" height="34" rx="4" fill="#e2e8f0"/>
+  <rect x="96" y="196" width="124" height="34" rx="4" fill="#10b981"/>
+  <text x="412" y="218" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">$1076.00</text>
+  <text x="96" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Risky closeout</text>
+  <rect x="96" y="286" width="300" height="34" rx="4" fill="#e2e8f0"/>
+  <rect x="96" y="286" width="298" height="34" rx="4" fill="#ef4444"/>
+  <text x="412" y="308" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">$2586.00</text>
+  <text x="96" y="360" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Reserve shortfall</text>
+  <rect x="96" y="376" width="300" height="34" rx="4" fill="#e2e8f0"/>
+  <rect x="96" y="376" width="264" height="34" rx="4" fill="#f59e0b"/>
+  <text x="412" y="398" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">$2286.00</text>
+  <text x="536" y="180" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Top risky findings</text>
+  <g><rect x="536" y="235" width="12" height="12" rx="2" fill="#991b1b"/><text x="558" y="245" font-size="14" fill="#334155">CANCELLATION_AUTHORITY_MISSING</text></g>
+<g><rect x="536" y="261" width="12" height="12" rx="2" fill="#991b1b"/><text x="558" y="271" font-size="14" fill="#334155">DISPUTE_HOLD_WINDOW_TOO_SHORT</text></g>
+<g><rect x="536" y="287" width="12" height="12" rx="2" fill="#991b1b"/><text x="558" y="297" font-size="14" fill="#334155">REIMBURSEMENT_RESERVE_SHORTFALL</text></g>
+<g><rect x="536" y="313" width="12" height="12" rx="2" fill="#dc2626"/><text x="558" y="323" font-size="14" fill="#334155">APPEAL_DEADLINE_MISSING</text></g>
+<g><rect x="536" y="339" width="12" height="12" rx="2" fill="#dc2626"/><text x="558" y="349" font-size="14" fill="#334155">COST_CLAIM_EVIDENCE_MISSING</text></g>
+<g><rect x="536" y="365" width="12" height="12" rx="2" fill="#dc2626"/><text x="558" y="375" font-size="14" fill="#334155">COST_CLAIM_PATH_NOT_IN_NOTICE</text></g>
+<g><rect x="536" y="391" width="12" height="12" rx="2" fill="#dc2626"/><text x="558" y="401" font-size="14" fill="#334155">MILESTONE_EVIDENCE_HASH_MISSING</text></g>
+<g><rect x="536" y="417" width="12" height="12" rx="2" fill="#dc2626"/><text x="558" y="427" font-size="14" fill="#334155">NONREFUNDABLE_RECEIPT_MISSING</text></g>
+  <text x="536" y="462" font-family="Arial, sans-serif" font-size="13" fill="#64748b">Decision: escalate_withdrawal_dispute | sha256:af101fe0baa90544d8acc...</text>
+</svg>

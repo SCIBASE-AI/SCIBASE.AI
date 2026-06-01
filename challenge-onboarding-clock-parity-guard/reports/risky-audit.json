@@ -1,0 +1,179 @@
+{
+  "generatedAt": "2026-06-01T10:30:00.000Z",
+  "status": "HOLD",
+  "summary": "Onboarding clock is hold with 3 critical, 5 high, and 2 warning finding(s).",
+  "findingCounts": {
+    "critical": 3,
+    "high": 5,
+    "warning": 2
+  },
+  "findings": [
+    {
+      "code": "CLOCK_START_BEFORE_ALL_TEAMS_READY",
+      "severity": "critical",
+      "message": "The proposed submission clock starts before every accepted team is workspace-ready.",
+      "impact": "The system should start or resume the challenge window only after equivalent access is verified.",
+      "path": "submissionClock.startsAt",
+      "remediation": "Move the clock start to the latest ready timestamp plus any published buffer.",
+      "owner": "challenge admin"
+    },
+    {
+      "code": "WORKSPACE_NOT_READY",
+      "severity": "critical",
+      "message": "team-gamma has no ready workspace timestamp.",
+      "impact": "The submission clock should not begin for any accepted team until every workspace is usable.",
+      "path": "acceptedTeams[2].workspace.readyAt",
+      "remediation": "Provision the workspace and record the ready timestamp before starting the clock.",
+      "owner": "platform ops"
+    },
+    {
+      "code": "WORKSPACE_READY_AFTER_CLOCK_START",
+      "severity": "critical",
+      "message": "team-beta became workspace-ready after the proposed submission clock start.",
+      "impact": "Late workspace readiness silently reduces that team's competition window.",
+      "path": "acceptedTeams[1].workspace.readyAt",
+      "remediation": "Delay the submission clock until this workspace and all peers are ready.",
+      "owner": "challenge admin"
+    },
+    {
+      "code": "COMPUTE_QUOTA_BELOW_BASELINE",
+      "severity": "high",
+      "message": "team-beta has less compute quota than the published onboarding baseline.",
+      "impact": "Solver teams need equivalent budget to run starter notebooks and benchmarks.",
+      "path": "acceptedTeams[1].workspace.computeQuota",
+      "remediation": "Top up compute quota before opening the submission clock.",
+      "owner": "platform ops"
+    },
+    {
+      "code": "REQUIRED_TOOL_ACCESS_MISSING",
+      "severity": "high",
+      "message": "team-beta is missing one or more required tools before clock start.",
+      "impact": "Unequal tool access creates avoidable solver disadvantage.",
+      "path": "acceptedTeams[1].workspace.tools",
+      "remediation": "Grant all required tools before starting or resuming the submission clock.",
+      "owner": "platform ops"
+    },
+    {
+      "code": "STARTER_KIT_CHECKSUM_MISMATCH",
+      "severity": "high",
+      "message": "team-beta received a starter kit checksum that does not match the canonical kit.",
+      "impact": "Teams must start from equivalent starter notebooks, fixtures, and instructions.",
+      "path": "acceptedTeams[1].workspace.starterKitChecksum",
+      "remediation": "Re-issue the canonical starter kit and refresh the checksum evidence.",
+      "owner": "platform ops"
+    },
+    {
+      "code": "SUPPORT_CHANNEL_VISIBILITY_MISSING",
+      "severity": "high",
+      "message": "team-beta cannot see every required support channel.",
+      "impact": "Support-channel asymmetry changes how quickly teams can resolve setup blockers.",
+      "path": "acceptedTeams[1].support.channels",
+      "remediation": "Add the team to all required support channels before clock start.",
+      "owner": "community ops"
+    },
+    {
+      "code": "WORKSPACE_TEMPLATE_MISMATCH",
+      "severity": "high",
+      "message": "team-beta received template workspace-template-2026.05 instead of workspace-template-2026.06.",
+      "impact": "Different starter templates can change solver workload and reproducibility.",
+      "path": "acceptedTeams[1].workspace.templateVersion",
+      "remediation": "Rebuild the workspace from the canonical challenge template.",
+      "owner": "platform ops"
+    },
+    {
+      "code": "SETUP_BLOCKER_RESPONSE_AFTER_CLOCK_START",
+      "severity": "warning",
+      "message": "team-beta still had a setup blocker when the proposed clock started.",
+      "impact": "Clock fairness is weaker if setup support starts after the challenge window begins.",
+      "path": "acceptedTeams[1].support.firstResponseAt",
+      "remediation": "Pause or delay the clock until setup blockers receive an actionable response.",
+      "owner": "community ops"
+    },
+    {
+      "code": "UNAPPROVED_EXTRA_TOOL_ACCESS",
+      "severity": "warning",
+      "message": "team-alpha has extra tool access not listed in the canonical onboarding plan.",
+      "impact": "Extra tools may be fine, but they should be explicitly approved or granted to all teams.",
+      "path": "acceptedTeams[0].workspace.tools",
+      "remediation": "Approve the extra tools as non-material or normalize tool access across teams.",
+      "owner": "challenge admin"
+    }
+  ],
+  "nextClockStart": null,
+  "teamReadiness": [
+    {
+      "teamId": "team-alpha",
+      "readyAt": "2026-06-03T14:00:00.000Z",
+      "toolsReady": true,
+      "supportReady": true,
+      "starterKitChecksum": "sha256:starter-clean-abc123"
+    },
+    {
+      "teamId": "team-beta",
+      "readyAt": "2026-06-03T15:35:00.000Z",
+      "toolsReady": false,
+      "supportReady": false,
+      "starterKitChecksum": "sha256:old-starter-kit"
+    },
+    {
+      "teamId": "team-gamma",
+      "readyAt": null,
+      "toolsReady": true,
+      "supportReady": true,
+      "starterKitChecksum": "sha256:starter-clean-abc123"
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "CLOCK_START_BEFORE_ALL_TEAMS_READY",
+      "owner": "challenge admin",
+      "action": "Move the clock start to the latest ready timestamp plus any published buffer."
+    },
+    {
+      "code": "WORKSPACE_NOT_READY",
+      "owner": "platform ops",
+      "action": "Provision the workspace and record the ready timestamp before starting the clock."
+    },
+    {
+      "code": "WORKSPACE_READY_AFTER_CLOCK_START",
+      "owner": "challenge admin",
+      "action": "Delay the submission clock until this workspace and all peers are ready."
+    },
+    {
+      "code": "COMPUTE_QUOTA_BELOW_BASELINE",
+      "owner": "platform ops",
+      "action": "Top up compute quota before opening the submission clock."
+    },
+    {
+      "code": "REQUIRED_TOOL_ACCESS_MISSING",
+      "owner": "platform ops",
+      "action": "Grant all required tools before starting or resuming the submission clock."
+    },
+    {
+      "code": "STARTER_KIT_CHECKSUM_MISMATCH",
+      "owner": "platform ops",
+      "action": "Re-issue the canonical starter kit and refresh the checksum evidence."
+    },
+    {
+      "code": "SUPPORT_CHANNEL_VISIBILITY_MISSING",
+      "owner": "community ops",
+      "action": "Add the team to all required support channels before clock start."
+    },
+    {
+      "code": "WORKSPACE_TEMPLATE_MISMATCH",
+      "owner": "platform ops",
+      "action": "Rebuild the workspace from the canonical challenge template."
+    },
+    {
+      "code": "SETUP_BLOCKER_RESPONSE_AFTER_CLOCK_START",
+      "owner": "community ops",
+      "action": "Pause or delay the clock until setup blockers receive an actionable response."
+    },
+    {
+      "code": "UNAPPROVED_EXTRA_TOOL_ACCESS",
+      "owner": "challenge admin",
+      "action": "Approve the extra tools as non-material or normalize tool access across teams."
+    }
+  ],
+  "fingerprint": "9f4574ea48b7b85b"
+}

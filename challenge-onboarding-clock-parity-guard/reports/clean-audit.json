@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-06-01T10:30:00.000Z",
+  "status": "READY",
+  "summary": "All 2 accepted team(s) have equivalent starter workspace, tool, quota, and support access before clock start.",
+  "findingCounts": {},
+  "findings": [],
+  "nextClockStart": "2026-06-03T14:58:00.000Z",
+  "teamReadiness": [
+    {
+      "teamId": "team-alpha",
+      "readyAt": "2026-06-03T14:05:00.000Z",
+      "toolsReady": true,
+      "supportReady": true,
+      "starterKitChecksum": "sha256:starter-clean-abc123"
+    },
+    {
+      "teamId": "team-beta",
+      "readyAt": "2026-06-03T14:28:00.000Z",
+      "toolsReady": true,
+      "supportReady": true,
+      "starterKitChecksum": "sha256:starter-clean-abc123"
+    }
+  ],
+  "remediationActions": [],
+  "fingerprint": "b4bf16e56ac7d065"
+}

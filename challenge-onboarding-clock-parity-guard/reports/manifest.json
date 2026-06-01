@@ -1,0 +1,28 @@
+{
+  "module": "challenge-onboarding-clock-parity-guard",
+  "issue": 18,
+  "generatedAt": "2026-06-01T10:30:00.000Z",
+  "scenarios": [
+    {
+      "name": "clean",
+      "status": "READY",
+      "fingerprint": "b4bf16e56ac7d065",
+      "findings": 0,
+      "nextClockStart": "2026-06-03T14:58:00.000Z"
+    },
+    {
+      "name": "risky",
+      "status": "HOLD",
+      "fingerprint": "9f4574ea48b7b85b",
+      "findings": 10,
+      "nextClockStart": null
+    }
+  ],
+  "artifacts": [
+    "reports/clean-audit.json",
+    "reports/risky-audit.json",
+    "reports/risky-review.md",
+    "reports/summary.svg",
+    "reports/demo.mp4"
+  ]
+}

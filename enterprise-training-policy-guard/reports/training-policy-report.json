@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-06-01T20:13:21.063Z",
+  "scenarios": [
+    {
+      "actionId": "enterprise-export-001",
+      "projectId": "proj-open-clinical-reuse",
+      "department": "Clinical Informatics",
+      "decision": "release",
+      "checkedResearchers": 2,
+      "blockerCount": 0,
+      "revisionCount": 0,
+      "findings": [],
+      "reviewerSummary": "All required enterprise training and policy acknowledgements are current."
+    },
+    {
+      "actionId": "enterprise-export-002",
+      "projectId": "proj-restricted-genomics",
+      "department": "Translational Genomics",
+      "decision": "hold",
+      "checkedResearchers": 2,
+      "blockerCount": 4,
+      "revisionCount": 2,
+      "findings": [
+        {
+          "code": "POLICY_ACK_STALE",
+          "severity": "revise",
+          "researcherId": "u-200",
+          "message": "u-200 acknowledged data-use more than 180 days ago.",
+          "remediation": "Refresh data-use acknowledgement and attach the receipt."
+        },
+        {
+          "code": "POLICY_ACK_MISSING",
+          "severity": "block",
+          "researcherId": "u-200",
+          "message": "u-200 has not acknowledged required policy ai-review.",
+          "remediation": "Collect ai-review acknowledgement before privileged_export."
+        },
+        {
+          "code": "TRAINING_EXPIRED",
+          "severity": "block",
+          "researcherId": "u-200",
+          "message": "u-200 has expired human-subjects training.",
+          "remediation": "Renew human-subjects training and upload a current certificate."
+        },
+        {
+          "code": "TRAINING_RECEIPT_MISSING",
+          "severity": "revise",
+          "researcherId": "u-200",
+          "message": "u-200 has secure-export completion without evidence receipt.",
+          "remediation": "Attach a signed receipt for secure-export."
+        },
+        {
+          "code": "POLICY_ACK_MISSING",
+          "severity": "block",
+          "researcherId": "u-201",
+          "message": "u-201 has not acknowledged required policy export-control.",
+          "remediation": "Collect export-control acknowledgement before privileged_export."
+        },
+        {
+          "code": "TRAINING_MISSING",
+          "severity": "block",
+          "researcherId": "u-201",
+          "message": "u-201 is missing required training secure-export.",
+          "remediation": "Complete secure-export training before privileged access is released."
+        }
+      ],
+      "reviewerSummary": "Hold or revise before enterprise export/privileged access continues."
+    }
+  ]
+}

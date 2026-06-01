@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-06-01T11:00:00.000Z",
+  "status": "READY",
+  "summary": "All 1 user probation record(s) are eligible for transparent, capped reputation re-entry.",
+  "findingCounts": {},
+  "findings": [],
+  "reinstatementDecisions": [
+    {
+      "userId": "researcher-alpha",
+      "decision": "ALLOW",
+      "reasonCodes": [],
+      "reputationAccrual": "eligible"
+    }
+  ],
+  "remediationActions": [],
+  "fingerprint": "a64ef993078090a8"
+}

@@ -1,0 +1,252 @@
+{
+  "generatedAt": "2026-06-01T11:00:00.000Z",
+  "status": "HOLD",
+  "summary": "Reputation reinstatement is hold with 2 critical, 7 high, and 4 warning finding(s).",
+  "findingCounts": {
+    "critical": 2,
+    "high": 7,
+    "warning": 4
+  },
+  "findings": [
+    {
+      "code": "PROBATION_WINDOW_ACTIVE",
+      "severity": "critical",
+      "message": "researcher-beta is still inside the minimum probation window.",
+      "impact": "Reputation accrual and badge/leaderboard re-entry should remain paused until the cooling-off period ends.",
+      "path": "users[0].probation.startedAt",
+      "remediation": "Wait until 2026-06-19T12:00:00.000Z before reinstatement review.",
+      "owner": "moderation lead",
+      "userId": "researcher-beta"
+    },
+    {
+      "code": "REPUTATION_DELTA_DURING_PROBATION",
+      "severity": "critical",
+      "message": "researcher-beta received 2 reputation delta(s) during probation.",
+      "impact": "Probation should pause reputation accrual, badges, and leaderboard effects.",
+      "path": "users[0].reputationEvents",
+      "remediation": "Reverse or quarantine probation-window reputation deltas before reinstatement.",
+      "owner": "reputation admin",
+      "userId": "researcher-beta"
+    },
+    {
+      "code": "OPEN_APPEAL_BLOCKS_REINSTATEMENT",
+      "severity": "high",
+      "message": "researcher-beta has an unresolved appeal tied to the probation record.",
+      "impact": "Profiles should not receive reputation deltas while the moderation outcome is still contested.",
+      "path": "users[0].probation.appealStatus",
+      "remediation": "Resolve the appeal or keep reputation accrual paused.",
+      "owner": "appeals moderator",
+      "userId": "researcher-beta"
+    },
+    {
+      "code": "PROBATION_RECORD_INCOMPLETE",
+      "severity": "high",
+      "message": "researcher-gamma has an incomplete probation record.",
+      "impact": "Probation holds should explain the moderation basis and start time.",
+      "path": "users[1].probation",
+      "remediation": "Attach reason code, start timestamp, and moderation receipt.",
+      "owner": "moderation lead",
+      "userId": "researcher-gamma"
+    },
+    {
+      "code": "REINSTATEMENT_REQUEST_MISSING",
+      "severity": "high",
+      "message": "researcher-gamma has no reinstatement request timestamp.",
+      "impact": "The system cannot prove that a contributor asked to re-enter reputation accrual.",
+      "path": "users[1].reinstatement.requestedAt",
+      "remediation": "Record a reinstatement request and reviewer packet.",
+      "owner": "community manager",
+      "userId": "researcher-gamma"
+    },
+    {
+      "code": "REINSTATEMENT_REVIEW_QUORUM_MISSING",
+      "severity": "high",
+      "message": "researcher-beta lacks the required reinstatement reviewer quorum.",
+      "impact": "Single-reviewer reinstatement can undermine moderation consistency.",
+      "path": "users[0].reinstatement.reviewers",
+      "remediation": "Add independent moderator approvals before re-entry.",
+      "owner": "moderation lead",
+      "userId": "researcher-beta"
+    },
+    {
+      "code": "REINSTATEMENT_REVIEW_QUORUM_MISSING",
+      "severity": "high",
+      "message": "researcher-gamma lacks the required reinstatement reviewer quorum.",
+      "impact": "Single-reviewer reinstatement can undermine moderation consistency.",
+      "path": "users[1].reinstatement.reviewers",
+      "remediation": "Add independent moderator approvals before re-entry.",
+      "owner": "moderation lead",
+      "userId": "researcher-gamma"
+    },
+    {
+      "code": "REMEDIATION_ACTIONS_INCOMPLETE",
+      "severity": "high",
+      "message": "researcher-beta has not completed required remediation action(s): updated-profile-attestation.",
+      "impact": "Reinstatement should require verifiable remediation before reputation signals resume.",
+      "path": "users[0].reinstatement.completedActions",
+      "remediation": "Complete and attach evidence for all required remediation actions.",
+      "owner": "community manager",
+      "userId": "researcher-beta"
+    },
+    {
+      "code": "REMEDIATION_ACTIONS_INCOMPLETE",
+      "severity": "high",
+      "message": "researcher-gamma has not completed required remediation action(s): moderation-acknowledgement, updated-profile-attestation.",
+      "impact": "Reinstatement should require verifiable remediation before reputation signals resume.",
+      "path": "users[1].reinstatement.completedActions",
+      "remediation": "Complete and attach evidence for all required remediation actions.",
+      "owner": "community manager",
+      "userId": "researcher-gamma"
+    },
+    {
+      "code": "REENTRY_SCORE_CAP_TOO_HIGH",
+      "severity": "warning",
+      "message": "researcher-beta re-entry score cap is above policy.",
+      "impact": "Gradual re-entry protects leaderboards and badges from immediate trust jumps.",
+      "path": "users[0].reinstatement.scoreCapPercent",
+      "remediation": "Apply the policy score cap until the post-reinstatement review window closes.",
+      "owner": "reputation admin",
+      "userId": "researcher-beta"
+    },
+    {
+      "code": "REENTRY_SCORE_CAP_TOO_HIGH",
+      "severity": "warning",
+      "message": "researcher-gamma re-entry score cap is above policy.",
+      "impact": "Gradual re-entry protects leaderboards and badges from immediate trust jumps.",
+      "path": "users[1].reinstatement.scoreCapPercent",
+      "remediation": "Apply the policy score cap until the post-reinstatement review window closes.",
+      "owner": "reputation admin",
+      "userId": "researcher-gamma"
+    },
+    {
+      "code": "REINSTATEMENT_SUMMARY_VISIBILITY_UNSAFE",
+      "severity": "warning",
+      "message": "researcher-beta reinstatement summary is not configured for public-redacted visibility.",
+      "impact": "Community timelines need transparency without exposing private moderation notes.",
+      "path": "users[0].reinstatement.summaryVisibility",
+      "remediation": "Publish a redacted reinstatement receipt and keep private evidence internal.",
+      "owner": "community manager",
+      "userId": "researcher-beta"
+    },
+    {
+      "code": "REINSTATEMENT_SUMMARY_VISIBILITY_UNSAFE",
+      "severity": "warning",
+      "message": "researcher-gamma reinstatement summary is not configured for public-redacted visibility.",
+      "impact": "Community timelines need transparency without exposing private moderation notes.",
+      "path": "users[1].reinstatement.summaryVisibility",
+      "remediation": "Publish a redacted reinstatement receipt and keep private evidence internal.",
+      "owner": "community manager",
+      "userId": "researcher-gamma"
+    }
+  ],
+  "reinstatementDecisions": [
+    {
+      "userId": "researcher-beta",
+      "decision": "HOLD",
+      "reasonCodes": [
+        "PROBATION_WINDOW_ACTIVE",
+        "REPUTATION_DELTA_DURING_PROBATION",
+        "OPEN_APPEAL_BLOCKS_REINSTATEMENT",
+        "REINSTATEMENT_REVIEW_QUORUM_MISSING",
+        "REMEDIATION_ACTIONS_INCOMPLETE",
+        "REENTRY_SCORE_CAP_TOO_HIGH",
+        "REINSTATEMENT_SUMMARY_VISIBILITY_UNSAFE"
+      ],
+      "reputationAccrual": "paused"
+    },
+    {
+      "userId": "researcher-gamma",
+      "decision": "HOLD",
+      "reasonCodes": [
+        "PROBATION_RECORD_INCOMPLETE",
+        "REINSTATEMENT_REQUEST_MISSING",
+        "REINSTATEMENT_REVIEW_QUORUM_MISSING",
+        "REMEDIATION_ACTIONS_INCOMPLETE",
+        "REENTRY_SCORE_CAP_TOO_HIGH",
+        "REINSTATEMENT_SUMMARY_VISIBILITY_UNSAFE"
+      ],
+      "reputationAccrual": "eligible"
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "PROBATION_WINDOW_ACTIVE",
+      "userId": "researcher-beta",
+      "owner": "moderation lead",
+      "action": "Wait until 2026-06-19T12:00:00.000Z before reinstatement review."
+    },
+    {
+      "code": "REPUTATION_DELTA_DURING_PROBATION",
+      "userId": "researcher-beta",
+      "owner": "reputation admin",
+      "action": "Reverse or quarantine probation-window reputation deltas before reinstatement."
+    },
+    {
+      "code": "OPEN_APPEAL_BLOCKS_REINSTATEMENT",
+      "userId": "researcher-beta",
+      "owner": "appeals moderator",
+      "action": "Resolve the appeal or keep reputation accrual paused."
+    },
+    {
+      "code": "PROBATION_RECORD_INCOMPLETE",
+      "userId": "researcher-gamma",
+      "owner": "moderation lead",
+      "action": "Attach reason code, start timestamp, and moderation receipt."
+    },
+    {
+      "code": "REINSTATEMENT_REQUEST_MISSING",
+      "userId": "researcher-gamma",
+      "owner": "community manager",
+      "action": "Record a reinstatement request and reviewer packet."
+    },
+    {
+      "code": "REINSTATEMENT_REVIEW_QUORUM_MISSING",
+      "userId": "researcher-beta",
+      "owner": "moderation lead",
+      "action": "Add independent moderator approvals before re-entry."
+    },
+    {
+      "code": "REINSTATEMENT_REVIEW_QUORUM_MISSING",
+      "userId": "researcher-gamma",
+      "owner": "moderation lead",
+      "action": "Add independent moderator approvals before re-entry."
+    },
+    {
+      "code": "REMEDIATION_ACTIONS_INCOMPLETE",
+      "userId": "researcher-beta",
+      "owner": "community manager",
+      "action": "Complete and attach evidence for all required remediation actions."
+    },
+    {
+      "code": "REMEDIATION_ACTIONS_INCOMPLETE",
+      "userId": "researcher-gamma",
+      "owner": "community manager",
+      "action": "Complete and attach evidence for all required remediation actions."
+    },
+    {
+      "code": "REENTRY_SCORE_CAP_TOO_HIGH",
+      "userId": "researcher-beta",
+      "owner": "reputation admin",
+      "action": "Apply the policy score cap until the post-reinstatement review window closes."
+    },
+    {
+      "code": "REENTRY_SCORE_CAP_TOO_HIGH",
+      "userId": "researcher-gamma",
+      "owner": "reputation admin",
+      "action": "Apply the policy score cap until the post-reinstatement review window closes."
+    },
+    {
+      "code": "REINSTATEMENT_SUMMARY_VISIBILITY_UNSAFE",
+      "userId": "researcher-beta",
+      "owner": "community manager",
+      "action": "Publish a redacted reinstatement receipt and keep private evidence internal."
+    },
+    {
+      "code": "REINSTATEMENT_SUMMARY_VISIBILITY_UNSAFE",
+      "userId": "researcher-gamma",
+      "owner": "community manager",
+      "action": "Publish a redacted reinstatement receipt and keep private evidence internal."
+    }
+  ],
+  "fingerprint": "efef8995221f8246"
+}

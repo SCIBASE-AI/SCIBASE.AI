@@ -1,0 +1,26 @@
+{
+  "module": "reputation-probation-reinstatement-guard",
+  "issue": 15,
+  "generatedAt": "2026-06-01T11:00:00.000Z",
+  "scenarios": [
+    {
+      "name": "clean",
+      "status": "READY",
+      "fingerprint": "a64ef993078090a8",
+      "findings": 0
+    },
+    {
+      "name": "risky",
+      "status": "HOLD",
+      "fingerprint": "efef8995221f8246",
+      "findings": 13
+    }
+  ],
+  "artifacts": [
+    "reports/clean-audit.json",
+    "reports/risky-audit.json",
+    "reports/risky-review.md",
+    "reports/summary.svg",
+    "reports/demo.mp4"
+  ]
+}

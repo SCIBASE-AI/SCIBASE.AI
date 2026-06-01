@@ -1,0 +1,7 @@
+Demo: Model Assumption Diagnostics Assistant
+Manuscript: SCI-MODEL-ASSUMPTION-001
+Decision: hold-ai-review
+Risk score: 100/100
+Blockers: 4
+Warnings: 7
+Reviewer action: hold AI review until model family, separation, sensitivity, and diagnostic handoff blockers are fixed.

@@ -1,0 +1,119 @@
+{
+  "manuscriptId": "SCI-MODEL-ASSUMPTION-001",
+  "title": "Predicting wet-lab replication yield from multi-site assay metadata",
+  "decision": "hold-ai-review",
+  "riskScore": 100,
+  "summary": {
+    "blockCount": 4,
+    "warnCount": 7,
+    "findingCount": 11
+  },
+  "findings": [
+    {
+      "code": "LOW_EVENTS_PER_PREDICTOR",
+      "severity": "block",
+      "message": "The event-per-predictor ratio is too low for stable adjusted effects.",
+      "evidence": {
+        "eventCount": 18,
+        "predictors": 14,
+        "eventsPerPredictor": 1.29
+      },
+      "remediation": "Reduce predictors, use penalization, or present the model as exploratory until stability is demonstrated."
+    },
+    {
+      "code": "MODEL_FAMILY_OUTCOME_MISMATCH",
+      "severity": "block",
+      "message": "Binary outcomes should not be released through an identity-link linear model without an explicit sensitivity justification.",
+      "evidence": {
+        "outcomeType": "binary",
+        "family": "linear-regression",
+        "linkFunction": "identity"
+      },
+      "remediation": "Refit with a logistic or mixed-effects logistic model, or add a documented sensitivity analysis before AI review conclusions are trusted."
+    },
+    {
+      "code": "REVIEW_PACKET_INCOMPLETE",
+      "severity": "block",
+      "message": "The reviewer handoff is missing sensitivity evidence or links to diagnostics.",
+      "evidence": {
+        "sensitivityModelIncluded": false,
+        "reviewerPacketLinksDiagnostics": false
+      },
+      "remediation": "Hold automated peer-review approval until the handoff packet includes diagnostics and sensitivity results."
+    },
+    {
+      "code": "SEPARATION_RISK",
+      "severity": "block",
+      "message": "Separation indicators suggest coefficient estimates may be unstable or infinite.",
+      "evidence": {
+        "completeSeparationIndicators": 2
+      },
+      "remediation": "Use penalized logistic regression or exact methods and report the separation diagnostic in the reviewer packet."
+    },
+    {
+      "code": "AUTOCORRELATION_RISK",
+      "severity": "warn",
+      "message": "Residual autocorrelation may invalidate nominal uncertainty estimates.",
+      "evidence": {
+        "durbinWatson": 1.12
+      },
+      "remediation": "Model temporal or batch correlation explicitly, or use clustered uncertainty estimates."
+    },
+    {
+      "code": "CALIBRATION_MISSING",
+      "severity": "warn",
+      "message": "Binary prediction claims need calibration evidence before reviewer summaries treat them as reliable.",
+      "evidence": {
+        "calibrationReported": false
+      },
+      "remediation": "Add calibration curve, Brier score, or held-out calibration summary."
+    },
+    {
+      "code": "HETEROSCEDASTICITY_UNHANDLED",
+      "severity": "warn",
+      "message": "Residual variance is not constant and no robust standard errors were declared.",
+      "evidence": {
+        "breuschPaganPValue": 0.004
+      },
+      "remediation": "Report robust or clustered standard errors and flag affected inference in the limitations section."
+    },
+    {
+      "code": "MULTICOLLINEARITY_HIGH",
+      "severity": "warn",
+      "message": "Predictors show high variance inflation, so independent-effect claims may be overstated.",
+      "evidence": {
+        "maxVarianceInflationFactor": 12.6
+      },
+      "remediation": "Collapse correlated predictors, use regularization, or downgrade independent-effect language."
+    },
+    {
+      "code": "OVERCONFIDENT_ASSUMPTION_CLAIM",
+      "severity": "warn",
+      "message": "The manuscript claims diagnostics were considered but does not disclose assumption risk in limitations.",
+      "evidence": {
+        "limitationTextMentionsAssumptionRisk": false
+      },
+      "remediation": "Add limitation language that names the specific modeling assumptions still under review."
+    },
+    {
+      "code": "RESIDUAL_OUTLIER_PRESSURE",
+      "severity": "warn",
+      "message": "Residual skew or influential outliers are large enough to require sensitivity reporting.",
+      "evidence": {
+        "residualSkew": 1.8,
+        "outlierStudentizedResidualMax": 4.9
+      },
+      "remediation": "Add influence diagnostics, robust fit sensitivity, and a reviewer-facing note describing impacted claims."
+    },
+    {
+      "code": "TOO_FEW_CLUSTERS",
+      "severity": "warn",
+      "message": "Cluster-adjusted claims are fragile with very few clusters.",
+      "evidence": {
+        "clusterCount": 3,
+        "smallestClusterSize": 6
+      },
+      "remediation": "Report cluster limitations and avoid generalizing beyond the observed sites or batches."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430">
+  <rect width="920" height="430" fill="#111827"/>
+  <text x="42" y="66" fill="#f8fafc" font-family="Arial" font-size="32">Researcher Affiliation Attestation Guard</text>
+  <text x="42" y="112" fill="#cbd5e1" font-family="Arial" font-size="20">R. Example / public</text>
+  <rect x="42" y="150" width="210" height="80" rx="8" fill="#b91c1c"/>
+  <text x="68" y="201" fill="#fff" font-family="Arial" font-size="30">HOLD</text>
+  <text x="42" y="280" fill="#e5e7eb" font-family="Arial" font-size="22">Public affiliations: 3</text>
+  <text x="42" y="320" fill="#fecaca" font-family="Arial" font-size="20">High: 8</text>
+  <text x="172" y="320" fill="#fed7aa" font-family="Arial" font-size="20">Medium: 4</text>
+  <text x="342" y="320" fill="#bfdbfe" font-family="Arial" font-size="20">Low: 0</text>
+  <text x="42" y="374" fill="#94a3b8" font-family="Arial" font-size="18">Synthetic profile packets only. No real ORCID, SSO, grant, or email calls.</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "name": "researcher-affiliation-attestation-guard",
+  "version": "1.0.0",
+  "description": "Researcher affiliation and grant attestation guard for SCIBASE user/project management",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "python demo_video.py"
+  },
+  "license": "MIT"
+}

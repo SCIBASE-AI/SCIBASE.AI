@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-label="Subscription quota rollover guard summary">
+  <rect width="920" height="420" fill="#111827"/>
+  <text x="52" y="68" fill="#f9fafb" font-family="Arial, sans-serif" font-size="30" font-weight="700">Subscription Quota Rollover Guard</text>
+  <text x="52" y="108" fill="#d1d5db" font-family="Arial, sans-serif" font-size="17">LAB-QUOTA-1042 · 2026-06</text>
+  <rect x="52" y="144" width="760" height="34" rx="5" fill="#1f2937" stroke="#374151"/>
+  <rect x="52" y="144" width="760" height="34" rx="5" fill="#dc2626"/>
+  <text x="835" y="169" fill="#f9fafb" font-family="Arial, sans-serif" font-size="20" text-anchor="end">100/100</text>
+  <g transform="translate(52 230)">
+    <rect width="230" height="110" rx="8" fill="#1f2937"/>
+    <text x="24" y="44" fill="#fecaca" font-family="Arial, sans-serif" font-size="30" font-weight="700">6</text>
+    <text x="24" y="78" fill="#d1d5db" font-family="Arial, sans-serif" font-size="16">invoice blockers</text>
+  </g>
+  <g transform="translate(318 230)">
+    <rect width="230" height="110" rx="8" fill="#1f2937"/>
+    <text x="24" y="44" fill="#fde68a" font-family="Arial, sans-serif" font-size="30" font-weight="700">3900</text>
+    <text x="24" y="78" fill="#d1d5db" font-family="Arial, sans-serif" font-size="16">applied rollover units</text>
+  </g>
+  <g transform="translate(584 230)">
+    <rect width="230" height="110" rx="8" fill="#1f2937"/>
+    <text x="24" y="44" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="30" font-weight="700">1300</text>
+    <text x="24" y="78" fill="#d1d5db" font-family="Arial, sans-serif" font-size="16">expected overage units</text>
+  </g>
+</svg>

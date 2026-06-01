@@ -1,0 +1,12 @@
+{
+  "name": "subscription-quota-rollover-guard",
+  "version": "1.0.0",
+  "description": "Synthetic quota rollover audit guard for SCIBASE revenue infrastructure.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "python demo_video.py"
+  }
+}

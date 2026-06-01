@@ -1,0 +1,91 @@
+{
+  "accountId": "LAB-QUOTA-1042",
+  "billingCycle": "2026-06",
+  "decision": "hold-invoice",
+  "riskScore": 100,
+  "summary": {
+    "blockCount": 6,
+    "warnCount": 1,
+    "findingCount": 7,
+    "appliedRolloverUnits": 3900,
+    "expectedOverageUnits": 1300
+  },
+  "findings": [
+    {
+      "code": "DOWNGRADE_CARRY_LIMIT_EXCEEDED",
+      "severity": "block",
+      "message": "A downgraded account is applying more carried quota than the downgrade policy allows.",
+      "evidence": {
+        "planChangedFrom": "Lab Pro",
+        "planChangedTo": "Individual Pro",
+        "rolloverAppliedUnits": 3900,
+        "downgradeCarryLimitUnits": 1000
+      },
+      "remediation": "Apply the downgrade carry limit or hold the invoice for contract review."
+    },
+    {
+      "code": "DUPLICATE_ROLLOVER_LOT",
+      "severity": "block",
+      "message": "The same rollover lot appears more than once and could be carried forward twice.",
+      "evidence": {
+        "lotId": "duplicate-may"
+      },
+      "remediation": "Deduplicate rollover lots by immutable lot id before invoice generation."
+    },
+    {
+      "code": "EXPIRED_ROLLOVER_APPLIED",
+      "severity": "block",
+      "message": "Expired quota was applied to the current invoice.",
+      "evidence": {
+        "lotId": "legacy-feb",
+        "expiresAfterCycle": "2026-04",
+        "billingCycle": "2026-06",
+        "appliedUnits": 900
+      },
+      "remediation": "Remove expired lots from available balance and route the invoice to finance review."
+    },
+    {
+      "code": "MISSING_FINANCE_HOLD",
+      "severity": "block",
+      "message": "The invoice preview is not on hold despite quota rollover blockers.",
+      "evidence": {
+        "reviewerHold": false
+      },
+      "remediation": "Place the invoice on finance hold until quota carry-forward and overage lines reconcile."
+    },
+    {
+      "code": "OVERAGE_DOUBLE_BILLING_RISK",
+      "severity": "block",
+      "message": "Invoice overage units do not subtract applied rollover correctly.",
+      "evidence": {
+        "usageUnits": 11200,
+        "includedUnits": 6000,
+        "rolloverAppliedUnits": 3900,
+        "invoiceOverageUnits": 5200,
+        "expectedOverageUnits": 1300
+      },
+      "remediation": "Recompute overage after rollover application to prevent double billing."
+    },
+    {
+      "code": "ROLLOVER_CAP_EXCEEDED",
+      "severity": "block",
+      "message": "Prior-cycle unused quota exceeds the contractual rollover cap.",
+      "evidence": {
+        "carryForwardUnits": 3900,
+        "rolloverCapUnits": 3000
+      },
+      "remediation": "Clamp carry-forward units to the plan cap and regenerate the invoice preview before release."
+    },
+    {
+      "code": "UNAPPROVED_NEGATIVE_ADJUSTMENT",
+      "severity": "warn",
+      "message": "Negative quota adjustments exist without finance approval.",
+      "evidence": {
+        "adjustmentIds": [
+          "manual-negative-1"
+        ]
+      },
+      "remediation": "Require finance approval before negative units affect quota or invoice totals."
+    }
+  ]
+}

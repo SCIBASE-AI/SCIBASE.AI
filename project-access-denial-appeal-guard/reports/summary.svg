@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Project access denial appeal guard summary">
+<rect width="960" height="540" fill="#111827"/>
+<rect x="48" y="48" width="864" height="444" rx="12" fill="#f8fafc"/>
+<text x="82" y="118" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#111827">Access denial appeal guard</text>
+<text x="82" y="162" font-family="Arial, sans-serif" font-size="19" fill="#475569">Status HOLD - fingerprint fde2d21c50c6dd89</text>
+<rect x="82" y="214" width="90" height="62" fill="#16794c"/>
+<rect x="172" y="214" width="84" height="62" fill="#a15c00"/>
+<rect x="256" y="214" width="330" height="62" fill="#a11b32"/>
+<text x="96" y="254" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">APPEAL REVIEW</text>
+<text x="82" y="340" font-family="Arial, sans-serif" font-size="22" fill="#334155">Critical/high blockers: 12</text>
+<text x="82" y="380" font-family="Arial, sans-serif" font-size="22" fill="#334155">Appeals checked: 1</text>
+<text x="82" y="420" font-family="Arial, sans-serif" font-size="22" fill="#334155">Warning evidence gaps: 2</text>
+</svg>

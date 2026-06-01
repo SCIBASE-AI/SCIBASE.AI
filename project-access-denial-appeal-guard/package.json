@@ -1,0 +1,21 @@
+{
+  "name": "project-access-denial-appeal-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic project access denial and appeal guard for scientific user/project management workflows.",
+  "main": "index.js",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && node --check make-demo-video.js",
+    "test": "node test.js",
+    "demo": "node demo.js && node make-demo-video.js",
+    "verify-video": "ffprobe -v error -show_entries stream=codec_name,width,height,duration -of default=nokey=1:noprint_wrappers=1 reports/demo.mp4"
+  },
+  "keywords": [
+    "access-control",
+    "appeals",
+    "user-management",
+    "audit",
+    "synthetic"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,266 @@
+{
+  "generatedAt": "2026-06-01T10:51:17.052Z",
+  "status": "HOLD",
+  "summary": "Hold final access decisions: 12 critical or high denial/appeal governance blocker(s) need remediation.",
+  "findingCounts": {
+    "critical": 3,
+    "high": 9,
+    "warning": 2
+  },
+  "findings": [
+    {
+      "code": "APPROVAL_WITH_MISSING_RESTRICTED_EVIDENCE",
+      "severity": "critical",
+      "message": "AR-2002 approves restricted human-data access while evidence is missing: duaActive, irbApproval.",
+      "evidence": "Restricted access appeals cannot override training, DUA, or IRB prerequisites.",
+      "path": "accessRequests[0].appeal.evidence",
+      "remediation": "Hold approval until all restricted-data prerequisites are present and current.",
+      "owner": "data steward",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "PRIVATE_APPEAL_NOTE_EXPOSED",
+      "severity": "critical",
+      "message": "AR-2002 appeal includes private notes without requester-safe redaction.",
+      "evidence": "Appeal responses must not reveal private collaborator notes or hidden institutional risk comments.",
+      "path": "accessRequests[0].appeal.redactedForRequester",
+      "remediation": "Redact private notes and publish only requester-safe appeal rationale.",
+      "owner": "privacy reviewer",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "PRIVATE_DENIAL_NOTE_EXPOSED",
+      "severity": "critical",
+      "message": "AR-2002 has private denial notes without requester-safe redaction.",
+      "evidence": "Denied-access notices must not leak hidden reviewer comments, protected collaborator details, or institutional security notes.",
+      "path": "accessRequests[0].denial.redactedForRequester",
+      "remediation": "Redact private notes and expose only a requester-safe reason code plus remediation checklist.",
+      "owner": "privacy reviewer",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "APPEAL_REVIEWER_NOT_INDEPENDENT",
+      "severity": "high",
+      "message": "AR-2002 appeal is reviewed by the same actor who denied access.",
+      "evidence": "Appeals require independence from the original denial decision.",
+      "path": "accessRequests[0].appeal.reviewerId",
+      "remediation": "Assign an independent data steward, institution admin, or ethics reviewer.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "APPEAL_REVIEWER_ROLE_NOT_ELIGIBLE",
+      "severity": "high",
+      "message": "AR-2002 appeal reviewer role viewer is not eligible.",
+      "evidence": "Eligible appeal reviewer roles: data-steward, institution-admin, ethics-reviewer.",
+      "path": "accessRequests[0].appeal.reviewerRole",
+      "remediation": "Assign a reviewer with an eligible governance role or document a policy exception.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "APPEAL_WINDOW_EXPIRED",
+      "severity": "high",
+      "message": "AR-2002 appeal was submitted after the 14-day appeal window.",
+      "evidence": "Late appeals need explicit exception approval before a denial decision is changed.",
+      "path": "accessRequests[0].appeal.submittedAt",
+      "remediation": "Route to institution-admin exception review or keep the denial final with a clear late-appeal receipt.",
+      "owner": "institution admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "BROAD_RESTRICTED_SCOPE_REQUEST",
+      "severity": "high",
+      "message": "AR-2002 requests broad access to a non-public project.",
+      "evidence": "Restricted projects should appeal access at the narrowest object and permission scope that supports the research need.",
+      "path": "accessRequests[0].requestedObjects",
+      "remediation": "Replace all-project scope with specific datasets, notebooks, manuscripts, or review threads and least-privilege permissions.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "DENIAL_RATIONALE_TOO_THIN",
+      "severity": "high",
+      "message": "AR-2002 has an insufficient denial rationale.",
+      "evidence": "The user-facing decision needs enough context to be fair, appealable, and auditable.",
+      "path": "accessRequests[0].denial.rationale",
+      "remediation": "Document the missing requirement, affected object scope, and remediation path.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "DENIAL_REASON_CODE_MISSING",
+      "severity": "high",
+      "message": "AR-2002 has no denial reason code.",
+      "evidence": "Researchers need a concrete denial basis before they can appeal or remediate access gaps.",
+      "path": "accessRequests[0].denial.reasonCode",
+      "remediation": "Add a stable denial reason code such as TRAINING_EXPIRED, DUA_MISSING, IRB_SCOPE_MISMATCH, or OBJECT_SCOPE_TOO_BROAD.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "REQUIRED_APPEAL_EVIDENCE_MISSING",
+      "severity": "high",
+      "message": "AR-2002 is missing required evidence duaActive for restricted_human access.",
+      "evidence": "Appeal outcomes must prove the requester satisfied the project data-access prerequisites.",
+      "path": "accessRequests[0].appeal.evidence.duaActive",
+      "remediation": "Attach valid duaActive evidence or keep access denied with a remediation checklist.",
+      "owner": "data steward",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "REQUIRED_APPEAL_EVIDENCE_MISSING",
+      "severity": "high",
+      "message": "AR-2002 is missing required evidence irbApproval for restricted_human access.",
+      "evidence": "Appeal outcomes must prove the requester satisfied the project data-access prerequisites.",
+      "path": "accessRequests[0].appeal.evidence.irbApproval",
+      "remediation": "Attach valid irbApproval evidence or keep access denied with a remediation checklist.",
+      "owner": "data steward",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "USER_FACING_RECEIPT_MISSING",
+      "severity": "high",
+      "message": "AR-2002 has no requester-facing denial/appeal receipt.",
+      "evidence": "Researchers need a stable notice showing the decision, appeal path, and remediation checklist.",
+      "path": "accessRequests[0].auditReceipt.userFacingNotice",
+      "remediation": "Generate a requester-safe audit receipt with reason code, appeal deadline, outcome, and evidence checklist.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "APPEAL_OUTCOME_NOT_IN_RECEIPT",
+      "severity": "warning",
+      "message": "AR-2002 appeal outcome is not included in the user receipt.",
+      "evidence": "The requester-facing receipt should close the loop after an appeal is reviewed.",
+      "path": "accessRequests[0].auditReceipt.fields",
+      "remediation": "Include appealOutcome and reviewerRole in the final appeal receipt.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    },
+    {
+      "code": "AUDIT_RECEIPT_FIELDS_MISSING",
+      "severity": "warning",
+      "message": "AR-2002 audit receipt is missing fields: reasonCode, appealDeadline, evidenceChecklist.",
+      "evidence": "Complete receipts reduce support churn and make the appeal process auditable.",
+      "path": "accessRequests[0].auditReceipt.fields",
+      "remediation": "Add the missing receipt fields before finalizing the denial or appeal decision.",
+      "owner": "workspace admin",
+      "requestId": "AR-2002"
+    }
+  ],
+  "appealDecisions": [
+    {
+      "requestId": "AR-2002",
+      "requesterId": "researcher-99",
+      "projectId": "proj-human-cohort-9",
+      "classification": "restricted_human",
+      "appealState": "submitted",
+      "finalAction": "hold-decision",
+      "receiptState": "missing",
+      "findingCodes": [
+        "DENIAL_REASON_CODE_MISSING",
+        "DENIAL_RATIONALE_TOO_THIN",
+        "PRIVATE_DENIAL_NOTE_EXPOSED",
+        "APPEAL_WINDOW_EXPIRED",
+        "APPEAL_REVIEWER_NOT_INDEPENDENT",
+        "APPEAL_REVIEWER_ROLE_NOT_ELIGIBLE",
+        "PRIVATE_APPEAL_NOTE_EXPOSED",
+        "APPROVAL_WITH_MISSING_RESTRICTED_EVIDENCE",
+        "REQUIRED_APPEAL_EVIDENCE_MISSING",
+        "REQUIRED_APPEAL_EVIDENCE_MISSING",
+        "BROAD_RESTRICTED_SCOPE_REQUEST",
+        "USER_FACING_RECEIPT_MISSING",
+        "AUDIT_RECEIPT_FIELDS_MISSING",
+        "APPEAL_OUTCOME_NOT_IN_RECEIPT"
+      ]
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "APPROVAL_WITH_MISSING_RESTRICTED_EVIDENCE",
+      "requestId": "AR-2002",
+      "owner": "data steward",
+      "action": "Hold approval until all restricted-data prerequisites are present and current."
+    },
+    {
+      "code": "PRIVATE_APPEAL_NOTE_EXPOSED",
+      "requestId": "AR-2002",
+      "owner": "privacy reviewer",
+      "action": "Redact private notes and publish only requester-safe appeal rationale."
+    },
+    {
+      "code": "PRIVATE_DENIAL_NOTE_EXPOSED",
+      "requestId": "AR-2002",
+      "owner": "privacy reviewer",
+      "action": "Redact private notes and expose only a requester-safe reason code plus remediation checklist."
+    },
+    {
+      "code": "APPEAL_REVIEWER_NOT_INDEPENDENT",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Assign an independent data steward, institution admin, or ethics reviewer."
+    },
+    {
+      "code": "APPEAL_REVIEWER_ROLE_NOT_ELIGIBLE",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Assign a reviewer with an eligible governance role or document a policy exception."
+    },
+    {
+      "code": "APPEAL_WINDOW_EXPIRED",
+      "requestId": "AR-2002",
+      "owner": "institution admin",
+      "action": "Route to institution-admin exception review or keep the denial final with a clear late-appeal receipt."
+    },
+    {
+      "code": "BROAD_RESTRICTED_SCOPE_REQUEST",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Replace all-project scope with specific datasets, notebooks, manuscripts, or review threads and least-privilege permissions."
+    },
+    {
+      "code": "DENIAL_RATIONALE_TOO_THIN",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Document the missing requirement, affected object scope, and remediation path."
+    },
+    {
+      "code": "DENIAL_REASON_CODE_MISSING",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Add a stable denial reason code such as TRAINING_EXPIRED, DUA_MISSING, IRB_SCOPE_MISMATCH, or OBJECT_SCOPE_TOO_BROAD."
+    },
+    {
+      "code": "REQUIRED_APPEAL_EVIDENCE_MISSING",
+      "requestId": "AR-2002",
+      "owner": "data steward",
+      "action": "Attach valid duaActive evidence or keep access denied with a remediation checklist."
+    },
+    {
+      "code": "REQUIRED_APPEAL_EVIDENCE_MISSING",
+      "requestId": "AR-2002",
+      "owner": "data steward",
+      "action": "Attach valid irbApproval evidence or keep access denied with a remediation checklist."
+    },
+    {
+      "code": "USER_FACING_RECEIPT_MISSING",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Generate a requester-safe audit receipt with reason code, appeal deadline, outcome, and evidence checklist."
+    },
+    {
+      "code": "APPEAL_OUTCOME_NOT_IN_RECEIPT",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Include appealOutcome and reviewerRole in the final appeal receipt."
+    },
+    {
+      "code": "AUDIT_RECEIPT_FIELDS_MISSING",
+      "requestId": "AR-2002",
+      "owner": "workspace admin",
+      "action": "Add the missing receipt fields before finalizing the denial or appeal decision."
+    }
+  ],
+  "fingerprint": "fde2d21c50c6dd89"
+}

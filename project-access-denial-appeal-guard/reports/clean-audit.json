@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-06-01T10:51:17.051Z",
+  "status": "READY",
+  "summary": "All 1 denied-access appeal packet(s) are ready for requester-safe finalization.",
+  "findingCounts": {},
+  "findings": [],
+  "appealDecisions": [
+    {
+      "requestId": "AR-1001",
+      "requesterId": "researcher-42",
+      "projectId": "proj-human-cohort-7",
+      "classification": "restricted_human",
+      "appealState": "submitted",
+      "finalAction": "uphold-denial",
+      "receiptState": "ready",
+      "findingCodes": []
+    }
+  ],
+  "remediationActions": [],
+  "fingerprint": "31a620a33cd68018"
+}

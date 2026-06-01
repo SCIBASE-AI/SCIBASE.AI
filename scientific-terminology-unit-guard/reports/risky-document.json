@@ -1,0 +1,101 @@
+{
+  "documentId": "editor-term-002",
+  "title": "Collaborative catalyst manuscript",
+  "decision": "hold",
+  "summary": {
+    "blocksReviewed": 2,
+    "suggestionsReviewed": 1,
+    "findings": 10,
+    "high": 7,
+    "medium": 2,
+    "low": 1
+  },
+  "findings": [
+    {
+      "code": "MISSING_FIRST_USE_EXPANSION",
+      "severity": "medium",
+      "sourceId": "abstract",
+      "author": "alice",
+      "message": "HER appears without its first-use expansion.",
+      "remediation": "Expand HER as \"hydrogen evolution reaction\" at first use in the collaborative document."
+    },
+    {
+      "code": "MISSING_FIRST_USE_EXPANSION",
+      "severity": "medium",
+      "sourceId": "abstract",
+      "author": "alice",
+      "message": "FE appears without its first-use expansion.",
+      "remediation": "Expand FE as \"faradaic efficiency\" at first use in the collaborative document."
+    },
+    {
+      "code": "UNIT_CONFLICT",
+      "severity": "high",
+      "sourceId": "abstract",
+      "author": "alice",
+      "message": "temperature uses \"C\" but canonical unit is \"K\".",
+      "remediation": "Convert or annotate the value before export so collaborators compare like with like."
+    },
+    {
+      "code": "VARIABLE_MEANING_DRIFT",
+      "severity": "high",
+      "sourceId": "abstract",
+      "author": "alice",
+      "message": "eta means \"efficiency\" here but shared definition is \"overpotential\".",
+      "remediation": "Resolve the variable definition mismatch before rendering equations or exports."
+    },
+    {
+      "code": "ACRONYM_DRIFT",
+      "severity": "high",
+      "sourceId": "methods",
+      "author": "bob",
+      "message": "RHE is defined as \"rapid heat exchange\" but glossary expects \"reversible hydrogen electrode\".",
+      "remediation": "Resolve the conflicting expansion in the suggestion or block before accepting changes."
+    },
+    {
+      "code": "UNIT_CONFLICT",
+      "severity": "high",
+      "sourceId": "methods",
+      "author": "bob",
+      "message": "currentDensity uses \"A m^-2\" but canonical unit is \"mA cm^-2\".",
+      "remediation": "Convert or annotate the value before export so collaborators compare like with like."
+    },
+    {
+      "code": "UNIT_CONFLICT",
+      "severity": "high",
+      "sourceId": "methods",
+      "author": "bob",
+      "message": "potential uses \"V vs Ag/AgCl\" but canonical unit is \"V vs RHE\".",
+      "remediation": "Convert or annotate the value before export so collaborators compare like with like."
+    },
+    {
+      "code": "VARIABLE_MEANING_DRIFT",
+      "severity": "high",
+      "sourceId": "methods",
+      "author": "bob",
+      "message": "j means \"flux\" here but shared definition is \"current density\".",
+      "remediation": "Resolve the variable definition mismatch before rendering equations or exports."
+    },
+    {
+      "code": "UNREGISTERED_VARIABLE",
+      "severity": "low",
+      "sourceId": "methods",
+      "author": "bob",
+      "message": "E is used in an equation context without a shared definition.",
+      "remediation": "Add the variable to the equation legend before accepting the edit."
+    },
+    {
+      "code": "ACRONYM_DRIFT",
+      "severity": "high",
+      "sourceId": "sug-risk",
+      "author": "dana",
+      "message": "RHE is defined as \"rapid heat exchange\" but glossary expects \"reversible hydrogen electrode\".",
+      "remediation": "Resolve the conflicting expansion in the suggestion or block before accepting changes."
+    }
+  ],
+  "releaseCriteria": [
+    "Shared glossary acronyms keep one expansion across all blocks and suggestions.",
+    "Scientific quantities use the canonical unit selected for the collaborative document.",
+    "Equation variables keep one meaning before WYSIWYG, Markdown, LaTeX, or export render.",
+    "Suggestions cannot introduce terminology drift while being accepted into the manuscript."
+  ]
+}

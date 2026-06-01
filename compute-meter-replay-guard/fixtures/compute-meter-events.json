@@ -1,0 +1,140 @@
+{
+  "runId": "REV-METER-001",
+  "title": "June AI compute replay pre-invoice check",
+  "generatedAt": "2026-06-01T13:50:00Z",
+  "policy": {
+    "duplicateReplayWindowHours": 24,
+    "maxCorrectionAgeHours": 72,
+    "allowedNegativeAdjustmentRoles": ["finance-ops", "meter-admin"],
+    "invoiceHoldThresholdCents": 10000
+  },
+  "accounts": [
+    {
+      "id": "acct-lab-pro",
+      "currentPlan": "lab-pro",
+      "allowedMeterSources": ["usage-api", "batch-replay"],
+      "monthlyQuotaTokens": 1000000
+    },
+    {
+      "id": "acct-institution",
+      "currentPlan": "institution",
+      "allowedMeterSources": ["meter-gateway"],
+      "monthlyQuotaTokens": 5000000
+    }
+  ],
+  "events": [
+    {
+      "eventId": "E-001",
+      "accountId": "acct-lab-pro",
+      "source": "usage-api",
+      "sequence": 100,
+      "type": "usage",
+      "plan": "lab-pro",
+      "idempotencyKey": "lab-pro:run-77:chunk-1",
+      "invoiceLineId": "line-100",
+      "usageTokens": 120000,
+      "amountCents": 2400,
+      "occurredAt": "2026-05-31T09:00:00Z",
+      "receivedAt": "2026-05-31T09:00:08Z"
+    },
+    {
+      "eventId": "E-002",
+      "accountId": "acct-lab-pro",
+      "source": "usage-api",
+      "sequence": 101,
+      "type": "usage",
+      "plan": "lab-pro",
+      "idempotencyKey": "lab-pro:run-77:chunk-1",
+      "invoiceLineId": "line-101",
+      "usageTokens": 120000,
+      "amountCents": 2400,
+      "occurredAt": "2026-05-31T09:01:00Z",
+      "receivedAt": "2026-05-31T09:01:06Z"
+    },
+    {
+      "eventId": "E-003",
+      "accountId": "acct-lab-pro",
+      "source": "usage-api",
+      "sequence": 104,
+      "type": "usage",
+      "plan": "lab-pro",
+      "idempotencyKey": "lab-pro:run-77:chunk-4",
+      "invoiceLineId": "line-104",
+      "usageTokens": 80000,
+      "amountCents": 1600,
+      "occurredAt": "2026-05-31T09:04:00Z",
+      "receivedAt": "2026-05-31T09:04:04Z"
+    },
+    {
+      "eventId": "E-004",
+      "accountId": "acct-lab-pro",
+      "source": "batch-replay",
+      "sequence": 105,
+      "type": "correction",
+      "plan": "lab-pro",
+      "idempotencyKey": "lab-pro:correction:E-001",
+      "correctionOf": "E-001",
+      "adjustmentRole": "support-agent",
+      "usageTokens": -120000,
+      "amountCents": -2400,
+      "occurredAt": "2026-05-25T10:00:00Z",
+      "receivedAt": "2026-06-01T09:05:00Z"
+    },
+    {
+      "eventId": "E-005",
+      "accountId": "acct-institution",
+      "source": "meter-gateway",
+      "sequence": 1,
+      "type": "usage",
+      "plan": "individual-pro",
+      "idempotencyKey": "inst:job-4:part-1",
+      "invoiceLineId": "line-500",
+      "usageTokens": 900000,
+      "amountCents": 18000,
+      "occurredAt": "2026-05-31T12:00:00Z",
+      "receivedAt": "2026-05-31T12:00:12Z"
+    },
+    {
+      "eventId": "E-006",
+      "accountId": "acct-institution",
+      "source": "meter-gateway",
+      "sequence": 2,
+      "type": "usage",
+      "plan": "institution",
+      "idempotencyKey": "",
+      "invoiceLineId": "line-501",
+      "usageTokens": 300000,
+      "amountCents": 6000,
+      "occurredAt": "2026-05-31T12:06:00Z",
+      "receivedAt": "2026-05-31T12:05:55Z"
+    },
+    {
+      "eventId": "E-007",
+      "accountId": "acct-institution",
+      "source": "meter-gateway",
+      "sequence": 3,
+      "type": "usage",
+      "plan": "institution",
+      "idempotencyKey": "inst:job-5:part-1",
+      "invoiceLineId": "line-502",
+      "usageTokens": 100000,
+      "amountCents": 2000,
+      "occurredAt": "2026-05-31T12:07:00Z",
+      "receivedAt": "2026-05-31T12:07:04Z"
+    },
+    {
+      "eventId": "E-008",
+      "accountId": "acct-institution",
+      "source": "meter-gateway",
+      "sequence": 4,
+      "type": "usage",
+      "plan": "institution",
+      "idempotencyKey": "inst:job-5:part-2",
+      "invoiceLineId": "line-502",
+      "usageTokens": 100000,
+      "amountCents": 2000,
+      "occurredAt": "2026-05-31T12:08:00Z",
+      "receivedAt": "2026-05-31T12:08:04Z"
+    }
+  ]
+}

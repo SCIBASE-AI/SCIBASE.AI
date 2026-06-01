@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <text x="64" y="90" fill="#f8fafc" font-family="Arial, sans-serif" font-size="42" font-weight="700">Compute Meter Replay Guard</text>
+  <text x="64" y="142" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="24">Pre-invoice control for replayed AI usage-meter events</text>
+  <rect x="64" y="198" width="300" height="118" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="96" y="246" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="22">1. Load meter events</text>
+  <text x="96" y="282" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Synthetic usage, corrections, accounts</text>
+  <rect x="490" y="198" width="300" height="118" rx="10" fill="#1e293b" stroke="#facc15"/>
+  <text x="522" y="246" fill="#fef9c3" font-family="Arial, sans-serif" font-size="22">2. Detect replay risk</text>
+  <text x="522" y="282" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Idempotency, sequence gaps, stale fixes</text>
+  <rect x="916" y="198" width="300" height="118" rx="10" fill="#1e293b" stroke="#fb7185"/>
+  <text x="948" y="246" fill="#ffe4e6" font-family="Arial, sans-serif" font-size="22">3. Hold or reprice</text>
+  <text x="948" y="282" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Prevent duplicate billing and disputes</text>
+  <path d="M 374 256 L 470 256" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M 800 256 L 896 256" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="64" y="410" width="1152" height="170" rx="12" fill="#111827" stroke="#475569"/>
+  <text x="96" y="462" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="700">Demo result: HOLD</text>
+  <text x="96" y="506" fill="#fecaca" font-family="Arial, sans-serif" font-size="20">Critical: duplicate idempotency key, duplicate invoice line, unauthorized negative adjustment</text>
+  <text x="96" y="548" fill="#fde68a" font-family="Arial, sans-serif" font-size="20">High: source sequence gap, stale correction, plan mismatch, missing idempotency key</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

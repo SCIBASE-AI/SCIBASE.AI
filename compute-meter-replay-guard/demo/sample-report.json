@@ -1,0 +1,96 @@
+{
+  "runId": "REV-METER-001",
+  "title": "June AI compute replay pre-invoice check",
+  "generatedAt": "2026-06-01T13:50:00Z",
+  "assistant": "compute-meter-replay-guard",
+  "decision": "hold",
+  "severityCounts": {
+    "critical": 3,
+    "high": 4,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "eventIds": [
+        "E-001",
+        "E-002"
+      ],
+      "check": "duplicate-idempotency-key",
+      "evidence": "Idempotency key lab-pro:run-77:chunk-1 appears 2 times over 0.0 hours.",
+      "remediation": "Bill only the first accepted event and quarantine replay duplicates before invoice lines are generated."
+    },
+    {
+      "severity": "critical",
+      "eventIds": [
+        "E-007",
+        "E-008"
+      ],
+      "check": "duplicate-invoice-line",
+      "evidence": "Invoice line line-502 is referenced by 2 events.",
+      "remediation": "Hold the invoice run and regenerate invoice-line mapping from accepted meter events."
+    },
+    {
+      "severity": "critical",
+      "eventIds": [
+        "E-004"
+      ],
+      "check": "unauthorized-negative-adjustment",
+      "evidence": "E-004 applies -2400 cents with role support-agent.",
+      "remediation": "Require finance or meter-admin approval before applying a negative adjustment."
+    },
+    {
+      "severity": "high",
+      "eventIds": [
+        "E-005"
+      ],
+      "check": "entitlement-plan-mismatch",
+      "evidence": "E-005 was metered as individual-pro, but account acct-institution is on institution.",
+      "remediation": "Reprice the event under the account's active plan or hold invoice release."
+    },
+    {
+      "severity": "high",
+      "eventIds": [
+        "E-006"
+      ],
+      "check": "missing-idempotency-key",
+      "evidence": "E-006 has no idempotency key.",
+      "remediation": "Reject or enrich the event before it can create an invoice line."
+    },
+    {
+      "severity": "high",
+      "eventIds": [
+        "E-002",
+        "E-003"
+      ],
+      "check": "source-sequence-gap",
+      "evidence": "acct-lab-pro:usage-api jumps from sequence 101 to 104.",
+      "remediation": "Check replay source logs for missing usage before releasing invoice totals."
+    },
+    {
+      "severity": "high",
+      "eventIds": [
+        "E-004"
+      ],
+      "check": "stale-correction",
+      "evidence": "E-004 correction age is 167.1 hours.",
+      "remediation": "Route old corrections through a manual reprice or credit memo review."
+    },
+    {
+      "severity": "medium",
+      "eventIds": [
+        "E-006"
+      ],
+      "check": "timestamp-ordering",
+      "evidence": "E-006 was received before it occurred.",
+      "remediation": "Normalize source clocks or hold the event from invoice release."
+    }
+  ],
+  "financePrompts": [
+    "Which replay jobs can create duplicate invoice lines, and where should idempotency be enforced?",
+    "Which meter source logs prove whether missing sequence numbers represent lost usage or skipped test events?",
+    "Which correction approvals should route to credit memo review instead of automatic invoice repricing?",
+    "Which account plan snapshot should be used as the billable source of truth for this invoice run?"
+  ]
+}

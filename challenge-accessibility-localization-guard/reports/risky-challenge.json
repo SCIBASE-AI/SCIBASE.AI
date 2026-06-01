@@ -1,0 +1,145 @@
+{
+  "challengeId": "sb-access-002",
+  "title": "Open climate forecasting challenge",
+  "decision": "hold",
+  "summary": {
+    "teamsReviewed": 2,
+    "materialsReviewed": 2,
+    "formsReviewed": 1,
+    "findings": 12,
+    "high": 7,
+    "medium": 5,
+    "low": 0
+  },
+  "findings": [
+    {
+      "code": "STALE_TRANSLATION_DIGEST",
+      "severity": "high",
+      "sourceId": "rules",
+      "message": "rules es version references rules-v4, not current rules-v5.",
+      "affectedTeams": [
+        "team-mx"
+      ],
+      "remediation": "Regenerate translated materials from the current rule digest and restart any affected timing windows."
+    },
+    {
+      "code": "MISSING_REQUIRED_LANGUAGE",
+      "severity": "high",
+      "sourceId": "rules",
+      "message": "rules is missing required ja language coverage.",
+      "affectedTeams": [
+        "team-jp"
+      ],
+      "remediation": "Provide the missing translation before opening submissions or mark the language as not required."
+    },
+    {
+      "code": "ACCESSIBILITY_FORMAT_GAP",
+      "severity": "high",
+      "sourceId": "rules",
+      "message": "rules lacks accessible formats for screen-reader.",
+      "affectedTeams": [
+        "team-jp"
+      ],
+      "remediation": "Add equivalent accessible formats, then notify affected teams before submissions open."
+    },
+    {
+      "code": "MISSING_REQUIRED_LANGUAGE",
+      "severity": "high",
+      "sourceId": "walkthrough",
+      "message": "walkthrough is missing required es language coverage.",
+      "affectedTeams": [
+        "team-mx"
+      ],
+      "remediation": "Provide the missing translation before opening submissions or mark the language as not required."
+    },
+    {
+      "code": "MISSING_REQUIRED_LANGUAGE",
+      "severity": "high",
+      "sourceId": "walkthrough",
+      "message": "walkthrough is missing required ja language coverage.",
+      "affectedTeams": [
+        "team-jp"
+      ],
+      "remediation": "Provide the missing translation before opening submissions or mark the language as not required."
+    },
+    {
+      "code": "ACCESSIBILITY_FORMAT_GAP",
+      "severity": "high",
+      "sourceId": "walkthrough",
+      "message": "walkthrough lacks accessible formats for captions.",
+      "affectedTeams": [
+        "team-mx"
+      ],
+      "remediation": "Add equivalent accessible formats, then notify affected teams before submissions open."
+    },
+    {
+      "code": "ACCESSIBILITY_FORMAT_GAP",
+      "severity": "high",
+      "sourceId": "walkthrough",
+      "message": "walkthrough lacks accessible formats for screen-reader.",
+      "affectedTeams": [
+        "team-jp"
+      ],
+      "remediation": "Add equivalent accessible formats, then notify affected teams before submissions open."
+    },
+    {
+      "code": "VIDEO_CAPTION_TRANSCRIPT_GAP",
+      "severity": "medium",
+      "sourceId": "walkthrough",
+      "message": "walkthrough is a required video without captions or transcript.",
+      "affectedTeams": [
+        "team-mx",
+        "team-jp"
+      ],
+      "remediation": "Add captions or a transcript before treating the walkthrough as required."
+    },
+    {
+      "code": "TIMEZONE_DISPLAY_GAP",
+      "severity": "medium",
+      "sourceId": "submission",
+      "message": "submission deadline is not displayed in every solver team's timezone.",
+      "affectedTeams": [
+        "team-mx",
+        "team-jp"
+      ],
+      "remediation": "Display UTC plus each eligible team's local timezone before the challenge clock starts."
+    },
+    {
+      "code": "FORM_LANGUAGE_GAP",
+      "severity": "medium",
+      "sourceId": "prequalification",
+      "message": "prequalification form is missing es localization.",
+      "affectedTeams": [
+        "team-mx"
+      ],
+      "remediation": "Localize prequalification forms before requiring teams to complete them."
+    },
+    {
+      "code": "FORM_LANGUAGE_GAP",
+      "severity": "medium",
+      "sourceId": "prequalification",
+      "message": "prequalification form is missing ja localization.",
+      "affectedTeams": [
+        "team-jp"
+      ],
+      "remediation": "Localize prequalification forms before requiring teams to complete them."
+    },
+    {
+      "code": "FORM_ACCESSIBILITY_GAP",
+      "severity": "medium",
+      "sourceId": "prequalification",
+      "message": "prequalification form is not keyboard and screen-reader accessible.",
+      "affectedTeams": [
+        "team-mx",
+        "team-jp"
+      ],
+      "remediation": "Add keyboard navigation and screen-reader labels before using the form for eligibility."
+    }
+  ],
+  "releaseCriteria": [
+    "Required challenge materials cover every solver-team language.",
+    "Translations reference the current immutable rule digest.",
+    "Required documents, videos, and forms include equivalent accessible formats.",
+    "Deadlines are shown in UTC and each eligible team's local timezone."
+  ]
+}

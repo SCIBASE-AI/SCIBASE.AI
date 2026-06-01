@@ -1,0 +1,21 @@
+{
+  "challengeId": "sb-access-001",
+  "title": "Open climate forecasting challenge",
+  "decision": "release",
+  "summary": {
+    "teamsReviewed": 2,
+    "materialsReviewed": 2,
+    "formsReviewed": 1,
+    "findings": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "releaseCriteria": [
+    "Required challenge materials cover every solver-team language.",
+    "Translations reference the current immutable rule digest.",
+    "Required documents, videos, and forms include equivalent accessible formats.",
+    "Deadlines are shown in UTC and each eligible team's local timezone."
+  ]
+}

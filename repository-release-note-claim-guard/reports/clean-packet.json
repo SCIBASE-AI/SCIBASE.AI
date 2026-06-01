@@ -1,0 +1,206 @@
+{
+  "input": {
+    "repositoryId": "scibase-demo-repo",
+    "versionTag": "preprint-v2.1.0",
+    "reviewedAt": "2026-06-01T12:00:00Z",
+    "policy": {
+      "maxEvidenceAgeDays": 30
+    },
+    "changeSet": [
+      {
+        "id": "chg-analysis-script",
+        "path": "code/analysis/model-fit.py",
+        "component": "code",
+        "digestBefore": "sha256:1111",
+        "digestAfter": "sha256:2222",
+        "noteIds": [
+          "rn-001"
+        ],
+        "publicImpact": true
+      },
+      {
+        "id": "chg-results-figure",
+        "path": "results/figures/figure-2.svg",
+        "component": "results",
+        "digestBefore": "sha256:3333",
+        "digestAfter": "sha256:4444",
+        "noteIds": [
+          "rn-002"
+        ],
+        "publicImpact": true
+      },
+      {
+        "id": "chg-metadata",
+        "path": "metadata.json",
+        "component": "metadata",
+        "digestBefore": "sha256:5555",
+        "digestAfter": "sha256:6666",
+        "noteIds": [
+          "rn-003"
+        ],
+        "publicImpact": true
+      }
+    ],
+    "releaseNotes": [
+      {
+        "id": "rn-001",
+        "claimType": "code",
+        "text": "Updated the mixed-effects model fitting script and validated it with repository tests.",
+        "componentPaths": [
+          "code/analysis/model-fit.py"
+        ],
+        "evidenceIds": [
+          "ev-tests-model"
+        ]
+      },
+      {
+        "id": "rn-002",
+        "claimType": "figure",
+        "text": "Regenerated Figure 2 from the refreshed analysis output with matching checksums.",
+        "componentPaths": [
+          "results/figures/figure-2.svg"
+        ],
+        "evidenceIds": [
+          "ev-repro-figure",
+          "ev-checksum-figure"
+        ]
+      },
+      {
+        "id": "rn-003",
+        "claimType": "metadata",
+        "text": "Aligned repository metadata and export manifest with the preprint-v2.1.0 citation package.",
+        "componentPaths": [
+          "metadata.json"
+        ],
+        "evidenceIds": [
+          "ev-export-manifest",
+          "ev-metadata-review"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-tests-model",
+        "kind": "test",
+        "status": "passed",
+        "command": "npm run repository-tests",
+        "producedAt": "2026-05-31T15:00:00Z",
+        "coversPaths": [
+          "code/analysis/model-fit.py"
+        ]
+      },
+      {
+        "id": "ev-repro-figure",
+        "kind": "reproduction",
+        "status": "passed",
+        "command": "python code/analysis/model-fit.py --rebuild-figures",
+        "producedAt": "2026-05-31T15:20:00Z",
+        "coversPaths": [
+          "code/analysis/model-fit.py",
+          "results/figures/figure-2.svg"
+        ]
+      },
+      {
+        "id": "ev-checksum-figure",
+        "kind": "checksum",
+        "status": "passed",
+        "producedAt": "2026-05-31T15:25:00Z",
+        "coversPaths": [
+          "results/figures/figure-2.svg"
+        ]
+      },
+      {
+        "id": "ev-export-manifest",
+        "kind": "export",
+        "status": "passed",
+        "producedAt": "2026-05-31T16:00:00Z",
+        "coversPaths": [
+          "metadata.json",
+          "code/analysis/model-fit.py",
+          "results/figures/figure-2.svg"
+        ]
+      },
+      {
+        "id": "ev-metadata-review",
+        "kind": "metadata",
+        "status": "passed",
+        "producedAt": "2026-05-31T16:05:00Z",
+        "coversPaths": [
+          "metadata.json"
+        ]
+      }
+    ],
+    "exportManifest": {
+      "versionTag": "preprint-v2.1.0",
+      "releaseNoteIds": [
+        "rn-001",
+        "rn-002",
+        "rn-003"
+      ],
+      "componentDigests": {
+        "code/analysis/model-fit.py": "sha256:2222",
+        "results/figures/figure-2.svg": "sha256:4444",
+        "metadata.json": "sha256:6666"
+      }
+    }
+  },
+  "evaluation": {
+    "summary": {
+      "repositoryId": "scibase-demo-repo",
+      "versionTag": "preprint-v2.1.0",
+      "reviewedAt": "2026-06-01T12:00:00Z",
+      "decision": "publish_release_notes",
+      "topSeverity": "none",
+      "releaseNotesReviewed": 3,
+      "changedArtifactsReviewed": 3,
+      "evidenceItemsReviewed": 5,
+      "findingCount": 0,
+      "highOrCriticalFindings": 0,
+      "auditDigest": "sha256:d845882abd6daba0"
+    },
+    "evidenceCoverage": [
+      {
+        "noteId": "rn-001",
+        "claimType": "code",
+        "changedArtifacts": 1,
+        "evidenceIds": [
+          "ev-tests-model"
+        ],
+        "passedEvidence": 1,
+        "requiredKinds": [
+          "test"
+        ]
+      },
+      {
+        "noteId": "rn-002",
+        "claimType": "figure",
+        "changedArtifacts": 1,
+        "evidenceIds": [
+          "ev-repro-figure",
+          "ev-checksum-figure"
+        ],
+        "passedEvidence": 2,
+        "requiredKinds": [
+          "reproduction",
+          "checksum"
+        ]
+      },
+      {
+        "noteId": "rn-003",
+        "claimType": "metadata",
+        "changedArtifacts": 1,
+        "evidenceIds": [
+          "ev-export-manifest",
+          "ev-metadata-review"
+        ],
+        "passedEvidence": 2,
+        "requiredKinds": [
+          "metadata",
+          "export"
+        ]
+      }
+    ],
+    "findings": [],
+    "actions": []
+  }
+}

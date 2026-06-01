@@ -1,0 +1,10 @@
+Repository release-note claim evidence guard demo
+
+1. Clean packet: all release-note claims bind to changed artifacts, passed evidence, and export-manifest digests.
+   Decision: publish_release_notes
+   Digest: sha256:d845882abd6daba0
+
+2. Risky packet: public release notes overclaim reproducibility, hide a breaking API change, cite a non-existent public dataset path, and omit changed data from the export manifest.
+   Decision: hold_repository_release
+   Findings: 18
+   Digest: sha256:8431cbaec2db5bd8

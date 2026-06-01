@@ -1,0 +1,439 @@
+{
+  "input": {
+    "repositoryId": "scibase-demo-repo",
+    "versionTag": "preprint-v2.2.0",
+    "reviewedAt": "2026-06-01T12:00:00Z",
+    "policy": {
+      "maxEvidenceAgeDays": 30
+    },
+    "changeSet": [
+      {
+        "id": "chg-api-export",
+        "path": "code/export/public-api.js",
+        "component": "code",
+        "digestBefore": "sha256:aaaa",
+        "digestAfter": "sha256:bbbb",
+        "noteIds": [
+          "rn-101"
+        ],
+        "publicImpact": true,
+        "breaking": true
+      },
+      {
+        "id": "chg-sensitive-data",
+        "path": "data/restricted/cohort-clean.csv",
+        "component": "data",
+        "digestBefore": "sha256:cccc",
+        "digestAfter": "sha256:dddd",
+        "publicImpact": true
+      },
+      {
+        "id": "chg-figure",
+        "path": "results/figures/figure-5.svg",
+        "component": "results",
+        "digestBefore": "sha256:eeee",
+        "digestAfter": "sha256:eeee",
+        "noteIds": [
+          "rn-102"
+        ],
+        "publicImpact": true
+      }
+    ],
+    "releaseNotes": [
+      {
+        "id": "rn-101",
+        "claimType": "api",
+        "text": "Updated the public API export with no breaking changes.",
+        "componentPaths": [
+          "code/export/public-api.js"
+        ],
+        "evidenceIds": [
+          "ev-api-review"
+        ]
+      },
+      {
+        "id": "rn-102",
+        "claimType": "reproducibility",
+        "text": "All results are now fully reproducible and validated.",
+        "componentPaths": [
+          "results/figures/figure-5.svg"
+        ],
+        "evidenceIds": [
+          "ev-old-repro"
+        ]
+      },
+      {
+        "id": "rn-103",
+        "claimType": "dataset",
+        "text": "Released a cleaned cohort dataset for reviewers.",
+        "componentPaths": [
+          "data/public/cohort-clean.csv"
+        ],
+        "evidenceIds": [
+          "ev-dataset-diff"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev-api-review",
+        "kind": "review",
+        "status": "passed",
+        "producedAt": "2026-05-31T10:00:00Z",
+        "coversPaths": [
+          "code/export/public-api.js"
+        ]
+      },
+      {
+        "id": "ev-old-repro",
+        "kind": "reproduction",
+        "status": "failed",
+        "producedAt": "2026-03-01T10:00:00Z",
+        "coversPaths": [
+          "results/figures/figure-5.svg"
+        ]
+      },
+      {
+        "id": "ev-dataset-diff",
+        "kind": "data-diff",
+        "status": "passed",
+        "producedAt": "2026-05-31T12:00:00Z",
+        "coversPaths": [
+          "data/restricted/cohort-clean.csv"
+        ]
+      }
+    ],
+    "exportManifest": {
+      "versionTag": "preprint-v2.2.0",
+      "releaseNoteIds": [
+        "rn-101",
+        "rn-102"
+      ],
+      "componentDigests": {
+        "code/export/public-api.js": "sha256:bbbb",
+        "results/figures/figure-5.svg": "sha256:eeee"
+      }
+    }
+  },
+  "evaluation": {
+    "summary": {
+      "repositoryId": "scibase-demo-repo",
+      "versionTag": "preprint-v2.2.0",
+      "reviewedAt": "2026-06-01T12:00:00Z",
+      "decision": "hold_repository_release",
+      "topSeverity": "critical",
+      "releaseNotesReviewed": 3,
+      "changedArtifactsReviewed": 3,
+      "evidenceItemsReviewed": 3,
+      "findingCount": 18,
+      "highOrCriticalFindings": 12,
+      "auditDigest": "sha256:8431cbaec2db5bd8"
+    },
+    "evidenceCoverage": [
+      {
+        "noteId": "rn-101",
+        "claimType": "api",
+        "changedArtifacts": 1,
+        "evidenceIds": [
+          "ev-api-review"
+        ],
+        "passedEvidence": 1,
+        "requiredKinds": [
+          "test",
+          "export"
+        ]
+      },
+      {
+        "noteId": "rn-102",
+        "claimType": "reproducibility",
+        "changedArtifacts": 1,
+        "evidenceIds": [
+          "ev-old-repro"
+        ],
+        "passedEvidence": 0,
+        "requiredKinds": [
+          "reproduction"
+        ]
+      },
+      {
+        "noteId": "rn-103",
+        "claimType": "dataset",
+        "changedArtifacts": 0,
+        "evidenceIds": [
+          "ev-dataset-diff"
+        ],
+        "passedEvidence": 1,
+        "requiredKinds": [
+          "data-diff",
+          "checksum"
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "severity": "critical",
+        "code": "NO_BREAKING_CHANGE_CONFLICT",
+        "message": "Release note rn-101 says there are no breaking changes, but 1 changed artifact(s) are marked breaking.",
+        "refs": [
+          "rn-101",
+          "chg-api-export"
+        ],
+        "action": "remove_no_breaking_claim_or_document_breaking_change"
+      },
+      {
+        "severity": "high",
+        "code": "ALL_RESULTS_OVERCLAIM",
+        "message": "Release note rn-102 uses high-confidence wording without passed reproduction evidence.",
+        "refs": [
+          "rn-102"
+        ],
+        "action": "downgrade_claim_or_add_evidence"
+      },
+      {
+        "severity": "high",
+        "code": "BREAKING_CHANGE_NOT_DISCLOSED",
+        "message": "Breaking artifact code/export/public-api.js has no explicit breaking-change release note.",
+        "refs": [
+          "chg-api-export"
+        ],
+        "action": "document_breaking_change_in_release_notes"
+      },
+      {
+        "severity": "high",
+        "code": "CLAIM_EVIDENCE_NOT_PASSED",
+        "message": "Evidence ev-old-repro for release note rn-102 has status failed.",
+        "refs": [
+          "rn-102",
+          "ev-old-repro"
+        ],
+        "action": "replace_or_rerun_failed_evidence"
+      },
+      {
+        "severity": "high",
+        "code": "CLAIM_KIND_EVIDENCE_MISSING",
+        "message": "Release note rn-101 is a api claim but lacks passed test evidence.",
+        "refs": [
+          "rn-101",
+          "test"
+        ],
+        "action": "attach_required_claim_evidence"
+      },
+      {
+        "severity": "high",
+        "code": "CLAIM_KIND_EVIDENCE_MISSING",
+        "message": "Release note rn-101 is a api claim but lacks passed export evidence.",
+        "refs": [
+          "rn-101",
+          "export"
+        ],
+        "action": "attach_required_claim_evidence"
+      },
+      {
+        "severity": "high",
+        "code": "CLAIM_KIND_EVIDENCE_MISSING",
+        "message": "Release note rn-102 is a reproducibility claim but lacks passed reproduction evidence.",
+        "refs": [
+          "rn-102",
+          "reproduction"
+        ],
+        "action": "attach_required_claim_evidence"
+      },
+      {
+        "severity": "high",
+        "code": "CLAIM_KIND_EVIDENCE_MISSING",
+        "message": "Release note rn-103 is a dataset claim but lacks passed checksum evidence.",
+        "refs": [
+          "rn-103",
+          "checksum"
+        ],
+        "action": "attach_required_claim_evidence"
+      },
+      {
+        "severity": "high",
+        "code": "CLAIMED_COMPONENT_WITHOUT_CHANGE",
+        "message": "Release note rn-103 names data/public/cohort-clean.csv, but the release packet has no matching changed artifact.",
+        "refs": [
+          "rn-103",
+          "data/public/cohort-clean.csv"
+        ],
+        "action": "remove_claim_or_attach_changed_artifact"
+      },
+      {
+        "severity": "high",
+        "code": "EXPORT_DIGEST_MISMATCH",
+        "message": "Export manifest digest for data/restricted/cohort-clean.csv does not match the changed artifact digest.",
+        "refs": [
+          "data/restricted/cohort-clean.csv"
+        ],
+        "action": "update_export_manifest_digest"
+      },
+      {
+        "severity": "high",
+        "code": "REPRODUCIBILITY_OVERCLAIM",
+        "message": "Release note rn-102 uses high-confidence wording without passed reproduction evidence.",
+        "refs": [
+          "rn-102"
+        ],
+        "action": "downgrade_claim_or_add_evidence"
+      },
+      {
+        "severity": "high",
+        "code": "VALIDATION_OVERCLAIM",
+        "message": "Release note rn-102 uses high-confidence wording without passed test evidence.",
+        "refs": [
+          "rn-102"
+        ],
+        "action": "downgrade_claim_or_add_evidence"
+      },
+      {
+        "severity": "medium",
+        "code": "CHANGE_DIGEST_NOT_UPDATED",
+        "message": "Changed artifact results/figures/figure-5.svg does not carry a new post-release digest.",
+        "refs": [
+          "chg-figure"
+        ],
+        "action": "record_post_release_digest"
+      },
+      {
+        "severity": "medium",
+        "code": "CHANGED_ARTIFACT_UNMENTIONED",
+        "message": "Changed artifact data/restricted/cohort-clean.csv is not represented in any public release note.",
+        "refs": [
+          "chg-sensitive-data"
+        ],
+        "action": "add_release_note_or_mark_internal_only"
+      },
+      {
+        "severity": "medium",
+        "code": "CLAIM_EVIDENCE_STALE",
+        "message": "Evidence ev-old-repro for release note rn-102 is 93 days old.",
+        "refs": [
+          "rn-102",
+          "ev-old-repro"
+        ],
+        "action": "refresh_release_evidence"
+      },
+      {
+        "severity": "medium",
+        "code": "CLAIM_PATH_NOT_COVERED_BY_EVIDENCE",
+        "message": "Release note rn-102 cites results/figures/figure-5.svg, but no passed evidence covers that path.",
+        "refs": [
+          "rn-102",
+          "results/figures/figure-5.svg"
+        ],
+        "action": "add_path_specific_release_evidence"
+      },
+      {
+        "severity": "medium",
+        "code": "CLAIM_PATH_NOT_COVERED_BY_EVIDENCE",
+        "message": "Release note rn-103 cites data/public/cohort-clean.csv, but no passed evidence covers that path.",
+        "refs": [
+          "rn-103",
+          "data/public/cohort-clean.csv"
+        ],
+        "action": "add_path_specific_release_evidence"
+      },
+      {
+        "severity": "medium",
+        "code": "EXPORT_MANIFEST_MISSING_RELEASE_NOTE",
+        "message": "Export manifest does not list public release note rn-103.",
+        "refs": [
+          "rn-103"
+        ],
+        "action": "add_release_note_to_export_manifest"
+      }
+    ],
+    "actions": [
+      {
+        "id": "remove_no_breaking_claim_or_document_breaking_change",
+        "severity": "critical",
+        "refs": [
+          "rn-101",
+          "chg-api-export"
+        ]
+      },
+      {
+        "id": "downgrade_claim_or_add_evidence",
+        "severity": "high",
+        "refs": [
+          "rn-102"
+        ]
+      },
+      {
+        "id": "document_breaking_change_in_release_notes",
+        "severity": "high",
+        "refs": [
+          "chg-api-export"
+        ]
+      },
+      {
+        "id": "replace_or_rerun_failed_evidence",
+        "severity": "high",
+        "refs": [
+          "rn-102",
+          "ev-old-repro"
+        ]
+      },
+      {
+        "id": "attach_required_claim_evidence",
+        "severity": "high",
+        "refs": [
+          "rn-101",
+          "test"
+        ]
+      },
+      {
+        "id": "remove_claim_or_attach_changed_artifact",
+        "severity": "high",
+        "refs": [
+          "rn-103",
+          "data/public/cohort-clean.csv"
+        ]
+      },
+      {
+        "id": "update_export_manifest_digest",
+        "severity": "high",
+        "refs": [
+          "data/restricted/cohort-clean.csv"
+        ]
+      },
+      {
+        "id": "record_post_release_digest",
+        "severity": "medium",
+        "refs": [
+          "chg-figure"
+        ]
+      },
+      {
+        "id": "add_release_note_or_mark_internal_only",
+        "severity": "medium",
+        "refs": [
+          "chg-sensitive-data"
+        ]
+      },
+      {
+        "id": "refresh_release_evidence",
+        "severity": "medium",
+        "refs": [
+          "rn-102",
+          "ev-old-repro"
+        ]
+      },
+      {
+        "id": "add_path_specific_release_evidence",
+        "severity": "medium",
+        "refs": [
+          "rn-102",
+          "results/figures/figure-5.svg"
+        ]
+      },
+      {
+        "id": "add_release_note_to_export_manifest",
+        "severity": "medium",
+        "refs": [
+          "rn-103"
+        ]
+      }
+    ]
+  }
+}

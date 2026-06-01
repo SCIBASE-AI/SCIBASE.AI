@@ -1,0 +1,132 @@
+{
+  "challengeId": "sb-comm-002",
+  "title": "Protein binder design bounty",
+  "decision": "hold",
+  "summary": {
+    "eligibleTeams": 3,
+    "communicationsReviewed": 2,
+    "findings": 9,
+    "high": 4,
+    "medium": 3,
+    "low": 2
+  },
+  "findings": [
+    {
+      "code": "MATERIAL_AUDIENCE_GAP",
+      "severity": "high",
+      "communicationId": "comm-101",
+      "phase": "submission",
+      "topic": "sponsor hint about hidden holdout metric",
+      "affectedTeams": [
+        "team-beta",
+        "team-gamma"
+      ],
+      "message": "Material sponsor communication was not broadcast to every eligible solver team.",
+      "remediation": "Rebroadcast the exact message to all eligible teams and pause downstream decisions until receipt is logged."
+    },
+    {
+      "code": "PRIVATE_MATERIAL_HINT",
+      "severity": "high",
+      "communicationId": "comm-101",
+      "phase": "submission",
+      "topic": "sponsor hint about hidden holdout metric",
+      "affectedTeams": [
+        "team-alpha"
+      ],
+      "message": "A material hint or rule-affecting message reached only a subset of teams.",
+      "remediation": "Publish an immutable public clarification digest and reset any affected timing windows."
+    },
+    {
+      "code": "STALE_RULE_DIGEST",
+      "severity": "medium",
+      "communicationId": "comm-101",
+      "phase": "submission",
+      "topic": "sponsor hint about hidden holdout metric",
+      "affectedTeams": [
+        "team-alpha"
+      ],
+      "message": "Material communication references an outdated rule digest.",
+      "remediation": "Attach the current rules digest before submissions, scoring, or payout routing continue."
+    },
+    {
+      "code": "ACCESSIBLE_ATTACHMENT_GAP",
+      "severity": "medium",
+      "communicationId": "comm-101",
+      "phase": "submission",
+      "topic": "sponsor hint about hidden holdout metric",
+      "affectedTeams": [
+        "team-alpha"
+      ],
+      "message": "Required attachment holdout-hint does not cover recipient accessibility needs.",
+      "remediation": "Add accessible equivalents and resend the attachment before the acknowledgement clock runs."
+    },
+    {
+      "code": "UNFAIR_ACK_WINDOW",
+      "severity": "low",
+      "communicationId": "comm-101",
+      "phase": "submission",
+      "topic": "sponsor hint about hidden holdout metric",
+      "affectedTeams": [
+        "team-alpha"
+      ],
+      "message": "Acknowledgement window is too short for timezone-safe team parity.",
+      "remediation": "Use at least a 24 hour window for material communications unless every team explicitly waives it."
+    },
+    {
+      "code": "MATERIAL_AUDIENCE_GAP",
+      "severity": "high",
+      "communicationId": "comm-102",
+      "phase": "payout",
+      "topic": "award settlement instructions",
+      "affectedTeams": [
+        "team-gamma"
+      ],
+      "message": "Material sponsor communication was not broadcast to every eligible solver team.",
+      "remediation": "Rebroadcast the exact message to all eligible teams and pause downstream decisions until receipt is logged."
+    },
+    {
+      "code": "PRIVATE_MATERIAL_HINT",
+      "severity": "high",
+      "communicationId": "comm-102",
+      "phase": "payout",
+      "topic": "award settlement instructions",
+      "affectedTeams": [
+        "team-alpha",
+        "team-beta"
+      ],
+      "message": "A material hint or rule-affecting message reached only a subset of teams.",
+      "remediation": "Publish an immutable public clarification digest and reset any affected timing windows."
+    },
+    {
+      "code": "UNFAIR_ACK_WINDOW",
+      "severity": "low",
+      "communicationId": "comm-102",
+      "phase": "payout",
+      "topic": "award settlement instructions",
+      "affectedTeams": [
+        "team-alpha",
+        "team-beta"
+      ],
+      "message": "Acknowledgement window is too short for timezone-safe team parity.",
+      "remediation": "Use at least a 24 hour window for material communications unless every team explicitly waives it."
+    },
+    {
+      "code": "MISSING_ACKNOWLEDGEMENT",
+      "severity": "medium",
+      "communicationId": "comm-102",
+      "phase": "payout",
+      "topic": "award settlement instructions",
+      "affectedTeams": [
+        "team-beta"
+      ],
+      "message": "Material communication lacks acknowledgement from one or more recipient teams.",
+      "remediation": "Hold phase transitions until acknowledgement or documented delivery fallback is present."
+    }
+  ],
+  "releaseCriteria": [
+    "Every material sponsor communication reaches all eligible solver teams.",
+    "Rule-affecting messages reference the current immutable rule digest.",
+    "Delivery channels and required attachments are accessible to each recipient.",
+    "Material acknowledgements use fair windows and are logged before phase transitions."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-06-01T10:30:00.000Z",
+  "artifacts": [
+    "risky-audit.json",
+    "clean-audit.json",
+    "risky-review.md",
+    "summary.svg",
+    "demo.mp4"
+  ],
+  "riskyStatus": "HOLD",
+  "cleanStatus": "READY",
+  "riskyFingerprint": "e036107e72f70a7e",
+  "cleanFingerprint": "aa2c187bd4b36628"
+}

@@ -1,0 +1,285 @@
+{
+  "generatedAt": "2026-06-01T10:30:00.000Z",
+  "status": "HOLD",
+  "summary": "HOLD: 1 manuscript(s) produced 13 finding(s): 2 critical, 8 high, 3 warning, and 2 research gap prompt(s).",
+  "findingCounts": {
+    "critical": 2,
+    "high": 8,
+    "warning": 3
+  },
+  "findings": [
+    {
+      "code": "SPATIAL_SPLIT_LEAKAGE",
+      "severity": "critical",
+      "message": "urban-heat-random-split/rf-heat-risk has train/test samples only 0.6 km apart without spatial blocking.",
+      "evidence": "Policy requires at least 35 km or explicit spatial block validation.",
+      "path": "manuscripts[0].models[0].splitStrategy",
+      "remediation": "Use spatial block, leave-site-out, or regional holdout validation and regenerate performance claims.",
+      "owner": "model reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk"
+    },
+    {
+      "code": "TEST_SET_TUNING",
+      "severity": "critical",
+      "message": "urban-heat-random-split/rf-heat-risk tunes model choices on the test/holdout set.",
+      "evidence": "Reviewer-facing performance claims require a locked final test set.",
+      "path": "manuscripts[0].models[0].hyperparameterTunedOn",
+      "remediation": "Move tuning to inner validation folds and rerun the locked test set once.",
+      "owner": "model reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk"
+    },
+    {
+      "code": "DATA_MANIFEST_MISSING",
+      "severity": "high",
+      "message": "urban-heat-random-split is missing reproducibility artifact dataManifest.",
+      "evidence": "Geospatial results depend on data, code, and environment parity.",
+      "path": "manuscripts[0].reproducibilityArtifacts.dataManifest",
+      "remediation": "Attach a data manifest with sample ids, coordinates, split labels, and hashes.",
+      "owner": "reproducibility reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null
+    },
+    {
+      "code": "ENVIRONMENT_SPEC_MISSING",
+      "severity": "high",
+      "message": "urban-heat-random-split is missing reproducibility artifact environmentSpec.",
+      "evidence": "Geospatial results depend on data, code, and environment parity.",
+      "path": "manuscripts[0].reproducibilityArtifacts.environmentSpec",
+      "remediation": "Attach a pinned environment or container digest for spatial libraries.",
+      "owner": "reproducibility reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null
+    },
+    {
+      "code": "FULL_DATASET_PREPROCESSING_LEAKAGE",
+      "severity": "high",
+      "message": "urban-heat-random-split/rf-heat-risk fits spatial preprocessing on the full dataset.",
+      "evidence": "Raster normalization, imputation, or feature selection must be learned inside each training fold.",
+      "path": "manuscripts[0].models[0].preprocessingFitScope",
+      "remediation": "Refit preprocessing inside training folds and attach fold-specific transformation hashes.",
+      "owner": "reproducibility reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk"
+    },
+    {
+      "code": "HIGH_SPATIAL_AUTOCORRELATION_RANDOM_SPLIT",
+      "severity": "high",
+      "message": "urban-heat-random-split/rf-heat-risk reports Moran's I 0.62 with a random split.",
+      "evidence": "High spatial autocorrelation inflates random train/test validation.",
+      "path": "manuscripts[0].models[0].moransI",
+      "remediation": "Run spatial block cross-validation or leave-region-out validation before presenting performance as reviewer-ready.",
+      "owner": "spatial statistics reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk"
+    },
+    {
+      "code": "MISSING_CRS_EVIDENCE",
+      "severity": "high",
+      "message": "urban-heat-random-split does not declare a coordinate reference system.",
+      "evidence": "Spatial distances, joins, and raster overlays cannot be reviewed without CRS evidence.",
+      "path": "manuscripts[0].spatialDesign.crs",
+      "remediation": "Declare the source CRS/EPSG code and any analysis projection used for distance or area operations.",
+      "owner": "geospatial methods reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null
+    },
+    {
+      "code": "MISSING_EXTERNAL_SPATIAL_VALIDATION",
+      "severity": "high",
+      "message": "urban-heat-random-split/rf-heat-risk lacks external spatial validation for broader deployment claims.",
+      "evidence": "Broad geographic or deployment claims should be checked outside the training geography.",
+      "path": "manuscripts[0].models[0].externalValidationSites",
+      "remediation": "Add an out-of-region validation site or limit the manuscript claim to the sampled geography.",
+      "owner": "methods reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk"
+    },
+    {
+      "code": "OVERBROAD_GEOGRAPHIC_CLAIM",
+      "severity": "high",
+      "message": "urban-heat-random-split makes a broad geographic claim with only 1 observed region(s).",
+      "evidence": "The model generalizes across continental urban heat islands.",
+      "path": "manuscripts[0].claims[0]",
+      "remediation": "Limit the claim to sampled regions or add external validation sites covering the claimed geography.",
+      "owner": "methods reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null
+    },
+    {
+      "code": "SENSITIVE_COORDINATE_OVERPRECISION",
+      "severity": "high",
+      "message": "urban-heat-random-split exposes sensitive locations at 6 decimal places.",
+      "evidence": "Human-subject or protected-species locations should be generalized before reviewer packets or public summaries.",
+      "path": "manuscripts[0].spatialDesign.coordinatePrecisionDecimals",
+      "remediation": "Round or jitter coordinates to 4 decimals or provide an approved restricted-location access path.",
+      "owner": "privacy reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null
+    },
+    {
+      "code": "COVARIATE_SOURCE_MISSING",
+      "severity": "warning",
+      "message": "urban-heat-random-split/rf-heat-risk covariate NDVI has no source citation or artifact id.",
+      "evidence": "Raster/vector covariates should be traceable for reproducibility and recency review.",
+      "path": "manuscripts[0].models[0].covariates[0].source",
+      "remediation": "Attach a source DOI, artifact id, or repository path for each spatial covariate.",
+      "owner": "data steward",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk"
+    },
+    {
+      "code": "SPATIAL_BLOCK_MAP_MISSING",
+      "severity": "warning",
+      "message": "urban-heat-random-split has spatial validation claims without a block map artifact.",
+      "evidence": "Reviewers need the held-out geometry or block map to audit leakage.",
+      "path": "manuscripts[0].reproducibilityArtifacts.spatialBlockMap",
+      "remediation": "Attach a block-map artifact id, geometry hash, or leave-site-out manifest.",
+      "owner": "geospatial methods reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null
+    },
+    {
+      "code": "STALE_COVARIATE_WINDOW",
+      "severity": "warning",
+      "message": "urban-heat-random-split/rf-heat-risk covariate NDVI spans 540 acquisition days.",
+      "evidence": "Long covariate windows can hide temporal drift in geospatial models.",
+      "path": "manuscripts[0].models[0].covariates[0].acquisitionWindowDays",
+      "remediation": "Use period-matched covariates or report temporal-drift sensitivity checks.",
+      "owner": "methods reviewer",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk"
+    }
+  ],
+  "reviewDecisions": [
+    {
+      "manuscriptId": "urban-heat-random-split",
+      "decision": "HOLD",
+      "reasonCodes": [
+        "SPATIAL_SPLIT_LEAKAGE",
+        "TEST_SET_TUNING",
+        "DATA_MANIFEST_MISSING",
+        "ENVIRONMENT_SPEC_MISSING",
+        "FULL_DATASET_PREPROCESSING_LEAKAGE",
+        "HIGH_SPATIAL_AUTOCORRELATION_RANDOM_SPLIT",
+        "MISSING_CRS_EVIDENCE",
+        "MISSING_EXTERNAL_SPATIAL_VALIDATION",
+        "OVERBROAD_GEOGRAPHIC_CLAIM",
+        "SENSITIVE_COORDINATE_OVERPRECISION",
+        "COVARIATE_SOURCE_MISSING",
+        "SPATIAL_BLOCK_MAP_MISSING",
+        "STALE_COVARIATE_WINDOW"
+      ],
+      "reproducibilityScore": 0
+    }
+  ],
+  "researchGapOpportunities": [
+    {
+      "id": "urban-heat-random-split-regional-replication",
+      "title": "Prioritize out-of-region replication before broad geographic claims",
+      "rationale": "urban-heat-random-split samples 1 region(s), below the 3-region policy for broad claims.",
+      "firstAction": "Recruit or simulate a holdout site in the least represented claimed region."
+    },
+    {
+      "id": "urban-heat-random-split-spatial-validation-gap",
+      "title": "Add spatial block validation benchmark",
+      "rationale": "High autocorrelation with random validation means reported accuracy may be optimistic.",
+      "firstAction": "Create a leave-region-out benchmark and compare it to the random split baseline."
+    }
+  ],
+  "remediationActions": [
+    {
+      "code": "SPATIAL_SPLIT_LEAKAGE",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk",
+      "owner": "model reviewer",
+      "action": "Use spatial block, leave-site-out, or regional holdout validation and regenerate performance claims."
+    },
+    {
+      "code": "TEST_SET_TUNING",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk",
+      "owner": "model reviewer",
+      "action": "Move tuning to inner validation folds and rerun the locked test set once."
+    },
+    {
+      "code": "DATA_MANIFEST_MISSING",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null,
+      "owner": "reproducibility reviewer",
+      "action": "Attach a data manifest with sample ids, coordinates, split labels, and hashes."
+    },
+    {
+      "code": "ENVIRONMENT_SPEC_MISSING",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null,
+      "owner": "reproducibility reviewer",
+      "action": "Attach a pinned environment or container digest for spatial libraries."
+    },
+    {
+      "code": "FULL_DATASET_PREPROCESSING_LEAKAGE",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk",
+      "owner": "reproducibility reviewer",
+      "action": "Refit preprocessing inside training folds and attach fold-specific transformation hashes."
+    },
+    {
+      "code": "HIGH_SPATIAL_AUTOCORRELATION_RANDOM_SPLIT",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk",
+      "owner": "spatial statistics reviewer",
+      "action": "Run spatial block cross-validation or leave-region-out validation before presenting performance as reviewer-ready."
+    },
+    {
+      "code": "MISSING_CRS_EVIDENCE",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null,
+      "owner": "geospatial methods reviewer",
+      "action": "Declare the source CRS/EPSG code and any analysis projection used for distance or area operations."
+    },
+    {
+      "code": "MISSING_EXTERNAL_SPATIAL_VALIDATION",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk",
+      "owner": "methods reviewer",
+      "action": "Add an out-of-region validation site or limit the manuscript claim to the sampled geography."
+    },
+    {
+      "code": "OVERBROAD_GEOGRAPHIC_CLAIM",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null,
+      "owner": "methods reviewer",
+      "action": "Limit the claim to sampled regions or add external validation sites covering the claimed geography."
+    },
+    {
+      "code": "SENSITIVE_COORDINATE_OVERPRECISION",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null,
+      "owner": "privacy reviewer",
+      "action": "Round or jitter coordinates to 4 decimals or provide an approved restricted-location access path."
+    },
+    {
+      "code": "COVARIATE_SOURCE_MISSING",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk",
+      "owner": "data steward",
+      "action": "Attach a source DOI, artifact id, or repository path for each spatial covariate."
+    },
+    {
+      "code": "SPATIAL_BLOCK_MAP_MISSING",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": null,
+      "owner": "geospatial methods reviewer",
+      "action": "Attach a block-map artifact id, geometry hash, or leave-site-out manifest."
+    },
+    {
+      "code": "STALE_COVARIATE_WINDOW",
+      "manuscriptId": "urban-heat-random-split",
+      "modelId": "rf-heat-risk",
+      "owner": "methods reviewer",
+      "action": "Use period-matched covariates or report temporal-drift sensitivity checks."
+    }
+  ],
+  "fingerprint": "e036107e72f70a7e"
+}

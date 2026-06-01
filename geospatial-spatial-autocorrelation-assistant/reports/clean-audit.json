@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-06-01T10:30:00.000Z",
+  "status": "READY",
+  "summary": "1 manuscript(s) are ready for geospatial peer-review release with no spatial leakage or reproducibility findings.",
+  "findingCounts": {},
+  "findings": [],
+  "reviewDecisions": [
+    {
+      "manuscriptId": "rangeland-blocked-validation",
+      "decision": "READY",
+      "reasonCodes": [],
+      "reproducibilityScore": 100
+    }
+  ],
+  "researchGapOpportunities": [],
+  "remediationActions": [],
+  "fingerprint": "aa2c187bd4b36628"
+}

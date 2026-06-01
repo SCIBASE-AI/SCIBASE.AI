@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "decision": "release_collaborative_export",
+    "manuscriptId": "MS-COLLAB-STATS-CLEAN",
+    "analysesReviewed": 2,
+    "heldAnalyses": 0,
+    "findingCount": 0,
+    "criticalFindings": 0,
+    "highOrCriticalFindings": 0,
+    "auditDigest": "sha256:8bee866a9c5481439d7e15b97711f780b61d4fba3692b5727dd960b1192ded00"
+  },
+  "analyses": [
+    {
+      "id": "analysis-primary-response",
+      "label": "Primary response difference",
+      "sectionId": "results-primary",
+      "status": "export_ready",
+      "sampleSizeDelta": 0,
+      "requiredActions": []
+    },
+    {
+      "id": "analysis-secondary-response",
+      "label": "Secondary response difference",
+      "sectionId": "results-secondary",
+      "status": "export_ready",
+      "sampleSizeDelta": 0,
+      "requiredActions": []
+    }
+  ],
+  "findings": []
+}

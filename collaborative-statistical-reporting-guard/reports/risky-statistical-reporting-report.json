@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "decision": "hold_collaborative_export",
+    "manuscriptId": "MS-COLLAB-STATS-RISK",
+    "analysesReviewed": 3,
+    "heldAnalyses": 2,
+    "findingCount": 16,
+    "criticalFindings": 2,
+    "highOrCriticalFindings": 11,
+    "auditDigest": "sha256:6043784e7d3140a56405bd2bc05ea1cb61c66dac75ea83ca824907f266668a62"
+  },
+  "analyses": [
+    {
+      "id": "analysis-survival-primary",
+      "label": "Survival model primary endpoint",
+      "sectionId": "locked-results",
+      "status": "hold_collaborative_export",
+      "sampleSizeDelta": 5,
+      "requiredActions": [
+        "reconcile_sample_size_text_table_and_figure",
+        "align_p_value_threshold_wording",
+        "sync_text_and_table_p_values",
+        "reconcile_effect_size_text_and_table",
+        "reconcile_confidence_interval_text_and_table",
+        "sync_figure_statistic_with_text_and_table",
+        "approve_or_revert_locked_section_statistical_edit",
+        "resolve_blocking_statistical_review_comment"
+      ]
+    },
+    {
+      "id": "analysis-biomarker-subgroup",
+      "label": "Biomarker subgroup model",
+      "sectionId": "results-subgroups",
+      "status": "needs_statistical_review",
+      "sampleSizeDelta": 0,
+      "requiredActions": [
+        "add_text_table_or_figure_sample_size_evidence",
+        "align_p_value_threshold_wording",
+        "add_effect_size_to_text_and_table",
+        "review_ci_and_statistical_significance_wording",
+        "attach_figure_statistic_value_and_anchor"
+      ]
+    },
+    {
+      "id": "analysis-exploratory-dose",
+      "label": "Exploratory dose trend",
+      "sectionId": "results-exploratory",
+      "status": "hold_collaborative_export",
+      "sampleSizeDelta": 0,
+      "requiredActions": [
+        "attach_structured_p_value_or_mark_descriptive_only",
+        "reconcile_confidence_interval_text_and_table",
+        "resolve_blocking_statistical_review_comment"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "code": "LOCKED_SECTION_STAT_EDIT_UNAPPROVED",
+      "message": "analysis-survival-primary changed statistics inside a locked section without approval.",
+      "refs": [
+        "analysis-survival-primary",
+        "locked-results"
+      ],
+      "action": "approve_or_revert_locked_section_statistical_edit"
+    },
+    {
+      "severity": "critical",
+      "code": "SAMPLE_SIZE_DRIFT",
+      "message": "analysis-survival-primary reports inconsistent sample sizes across manuscript surfaces.",
+      "refs": [
+        "analysis-survival-primary",
+        "text",
+        "table",
+        "figure"
+      ],
+      "action": "reconcile_sample_size_text_table_and_figure"
+    },
+    {
+      "severity": "high",
+      "code": "BLOCKING_STAT_REVIEW_COMMENT_OPEN",
+      "message": "analysis-survival-primary has unresolved blocking statistical review comment stat-cmt-9.",
+      "refs": [
+        "analysis-survival-primary",
+        "stat-cmt-9"
+      ],
+      "action": "resolve_blocking_statistical_review_comment"
+    },
+    {
+      "severity": "high",
+      "code": "BLOCKING_STAT_REVIEW_COMMENT_OPEN",
+      "message": "analysis-exploratory-dose has unresolved blocking statistical review comment stat-cmt-13.",
+      "refs": [
+        "analysis-exploratory-dose",
+        "stat-cmt-13"
+      ],
+      "action": "resolve_blocking_statistical_review_comment"
+    },
+    {
+      "severity": "high",
+      "code": "CONFIDENCE_INTERVAL_MISMATCH",
+      "message": "analysis-survival-primary has inconsistent confidence intervals in text and table.",
+      "refs": [
+        "analysis-survival-primary"
+      ],
+      "action": "reconcile_confidence_interval_text_and_table"
+    },
+    {
+      "severity": "high",
+      "code": "CONFIDENCE_INTERVAL_MISMATCH",
+      "message": "analysis-exploratory-dose has inconsistent confidence intervals in text and table.",
+      "refs": [
+        "analysis-exploratory-dose"
+      ],
+      "action": "reconcile_confidence_interval_text_and_table"
+    },
+    {
+      "severity": "high",
+      "code": "EFFECT_SIZE_MISMATCH",
+      "message": "analysis-survival-primary has inconsistent effect sizes in text and table.",
+      "refs": [
+        "analysis-survival-primary"
+      ],
+      "action": "reconcile_effect_size_text_and_table"
+    },
+    {
+      "severity": "high",
+      "code": "P_VALUE_TABLE_MISMATCH",
+      "message": "analysis-survival-primary has different text and table p-values.",
+      "refs": [
+        "analysis-survival-primary"
+      ],
+      "action": "sync_text_and_table_p_values"
+    },
+    {
+      "severity": "high",
+      "code": "P_VALUE_WORDING_CONTRADICTION",
+      "message": "analysis-survival-primary has p=0.041 but the manuscript wording says not significant.",
+      "refs": [
+        "analysis-survival-primary"
+      ],
+      "action": "align_p_value_threshold_wording"
+    },
+    {
+      "severity": "high",
+      "code": "P_VALUE_WORDING_CONTRADICTION",
+      "message": "analysis-biomarker-subgroup has p=0.12 but the manuscript wording says significant.",
+      "refs": [
+        "analysis-biomarker-subgroup"
+      ],
+      "action": "align_p_value_threshold_wording"
+    },
+    {
+      "severity": "high",
+      "code": "SAMPLE_SIZE_SOURCE_MISSING",
+      "message": "analysis-biomarker-subgroup has fewer than 2 sample-size sources.",
+      "refs": [
+        "analysis-biomarker-subgroup"
+      ],
+      "action": "add_text_table_or_figure_sample_size_evidence"
+    },
+    {
+      "severity": "medium",
+      "code": "CI_SIGNIFICANCE_WORDING_CONFLICT",
+      "message": "analysis-biomarker-subgroup confidence interval crosses zero while wording says significant.",
+      "refs": [
+        "analysis-biomarker-subgroup"
+      ],
+      "action": "review_ci_and_statistical_significance_wording"
+    },
+    {
+      "severity": "medium",
+      "code": "EFFECT_SIZE_SOURCE_MISSING",
+      "message": "analysis-biomarker-subgroup lacks a paired text/table effect-size value.",
+      "refs": [
+        "analysis-biomarker-subgroup"
+      ],
+      "action": "add_effect_size_to_text_and_table"
+    },
+    {
+      "severity": "medium",
+      "code": "FIGURE_STATISTIC_INCOMPLETE",
+      "message": "analysis-biomarker-subgroup has incomplete figure statistic metadata.",
+      "refs": [
+        "analysis-biomarker-subgroup"
+      ],
+      "action": "attach_figure_statistic_value_and_anchor"
+    },
+    {
+      "severity": "medium",
+      "code": "FIGURE_TEXT_STATISTIC_MISMATCH",
+      "message": "analysis-survival-primary figure statistic differs from the manuscript effect size.",
+      "refs": [
+        "analysis-survival-primary",
+        "fig-4"
+      ],
+      "action": "sync_figure_statistic_with_text_and_table"
+    },
+    {
+      "severity": "medium",
+      "code": "P_VALUE_MISSING",
+      "message": "analysis-exploratory-dose has no structured p-value for export validation.",
+      "refs": [
+        "analysis-exploratory-dose"
+      ],
+      "action": "attach_structured_p_value_or_mark_descriptive_only"
+    }
+  ]
+}

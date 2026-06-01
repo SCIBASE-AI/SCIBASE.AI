@@ -1,0 +1,71 @@
+{
+  "manuscriptId": "peer-review-disclosure-002",
+  "title": "Closed-loop catalyst ranking",
+  "decision": "hold",
+  "summary": {
+    "authorsReviewed": 2,
+    "fundersReviewed": 1,
+    "disclosuresReviewed": 2,
+    "findings": 7,
+    "high": 4,
+    "medium": 3,
+    "low": 0
+  },
+  "findings": [
+    {
+      "code": "MISSING_GRANT_IDENTIFIERS",
+      "severity": "medium",
+      "subject": "manuscript",
+      "message": "Funding is declared without grant, award, or contract identifiers.",
+      "remediation": "Add grant identifiers or document why the funder did not issue one."
+    },
+    {
+      "code": "SPONSOR_ROLE_UNCLEAR",
+      "severity": "high",
+      "subject": "manuscript",
+      "message": "Sponsor role in study design, analysis, writing, or publication decision is not stated.",
+      "remediation": "State the sponsor role explicitly, including whether the funder reviewed or influenced the manuscript."
+    },
+    {
+      "code": "UNDISCLOSED_INDUSTRY_RELATIONSHIP",
+      "severity": "high",
+      "subject": "a1",
+      "message": "Ari Chen lists an industry relationship with NanoCatalyst Inc., but the conflict statement does not disclose it.",
+      "remediation": "Revise the competing-interest declaration or remove/justify the relationship record."
+    },
+    {
+      "code": "MISSING_COMPETING_INTEREST",
+      "severity": "high",
+      "subject": "a2",
+      "message": "Bea Singh has no competing-interest statement.",
+      "remediation": "Add a competing-interest declaration for every listed author."
+    },
+    {
+      "code": "MISSING_AUTHOR_CONTRIBUTIONS",
+      "severity": "medium",
+      "subject": "a2",
+      "message": "Bea Singh has no CRediT-style contributions listed.",
+      "remediation": "Add at least one contributor role for every author before reviewer packets are released."
+    },
+    {
+      "code": "ACKNOWLEDGED_SPONSOR_ROLE_MISMATCH",
+      "severity": "medium",
+      "subject": "manuscript",
+      "message": "NanoCatalyst Inc. is acknowledged in the manuscript but sponsor role is absent from the funding statement.",
+      "remediation": "Reconcile acknowledgements with funding and sponsor-role disclosures."
+    },
+    {
+      "code": "MISSING_CORRESPONDING_AUTHOR",
+      "severity": "high",
+      "subject": "manuscript",
+      "message": "No corresponding author is marked for accountability and disclosure follow-up.",
+      "remediation": "Mark one or more corresponding authors before submission or AI-generated review packets proceed."
+    }
+  ],
+  "releaseCriteria": [
+    "Funder and grant statements are explicit before AI peer-review aid output is trusted.",
+    "Sponsor role in design, analysis, writing, review, and publication decision is disclosed.",
+    "Every author has a competing-interest statement matching known relationships.",
+    "CRediT-style author contributions and corresponding-author accountability are present."
+  ]
+}

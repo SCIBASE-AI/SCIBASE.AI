@@ -1,0 +1,263 @@
+{
+  "input": {
+    "projectId": "synthetic-embargoed-behavior-video-v1",
+    "releaseDate": "2026-06-01",
+    "mediaArtifacts": [
+      {
+        "id": "embargoed-protocol-video",
+        "type": "protocol_video",
+        "checksum": "sha256:protocol-video-current",
+        "previewChecksum": "sha256:protocol-video-preview-old",
+        "previewSourceChecksum": "sha256:protocol-video-previous",
+        "publicPreview": true,
+        "accessState": "restricted",
+        "embargoUntil": "2026-06-25",
+        "durationSeconds": 180,
+        "altText": "",
+        "caption": "Short clip.",
+        "transcriptSegments": [
+          {
+            "startSeconds": 0,
+            "endSeconds": 38,
+            "label": "Task setup"
+          },
+          {
+            "startSeconds": 38,
+            "endSeconds": 75,
+            "label": ""
+          }
+        ],
+        "thumbnail": {
+          "id": "thumb-video-risky",
+          "sourceChecksum": "sha256:protocol-video-previous",
+          "generatedAt": "2026-05-01"
+        },
+        "accessibilityMetadata": {
+          "accessMode": "",
+          "accessibilityFeature": "",
+          "encodingFormat": "video/mp4",
+          "schemaOrgType": ""
+        }
+      },
+      {
+        "id": "microscopy-panel-no-alt",
+        "type": "microscopy_image",
+        "checksum": "sha256:microscopy-image-current",
+        "previewChecksum": "sha256:microscopy-image-preview",
+        "previewSourceChecksum": "sha256:microscopy-image-current",
+        "publicPreview": true,
+        "accessState": "public",
+        "altText": "cells",
+        "caption": "",
+        "thumbnail": {
+          "id": "thumb-image-risky",
+          "sourceChecksum": "sha256:microscopy-image-current",
+          "generatedAt": "2026-05-30"
+        },
+        "accessibilityMetadata": {
+          "accessMode": "visual",
+          "accessibilityFeature": "",
+          "encodingFormat": "image/png",
+          "schemaOrgType": "ImageObject"
+        }
+      }
+    ]
+  },
+  "evaluation": {
+    "summary": {
+      "projectId": "synthetic-embargoed-behavior-video-v1",
+      "releaseDate": "2026-06-01",
+      "decision": "hold_media_preview_release",
+      "mediaReviewed": 2,
+      "findingCount": 11,
+      "highOrCriticalFindings": 6,
+      "auditDigest": "sha256:9a556f472cf3e16c"
+    },
+    "coverage": [
+      {
+        "id": "embargoed-protocol-video",
+        "type": "protocol_video",
+        "publicPreview": true,
+        "hasAltText": false,
+        "hasCaption": false,
+        "transcriptCoverage": 0.4166666666666667,
+        "metadataComplete": false
+      },
+      {
+        "id": "microscopy-panel-no-alt",
+        "type": "microscopy_image",
+        "publicPreview": true,
+        "hasAltText": false,
+        "hasCaption": false,
+        "transcriptCoverage": null,
+        "metadataComplete": false
+      }
+    ],
+    "findings": [
+      {
+        "severity": "critical",
+        "code": "EMBARGOED_MEDIA_PUBLIC_PREVIEW",
+        "message": "embargoed-protocol-video is previewable while embargoed for 24 more days.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "hold_embargoed_media_preview"
+      },
+      {
+        "severity": "critical",
+        "code": "RESTRICTED_MEDIA_PUBLIC_PREVIEW",
+        "message": "embargoed-protocol-video is restricted but marked for public preview.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "disable_public_preview_for_restricted_media"
+      },
+      {
+        "severity": "high",
+        "code": "ALT_TEXT_MISSING_OR_TOO_SHORT",
+        "message": "microscopy-panel-no-alt needs descriptive alt text before public preview.",
+        "refs": [
+          "microscopy-panel-no-alt"
+        ],
+        "action": "add_descriptive_alt_text"
+      },
+      {
+        "severity": "high",
+        "code": "PREVIEW_SOURCE_CHECKSUM_DRIFT",
+        "message": "embargoed-protocol-video preview source checksum does not match the current artifact checksum.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "regenerate_preview_from_current_artifact"
+      },
+      {
+        "severity": "high",
+        "code": "THUMBNAIL_PROVENANCE_DRIFT",
+        "message": "embargoed-protocol-video thumbnail was generated from a checksum that differs from the hosted source artifact.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "regenerate_thumbnail_from_current_artifact"
+      },
+      {
+        "severity": "high",
+        "code": "TRANSCRIPT_COVERAGE_INCOMPLETE",
+        "message": "embargoed-protocol-video has 42% transcript coverage.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "complete_timecoded_transcript"
+      },
+      {
+        "severity": "medium",
+        "code": "ACCESSIBILITY_METADATA_INCOMPLETE",
+        "message": "embargoed-protocol-video is missing accessibility metadata: accessMode, accessibilityFeature, schemaOrgType.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "complete_datacite_schema_org_accessibility_metadata"
+      },
+      {
+        "severity": "medium",
+        "code": "ACCESSIBILITY_METADATA_INCOMPLETE",
+        "message": "microscopy-panel-no-alt is missing accessibility metadata: accessibilityFeature.",
+        "refs": [
+          "microscopy-panel-no-alt"
+        ],
+        "action": "complete_datacite_schema_org_accessibility_metadata"
+      },
+      {
+        "severity": "medium",
+        "code": "CAPTION_MISSING_OR_TOO_SHORT",
+        "message": "embargoed-protocol-video needs a reviewer-facing caption for preview and export packets.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "add_reviewer_caption"
+      },
+      {
+        "severity": "medium",
+        "code": "CAPTION_MISSING_OR_TOO_SHORT",
+        "message": "microscopy-panel-no-alt needs a reviewer-facing caption for preview and export packets.",
+        "refs": [
+          "microscopy-panel-no-alt"
+        ],
+        "action": "add_reviewer_caption"
+      },
+      {
+        "severity": "medium",
+        "code": "TIMECODE_LABEL_MISSING",
+        "message": "embargoed-protocol-video has 1 transcript segments without scientific labels.",
+        "refs": [
+          "embargoed-protocol-video"
+        ],
+        "action": "label_transcript_segments"
+      }
+    ],
+    "actions": [
+      {
+        "id": "hold_embargoed_media_preview",
+        "severity": "critical",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      },
+      {
+        "id": "disable_public_preview_for_restricted_media",
+        "severity": "critical",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      },
+      {
+        "id": "add_descriptive_alt_text",
+        "severity": "high",
+        "refs": [
+          "microscopy-panel-no-alt"
+        ]
+      },
+      {
+        "id": "regenerate_preview_from_current_artifact",
+        "severity": "high",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      },
+      {
+        "id": "regenerate_thumbnail_from_current_artifact",
+        "severity": "high",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      },
+      {
+        "id": "complete_timecoded_transcript",
+        "severity": "high",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      },
+      {
+        "id": "complete_datacite_schema_org_accessibility_metadata",
+        "severity": "medium",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      },
+      {
+        "id": "add_reviewer_caption",
+        "severity": "medium",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      },
+      {
+        "id": "label_transcript_segments",
+        "severity": "medium",
+        "refs": [
+          "embargoed-protocol-video"
+        ]
+      }
+    ]
+  }
+}

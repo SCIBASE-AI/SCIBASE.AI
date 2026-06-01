@@ -1,0 +1,10 @@
+Supplementary media accessibility preview guard demo
+
+Clean packet decision: release_media_preview_packet
+Clean audit digest: sha256:e9e87184f71e42ee
+
+Risky packet decision: hold_media_preview_release
+Risky finding count: 11
+Risky audit digest: sha256:9a556f472cf3e16c
+
+The risky packet demonstrates an embargoed restricted video exposed for public preview, incomplete transcript coverage, unlabeled segments, thumbnail/preview checksum drift, missing alt text, missing captions, and incomplete accessibility metadata.

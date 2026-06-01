@@ -1,0 +1,246 @@
+{
+  "summary": {
+    "decision": "hold_chemical_graph",
+    "graphId": "KG-CHEM-RISK",
+    "compoundsReviewed": 5,
+    "edgesReviewed": 4,
+    "heldNodes": 1,
+    "heldEdges": 2,
+    "findingCount": 15,
+    "criticalFindings": 4,
+    "highOrCriticalFindings": 11,
+    "auditDigest": "sha256:0128a62f30867cfec310d4ff265ff6e88ad056a911cbc36f61046aa3e030e7a0"
+  },
+  "compounds": [
+    {
+      "id": "cmpd-thalidomide-ambiguous",
+      "label": "Thalidomide",
+      "status": "hold_identity_node",
+      "actions": [
+        "split_or_hold_compound_until_stereochemistry_is_explicit",
+        "attach_doi_backed_identity_evidence",
+        "deduplicate_compound_synonyms"
+      ]
+    },
+    {
+      "id": "cmpd-alpha-other",
+      "label": "Alpha unrelated scaffold",
+      "status": "publishable",
+      "actions": []
+    },
+    {
+      "id": "cmpd-caffeine-citrate",
+      "label": "Caffeine citrate",
+      "status": "curator_review",
+      "actions": [
+        "retain_salt_or_hydrate_form_as_explicit_graph_node"
+      ]
+    },
+    {
+      "id": "cmpd-caffeine-freebase",
+      "label": "Caffeine",
+      "status": "publishable",
+      "actions": []
+    },
+    {
+      "id": "cmpd-tracer",
+      "label": "Tracer X",
+      "status": "curator_review",
+      "actions": [
+        "attach_valid_inchikey_before_graph_merge",
+        "attach_isomeric_smiles_before_recommendation",
+        "attach_isotope_label_before_assay_edge_publication"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-bad-same-as",
+      "relationship": "same_as",
+      "status": "hold_graph_edge",
+      "actions": [
+        "split_same_as_edge_into_distinct_compound_nodes",
+        "hold_same_as_edge_for_stereochemistry_review"
+      ]
+    },
+    {
+      "id": "edge-form-conflation",
+      "relationship": "same_as",
+      "status": "curator_review",
+      "actions": [
+        "model_compound_form_relationship_instead_of_same_as"
+      ]
+    },
+    {
+      "id": "edge-assay-incomplete",
+      "relationship": "tested_in_assay",
+      "status": "curator_review",
+      "actions": [
+        "attach_assay_context_before_recommendation",
+        "suppress_assay_recommendation_until_form_context_matches",
+        "attach_doi_backed_edge_evidence"
+      ]
+    },
+    {
+      "id": "edge-missing-target",
+      "status": "hold_graph_edge",
+      "actions": [
+        "block_edge_until_both_chemical_nodes_exist"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "code": "CHEMICAL_EDGE_NODE_MISSING",
+      "message": "edge-missing-target references a missing chemical node.",
+      "refs": [
+        "edge-missing-target",
+        "cmpd-tracer",
+        "cmpd-missing"
+      ],
+      "action": "block_edge_until_both_chemical_nodes_exist"
+    },
+    {
+      "severity": "critical",
+      "code": "SAME_AS_SKELETON_MISMATCH",
+      "message": "edge-bad-same-as marks two different chemical skeletons as same_as.",
+      "refs": [
+        "edge-bad-same-as",
+        "cmpd-thalidomide-ambiguous",
+        "cmpd-alpha-other"
+      ],
+      "action": "split_same_as_edge_into_distinct_compound_nodes"
+    },
+    {
+      "severity": "critical",
+      "code": "STEREOCHEMISTRY_MISSING",
+      "message": "cmpd-thalidomide-ambiguous requires stereochemistry but the graph node has no stereochemical markers.",
+      "refs": [
+        "cmpd-thalidomide-ambiguous"
+      ],
+      "action": "split_or_hold_compound_until_stereochemistry_is_explicit"
+    },
+    {
+      "severity": "critical",
+      "code": "SYNONYM_COLLISION_ACROSS_COMPOUNDS",
+      "message": "Synonym alphacompound resolves to multiple chemical skeletons.",
+      "refs": [
+        "cmpd-thalidomide-ambiguous",
+        "cmpd-thalidomide-ambiguous",
+        "cmpd-alpha-other"
+      ],
+      "action": "quarantine_synonym_until_curator_disambiguates_compounds"
+    },
+    {
+      "severity": "high",
+      "code": "ASSAY_CONTEXT_INCOMPLETE",
+      "message": "edge-assay-incomplete lacks assay matrix or concentration-unit context.",
+      "refs": [
+        "edge-assay-incomplete",
+        "cmpd-caffeine-citrate",
+        "assay-dose-response-7"
+      ],
+      "action": "attach_assay_context_before_recommendation"
+    },
+    {
+      "severity": "high",
+      "code": "CHEMICAL_IDENTITY_EVIDENCE_MISSING",
+      "message": "cmpd-thalidomide-ambiguous lacks DOI-backed identity evidence.",
+      "refs": [
+        "cmpd-thalidomide-ambiguous"
+      ],
+      "action": "attach_doi_backed_identity_evidence"
+    },
+    {
+      "severity": "high",
+      "code": "EDGE_EVIDENCE_DOI_MISSING",
+      "message": "edge-assay-incomplete lacks DOI-backed relationship evidence.",
+      "refs": [
+        "edge-assay-incomplete",
+        "cmpd-caffeine-citrate",
+        "assay-dose-response-7"
+      ],
+      "action": "attach_doi_backed_edge_evidence"
+    },
+    {
+      "severity": "high",
+      "code": "INCHIKEY_FORMAT_INVALID",
+      "message": "cmpd-tracer has missing or invalid InChIKey evidence.",
+      "refs": [
+        "cmpd-tracer"
+      ],
+      "action": "attach_valid_inchikey_before_graph_merge"
+    },
+    {
+      "severity": "high",
+      "code": "ISOMERIC_SMILES_MISSING",
+      "message": "cmpd-tracer lacks an isomeric SMILES string.",
+      "refs": [
+        "cmpd-tracer"
+      ],
+      "action": "attach_isomeric_smiles_before_recommendation"
+    },
+    {
+      "severity": "high",
+      "code": "ISOTOPE_LABEL_MISSING",
+      "message": "cmpd-tracer is isotope-labeled but has no isotope label metadata.",
+      "refs": [
+        "cmpd-tracer"
+      ],
+      "action": "attach_isotope_label_before_assay_edge_publication"
+    },
+    {
+      "severity": "high",
+      "code": "SAME_AS_STEREOCHEMISTRY_MISMATCH",
+      "message": "edge-bad-same-as links stereochemically distinct compound records.",
+      "refs": [
+        "edge-bad-same-as",
+        "cmpd-thalidomide-ambiguous",
+        "cmpd-alpha-other"
+      ],
+      "action": "hold_same_as_edge_for_stereochemistry_review"
+    },
+    {
+      "severity": "medium",
+      "code": "ASSAY_FORM_CONTEXT_MISMATCH",
+      "message": "edge-assay-incomplete uses a compound form that is incompatible with the assay context.",
+      "refs": [
+        "edge-assay-incomplete",
+        "cmpd-caffeine-citrate",
+        "assay-dose-response-7"
+      ],
+      "action": "suppress_assay_recommendation_until_form_context_matches"
+    },
+    {
+      "severity": "medium",
+      "code": "SALT_FORM_NEEDS_SEPARATE_NODE",
+      "message": "cmpd-caffeine-citrate is a citrate salt form that should not be silently merged with the freebase node.",
+      "refs": [
+        "cmpd-caffeine-citrate",
+        "cmpd-caffeine-freebase"
+      ],
+      "action": "retain_salt_or_hydrate_form_as_explicit_graph_node"
+    },
+    {
+      "severity": "medium",
+      "code": "SAME_AS_FORM_CONFLATION",
+      "message": "edge-form-conflation conflates citrate salt and freebase forms.",
+      "refs": [
+        "edge-form-conflation",
+        "cmpd-caffeine-citrate",
+        "cmpd-caffeine-freebase"
+      ],
+      "action": "model_compound_form_relationship_instead_of_same_as"
+    },
+    {
+      "severity": "low",
+      "code": "DUPLICATE_NODE_SYNONYM",
+      "message": "cmpd-thalidomide-ambiguous repeats synonym key alphacompound.",
+      "refs": [
+        "cmpd-thalidomide-ambiguous"
+      ],
+      "action": "deduplicate_compound_synonyms"
+    }
+  ]
+}

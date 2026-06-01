@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "decision": "publish_chemical_graph",
+    "graphId": "KG-CHEM-CLEAN",
+    "compoundsReviewed": 2,
+    "edgesReviewed": 2,
+    "heldNodes": 0,
+    "heldEdges": 0,
+    "findingCount": 0,
+    "criticalFindings": 0,
+    "highOrCriticalFindings": 0,
+    "auditDigest": "sha256:3c544a96d9020ddb66cd94e0c2e4a6b810605af9484ae41cd68d022d7667aafe"
+  },
+  "compounds": [
+    {
+      "id": "cmpd-warfarin-r",
+      "label": "R-warfarin",
+      "status": "publishable",
+      "actions": []
+    },
+    {
+      "id": "cmpd-warfarin-sodium",
+      "label": "Warfarin sodium",
+      "status": "publishable",
+      "actions": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-warfarin-form",
+      "relationship": "form_of",
+      "status": "publishable",
+      "actions": []
+    },
+    {
+      "id": "edge-warfarin-assay",
+      "relationship": "tested_in_assay",
+      "status": "publishable",
+      "actions": []
+    }
+  ],
+  "findings": []
+}

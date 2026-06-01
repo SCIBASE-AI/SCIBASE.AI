@@ -1,0 +1,176 @@
+{
+  "projectId": "SCI-CHAIN-001",
+  "title": "Cytokine drift after cold-chain interruption",
+  "generatedAt": "2026-06-01T12:00:00Z",
+  "policy": {
+    "maxTransitGapHours": 4,
+    "requiredEvents": ["collect", "accession", "storage", "assay-run", "archive"],
+    "releaseRequiresReviewerSignoff": true
+  },
+  "conclusions": [
+    {
+      "id": "C-1",
+      "text": "IL-6 increased in the exposed cohort.",
+      "sampleIds": ["S-1001", "S-1002"]
+    },
+    {
+      "id": "C-2",
+      "text": "Control samples remained stable across the shipment window.",
+      "sampleIds": ["S-1003"]
+    }
+  ],
+  "samples": [
+    {
+      "id": "S-1001",
+      "participantId": "P-101",
+      "consentId": "CONS-778",
+      "visibleFields": ["sample_id", "collection_day", "blinded_arm"],
+      "blindingGroup": "exposed",
+      "storageSpec": {
+        "minCelsius": 2,
+        "maxCelsius": 8
+      },
+      "custodyEvents": [
+        {
+          "type": "collect",
+          "timestamp": "2026-05-22T09:10:00Z",
+          "location": "Clinic A",
+          "actor": "phlebotomist-12",
+          "signature": "sig-collect-1001"
+        },
+        {
+          "type": "accession",
+          "timestamp": "2026-05-22T10:20:00Z",
+          "location": "Lab intake",
+          "actor": "tech-07",
+          "signature": "sig-accession-1001"
+        },
+        {
+          "type": "storage",
+          "timestamp": "2026-05-22T10:40:00Z",
+          "location": "Cold room 2",
+          "actor": "tech-07",
+          "signature": "sig-storage-1001",
+          "temperatureCelsius": 4.2
+        },
+        {
+          "type": "assay-run",
+          "timestamp": "2026-05-22T13:35:00Z",
+          "location": "ELISA bay",
+          "actor": "assay-operator-2",
+          "signature": "sig-assay-1001",
+          "instrumentId": "ELISA-04",
+          "qcStatus": "pass"
+        },
+        {
+          "type": "archive",
+          "timestamp": "2026-05-22T16:00:00Z",
+          "location": "Freezer B",
+          "actor": "tech-14",
+          "signature": "sig-archive-1001",
+          "temperatureCelsius": -80
+        }
+      ],
+      "reviewerSignoff": {
+        "reviewer": "qa-reviewer-1",
+        "timestamp": "2026-05-23T09:00:00Z"
+      }
+    },
+    {
+      "id": "S-1002",
+      "participantId": "P-102",
+      "consentId": "",
+      "visibleFields": ["sample_id", "collection_day", "treatment_arm"],
+      "blindingGroup": "exposed",
+      "storageSpec": {
+        "minCelsius": 2,
+        "maxCelsius": 8
+      },
+      "custodyEvents": [
+        {
+          "type": "collect",
+          "timestamp": "2026-05-22T08:45:00Z",
+          "location": "Clinic B",
+          "actor": "phlebotomist-09",
+          "signature": "sig-collect-1002"
+        },
+        {
+          "type": "accession",
+          "timestamp": "2026-05-22T16:30:00Z",
+          "location": "Lab intake",
+          "actor": "tech-11",
+          "signature": ""
+        },
+        {
+          "type": "storage",
+          "timestamp": "2026-05-22T16:45:00Z",
+          "location": "Cold room 2",
+          "actor": "tech-11",
+          "signature": "sig-storage-1002",
+          "temperatureCelsius": 11.7
+        },
+        {
+          "type": "assay-run",
+          "timestamp": "2026-05-22T18:20:00Z",
+          "location": "ELISA bay",
+          "actor": "assay-operator-2",
+          "signature": "sig-assay-1002",
+          "instrumentId": "ELISA-04",
+          "qcStatus": "fail"
+        }
+      ],
+      "quarantine": {
+        "status": "open",
+        "reason": "temperature excursion pending QA disposition"
+      },
+      "reviewerSignoff": null
+    },
+    {
+      "id": "S-1003",
+      "participantId": "P-103",
+      "consentId": "CONS-889",
+      "visibleFields": ["sample_id", "collection_day"],
+      "blindingGroup": "control",
+      "storageSpec": {
+        "minCelsius": -90,
+        "maxCelsius": -60
+      },
+      "custodyEvents": [
+        {
+          "type": "collect",
+          "timestamp": "2026-05-22T09:30:00Z",
+          "location": "Clinic A",
+          "actor": "phlebotomist-12",
+          "signature": "sig-collect-1003"
+        },
+        {
+          "type": "accession",
+          "timestamp": "2026-05-22T10:15:00Z",
+          "location": "Lab intake",
+          "actor": "tech-07",
+          "signature": "sig-accession-1003"
+        },
+        {
+          "type": "storage",
+          "timestamp": "2026-05-22T10:30:00Z",
+          "location": "Freezer A",
+          "actor": "tech-07",
+          "signature": "sig-storage-1003",
+          "temperatureCelsius": -78
+        },
+        {
+          "type": "archive",
+          "timestamp": "2026-05-22T17:00:00Z",
+          "location": "Freezer B",
+          "actor": "tech-14",
+          "signature": "sig-archive-1003",
+          "temperatureCelsius": -75
+        }
+      ],
+      "reviewerSignoff": {
+        "reviewer": "qa-reviewer-1",
+        "timestamp": "2026-05-23T09:05:00Z"
+      }
+    }
+  ]
+}

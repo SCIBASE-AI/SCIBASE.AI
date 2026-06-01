@@ -1,0 +1,119 @@
+{
+  "projectId": "SCI-CHAIN-001",
+  "title": "Cytokine drift after cold-chain interruption",
+  "generatedAt": "2026-06-01T12:00:00Z",
+  "assistant": "sample-chain-of-custody-review",
+  "decision": "hold",
+  "severityCounts": {
+    "critical": 4,
+    "high": 6,
+    "medium": 4,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "sampleId": "S-1001,S-1002",
+      "check": "conclusion-release-gate",
+      "evidence": "Conclusion C-1 relies on sample(s) with critical custody findings.",
+      "remediation": "Hold this conclusion until critical sample custody issues are resolved."
+    },
+    {
+      "severity": "critical",
+      "sampleId": "S-1002",
+      "check": "assay-qc",
+      "evidence": "assay-run@2026-05-22T18:20:00Z has qcStatus=fail.",
+      "remediation": "Do not release conclusions using this assay until QC failure is resolved or rerun."
+    },
+    {
+      "severity": "critical",
+      "sampleId": "S-1002",
+      "check": "consent-link",
+      "evidence": "No consentId is attached to the sample metadata.",
+      "remediation": "Attach a verified consent record or remove this sample from AI-supported conclusions."
+    },
+    {
+      "severity": "critical",
+      "sampleId": "S-1002",
+      "check": "open-quarantine",
+      "evidence": "Open quarantine: temperature excursion pending QA disposition.",
+      "remediation": "Resolve QA quarantine or remove this sample from conclusions."
+    },
+    {
+      "severity": "high",
+      "sampleId": "S-1001",
+      "check": "blinding-leak",
+      "evidence": "Reviewer-visible fields include group/arm metadata while blindingGroup=exposed.",
+      "remediation": "Mask treatment-arm fields before AI review or document that the review is intentionally unblinded."
+    },
+    {
+      "severity": "high",
+      "sampleId": "S-1002",
+      "check": "blinding-leak",
+      "evidence": "Reviewer-visible fields include group/arm metadata while blindingGroup=exposed.",
+      "remediation": "Mask treatment-arm fields before AI review or document that the review is intentionally unblinded."
+    },
+    {
+      "severity": "high",
+      "sampleId": "S-1002",
+      "check": "reviewer-signoff",
+      "evidence": "No reviewerSignoff record is present.",
+      "remediation": "Obtain accountable QA/reviewer signoff before release."
+    },
+    {
+      "severity": "high",
+      "sampleId": "S-1002",
+      "check": "temperature-excursion",
+      "evidence": "storage@2026-05-22T16:45:00Z recorded 11.7C outside 2C-8C.",
+      "remediation": "Open a QA disposition, document stability impact, and quarantine the sample until resolved."
+    },
+    {
+      "severity": "high",
+      "sampleId": "S-1003",
+      "check": "conclusion-release-gate",
+      "evidence": "Conclusion C-2 relies on sample(s) with high-risk custody findings.",
+      "remediation": "Revise confidence language and require reviewer acceptance before release."
+    },
+    {
+      "severity": "high",
+      "sampleId": "S-1003",
+      "check": "required-custody-event",
+      "evidence": "Missing required custody event: assay-run.",
+      "remediation": "Add a signed assay-run custody event or exclude this sample from release."
+    },
+    {
+      "severity": "medium",
+      "sampleId": "S-1002",
+      "check": "custody-time-gap",
+      "evidence": "collect to accession gap is 7.8 hours.",
+      "remediation": "Add intermediate courier/storage handoff evidence or downgrade conclusions that rely on this sample."
+    },
+    {
+      "severity": "medium",
+      "sampleId": "S-1002",
+      "check": "handoff-signature",
+      "evidence": "accession@2026-05-22T16:30:00Z is missing actor or signature evidence.",
+      "remediation": "Add a signed handoff record with accountable actor and timestamp."
+    },
+    {
+      "severity": "medium",
+      "sampleId": "S-1002",
+      "check": "required-custody-event",
+      "evidence": "Missing required custody event: archive.",
+      "remediation": "Add a signed archive custody event or exclude this sample from release."
+    },
+    {
+      "severity": "medium",
+      "sampleId": "S-1003",
+      "check": "custody-time-gap",
+      "evidence": "storage to archive gap is 6.5 hours.",
+      "remediation": "Add intermediate courier/storage handoff evidence or downgrade conclusions that rely on this sample."
+    }
+  ],
+  "researchGapPrompts": [
+    "Which biomarkers remain stable after the observed cold-chain excursion window?",
+    "Would blinded AI review change the severity or interpretation of the reported effect?",
+    "What courier or intermediate storage metadata should be captured to close shipment evidence gaps?",
+    "Can the failed assay be rerun from archived aliquots, or should the conclusion be limited to unaffected samples?"
+  ]
+}

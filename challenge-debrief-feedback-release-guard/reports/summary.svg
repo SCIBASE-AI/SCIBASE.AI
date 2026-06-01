@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="390" viewBox="0 0 720 390" role="img" aria-labelledby="title desc">
+  <title id="title">SCIBASE debrief release guard summary</title>
+  <desc id="desc">Decision hold_debrief_release for packet synthetic-debrief-release-suite</desc>
+  <style>
+    .bg { fill: #f7f5ef; }
+    .panel { fill: #ffffff; stroke: #202124; stroke-width: 2; }
+    .title { font: 700 28px Arial, sans-serif; fill: #202124; }
+    .subtitle { font: 400 15px Arial, sans-serif; fill: #4e565f; }
+    .decision { font: 700 22px Arial, sans-serif; fill: #202124; }
+    .label { font: 700 15px Arial, sans-serif; fill: #202124; text-transform: uppercase; }
+    .count { font: 700 16px Arial, sans-serif; fill: #202124; }
+    .track { fill: #e9e3d6; }
+    .critical { fill: #bd2f2f; }
+    .high { fill: #d9822b; }
+    .warning { fill: #d7b23f; }
+    .info { fill: #4d8f7a; }
+    .footer { font: 400 13px Arial, sans-serif; fill: #5f686f; }
+  </style>
+  <rect width="720" height="390" class="bg"/>
+  <rect x="26" y="26" width="668" height="338" rx="8" class="panel"/>
+  <text x="48" y="76" class="title">Challenge Debrief Feedback Release Guard</text>
+  <text x="48" y="104" class="subtitle">Synthetic packet check for scientific bounty post-evaluation feedback</text>
+  <text x="48" y="132" class="decision">Decision: hold_debrief_release</text>
+  <text x="48" y="169" class="label">critical</text>
+<rect x="140" y="150" width="360" height="26" rx="5" class="track"/>
+<rect x="140" y="150" width="360" height="26" rx="5" class="critical"/>
+<text x="516" y="169" class="count">5</text>
+<text x="48" y="217" class="label">high</text>
+<rect x="140" y="198" width="360" height="26" rx="5" class="track"/>
+<rect x="140" y="198" width="216" height="26" rx="5" class="high"/>
+<text x="516" y="217" class="count">3</text>
+<text x="48" y="265" class="label">warning</text>
+<rect x="140" y="246" width="360" height="26" rx="5" class="track"/>
+<rect x="140" y="246" width="72" height="26" rx="5" class="warning"/>
+<text x="516" y="265" class="count">1</text>
+<text x="48" y="313" class="label">info</text>
+<rect x="140" y="294" width="360" height="26" rx="5" class="track"/>
+<rect x="140" y="294" width="0" height="26" rx="5" class="info"/>
+<text x="516" y="313" class="count">0</text>
+  <text x="48" y="340" class="footer">Packet synthetic-debrief-release-suite | digest 56fdd729dc98-701</text>
+</svg>

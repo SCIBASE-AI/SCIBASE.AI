@@ -1,0 +1,211 @@
+{
+  "generatedAt": "2026-06-01T09:00:00.000Z",
+  "evaluations": [
+    {
+      "packetId": "debrief-clean-release-v1",
+      "challengeId": "SCI-BOUNTY-018-SYNTH",
+      "generatedAt": "2026-06-01T09:00:00.000Z",
+      "packetDigest": "56fdd729dc9870ba14c188de071445fa7e2288f210a5b1d8ec0c4acf47d75dc5",
+      "decision": "release_debrief",
+      "releaseAllowed": true,
+      "severityCounts": {
+        "critical": 0,
+        "high": 0,
+        "warning": 0,
+        "info": 0
+      },
+      "findings": [],
+      "coverage": {
+        "rubricCount": 4,
+        "debriefCount": 3,
+        "teamCount": 3,
+        "perDebrief": [
+          {
+            "teamId": "team-alpha",
+            "releaseTarget": "winner",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          },
+          {
+            "teamId": "team-beta",
+            "releaseTarget": "finalist",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          },
+          {
+            "teamId": "team-gamma",
+            "releaseTarget": "non_winner",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          }
+        ]
+      }
+    },
+    {
+      "packetId": "debrief-revision-needed-v1",
+      "challengeId": "SCI-BOUNTY-018-SYNTH",
+      "generatedAt": "2026-06-01T09:00:00.000Z",
+      "packetDigest": "701c522973bd46a86cad068dd3f00c2dd99894aed1213f997115d118d188dc43",
+      "decision": "revise_before_release",
+      "releaseAllowed": false,
+      "severityCounts": {
+        "critical": 0,
+        "high": 3,
+        "warning": 1,
+        "info": 0
+      },
+      "findings": [
+        {
+          "code": "MISSING_RUBRIC_FEEDBACK",
+          "severity": "high",
+          "message": "Debrief for team-beta is missing rubric feedback: R3, R4.",
+          "detail": "All solver teams should receive feedback tied to the same accepted rubric.",
+          "path": "debriefs[1].feedback",
+          "remediation": "Add solver-facing comments for every accepted rubric item."
+        },
+        {
+          "code": "THIN_OR_NON_ACTIONABLE_FEEDBACK",
+          "severity": "warning",
+          "message": "Feedback for rubric R1 is too thin or lacks a next action.",
+          "detail": "Detected 2 words and no actionable verb.",
+          "path": "debriefs[1].feedback[0].comment",
+          "remediation": "Give the solver concrete, rubric-linked changes or evidence to preserve."
+        },
+        {
+          "code": "APPEAL_DEADLINE_MISMATCH",
+          "severity": "high",
+          "message": "Debrief appeal deadline differs from the challenge policy for team-beta.",
+          "detail": "Expected 2026-06-15T17:00:00Z; found 2026-06-12T17:00:00Z.",
+          "path": "debriefs[1].appealDeadline",
+          "remediation": "Synchronize the debrief appeal deadline with the accepted challenge policy."
+        },
+        {
+          "code": "UNEVEN_FEEDBACK_COVERAGE",
+          "severity": "high",
+          "message": "Feedback coverage varies from 2 to 4 rubric comments across teams.",
+          "detail": "Uneven debrief depth can create appearance of favoritism or weaken appeal records.",
+          "path": "debriefs",
+          "remediation": "Normalize feedback coverage so every team receives comparable rubric-linked detail."
+        }
+      ],
+      "coverage": {
+        "rubricCount": 4,
+        "debriefCount": 3,
+        "teamCount": 3,
+        "perDebrief": [
+          {
+            "teamId": "team-alpha",
+            "releaseTarget": "winner",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          },
+          {
+            "teamId": "team-beta",
+            "releaseTarget": "finalist",
+            "feedbackCount": 2,
+            "missingRubricIds": [
+              "R3",
+              "R4"
+            ],
+            "extraRubricIds": []
+          },
+          {
+            "teamId": "team-gamma",
+            "releaseTarget": "non_winner",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          }
+        ]
+      }
+    },
+    {
+      "packetId": "debrief-hold-release-v1",
+      "challengeId": "SCI-BOUNTY-018-SYNTH",
+      "generatedAt": "2026-06-01T09:00:00.000Z",
+      "packetDigest": "e08cc80db81b0aa36e5b0fd9323d7e297888d6f3e2305dc711e1941157b6e619",
+      "decision": "hold_debrief_release",
+      "releaseAllowed": false,
+      "severityCounts": {
+        "critical": 5,
+        "high": 0,
+        "warning": 0,
+        "info": 0
+      },
+      "findings": [
+        {
+          "code": "PRIVATE_BENCHMARK_LEAK",
+          "severity": "critical",
+          "message": "Debrief exposes private benchmark or holdout label: Sponsor-Holdout-Beta.",
+          "detail": "Private benchmark names can leak sponsor evaluation data and bias future attempts.",
+          "path": "debriefs[1]",
+          "remediation": "Replace private benchmark names with public rubric language before release."
+        },
+        {
+          "code": "PRIVATE_BENCHMARK_LEAK",
+          "severity": "critical",
+          "message": "Debrief exposes private benchmark or holdout label: InternalRetrosynthesisSet-14.",
+          "detail": "Private benchmark names can leak sponsor evaluation data and bias future attempts.",
+          "path": "debriefs[1]",
+          "remediation": "Replace private benchmark names with public rubric language before release."
+        },
+        {
+          "code": "REVIEWER_ANONYMITY_LEAK",
+          "severity": "critical",
+          "message": "Debrief exposes reviewer identity material: Dr. Mira Lin.",
+          "detail": "Reviewer identity disclosure can compromise anonymous review and invite retaliation.",
+          "path": "debriefs[1]",
+          "remediation": "Remove reviewer names, emails, aliases, and identity hints from solver-facing text."
+        },
+        {
+          "code": "OTHER_TEAM_IP_LEAK",
+          "severity": "critical",
+          "message": "Debrief references another team's protected submission material: AlphaFold wet-lab bridge.",
+          "detail": "Solver feedback must not disclose another team's private methods, artifacts, or trade secrets.",
+          "path": "debriefs[1]",
+          "remediation": "Rewrite the feedback using only the recipient team's public rubric outcome."
+        },
+        {
+          "code": "PAYMENT_NEGOTIATION_LANGUAGE",
+          "severity": "critical",
+          "message": "Debrief includes direct payment or off-platform payout language.",
+          "detail": "Solver debriefs should not alter escrow, bounty, or payment routing terms.",
+          "path": "debriefs[1]",
+          "remediation": "Remove payment negotiation language and keep payout questions in the approved bounty platform."
+        }
+      ],
+      "coverage": {
+        "rubricCount": 4,
+        "debriefCount": 3,
+        "teamCount": 3,
+        "perDebrief": [
+          {
+            "teamId": "team-alpha",
+            "releaseTarget": "winner",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          },
+          {
+            "teamId": "team-beta",
+            "releaseTarget": "finalist",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          },
+          {
+            "teamId": "team-gamma",
+            "releaseTarget": "non_winner",
+            "feedbackCount": 4,
+            "missingRubricIds": [],
+            "extraRubricIds": []
+          }
+        ]
+      }
+    }
+  ]
+}

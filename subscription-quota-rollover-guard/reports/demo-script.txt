@@ -1,0 +1,7 @@
+Demo: Subscription Quota Rollover Guard
+Account: LAB-QUOTA-1042
+Billing cycle: 2026-06
+Decision: hold-invoice
+Risk score: 100/100
+Blockers: 6
+Finance action: hold invoice until duplicate/expired rollover, downgrade caps, and overage units reconcile.

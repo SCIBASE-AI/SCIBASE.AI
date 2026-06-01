@@ -1,0 +1,6 @@
+Demo: Reputation Sybil Cluster Guard
+Cluster: cluster-rho-17
+Decision: quarantine-cluster
+Risk score: 100/100
+Blockers: 4
+Action: quarantine cluster before reputation points affect rankings, bounties, or payout eligibility.

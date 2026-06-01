@@ -1,0 +1,109 @@
+{
+  "input": {
+    "customerId": "nih-policy-insights-synthetic",
+    "billingDate": "2026-06-01",
+    "contract": {
+      "id": "contract-analytics-2026-nih",
+      "monthlyFeeCents": 120000,
+      "refreshCadenceDays": 14,
+      "graceDays": 2,
+      "minimumCohortSize": 25,
+      "maxReproducibilityFeedAgeDays": 14,
+      "requiredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "reproducibility-score-index",
+        "method-adoption-trends"
+      ]
+    },
+    "analyticsProduct": {
+      "id": "analytics-product-open-science-dashboard",
+      "snapshot": {
+        "id": "snapshot-2026-05-25",
+        "generatedAt": "2026-05-25"
+      },
+      "deliveredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "reproducibility-score-index",
+        "method-adoption-trends"
+      ],
+      "reproducibilityScoreFeedAt": "2026-05-28",
+      "segments": [
+        {
+          "id": "segment-neuroscience-data-reuse",
+          "cohortSize": 82,
+          "published": true
+        },
+        {
+          "id": "segment-climate-model-methods",
+          "cohortSize": 41,
+          "published": true
+        }
+      ],
+      "sourceProjects": [
+        {
+          "id": "project-synthetic-a",
+          "includedInSnapshot": true
+        },
+        {
+          "id": "project-synthetic-b",
+          "embargoUntil": "2026-05-10",
+          "includedInSnapshot": true
+        }
+      ]
+    },
+    "deliveryEvidence": {
+      "id": "delivery-portal-2026-05-26",
+      "deliveredAt": "2026-05-26",
+      "portalUploadId": "portal-upload-synthetic-9461",
+      "dashboardSnapshotHash": "sha256:239a6f97d079b7b4",
+      "exportDigest": "sha256:f3e6cfe420f531ea"
+    }
+  },
+  "evaluation": {
+    "summary": {
+      "customerId": "nih-policy-insights-synthetic",
+      "contractId": "contract-analytics-2026-nih",
+      "productId": "analytics-product-open-science-dashboard",
+      "billingDate": "2026-06-01",
+      "decision": "release_analytics_invoice",
+      "findingCount": 0,
+      "highOrCriticalFindings": 0,
+      "monthlyFeeCents": 120000,
+      "recommendedCreditCents": 0,
+      "provisionalNetInvoiceCents": 120000,
+      "netInvoiceCents": 120000,
+      "auditDigest": "sha256:1c30445b56d3cfc2"
+    },
+    "coverage": {
+      "requiredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "reproducibility-score-index",
+        "method-adoption-trends"
+      ],
+      "deliveredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "reproducibility-score-index",
+        "method-adoption-trends"
+      ],
+      "missingMetrics": [],
+      "snapshotAgeDays": 7,
+      "cadenceDays": 14,
+      "graceDays": 2,
+      "scoreFeedAgeDays": 4,
+      "deliveryAgeDays": 6,
+      "segmentsReviewed": 2,
+      "sourceProjectsReviewed": 2
+    },
+    "findings": [],
+    "financeActions": [
+      {
+        "id": "release_invoice",
+        "reason": "freshness_and_delivery_evidence_clean"
+      }
+    ]
+  }
+}

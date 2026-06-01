@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Analytics data product freshness guard summary">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="44" width="1184" height="632" rx="18" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="76" y="110" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">Analytics Data Product Freshness Guard</text>
+  <rect x="76" y="140" width="640" height="58" rx="10" fill="#b91c1c"/>
+  <text x="102" y="178" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">hold_analytics_invoice</text>
+  <text x="76" y="242" font-family="Arial, sans-serif" font-size="24" fill="#374151">Findings: 7</text>
+  <text x="76" y="276" font-family="Arial, sans-serif" font-size="24" fill="#374151">Net invoice: $0.00 after $1782.00 credit</text>
+<text x="76" y="318" font-family="Arial, sans-serif" font-size="22" fill="#111827">CRITICAL ANONYMIZATION_THRESHOLD_BREACH</text>
+<text x="76" y="360" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH DELIVERY_EVIDENCE_MISSING</text>
+<text x="76" y="402" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH METRIC_COVERAGE_INCOMPLETE</text>
+<text x="76" y="444" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH SNAPSHOT_STALE</text>
+<text x="76" y="486" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH SOURCE_EMBARGO_UNRESOLVED</text>
+  <text x="76" y="642" font-family="Arial, sans-serif" font-size="20" fill="#6b7280">sha256:88532af412b7f387</text>
+</svg>

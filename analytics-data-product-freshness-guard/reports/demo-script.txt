@@ -1,0 +1,12 @@
+Analytics data product freshness billing guard demo
+
+Clean packet decision: release_analytics_invoice
+Clean net invoice cents: 120000
+Clean audit digest: sha256:1c30445b56d3cfc2
+
+Risky packet decision: hold_analytics_invoice
+Risky finding count: 7
+Risky recommended credit cents: 178200
+Risky audit digest: sha256:88532af412b7f387
+
+The risky packet demonstrates stale snapshots, incomplete metric coverage, anonymization threshold breach, unresolved withdrawal and embargo impacts, stale reproducibility feed evidence, and missing customer delivery proof.

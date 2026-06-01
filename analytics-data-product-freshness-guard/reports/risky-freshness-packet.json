@@ -1,0 +1,235 @@
+{
+  "input": {
+    "customerId": "eu-consortium-analytics-synthetic",
+    "billingDate": "2026-06-01",
+    "contract": {
+      "id": "contract-analytics-2026-eu",
+      "monthlyFeeCents": 180000,
+      "refreshCadenceDays": 14,
+      "graceDays": 2,
+      "minimumCohortSize": 30,
+      "maxReproducibilityFeedAgeDays": 14,
+      "requiredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "reproducibility-score-index",
+        "method-adoption-trends",
+        "project-lineage-map"
+      ]
+    },
+    "analyticsProduct": {
+      "id": "analytics-product-funder-trends",
+      "snapshot": {
+        "id": "snapshot-2026-05-05",
+        "generatedAt": "2026-05-05"
+      },
+      "deliveredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "method-adoption-trends"
+      ],
+      "reproducibilityScoreFeedAt": "2026-05-10",
+      "segments": [
+        {
+          "id": "segment-rare-disease-lab-methods",
+          "cohortSize": 11,
+          "published": true
+        },
+        {
+          "id": "segment-materials-modeling",
+          "cohortSize": 64,
+          "published": true
+        }
+      ],
+      "sourceProjects": [
+        {
+          "id": "project-withdrawn-lab-notebook",
+          "withdrawnAt": "2026-05-20",
+          "includedInSnapshot": true
+        },
+        {
+          "id": "project-embargoed-dataset",
+          "embargoUntil": "2026-06-20",
+          "includedInSnapshot": true
+        }
+      ]
+    },
+    "deliveryEvidence": {
+      "id": "delivery-missing-portal-receipt",
+      "deliveredAt": "",
+      "portalUploadId": "",
+      "dashboardSnapshotHash": "",
+      "exportDigest": ""
+    }
+  },
+  "evaluation": {
+    "summary": {
+      "customerId": "eu-consortium-analytics-synthetic",
+      "contractId": "contract-analytics-2026-eu",
+      "productId": "analytics-product-funder-trends",
+      "billingDate": "2026-06-01",
+      "decision": "hold_analytics_invoice",
+      "findingCount": 7,
+      "highOrCriticalFindings": 6,
+      "monthlyFeeCents": 180000,
+      "recommendedCreditCents": 178200,
+      "provisionalNetInvoiceCents": 1800,
+      "netInvoiceCents": 0,
+      "auditDigest": "sha256:88532af412b7f387"
+    },
+    "coverage": {
+      "requiredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "reproducibility-score-index",
+        "method-adoption-trends",
+        "project-lineage-map"
+      ],
+      "deliveredMetrics": [
+        "citation-network-growth",
+        "dataset-reuse-rate",
+        "method-adoption-trends"
+      ],
+      "missingMetrics": [
+        "reproducibility-score-index",
+        "project-lineage-map"
+      ],
+      "snapshotAgeDays": 27,
+      "cadenceDays": 14,
+      "graceDays": 2,
+      "scoreFeedAgeDays": 22,
+      "deliveryAgeDays": null,
+      "segmentsReviewed": 2,
+      "sourceProjectsReviewed": 2
+    },
+    "findings": [
+      {
+        "severity": "critical",
+        "code": "ANONYMIZATION_THRESHOLD_BREACH",
+        "message": "segment-rare-disease-lab-methods was published with cohort size 11, below the contracted minimum 30.",
+        "refs": [
+          "segment-rare-disease-lab-methods"
+        ],
+        "action": "suppress_segment_and_hold_invoice",
+        "creditCents": 0
+      },
+      {
+        "severity": "high",
+        "code": "DELIVERY_EVIDENCE_MISSING",
+        "message": "Customer-facing delivery evidence is incomplete for the licensed analytics product.",
+        "refs": [
+          "delivery-missing-portal-receipt"
+        ],
+        "action": "attach_delivery_evidence_before_invoice",
+        "creditCents": 0
+      },
+      {
+        "severity": "high",
+        "code": "METRIC_COVERAGE_INCOMPLETE",
+        "message": "Missing 2 contracted analytics metrics: reproducibility-score-index, project-lineage-map.",
+        "refs": [
+          "reproducibility-score-index",
+          "project-lineage-map"
+        ],
+        "action": "restore_metric_coverage_or_credit_invoice",
+        "creditCents": 43200
+      },
+      {
+        "severity": "high",
+        "code": "SNAPSHOT_STALE",
+        "message": "Snapshot age is 27 days, beyond the 14 day cadence plus 2 day grace window.",
+        "refs": [
+          "snapshot-2026-05-05"
+        ],
+        "action": "refresh_snapshot_before_invoice",
+        "creditCents": 45000
+      },
+      {
+        "severity": "high",
+        "code": "SOURCE_EMBARGO_UNRESOLVED",
+        "message": "project-embargoed-dataset remains embargoed for 19 more days but is included in the billed snapshot.",
+        "refs": [
+          "project-embargoed-dataset"
+        ],
+        "action": "exclude_embargoed_source_before_billing",
+        "creditCents": 36000
+      },
+      {
+        "severity": "high",
+        "code": "SOURCE_PROJECT_WITHDRAWAL_UNRESOLVED",
+        "message": "project-withdrawn-lab-notebook was withdrawn before billing but remains included in the analytics snapshot.",
+        "refs": [
+          "project-withdrawn-lab-notebook"
+        ],
+        "action": "remove_withdrawn_source_and_refresh_snapshot",
+        "creditCents": 36000
+      },
+      {
+        "severity": "medium",
+        "code": "REPRODUCIBILITY_FEED_STALE",
+        "message": "Reproducibility score feed is 22 days old, beyond the 14 day maximum.",
+        "refs": [
+          "analytics-product-funder-trends"
+        ],
+        "action": "refresh_reproducibility_score_feed",
+        "creditCents": 18000
+      }
+    ],
+    "financeActions": [
+      {
+        "id": "hold_invoice_release",
+        "reason": "high_or_critical_freshness_blocker"
+      },
+      {
+        "id": "suppress_segment_and_hold_invoice",
+        "severity": "critical",
+        "refs": [
+          "segment-rare-disease-lab-methods"
+        ]
+      },
+      {
+        "id": "attach_delivery_evidence_before_invoice",
+        "severity": "high",
+        "refs": [
+          "delivery-missing-portal-receipt"
+        ]
+      },
+      {
+        "id": "restore_metric_coverage_or_credit_invoice",
+        "severity": "high",
+        "refs": [
+          "reproducibility-score-index",
+          "project-lineage-map"
+        ]
+      },
+      {
+        "id": "refresh_snapshot_before_invoice",
+        "severity": "high",
+        "refs": [
+          "snapshot-2026-05-05"
+        ]
+      },
+      {
+        "id": "exclude_embargoed_source_before_billing",
+        "severity": "high",
+        "refs": [
+          "project-embargoed-dataset"
+        ]
+      },
+      {
+        "id": "remove_withdrawn_source_and_refresh_snapshot",
+        "severity": "high",
+        "refs": [
+          "project-withdrawn-lab-notebook"
+        ]
+      },
+      {
+        "id": "refresh_reproducibility_score_feed",
+        "severity": "medium",
+        "refs": [
+          "analytics-product-funder-trends"
+        ]
+      }
+    ]
+  }
+}

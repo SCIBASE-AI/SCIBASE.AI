@@ -1,0 +1,13 @@
+{
+  "name": "spreadsheet-formula-provenance-guard",
+  "version": "1.0.0",
+  "description": "Spreadsheet formula provenance guard for SCIBASE scientific data hosting",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "python demo_video.py"
+  },
+  "license": "MIT"
+}

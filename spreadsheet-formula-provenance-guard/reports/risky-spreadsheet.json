@@ -1,0 +1,114 @@
+{
+  "datasetId": "dataset-fragile-xlsx-002",
+  "filename": "fragile-field-results.xlsm",
+  "decision": "hold",
+  "summary": {
+    "sheetsReviewed": 2,
+    "formulaCellsReviewed": 2,
+    "exportsReviewed": 1,
+    "findings": 13,
+    "high": 8,
+    "medium": 5,
+    "low": 0
+  },
+  "findings": [
+    {
+      "code": "INVALID_SPREADSHEET_DIGEST",
+      "severity": "high",
+      "sourceId": "fragile-field-results.xlsm",
+      "message": "fragile-field-results.xlsm does not have a valid SHA-256 upload digest.",
+      "remediation": "Record the original spreadsheet hash before accepting it as a citable dataset artifact."
+    },
+    {
+      "code": "MACRO_ENABLED_DATASET",
+      "severity": "high",
+      "sourceId": "fragile-field-results.xlsm",
+      "message": "fragile-field-results.xlsm is macro-enabled and cannot be treated as inert tabular data.",
+      "remediation": "Quarantine macro-enabled files or publish a macro-free normalized export with reviewed transformation notes."
+    },
+    {
+      "code": "EXTERNAL_WORKBOOK_LINKS",
+      "severity": "high",
+      "sourceId": "fragile-field-results.xlsm",
+      "message": "fragile-field-results.xlsm depends on external workbook links: ../lab-shared/master-calibration.xlsx.",
+      "remediation": "Bundle source workbooks or replace formulas with reproducible local references before publication."
+    },
+    {
+      "code": "HIDDEN_SHEET_WITH_DATA",
+      "severity": "medium",
+      "sourceId": "hidden-calibration",
+      "message": "hidden-calibration is hidden but contains data or formulas.",
+      "remediation": "Expose the sheet, document its purpose, or exclude it from the release with an audit note."
+    },
+    {
+      "code": "VOLATILE_FORMULA",
+      "severity": "high",
+      "sourceId": "hidden-calibration!C7",
+      "message": "hidden-calibration!C7 uses volatile functions: RAND.",
+      "remediation": "Replace volatile formulas with fixed values or a scripted, versioned transformation."
+    },
+    {
+      "code": "FORMULA_EXTERNAL_REFERENCE",
+      "severity": "high",
+      "sourceId": "hidden-calibration!C7",
+      "message": "hidden-calibration!C7 references an external workbook or URL.",
+      "remediation": "Bundle the dependency and record its checksum, or normalize the formula into a local reproducible dataset."
+    },
+    {
+      "code": "STALE_OR_MISSING_CALCULATION_EVIDENCE",
+      "severity": "medium",
+      "sourceId": "hidden-calibration!C7",
+      "message": "hidden-calibration!C7 lacks cached value or recalculation timestamp evidence.",
+      "remediation": "Recalculate the workbook in a controlled environment and record cached values before preview/export."
+    },
+    {
+      "code": "FORMULA_WITHOUT_PROVENANCE",
+      "severity": "medium",
+      "sourceId": "hidden-calibration!C7",
+      "message": "hidden-calibration!C7 has no provenance references for its inputs.",
+      "remediation": "Attach source ranges, instruments, upstream datasets, or transformation tickets for formula-derived values."
+    },
+    {
+      "code": "FORMULA_EXTERNAL_REFERENCE",
+      "severity": "high",
+      "sourceId": "hidden-calibration!C8",
+      "message": "hidden-calibration!C8 references an external workbook or URL.",
+      "remediation": "Bundle the dependency and record its checksum, or normalize the formula into a local reproducible dataset."
+    },
+    {
+      "code": "STALE_OR_MISSING_CALCULATION_EVIDENCE",
+      "severity": "medium",
+      "sourceId": "hidden-calibration!C8",
+      "message": "hidden-calibration!C8 lacks cached value or recalculation timestamp evidence.",
+      "remediation": "Recalculate the workbook in a controlled environment and record cached values before preview/export."
+    },
+    {
+      "code": "FORMULA_WITHOUT_PROVENANCE",
+      "severity": "medium",
+      "sourceId": "hidden-calibration!C8",
+      "message": "hidden-calibration!C8 has no provenance references for its inputs.",
+      "remediation": "Attach source ranges, instruments, upstream datasets, or transformation tickets for formula-derived values."
+    },
+    {
+      "code": "MISSING_NORMALIZED_EXPORT",
+      "severity": "high",
+      "sourceId": "exports",
+      "message": "Spreadsheet dataset has no CSV or parquet normalized export.",
+      "remediation": "Publish a normalized tabular export so reviewers can diff and re-use the dataset outside spreadsheet software."
+    },
+    {
+      "code": "INVALID_EXPORT_DIGEST",
+      "severity": "high",
+      "sourceId": "exports/fragile-field-results.xlsx",
+      "message": "exports/fragile-field-results.xlsx does not have a valid SHA-256 digest.",
+      "remediation": "Record a digest for every normalized export before publication."
+    }
+  ],
+  "releaseCriteria": [
+    "Original spreadsheet and normalized exports have stable SHA-256 digests.",
+    "Formula-derived cells avoid volatile functions and external workbook references.",
+    "Formula cells carry cached value, recalculation timestamp, and provenance evidence.",
+    "Hidden sheets, macros, and external links are disclosed or blocked before publication.",
+    "At least one normalized CSV or parquet export is available for reproducible reuse."
+  ]
+}

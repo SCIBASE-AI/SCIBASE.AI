@@ -1,0 +1,278 @@
+{
+  "generatedAt": "2026-06-01T00:00:00.000Z",
+  "releaseDecision": "block_challenge_publication",
+  "summary": {
+    "challengeCount": 4,
+    "readyCount": 1,
+    "holdCount": 1,
+    "blockCount": 2,
+    "findingCount": 18,
+    "criticalCount": 10,
+    "warningCount": 8
+  },
+  "challenges": [
+    {
+      "challengeId": "challenge-open-neuro-imaging",
+      "title": "Open Neuro Imaging Benchmark Prize",
+      "sponsorLegalName": "Atlas Neuro Collective Foundation",
+      "amountUsd": 500,
+      "sponsorJurisdiction": "JP",
+      "status": "ready_to_open",
+      "criticalCount": 0,
+      "warningCount": 0,
+      "packetDigest": "86207838861d8c77030c2dd27042e56e6eed668a399d521402266dbdafe0013e"
+    },
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "title": "Cross-border Catalyst Literature Review",
+      "sponsorLegalName": "Materials Insight Lab LLC",
+      "amountUsd": 900,
+      "sponsorJurisdiction": "US",
+      "status": "hold_for_compliance",
+      "criticalCount": 0,
+      "warningCount": 7,
+      "packetDigest": "8b83fb2bc717a6a6cbb5756b3927c3b783a3727f737618d15282e9956668f377"
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "title": "Clinical Proteomics Translational Prize",
+      "sponsorLegalName": "Proteomics Venture Studio Inc.",
+      "amountUsd": 2500,
+      "sponsorJurisdiction": "US",
+      "status": "block_challenge",
+      "criticalCount": 7,
+      "warningCount": 0,
+      "packetDigest": "f2a3353fad23be1339a22b98b027f0f359f57afbbe821c7d9a2c7503cbb15486"
+    },
+    {
+      "challengeId": "challenge-dual-use-sensors",
+      "title": "Dual-use Sensor Fusion Model Challenge",
+      "sponsorLegalName": "Frontier Robotics Initiative",
+      "amountUsd": 1200,
+      "sponsorJurisdiction": "GB",
+      "status": "block_challenge",
+      "criticalCount": 3,
+      "warningCount": 1,
+      "packetDigest": "e189c8ab8419ccbd0c861faf6959e84ad4618bf27454fdb27bae228a51ef5583"
+    }
+  ],
+  "findings": [
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "challengeTitle": "Cross-border Catalyst Literature Review",
+      "severity": "warning",
+      "code": "stale_source_of_funds_attestation",
+      "message": "The source-of-funds attestation is older than the freshness window.",
+      "evidence": {
+        "attestedAt": "2026-02-01T00:00:00.000Z",
+        "ageDays": 120,
+        "maxAttestationAgeDays": 90
+      },
+      "remediation": "Refresh sponsor funding attestations before the challenge is opened or extended."
+    },
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "challengeTitle": "Cross-border Catalyst Literature Review",
+      "severity": "warning",
+      "code": "sanctions_screening_requires_review",
+      "message": "The sponsor screening result requires compliance review.",
+      "evidence": {
+        "status": "review",
+        "reference": "SCR-2026-MAT-019"
+      },
+      "remediation": "Hold publication until the screening review is resolved."
+    },
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "challengeTitle": "Cross-border Catalyst Literature Review",
+      "severity": "warning",
+      "code": "stale_sanctions_screening",
+      "message": "The sanctions screening result is older than the allowed freshness window.",
+      "evidence": {
+        "checkedAt": "2026-04-01T00:00:00.000Z",
+        "ageDays": 61,
+        "maxScreeningAgeDays": 30
+      },
+      "remediation": "Refresh the screening packet before accepting submissions or paying prize funds."
+    },
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "challengeTitle": "Cross-border Catalyst Literature Review",
+      "severity": "warning",
+      "code": "unknown_export_control_classification",
+      "message": "The challenge has no export-control classification.",
+      "evidence": {
+        "classification": "unknown"
+      },
+      "remediation": "Classify the challenge as exempt, EAR99, restricted, or not applicable before publication."
+    },
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "challengeTitle": "Cross-border Catalyst Literature Review",
+      "severity": "warning",
+      "code": "missing_international_participation_controls",
+      "message": "International participation is expected but no participant-control digest is attached.",
+      "evidence": {
+        "internationalParticipation": true
+      },
+      "remediation": "Record eligibility controls for international participants before the challenge opens."
+    },
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "challengeTitle": "Cross-border Catalyst Literature Review",
+      "severity": "warning",
+      "code": "missing_cancellation_or_refund_policy",
+      "message": "The public terms do not identify cancellation and refund handling.",
+      "evidence": {
+        "cancellationPolicy": "published",
+        "refundPolicy": null
+      },
+      "remediation": "Publish cancellation and refund language so sponsors and solvers share the same expectations."
+    },
+    {
+      "challengeId": "challenge-catalyst-literature",
+      "challengeTitle": "Cross-border Catalyst Literature Review",
+      "severity": "warning",
+      "code": "missing_compliance_contact",
+      "message": "The challenge lacks a sponsor compliance escalation contact.",
+      "evidence": {
+        "complianceContact": null
+      },
+      "remediation": "Add a compliance contact for screening, tax, export-control, or sponsor-attestation questions."
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "challengeTitle": "Clinical Proteomics Translational Prize",
+      "severity": "critical",
+      "code": "missing_source_of_funds_attestation",
+      "message": "The sponsor has not supplied a verifiable source-of-funds attestation.",
+      "evidence": {
+        "sourceOfFundsAttested": false,
+        "statementDigest": null
+      },
+      "remediation": "Require a signed source-of-funds statement digest before accepting submissions."
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "challengeTitle": "Clinical Proteomics Translational Prize",
+      "severity": "critical",
+      "code": "blocked_sanctions_screening",
+      "message": "The sponsor packet contains an unresolved blocked sanctions screening result.",
+      "evidence": {
+        "status": "blocked",
+        "reference": "SCR-2026-CLIN-007"
+      },
+      "remediation": "Block the challenge until compliance counsel clears or rejects the sponsor."
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "challengeTitle": "Clinical Proteomics Translational Prize",
+      "severity": "critical",
+      "code": "unresolved_beneficial_owner_screening_hit",
+      "message": "A beneficial owner has a screening hit without a resolution record.",
+      "evidence": {
+        "ownerId": "owner-pvs-2",
+        "role": "fund administrator"
+      },
+      "remediation": "Attach a compliance resolution digest or block the challenge."
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "challengeTitle": "Clinical Proteomics Translational Prize",
+      "severity": "critical",
+      "code": "missing_high_value_tax_reporting_plan",
+      "message": "A high-value prize lacks a tax reporting plan digest.",
+      "evidence": {
+        "amountUsd": 2500,
+        "reportingPlanDigest": null
+      },
+      "remediation": "Attach the sponsor-side tax reporting plan before submissions are opened."
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "challengeTitle": "Clinical Proteomics Translational Prize",
+      "severity": "critical",
+      "code": "incomplete_tax_form_status",
+      "message": "The sponsor packet does not mark tax form readiness as complete or not applicable.",
+      "evidence": {
+        "formStatus": "missing",
+        "amountUsd": 2500
+      },
+      "remediation": "Resolve sponsor-side tax form readiness before prize commitments are advertised."
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "challengeTitle": "Clinical Proteomics Translational Prize",
+      "severity": "critical",
+      "code": "missing_cross_border_withholding_review",
+      "message": "Expected payout jurisdictions differ from the sponsor jurisdiction but withholding review is incomplete.",
+      "evidence": {
+        "sponsorJurisdiction": "US",
+        "expectedPayoutJurisdictions": [
+          "US",
+          "IN",
+          "BR"
+        ]
+      },
+      "remediation": "Complete cross-border withholding review before challenge launch."
+    },
+    {
+      "challengeId": "challenge-clinical-proteomics",
+      "challengeTitle": "Clinical Proteomics Translational Prize",
+      "severity": "critical",
+      "code": "missing_regulated_domain_review_packet",
+      "message": "The challenge is marked as regulated but lacks a regulatory review packet digest.",
+      "evidence": {
+        "regulatoryReviewDigest": null
+      },
+      "remediation": "Attach the domain-specific regulatory review packet before publishing the challenge."
+    },
+    {
+      "challengeId": "challenge-dual-use-sensors",
+      "challengeTitle": "Dual-use Sensor Fusion Model Challenge",
+      "severity": "critical",
+      "code": "missing_third_party_funding_disclosure",
+      "message": "Third-party prize funding is marked but no sponsor disclosure digest is attached.",
+      "evidence": {
+        "thirdPartySponsor": true,
+        "thirdPartyDisclosureDigest": null
+      },
+      "remediation": "Attach a disclosure digest naming the upstream funder and any restrictions on the prize."
+    },
+    {
+      "challengeId": "challenge-dual-use-sensors",
+      "challengeTitle": "Dual-use Sensor Fusion Model Challenge",
+      "severity": "critical",
+      "code": "restricted_export_without_counsel_approval",
+      "message": "A restricted export-control classification lacks counsel approval evidence.",
+      "evidence": {
+        "classification": "dual-use-restricted",
+        "counselApprovalDigest": null
+      },
+      "remediation": "Attach counsel approval and participant restrictions before publishing the challenge."
+    },
+    {
+      "challengeId": "challenge-dual-use-sensors",
+      "challengeTitle": "Dual-use Sensor Fusion Model Challenge",
+      "severity": "warning",
+      "code": "missing_international_participation_controls",
+      "message": "International participation is expected but no participant-control digest is attached.",
+      "evidence": {
+        "internationalParticipation": true
+      },
+      "remediation": "Record eligibility controls for international participants before the challenge opens."
+    },
+    {
+      "challengeId": "challenge-dual-use-sensors",
+      "challengeTitle": "Dual-use Sensor Fusion Model Challenge",
+      "severity": "critical",
+      "code": "missing_public_rules_digest",
+      "message": "The challenge does not have immutable public rules evidence.",
+      "evidence": {
+        "rulesDigest": "draft"
+      },
+      "remediation": "Attach a SHA-256 digest of the public rules, deliverables, and evaluation disclosures."
+    }
+  ],
+  "auditDigest": "c5968d2c0869aab4504f3f1db83698e87cbe9bfba735a8fba7027c343c72d94b"
+}

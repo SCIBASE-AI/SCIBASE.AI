@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<rect width="960" height="540" fill="#f8fafc" />
+<rect x="40" y="40" width="880" height="460" rx="8" fill="#ffffff" stroke="#d8dee7" />
+<text x="72" y="96" font-size="32" font-family="Arial" font-weight="700" fill="#1b1f24">Sponsor Regulatory Attestation Guard</text>
+<text x="72" y="126" font-size="18" font-family="Arial" fill="#5b6572">Decision: block_challenge_publication</text>
+<text x="72" y="175" font-size="24" font-family="Arial" fill="#1b1f24">Ready</text>
+<rect x="220" y="150" width="280" height="42" rx="4" fill="#176b3a" />
+<text x="520" y="179" font-size="22" font-family="Arial" fill="#1b1f24">1</text>
+<text x="72" y="255" font-size="24" font-family="Arial" fill="#1b1f24">Hold</text>
+<rect x="220" y="230" width="280" height="42" rx="4" fill="#8a5a00" />
+<text x="520" y="259" font-size="22" font-family="Arial" fill="#1b1f24">1</text>
+<text x="72" y="335" font-size="24" font-family="Arial" fill="#1b1f24">Blocked</text>
+<rect x="220" y="310" width="560" height="42" rx="4" fill="#9d1c2f" />
+<text x="800" y="339" font-size="22" font-family="Arial" fill="#1b1f24">2</text>
+<text x="72" y="415" font-size="24" font-family="Arial" fill="#1b1f24">Findings</text>
+<rect x="220" y="390" width="5040" height="42" rx="4" fill="#116d6e" />
+<text x="5280" y="419" font-size="22" font-family="Arial" fill="#1b1f24">18</text>
+<text x="72" y="470" font-size="15" font-family="Arial" fill="#5b6572">Audit digest: c5968d2c0869aab4504f3f1d...</text>
+</svg>

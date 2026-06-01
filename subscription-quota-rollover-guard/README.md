@@ -25,6 +25,7 @@ Running the demo creates:
 - `reports/summary.svg`
 - `reports/demo-script.txt`
 - `reports/demo.gif`
+- `reports/demo.mp4`
 
 All inputs are synthetic. The guard uses no credentials, private customer data, payment processors, live billing systems, analytics APIs, or external services.
 

@@ -1,0 +1,136 @@
+{
+  "repositoryId": "repo-incomplete-export",
+  "releaseTag": "preprint-v2.2.0",
+  "commit": "9f8c7d6e5b4a3210",
+  "decision": "hold",
+  "summary": {
+    "componentsReviewed": 5,
+    "requiredTypesCovered": 4,
+    "bundleEntries": 2,
+    "findings": 16,
+    "high": 11,
+    "medium": 4,
+    "low": 1
+  },
+  "findings": [
+    {
+      "code": "MISSING_REQUIRED_COMPONENT",
+      "severity": "high",
+      "sourceId": "notebook",
+      "message": "notebook component is absent from the release manifest.",
+      "remediation": "Add the required component or explicitly hold the release until the research packet is complete."
+    },
+    {
+      "code": "MISSING_REQUIRED_COMPONENT",
+      "severity": "high",
+      "sourceId": "results",
+      "message": "results component is absent from the release manifest.",
+      "remediation": "Add the required component or explicitly hold the release until the research packet is complete."
+    },
+    {
+      "code": "MISSING_REQUIRED_COMPONENT",
+      "severity": "high",
+      "sourceId": "protocol",
+      "message": "protocol component is absent from the release manifest.",
+      "remediation": "Add the required component or explicitly hold the release until the research packet is complete."
+    },
+    {
+      "code": "DUPLICATE_MANIFEST_PATH",
+      "severity": "high",
+      "sourceId": "code/train.py",
+      "message": "code/train.py appears more than once in the release manifest.",
+      "remediation": "Keep one canonical manifest row per path so rollback and integrity checks are deterministic."
+    },
+    {
+      "code": "INVALID_COMPONENT_DIGEST",
+      "severity": "high",
+      "sourceId": "manuscript-main",
+      "message": "manuscript/main.md does not carry a valid SHA-256 digest.",
+      "remediation": "Record the lowercase SHA-256 digest before tagging the release."
+    },
+    {
+      "code": "MISSING_DATA_PROVENANCE",
+      "severity": "medium",
+      "sourceId": "observations",
+      "message": "data/observations.parquet lacks provenance references to inputs, instruments, or analysis commits.",
+      "remediation": "Link the dataset/result to source instruments, upstream datasets, notebooks, or analysis commits."
+    },
+    {
+      "code": "MISSING_RUNTIME_LOCKFILE",
+      "severity": "high",
+      "sourceId": "analysis-code",
+      "message": "code/train.py lacks lockfile evidence for executable reproducibility.",
+      "remediation": "Attach package-lock, requirements lock, renv, Manifest.toml, or equivalent runtime lock evidence."
+    },
+    {
+      "code": "UNPINNED_RUNTIME_IMAGE",
+      "severity": "medium",
+      "sourceId": "analysis-code",
+      "message": "code/train.py runtime image is not digest-pinned.",
+      "remediation": "Pin the container/runtime image by immutable digest instead of a mutable tag."
+    },
+    {
+      "code": "MISSING_RUNTIME_LOCKFILE",
+      "severity": "high",
+      "sourceId": "duplicate-code",
+      "message": "code/train.py lacks lockfile evidence for executable reproducibility.",
+      "remediation": "Attach package-lock, requirements lock, renv, Manifest.toml, or equivalent runtime lock evidence."
+    },
+    {
+      "code": "UNPINNED_RUNTIME_IMAGE",
+      "severity": "medium",
+      "sourceId": "duplicate-code",
+      "message": "code/train.py runtime image is not digest-pinned.",
+      "remediation": "Pin the container/runtime image by immutable digest instead of a mutable tag."
+    },
+    {
+      "code": "UNVERSIONED_COMPONENT",
+      "severity": "high",
+      "sourceId": "metadata",
+      "message": "metadata.json is not marked as version-controlled.",
+      "remediation": "Commit, tag, or archive the component under repository version control before release."
+    },
+    {
+      "code": "MISSING_METADATA_EXPORT_TARGETS",
+      "severity": "low",
+      "sourceId": "metadata",
+      "message": "metadata.json does not declare export targets.",
+      "remediation": "Declare DOI, schema.org, DataCite, or repository export targets for discovery."
+    },
+    {
+      "code": "INCOMPLETE_RELEASE_METADATA",
+      "severity": "high",
+      "sourceId": "metadata",
+      "message": "Release metadata is missing DOI, schema.org, DataCite, or license evidence.",
+      "remediation": "Complete persistent identifier, discovery metadata, citation metadata, and license fields before publication."
+    },
+    {
+      "code": "MISSING_AUTHOR_ATTRIBUTION",
+      "severity": "medium",
+      "sourceId": "metadata.authors",
+      "message": "Release metadata does not include author attribution.",
+      "remediation": "Attach author identifiers before the repository release is exported or assigned a DOI."
+    },
+    {
+      "code": "INVALID_EXPORT_BUNDLE",
+      "severity": "high",
+      "sourceId": "bundle",
+      "message": "Release bundle archive path or digest is missing/invalid.",
+      "remediation": "Generate a release archive with a stable SHA-256 digest before tagging."
+    },
+    {
+      "code": "BUNDLE_OMITS_MANIFEST_COMPONENTS",
+      "severity": "high",
+      "sourceId": "bundle.includes",
+      "message": "Release bundle omits manifest paths: data/observations.parquet, code/train.py.",
+      "remediation": "Regenerate the archive so every manifest component is present in the export bundle."
+    }
+  ],
+  "releaseCriteria": [
+    "Every required scientific repository component is present in the manifest.",
+    "Every manifest entry has a stable digest and version-control status.",
+    "Executable code and notebooks include lockfile evidence and pinned runtimes.",
+    "Datasets and results link back to provenance inputs.",
+    "The export bundle includes every manifest path and has its own SHA-256 digest."
+  ]
+}

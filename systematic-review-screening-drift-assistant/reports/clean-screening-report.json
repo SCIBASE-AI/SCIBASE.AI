@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "reviewId": "prisma-living-review-cardiometabolic-ai",
+    "decision": "release_systematic_review_assistant",
+    "findingCount": 0,
+    "highOrCriticalFindings": 0,
+    "criticalFindings": 0,
+    "studiesReviewed": 3,
+    "gapPromptsReviewed": 1,
+    "auditDigest": "sha256:6d084a53e0ef678115431ea547a0eaa249f5544cf34f9d448ad70d32c6c0dafe"
+  },
+  "findings": [],
+  "studySummaries": [
+    {
+      "id": "SR-001",
+      "outcome": "included",
+      "requiredActions": [],
+      "titleAbstractReviewers": 2,
+      "fullTextReviewers": 2
+    },
+    {
+      "id": "SR-002",
+      "outcome": "excluded",
+      "requiredActions": [],
+      "titleAbstractReviewers": 2,
+      "fullTextReviewers": 2
+    },
+    {
+      "id": "SR-003",
+      "outcome": "included",
+      "requiredActions": [],
+      "titleAbstractReviewers": 2,
+      "fullTextReviewers": 2
+    }
+  ],
+  "gapPrompts": [
+    {
+      "id": "gap-underserved-rural-cohorts",
+      "evidenceStudyCount": 3,
+      "limitationSignalCount": 2,
+      "readyForRelease": true
+    }
+  ],
+  "recommendations": []
+}

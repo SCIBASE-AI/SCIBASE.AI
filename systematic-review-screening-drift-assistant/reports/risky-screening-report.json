@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "reviewId": "prisma-living-review-cardiometabolic-ai",
+    "decision": "hold_systematic_review_assistant",
+    "findingCount": 18,
+    "highOrCriticalFindings": 13,
+    "criticalFindings": 5,
+    "studiesReviewed": 2,
+    "gapPromptsReviewed": 1,
+    "auditDigest": "sha256:0c9ae18fee18fd54d887b93c23b161376559b3d740fe538f9902fe916ee704d4"
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "code": "AI_POLICY_AUTHORITY_TOO_BROAD",
+      "message": "AI assistant policy allows actions beyond assist-only recommendations.",
+      "refs": [
+        "prisma-living-review-cardiometabolic-ai"
+      ],
+      "action": "set_ai_policy_to_assist_only"
+    },
+    {
+      "severity": "critical",
+      "code": "AI_SCREENING_OVERRIDE_WITHOUT_APPROVAL",
+      "message": "SR-100 has an AI screening recommendation that can override or apply without human approval.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "downgrade_ai_recommendation_to_assist_only"
+    },
+    {
+      "severity": "critical",
+      "code": "PRIVATE_REVIEW_NOTE_EXPORTED",
+      "message": "SR-100 exports private reviewer notes into the AI assistant packet.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "remove_private_notes_from_ai_context"
+    },
+    {
+      "severity": "critical",
+      "code": "PRIVATE_REVIEW_NOTE_IN_GAP_PROMPT",
+      "message": "gap-adolescent-ai-coaching includes private reviewer-note content.",
+      "refs": [
+        "gap-adolescent-ai-coaching"
+      ],
+      "action": "regenerate_gap_prompt_from_public_screening_fields"
+    },
+    {
+      "severity": "critical",
+      "code": "UNRESOLVED_SCREENING_CONFLICT",
+      "message": "SR-100 has an unresolved full/text screening conflict.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "resolve_reviewer_conflict_before_ai_release"
+    },
+    {
+      "severity": "high",
+      "code": "CRITERIA_VERSION_DRIFT",
+      "message": "SR-100 was screened against eligibility-v2 instead of eligibility-v3.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "rescreen_against_locked_eligibility_version"
+    },
+    {
+      "severity": "high",
+      "code": "ELIGIBILITY_CRITERIA_INCOMPLETE",
+      "message": "Eligibility criteria are missing required fields: outcome, studyDesign.",
+      "refs": [
+        "eligibility-v3"
+      ],
+      "action": "complete_pico_and_study_design_criteria"
+    },
+    {
+      "severity": "high",
+      "code": "EXCLUSION_EVIDENCE_MISSING",
+      "message": "SR-100 exclusion reason low_quality lacks full-text evidence locator and quote.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "attach_full_text_evidence_for_exclusion"
+    },
+    {
+      "severity": "high",
+      "code": "EXCLUSION_REASON_NOT_IN_TAXONOMY",
+      "message": "SR-100 uses exclusion reason low_quality, which is not in the approved taxonomy.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "map_exclusion_to_approved_reason_taxonomy"
+    },
+    {
+      "severity": "high",
+      "code": "FULL_TEXT_DUAL_REVIEW_GAP",
+      "message": "SR-101 does not have two independent full-text reviewers.",
+      "refs": [
+        "SR-101"
+      ],
+      "action": "assign_second_full_text_reviewer"
+    },
+    {
+      "severity": "high",
+      "code": "FULL_TEXT_RETRIEVAL_MISSING",
+      "message": "SR-100 reached full-text screening without retrieval evidence.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "attach_full_text_retrieval_evidence"
+    },
+    {
+      "severity": "high",
+      "code": "HUMAN_APPROVAL_GATE_MISSING",
+      "message": "AI screening output can be released without an explicit human approval gate.",
+      "refs": [
+        "prisma-living-review-cardiometabolic-ai"
+      ],
+      "action": "require_human_approval_for_screening_release"
+    },
+    {
+      "severity": "high",
+      "code": "TITLE_ABSTRACT_DUAL_REVIEW_GAP",
+      "message": "SR-100 does not have two independent title/abstract reviewers.",
+      "refs": [
+        "SR-100"
+      ],
+      "action": "assign_second_title_abstract_reviewer"
+    },
+    {
+      "severity": "medium",
+      "code": "DUPLICATE_CLUSTER_CANONICAL_MISSING",
+      "message": "SR-101 is in duplicate cluster dup-cluster-77 without a canonical record.",
+      "refs": [
+        "SR-101"
+      ],
+      "action": "select_canonical_record_for_duplicate_cluster"
+    },
+    {
+      "severity": "medium",
+      "code": "FULL_TEXT_PROVENANCE_GAP",
+      "message": "SR-101 full-text evidence is missing a locator or content hash.",
+      "refs": [
+        "SR-101"
+      ],
+      "action": "record_full_text_locator_and_hash"
+    },
+    {
+      "severity": "medium",
+      "code": "GAP_PROMPT_LIMITATION_SIGNALS_MISSING",
+      "message": "gap-adolescent-ai-coaching has no limitation signals from excluded or unresolved studies.",
+      "refs": [
+        "gap-adolescent-ai-coaching"
+      ],
+      "action": "attach_limitation_signals_to_gap_prompt"
+    },
+    {
+      "severity": "medium",
+      "code": "GAP_PROMPT_UNDER_EVIDENCED",
+      "message": "gap-adolescent-ai-coaching cites fewer than 3 screened studies.",
+      "refs": [
+        "gap-adolescent-ai-coaching"
+      ],
+      "action": "add_more_screened_study_evidence_before_surfacing_gap"
+    },
+    {
+      "severity": "medium",
+      "code": "SEARCH_SNAPSHOT_STALE",
+      "message": "Search snapshot is 182 days old for prisma-living-review-cardiometabolic-ai.",
+      "refs": [
+        "search-2025-12-01-medline-only"
+      ],
+      "action": "refresh_search_snapshot_before_gap_generation"
+    }
+  ],
+  "studySummaries": [
+    {
+      "id": "SR-100",
+      "outcome": "excluded",
+      "requiredActions": [
+        "rescreen_against_locked_eligibility_version",
+        "assign_second_title_abstract_reviewer",
+        "resolve_reviewer_conflict_before_ai_release",
+        "attach_full_text_retrieval_evidence",
+        "downgrade_ai_recommendation_to_assist_only",
+        "remove_private_notes_from_ai_context"
+      ],
+      "titleAbstractReviewers": 1,
+      "fullTextReviewers": 2
+    },
+    {
+      "id": "SR-101",
+      "outcome": "included",
+      "requiredActions": [
+        "assign_second_full_text_reviewer"
+      ],
+      "titleAbstractReviewers": 2,
+      "fullTextReviewers": 1
+    }
+  ],
+  "gapPrompts": [
+    {
+      "id": "gap-adolescent-ai-coaching",
+      "evidenceStudyCount": 1,
+      "limitationSignalCount": 0,
+      "readyForRelease": false
+    }
+  ],
+  "recommendations": [
+    "set_ai_policy_to_assist_only",
+    "downgrade_ai_recommendation_to_assist_only",
+    "remove_private_notes_from_ai_context",
+    "regenerate_gap_prompt_from_public_screening_fields",
+    "resolve_reviewer_conflict_before_ai_release",
+    "rescreen_against_locked_eligibility_version",
+    "complete_pico_and_study_design_criteria",
+    "attach_full_text_evidence_for_exclusion",
+    "map_exclusion_to_approved_reason_taxonomy",
+    "assign_second_full_text_reviewer",
+    "attach_full_text_retrieval_evidence",
+    "require_human_approval_for_screening_release",
+    "assign_second_title_abstract_reviewer",
+    "select_canonical_record_for_duplicate_cluster",
+    "record_full_text_locator_and_hash",
+    "attach_limitation_signals_to_gap_prompt",
+    "add_more_screened_study_evidence_before_surfacing_gap",
+    "refresh_search_snapshot_before_gap_generation"
+  ]
+}

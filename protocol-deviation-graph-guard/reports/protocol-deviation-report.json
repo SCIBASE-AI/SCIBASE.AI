@@ -1,0 +1,119 @@
+{
+  "generatedAt": "2026-06-01T15:45:00.000Z",
+  "module": "protocol-deviation-graph-guard",
+  "decision": "hold-unsafe-graph-edges",
+  "totals": {
+    "experiments": 2,
+    "findings": 7,
+    "holdEdges": 3,
+    "reviewEdges": 0,
+    "publishEdges": 2
+  },
+  "experimentReports": [
+    {
+      "experimentId": "experiment:organoid-run-2026-05-18",
+      "protocolId": "protocol:crispr-neuro-042",
+      "riskScore": 0,
+      "decision": "publish",
+      "findings": [],
+      "edgeActions": [
+        {
+          "from": "dataset:10.5555/scibase.neuro.2026.18",
+          "to": "protocol:crispr-neuro-042",
+          "type": "followed-protocol",
+          "action": "publish",
+          "riskScore": 0,
+          "reason": "protocol adherence evidence is sufficient"
+        },
+        {
+          "from": "experiment:organoid-run-2026-05-18",
+          "to": "concept:neural-crispr-screen",
+          "type": "supports-concept",
+          "action": "publish",
+          "riskScore": 0,
+          "reason": "protocol adherence evidence is sufficient"
+        }
+      ]
+    },
+    {
+      "experimentId": "experiment:organoid-run-2026-05-29",
+      "protocolId": "protocol:crispr-neuro-042",
+      "riskScore": 100,
+      "decision": "hold",
+      "findings": [
+        {
+          "severity": "high",
+          "code": "protocol-version-mismatch",
+          "experimentId": "experiment:organoid-run-2026-05-29",
+          "message": "experiment used 2.0.0, current protocol is 2.1.0"
+        },
+        {
+          "severity": "high",
+          "code": "instrument-calibration-expired",
+          "experimentId": "experiment:organoid-run-2026-05-29",
+          "message": "sequencer:mini-ion-17 calibration expired 4 days before run"
+        },
+        {
+          "severity": "high",
+          "code": "unauthorized-reagent-lot",
+          "experimentId": "experiment:organoid-run-2026-05-29",
+          "message": "CAS9-Z99 is not approved for protocol:crispr-neuro-042"
+        },
+        {
+          "severity": "critical",
+          "code": "parameter-out-of-tolerance",
+          "experimentId": "experiment:organoid-run-2026-05-29",
+          "stepId": "step:guide-rna-qc",
+          "message": "minOnTargetScore=71 deviates from 82 by 11, tolerance 3"
+        },
+        {
+          "severity": "critical",
+          "code": "parameter-out-of-tolerance",
+          "experimentId": "experiment:organoid-run-2026-05-29",
+          "stepId": "step:incubation",
+          "message": "hours=61 deviates from 48 by 13, tolerance 4"
+        },
+        {
+          "severity": "critical",
+          "code": "parameter-out-of-tolerance",
+          "experimentId": "experiment:organoid-run-2026-05-29",
+          "stepId": "step:incubation",
+          "message": "temperatureC=39.1 deviates from 37 by 2.1000000000000014, tolerance 0.5"
+        },
+        {
+          "severity": "critical",
+          "code": "missing-required-step",
+          "experimentId": "experiment:organoid-run-2026-05-29",
+          "stepId": "step:sequencing-qc",
+          "message": "Amplicon sequencing QC was not observed"
+        }
+      ],
+      "edgeActions": [
+        {
+          "from": "dataset:10.5555/scibase.neuro.2026.29",
+          "to": "protocol:crispr-neuro-042",
+          "type": "followed-protocol",
+          "action": "hold",
+          "riskScore": 100,
+          "reason": "protocol deviation evidence must be resolved before graph publication"
+        },
+        {
+          "from": "experiment:organoid-run-2026-05-29",
+          "to": "concept:neural-crispr-screen",
+          "type": "supports-concept",
+          "action": "hold",
+          "riskScore": 100,
+          "reason": "protocol deviation evidence must be resolved before graph publication"
+        },
+        {
+          "from": "experiment:organoid-run-2026-05-29",
+          "to": "recommendation:reuse-in-neurodegeneration-review",
+          "type": "eligible-for-recommendation",
+          "action": "hold",
+          "riskScore": 100,
+          "reason": "protocol deviation evidence must be resolved before graph publication"
+        }
+      ]
+    }
+  ]
+}

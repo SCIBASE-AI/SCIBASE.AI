@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="Protocol deviation graph guard summary">
+  <rect width="960" height="420" fill="#102033"/>
+  <text x="48" y="72" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">Protocol Deviation Graph Guard</text>
+  <text x="48" y="114" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">Recommendation-safe graph publication control for SCIBASE #17</text>
+  <rect x="48" y="160" width="248" height="144" rx="12" fill="#123f5c" stroke="#38bdf8"/>
+  <text x="78" y="216" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="48" font-weight="700">2</text>
+  <text x="78" y="254" fill="#bae6fd" font-family="Arial, sans-serif" font-size="20">publishable edges</text>
+  <rect x="356" y="160" width="248" height="144" rx="12" fill="#4c1d1d" stroke="#f87171"/>
+  <text x="386" y="216" fill="#fee2e2" font-family="Arial, sans-serif" font-size="48" font-weight="700">3</text>
+  <text x="386" y="254" fill="#fecaca" font-family="Arial, sans-serif" font-size="20">held graph edges</text>
+  <rect x="664" y="160" width="248" height="144" rx="12" fill="#422006" stroke="#facc15"/>
+  <text x="694" y="216" fill="#fef3c7" font-family="Arial, sans-serif" font-size="48" font-weight="700">7</text>
+  <text x="694" y="254" fill="#fde68a" font-family="Arial, sans-serif" font-size="20">protocol findings</text>
+  <text x="48" y="356" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Synthetic reviewer artifact. No live graph, credentials, private studies, or external APIs.</text>
+</svg>

@@ -1,0 +1,12 @@
+Protocol Deviation Graph Guard demo
+
+1. Load synthetic protocol and experiment graph packets.
+2. Compare observed experiment steps against required protocol steps and tolerances.
+3. Check protocol version, reagent lot, and instrument calibration evidence.
+4. Hold unsafe experiment-to-protocol and recommendation edges before publication.
+
+Decision: hold-unsafe-graph-edges
+Held edges: 3
+Publishable edges: 2
+
+Synthetic data only. No private studies, credentials, live graph services, or external APIs.

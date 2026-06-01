@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+<rect width="920" height="420" fill="#f8fafc"/>
+<rect x="48" y="44" width="824" height="332" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="82" y="96" font-size="28" font-family="Arial, sans-serif" fill="#0f172a">Enterprise Style Package Provenance</text>
+<text x="82" y="126" font-size="17" font-family="Arial, sans-serif" fill="#475569">Decision: hold_enterprise_style_exports</text>
+<text x="82" y="172" font-size="20" fill="#1f2937">critical</text><rect x="210" y="150" width="162" height="34" rx="5" fill="#b91c1c"/><text x="387" y="174" font-size="18" fill="#111827">3</text><text x="82" y="244" font-size="20" fill="#1f2937">high</text><rect x="210" y="222" width="520" height="34" rx="5" fill="#dc2626"/><text x="745" y="246" font-size="18" fill="#111827">10</text><text x="82" y="316" font-size="20" fill="#1f2937">medium</text><rect x="210" y="294" width="216" height="34" rx="5" fill="#d97706"/><text x="441" y="318" font-size="18" fill="#111827">4</text>
+<text x="82" y="350" font-size="15" font-family="Arial, sans-serif" fill="#475569">Audit sha256:e519c9e6fe7731dd</text>
+</svg>

@@ -1,0 +1,10 @@
+Enterprise style package provenance guard demo
+
+Clean packet decision: release_enterprise_style_exports
+Clean audit digest: sha256:3a3a13df45782064
+
+Risky packet decision: hold_enterprise_style_exports
+Risky finding count: 17
+Risky audit digest: sha256:e519c9e6fe7731dd
+
+The risky packet demonstrates a formatting plugin drift before JATS/DOCX/LaTeX export: unapproved plugin version, missing formats, checksum drift, citation mismatch, stale validation, missing signoff, metadata preservation gaps, and private preview-field leakage.

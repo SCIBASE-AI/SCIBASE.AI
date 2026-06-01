@@ -1,0 +1,292 @@
+{
+  "input": {
+    "institutionId": "northstar-research-office",
+    "reviewDate": "2026-06-01",
+    "maxValidationAgeDays": 90,
+    "requiredExportFormats": [
+      "JATS",
+      "DOCX",
+      "LaTeX"
+    ],
+    "approvedPlugins": [
+      {
+        "id": "journal-style-pack",
+        "allowedVersions": [
+          "3.4.2"
+        ],
+        "owner": "enterprise-publication-ops"
+      }
+    ],
+    "stylePackages": [
+      {
+        "id": "horizon-eu-repository-style",
+        "pluginId": "journal-style-pack",
+        "pluginVersion": "3.5.0",
+        "target": {
+          "name": "Horizon EU grant portal",
+          "citationStyle": "apa"
+        },
+        "formats": [
+          "DOCX"
+        ],
+        "citationStyle": "vancouver",
+        "lastValidatedAt": "2025-12-10",
+        "reviewerSignoff": {
+          "reviewer": "",
+          "status": "draft"
+        },
+        "templates": [
+          {
+            "path": "templates/horizon/report.docx",
+            "expectedChecksum": "sha256:approved-4411",
+            "actualChecksum": "sha256:local-drift-7719"
+          },
+          {
+            "path": "templates/horizon/article.jats.xml",
+            "expectedChecksum": "",
+            "actualChecksum": "sha256:missing-expected"
+          }
+        ],
+        "metadataPreservation": {
+          "doi": true,
+          "orcid": false,
+          "versionHistory": false,
+          "license": true,
+          "funderAward": false
+        },
+        "generatedOutputs": [
+          {
+            "path": "exports/horizon/report.docx",
+            "builtFromTemplateChecksum": "",
+            "provenanceDigest": ""
+          }
+        ],
+        "previewFields": [
+          {
+            "name": "internalReviewerNotes",
+            "exported": true,
+            "private": true
+          }
+        ]
+      },
+      {
+        "id": "unapproved-preprint-style",
+        "pluginId": "community-style-snapshot",
+        "pluginVersion": "latest",
+        "target": {
+          "name": "bioRxiv",
+          "citationStyle": "vancouver"
+        },
+        "formats": [
+          "JATS",
+          "DOCX"
+        ],
+        "citationStyle": "vancouver",
+        "lastValidatedAt": null,
+        "reviewerSignoff": null,
+        "templates": [],
+        "metadataPreservation": {
+          "doi": false,
+          "orcid": false,
+          "versionHistory": false,
+          "license": false,
+          "funderAward": false
+        },
+        "generatedOutputs": []
+      }
+    ]
+  },
+  "evaluation": {
+    "summary": {
+      "institutionId": "northstar-research-office",
+      "reviewDate": "2026-06-01",
+      "decision": "hold_enterprise_style_exports",
+      "stylePackagesReviewed": 2,
+      "findingCount": 17,
+      "highOrCriticalFindings": 13,
+      "auditDigest": "sha256:e519c9e6fe7731dd"
+    },
+    "findings": [
+      {
+        "severity": "critical",
+        "code": "PLUGIN_NOT_APPROVED",
+        "message": "unapproved-preprint-style uses plugin community-style-snapshot without enterprise approval.",
+        "refs": [
+          "unapproved-preprint-style"
+        ],
+        "action": "route_plugin_for_enterprise_approval"
+      },
+      {
+        "severity": "critical",
+        "code": "PRIVATE_FIELD_EXPORTED_IN_STYLE_PREVIEW",
+        "message": "horizon-eu-repository-style exports private internal style-preview fields.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "remove_private_preview_fields_from_export"
+      },
+      {
+        "severity": "critical",
+        "code": "TEMPLATE_CHECKSUM_DRIFT",
+        "message": "templates/horizon/report.docx checksum differs from the approved style package manifest.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "block_export_until_template_is_rebuilt_from_approved_source"
+      },
+      {
+        "severity": "high",
+        "code": "CITATION_STYLE_MISMATCH",
+        "message": "horizon-eu-repository-style uses vancouver citations for Horizon EU grant portal which requires apa.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "select_target_approved_citation_style"
+      },
+      {
+        "severity": "high",
+        "code": "EXPORT_FORMAT_COVERAGE_GAP",
+        "message": "horizon-eu-repository-style is missing required export formats: JATS, LaTeX.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "add_required_export_format_templates"
+      },
+      {
+        "severity": "high",
+        "code": "EXPORT_FORMAT_COVERAGE_GAP",
+        "message": "unapproved-preprint-style is missing required export formats: LaTeX.",
+        "refs": [
+          "unapproved-preprint-style"
+        ],
+        "action": "add_required_export_format_templates"
+      },
+      {
+        "severity": "high",
+        "code": "EXPORT_METADATA_PRESERVATION_GAP",
+        "message": "horizon-eu-repository-style does not preserve ORCID, version history, funder award metadata across export formats.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "preserve_required_publication_metadata"
+      },
+      {
+        "severity": "high",
+        "code": "EXPORT_METADATA_PRESERVATION_GAP",
+        "message": "unapproved-preprint-style does not preserve DOI, ORCID, version history, license, funder award metadata across export formats.",
+        "refs": [
+          "unapproved-preprint-style"
+        ],
+        "action": "preserve_required_publication_metadata"
+      },
+      {
+        "severity": "high",
+        "code": "PLUGIN_VERSION_NOT_APPROVED",
+        "message": "horizon-eu-repository-style uses 3.5.0, which is not in the approved plugin version list.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "promote_or_replace_approved_plugin_version"
+      },
+      {
+        "severity": "high",
+        "code": "PLUGIN_VERSION_NOT_PINNED",
+        "message": "unapproved-preprint-style is missing a pinned semantic plugin version.",
+        "refs": [
+          "unapproved-preprint-style"
+        ],
+        "action": "pin_plugin_version_before_export"
+      },
+      {
+        "severity": "high",
+        "code": "STYLE_SIGNOFF_MISSING",
+        "message": "horizon-eu-repository-style lacks approved enterprise reviewer signoff.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "obtain_enterprise_style_reviewer_signoff"
+      },
+      {
+        "severity": "high",
+        "code": "STYLE_SIGNOFF_MISSING",
+        "message": "unapproved-preprint-style lacks approved enterprise reviewer signoff.",
+        "refs": [
+          "unapproved-preprint-style"
+        ],
+        "action": "obtain_enterprise_style_reviewer_signoff"
+      },
+      {
+        "severity": "high",
+        "code": "TEMPLATE_MANIFEST_MISSING",
+        "message": "unapproved-preprint-style has no template checksum manifest.",
+        "refs": [
+          "unapproved-preprint-style"
+        ],
+        "action": "attach_template_checksum_manifest"
+      },
+      {
+        "severity": "medium",
+        "code": "OUTPUT_PROVENANCE_DIGEST_MISSING",
+        "message": "horizon-eu-repository-style has 1 generated outputs without build provenance digests.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "record_output_build_provenance_digests"
+      },
+      {
+        "severity": "medium",
+        "code": "STYLE_VALIDATION_STALE",
+        "message": "horizon-eu-repository-style style validation is 173 days old.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "rerun_style_export_validation"
+      },
+      {
+        "severity": "medium",
+        "code": "STYLE_VALIDATION_STALE",
+        "message": "unapproved-preprint-style style validation is missing.",
+        "refs": [
+          "unapproved-preprint-style"
+        ],
+        "action": "rerun_style_export_validation"
+      },
+      {
+        "severity": "medium",
+        "code": "TEMPLATE_CHECKSUM_INCOMPLETE",
+        "message": "templates/horizon/article.jats.xml lacks both expected and actual checksums.",
+        "refs": [
+          "horizon-eu-repository-style"
+        ],
+        "action": "record_expected_and_actual_template_checksums"
+      }
+    ],
+    "packageSummaries": [
+      {
+        "id": "horizon-eu-repository-style",
+        "pluginId": "journal-style-pack",
+        "pluginVersion": "3.5.0",
+        "target": "Horizon EU grant portal",
+        "formatCount": 1,
+        "templateCount": 2,
+        "validationAgeDays": 173,
+        "outputCount": 1
+      },
+      {
+        "id": "unapproved-preprint-style",
+        "pluginId": "community-style-snapshot",
+        "pluginVersion": "latest",
+        "target": "bioRxiv",
+        "formatCount": 2,
+        "templateCount": 0,
+        "validationAgeDays": null,
+        "outputCount": 0
+      }
+    ],
+    "requiredExportFormats": [
+      "JATS",
+      "DOCX",
+      "LaTeX"
+    ]
+  }
+}

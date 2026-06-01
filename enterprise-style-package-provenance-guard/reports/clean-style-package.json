@@ -1,0 +1,111 @@
+{
+  "input": {
+    "institutionId": "northstar-research-office",
+    "reviewDate": "2026-06-01",
+    "maxValidationAgeDays": 90,
+    "requiredExportFormats": [
+      "JATS",
+      "DOCX",
+      "LaTeX"
+    ],
+    "approvedPlugins": [
+      {
+        "id": "journal-style-pack",
+        "allowedVersions": [
+          "3.4.2",
+          "3.4.3"
+        ],
+        "owner": "enterprise-publication-ops"
+      }
+    ],
+    "stylePackages": [
+      {
+        "id": "cell-reports-2026-style",
+        "pluginId": "journal-style-pack",
+        "pluginVersion": "3.4.3",
+        "target": {
+          "name": "Cell Reports",
+          "citationStyle": "vancouver"
+        },
+        "formats": [
+          "JATS",
+          "DOCX",
+          "LaTeX"
+        ],
+        "citationStyle": "vancouver",
+        "lastValidatedAt": "2026-05-20",
+        "reviewerSignoff": {
+          "reviewer": "pubops-style-reviewer",
+          "status": "approved"
+        },
+        "templates": [
+          {
+            "path": "templates/cell-reports/article.jats.xml",
+            "expectedChecksum": "sha256:6bd2f4c0c2a6",
+            "actualChecksum": "sha256:6bd2f4c0c2a6"
+          },
+          {
+            "path": "templates/cell-reports/manuscript.docx",
+            "expectedChecksum": "sha256:a9f28f1de342",
+            "actualChecksum": "sha256:a9f28f1de342"
+          }
+        ],
+        "metadataPreservation": {
+          "doi": true,
+          "orcid": true,
+          "versionHistory": true,
+          "license": true,
+          "funderAward": true
+        },
+        "generatedOutputs": [
+          {
+            "path": "exports/cell-reports/article.xml",
+            "builtFromTemplateChecksum": "sha256:6bd2f4c0c2a6",
+            "provenanceDigest": "sha256:output-9122"
+          },
+          {
+            "path": "exports/cell-reports/manuscript.docx",
+            "builtFromTemplateChecksum": "sha256:a9f28f1de342",
+            "provenanceDigest": "sha256:output-8227"
+          }
+        ],
+        "previewFields": [
+          {
+            "name": "publicTitle",
+            "exported": true,
+            "private": false
+          }
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "summary": {
+      "institutionId": "northstar-research-office",
+      "reviewDate": "2026-06-01",
+      "decision": "release_enterprise_style_exports",
+      "stylePackagesReviewed": 1,
+      "findingCount": 0,
+      "highOrCriticalFindings": 0,
+      "auditDigest": "sha256:3a3a13df45782064"
+    },
+    "findings": [],
+    "packageSummaries": [
+      {
+        "id": "cell-reports-2026-style",
+        "pluginId": "journal-style-pack",
+        "pluginVersion": "3.4.3",
+        "target": "Cell Reports",
+        "formatCount": 3,
+        "templateCount": 2,
+        "validationAgeDays": 12,
+        "outputCount": 2
+      }
+    ],
+    "requiredExportFormats": [
+      "JATS",
+      "DOCX",
+      "LaTeX"
+    ]
+  }
+}

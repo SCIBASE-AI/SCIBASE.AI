@@ -1,0 +1,20 @@
+{
+  "guard": "collaborative-alt-text-export-guard",
+  "evaluatedAt": "2026-06-01T10:15:00.000Z",
+  "document": {
+    "id": "manuscript-cardiometabolic-001",
+    "title": "Collaborative cardiometabolic atlas draft",
+    "exportFormat": "pdf-html"
+  },
+  "artifactCount": 2,
+  "decision": "export_ready",
+  "exportAllowed": true,
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "findings": [],
+  "digest": "be08d841061e2814c94ee6109490d10134a94cf4a1968fc0c3691eb15af4b16c"
+}

@@ -1,0 +1,45 @@
+{
+  "guard": "collaborative-alt-text-export-guard",
+  "evaluatedAt": "2026-06-01T10:15:00.000Z",
+  "document": {
+    "id": "manuscript-neuro-003",
+    "title": "Blinded neuroimaging collaboration",
+    "exportFormat": "html"
+  },
+  "artifactCount": 1,
+  "decision": "hold_accessible_export",
+  "exportAllowed": false,
+  "summary": {
+    "critical": 2,
+    "high": 0,
+    "warning": 1,
+    "info": 0
+  },
+  "findings": [
+    {
+      "code": "THIN_OR_GENERIC_ALT_TEXT",
+      "severity": "warning",
+      "message": "Alt text for fig-3 is too thin or generic.",
+      "evidence": "Detected 17 words and generic visual phrasing.",
+      "path": "artifacts[0].altText",
+      "remediation": "Describe the key variables, trend, and scientific conclusion without relying on sight."
+    },
+    {
+      "code": "PRIVATE_PATH_OR_DATA_LEAK",
+      "severity": "critical",
+      "message": "Alt text for fig-3 exposes private path or protected data marker.",
+      "evidence": "Accessible exports must not leak blinded-review notes, private paths, or protected data.",
+      "path": "artifacts[0].altText",
+      "remediation": "Rewrite the alt text using public manuscript language only."
+    },
+    {
+      "code": "REVIEWER_IDENTITY_LEAK",
+      "severity": "critical",
+      "message": "Alt text for fig-3 exposes reviewer identity material.",
+      "evidence": "Accessible exports must not leak blinded-review notes, private paths, or protected data.",
+      "path": "artifacts[0].altText",
+      "remediation": "Rewrite the alt text using public manuscript language only."
+    }
+  ],
+  "digest": "76c61e090701f62d8a84fb15d6cb8120d1e3183c47c83c62f8560c6a6e16f00f"
+}

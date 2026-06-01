@@ -1,0 +1,117 @@
+{
+  "guard": "collaborative-alt-text-export-guard",
+  "evaluatedAt": "2026-06-01T10:15:00.000Z",
+  "document": {
+    "id": "manuscript-ecology-002",
+    "title": "Shared wetland recovery manuscript",
+    "exportFormat": "docx"
+  },
+  "artifactCount": 2,
+  "decision": "revise_before_export",
+  "exportAllowed": false,
+  "summary": {
+    "critical": 0,
+    "high": 7,
+    "warning": 5,
+    "info": 0
+  },
+  "findings": [
+    {
+      "code": "THIN_OR_GENERIC_ALT_TEXT",
+      "severity": "warning",
+      "message": "Alt text for fig-2 is too thin or generic.",
+      "evidence": "Detected 4 words and generic visual phrasing.",
+      "path": "artifacts[0].altText",
+      "remediation": "Describe the key variables, trend, and scientific conclusion without relying on sight."
+    },
+    {
+      "code": "COMPLEX_VISUAL_NEEDS_LONG_DESCRIPTION",
+      "severity": "high",
+      "message": "Complex figure fig-2 lacks a long description or data summary.",
+      "evidence": "Dense scientific visualizations need a structured non-visual explanation.",
+      "path": "artifacts[0].longDescription",
+      "remediation": "Add a long description or machine-readable data summary for complex figures."
+    },
+    {
+      "code": "COLOR_ONLY_ENCODING",
+      "severity": "high",
+      "message": "Artifact fig-2 relies on color-only interpretation.",
+      "evidence": "Color-only distinctions are not accessible to all readers or output formats.",
+      "path": "artifacts[0]",
+      "remediation": "Add shape, pattern, label, or textual encoding alongside color."
+    },
+    {
+      "code": "ALT_TEXT_STALE_SOURCE_HASH",
+      "severity": "high",
+      "message": "Alt text for fig-2 was reviewed against an older source artifact.",
+      "evidence": "Expected source hash sha256:map-current; found sha256:map-old.",
+      "path": "artifacts[0].altTextSourceHash",
+      "remediation": "Regenerate or re-approve alt text after the source data or rendering changes."
+    },
+    {
+      "code": "ALT_TEXT_REVIEW_STALE",
+      "severity": "high",
+      "message": "Alt text for fig-2 predates the latest artifact edit.",
+      "evidence": "Artifact updated at 2026-05-31T18:00:00.000Z; alt text reviewed at 2026-05-31T17:00:00.000Z.",
+      "path": "artifacts[0].altTextReviewedAt",
+      "remediation": "Re-review alt text after collaborative edits."
+    },
+    {
+      "code": "UNRESOLVED_ACCESSIBILITY_COMMENT",
+      "severity": "high",
+      "message": "Blocking accessibility comment remains open on fig-2.",
+      "evidence": "Alt text must describe the nutrient gradient and not just the visual map.",
+      "path": "comments.c-2",
+      "remediation": "Resolve or explicitly waive blocking accessibility comments before export."
+    },
+    {
+      "code": "LOCKED_SECTION_ALT_TEXT_UNAPPROVED",
+      "severity": "high",
+      "message": "Alt text changed inside locked section results without approval.",
+      "evidence": "Final review locks should protect export wording for scientific artifacts.",
+      "path": "artifacts[0].altTextChangedInLock",
+      "remediation": "Collect a locked-section accessibility approval or reopen the section for review."
+    },
+    {
+      "code": "MISSING_ACCESSIBLE_EXPORT_APPROVAL",
+      "severity": "warning",
+      "message": "Artifact fig-2 has no accessible-export approval.",
+      "evidence": "A reviewer sign-off makes export readiness auditable.",
+      "path": "accessibilityApprovals",
+      "remediation": "Record accessibility review approval after alt text and descriptions are current."
+    },
+    {
+      "code": "THIN_OR_GENERIC_ALT_TEXT",
+      "severity": "warning",
+      "message": "Alt text for tbl-2 is too thin or generic.",
+      "evidence": "Detected 7 words and too little detail.",
+      "path": "artifacts[1].altText",
+      "remediation": "Describe the key variables, trend, and scientific conclusion without relying on sight."
+    },
+    {
+      "code": "TABLE_HEADER_SCOPE_MISSING",
+      "severity": "high",
+      "message": "Table tbl-2 column 1 lacks header or scope metadata.",
+      "evidence": "Screen readers depend on explicit header scope for scientific tables.",
+      "path": "artifacts[1].columns[0]",
+      "remediation": "Add header text and row/column scope metadata."
+    },
+    {
+      "code": "TABLE_SUMMARY_MISSING",
+      "severity": "warning",
+      "message": "Table tbl-2 has no concise table summary.",
+      "evidence": "A summary helps readers understand table purpose before navigating cells.",
+      "path": "artifacts[1].tableSummary",
+      "remediation": "Add a short table summary that names rows, columns, units, and main comparison."
+    },
+    {
+      "code": "MISSING_ACCESSIBLE_EXPORT_APPROVAL",
+      "severity": "warning",
+      "message": "Artifact tbl-2 has no accessible-export approval.",
+      "evidence": "A reviewer sign-off makes export readiness auditable.",
+      "path": "accessibilityApprovals",
+      "remediation": "Record accessibility review approval after alt text and descriptions are current."
+    }
+  ],
+  "digest": "607b93c7dd47480c767a1c1c82689037a95376fdeb97edea7a45d46941ff1fb3"
+}

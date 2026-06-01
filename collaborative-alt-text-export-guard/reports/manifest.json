@@ -1,0 +1,23 @@
+[
+  {
+    "scenario": "clean",
+    "decision": "export_ready",
+    "exportAllowed": true,
+    "findings": 0,
+    "digest": "be08d841061e2814c94ee6109490d10134a94cf4a1968fc0c3691eb15af4b16c"
+  },
+  {
+    "scenario": "revision",
+    "decision": "revise_before_export",
+    "exportAllowed": false,
+    "findings": 12,
+    "digest": "607b93c7dd47480c767a1c1c82689037a95376fdeb97edea7a45d46941ff1fb3"
+  },
+  {
+    "scenario": "hold",
+    "decision": "hold_accessible_export",
+    "exportAllowed": false,
+    "findings": 3,
+    "digest": "76c61e090701f62d8a84fb15d6cb8120d1e3183c47c83c62f8560c6a6e16f00f"
+  }
+]

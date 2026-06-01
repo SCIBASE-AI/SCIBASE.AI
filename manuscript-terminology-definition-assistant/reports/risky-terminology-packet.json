@@ -1,0 +1,339 @@
+{
+  "input": {
+    "manuscriptId": "oncology-organoid-draft-v1",
+    "terms": [
+      {
+        "id": "term-pdx-a",
+        "label": "patient-derived xenograft",
+        "short": "PDX",
+        "expansion": "patient-derived xenograft",
+        "firstUseSection": "abstract",
+        "expandedAtFirstUse": false,
+        "requiresDefinition": true,
+        "definition": "",
+        "jargonLevel": "high",
+        "observedForms": [
+          "PDX",
+          "patient derived xenograft"
+        ],
+        "preferredForm": "patient-derived xenograft",
+        "audience": "expert"
+      },
+      {
+        "id": "term-pdx-b",
+        "label": "pharmacodynamic index",
+        "short": "PDX",
+        "expansion": "pharmacodynamic index",
+        "firstUseSection": "results",
+        "expandedAtFirstUse": true,
+        "requiresDefinition": true,
+        "definition": "A composite drug-response index used in the exploratory analysis.",
+        "jargonLevel": "high",
+        "observedForms": [
+          "PDX",
+          "pharmacodynamic index"
+        ],
+        "preferredForm": "pharmacodynamic index"
+      },
+      {
+        "id": "term-erbb2",
+        "label": "ERBB2",
+        "firstUseSection": "title",
+        "expandedAtFirstUse": true,
+        "requiresDefinition": true,
+        "definition": "",
+        "jargonLevel": "high",
+        "expectedStyle": "HGNC gene symbol",
+        "observedStyle": "protein alias",
+        "observedForms": [
+          "HER2",
+          "ERBB2-positive",
+          "Her-2"
+        ],
+        "preferredForm": "ERBB2"
+      },
+      {
+        "id": "term-organoid",
+        "label": "organoid viability score",
+        "firstUseSection": "lay_summary",
+        "expandedAtFirstUse": true,
+        "requiresDefinition": true,
+        "definition": "A normalized assay readout for live tumor organoid cells after treatment.",
+        "jargonLevel": "high",
+        "audience": "lay",
+        "observedForms": [
+          "organoid viability score",
+          "OVS"
+        ],
+        "preferredForm": "organoid viability score"
+      }
+    ],
+    "citationRecommendations": [
+      {
+        "id": "cite-pdx-model",
+        "termId": "term-pdx-a",
+        "reason": "Recommended for first use of PDX model."
+      },
+      {
+        "id": "cite-unknown",
+        "termId": "term-nonexistent",
+        "reason": "Unbound recommendation from retrieval layer."
+      }
+    ],
+    "generatedSummaries": [
+      {
+        "id": "summary-lay",
+        "mode": "layperson",
+        "termIds": [
+          "term-pdx-a",
+          "term-organoid"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "summary": {
+      "manuscriptId": "oncology-organoid-draft-v1",
+      "decision": "hold_ai_research_packet",
+      "termsReviewed": 4,
+      "citationRecommendationsReviewed": 2,
+      "generatedSummariesReviewed": 1,
+      "findingCount": 12,
+      "highOrCriticalFindings": 6,
+      "auditDigest": "sha256:525040b780da7400"
+    },
+    "coverage": [
+      {
+        "id": "term-pdx-a",
+        "label": "patient-derived xenograft",
+        "short": "PDX",
+        "firstUseSection": "abstract",
+        "hasDefinition": false,
+        "hasLayDefinition": false,
+        "observedForms": [
+          "PDX",
+          "patient derived xenograft"
+        ]
+      },
+      {
+        "id": "term-pdx-b",
+        "label": "pharmacodynamic index",
+        "short": "PDX",
+        "firstUseSection": "results",
+        "hasDefinition": true,
+        "hasLayDefinition": false,
+        "observedForms": [
+          "PDX",
+          "pharmacodynamic index"
+        ]
+      },
+      {
+        "id": "term-erbb2",
+        "label": "ERBB2",
+        "short": null,
+        "firstUseSection": "title",
+        "hasDefinition": false,
+        "hasLayDefinition": false,
+        "observedForms": [
+          "HER2",
+          "ERBB2-positive",
+          "Her-2"
+        ]
+      },
+      {
+        "id": "term-organoid",
+        "label": "organoid viability score",
+        "short": null,
+        "firstUseSection": "lay_summary",
+        "hasDefinition": true,
+        "hasLayDefinition": false,
+        "observedForms": [
+          "organoid viability score",
+          "OVS"
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "severity": "high",
+        "code": "ACRONYM_EXPANSION_CONFLICT",
+        "message": "PDX maps to 2 different expansions in the manuscript packet.",
+        "refs": [
+          "term-pdx-a",
+          "term-pdx-b"
+        ],
+        "action": "resolve_acronym_expansion_conflict"
+      },
+      {
+        "severity": "high",
+        "code": "ACRONYM_NOT_EXPANDED_AT_FIRST_USE",
+        "message": "PDX is not expanded at first use in abstract.",
+        "refs": [
+          "term-pdx-a"
+        ],
+        "action": "expand_acronym_at_first_use"
+      },
+      {
+        "severity": "high",
+        "code": "LAY_SUMMARY_JARGON_UNEXPLAINED",
+        "message": "Generated layperson summary summary-lay includes patient-derived xenograft without an accessible definition.",
+        "refs": [
+          "summary-lay",
+          "term-pdx-a"
+        ],
+        "action": "rewrite_lay_summary_with_definition"
+      },
+      {
+        "severity": "high",
+        "code": "LAY_SUMMARY_JARGON_UNEXPLAINED",
+        "message": "Generated layperson summary summary-lay includes organoid viability score without an accessible definition.",
+        "refs": [
+          "summary-lay",
+          "term-organoid"
+        ],
+        "action": "rewrite_lay_summary_with_definition"
+      },
+      {
+        "severity": "high",
+        "code": "TERM_DEFINITION_MISSING",
+        "message": "patient-derived xenograft requires a reviewer-facing definition before AI summaries or citation suggestions use it.",
+        "refs": [
+          "term-pdx-a"
+        ],
+        "action": "add_reviewer_facing_definition"
+      },
+      {
+        "severity": "high",
+        "code": "TERM_DEFINITION_MISSING",
+        "message": "ERBB2 requires a reviewer-facing definition before AI summaries or citation suggestions use it.",
+        "refs": [
+          "term-erbb2"
+        ],
+        "action": "add_reviewer_facing_definition"
+      },
+      {
+        "severity": "medium",
+        "code": "CITATION_BEFORE_TERM_DEFINITION",
+        "message": "Citation recommendation cite-pdx-model uses patient-derived xenograft before the term is defined.",
+        "refs": [
+          "cite-pdx-model",
+          "term-pdx-a"
+        ],
+        "action": "define_term_before_citation_insertion"
+      },
+      {
+        "severity": "medium",
+        "code": "CITATION_TERM_UNKNOWN",
+        "message": "Citation recommendation cite-unknown references an unknown terminology id.",
+        "refs": [
+          "cite-unknown"
+        ],
+        "action": "bind_citation_to_known_term"
+      },
+      {
+        "severity": "medium",
+        "code": "LAY_DEFINITION_MISSING",
+        "message": "organoid viability score appears in a lay-facing packet without a lay definition.",
+        "refs": [
+          "term-organoid"
+        ],
+        "action": "add_lay_definition_or_remove_from_lay_summary"
+      },
+      {
+        "severity": "medium",
+        "code": "NOMENCLATURE_STYLE_MISMATCH",
+        "message": "ERBB2 uses protein alias style where HGNC gene symbol style is expected.",
+        "refs": [
+          "term-erbb2"
+        ],
+        "action": "fix_domain_nomenclature_style"
+      },
+      {
+        "severity": "medium",
+        "code": "PREFERRED_TERM_FORM_ABSENT",
+        "message": "patient-derived xenograft has multiple observed forms but none match the preferred nomenclature.",
+        "refs": [
+          "term-pdx-a"
+        ],
+        "action": "normalize_term_to_preferred_form"
+      },
+      {
+        "severity": "medium",
+        "code": "PREFERRED_TERM_FORM_ABSENT",
+        "message": "ERBB2 has multiple observed forms but none match the preferred nomenclature.",
+        "refs": [
+          "term-erbb2"
+        ],
+        "action": "normalize_term_to_preferred_form"
+      }
+    ],
+    "actions": [
+      {
+        "id": "resolve_acronym_expansion_conflict",
+        "severity": "high",
+        "refs": [
+          "term-pdx-a",
+          "term-pdx-b"
+        ]
+      },
+      {
+        "id": "expand_acronym_at_first_use",
+        "severity": "high",
+        "refs": [
+          "term-pdx-a"
+        ]
+      },
+      {
+        "id": "rewrite_lay_summary_with_definition",
+        "severity": "high",
+        "refs": [
+          "summary-lay",
+          "term-pdx-a"
+        ]
+      },
+      {
+        "id": "add_reviewer_facing_definition",
+        "severity": "high",
+        "refs": [
+          "term-pdx-a"
+        ]
+      },
+      {
+        "id": "define_term_before_citation_insertion",
+        "severity": "medium",
+        "refs": [
+          "cite-pdx-model",
+          "term-pdx-a"
+        ]
+      },
+      {
+        "id": "bind_citation_to_known_term",
+        "severity": "medium",
+        "refs": [
+          "cite-unknown"
+        ]
+      },
+      {
+        "id": "add_lay_definition_or_remove_from_lay_summary",
+        "severity": "medium",
+        "refs": [
+          "term-organoid"
+        ]
+      },
+      {
+        "id": "fix_domain_nomenclature_style",
+        "severity": "medium",
+        "refs": [
+          "term-erbb2"
+        ]
+      },
+      {
+        "id": "normalize_term_to_preferred_form",
+        "severity": "medium",
+        "refs": [
+          "term-pdx-a"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "input": {
+    "manuscriptId": "astrocyte-calcium-preprint-v3",
+    "terms": [
+      {
+        "id": "term-gcamp",
+        "label": "genetically encoded calcium indicator",
+        "short": "GECI",
+        "expansion": "genetically encoded calcium indicator",
+        "firstUseSection": "abstract",
+        "expandedAtFirstUse": true,
+        "requiresDefinition": true,
+        "definition": "A fluorescent protein sensor used to report intracellular calcium dynamics.",
+        "layDefinition": "A lab-made sensor that glows when cell calcium changes.",
+        "jargonLevel": "medium",
+        "observedForms": [
+          "genetically encoded calcium indicator",
+          "GECI"
+        ],
+        "preferredForm": "genetically encoded calcium indicator"
+      },
+      {
+        "id": "term-gfap",
+        "label": "glial fibrillary acidic protein",
+        "short": "GFAP",
+        "expansion": "glial fibrillary acidic protein",
+        "firstUseSection": "methods",
+        "expandedAtFirstUse": true,
+        "requiresDefinition": true,
+        "definition": "An astrocyte marker used to identify glial cells in the imaging cohort.",
+        "layDefinition": "A marker that helps identify support cells in the brain.",
+        "jargonLevel": "medium",
+        "observedForms": [
+          "glial fibrillary acidic protein",
+          "GFAP"
+        ],
+        "preferredForm": "glial fibrillary acidic protein"
+      },
+      {
+        "id": "term-stat-model",
+        "label": "mixed-effects model",
+        "firstUseSection": "results",
+        "expandedAtFirstUse": true,
+        "requiresDefinition": true,
+        "definition": "A statistical model that accounts for repeated observations from the same animal.",
+        "layDefinition": "A model that avoids counting repeated measurements as unrelated.",
+        "jargonLevel": "medium",
+        "observedForms": [
+          "mixed-effects model"
+        ],
+        "preferredForm": "mixed-effects model"
+      }
+    ],
+    "citationRecommendations": [
+      {
+        "id": "cite-geci-method",
+        "termId": "term-gcamp",
+        "reason": "Supports calcium indicator methodology."
+      }
+    ],
+    "generatedSummaries": [
+      {
+        "id": "summary-lay",
+        "mode": "layperson",
+        "termIds": [
+          "term-gcamp",
+          "term-stat-model"
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "summary": {
+      "manuscriptId": "astrocyte-calcium-preprint-v3",
+      "decision": "release_ai_research_packet",
+      "termsReviewed": 3,
+      "citationRecommendationsReviewed": 1,
+      "generatedSummariesReviewed": 1,
+      "findingCount": 0,
+      "highOrCriticalFindings": 0,
+      "auditDigest": "sha256:c0ce9eb80921f467"
+    },
+    "coverage": [
+      {
+        "id": "term-gcamp",
+        "label": "genetically encoded calcium indicator",
+        "short": "GECI",
+        "firstUseSection": "abstract",
+        "hasDefinition": true,
+        "hasLayDefinition": true,
+        "observedForms": [
+          "genetically encoded calcium indicator",
+          "GECI"
+        ]
+      },
+      {
+        "id": "term-gfap",
+        "label": "glial fibrillary acidic protein",
+        "short": "GFAP",
+        "firstUseSection": "methods",
+        "hasDefinition": true,
+        "hasLayDefinition": true,
+        "observedForms": [
+          "glial fibrillary acidic protein",
+          "GFAP"
+        ]
+      },
+      {
+        "id": "term-stat-model",
+        "label": "mixed-effects model",
+        "short": null,
+        "firstUseSection": "results",
+        "hasDefinition": true,
+        "hasLayDefinition": true,
+        "observedForms": [
+          "mixed-effects model"
+        ]
+      }
+    ],
+    "findings": [],
+    "actions": []
+  }
+}

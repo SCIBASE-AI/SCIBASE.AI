@@ -1,0 +1,21 @@
+{
+  "name": "manuscript-terminology-definition-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic manuscript terminology and acronym definition assistant for SCIBASE AI research tools.",
+  "main": "index.js",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && node --check make-demo-video.js",
+    "test": "node test.js",
+    "demo": "node demo.js && node make-demo-video.js",
+    "verify-video": "ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height,duration,avg_frame_rate -show_entries format=duration,size -of default=noprint_wrappers=1 reports/demo.mp4"
+  },
+  "keywords": [
+    "scibase",
+    "ai-assisted-research",
+    "terminology",
+    "acronyms",
+    "peer-review"
+  ],
+  "license": "MIT"
+}

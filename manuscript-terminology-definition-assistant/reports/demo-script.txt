@@ -1,0 +1,10 @@
+Manuscript terminology definition assistant demo
+
+Clean packet decision: release_ai_research_packet
+Clean audit digest: sha256:c0ce9eb80921f467
+
+Risky packet decision: hold_ai_research_packet
+Risky finding count: 12
+Risky audit digest: sha256:525040b780da7400
+
+The risky packet demonstrates acronym expansion conflicts, missing first-use definitions, unknown citation term bindings, nomenclature style drift, and unexplained lay-summary jargon.

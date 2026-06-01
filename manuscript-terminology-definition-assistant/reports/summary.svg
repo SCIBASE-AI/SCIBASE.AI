@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Manuscript terminology definition assistant summary">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="48" y="44" width="1184" height="632" rx="18" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="76" y="110" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#111827">Terminology Definition Assistant</text>
+  <rect x="76" y="140" width="560" height="58" rx="10" fill="#b91c1c"/>
+  <text x="102" y="178" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">hold_ai_research_packet</text>
+  <text x="76" y="242" font-family="Arial, sans-serif" font-size="24" fill="#374151">Terms reviewed: 4</text>
+  <text x="76" y="276" font-family="Arial, sans-serif" font-size="24" fill="#374151">Findings: 12</text>
+<text x="76" y="304" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH ACRONYM_EXPANSION_CONFLICT</text>
+<text x="76" y="346" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH ACRONYM_NOT_EXPANDED_AT_FIRST_USE</text>
+<text x="76" y="388" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH LAY_SUMMARY_JARGON_UNEXPLAINED</text>
+<text x="76" y="430" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH LAY_SUMMARY_JARGON_UNEXPLAINED</text>
+<text x="76" y="472" font-family="Arial, sans-serif" font-size="22" fill="#111827">HIGH TERM_DEFINITION_MISSING</text>
+  <text x="76" y="642" font-family="Arial, sans-serif" font-size="20" fill="#6b7280">sha256:525040b780da7400</text>
+</svg>

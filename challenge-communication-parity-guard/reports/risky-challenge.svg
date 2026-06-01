@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#0f172a"/>
+  <text x="42" y="70" fill="#f8fafc" font-family="Arial" font-size="34">Challenge Communication Parity Guard</text>
+  <text x="42" y="118" fill="#cbd5e1" font-family="Arial" font-size="20">sb-comm-002</text>
+  <rect x="42" y="156" width="220" height="82" rx="8" fill="#dc2626"/>
+  <text x="68" y="207" fill="#fff" font-family="Arial" font-size="30">HOLD</text>
+  <text x="42" y="286" fill="#e2e8f0" font-family="Arial" font-size="22">Findings: 9</text>
+  <text x="42" y="326" fill="#fecaca" font-family="Arial" font-size="20">High: 4</text>
+  <text x="172" y="326" fill="#fed7aa" font-family="Arial" font-size="20">Medium: 3</text>
+  <text x="342" y="326" fill="#bfdbfe" font-family="Arial" font-size="20">Low: 2</text>
+  <text x="42" y="372" fill="#94a3b8" font-family="Arial" font-size="18">Synthetic data only. No external APIs or private challenge records.</text>
+</svg>

@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-06-01T10:39:58.090Z",
+  "status": "READY",
+  "summary": "Release/export is ready with 5 review decision record(s) and coverage for 5 component(s).",
+  "findingCounts": {},
+  "findings": [],
+  "coverage": {
+    "requiredComponents": [
+      "manuscript",
+      "data",
+      "code",
+      "notebook",
+      "metadata"
+    ],
+    "coveredComponents": [
+      "manuscript",
+      "data",
+      "code",
+      "notebook",
+      "metadata"
+    ],
+    "missingComponents": [],
+    "exportedRecordCount": 5
+  },
+  "decisionRecords": [
+    {
+      "id": "T-manuscript-claims",
+      "mergeRequestId": "MR-242",
+      "component": "manuscript",
+      "category": "review-decision",
+      "decision": "accepted",
+      "reviewerRole": "scientific-editor",
+      "reviewerId": "reviewer-a",
+      "anchorPath": "manuscript/main.md",
+      "anchorCommit": "0e5fbb1",
+      "resolutionRationale": "The discussion now records the revised claim language and the corresponding figure reference.",
+      "exportState": "included",
+      "redactionState": "public-safe",
+      "evidenceRefs": [
+        "reports/rendered-manuscript-v2.pdf",
+        "reviews/thread-T-manuscript-claims.md"
+      ]
+    },
+    {
+      "id": "T-data-units",
+      "mergeRequestId": "MR-242",
+      "component": "data",
+      "category": "review-decision",
+      "decision": "changed",
+      "reviewerRole": "data-steward",
+      "reviewerId": "reviewer-b",
+      "anchorPath": "data/observations.csv",
+      "anchorCommit": "0e5fbb1",
+      "resolutionRationale": "The dataset header now states SI units and links to the source instrument calibration sheet.",
+      "exportState": "included",
+      "redactionState": "public-safe",
+      "evidenceRefs": [
+        "data/README.md",
+        "reports/data-dictionary.json"
+      ]
+    },
+    {
+      "id": "T-code-seed",
+      "mergeRequestId": "MR-242",
+      "component": "code",
+      "category": "review-decision",
+      "decision": "changed",
+      "reviewerRole": "reproducibility-reviewer",
+      "reviewerId": "reviewer-c",
+      "anchorPath": "code/analysis.py",
+      "anchorCommit": "0e5fbb1",
+      "resolutionRationale": "The analysis entry point now sets a deterministic seed and exports run metadata.",
+      "exportState": "included",
+      "redactionState": "public-safe",
+      "evidenceRefs": [
+        "reports/replay-log.json"
+      ]
+    },
+    {
+      "id": "T-notebook-output",
+      "mergeRequestId": "MR-242",
+      "component": "notebook",
+      "category": "review-decision",
+      "decision": "accepted",
+      "reviewerRole": "reproducibility-reviewer",
+      "reviewerId": "reviewer-c",
+      "anchorPath": "notebooks/replay.ipynb",
+      "anchorCommit": "0e5fbb1",
+      "resolutionRationale": "Notebook output hashes match the exported result bundle after the data-unit correction.",
+      "exportState": "included",
+      "redactionState": "public-safe",
+      "evidenceRefs": [
+        "reports/notebook-output-hashes.json"
+      ]
+    },
+    {
+      "id": "T-metadata-doi",
+      "mergeRequestId": "MR-242",
+      "component": "metadata",
+      "category": "review-decision",
+      "decision": "accepted",
+      "reviewerRole": "metadata-curator",
+      "reviewerId": "reviewer-d",
+      "anchorPath": "metadata.json",
+      "anchorCommit": "0e5fbb1",
+      "resolutionRationale": "DataCite creator, funder, and relatedIdentifier entries now match the release manifest.",
+      "exportState": "included",
+      "redactionState": "public-safe",
+      "evidenceRefs": [
+        "metadata.json",
+        "reports/datacite-preview.json"
+      ]
+    }
+  ],
+  "releaseReadiness": {
+    "decision": "release",
+    "releaseCandidate": "v2.1-review-ready",
+    "blockerCodes": [],
+    "exportedDecisionRecords": 5,
+    "privateLeakRecords": []
+  },
+  "manifestPatch": {
+    "reviewDecisionPacket": {
+      "packetId": "packet-clean-review-decisions",
+      "packetHash": "3147d13fb2e62d6b6061aad7ab0a35699663814854348412f62ab513f3743a9b",
+      "releaseTag": "v2.1-review-ready",
+      "decisionRecordCount": 5,
+      "coveredComponents": [
+        "code",
+        "data",
+        "manuscript",
+        "metadata",
+        "notebook"
+      ],
+      "findingCount": 0
+    }
+  },
+  "remediationActions": [],
+  "fingerprint": "7958e872619a283c"
+}

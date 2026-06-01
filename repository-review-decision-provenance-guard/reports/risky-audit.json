@@ -1,0 +1,282 @@
+{
+  "generatedAt": "2026-06-01T10:39:58.091Z",
+  "status": "HOLD",
+  "summary": "Hold release/export: 7 critical or high decision-provenance blocker(s) need remediation before reviewer decisions are durable and public-safe.",
+  "findingCounts": {
+    "critical": 1,
+    "high": 6,
+    "warning": 2
+  },
+  "findings": [
+    {
+      "code": "PRIVATE_REVIEW_NOTE_EXPORTED",
+      "severity": "critical",
+      "message": "T-private-note contains a private reviewer note without export redaction.",
+      "evidence": "Repository exports must not leak private reviewer notes, blind-review details, or hidden institutional comments.",
+      "path": "mergeRequests[0].reviewThreads[0].redactedForExport",
+      "remediation": "Redact private notes and preserve only a public-safe reason code in the exported decision record.",
+      "owner": "scientific editor",
+      "mergeRequestId": "MR-317",
+      "threadId": "T-private-note"
+    },
+    {
+      "code": "RESOLUTION_RATIONALE_TOO_THIN",
+      "severity": "high",
+      "message": "T-notebook-role has no durable resolution rationale.",
+      "evidence": "A resolved scientific review thread needs enough rationale for future auditors and citation readers.",
+      "path": "mergeRequests[0].reviewThreads[2].resolutionRationale",
+      "remediation": "Record the accepted change, scientific reasoning, or deferral basis in the resolution rationale.",
+      "owner": "reviewer",
+      "mergeRequestId": null,
+      "threadId": null
+    },
+    {
+      "code": "RESOLVED_DECISION_NOT_EXPORTED",
+      "severity": "high",
+      "message": "T-metadata-missing-export is resolved but not marked for export.",
+      "evidence": "Resolved scientific review decisions should be carried into release/export evidence instead of disappearing after merge.",
+      "path": "mergeRequests[0].reviewThreads[3].exported",
+      "remediation": "Set exported=true and include the record in the reviewDecisionPacket manifest entry.",
+      "owner": "release engineer",
+      "mergeRequestId": "MR-317",
+      "threadId": "T-metadata-missing-export"
+    },
+    {
+      "code": "REVIEW_DECISION_PACKET_NOT_LINKED",
+      "severity": "high",
+      "message": "The export manifest does not link the review-decision provenance packet.",
+      "evidence": "Resolved scientific review decisions must be carried with the release/export evidence.",
+      "path": "releaseCandidate.exportManifest.reviewDecisionPacket",
+      "remediation": "Add a reviewDecisionPacket entry with packet hash, record count, and covered components.",
+      "owner": "release engineer",
+      "mergeRequestId": null,
+      "threadId": null
+    },
+    {
+      "code": "REVIEWER_ROLE_NOT_ELIGIBLE_FOR_COMPONENT",
+      "severity": "high",
+      "message": "T-notebook-role uses reviewer role viewer for notebook.",
+      "evidence": "Allowed reviewer roles for notebook: reproducibility-reviewer, methods-reviewer.",
+      "path": "mergeRequests[0].reviewThreads[2].reviewerRole",
+      "remediation": "Add an eligible reviewer decision or document an escalation override in the decision record.",
+      "owner": "scientific editor",
+      "mergeRequestId": "MR-317",
+      "threadId": "T-notebook-role"
+    },
+    {
+      "code": "THREAD_ANCHOR_INCOMPLETE",
+      "severity": "high",
+      "message": "T-notebook-role is missing file path or commit anchoring.",
+      "evidence": "Decision records cannot prove which repository content was reviewed without path and commit anchors.",
+      "path": "mergeRequests[0].reviewThreads[2].anchor",
+      "remediation": "Attach anchor.path and anchor.commit for the reviewed file or notebook output.",
+      "owner": "repository maintainer",
+      "mergeRequestId": "MR-317",
+      "threadId": "T-notebook-role"
+    },
+    {
+      "code": "THREAD_NOT_RESOLVED_FOR_EXPORT",
+      "severity": "high",
+      "message": "T-code-open is not resolved but is present in the release decision packet.",
+      "evidence": "This guard archives resolved decision provenance; open discussions should be routed back to merge review.",
+      "path": "mergeRequests[0].reviewThreads[1].status",
+      "remediation": "Resolve the discussion with a rationale or remove it from the release decision packet until review is complete.",
+      "owner": "scientific editor",
+      "mergeRequestId": "MR-317",
+      "threadId": "T-code-open"
+    },
+    {
+      "code": "DECISION_EVIDENCE_REFS_MISSING",
+      "severity": "warning",
+      "message": "T-code-open has no linked evidence references.",
+      "evidence": "Decision records should link tests, rendered outputs, reviewer screenshots, or manifest entries.",
+      "path": "mergeRequests[0].reviewThreads[1].evidenceRefs",
+      "remediation": "Attach evidenceRefs for tests, outputs, exported artifacts, or reviewer attachments.",
+      "owner": "reviewer",
+      "mergeRequestId": "MR-317",
+      "threadId": "T-code-open"
+    },
+    {
+      "code": "DECISION_EVIDENCE_REFS_MISSING",
+      "severity": "warning",
+      "message": "T-notebook-role has no linked evidence references.",
+      "evidence": "Decision records should link tests, rendered outputs, reviewer screenshots, or manifest entries.",
+      "path": "mergeRequests[0].reviewThreads[2].evidenceRefs",
+      "remediation": "Attach evidenceRefs for tests, outputs, exported artifacts, or reviewer attachments.",
+      "owner": "reviewer",
+      "mergeRequestId": "MR-317",
+      "threadId": "T-notebook-role"
+    }
+  ],
+  "coverage": {
+    "requiredComponents": [
+      "manuscript",
+      "data",
+      "code",
+      "notebook",
+      "metadata"
+    ],
+    "coveredComponents": [
+      "notebook"
+    ],
+    "missingComponents": [
+      "manuscript",
+      "data",
+      "code",
+      "metadata"
+    ],
+    "exportedRecordCount": 2
+  },
+  "decisionRecords": [
+    {
+      "id": "T-private-note",
+      "mergeRequestId": "MR-317",
+      "component": "data",
+      "category": "review-decision",
+      "decision": "deferred",
+      "reviewerRole": "data-steward",
+      "reviewerId": "reviewer-z",
+      "anchorPath": "data/patient-observations.csv",
+      "anchorCommit": "feedbee",
+      "resolutionRationale": "Data row issue discussed in private.",
+      "exportState": "included",
+      "redactionState": "leaking",
+      "evidenceRefs": [
+        "reviews/private-note.md"
+      ]
+    },
+    {
+      "id": "T-code-open",
+      "mergeRequestId": "MR-317",
+      "component": "code",
+      "category": "review-decision",
+      "decision": "unspecified",
+      "reviewerRole": "maintainer",
+      "reviewerId": "reviewer-c",
+      "anchorPath": "code/analysis.py",
+      "anchorCommit": "feedbee",
+      "resolutionRationale": "",
+      "exportState": "missing",
+      "redactionState": "public-safe",
+      "evidenceRefs": []
+    },
+    {
+      "id": "T-notebook-role",
+      "mergeRequestId": "MR-317",
+      "component": "notebook",
+      "category": "review-decision",
+      "decision": "accepted",
+      "reviewerRole": "viewer",
+      "reviewerId": "reviewer-q",
+      "anchorPath": "notebooks/replay.ipynb",
+      "anchorCommit": null,
+      "resolutionRationale": "Looks fine",
+      "exportState": "included",
+      "redactionState": "public-safe",
+      "evidenceRefs": []
+    },
+    {
+      "id": "T-metadata-missing-export",
+      "mergeRequestId": "MR-317",
+      "component": "metadata",
+      "category": "review-decision",
+      "decision": "changed",
+      "reviewerRole": "metadata-curator",
+      "reviewerId": "reviewer-d",
+      "anchorPath": "metadata.json",
+      "anchorCommit": "feedbee",
+      "resolutionRationale": "Added related identifiers for the cited dataset version.",
+      "exportState": "missing",
+      "redactionState": "public-safe",
+      "evidenceRefs": [
+        "metadata.json"
+      ]
+    }
+  ],
+  "releaseReadiness": {
+    "decision": "hold",
+    "releaseCandidate": "v2.2-public-export",
+    "blockerCodes": [
+      "PRIVATE_REVIEW_NOTE_EXPORTED",
+      "RESOLUTION_RATIONALE_TOO_THIN",
+      "RESOLVED_DECISION_NOT_EXPORTED",
+      "REVIEW_DECISION_PACKET_NOT_LINKED",
+      "REVIEWER_ROLE_NOT_ELIGIBLE_FOR_COMPONENT",
+      "THREAD_ANCHOR_INCOMPLETE",
+      "THREAD_NOT_RESOLVED_FOR_EXPORT"
+    ],
+    "exportedDecisionRecords": 2,
+    "privateLeakRecords": [
+      "T-private-note"
+    ]
+  },
+  "manifestPatch": {
+    "reviewDecisionPacket": {
+      "packetId": "packet-risky-review-decisions",
+      "packetHash": "aceced7e057804cb8815b37798951f94595973bc5a5af72ac5aedf10b70afcb5",
+      "releaseTag": "v2.2-public-export",
+      "decisionRecordCount": 1,
+      "coveredComponents": [
+        "notebook"
+      ],
+      "findingCount": 9
+    }
+  },
+  "remediationActions": [
+    {
+      "code": "PRIVATE_REVIEW_NOTE_EXPORTED",
+      "owner": "scientific editor",
+      "action": "Redact private notes and preserve only a public-safe reason code in the exported decision record.",
+      "path": "mergeRequests[0].reviewThreads[0].redactedForExport"
+    },
+    {
+      "code": "RESOLUTION_RATIONALE_TOO_THIN",
+      "owner": "reviewer",
+      "action": "Record the accepted change, scientific reasoning, or deferral basis in the resolution rationale.",
+      "path": "mergeRequests[0].reviewThreads[2].resolutionRationale"
+    },
+    {
+      "code": "RESOLVED_DECISION_NOT_EXPORTED",
+      "owner": "release engineer",
+      "action": "Set exported=true and include the record in the reviewDecisionPacket manifest entry.",
+      "path": "mergeRequests[0].reviewThreads[3].exported"
+    },
+    {
+      "code": "REVIEW_DECISION_PACKET_NOT_LINKED",
+      "owner": "release engineer",
+      "action": "Add a reviewDecisionPacket entry with packet hash, record count, and covered components.",
+      "path": "releaseCandidate.exportManifest.reviewDecisionPacket"
+    },
+    {
+      "code": "REVIEWER_ROLE_NOT_ELIGIBLE_FOR_COMPONENT",
+      "owner": "scientific editor",
+      "action": "Add an eligible reviewer decision or document an escalation override in the decision record.",
+      "path": "mergeRequests[0].reviewThreads[2].reviewerRole"
+    },
+    {
+      "code": "THREAD_ANCHOR_INCOMPLETE",
+      "owner": "repository maintainer",
+      "action": "Attach anchor.path and anchor.commit for the reviewed file or notebook output.",
+      "path": "mergeRequests[0].reviewThreads[2].anchor"
+    },
+    {
+      "code": "THREAD_NOT_RESOLVED_FOR_EXPORT",
+      "owner": "scientific editor",
+      "action": "Resolve the discussion with a rationale or remove it from the release decision packet until review is complete.",
+      "path": "mergeRequests[0].reviewThreads[1].status"
+    },
+    {
+      "code": "DECISION_EVIDENCE_REFS_MISSING",
+      "owner": "reviewer",
+      "action": "Attach evidenceRefs for tests, outputs, exported artifacts, or reviewer attachments.",
+      "path": "mergeRequests[0].reviewThreads[1].evidenceRefs"
+    },
+    {
+      "code": "DECISION_EVIDENCE_REFS_MISSING",
+      "owner": "reviewer",
+      "action": "Attach evidenceRefs for tests, outputs, exported artifacts, or reviewer attachments.",
+      "path": "mergeRequests[0].reviewThreads[2].evidenceRefs"
+    }
+  ],
+  "fingerprint": "ecea7282a32c0a38"
+}

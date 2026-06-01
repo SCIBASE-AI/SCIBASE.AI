@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-06-01T10:39:58.097Z",
+  "module": "repository-review-decision-provenance-guard",
+  "cleanStatus": "READY",
+  "riskyStatus": "HOLD",
+  "riskyFindings": 9,
+  "artifacts": [
+    "clean-audit.json",
+    "risky-audit.json",
+    "risky-review.md",
+    "summary.svg",
+    "demo.mp4"
+  ]
+}

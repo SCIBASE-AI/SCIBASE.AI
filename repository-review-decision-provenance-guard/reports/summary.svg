@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Repository review decision provenance summary">
+<rect width="960" height="540" fill="#18212f"/>
+<rect x="48" y="48" width="864" height="444" rx="12" fill="#f8fafc"/>
+<text x="82" y="118" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#111827">Review-decision provenance</text>
+<text x="82" y="162" font-family="Arial, sans-serif" font-size="19" fill="#475569">Status HOLD - fingerprint ecea7282a32c0a38</text>
+<rect x="82" y="214" width="80" height="58" fill="#16794c"/>
+<rect x="162" y="214" width="256" height="58" fill="#a11b32"/>
+<rect x="418" y="214" width="76" height="58" fill="#a15c00"/>
+<text x="96" y="251" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">DECISION PACKET</text>
+<text x="82" y="336" font-family="Arial, sans-serif" font-size="22" fill="#334155">Critical/high blockers: 7</text>
+<text x="82" y="376" font-family="Arial, sans-serif" font-size="22" fill="#334155">Decision records: 4</text>
+<text x="82" y="416" font-family="Arial, sans-serif" font-size="22" fill="#334155">Coverage: 1/5 components</text>
+</svg>

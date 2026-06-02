@@ -1,0 +1,118 @@
+{
+  "generatedAt": "2026-06-02T00:00:00.000Z",
+  "module": "sponsor-escrow-readiness-guard",
+  "clean": {
+    "batchId": "escrow-batch-clean",
+    "generatedAt": "2026-06-02T00:00:00.000Z",
+    "decision": "release",
+    "checkedChallenges": 1,
+    "releaseCount": 1,
+    "reviseCount": 0,
+    "holdCount": 0,
+    "blockerCount": 0,
+    "revisionCount": 0,
+    "challengeResults": [
+      {
+        "challengeId": "challenge-biomarker-001",
+        "sponsorId": "pharma-lab-alpha",
+        "prizeAmount": 150000,
+        "currency": "USD",
+        "decision": "release",
+        "blockerCount": 0,
+        "revisionCount": 0,
+        "findings": []
+      }
+    ],
+    "reviewerSummary": "All sponsor escrow and payout readiness checks are satisfied."
+  },
+  "risky": {
+    "batchId": "escrow-batch-risky",
+    "generatedAt": "2026-06-02T00:00:00.000Z",
+    "decision": "hold",
+    "checkedChallenges": 2,
+    "releaseCount": 0,
+    "reviseCount": 0,
+    "holdCount": 2,
+    "blockerCount": 7,
+    "revisionCount": 2,
+    "challengeResults": [
+      {
+        "challengeId": "challenge-quantum-042",
+        "sponsorId": "quantum-startup-beta",
+        "prizeAmount": 80000,
+        "currency": "USD",
+        "decision": "hold",
+        "blockerCount": 5,
+        "revisionCount": 2,
+        "findings": [
+          {
+            "code": "ESCROW_EVIDENCE_MISSING",
+            "severity": "block",
+            "message": "challenge-quantum-042 lacks sponsor escrow evidence.",
+            "remediation": "Attach escrow provider and evidence ID before accepting submissions."
+          },
+          {
+            "code": "ESCROW_UNDERFUNDED",
+            "severity": "block",
+            "message": "challenge-quantum-042 escrow holds 42000, below advertised prize 80000.",
+            "remediation": "Fund the escrow to at least the advertised prize before challenge launch."
+          },
+          {
+            "code": "SPONSOR_RELEASE_AUTH_MISSING",
+            "severity": "block",
+            "message": "challenge-quantum-042 has no sponsor release authorization on file.",
+            "remediation": "Record sponsor release approval before the prize is advertised as payable."
+          },
+          {
+            "code": "ESCROW_EXPIRES_BEFORE_AWARD",
+            "severity": "block",
+            "message": "challenge-quantum-042 escrow expires before the award decision date.",
+            "remediation": "Extend escrow validity beyond the award decision and dispute window."
+          },
+          {
+            "code": "ESCROW_EVIDENCE_STALE",
+            "severity": "revise",
+            "message": "challenge-quantum-042 escrow verification is older than 30 days.",
+            "remediation": "Refresh escrow evidence before opening or continuing submissions."
+          },
+          {
+            "code": "PAYOUT_TOTAL_MISMATCH",
+            "severity": "block",
+            "message": "challenge-quantum-042 payout schedule totals 60000, but advertised prize is 80000.",
+            "remediation": "Reconcile milestone and final payout rows to the exact advertised prize."
+          },
+          {
+            "code": "PAYOUT_ROUTE_INCOMPLETE",
+            "severity": "revise",
+            "message": "challenge-quantum-042 has a payout row without release trigger or destination class.",
+            "remediation": "Add release trigger and solver/team/institution destination class to each payout row."
+          }
+        ]
+      },
+      {
+        "challengeId": "challenge-climate-forecast-017",
+        "sponsorId": "climate-nonprofit-gamma",
+        "prizeAmount": 25000,
+        "currency": "POINTS",
+        "decision": "hold",
+        "blockerCount": 2,
+        "revisionCount": 0,
+        "findings": [
+          {
+            "code": "UNSUPPORTED_CURRENCY",
+            "severity": "block",
+            "message": "challenge-climate-forecast-017 uses unsupported prize currency POINTS.",
+            "remediation": "Convert the challenge prize to a supported payout currency before launch."
+          },
+          {
+            "code": "PAYOUT_SCHEDULE_MISSING",
+            "severity": "block",
+            "message": "challenge-climate-forecast-017 does not define milestone or final payout routing.",
+            "remediation": "Attach a payout schedule before solver submissions open."
+          }
+        ]
+      }
+    ],
+    "reviewerSummary": "Hold or revise challenge launch until prize funding evidence is complete."
+  }
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="544" viewBox="0 0 920 544">
+  <rect width="100%" height="100%" fill="#f8fafc" />
+  <text x="28" y="38" font-size="24" font-weight="700" fill="#0f172a">Revenue Commitment True-Up Risk Map</text>
+  <text x="28" y="62" font-size="14" fill="#475569">Synthetic invoices scored before release</text>
+
+  <text x="28" y="102" font-size="15" fill="#111827">INV-CLEAN-Q1 RELEASE_INVOICE</text>
+  <rect x="360" y="82" width="4" height="26" rx="4" fill="#15803d" opacity="0.88" />
+  <text x="374" y="101" font-size="13" fill="#111827">0</text>
+  <text x="28" y="124" font-size="12" fill="#4b5563">clear</text>
+
+  <text x="28" y="164" font-size="15" fill="#111827">INV-UNDER-Q1 HOLD_INVOICE</text>
+  <rect x="360" y="144" width="140" height="26" rx="4" fill="#b91c1c" opacity="0.88" />
+  <text x="510" y="163" font-size="13" fill="#111827">40</text>
+  <text x="28" y="186" font-size="12" fill="#4b5563">TRUEUP_VARIANCE</text>
+
+  <text x="28" y="226" font-size="15" fill="#111827">INV-DUP-Q1-A RELEASE_INVOICE</text>
+  <rect x="360" y="206" width="4" height="26" rx="4" fill="#15803d" opacity="0.88" />
+  <text x="374" y="225" font-size="13" fill="#111827">0</text>
+  <text x="28" y="248" font-size="12" fill="#4b5563">clear</text>
+
+  <text x="28" y="288" font-size="15" fill="#111827">INV-DUP-Q1-B HOLD_INVOICE</text>
+  <rect x="360" y="268" width="140" height="26" rx="4" fill="#b91c1c" opacity="0.88" />
+  <text x="510" y="287" font-size="13" fill="#111827">40</text>
+  <text x="28" y="310" font-size="12" fill="#4b5563">DUPLICATE_TRUEUP_WINDOW</text>
+
+  <text x="28" y="350" font-size="15" fill="#111827">INV-AMEND-Q1 HOLD_INVOICE</text>
+  <rect x="360" y="330" width="420" height="26" rx="4" fill="#b91c1c" opacity="0.88" />
+  <text x="790" y="349" font-size="13" fill="#111827">120</text>
+  <text x="28" y="372" font-size="12" fill="#4b5563">MISSING_BASE_EVIDENCE, TRUEUP_VARIANCE, FUTURE_AMENDMENT_APPLIED_EARLY</text>
+
+  <text x="28" y="412" font-size="15" fill="#111827">INV-SLA-Q1 HOLD_INVOICE</text>
+  <rect x="360" y="392" width="333" height="26" rx="4" fill="#b91c1c" opacity="0.88" />
+  <text x="703" y="411" font-size="13" fill="#111827">95</text>
+  <text x="28" y="434" font-size="12" fill="#4b5563">TRUEUP_VARIANCE, MISSING_SLA_TICKET, SLA_CREDIT_EXCEEDS_CAP</text>
+
+  <text x="28" y="474" font-size="15" fill="#111827">INV-REVIEW-Q1 REVIEW_BEFORE_RELEASE</text>
+  <rect x="360" y="454" width="105" height="26" rx="4" fill="#ca8a04" opacity="0.88" />
+  <text x="475" y="473" font-size="13" fill="#111827">30</text>
+  <text x="28" y="496" font-size="12" fill="#4b5563">TRUEUP_VARIANCE, MISSING_SLA_TICKET</text>
+</svg>

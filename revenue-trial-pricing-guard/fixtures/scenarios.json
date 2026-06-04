@@ -1,0 +1,133 @@
+{
+  "invoiceDate": "2026-06-04",
+  "maxTrialDays": 30,
+  "maxDiscountPercent": 0.4,
+  "plans": {
+    "individual_pro": {
+      "monthlyCents": 2900
+    },
+    "lab_group": {
+      "monthlyCents": 7900
+    },
+    "institutional": {
+      "monthlyCents": 21000
+    }
+  },
+  "consortia": {
+    "northeast_research": {
+      "minimumSeats": 20,
+      "allowedEmailDomains": ["northlab.edu", "metascience.org"],
+      "allowedInstitutionIds": ["inst-north-01", "inst-meta-04"]
+    }
+  },
+  "coupons": {
+    "trial_conversion_20": {
+      "type": "percent",
+      "percent": 0.2,
+      "expiresAt": "2026-12-31",
+      "stackable": false,
+      "allowedPlanIds": ["individual_pro", "lab_group"],
+      "requiresConversionEvidence": true
+    },
+    "spring_promo_15": {
+      "type": "percent",
+      "percent": 0.15,
+      "expiresAt": "2026-05-15",
+      "stackable": false,
+      "allowedPlanIds": ["individual_pro", "lab_group"]
+    },
+    "consortium_research_30": {
+      "type": "percent",
+      "percent": 0.3,
+      "expiresAt": "2026-12-31",
+      "stackable": false,
+      "allowedPlanIds": ["institutional"],
+      "consortiumId": "northeast_research"
+    },
+    "accessibility_credit_10": {
+      "type": "percent",
+      "percent": 0.1,
+      "expiresAt": "2026-10-01",
+      "stackable": true,
+      "allowedPlanIds": ["individual_pro", "lab_group", "institutional"]
+    }
+  },
+  "accounts": [
+    {
+      "id": "acct-clean-lab",
+      "name": "Clean Lab Renewal",
+      "plan": "lab_group",
+      "seats": 8,
+      "billingCycle": "annual",
+      "institutionId": "lab-clean-01",
+      "emailDomain": "cleanlab.edu",
+      "trialActive": false,
+      "priorTrials": 0,
+      "conversionEvidence": "signed-order-447",
+      "coupons": [],
+      "annualDiscountPercent": 0.1,
+      "volumeDiscountPercent": 0
+    },
+    {
+      "id": "acct-repeat-trial",
+      "name": "Repeat Trial Startup",
+      "plan": "individual_pro",
+      "seats": 2,
+      "billingCycle": "monthly",
+      "institutionId": "startup-02",
+      "emailDomain": "example.org",
+      "trialActive": true,
+      "trialStartedAt": "2026-04-29",
+      "priorTrials": 1,
+      "conversionEvidence": null,
+      "coupons": ["trial_conversion_20"],
+      "annualDiscountPercent": 0,
+      "volumeDiscountPercent": 0
+    },
+    {
+      "id": "acct-expired-coupon",
+      "name": "Expired Promo Lab",
+      "plan": "lab_group",
+      "seats": 12,
+      "billingCycle": "monthly",
+      "institutionId": "lab-east-02",
+      "emailDomain": "eastlab.edu",
+      "trialActive": false,
+      "priorTrials": 0,
+      "conversionEvidence": "purchase-order-310",
+      "coupons": ["spring_promo_15"],
+      "annualDiscountPercent": 0,
+      "volumeDiscountPercent": 0.08
+    },
+    {
+      "id": "acct-consortium-mismatch",
+      "name": "Ineligible Consortium Invoice",
+      "plan": "institutional",
+      "seats": 14,
+      "billingCycle": "annual",
+      "institutionId": "inst-west-09",
+      "emailDomain": "westlab.edu",
+      "trialActive": false,
+      "priorTrials": 0,
+      "conversionEvidence": "signed-msa-118",
+      "coupons": ["consortium_research_30"],
+      "annualDiscountPercent": 0.1,
+      "volumeDiscountPercent": 0.05
+    },
+    {
+      "id": "acct-stack-conflict",
+      "name": "Stacked Discount Consortium",
+      "plan": "institutional",
+      "seats": 28,
+      "billingCycle": "annual",
+      "institutionId": "inst-north-01",
+      "emailDomain": "northlab.edu",
+      "trialActive": false,
+      "priorTrials": 0,
+      "conversionEvidence": "signed-consortium-2026",
+      "coupons": ["consortium_research_30", "accessibility_credit_10"],
+      "annualDiscountPercent": 0.1,
+      "volumeDiscountPercent": 0.05
+    }
+  ]
+}

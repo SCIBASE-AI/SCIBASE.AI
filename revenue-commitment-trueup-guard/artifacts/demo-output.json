@@ -1,0 +1,233 @@
+{
+  "generatedAt": "2026-06-04T07:17:36.824Z",
+  "portfolio": "synthetic-enterprise-commitments",
+  "summary": {
+    "contracts": 6,
+    "invoices": 7,
+    "release": 2,
+    "review": 1,
+    "hold": 4,
+    "totalVarianceCents": 420000,
+    "topFindings": {
+      "TRUEUP_VARIANCE": 4,
+      "DUPLICATE_TRUEUP_WINDOW": 1,
+      "MISSING_BASE_EVIDENCE": 1,
+      "FUTURE_AMENDMENT_APPLIED_EARLY": 1,
+      "MISSING_SLA_TICKET": 2,
+      "SLA_CREDIT_EXCEEDS_CAP": 1
+    }
+  },
+  "evaluations": [
+    {
+      "contractId": "ENT-CLEAN-2026",
+      "customerSegment": "Institutional license",
+      "currency": "USD",
+      "action": "RELEASE_INVOICE",
+      "invoices": [
+        {
+          "contractId": "ENT-CLEAN-2026",
+          "invoiceId": "INV-CLEAN-Q1",
+          "trueUpWindow": "2026-Q1",
+          "customerSegment": "Institutional license",
+          "effectiveCommitmentCents": 1200000,
+          "meteredUsageCents": 1475000,
+          "proposedTrueUpCents": 225000,
+          "expectedTrueUpCents": 225000,
+          "varianceCents": 0,
+          "findings": [],
+          "action": "RELEASE_INVOICE",
+          "riskScore": 0
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-UNDERTRUE-2026",
+      "customerSegment": "Lab group account",
+      "currency": "USD",
+      "action": "HOLD_INVOICE",
+      "invoices": [
+        {
+          "contractId": "ENT-UNDERTRUE-2026",
+          "invoiceId": "INV-UNDER-Q1",
+          "trueUpWindow": "2026-Q1",
+          "customerSegment": "Lab group account",
+          "effectiveCommitmentCents": 900000,
+          "meteredUsageCents": 620000,
+          "proposedTrueUpCents": 150000,
+          "expectedTrueUpCents": 280000,
+          "varianceCents": -130000,
+          "findings": [
+            {
+              "severity": "hold",
+              "code": "TRUEUP_VARIANCE",
+              "message": "Proposed true-up $1500.00 differs from expected $2800.00",
+              "amountCents": -130000
+            }
+          ],
+          "action": "HOLD_INVOICE",
+          "riskScore": 40
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-DUPLICATE-2026",
+      "customerSegment": "Enterprise license",
+      "currency": "USD",
+      "action": "HOLD_INVOICE",
+      "invoices": [
+        {
+          "contractId": "ENT-DUPLICATE-2026",
+          "invoiceId": "INV-DUP-Q1-A",
+          "trueUpWindow": "2026-Q1",
+          "customerSegment": "Enterprise license",
+          "effectiveCommitmentCents": 1000000,
+          "meteredUsageCents": 1080000,
+          "proposedTrueUpCents": 80000,
+          "expectedTrueUpCents": 80000,
+          "varianceCents": 0,
+          "findings": [],
+          "action": "RELEASE_INVOICE",
+          "riskScore": 0
+        },
+        {
+          "contractId": "ENT-DUPLICATE-2026",
+          "invoiceId": "INV-DUP-Q1-B",
+          "trueUpWindow": "2026-Q1",
+          "customerSegment": "Enterprise license",
+          "effectiveCommitmentCents": 1000000,
+          "meteredUsageCents": 1015000,
+          "proposedTrueUpCents": 15000,
+          "expectedTrueUpCents": 15000,
+          "varianceCents": 0,
+          "findings": [
+            {
+              "severity": "hold",
+              "code": "DUPLICATE_TRUEUP_WINDOW",
+              "message": "2026-Q1 is already represented by another invoice",
+              "amountCents": 0
+            }
+          ],
+          "action": "HOLD_INVOICE",
+          "riskScore": 40
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-AMENDMENT-2026",
+      "customerSegment": "Consortium account",
+      "currency": "USD",
+      "action": "HOLD_INVOICE",
+      "invoices": [
+        {
+          "contractId": "ENT-AMENDMENT-2026",
+          "invoiceId": "INV-AMEND-Q1",
+          "trueUpWindow": "2026-Q1",
+          "customerSegment": "Consortium account",
+          "effectiveCommitmentCents": 800000,
+          "meteredUsageCents": 610000,
+          "proposedTrueUpCents": 0,
+          "expectedTrueUpCents": 190000,
+          "varianceCents": -190000,
+          "findings": [
+            {
+              "severity": "hold",
+              "code": "MISSING_BASE_EVIDENCE",
+              "message": "signed-amendment evidence is required before release",
+              "amountCents": 0
+            },
+            {
+              "severity": "hold",
+              "code": "TRUEUP_VARIANCE",
+              "message": "Proposed true-up $0.00 differs from expected $1900.00",
+              "amountCents": -190000
+            },
+            {
+              "severity": "hold",
+              "code": "FUTURE_AMENDMENT_APPLIED_EARLY",
+              "message": "Invoice appears to use a future amendment before its effective date",
+              "amountCents": 0
+            }
+          ],
+          "action": "HOLD_INVOICE",
+          "riskScore": 120
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-SLA-2026",
+      "customerSegment": "Enterprise license",
+      "currency": "USD",
+      "action": "HOLD_INVOICE",
+      "invoices": [
+        {
+          "contractId": "ENT-SLA-2026",
+          "invoiceId": "INV-SLA-Q1",
+          "trueUpWindow": "2026-Q1",
+          "customerSegment": "Enterprise license",
+          "effectiveCommitmentCents": 1100000,
+          "meteredUsageCents": 1280000,
+          "proposedTrueUpCents": 100000,
+          "expectedTrueUpCents": 20000,
+          "varianceCents": 80000,
+          "findings": [
+            {
+              "severity": "hold",
+              "code": "TRUEUP_VARIANCE",
+              "message": "Proposed true-up $1000.00 differs from expected $200.00",
+              "amountCents": 80000
+            },
+            {
+              "severity": "review",
+              "code": "MISSING_SLA_TICKET",
+              "message": "SLA credit needs an incident or support ticket reference",
+              "amountCents": 0
+            },
+            {
+              "severity": "hold",
+              "code": "SLA_CREDIT_EXCEEDS_CAP",
+              "message": "SLA credit $1600.00 exceeds cap $1000.00",
+              "amountCents": 60000
+            }
+          ],
+          "action": "HOLD_INVOICE",
+          "riskScore": 95
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-REVIEW-2026",
+      "customerSegment": "Institutional license",
+      "currency": "USD",
+      "action": "REVIEW_BEFORE_RELEASE",
+      "invoices": [
+        {
+          "contractId": "ENT-REVIEW-2026",
+          "invoiceId": "INV-REVIEW-Q1",
+          "trueUpWindow": "2026-Q1",
+          "customerSegment": "Institutional license",
+          "effectiveCommitmentCents": 1200000,
+          "meteredUsageCents": 1300000,
+          "proposedTrueUpCents": 100000,
+          "expectedTrueUpCents": 80000,
+          "varianceCents": 20000,
+          "findings": [
+            {
+              "severity": "review",
+              "code": "TRUEUP_VARIANCE",
+              "message": "Proposed true-up $1000.00 differs from expected $800.00",
+              "amountCents": 20000
+            },
+            {
+              "severity": "review",
+              "code": "MISSING_SLA_TICKET",
+              "message": "SLA credit needs an incident or support ticket reference",
+              "amountCents": 0
+            }
+          ],
+          "action": "REVIEW_BEFORE_RELEASE",
+          "riskScore": 30
+        }
+      ]
+    }
+  ]
+}

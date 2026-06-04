@@ -1,0 +1,196 @@
+{
+  "generatedAt": "2026-06-04T07:15:00.000Z",
+  "portfolio": "synthetic-enterprise-commitments",
+  "contracts": [
+    {
+      "contractId": "ENT-CLEAN-2026",
+      "customerSegment": "Institutional license",
+      "currency": "USD",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "minimumCommitmentCents": 1200000,
+      "signedAmendments": [
+        {
+          "amendmentId": "AMD-CLEAN-Q1",
+          "effectiveDate": "2026-01-01",
+          "signedAt": "2025-12-20",
+          "minimumCommitmentCents": 1200000
+        }
+      ],
+      "invoices": [
+        {
+          "invoiceId": "INV-CLEAN-Q1",
+          "trueUpWindow": "2026-Q1",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "meteredUsageCents": 1475000,
+          "proposedTrueUpCents": 225000,
+          "slaCreditCents": 50000,
+          "slaCreditCapCents": 75000,
+          "evidence": [
+            "usage-meter-export",
+            "signed-amendment",
+            "overage-approval",
+            "sla-credit-ticket"
+          ]
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-UNDERTRUE-2026",
+      "customerSegment": "Lab group account",
+      "currency": "USD",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "minimumCommitmentCents": 900000,
+      "signedAmendments": [
+        {
+          "amendmentId": "AMD-UNDER-Q1",
+          "effectiveDate": "2026-01-01",
+          "signedAt": "2025-12-15",
+          "minimumCommitmentCents": 900000
+        }
+      ],
+      "invoices": [
+        {
+          "invoiceId": "INV-UNDER-Q1",
+          "trueUpWindow": "2026-Q1",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "meteredUsageCents": 620000,
+          "proposedTrueUpCents": 150000,
+          "slaCreditCents": 0,
+          "slaCreditCapCents": 50000,
+          "evidence": ["usage-meter-export", "signed-amendment"]
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-DUPLICATE-2026",
+      "customerSegment": "Enterprise license",
+      "currency": "USD",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "minimumCommitmentCents": 1000000,
+      "signedAmendments": [
+        {
+          "amendmentId": "AMD-DUP-Q1",
+          "effectiveDate": "2026-01-01",
+          "signedAt": "2025-12-11",
+          "minimumCommitmentCents": 1000000
+        }
+      ],
+      "invoices": [
+        {
+          "invoiceId": "INV-DUP-Q1-A",
+          "trueUpWindow": "2026-Q1",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "meteredUsageCents": 1080000,
+          "proposedTrueUpCents": 80000,
+          "slaCreditCents": 0,
+          "slaCreditCapCents": 50000,
+          "evidence": ["usage-meter-export", "signed-amendment", "overage-approval"]
+        },
+        {
+          "invoiceId": "INV-DUP-Q1-B",
+          "trueUpWindow": "2026-Q1",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "meteredUsageCents": 1015000,
+          "proposedTrueUpCents": 15000,
+          "slaCreditCents": 0,
+          "slaCreditCapCents": 50000,
+          "evidence": ["usage-meter-export", "signed-amendment", "overage-approval"]
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-AMENDMENT-2026",
+      "customerSegment": "Consortium account",
+      "currency": "USD",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "minimumCommitmentCents": 800000,
+      "signedAmendments": [
+        {
+          "amendmentId": "AMD-FUTURE-Q2",
+          "effectiveDate": "2026-04-01",
+          "signedAt": "2026-03-15",
+          "minimumCommitmentCents": 600000
+        }
+      ],
+      "invoices": [
+        {
+          "invoiceId": "INV-AMEND-Q1",
+          "trueUpWindow": "2026-Q1",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "meteredUsageCents": 610000,
+          "proposedTrueUpCents": 0,
+          "slaCreditCents": 0,
+          "slaCreditCapCents": 50000,
+          "evidence": ["usage-meter-export"]
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-SLA-2026",
+      "customerSegment": "Enterprise license",
+      "currency": "USD",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "minimumCommitmentCents": 1100000,
+      "signedAmendments": [
+        {
+          "amendmentId": "AMD-SLA-Q1",
+          "effectiveDate": "2026-01-01",
+          "signedAt": "2025-12-18",
+          "minimumCommitmentCents": 1100000
+        }
+      ],
+      "invoices": [
+        {
+          "invoiceId": "INV-SLA-Q1",
+          "trueUpWindow": "2026-Q1",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "meteredUsageCents": 1280000,
+          "proposedTrueUpCents": 100000,
+          "slaCreditCents": 160000,
+          "slaCreditCapCents": 100000,
+          "evidence": ["usage-meter-export", "signed-amendment", "overage-approval"]
+        }
+      ]
+    },
+    {
+      "contractId": "ENT-REVIEW-2026",
+      "customerSegment": "Institutional license",
+      "currency": "USD",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "minimumCommitmentCents": 1200000,
+      "signedAmendments": [
+        {
+          "amendmentId": "AMD-REVIEW-Q1",
+          "effectiveDate": "2026-01-01",
+          "signedAt": "2025-12-21",
+          "minimumCommitmentCents": 1200000
+        }
+      ],
+      "invoices": [
+        {
+          "invoiceId": "INV-REVIEW-Q1",
+          "trueUpWindow": "2026-Q1",
+          "periodStart": "2026-01-01",
+          "periodEnd": "2026-03-31",
+          "meteredUsageCents": 1300000,
+          "proposedTrueUpCents": 100000,
+          "slaCreditCents": 20000,
+          "slaCreditCapCents": 75000,
+          "evidence": ["usage-meter-export", "signed-amendment", "overage-approval"]
+        }
+      ]
+    }
+  ]
+}

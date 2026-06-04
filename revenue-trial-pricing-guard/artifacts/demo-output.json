@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "invoiceDate": "2026-06-04",
+    "accountCount": 5,
+    "releaseCount": 1,
+    "reviewCount": 0,
+    "holdCount": 4,
+    "totalAtRiskCents": 4437850,
+    "totalNetInvoiceCents": 5875796,
+    "totalAtRiskDollars": 44378.5,
+    "totalNetInvoiceDollars": 58757.96
+  },
+  "accounts": [
+    {
+      "accountId": "acct-clean-lab",
+      "accountName": "Clean Lab Renewal",
+      "plan": "lab_group",
+      "baseCents": 758400,
+      "discountCents": 75840,
+      "netInvoiceCents": 682560,
+      "effectiveDiscountPercent": 0.1,
+      "action": "RELEASE_INVOICE",
+      "findings": [],
+      "discountEvents": [
+        {
+          "type": "annual",
+          "id": "annual_cycle",
+          "amountCents": 75840
+        }
+      ],
+      "atRiskCents": 0
+    },
+    {
+      "accountId": "acct-repeat-trial",
+      "accountName": "Repeat Trial Startup",
+      "plan": "individual_pro",
+      "baseCents": 5800,
+      "discountCents": 1160,
+      "netInvoiceCents": 4640,
+      "effectiveDiscountPercent": 0.2,
+      "action": "HOLD_INVOICE",
+      "findings": [
+        {
+          "severity": "block",
+          "code": "trial_reuse",
+          "message": "Free trial was reused after a prior trial on the same billing identity.",
+          "atRiskCents": 5800
+        },
+        {
+          "severity": "block",
+          "code": "trial_overrun",
+          "message": "Trial age is 36 days, above the 30-day policy.",
+          "atRiskCents": 5800
+        },
+        {
+          "severity": "review",
+          "code": "missing_conversion_evidence",
+          "message": "Trial account has no conversion evidence before invoice release.",
+          "atRiskCents": 1450
+        },
+        {
+          "severity": "review",
+          "code": "coupon_missing_conversion_evidence",
+          "message": "Coupon trial_conversion_20 requires conversion evidence before billing.",
+          "atRiskCents": 580
+        }
+      ],
+      "discountEvents": [
+        {
+          "type": "coupon",
+          "id": "trial_conversion_20",
+          "amountCents": 1160
+        }
+      ],
+      "atRiskCents": 13630
+    },
+    {
+      "accountId": "acct-expired-coupon",
+      "accountName": "Expired Promo Lab",
+      "plan": "lab_group",
+      "baseCents": 94800,
+      "discountCents": 21804,
+      "netInvoiceCents": 72996,
+      "effectiveDiscountPercent": 0.23,
+      "action": "HOLD_INVOICE",
+      "findings": [
+        {
+          "severity": "block",
+          "code": "expired_coupon",
+          "message": "Coupon spring_promo_15 expired on 2026-05-15.",
+          "atRiskCents": 14220
+        }
+      ],
+      "discountEvents": [
+        {
+          "type": "coupon",
+          "id": "spring_promo_15",
+          "amountCents": 14220
+        },
+        {
+          "type": "volume",
+          "id": "seat_volume",
+          "amountCents": 7584
+        }
+      ],
+      "atRiskCents": 14220
+    },
+    {
+      "accountId": "acct-consortium-mismatch",
+      "accountName": "Ineligible Consortium Invoice",
+      "plan": "institutional",
+      "baseCents": 3528000,
+      "discountCents": 1587600,
+      "netInvoiceCents": 1940400,
+      "effectiveDiscountPercent": 0.45,
+      "action": "HOLD_INVOICE",
+      "findings": [
+        {
+          "severity": "block",
+          "code": "consortium_ineligible",
+          "message": "Coupon consortium_research_30 requires consortium eligibility that this account does not satisfy.",
+          "atRiskCents": 1058400
+        },
+        {
+          "severity": "review",
+          "code": "discount_cap_exceeded",
+          "message": "Effective discount 45% exceeds cap 40%.",
+          "atRiskCents": 176400
+        }
+      ],
+      "discountEvents": [
+        {
+          "type": "coupon",
+          "id": "consortium_research_30",
+          "amountCents": 1058400
+        },
+        {
+          "type": "annual",
+          "id": "annual_cycle",
+          "amountCents": 352800
+        },
+        {
+          "type": "volume",
+          "id": "seat_volume",
+          "amountCents": 176400
+        }
+      ],
+      "atRiskCents": 1234800
+    },
+    {
+      "accountId": "acct-stack-conflict",
+      "accountName": "Stacked Discount Consortium",
+      "plan": "institutional",
+      "baseCents": 7056000,
+      "discountCents": 3880800,
+      "netInvoiceCents": 3175200,
+      "effectiveDiscountPercent": 0.55,
+      "action": "HOLD_INVOICE",
+      "findings": [
+        {
+          "severity": "block",
+          "code": "non_stackable_coupon_combo",
+          "message": "One or more non-stackable coupons were combined on the same invoice.",
+          "atRiskCents": 2116800
+        },
+        {
+          "severity": "review",
+          "code": "discount_cap_exceeded",
+          "message": "Effective discount 55% exceeds cap 40%.",
+          "atRiskCents": 1058400
+        }
+      ],
+      "discountEvents": [
+        {
+          "type": "coupon",
+          "id": "consortium_research_30",
+          "amountCents": 2116800
+        },
+        {
+          "type": "coupon",
+          "id": "accessibility_credit_10",
+          "amountCents": 705600
+        },
+        {
+          "type": "annual",
+          "id": "annual_cycle",
+          "amountCents": 705600
+        },
+        {
+          "type": "volume",
+          "id": "seat_volume",
+          "amountCents": 352800
+        }
+      ],
+      "atRiskCents": 3175200
+    }
+  ]
+}

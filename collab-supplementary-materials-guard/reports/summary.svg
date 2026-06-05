@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Supplementary materials guard demo summary">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="64" y="64" width="1152" height="592" rx="18" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+  <text x="96" y="132" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">Collaborative Supplementary Materials Guard</text>
+  <text x="96" y="178" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="24">SCIBASE.AI issue #12: real-time editor export readiness</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="96" y="232" width="320" height="128" rx="12" fill="#164e63"/>
+    <text x="124" y="284" fill="#ecfeff" font-size="28" font-weight="700">3 supplements</text>
+    <text x="124" y="326" fill="#bae6fd" font-size="22">figure, table, protocol</text>
+    <rect x="480" y="232" width="320" height="128" rx="12" fill="#7f1d1d"/>
+    <text x="508" y="284" fill="#fee2e2" font-size="28" font-weight="700">6 blockers</text>
+    <text x="508" y="326" fill="#fecaca" font-size="22">stale, leaked, uncited</text>
+    <rect x="864" y="232" width="320" height="128" rx="12" fill="#713f12"/>
+    <text x="892" y="284" fill="#fef3c7" font-size="28" font-weight="700">3 warnings</text>
+    <text x="892" y="326" fill="#fde68a" font-size="22">license, approvals, locks</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="24">
+    <text x="112" y="434" fill="#e2e8f0">Checks manuscript citations, export hashes, notebook freshness, redaction review,</text>
+    <text x="112" y="474" fill="#e2e8f0">private-note leakage, blocking comments, licenses, approvals, and section locks.</text>
+    <text x="112" y="548" fill="#fca5a5" font-size="34" font-weight="700">Decision: HOLD</text>
+    <text x="112" y="590" fill="#cbd5e1">Regenerate stale supplements and resolve reviewer/data-steward gates before export.</text>
+  </g>
+</svg>

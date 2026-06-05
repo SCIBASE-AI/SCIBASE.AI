@@ -1,0 +1,11 @@
+{
+  "name": "collab-supplementary-materials-guard",
+  "version": "1.0.0",
+  "description": "Deterministic supplementary-material export guard for collaborative scientific editor manuscripts.",
+  "type": "module",
+  "scripts": {
+    "demo": "node scripts/demo.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}

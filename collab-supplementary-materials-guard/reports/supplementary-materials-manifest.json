@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-06-05T15:10:00.000Z",
+  "manuscriptId": "ms-collab-neuro-042",
+  "decision": "hold",
+  "supplements": [
+    {
+      "id": "supp-figure-1",
+      "type": "figure-panel",
+      "sourceHash": "sha256:figure-current",
+      "exportHash": "sha256:figure-current",
+      "referenced": true,
+      "lockedAtExport": true,
+      "license": "CC-BY-4.0"
+    },
+    {
+      "id": "supp-table-2",
+      "type": "csv-table",
+      "sourceHash": "sha256:table-current",
+      "exportHash": "sha256:table-stale",
+      "referenced": true,
+      "lockedAtExport": false,
+      "license": null
+    },
+    {
+      "id": "supp-protocol-3",
+      "type": "protocol-pdf",
+      "sourceHash": "sha256:protocol-current",
+      "exportHash": "sha256:protocol-current",
+      "referenced": false,
+      "lockedAtExport": true,
+      "license": "institutional-approved"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocker",
+      "code": "stale-export-hash",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 export hash does not match the current source hash.",
+      "remediation": "Regenerate the exported supplement from the current source artifact before publication export."
+    },
+    {
+      "severity": "blocker",
+      "code": "stale-notebook-output",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 was generated from a notebook with stale or missing execution evidence.",
+      "remediation": "Re-run the notebook, attach the execution digest, and rebuild the supplement export."
+    },
+    {
+      "severity": "blocker",
+      "code": "missing-redaction-review",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 contains restricted data without an approved redaction review.",
+      "remediation": "Hold export until restricted fields are redacted and the data steward approves the redaction review."
+    },
+    {
+      "severity": "blocker",
+      "code": "private-reviewer-note-leak",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 includes private reviewer or collaborator notes in the public export.",
+      "remediation": "Strip private notes from the export bundle and regenerate the artifact manifest."
+    },
+    {
+      "severity": "blocker",
+      "code": "unresolved-blocking-comment",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 has 1 unresolved blocking comment(s).",
+      "remediation": "Resolve or explicitly waive blocking supplement comments before export."
+    },
+    {
+      "severity": "warning",
+      "code": "license-needs-review",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 has missing or unsupported license metadata.",
+      "remediation": "Attach an approved publication license or route the supplement for institutional licensing review."
+    },
+    {
+      "severity": "warning",
+      "code": "missing-export-approval",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 is missing export approval from: data-steward.",
+      "remediation": "Collect the missing collaborator approvals before marking the manuscript export-ready."
+    },
+    {
+      "severity": "warning",
+      "code": "unlocked-supplement-section",
+      "supplementId": "supp-table-2",
+      "message": "Supplement supp-table-2 remains editable while the export packet is being prepared.",
+      "remediation": "Lock the supplement section or create a named version snapshot before export."
+    },
+    {
+      "severity": "blocker",
+      "code": "unreferenced-supplement",
+      "supplementId": "supp-protocol-3",
+      "message": "Supplement supp-protocol-3 is present in the export packet but not cited by the manuscript.",
+      "remediation": "Add a stable manuscript citation for the supplement or remove it from the export bundle."
+    }
+  ]
+}

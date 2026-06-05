@@ -1,0 +1,89 @@
+{
+  "projectId": "proj-neuro-118",
+  "manuscriptId": "ms-gapfinder-204",
+  "reviewerCount": 3,
+  "reviewMode": "public",
+  "consensusAction": "major_revision",
+  "consensusRatio": 0.333,
+  "pairwiseAgreement": 0.667,
+  "pairwiseDetails": [
+    {
+      "reviewers": [
+        "rev-stat",
+        "rev-domain"
+      ],
+      "agreement": 0.75
+    },
+    {
+      "reviewers": [
+        "rev-stat",
+        "rev-methods"
+      ],
+      "agreement": 0.75
+    },
+    {
+      "reviewers": [
+        "rev-domain",
+        "rev-methods"
+      ],
+      "agreement": 0.5
+    }
+  ],
+  "scoreDivergence": [
+    {
+      "field": "clarity",
+      "spread": 2
+    },
+    {
+      "field": "rigor",
+      "spread": 3
+    },
+    {
+      "field": "reproducibility",
+      "spread": 2
+    }
+  ],
+  "templateDrift": [
+    {
+      "reviewerId": "rev-methods",
+      "expectedTemplate": "neuroscience",
+      "actualTemplate": "clinical_trials"
+    }
+  ],
+  "evidenceGaps": [
+    {
+      "reviewerId": "rev-stat",
+      "coverage": 0.667
+    },
+    {
+      "reviewerId": "rev-domain",
+      "coverage": 0.667
+    },
+    {
+      "reviewerId": "rev-methods",
+      "coverage": 0.333
+    }
+  ],
+  "blindModeRisk": {
+    "reviewMode": "public",
+    "reason": "disputed review packet should remain double-blind until calibration is complete"
+  },
+  "duplicateReviewers": [],
+  "blockers": [
+    "low_inter_rater_agreement",
+    "weak_recommendation_consensus",
+    "severe_score_divergence",
+    "domain_template_drift",
+    "insufficient_evidence_coverage",
+    "blind_mode_escalation_required"
+  ],
+  "decision": "calibrate_before_release",
+  "nextActions": [
+    "Run reviewer calibration on divergent scoring dimensions before author-facing release.",
+    "Request adjudication because recommendation consensus is below threshold.",
+    "Ask reviewers to justify high-spread score dimensions with evidence anchors.",
+    "Normalize all reviews to the configured domain template.",
+    "Require evidence anchors for unsupported claim checks.",
+    "Keep disputed packets double-blind until calibration is resolved."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "reproducibility-dependency-guard",
+  "version": "1.0.0",
+  "description": "A guard to enforce package version alignment and deterministic reproducibility across scientific repositories.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/index.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

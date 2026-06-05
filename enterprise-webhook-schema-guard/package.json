@@ -1,0 +1,11 @@
+{
+  "name": "enterprise-webhook-schema-guard",
+  "version": "1.0.0",
+  "description": "Enforces enterprise webhook payload structure for ELN and HRIS integration.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/index.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

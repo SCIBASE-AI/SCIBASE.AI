@@ -1,0 +1,47 @@
+{
+  "challengeId": "sci-bounty-demo-001",
+  "generatedAt": "2026-06-05T23:00:00Z",
+  "submissions": [
+    {
+      "id": "sub-clean-rainfall",
+      "teamId": "atlas-lab",
+      "title": "Regional rainfall model",
+      "abstract": "Forecast regional rainfall with an open climate dataset and documented metrics.",
+      "reproducibilityNote": "Run notebook.ipynb with seed 42 and compare metrics.json.",
+      "artifacts": [
+        {
+          "path": "rainfall/model-card.md",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "license": "CC-BY-4.0",
+          "dataset": "open-climate-demo"
+        }
+      ]
+    },
+    {
+      "id": "sub-copied-rainfall",
+      "teamId": "mirror-lab",
+      "title": "Regional rainfall model",
+      "abstract": "Forecast regional rainfall with an open climate dataset and documented metrics.",
+      "reproducibilityNote": "Run notebook.ipynb with seed 42 and compare metrics.json.",
+      "artifacts": [
+        {
+          "path": "copy/model-card.md",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "license": "CC-BY-4.0",
+          "dataset": "open-climate-demo"
+        }
+      ]
+    },
+    {
+      "id": "sub-incomplete-biomarker",
+      "teamId": "cell-lab",
+      "title": "Biomarker screen",
+      "abstract": "Rank candidate biomarkers for a single-cell RNA sequencing challenge.",
+      "artifacts": [
+        {
+          "path": "biomarkers/rankings.csv"
+        }
+      ]
+    }
+  ]
+}

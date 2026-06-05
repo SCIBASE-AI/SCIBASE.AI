@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260" role="img" aria-labelledby="title desc">
+  <title id="title">Export-control transfer guard summary</title>
+  <desc id="desc">A three stage hold revise release flow for scientific bounty challenge data transfer readiness.</desc>
+  <rect width="720" height="260" rx="12" fill="#09111f"/>
+  <text x="36" y="52" fill="#f8fafc" font-family="Arial, sans-serif" font-size="26" font-weight="700">Export-Control Data Transfer Guard</text>
+  <text x="36" y="82" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">Pre-publication risk check for global scientific bounty challenges</text>
+  <g transform="translate(36 118)">
+    <rect width="180" height="88" rx="10" fill="#7f1d1d"/>
+    <text x="18" y="34" fill="#fecaca" font-family="Arial, sans-serif" font-size="18" font-weight="700">HOLD</text>
+    <text x="18" y="60" fill="#fee2e2" font-family="Arial, sans-serif" font-size="13">Controlled topics, restricted</text>
+    <text x="18" y="78" fill="#fee2e2" font-family="Arial, sans-serif" font-size="13">jurisdictions, missing DUAs</text>
+  </g>
+  <g transform="translate(270 118)">
+    <rect width="180" height="88" rx="10" fill="#78350f"/>
+    <text x="18" y="34" fill="#fde68a" font-family="Arial, sans-serif" font-size="18" font-weight="700">REVISE</text>
+    <text x="18" y="60" fill="#fef3c7" font-family="Arial, sans-serif" font-size="13">No blockers, but audit or</text>
+    <text x="18" y="78" fill="#fef3c7" font-family="Arial, sans-serif" font-size="13">NDA controls are missing</text>
+  </g>
+  <g transform="translate(504 118)">
+    <rect width="180" height="88" rx="10" fill="#064e3b"/>
+    <text x="18" y="34" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="18" font-weight="700">RELEASE</text>
+    <text x="18" y="60" fill="#d1fae5" font-family="Arial, sans-serif" font-size="13">Classification, DUA, logging,</text>
+    <text x="18" y="78" fill="#d1fae5" font-family="Arial, sans-serif" font-size="13">NDA, and payout checks pass</text>
+  </g>
+</svg>

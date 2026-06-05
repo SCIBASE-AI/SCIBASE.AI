@@ -1,0 +1,98 @@
+{
+  "blocked": {
+    "challengeId": "bio-agent-open-prize",
+    "generatedAt": "2026-06-05T12:40:00.000Z",
+    "decision": "hold",
+    "dataRoom": {
+      "crossBorder": true,
+      "dataTypes": [
+        "genomic-data",
+        "clinical-trial-data"
+      ],
+      "accessLogRequired": true
+    },
+    "eligibility": {
+      "participantCountries": [
+        "US",
+        "DE",
+        "IR"
+      ],
+      "restrictedJurisdictionPresent": true,
+      "payoutScreeningRequired": true
+    },
+    "controls": {
+      "exportClassification": "",
+      "dataUseAgreement": false,
+      "dataRoomAccessLog": false,
+      "ndaWorkflow": false,
+      "payoutSanctionsScreening": false
+    },
+    "findings": [
+      {
+        "severity": "blocker",
+        "code": "missing-export-classification",
+        "message": "Sensitive challenge topics require export classification before release: controlled-biological-agent.",
+        "remediation": "Hold publication until a responsible reviewer records export-control classification or confirms the challenge is not controlled."
+      },
+      {
+        "severity": "blocker",
+        "code": "restricted-participant-jurisdiction",
+        "message": "Participant country list includes restricted jurisdictions: IR.",
+        "remediation": "Do not open the challenge to these participants until legal review approves eligibility and payout routing."
+      },
+      {
+        "severity": "blocker",
+        "code": "missing-data-use-agreement",
+        "message": "Restricted or privacy-sensitive data types require a data-use agreement: genomic-data, clinical-trial-data.",
+        "remediation": "Require a signed data-use agreement before granting access to challenge data or submission workspaces."
+      },
+      {
+        "severity": "warning",
+        "code": "missing-transfer-audit-log",
+        "message": "Cross-border participation or shared data rooms require an auditable access log.",
+        "remediation": "Enable immutable data-room access logging before releasing controlled datasets."
+      },
+      {
+        "severity": "warning",
+        "code": "missing-nda-workflow",
+        "message": "Challenge requires NDA handling, but no NDA workflow is attached.",
+        "remediation": "Attach NDA routing, acceptance timestamps, and revocation steps before submissions open."
+      },
+      {
+        "severity": "warning",
+        "code": "missing-payout-screening",
+        "message": "Prize payout is configured without sanctions or payout-eligibility screening.",
+        "remediation": "Screen recipients before reward release and record the screening decision with the payout manifest."
+      }
+    ]
+  },
+  "releasable": {
+    "challengeId": "open-climate-forecast",
+    "generatedAt": "2026-06-05T12:40:00.000Z",
+    "decision": "release",
+    "dataRoom": {
+      "crossBorder": false,
+      "dataTypes": [
+        "public-weather-data"
+      ],
+      "accessLogRequired": false
+    },
+    "eligibility": {
+      "participantCountries": [
+        "US",
+        "CA",
+        "GB"
+      ],
+      "restrictedJurisdictionPresent": false,
+      "payoutScreeningRequired": true
+    },
+    "controls": {
+      "exportClassification": "public-ear99-confirmed",
+      "dataUseAgreement": true,
+      "dataRoomAccessLog": true,
+      "ndaWorkflow": true,
+      "payoutSanctionsScreening": true
+    },
+    "findings": []
+  }
+}

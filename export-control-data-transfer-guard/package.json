@@ -1,0 +1,11 @@
+{
+  "name": "export-control-data-transfer-guard",
+  "version": "1.0.0",
+  "description": "Deterministic export-control and restricted-data transfer readiness guard for scientific bounty challenges.",
+  "type": "module",
+  "scripts": {
+    "demo": "node scripts/demo.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}

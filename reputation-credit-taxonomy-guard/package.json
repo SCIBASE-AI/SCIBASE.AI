@@ -1,0 +1,11 @@
+{
+  "name": "reputation-credit-taxonomy-guard",
+  "version": "1.0.0",
+  "description": "Enforces standard CRediT (Contributor Roles Taxonomy) for user reputation credits.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/index.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

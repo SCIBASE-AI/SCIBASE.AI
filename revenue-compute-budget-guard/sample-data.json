@@ -1,0 +1,61 @@
+{
+  "portfolioId": "revenue-infra-demo",
+  "accounts": [
+    {
+      "accountId": "lab-clear-001",
+      "plan": "Research Lab Pro",
+      "periodStart": "2026-06-01T00:00:00Z",
+      "periodEnd": "2026-06-30T23:59:59Z",
+      "budgetCents": 700000,
+      "topUpBalanceCents": 0,
+      "notificationContacts": ["finance@lab-clear.example"],
+      "billingHoldEnabled": true,
+      "usageEvents": [
+        { "jobId": "job-001", "service": "literature-review", "units": 1200, "unitPriceCents": 35 },
+        { "jobId": "job-002", "service": "repro-check", "units": 900, "unitPriceCents": 40 }
+      ],
+      "thresholdNotices": [],
+      "invoices": [
+        { "invoiceId": "draft-clear-001", "status": "draft", "amountCents": 78000 }
+      ]
+    },
+    {
+      "accountId": "lab-warning-002",
+      "plan": "Institutional AI Compute",
+      "periodStart": "2026-06-01T00:00:00Z",
+      "periodEnd": "2026-06-30T23:59:59Z",
+      "budgetCents": 100000,
+      "topUpBalanceCents": 25000,
+      "notificationContacts": ["ops@lab-warning.example"],
+      "billingHoldEnabled": true,
+      "usageEvents": [
+        { "jobId": "job-101", "service": "model-inference", "units": 1800, "unitPriceCents": 35 },
+        { "jobId": "job-102", "service": "dataset-validation", "units": 420, "unitPriceCents": 40 }
+      ],
+      "thresholdNotices": [
+        { "threshold": 0.75, "sentAt": "2026-06-02T09:00:00Z", "channel": "email", "recipientCount": 1 }
+      ],
+      "invoices": [
+        { "invoiceId": "draft-warning-002", "status": "draft", "amountCents": 79800 }
+      ]
+    },
+    {
+      "accountId": "lab-hold-003",
+      "plan": "Enterprise Compute",
+      "periodStart": "2026-06-01T00:00:00Z",
+      "periodEnd": "2026-06-30T23:59:59Z",
+      "budgetCents": 80000,
+      "topUpBalanceCents": 10000,
+      "notificationContacts": [],
+      "billingHoldEnabled": false,
+      "usageEvents": [
+        { "jobId": "job-201", "service": "model-training", "units": 2200, "unitPriceCents": 40 },
+        { "jobId": "job-202", "service": "batch-inference", "units": 350, "unitPriceCents": 50 }
+      ],
+      "thresholdNotices": [],
+      "invoices": [
+        { "invoiceId": "draft-hold-003", "status": "draft", "amountCents": 105500 }
+      ]
+    }
+  ]
+}

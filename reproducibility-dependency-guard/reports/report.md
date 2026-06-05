@@ -1,22 +1,12 @@
-# Reproducibility Dependency Guard Report
+# Reproducibility Dependency Guard
 
 ## Overview
-This guard validates that projects in the SCIBASE.AI suite enforce deterministic, reproducible builds by blocking loosely-pinned dependencies.
+This module ensures that all analytical pipelines and dependencies referenced in a SCIBASE project are explicitly version-pinned. It mitigates the risk of 'silent failures' where a pipeline executes perfectly today but fails tomorrow due to upstream dependency drift.
 
-## Key Features
-- Detects non-deterministic versions (`^`, `~`, `>`, `<`).
-- Requires an explicit dependency tree structure.
-- Easily integrates into the CI/CD pipeline of a research repo.
+## Validation Rules
+1. **No Floating Versions**: `^`, `~`, or `latest` tags are strictly forbidden.
+2. **SHA-256 Checksums**: External binary dependencies must include cryptographic hashes.
+3. **Data Immutability**: URLs pointing to datasets must resolve to archival domains (e.g., Zenodo, Figshare) rather than volatile web endpoints.
 
-## Testing Output
-```
-▶ Reproducibility Dependency Guard Tests
-  ✔ Should pass when exact versions are provided
-  ✔ Should fail when caret (^) versions are used
-  ✔ Should fail when tilde (~) versions are used
-  ✔ Should fail when payload has no manifest
-✔ Reproducibility Dependency Guard Tests
-```
-
-## Security Posture
-By strictly pinning versions, we prevent supply chain attacks via maliciously bumped dependencies, mitigating silent data drift.
+## Security & Safety
+The module relies solely on static analysis of `submission.json` manifests. It makes zero network calls, requires zero external node modules, and operates safely in air-gapped CI/CD environments.

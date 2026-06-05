@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-06-06T00:00:00Z",
+  "portfolioId": "revenue-infra-demo",
+  "accounts": [
+    {
+      "accountId": "lab-clear-001",
+      "plan": "Research Lab Pro",
+      "decision": "CLEAR_TO_BILL",
+      "spendCents": 78000,
+      "budgetCents": 700000,
+      "creditCents": 0,
+      "allowedInvoiceCents": 78000,
+      "spendRatio": 0.111,
+      "projectedSpendCents": 468000,
+      "projectedRatio": 0.669,
+      "findings": []
+    },
+    {
+      "accountId": "lab-warning-002",
+      "plan": "Institutional AI Compute",
+      "decision": "SEND_NOTICE_BEFORE_BILLING",
+      "spendCents": 79800,
+      "budgetCents": 100000,
+      "creditCents": 25000,
+      "allowedInvoiceCents": 79800,
+      "spendRatio": 0.798,
+      "projectedSpendCents": 478800,
+      "projectedRatio": 4.788,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "BUDGET_THRESHOLD_NOTICE_STALE",
+          "message": "Budget threshold was crossed without a fresh customer notice.",
+          "remediation": "Send or refresh the budget threshold notice before billing the overage.",
+          "evidence": {
+            "threshold": 0.75,
+            "latestNoticeAt": "2026-06-02T09:00:00Z",
+            "noticeFreshnessHours": 48
+          }
+        }
+      ]
+    },
+    {
+      "accountId": "lab-hold-003",
+      "plan": "Enterprise Compute",
+      "decision": "HOLD_COMPUTE_BILLING",
+      "spendCents": 105500,
+      "budgetCents": 80000,
+      "creditCents": 10000,
+      "allowedInvoiceCents": 90000,
+      "spendRatio": 1.319,
+      "projectedSpendCents": 633000,
+      "projectedRatio": 7.912,
+      "findings": [
+        {
+          "severity": "high",
+          "code": "BUDGET_NOTICE_CONTACTS_MISSING",
+          "message": "Budget threshold was crossed, but the account does not have enough notice recipients.",
+          "remediation": "Add finance or account-owner recipients before releasing the compute invoice.",
+          "evidence": {
+            "contacts": [],
+            "minimumContacts": 1
+          }
+        },
+        {
+          "severity": "high",
+          "code": "BUDGET_THRESHOLD_NOTICE_STALE",
+          "message": "Budget threshold was crossed without a fresh customer notice.",
+          "remediation": "Send or refresh the budget threshold notice before billing the overage.",
+          "evidence": {
+            "threshold": 0.75,
+            "latestNoticeAt": null,
+            "noticeFreshnessHours": 48
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "HARD_CAP_WITHOUT_BILLING_HOLD",
+          "message": "Compute usage reached the hard-cap threshold but billing hold controls are not enabled.",
+          "remediation": "Enable billing hold or record an explicit finance override before invoice release.",
+          "evidence": {
+            "spendCents": 105500,
+            "budgetCents": 80000,
+            "criticalThreshold": 1
+          }
+        },
+        {
+          "severity": "critical",
+          "code": "UNCOVERED_COMPUTE_OVERAGE",
+          "message": "Compute spend exceeds the approved budget plus prepaid top-up balance.",
+          "remediation": "Hold the invoice, request top-up authorization, or cap the billable amount to the approved limit.",
+          "evidence": {
+            "spendCents": 105500,
+            "approvedLimitCents": 90000,
+            "uncoveredCents": 15500
+          }
+        },
+        {
+          "severity": "high",
+          "code": "COMPUTE_INVOICE_AMOUNT_MISMATCH",
+          "message": "Draft compute invoice does not match the approved billable amount.",
+          "remediation": "Regenerate the invoice from the metered usage ledger and approved budget/top-up limit.",
+          "evidence": {
+            "invoiceId": "draft-hold-003",
+            "invoiceAmountCents": 105500,
+            "allowedInvoiceCents": 90000
+          }
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "spendCents": 263300,
+    "approvedLimitCents": 915000,
+    "allowedInvoiceCents": 247800
+  },
+  "decisionCounts": {
+    "CLEAR_TO_BILL": 1,
+    "SEND_NOTICE_BEFORE_BILLING": 1,
+    "HOLD_COMPUTE_BILLING": 1
+  }
+}

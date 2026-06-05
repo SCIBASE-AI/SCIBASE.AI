@@ -1,0 +1,13 @@
+{
+  "guard": "Reproducibility Dependency Guard",
+  "version": "1.0.0",
+  "description": "Ensures reproducible environments by validating strict version pinning across standard scientific package manifests.",
+  "status": "active",
+  "tests_passed": 4,
+  "artifacts": [
+    "summary.svg",
+    "reproducibility-dependency-manifest.json",
+    "report.md",
+    "reproducibility-dependency-demo.mp4"
+  ]
+}

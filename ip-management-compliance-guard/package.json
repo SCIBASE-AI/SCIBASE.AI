@@ -1,0 +1,11 @@
+{
+  "name": "ip-management-compliance-guard",
+  "version": "1.0.0",
+  "description": "A guard to enforce IP management compliance across scientific bounty submissions.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/index.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,13 @@
+{
+  "guard": "IP Management Compliance Guard",
+  "version": "1.0.0",
+  "description": "Verifies intellectual property licenses and transfer authorizations match the chosen IP transfer strategy.",
+  "status": "active",
+  "tests_passed": 4,
+  "artifacts": [
+    "summary.svg",
+    "ip-management-manifest.json",
+    "report.md",
+    "ip-management-demo.mp4"
+  ]
+}

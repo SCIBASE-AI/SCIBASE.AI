@@ -1,0 +1,12 @@
+{
+  "name": "reviewer-calibration-assistant",
+  "version": "1.0.0",
+  "description": "Deterministic reviewer calibration and inter-rater agreement assistant for SCIBASE AI review workflows.",
+  "type": "module",
+  "scripts": {
+    "test": "node test/calibration.test.js",
+    "demo": "node demo/generate-demo.js",
+    "demo:video": "npm run demo && node demo/write-svg.js && qlmanage -t -s 1280 -o reports reports/reviewer-calibration-summary.svg >/dev/null && ffmpeg -y -loop 1 -framerate 30 -t 8 -i reports/reviewer-calibration-summary.svg.png -vf format=yuv420p reports/reviewer-calibration-demo.mp4"
+  },
+  "license": "MIT"
+}

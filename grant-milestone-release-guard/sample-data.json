@@ -1,0 +1,71 @@
+[
+  {
+    "id": "grant-alpha",
+    "sponsor": "Northbridge Institute",
+    "milestone": "M2 dataset delivery",
+    "contract": {
+      "active": true,
+      "currency": "USD",
+      "noticeDays": 7
+    },
+    "invoice": {
+      "amount": 42000,
+      "currency": "USD"
+    },
+    "milestoneCap": 45000,
+    "poValid": true,
+    "requiresEthicsApproval": true,
+    "ethicsApprovalCurrent": true,
+    "evidence": ["sponsor_acceptance", "deliverable_packet", "finance_owner"],
+    "unappliedCredits": 0,
+    "duplicateInvoiceHash": false,
+    "budgetNoticeSentAt": "2026-06-01",
+    "invoiceDate": "2026-06-11"
+  },
+  {
+    "id": "grant-beta",
+    "sponsor": "City Lab Network",
+    "milestone": "pilot usage report",
+    "contract": {
+      "active": true,
+      "currency": "USD",
+      "noticeDays": 10
+    },
+    "invoice": {
+      "amount": 17500,
+      "currency": "USD"
+    },
+    "milestoneCap": 20000,
+    "poValid": true,
+    "requiresEthicsApproval": false,
+    "ethicsApprovalCurrent": false,
+    "evidence": ["deliverable_packet", "finance_owner"],
+    "unappliedCredits": 350,
+    "duplicateInvoiceHash": false,
+    "budgetNoticeSentAt": "2026-06-06",
+    "invoiceDate": "2026-06-11"
+  },
+  {
+    "id": "grant-gamma",
+    "sponsor": "Open Methods Fund",
+    "milestone": "final release",
+    "contract": {
+      "active": false,
+      "currency": "USD",
+      "noticeDays": 5
+    },
+    "invoice": {
+      "amount": 26000,
+      "currency": "EUR"
+    },
+    "milestoneCap": 25000,
+    "poValid": false,
+    "requiresEthicsApproval": true,
+    "ethicsApprovalCurrent": false,
+    "evidence": ["deliverable_packet"],
+    "unappliedCredits": 0,
+    "duplicateInvoiceHash": true,
+    "budgetNoticeSentAt": "2026-06-10",
+    "invoiceDate": "2026-06-11"
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "grant-alpha",
+    "sponsor": "Northbridge Institute",
+    "milestone": "M2 dataset delivery",
+    "action": "RELEASE_INVOICE",
+    "findings": [
+      "ready to invoice"
+    ]
+  },
+  {
+    "id": "grant-beta",
+    "sponsor": "City Lab Network",
+    "milestone": "pilot usage report",
+    "action": "HOLD_FOR_REVIEW",
+    "findings": [
+      "missing sponsor acceptance",
+      "open credits must be applied before invoicing",
+      "budget notice is only 5 days old"
+    ]
+  },
+  {
+    "id": "grant-gamma",
+    "sponsor": "Open Methods Fund",
+    "milestone": "final release",
+    "action": "BLOCK_INVOICE",
+    "findings": [
+      "contract is not active",
+      "purchase order is missing or expired",
+      "ethics approval is missing or stale",
+      "missing sponsor acceptance",
+      "missing finance owner",
+      "invoice currency does not match contract",
+      "invoice exceeds milestone cap",
+      "possible duplicate invoice hash",
+      "budget notice is only 1 days old"
+    ]
+  }
+]

@@ -13,9 +13,25 @@ const packet = evaluateColumnSensitivityRelease({
   policy,
 })
 
+const malformedEvidencePacket = evaluateColumnSensitivityRelease({
+  asOf: "2026-05-23T22:25:00.000Z",
+  datasets: [{
+    datasetId: "malformed-column-release",
+    title: "Malformed Column Release",
+    releaseModes: ["public_preview", "export_bundle"],
+    columns: [null],
+  }],
+  policy,
+})
+
 fs.writeFileSync(
   path.join(reportsDir, "column-sensitivity-packet.json"),
   `${JSON.stringify(packet, null, 2)}\n`,
+)
+
+fs.writeFileSync(
+  path.join(reportsDir, "malformed-evidence-packet.json"),
+  `${JSON.stringify(malformedEvidencePacket, null, 2)}\n`,
 )
 
 const markdown = [
@@ -45,6 +61,10 @@ const markdown = [
   ...packet.holdQueue.map((item) => (
     `- ${item.datasetId}: ${item.action} (${item.findingCodes.join(", ")})`
   )),
+  "",
+  "## Malformed Evidence Guard",
+  `- Status: ${malformedEvidencePacket.datasets[0].status}`,
+  `- Finding codes: ${malformedEvidencePacket.datasets[0].findings.map((finding) => finding.code).join(", ")}`,
   "",
 ]
 

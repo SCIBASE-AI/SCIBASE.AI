@@ -10,6 +10,7 @@ Self-contained guard for SCIBASE issue #14. The module validates hosted dataset 
 - Ensures location columns are coarsened to the allowed precision.
 - Requires data-steward approval for sensitive columns in public release lanes.
 - Flags excessive sensitive-column counts before public release.
+- Blocks malformed dataset or column evidence before reviewer packets are generated.
 - Produces release/hold queues and deterministic JSON, Markdown, SVG, and MP4 review artifacts.
 
 ## Local Validation

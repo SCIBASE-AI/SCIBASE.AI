@@ -66,6 +66,15 @@
       },
       "checks": [
         {
+          "code": "column_evidence_well_formed",
+          "severity": "critical",
+          "pass": true,
+          "message": "Column evidence entries are well formed before release review.",
+          "evidence": {
+            "malformedColumns": []
+          }
+        },
+        {
           "code": "direct_identifiers_transformed",
           "severity": "critical",
           "pass": true,
@@ -181,6 +190,15 @@
         "warningFindings": 2
       },
       "checks": [
+        {
+          "code": "column_evidence_well_formed",
+          "severity": "critical",
+          "pass": true,
+          "message": "Column evidence entries are well formed before release review.",
+          "evidence": {
+            "malformedColumns": []
+          }
+        },
         {
           "code": "direct_identifiers_transformed",
           "severity": "critical",
@@ -523,6 +541,15 @@
         "warningFindings": 1
       },
       "checks": [
+        {
+          "code": "column_evidence_well_formed",
+          "severity": "critical",
+          "pass": true,
+          "message": "Column evidence entries are well formed before release review.",
+          "evidence": {
+            "malformedColumns": []
+          }
+        },
         {
           "code": "direct_identifiers_transformed",
           "severity": "critical",

@@ -9,6 +9,7 @@ Issue #14 asks for Scientific Data & Code Hosting with metadata-aware previews, 
 | FAIR reusable datasets | Requires k-anonymity, steward approval, and release evidence for sensitive columns. |
 | Dataset version/release workflows | Emits release/hold queues and deterministic audit packets. |
 | Export bundles | Blocks export bundles when identifiers, free text, or precise locations are unsafe. |
+| Reviewer-safe evidence handling | Blocks malformed dataset or column evidence instead of crashing before packet generation. |
 | Reviewer demo artifact | Generates JSON, Markdown, SVG, and MP4 demo outputs. |
 
 ## Non-Overlap Note

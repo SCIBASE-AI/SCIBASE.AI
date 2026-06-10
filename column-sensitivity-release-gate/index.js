@@ -59,8 +59,17 @@ function evaluateColumnSensitivityRelease(input = {}) {
 }
 
 function evaluateDataset(dataset, policy) {
-  const columns = Array.isArray(dataset.columns) ? dataset.columns : []
-  const approvals = Array.isArray(dataset.stewardApprovals) ? dataset.stewardApprovals : []
+  if (!isPlainObject(dataset)) {
+    return malformedDatasetDecision(dataset)
+  }
+
+  const rawColumns = Array.isArray(dataset.columns) ? dataset.columns : []
+  const malformedColumns = rawColumns
+    .map((column, index) => ({ column, index }))
+    .filter((entry) => !isPlainObject(entry.column))
+    .map((entry) => ({ columnId: `column-${entry.index}`, index: entry.index, receivedType: valueType(entry.column) }))
+  const columns = rawColumns.filter(isPlainObject)
+  const approvals = Array.isArray(dataset.stewardApprovals) ? dataset.stewardApprovals.filter(isPlainObject) : []
   const releaseModes = Array.isArray(dataset.releaseModes) ? dataset.releaseModes : []
   const findings = []
   const checks = []
@@ -72,6 +81,18 @@ function evaluateDataset(dataset, policy) {
   const locationFindings = findLocationPrecisionFindings(columns, policy)
   const missingApprovals = findMissingApprovals(sensitiveColumns, approvals, publicModes)
   const publicSensitiveOverage = publicModes.length > 0 && sensitiveColumns.length > policy.maxSensitiveColumnsPublic
+
+  addCheck(checks, findings, {
+    datasetId: dataset.datasetId,
+    code: "column_evidence_well_formed",
+    severity: "critical",
+    pass: malformedColumns.length === 0,
+    message: malformedColumns.length === 0
+      ? "Column evidence entries are well formed before release review."
+      : `${malformedColumns.length} column evidence entries are malformed and cannot be reviewed safely.`,
+    remediation: "Repair malformed column evidence before enabling public preview, API access, or export lanes.",
+    evidence: { malformedColumns },
+  })
 
   addCheck(checks, findings, {
     datasetId: dataset.datasetId,
@@ -186,6 +207,47 @@ function evaluateDataset(dataset, policy) {
   }
 }
 
+function malformedDatasetDecision(dataset) {
+  const datasetId = "unidentified-dataset"
+  const finding = {
+    datasetId,
+    code: "dataset_evidence_well_formed",
+    severity: "critical",
+    message: "Dataset evidence is malformed and cannot be reviewed safely.",
+    remediation: "Repair dataset evidence before enabling public preview, API access, or export lanes.",
+    evidence: { receivedType: valueType(dataset) },
+  }
+
+  return {
+    datasetId,
+    title: "Malformed dataset evidence",
+    status: "release_blocked",
+    summary: {
+      columns: 0,
+      sensitiveColumns: 0,
+      releaseModes: 0,
+      criticalFindings: 1,
+      warningFindings: 0,
+    },
+    checks: [{
+      code: finding.code,
+      severity: finding.severity,
+      pass: false,
+      message: finding.message,
+      evidence: finding.evidence,
+    }],
+    findings: [finding],
+    columnSummary: [],
+    reviewQueue: [{
+      datasetId,
+      code: finding.code,
+      severity: finding.severity,
+      action: findingAction(finding.code),
+      remediation: finding.remediation,
+    }],
+  }
+}
+
 function findDirectIdentifierFindings(columns, policy) {
   return columns
     .filter((column) => policy.directIdentifierTypes.includes(column.sensitivityType))
@@ -293,6 +355,8 @@ function summarize(datasetDecisions, reviewQueue) {
 
 function findingAction(code) {
   const actions = {
+    dataset_evidence_well_formed: "repair_dataset_evidence",
+    column_evidence_well_formed: "repair_column_evidence",
     direct_identifiers_transformed: "transform_or_remove_direct_identifiers",
     quasi_identifier_k_anonymity_met: "generalize_quasi_identifiers",
     free_text_review_attested: "complete_free_text_redaction_review",
@@ -302,6 +366,22 @@ function findingAction(code) {
   }
 
   return actions[code] || "column_sensitivity_followup"
+}
+
+function isPlainObject(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value)
+}
+
+function valueType(value) {
+  if (value === null) {
+    return "null"
+  }
+
+  if (Array.isArray(value)) {
+    return "array"
+  }
+
+  return typeof value
 }
 
 function digest(payload) {

@@ -45,4 +45,36 @@ const repeated = evaluateColumnSensitivityRelease({
 })
 assert.equal(repeated.audit.digest, packet.audit.digest)
 
+const malformedDataset = evaluateColumnSensitivityRelease({
+  asOf: "2026-05-23T22:25:00.000Z",
+  datasets: [null],
+  policy,
+})
+assert.equal(malformedDataset.summary.blockedDatasets, 1)
+assert.equal(malformedDataset.datasets[0].datasetId, "unidentified-dataset")
+assert.equal(malformedDataset.datasets[0].findings[0].code, "dataset_evidence_well_formed")
+assert.equal(malformedDataset.holdQueue[0].action, "block_release_until_sensitivity_fixed")
+
+const malformedColumn = evaluateColumnSensitivityRelease({
+  asOf: "2026-05-23T22:25:00.000Z",
+  datasets: [{
+    datasetId: "malformed-column-release",
+    title: "Malformed column release",
+    releaseModes: ["public_preview"],
+    columns: [null, {
+      columnId: "safe_count",
+      label: "Safe Count",
+      sensitivityType: "aggregate_count",
+    }],
+  }],
+  policy,
+})
+assert.equal(malformedColumn.summary.blockedDatasets, 1)
+assert.equal(malformedColumn.datasets[0].findings[0].code, "column_evidence_well_formed")
+assert.deepEqual(malformedColumn.datasets[0].findings[0].evidence.malformedColumns, [{
+  columnId: "column-0",
+  index: 0,
+  receivedType: "null",
+}])
+
 console.log("column sensitivity release gate tests passed")

@@ -1,0 +1,199 @@
+{
+  "asOf": "2026-05-23T22:25:00.000Z",
+  "policy": {
+    "publicReleaseModes": [
+      "public_preview",
+      "api_access",
+      "export_bundle"
+    ],
+    "directIdentifierTypes": [
+      "person_name",
+      "email",
+      "phone",
+      "street_address",
+      "subject_id"
+    ],
+    "quasiIdentifierTypes": [
+      "age",
+      "date",
+      "postal_code",
+      "institution",
+      "rare_condition"
+    ],
+    "sensitiveTypes": [
+      "diagnosis",
+      "genetic_marker",
+      "lab_result",
+      "income",
+      "free_text",
+      "precise_location"
+    ],
+    "acceptedTransforms": [
+      "drop",
+      "hash",
+      "generalize",
+      "bucket",
+      "redact",
+      "coarsen_location"
+    ],
+    "minKAnonymity": 10,
+    "maxPreciseLocationDecimals": 2,
+    "maxSensitiveColumnsPublic": 5,
+    "policyVersion": "column-sensitivity-release-v1"
+  },
+  "summary": {
+    "totalDatasets": 1,
+    "readyDatasets": 0,
+    "reviewDatasets": 0,
+    "blockedDatasets": 1,
+    "totalColumns": 0,
+    "sensitiveColumns": 0,
+    "totalFindings": 1,
+    "criticalFindings": 1,
+    "warningFindings": 0
+  },
+  "datasets": [
+    {
+      "datasetId": "malformed-column-release",
+      "title": "Malformed Column Release",
+      "status": "release_blocked",
+      "summary": {
+        "columns": 0,
+        "sensitiveColumns": 0,
+        "releaseModes": 2,
+        "criticalFindings": 1,
+        "warningFindings": 0
+      },
+      "checks": [
+        {
+          "code": "column_evidence_well_formed",
+          "severity": "critical",
+          "pass": false,
+          "message": "1 column evidence entries are malformed and cannot be reviewed safely.",
+          "evidence": {
+            "malformedColumns": [
+              {
+                "columnId": "column-0",
+                "index": 0,
+                "receivedType": "null"
+              }
+            ]
+          }
+        },
+        {
+          "code": "direct_identifiers_transformed",
+          "severity": "critical",
+          "pass": true,
+          "message": "Direct identifier columns are removed or transformed before release.",
+          "evidence": {
+            "columns": []
+          }
+        },
+        {
+          "code": "quasi_identifier_k_anonymity_met",
+          "severity": "critical",
+          "pass": true,
+          "message": "Quasi-identifier release evidence satisfies k-anonymity policy.",
+          "evidence": {
+            "columns": [],
+            "minKAnonymity": 10
+          }
+        },
+        {
+          "code": "free_text_review_attested",
+          "severity": "warning",
+          "pass": true,
+          "message": "Free-text columns have redaction review evidence.",
+          "evidence": {
+            "columns": []
+          }
+        },
+        {
+          "code": "location_precision_safe",
+          "severity": "critical",
+          "pass": true,
+          "message": "Location columns are coarsened to the allowed precision.",
+          "evidence": {
+            "columns": [],
+            "maxPreciseLocationDecimals": 2
+          }
+        },
+        {
+          "code": "data_steward_approval_present",
+          "severity": "critical",
+          "pass": true,
+          "message": "Data-steward approvals cover sensitive released columns.",
+          "evidence": {
+            "missingApprovals": []
+          }
+        },
+        {
+          "code": "public_sensitive_column_budget",
+          "severity": "warning",
+          "pass": true,
+          "message": "Public release stays within the sensitive-column review budget.",
+          "evidence": {
+            "sensitiveColumns": [],
+            "maxSensitiveColumnsPublic": 5,
+            "releaseModes": [
+              "public_preview",
+              "export_bundle"
+            ]
+          }
+        }
+      ],
+      "findings": [
+        {
+          "datasetId": "malformed-column-release",
+          "code": "column_evidence_well_formed",
+          "severity": "critical",
+          "message": "1 column evidence entries are malformed and cannot be reviewed safely.",
+          "remediation": "Repair malformed column evidence before enabling public preview, API access, or export lanes.",
+          "evidence": {
+            "malformedColumns": [
+              {
+                "columnId": "column-0",
+                "index": 0,
+                "receivedType": "null"
+              }
+            ]
+          }
+        }
+      ],
+      "columnSummary": [],
+      "reviewQueue": [
+        {
+          "datasetId": "malformed-column-release",
+          "code": "column_evidence_well_formed",
+          "severity": "critical",
+          "action": "repair_column_evidence",
+          "remediation": "Repair malformed column evidence before enabling public preview, API access, or export lanes."
+        }
+      ]
+    }
+  ],
+  "reviewQueue": [
+    {
+      "datasetId": "malformed-column-release",
+      "code": "column_evidence_well_formed",
+      "severity": "critical",
+      "action": "repair_column_evidence",
+      "remediation": "Repair malformed column evidence before enabling public preview, API access, or export lanes."
+    }
+  ],
+  "releaseQueue": [],
+  "holdQueue": [
+    {
+      "datasetId": "malformed-column-release",
+      "action": "block_release_until_sensitivity_fixed",
+      "findingCodes": [
+        "column_evidence_well_formed"
+      ]
+    }
+  ],
+  "audit": {
+    "algorithm": "sha256",
+    "digest": "3a2e8146acaf3f8ffcf8b88ee2de490efc4dc2eec6b8b2555fdb281e858f5456",
+    "policyVersion": "column-sensitivity-release-v1"
+  }
+}

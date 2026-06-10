@@ -33,3 +33,7 @@ Audit digest: `81ec569e7857229841a0d8706644430bedef984ebef8fba631d5f3744d40f694`
 ## Hold Queue
 - clinical-screening-export: block_release_until_sensitivity_fixed (direct_identifiers_transformed, quasi_identifier_k_anonymity_met, free_text_review_attested, location_precision_safe, data_steward_approval_present, public_sensitive_column_budget)
 - survey-free-text-review: defer_release_for_review (free_text_review_attested)
+
+## Malformed Evidence Guard
+- Status: release_blocked
+- Finding codes: column_evidence_well_formed

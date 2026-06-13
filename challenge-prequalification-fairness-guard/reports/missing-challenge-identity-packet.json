@@ -1,0 +1,46 @@
+{
+  "challengeId": "unidentified-challenge",
+  "generatedAt": "2026-05-28T08:00:00Z",
+  "criteriaDigest": "sha256:d643b033793917b9d0488787518a11e97094e671d52b86b69a6153375d726721",
+  "decisions": [
+    {
+      "id": "applicant-missing-challenge-identity",
+      "applicantId": "applicant-missing-challenge-identity",
+      "challengeId": "unidentified-challenge",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": "accept",
+      "weightedScore": 93,
+      "passThreshold": 75,
+      "reviewersCounted": 2,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "missing-challenge-identity"
+      ],
+      "rejectionReasons": [],
+      "appealStatus": "not-required",
+      "auditDigest": "sha256:91f727ed6c0f39a3fba57e3aff235d131b4e5a1944b1d8f2ede901bc1fa988a3"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-applicant-missing-challenge-identity",
+      "applicantId": "applicant-missing-challenge-identity",
+      "action": "complete-challenge-identity-evidence",
+      "priority": "high",
+      "reasons": [
+        "missing-challenge-identity"
+      ]
+    }
+  ],
+  "summary": {
+    "accepted": 0,
+    "held": 1,
+    "rejectedWithAudit": 0,
+    "remediationActions": 1
+  },
+  "auditDigest": "sha256:dcd93740470a0b4a16d6e7913c2f62a81fc895d7cbf664b4317b239bddd1ae6d"
+}

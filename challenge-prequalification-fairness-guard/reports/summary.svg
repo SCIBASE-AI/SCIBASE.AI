@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#102027"/>
+  <rect x="54" y="58" width="1172" height="604" rx="16" fill="#17313a" stroke="#9bd67a" stroke-width="4"/>
+  <text x="96" y="134" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">Challenge Prequalification Fairness Guard</text>
+  <text x="96" y="208" fill="#dff5d5" font-family="Arial, sans-serif" font-size="28">Accepted applicants: 1</text>
+  <text x="96" y="258" fill="#dff5d5" font-family="Arial, sans-serif" font-size="28">Held for fairness review: 3</text>
+  <text x="96" y="308" fill="#dff5d5" font-family="Arial, sans-serif" font-size="28">Remediation actions: 3</text>
+  <text x="96" y="372" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">Checks: criteria, applicant identities, sponsor decisions, valid scores</text>
+  <text x="96" y="410" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">thresholds, anonymity, conflicts, appeals</text>
+  <text x="96" y="478" fill="#ffd37a" font-family="Arial, sans-serif" font-size="26">Unfair screening decisions are held before applicants are accepted or rejected.</text>
+  <text x="96" y="574" fill="#a6d7c3" font-family="Arial, sans-serif" font-size="18">sha256:5ec541696fa83ff5f5ac49891dbb4bdf0e1174638039f2a2e7b6e65f2df49d16</text>
+</svg>

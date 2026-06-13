@@ -1,0 +1,50 @@
+{
+  "challengeId": "unidentified-challenge",
+  "generatedAt": null,
+  "criteriaDigest": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "decisions": [
+    {
+      "id": "unidentified-applicant",
+      "applicantId": "unidentified-applicant",
+      "challengeId": "unidentified-challenge",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": null,
+      "weightedScore": 0,
+      "passThreshold": null,
+      "reviewersCounted": 0,
+      "criteriaApplied": [],
+      "reasons": [
+        "malformed-prequalification-round",
+        "missing-applicant-list",
+        "missing-challenge-identity",
+        "missing-published-criteria-list",
+        "missing-review-list"
+      ],
+      "rejectionReasons": [],
+      "appealStatus": "not-required",
+      "auditDigest": "sha256:5c4cc793ce381dd5e0541d9fc2564f21717a0650337b35eeed69f347b081bd98"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-unidentified-applicant",
+      "applicantId": "unidentified-applicant",
+      "action": "complete-prequalification-evidence",
+      "priority": "high",
+      "reasons": [
+        "malformed-prequalification-round",
+        "missing-applicant-list",
+        "missing-challenge-identity",
+        "missing-published-criteria-list",
+        "missing-review-list"
+      ]
+    }
+  ],
+  "summary": {
+    "accepted": 0,
+    "held": 1,
+    "rejectedWithAudit": 0,
+    "remediationActions": 1
+  },
+  "auditDigest": "sha256:83b5c9c1376cc3afd1111fb7c9ba79b3fcbd41be82907d10d40590a40d9d9f9e"
+}

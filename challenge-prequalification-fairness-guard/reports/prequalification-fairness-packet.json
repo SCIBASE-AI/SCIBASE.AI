@@ -1,0 +1,139 @@
+{
+  "challengeId": "challenge-18-prequalification-rna-biomarker",
+  "generatedAt": "2026-05-28T08:00:00Z",
+  "criteriaDigest": "sha256:d643b033793917b9d0488787518a11e97094e671d52b86b69a6153375d726721",
+  "decisions": [
+    {
+      "id": "applicant-biofoundry",
+      "applicantId": "applicant-biofoundry",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "accept-prequalified",
+      "sponsorDecision": "accept",
+      "weightedScore": 87,
+      "passThreshold": 75,
+      "reviewersCounted": 2,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [],
+      "rejectionReasons": [],
+      "appealStatus": "not-required",
+      "auditDigest": "sha256:0717493fb82a925e390d8b4fbd7cac2039dd71a4bf7d8db19848a69efd926c53"
+    },
+    {
+      "id": "applicant-neuro-lab",
+      "applicantId": "applicant-neuro-lab",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": "reject",
+      "weightedScore": 81,
+      "passThreshold": 75,
+      "reviewersCounted": 2,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "anonymous-screening-leak",
+        "inconsistent-threshold-decision"
+      ],
+      "rejectionReasons": [
+        "methods plan did not match expected wet-lab validation"
+      ],
+      "appealStatus": "open",
+      "auditDigest": "sha256:74514248ce1bdd761a0c8034d9b39962227e44f53bd826152246014a29608bfc"
+    },
+    {
+      "id": "applicant-sponsor-alumni",
+      "applicantId": "applicant-sponsor-alumni",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": "reject",
+      "weightedScore": 70,
+      "passThreshold": 75,
+      "reviewersCounted": 1,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "missing-appeal-window",
+        "missing-rejection-reason",
+        "reviewer-conflict",
+        "reviewer-quorum-shortfall"
+      ],
+      "rejectionReasons": [],
+      "appealStatus": "missing",
+      "auditDigest": "sha256:155ac57faaf2c7ccabbb1799d38d4f73c1ed458c2da1a0bfc8fe49a2f4120dee"
+    },
+    {
+      "id": "applicant-missing-reviewer-identity",
+      "applicantId": "applicant-missing-reviewer-identity",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": "accept",
+      "weightedScore": 0,
+      "passThreshold": 75,
+      "reviewersCounted": 0,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "inconsistent-threshold-decision",
+        "missing-reviewer-identity",
+        "reviewer-quorum-shortfall"
+      ],
+      "rejectionReasons": [],
+      "appealStatus": "not-required",
+      "auditDigest": "sha256:155b16a3cbdbb41a53a5df5faf6e7e64e6854dbac37beb448deb2a829e4edeec"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-applicant-neuro-lab",
+      "applicantId": "applicant-neuro-lab",
+      "action": "rerun-blinded-prequalification-review",
+      "priority": "high",
+      "reasons": [
+        "anonymous-screening-leak",
+        "inconsistent-threshold-decision"
+      ]
+    },
+    {
+      "id": "remediate-applicant-sponsor-alumni",
+      "applicantId": "applicant-sponsor-alumni",
+      "action": "replace-conflicted-reviewer",
+      "priority": "high",
+      "reasons": [
+        "missing-appeal-window",
+        "missing-rejection-reason",
+        "reviewer-conflict",
+        "reviewer-quorum-shortfall"
+      ]
+    },
+    {
+      "id": "remediate-applicant-missing-reviewer-identity",
+      "applicantId": "applicant-missing-reviewer-identity",
+      "action": "complete-prequalification-evidence",
+      "priority": "high",
+      "reasons": [
+        "inconsistent-threshold-decision",
+        "missing-reviewer-identity",
+        "reviewer-quorum-shortfall"
+      ]
+    }
+  ],
+  "summary": {
+    "accepted": 1,
+    "held": 3,
+    "rejectedWithAudit": 0,
+    "remediationActions": 3
+  },
+  "auditDigest": "sha256:5ec541696fa83ff5f5ac49891dbb4bdf0e1174638039f2a2e7b6e65f2df49d16"
+}

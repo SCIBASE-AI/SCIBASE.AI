@@ -1,0 +1,46 @@
+{
+  "challengeId": "challenge-18-prequalification-rna-biomarker",
+  "generatedAt": "2026-05-28T08:00:00Z",
+  "criteriaDigest": "sha256:d643b033793917b9d0488787518a11e97094e671d52b86b69a6153375d726721",
+  "decisions": [
+    {
+      "id": "applicant-blank-rejection-reason",
+      "applicantId": "applicant-blank-rejection-reason",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": "reject",
+      "weightedScore": 60,
+      "passThreshold": 75,
+      "reviewersCounted": 2,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "missing-rejection-reason"
+      ],
+      "rejectionReasons": [],
+      "appealStatus": "open",
+      "auditDigest": "sha256:500be54f555dd977c9a3cfb05ab5e9a7bfbfb7217b7a484f5193fd00b7030c61"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-applicant-blank-rejection-reason",
+      "applicantId": "applicant-blank-rejection-reason",
+      "action": "publish-rejection-reasons-and-appeal-window",
+      "priority": "normal",
+      "reasons": [
+        "missing-rejection-reason"
+      ]
+    }
+  ],
+  "summary": {
+    "accepted": 0,
+    "held": 1,
+    "rejectedWithAudit": 0,
+    "remediationActions": 1
+  },
+  "auditDigest": "sha256:bbd51d47794aadc8faa0eda8231781f66d0e4eacde31bd0362b6e723834a444c"
+}

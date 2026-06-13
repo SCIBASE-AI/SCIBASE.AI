@@ -1,0 +1,46 @@
+{
+  "challengeId": "challenge-18-prequalification-rna-biomarker",
+  "generatedAt": "2026-05-28T08:00:00Z",
+  "criteriaDigest": "sha256:d643b033793917b9d0488787518a11e97094e671d52b86b69a6153375d726721",
+  "decisions": [
+    {
+      "id": "unidentified-applicant",
+      "applicantId": "unidentified-applicant",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": null,
+      "weightedScore": 0,
+      "passThreshold": 75,
+      "reviewersCounted": 0,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "missing-applicant-list"
+      ],
+      "rejectionReasons": [],
+      "appealStatus": "not-required",
+      "auditDigest": "sha256:4de0629dfb7646c44064dfaad44ba573fc82612aba864d6f643989a0f69d4d0f"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-unidentified-applicant",
+      "applicantId": "unidentified-applicant",
+      "action": "complete-prequalification-evidence",
+      "priority": "high",
+      "reasons": [
+        "missing-applicant-list"
+      ]
+    }
+  ],
+  "summary": {
+    "accepted": 0,
+    "held": 1,
+    "rejectedWithAudit": 0,
+    "remediationActions": 1
+  },
+  "auditDigest": "sha256:c77ccb7f1875504454711c406569be8b6b9b34789239e956635850890ecf1a90"
+}

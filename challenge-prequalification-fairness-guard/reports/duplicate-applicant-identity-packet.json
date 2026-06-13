@@ -1,0 +1,80 @@
+{
+  "challengeId": "challenge-18-prequalification-rna-biomarker",
+  "generatedAt": "2026-05-28T08:00:00Z",
+  "criteriaDigest": "sha256:d643b033793917b9d0488787518a11e97094e671d52b86b69a6153375d726721",
+  "decisions": [
+    {
+      "id": "applicant-duplicate",
+      "applicantId": "applicant-duplicate",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": "accept",
+      "weightedScore": 94,
+      "passThreshold": 75,
+      "reviewersCounted": 2,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "duplicate-applicant-identity"
+      ],
+      "rejectionReasons": [],
+      "appealStatus": "not-required",
+      "auditDigest": "sha256:1b3676776e5454bab52424913826cb5714e450f80ff2c48a16008d85000ac89d"
+    },
+    {
+      "id": "applicant-duplicate",
+      "applicantId": "applicant-duplicate",
+      "challengeId": "challenge-18-prequalification-rna-biomarker",
+      "decision": "hold-for-fairness-review",
+      "sponsorDecision": "reject",
+      "weightedScore": 94,
+      "passThreshold": 75,
+      "reviewersCounted": 2,
+      "criteriaApplied": [
+        "domain-fit",
+        "data-readiness",
+        "safety-plan"
+      ],
+      "reasons": [
+        "duplicate-applicant-identity",
+        "inconsistent-threshold-decision"
+      ],
+      "rejectionReasons": [
+        "duplicate entry should be resolved before screening"
+      ],
+      "appealStatus": "open",
+      "auditDigest": "sha256:77ce84425359c61ac9ef3741dcb4e71b530bd8c8b547cb209f9e1a8125446fee"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-applicant-duplicate",
+      "applicantId": "applicant-duplicate",
+      "action": "complete-prequalification-evidence",
+      "priority": "high",
+      "reasons": [
+        "duplicate-applicant-identity"
+      ]
+    },
+    {
+      "id": "remediate-applicant-duplicate",
+      "applicantId": "applicant-duplicate",
+      "action": "complete-prequalification-evidence",
+      "priority": "high",
+      "reasons": [
+        "duplicate-applicant-identity",
+        "inconsistent-threshold-decision"
+      ]
+    }
+  ],
+  "summary": {
+    "accepted": 0,
+    "held": 2,
+    "rejectedWithAudit": 0,
+    "remediationActions": 2
+  },
+  "auditDigest": "sha256:3f23ed40ab5aa7c06e33ca3dc3b149bae1d550f3764425c6955cedf04beb01e0"
+}

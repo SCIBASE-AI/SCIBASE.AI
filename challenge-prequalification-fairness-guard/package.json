@@ -1,0 +1,13 @@
+{
+  "name": "challenge-prequalification-fairness-guard",
+  "version": "1.0.0",
+  "description": "Dependency-free prequalification fairness guard for SCIBASE scientific bounty challenges.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "python make-demo-video.py",
+    "check": "npm test && npm run demo && npm run video"
+  }
+}

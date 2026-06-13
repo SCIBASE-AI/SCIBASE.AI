@@ -1,0 +1,30 @@
+{
+  "dashboardId": "enterprise-admin-missing-contrast-evidence",
+  "institutionId": "institution-redacted",
+  "status": "hold_accessibility_release",
+  "releaseLanes": {
+    "adminDashboard": "blocked",
+    "scheduledExport": "blocked",
+    "webhookNotice": "blocked"
+  },
+  "findings": [
+    {
+      "componentId": "contract-risk-without-colors",
+      "code": "INVALID_CONTRAST_EVIDENCE",
+      "severity": "blocker",
+      "message": "Critical component color contrast evidence must include foreground and background hex values before dashboard release."
+    }
+  ],
+  "actions": [
+    "block_release:enterprise-admin-missing-contrast-evidence",
+    "provide_valid_contrast_evidence:contract-risk-without-colors"
+  ],
+  "wcagSignals": {
+    "perceivable": false,
+    "operable": true,
+    "understandable": true,
+    "robust": true
+  },
+  "assessedAt": "2026-05-27T13:17:00Z",
+  "auditDigest": "1d62d0b424cfe9c0ebbe8c9effdc876399ca66b04e13d2df5f6d6f7f91eff442"
+}

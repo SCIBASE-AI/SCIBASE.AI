@@ -1,0 +1,91 @@
+{
+  "dashboardId": "enterprise-admin-overview",
+  "institutionId": "institution-redacted",
+  "status": "hold_accessibility_release",
+  "releaseLanes": {
+    "adminDashboard": "blocked",
+    "scheduledExport": "blocked",
+    "webhookNotice": "blocked"
+  },
+  "findings": [
+    {
+      "componentId": "compute-usage-critical",
+      "code": "MISSING_VISIBLE_FOCUS_INDICATOR",
+      "severity": "blocker",
+      "message": "Keyboard users need a visible focus indicator on reachable dashboard controls."
+    },
+    {
+      "componentId": "compute-usage-critical",
+      "code": "PRIVATE_DATA_IN_ACCESSIBILITY_TEXT",
+      "severity": "blocker",
+      "message": "Accessibility text exposes private user, lab, or project data."
+    },
+    {
+      "componentId": "contract-risk-score",
+      "code": "INVALID_CONTRAST_EVIDENCE",
+      "severity": "blocker",
+      "message": "Component color evidence must be parseable hex values before dashboard release."
+    },
+    {
+      "componentId": "private-project-table",
+      "code": "MISSING_SCREEN_READER_LABEL",
+      "severity": "blocker",
+      "message": "Component lacks a meaningful screen-reader label."
+    },
+    {
+      "componentId": "private-project-table",
+      "code": "KEYBOARD_TRAP",
+      "severity": "blocker",
+      "message": "Keyboard users cannot reach or leave this component predictably."
+    },
+    {
+      "componentId": "private-project-table",
+      "code": "MISSING_TABLE_SUMMARY",
+      "severity": "blocker",
+      "message": "Table or export output needs a concise nonvisual summary."
+    },
+    {
+      "componentId": "webhook-failure-alert",
+      "code": "LOW_CONTRAST_CRITICAL_METRIC",
+      "severity": "blocker",
+      "message": "Critical component contrast is 3.08:1, below the 4.5:1 release threshold."
+    },
+    {
+      "componentId": "weekly-admin-export",
+      "code": "MISSING_TABLE_SUMMARY",
+      "severity": "blocker",
+      "message": "Table or export output needs a concise nonvisual summary."
+    },
+    {
+      "componentId": "private-project-table",
+      "code": "HEADING_ORDER_SKIP",
+      "severity": "warning",
+      "message": "Heading order skips a level and may confuse screen-reader navigation."
+    },
+    {
+      "componentId": "compute-usage-critical",
+      "code": "MISSING_REDUCED_MOTION_FALLBACK",
+      "severity": "warning",
+      "message": "Animated dashboard content needs a reduced-motion fallback before public release."
+    }
+  ],
+  "actions": [
+    "add_reduced_motion_fallback:compute-usage-critical",
+    "add_screen_reader_label:private-project-table",
+    "add_table_summary:private-project-table",
+    "add_table_summary:weekly-admin-export",
+    "add_visible_focus_indicator:compute-usage-critical",
+    "block_release:enterprise-admin-overview",
+    "improve_contrast:webhook-failure-alert",
+    "provide_valid_contrast_evidence:contract-risk-score",
+    "redact_accessibility_text:compute-usage-critical"
+  ],
+  "wcagSignals": {
+    "perceivable": false,
+    "operable": false,
+    "understandable": false,
+    "robust": false
+  },
+  "assessedAt": "2026-05-27T13:00:00Z",
+  "auditDigest": "54a2b80eea438f90254991c20ca827636fa16789c652fbef6309e56662e55253"
+}

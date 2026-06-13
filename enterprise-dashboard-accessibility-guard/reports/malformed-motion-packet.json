@@ -1,0 +1,30 @@
+{
+  "dashboardId": "enterprise-admin-malformed-motion",
+  "institutionId": "institution-redacted",
+  "status": "hold_accessibility_release",
+  "releaseLanes": {
+    "adminDashboard": "blocked",
+    "scheduledExport": "blocked",
+    "webhookNotice": "blocked"
+  },
+  "findings": [
+    {
+      "componentId": "motion.animatedCharts",
+      "code": "MALFORMED_MOTION_EVIDENCE",
+      "severity": "blocker",
+      "message": "Dashboard motion evidence must list animated component IDs before reduced-motion release assessment."
+    }
+  ],
+  "actions": [
+    "block_release:enterprise-admin-malformed-motion",
+    "repair_motion_evidence:motion.animatedCharts"
+  ],
+  "wcagSignals": {
+    "perceivable": true,
+    "operable": false,
+    "understandable": true,
+    "robust": true
+  },
+  "assessedAt": "2026-06-10T13:10:00Z",
+  "auditDigest": "1b15a9f22c15eec4f0e4bc19d6a25231fac688e02875894ca3fb7ce2847b2fe7"
+}

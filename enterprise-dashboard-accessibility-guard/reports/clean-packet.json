@@ -1,0 +1,22 @@
+{
+  "dashboardId": "enterprise-admin-clean",
+  "institutionId": "institution-redacted",
+  "status": "release_with_accessibility_monitoring",
+  "releaseLanes": {
+    "adminDashboard": "allowed",
+    "scheduledExport": "allowed",
+    "webhookNotice": "allowed"
+  },
+  "findings": [],
+  "actions": [
+    "release_with_accessibility_monitoring"
+  ],
+  "wcagSignals": {
+    "perceivable": true,
+    "operable": true,
+    "understandable": true,
+    "robust": true
+  },
+  "assessedAt": "2026-05-27T13:00:00Z",
+  "auditDigest": "e3abe7a1521f56544cd037dc7fc520af8f8841edf3fbbde2841b57729e2f1e43"
+}

@@ -1,0 +1,30 @@
+{
+  "dashboardId": "enterprise-admin-malformed-component",
+  "institutionId": "institution-redacted",
+  "status": "hold_accessibility_release",
+  "releaseLanes": {
+    "adminDashboard": "blocked",
+    "scheduledExport": "blocked",
+    "webhookNotice": "blocked"
+  },
+  "findings": [
+    {
+      "componentId": "widgets[0]",
+      "code": "MALFORMED_DASHBOARD_COMPONENT_ENTRY",
+      "severity": "blocker",
+      "message": "Dashboard component evidence must be an object before accessibility release."
+    }
+  ],
+  "actions": [
+    "block_release:enterprise-admin-malformed-component",
+    "repair_dashboard_component_evidence:widgets[0]"
+  ],
+  "wcagSignals": {
+    "perceivable": true,
+    "operable": true,
+    "understandable": true,
+    "robust": false
+  },
+  "assessedAt": "2026-05-31T14:30:00Z",
+  "auditDigest": "5c9dbb472c16ae680eaa0eede8847ba6c793a577c2d73f6b90deed677a973509"
+}

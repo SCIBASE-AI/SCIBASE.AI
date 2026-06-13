@@ -1,0 +1,29 @@
+{
+  "dashboardId": "enterprise-admin-missing-secondary-contrast",
+  "institutionId": "institution-redacted",
+  "status": "remediate_before_public_release",
+  "releaseLanes": {
+    "adminDashboard": "internal_only",
+    "scheduledExport": "blocked",
+    "webhookNotice": "internal_only"
+  },
+  "findings": [
+    {
+      "componentId": "secondary-usage-trend-without-colors",
+      "code": "INVALID_CONTRAST_EVIDENCE",
+      "severity": "warning",
+      "message": "Noncritical dashboard component contrast evidence should include foreground and background hex values before public release."
+    }
+  ],
+  "actions": [
+    "provide_valid_contrast_evidence:secondary-usage-trend-without-colors"
+  ],
+  "wcagSignals": {
+    "perceivable": false,
+    "operable": true,
+    "understandable": true,
+    "robust": true
+  },
+  "assessedAt": "2026-05-30T15:25:00Z",
+  "auditDigest": "68bfb1e3df68d7733c886d880fc4c014e8f4040b5e47d09f37d2e9cf9589a14d"
+}

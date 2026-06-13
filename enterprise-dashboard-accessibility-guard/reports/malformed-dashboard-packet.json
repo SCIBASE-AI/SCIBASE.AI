@@ -1,0 +1,30 @@
+{
+  "dashboardId": "unidentified-dashboard",
+  "institutionId": "unidentified-institution",
+  "status": "hold_accessibility_release",
+  "releaseLanes": {
+    "adminDashboard": "blocked",
+    "scheduledExport": "blocked",
+    "webhookNotice": "blocked"
+  },
+  "findings": [
+    {
+      "componentId": "unidentified-dashboard",
+      "code": "MALFORMED_DASHBOARD_PACKET",
+      "severity": "blocker",
+      "message": "Dashboard release evidence must be an object before accessibility assessment."
+    }
+  ],
+  "actions": [
+    "block_release:unidentified-dashboard",
+    "repair_dashboard_packet:unidentified-dashboard"
+  ],
+  "wcagSignals": {
+    "perceivable": true,
+    "operable": true,
+    "understandable": true,
+    "robust": false
+  },
+  "assessedAt": null,
+  "auditDigest": "516d9cbe81ea9fa4fdefc56855e88adb197ca89d9365bd483e484e8e387f8fc4"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "enterprise-dashboard-accessibility-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && python -m py_compile make-demo-video.py",
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "python make-demo-video.py"
+  }
+}

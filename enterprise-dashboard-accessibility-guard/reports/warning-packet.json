@@ -1,0 +1,29 @@
+{
+  "dashboardId": "enterprise-admin-motion-warning",
+  "institutionId": "institution-redacted",
+  "status": "remediate_before_public_release",
+  "releaseLanes": {
+    "adminDashboard": "internal_only",
+    "scheduledExport": "blocked",
+    "webhookNotice": "internal_only"
+  },
+  "findings": [
+    {
+      "componentId": "research-output-trend",
+      "code": "MISSING_REDUCED_MOTION_FALLBACK",
+      "severity": "warning",
+      "message": "Animated dashboard content needs a reduced-motion fallback before public release."
+    }
+  ],
+  "actions": [
+    "add_reduced_motion_fallback:research-output-trend"
+  ],
+  "wcagSignals": {
+    "perceivable": true,
+    "operable": false,
+    "understandable": true,
+    "robust": true
+  },
+  "assessedAt": "2026-05-27T13:00:00Z",
+  "auditDigest": "bfa5b6aae578307ad58b740178a32b2a53dac335acea64ac2ee20afa87ca4864"
+}

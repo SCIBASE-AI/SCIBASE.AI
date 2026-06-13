@@ -1,0 +1,162 @@
+{
+  "corpusId": "kg-malformed-mention-text-17",
+  "generatedAt": "2026-05-31T10:45:00Z",
+  "mentionDecisions": [
+    {
+      "id": "mention-malformed-text",
+      "language": "es",
+      "text": {
+        "value": "diabetes mellitus"
+      },
+      "documentId": "paper-18",
+      "decision": "hold-for-curator-review",
+      "reason": "malformed-mention-text",
+      "candidateEntityId": "entity:mesh:D003920",
+      "candidateEntityIds": [
+        "entity:mesh:D003920"
+      ],
+      "confidence": 0.94,
+      "preservedLanguageTag": "es"
+    }
+  ],
+  "entityPackets": [
+    {
+      "id": "entity:mesh:D000077768",
+      "canonicalName": "CRISPR-Cas9",
+      "ontology": "MeSH",
+      "identifier": "D000077768",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "CRISPR-Cas9"
+        ],
+        "de": [
+          "CRISPR-Cas9 Geneditierung"
+        ],
+        "es": [
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "CRISPR-Cas9",
+        "identifier": "MeSH:D000077768",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "CRISPR-Cas9",
+          "CRISPR-Cas9 Geneditierung",
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    },
+    {
+      "id": "entity:mesh:D003920",
+      "canonicalName": "Diabetes Mellitus",
+      "ontology": "MeSH",
+      "identifier": "D003920",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "diabetes mellitus"
+        ],
+        "de": [
+          "Diabetes mellitus"
+        ],
+        "es": [
+          "diabetes mellitus"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Diabetes Mellitus",
+        "identifier": "MeSH:D003920",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "diabetes mellitus",
+          "Diabetes mellitus",
+          "diabetes mellitus"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    },
+    {
+      "id": "entity:stat:control-group",
+      "canonicalName": "Control Group",
+      "ontology": "SCIBASE-STAT",
+      "identifier": "control-group",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "control group"
+        ],
+        "es": [
+          "grupo control"
+        ],
+        "de": [
+          "Kontrollgruppe"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Control Group",
+        "identifier": "SCIBASE-STAT:control-group",
+        "inDefinedTermSet": "SCIBASE-STAT",
+        "alternateName": [
+          "control group",
+          "grupo control",
+          "Kontrollgruppe"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    }
+  ],
+  "curatorActions": [
+    {
+      "id": "curate-mention-malformed-text",
+      "mentionId": "mention-malformed-text",
+      "action": "review-multilingual-malformed-mention",
+      "priority": "high",
+      "language": "es",
+      "text": {
+        "value": "diabetes mellitus"
+      },
+      "candidateEntityId": "entity:mesh:D003920",
+      "candidateEntityIds": [
+        "entity:mesh:D003920"
+      ],
+      "reason": "malformed-mention-text"
+    }
+  ],
+  "recommendationGuards": {
+    "suppressedMentionIds": [
+      "mention-malformed-text"
+    ],
+    "safeEntityIds": []
+  },
+  "summary": {
+    "acceptedMentions": 0,
+    "heldMentions": 1,
+    "suppressedMentions": 0,
+    "entityPackets": 3
+  },
+  "auditDigest": "sha256:6fe14f9c776e3beb44509a8d8197586bb86757ccf617e0faa31cb20664fcf8ee"
+}

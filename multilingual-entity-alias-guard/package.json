@@ -1,0 +1,13 @@
+{
+  "name": "multilingual-entity-alias-guard",
+  "version": "1.0.0",
+  "description": "Dependency-free multilingual entity alias guard for SCIBASE scientific knowledge graph integration.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "python make-demo-video.py",
+    "check": "npm test && npm run demo && npm run video"
+  }
+}

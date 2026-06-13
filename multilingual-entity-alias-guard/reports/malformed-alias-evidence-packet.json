@@ -1,0 +1,87 @@
+{
+  "corpusId": "kg-malformed-localized-name-17",
+  "generatedAt": "2026-05-31T10:46:00Z",
+  "mentionDecisions": [
+    {
+      "id": "mention-diabetes-es",
+      "language": "es",
+      "text": "diabetes mellitus",
+      "documentId": "paper-19",
+      "decision": "accept-canonical-entity",
+      "reason": "trusted-translated-alias",
+      "candidateEntityId": "entity:mesh:D003920",
+      "candidateEntityIds": [
+        "entity:mesh:D003920"
+      ],
+      "confidence": 0.94,
+      "preservedLanguageTag": "es"
+    }
+  ],
+  "entityPackets": [
+    {
+      "id": "entity:mesh:D003920",
+      "canonicalName": "Diabetes Mellitus",
+      "ontology": "MeSH",
+      "identifier": "D003920",
+      "languages": [
+        "es"
+      ],
+      "aliasEvidenceIssues": [
+        {
+          "language": "es",
+          "reason": "malformed-localized-name",
+          "valueType": "object"
+        }
+      ],
+      "mentions": [
+        {
+          "id": "mention-diabetes-es",
+          "text": "diabetes mellitus",
+          "language": "es",
+          "documentId": "paper-19",
+          "confidence": 0.94
+        }
+      ],
+      "localizedNames": {
+        "es": [
+          "diabetes mellitus"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Diabetes Mellitus",
+        "identifier": "MeSH:D003920",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "diabetes mellitus"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "diabetes mellitus",
+            "inLanguage": "es",
+            "identifier": "MeSH:D003920"
+          }
+        ]
+      }
+    }
+  ],
+  "curatorActions": [],
+  "recommendationGuards": {
+    "suppressedMentionIds": [],
+    "safeEntityIds": [
+      "entity:mesh:D003920"
+    ]
+  },
+  "summary": {
+    "acceptedMentions": 1,
+    "heldMentions": 0,
+    "suppressedMentions": 0,
+    "entityPackets": 1
+  },
+  "auditDigest": "sha256:e51b1670a58750de834139f8abe38ec170fe5eada627f224176759484411862e"
+}

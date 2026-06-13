@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0c2130"/>
+  <rect x="54" y="58" width="1172" height="604" rx="18" fill="#142f42" stroke="#7bd88f" stroke-width="4"/>
+  <text x="96" y="136" fill="#ffffff" font-family="Arial, sans-serif" font-size="44" font-weight="700">Multilingual Entity Alias Guard</text>
+  <text x="96" y="210" fill="#d8f6df" font-family="Arial, sans-serif" font-size="28">Accepted canonical mentions: 6</text>
+  <text x="96" y="260" fill="#d8f6df" font-family="Arial, sans-serif" font-size="28">Held curator-review mentions: 3</text>
+  <text x="96" y="310" fill="#d8f6df" font-family="Arial, sans-serif" font-size="28">Suppressed low-confidence mentions: 1</text>
+  <text x="96" y="380" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">Languages preserved: en, de, es, fr</text>
+  <text x="96" y="430" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">JSON-LD entity packets ready for schema.org-style pages</text>
+  <text x="96" y="510" fill="#ffd37a" font-family="Arial, sans-serif" font-size="26">Unsafe or malformed aliases are held before recommendations are shown.</text>
+  <text x="96" y="574" fill="#a6d7c3" font-family="Arial, sans-serif" font-size="18">sha256:f11c08d8634f046b8382a175239964b368830acc24fe0f8c2ff1b92cdd02ef8f</text>
+</svg>

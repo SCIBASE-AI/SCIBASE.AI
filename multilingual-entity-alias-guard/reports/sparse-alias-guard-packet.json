@@ -1,0 +1,41 @@
+{
+  "corpusId": "kg-sparse-ontology-export-17",
+  "generatedAt": "2026-05-30T12:00:00Z",
+  "mentionDecisions": [],
+  "entityPackets": [
+    {
+      "id": "entity:mesh:D012345",
+      "canonicalName": "Sparse Ontology Entity",
+      "ontology": "MeSH",
+      "identifier": "D012345",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {},
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Sparse Ontology Entity",
+        "identifier": "MeSH:D012345",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": []
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    }
+  ],
+  "curatorActions": [],
+  "recommendationGuards": {
+    "suppressedMentionIds": [],
+    "safeEntityIds": []
+  },
+  "summary": {
+    "acceptedMentions": 0,
+    "heldMentions": 0,
+    "suppressedMentions": 0,
+    "entityPackets": 1
+  },
+  "auditDigest": "sha256:a6c361911c2ddc87ab437444d96ffd4422b6b5e2295ed41b25a7f60d0009192a"
+}

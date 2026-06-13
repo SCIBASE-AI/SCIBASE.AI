@@ -1,0 +1,160 @@
+{
+  "corpusId": "kg-candidate-alias-conflict-17",
+  "generatedAt": "2026-05-30T12:30:00Z",
+  "mentionDecisions": [
+    {
+      "id": "mention-diabetes-conflicting-candidate",
+      "language": "es",
+      "text": "diabetes mellitus",
+      "documentId": "paper-17",
+      "decision": "hold-for-curator-review",
+      "reason": "candidate-alias-conflict",
+      "candidateEntityId": null,
+      "candidateEntityIds": [
+        "entity:mesh:D003920",
+        "entity:stat:control-group"
+      ],
+      "confidence": 0.93,
+      "preservedLanguageTag": "es"
+    }
+  ],
+  "entityPackets": [
+    {
+      "id": "entity:mesh:D000077768",
+      "canonicalName": "CRISPR-Cas9",
+      "ontology": "MeSH",
+      "identifier": "D000077768",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "CRISPR-Cas9"
+        ],
+        "de": [
+          "CRISPR-Cas9 Geneditierung"
+        ],
+        "es": [
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "CRISPR-Cas9",
+        "identifier": "MeSH:D000077768",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "CRISPR-Cas9",
+          "CRISPR-Cas9 Geneditierung",
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    },
+    {
+      "id": "entity:mesh:D003920",
+      "canonicalName": "Diabetes Mellitus",
+      "ontology": "MeSH",
+      "identifier": "D003920",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "diabetes mellitus"
+        ],
+        "de": [
+          "Diabetes mellitus"
+        ],
+        "es": [
+          "diabetes mellitus"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Diabetes Mellitus",
+        "identifier": "MeSH:D003920",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "diabetes mellitus",
+          "Diabetes mellitus",
+          "diabetes mellitus"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    },
+    {
+      "id": "entity:stat:control-group",
+      "canonicalName": "Control Group",
+      "ontology": "SCIBASE-STAT",
+      "identifier": "control-group",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "control group"
+        ],
+        "es": [
+          "grupo control"
+        ],
+        "de": [
+          "Kontrollgruppe"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Control Group",
+        "identifier": "SCIBASE-STAT:control-group",
+        "inDefinedTermSet": "SCIBASE-STAT",
+        "alternateName": [
+          "control group",
+          "grupo control",
+          "Kontrollgruppe"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    }
+  ],
+  "curatorActions": [
+    {
+      "id": "curate-mention-diabetes-conflicting-candidate",
+      "mentionId": "mention-diabetes-conflicting-candidate",
+      "action": "review-multilingual-candidate-alias-conflict",
+      "priority": "high",
+      "language": "es",
+      "text": "diabetes mellitus",
+      "candidateEntityId": null,
+      "candidateEntityIds": [
+        "entity:mesh:D003920",
+        "entity:stat:control-group"
+      ],
+      "reason": "candidate-alias-conflict"
+    }
+  ],
+  "recommendationGuards": {
+    "suppressedMentionIds": [
+      "mention-diabetes-conflicting-candidate"
+    ],
+    "safeEntityIds": []
+  },
+  "summary": {
+    "acceptedMentions": 0,
+    "heldMentions": 1,
+    "suppressedMentions": 0,
+    "entityPackets": 3
+  },
+  "auditDigest": "sha256:9c5561ec683bbf63505c6a252c7cae3559dca84172940c59941bfab62e23485e"
+}

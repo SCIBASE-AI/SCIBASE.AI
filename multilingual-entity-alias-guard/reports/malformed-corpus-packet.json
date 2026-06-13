@@ -1,0 +1,46 @@
+{
+  "corpusId": "unidentified-corpus",
+  "generatedAt": null,
+  "mentionDecisions": [
+    {
+      "id": "malformed-corpus-packet",
+      "language": null,
+      "text": null,
+      "documentId": null,
+      "decision": "hold-for-curator-review",
+      "reason": "malformed-corpus-packet",
+      "valueType": "null",
+      "candidateEntityId": null,
+      "candidateEntityIds": [],
+      "confidence": null,
+      "preservedLanguageTag": null
+    }
+  ],
+  "entityPackets": [],
+  "curatorActions": [
+    {
+      "id": "curate-malformed-corpus-packet",
+      "mentionId": "malformed-corpus-packet",
+      "action": "review-multilingual-malformed-corpus",
+      "priority": "high",
+      "language": null,
+      "text": null,
+      "candidateEntityId": null,
+      "candidateEntityIds": [],
+      "reason": "malformed-corpus-packet"
+    }
+  ],
+  "recommendationGuards": {
+    "suppressedMentionIds": [
+      "malformed-corpus-packet"
+    ],
+    "safeEntityIds": []
+  },
+  "summary": {
+    "acceptedMentions": 0,
+    "heldMentions": 1,
+    "suppressedMentions": 0,
+    "entityPackets": 0
+  },
+  "auditDigest": "sha256:37418dd72bc6f747d5e63d31401c66875b901655acb493c32726180e2a7bb36b"
+}

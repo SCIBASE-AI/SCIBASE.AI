@@ -1,0 +1,155 @@
+{
+  "corpusId": "kg-malformed-mention-entry-17",
+  "generatedAt": "2026-06-01T18:55:00Z",
+  "mentionDecisions": [
+    {
+      "id": "malformed-mention-entry-1",
+      "language": null,
+      "text": null,
+      "documentId": null,
+      "decision": "hold-for-curator-review",
+      "reason": "malformed-mention-entry",
+      "valueType": "null",
+      "candidateEntityId": null,
+      "candidateEntityIds": [],
+      "confidence": null,
+      "preservedLanguageTag": null
+    }
+  ],
+  "entityPackets": [
+    {
+      "id": "entity:mesh:D000077768",
+      "canonicalName": "CRISPR-Cas9",
+      "ontology": "MeSH",
+      "identifier": "D000077768",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "CRISPR-Cas9"
+        ],
+        "de": [
+          "CRISPR-Cas9 Geneditierung"
+        ],
+        "es": [
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "CRISPR-Cas9",
+        "identifier": "MeSH:D000077768",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "CRISPR-Cas9",
+          "CRISPR-Cas9 Geneditierung",
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    },
+    {
+      "id": "entity:mesh:D003920",
+      "canonicalName": "Diabetes Mellitus",
+      "ontology": "MeSH",
+      "identifier": "D003920",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "diabetes mellitus"
+        ],
+        "de": [
+          "Diabetes mellitus"
+        ],
+        "es": [
+          "diabetes mellitus"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Diabetes Mellitus",
+        "identifier": "MeSH:D003920",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "diabetes mellitus",
+          "Diabetes mellitus",
+          "diabetes mellitus"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    },
+    {
+      "id": "entity:stat:control-group",
+      "canonicalName": "Control Group",
+      "ontology": "SCIBASE-STAT",
+      "identifier": "control-group",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "control group"
+        ],
+        "es": [
+          "grupo control"
+        ],
+        "de": [
+          "Kontrollgruppe"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Control Group",
+        "identifier": "SCIBASE-STAT:control-group",
+        "inDefinedTermSet": "SCIBASE-STAT",
+        "alternateName": [
+          "control group",
+          "grupo control",
+          "Kontrollgruppe"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    }
+  ],
+  "curatorActions": [
+    {
+      "id": "curate-malformed-mention-entry-1",
+      "mentionId": "malformed-mention-entry-1",
+      "action": "review-multilingual-malformed-mention",
+      "priority": "high",
+      "language": null,
+      "text": null,
+      "candidateEntityId": null,
+      "candidateEntityIds": [],
+      "reason": "malformed-mention-entry"
+    }
+  ],
+  "recommendationGuards": {
+    "suppressedMentionIds": [
+      "malformed-mention-entry-1"
+    ],
+    "safeEntityIds": []
+  },
+  "summary": {
+    "acceptedMentions": 0,
+    "heldMentions": 1,
+    "suppressedMentions": 0,
+    "entityPackets": 3
+  },
+  "auditDigest": "sha256:db1ae56b44d2eff6ab408d4ff715a8f2fd1666b6e7077fa8e35113b923317a9f"
+}

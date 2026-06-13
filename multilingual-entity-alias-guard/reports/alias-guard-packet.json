@@ -1,0 +1,419 @@
+{
+  "corpusId": "kg-multilingual-upload-batch-17",
+  "generatedAt": "2026-05-28T07:00:00Z",
+  "mentionDecisions": [
+    {
+      "id": "mention-crispr-en",
+      "language": "en",
+      "text": "CRISPR-Cas9",
+      "documentId": "paper-1",
+      "decision": "accept-canonical-entity",
+      "reason": "trusted-translated-alias",
+      "candidateEntityId": "entity:mesh:D000077768",
+      "candidateEntityIds": [
+        "entity:mesh:D000077768"
+      ],
+      "confidence": 0.97,
+      "preservedLanguageTag": "en"
+    },
+    {
+      "id": "mention-crispr-de",
+      "language": "de",
+      "text": "CRISPR-Cas9 Geneditierung",
+      "documentId": "paper-2",
+      "decision": "accept-canonical-entity",
+      "reason": "trusted-translated-alias",
+      "candidateEntityId": "entity:mesh:D000077768",
+      "candidateEntityIds": [
+        "entity:mesh:D000077768"
+      ],
+      "confidence": 0.91,
+      "preservedLanguageTag": "de"
+    },
+    {
+      "id": "mention-crispr-es",
+      "language": "es",
+      "text": "edicion genetica CRISPR-Cas9",
+      "documentId": "paper-3",
+      "decision": "accept-canonical-entity",
+      "reason": "trusted-translated-alias",
+      "candidateEntityId": "entity:mesh:D000077768",
+      "candidateEntityIds": [
+        "entity:mesh:D000077768"
+      ],
+      "confidence": 0.89,
+      "preservedLanguageTag": "es"
+    },
+    {
+      "id": "mention-diabetes-en",
+      "language": "en",
+      "text": "diabetes mellitus",
+      "documentId": "paper-4",
+      "decision": "accept-canonical-entity",
+      "reason": "trusted-translated-alias",
+      "candidateEntityId": "entity:mesh:D003920",
+      "candidateEntityIds": [
+        "entity:mesh:D003920"
+      ],
+      "confidence": 0.94,
+      "preservedLanguageTag": "en"
+    },
+    {
+      "id": "mention-diabetes-de",
+      "language": "de",
+      "text": "Diabetes mellitus",
+      "documentId": "paper-5",
+      "decision": "accept-canonical-entity",
+      "reason": "trusted-translated-alias",
+      "candidateEntityId": "entity:mesh:D003920",
+      "candidateEntityIds": [
+        "entity:mesh:D003920"
+      ],
+      "confidence": 0.95,
+      "preservedLanguageTag": "de"
+    },
+    {
+      "id": "mention-diabetes-es",
+      "language": "es",
+      "text": "diabetes mellitus",
+      "documentId": "paper-6",
+      "decision": "accept-canonical-entity",
+      "reason": "trusted-translated-alias",
+      "candidateEntityId": "entity:mesh:D003920",
+      "candidateEntityIds": [
+        "entity:mesh:D003920"
+      ],
+      "confidence": 0.93,
+      "preservedLanguageTag": "es"
+    },
+    {
+      "id": "mention-control-es",
+      "language": "es",
+      "text": "control",
+      "documentId": "paper-7",
+      "decision": "hold-for-curator-review",
+      "reason": "false-friend-or-homograph",
+      "candidateEntityId": "entity:stat:control-group",
+      "candidateEntityIds": [
+        "entity:stat:control-group"
+      ],
+      "confidence": 0.88,
+      "preservedLanguageTag": "es"
+    },
+    {
+      "id": "mention-cellule-fr",
+      "language": "fr",
+      "text": "cellule",
+      "documentId": "paper-8",
+      "decision": "suppress-recommendation",
+      "reason": "low-confidence-alias",
+      "candidateEntityId": "entity:mesh:D002477",
+      "candidateEntityIds": [
+        "entity:mesh:D002477"
+      ],
+      "confidence": 0.61,
+      "preservedLanguageTag": "fr"
+    },
+    {
+      "id": "mention-crispr-cyrillic-spoof",
+      "language": "en",
+      "text": "СRISPR-Cas9",
+      "documentId": "paper-9",
+      "decision": "hold-for-curator-review",
+      "reason": "script-confusable-alias",
+      "candidateEntityId": "entity:mesh:D000077768",
+      "candidateEntityIds": [
+        "entity:mesh:D000077768"
+      ],
+      "confidence": 0.97,
+      "preservedLanguageTag": "en"
+    },
+    {
+      "id": "mention-crispr-greek-alpha-spoof",
+      "language": "en",
+      "text": "CRISPR-Cαs9",
+      "documentId": "paper-10",
+      "decision": "hold-for-curator-review",
+      "reason": "script-confusable-alias",
+      "candidateEntityId": "entity:mesh:D000077768",
+      "candidateEntityIds": [
+        "entity:mesh:D000077768"
+      ],
+      "confidence": 0.97,
+      "preservedLanguageTag": "en"
+    }
+  ],
+  "entityPackets": [
+    {
+      "id": "entity:mesh:D000077768",
+      "canonicalName": "CRISPR-Cas9",
+      "ontology": "MeSH",
+      "identifier": "D000077768",
+      "languages": [
+        "de",
+        "en",
+        "es"
+      ],
+      "aliasEvidenceIssues": [],
+      "mentions": [
+        {
+          "id": "mention-crispr-en",
+          "text": "CRISPR-Cas9",
+          "language": "en",
+          "documentId": "paper-1",
+          "confidence": 0.97
+        },
+        {
+          "id": "mention-crispr-de",
+          "text": "CRISPR-Cas9 Geneditierung",
+          "language": "de",
+          "documentId": "paper-2",
+          "confidence": 0.91
+        },
+        {
+          "id": "mention-crispr-es",
+          "text": "edicion genetica CRISPR-Cas9",
+          "language": "es",
+          "documentId": "paper-3",
+          "confidence": 0.89
+        }
+      ],
+      "localizedNames": {
+        "en": [
+          "CRISPR-Cas9"
+        ],
+        "de": [
+          "CRISPR-Cas9 Geneditierung"
+        ],
+        "es": [
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "CRISPR-Cas9",
+        "identifier": "MeSH:D000077768",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "CRISPR-Cas9",
+          "CRISPR-Cas9 Geneditierung",
+          "edicion genetica CRISPR-Cas9"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "CRISPR-Cas9",
+            "inLanguage": "en",
+            "identifier": "MeSH:D000077768"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "CRISPR-Cas9 Geneditierung",
+            "inLanguage": "de",
+            "identifier": "MeSH:D000077768"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "edicion genetica CRISPR-Cas9",
+            "inLanguage": "es",
+            "identifier": "MeSH:D000077768"
+          }
+        ]
+      }
+    },
+    {
+      "id": "entity:mesh:D003920",
+      "canonicalName": "Diabetes Mellitus",
+      "ontology": "MeSH",
+      "identifier": "D003920",
+      "languages": [
+        "de",
+        "en",
+        "es"
+      ],
+      "aliasEvidenceIssues": [],
+      "mentions": [
+        {
+          "id": "mention-diabetes-en",
+          "text": "diabetes mellitus",
+          "language": "en",
+          "documentId": "paper-4",
+          "confidence": 0.94
+        },
+        {
+          "id": "mention-diabetes-de",
+          "text": "Diabetes mellitus",
+          "language": "de",
+          "documentId": "paper-5",
+          "confidence": 0.95
+        },
+        {
+          "id": "mention-diabetes-es",
+          "text": "diabetes mellitus",
+          "language": "es",
+          "documentId": "paper-6",
+          "confidence": 0.93
+        }
+      ],
+      "localizedNames": {
+        "en": [
+          "diabetes mellitus"
+        ],
+        "de": [
+          "Diabetes mellitus"
+        ],
+        "es": [
+          "diabetes mellitus"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Diabetes Mellitus",
+        "identifier": "MeSH:D003920",
+        "inDefinedTermSet": "MeSH",
+        "alternateName": [
+          "diabetes mellitus",
+          "Diabetes mellitus",
+          "diabetes mellitus"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": [
+          {
+            "@type": "DefinedTerm",
+            "name": "diabetes mellitus",
+            "inLanguage": "en",
+            "identifier": "MeSH:D003920"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Diabetes mellitus",
+            "inLanguage": "de",
+            "identifier": "MeSH:D003920"
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "diabetes mellitus",
+            "inLanguage": "es",
+            "identifier": "MeSH:D003920"
+          }
+        ]
+      }
+    },
+    {
+      "id": "entity:stat:control-group",
+      "canonicalName": "Control Group",
+      "ontology": "SCIBASE-STAT",
+      "identifier": "control-group",
+      "languages": [],
+      "aliasEvidenceIssues": [],
+      "mentions": [],
+      "localizedNames": {
+        "en": [
+          "control group"
+        ],
+        "es": [
+          "grupo control"
+        ],
+        "de": [
+          "Kontrollgruppe"
+        ]
+      },
+      "jsonLd": {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Control Group",
+        "identifier": "SCIBASE-STAT:control-group",
+        "inDefinedTermSet": "SCIBASE-STAT",
+        "alternateName": [
+          "control group",
+          "grupo control",
+          "Kontrollgruppe"
+        ]
+      },
+      "schemaOrg": {
+        "@type": "ScholarlyArticle",
+        "about": []
+      }
+    }
+  ],
+  "curatorActions": [
+    {
+      "id": "curate-mention-control-es",
+      "mentionId": "mention-control-es",
+      "action": "review-multilingual-homograph",
+      "priority": "high",
+      "language": "es",
+      "text": "control",
+      "candidateEntityId": "entity:stat:control-group",
+      "candidateEntityIds": [
+        "entity:stat:control-group"
+      ],
+      "reason": "false-friend-or-homograph"
+    },
+    {
+      "id": "curate-mention-cellule-fr",
+      "mentionId": "mention-cellule-fr",
+      "action": "verify-translated-alias-before-recommendation",
+      "priority": "normal",
+      "language": "fr",
+      "text": "cellule",
+      "candidateEntityId": "entity:mesh:D002477",
+      "candidateEntityIds": [
+        "entity:mesh:D002477"
+      ],
+      "reason": "low-confidence-alias"
+    },
+    {
+      "id": "curate-mention-crispr-cyrillic-spoof",
+      "mentionId": "mention-crispr-cyrillic-spoof",
+      "action": "review-multilingual-script-confusable",
+      "priority": "high",
+      "language": "en",
+      "text": "СRISPR-Cas9",
+      "candidateEntityId": "entity:mesh:D000077768",
+      "candidateEntityIds": [
+        "entity:mesh:D000077768"
+      ],
+      "reason": "script-confusable-alias"
+    },
+    {
+      "id": "curate-mention-crispr-greek-alpha-spoof",
+      "mentionId": "mention-crispr-greek-alpha-spoof",
+      "action": "review-multilingual-script-confusable",
+      "priority": "high",
+      "language": "en",
+      "text": "CRISPR-Cαs9",
+      "candidateEntityId": "entity:mesh:D000077768",
+      "candidateEntityIds": [
+        "entity:mesh:D000077768"
+      ],
+      "reason": "script-confusable-alias"
+    }
+  ],
+  "recommendationGuards": {
+    "suppressedMentionIds": [
+      "mention-control-es",
+      "mention-cellule-fr",
+      "mention-crispr-cyrillic-spoof",
+      "mention-crispr-greek-alpha-spoof"
+    ],
+    "safeEntityIds": [
+      "entity:mesh:D000077768",
+      "entity:mesh:D003920"
+    ]
+  },
+  "summary": {
+    "acceptedMentions": 6,
+    "heldMentions": 3,
+    "suppressedMentions": 1,
+    "entityPackets": 3
+  },
+  "auditDigest": "sha256:f11c08d8634f046b8382a175239964b368830acc24fe0f8c2ff1b92cdd02ef8f"
+}

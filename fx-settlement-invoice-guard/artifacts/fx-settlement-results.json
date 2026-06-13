@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-06-13T16:00:38.029Z",
+  "summary": {
+    "blocks": 4,
+    "reviews": 5,
+    "passes": 1
+  },
+  "results": [
+    {
+      "invoiceId": "inv:lab-pro-eur-042",
+      "accountId": "acct:eu-lab-17",
+      "invoiceCurrency": "EUR",
+      "settlementCurrency": "USD",
+      "expectedSettlement": 2808,
+      "decision": "RELEASE_INVOICE",
+      "findings": [
+        {
+          "severity": "pass",
+          "code": "fx_settlement_ready",
+          "message": "Invoice FX settlement, rounding, credits, and processor references are release-ready.",
+          "remediation": "No remediation required.",
+          "ref": "inv:lab-pro-eur-042"
+        }
+      ]
+    },
+    {
+      "invoiceId": "inv:consortium-gbp-105",
+      "accountId": "acct:uk-consortium-5",
+      "invoiceCurrency": "GBP",
+      "settlementCurrency": "USD",
+      "expectedSettlement": 1905,
+      "decision": "REVIEW_BEFORE_RELEASE",
+      "findings": [
+        {
+          "severity": "review",
+          "code": "fx_snapshot_stale",
+          "message": "FX snapshot is older than the allowed release window.",
+          "remediation": "Refresh FX snapshot or attach finance approval for stale-rate usage.",
+          "ref": "inv:consortium-gbp-105"
+        },
+        {
+          "severity": "review",
+          "code": "fx_quote_before_invoice_window",
+          "message": "FX quote predates invoice issue time beyond the allowed window.",
+          "remediation": "Use an invoice-time quote or document policy approval.",
+          "ref": "inv:consortium-gbp-105"
+        },
+        {
+          "severity": "review",
+          "code": "fx_settlement_variance",
+          "message": "Processor settlement differs from expected settlement by -0.02 USD.",
+          "remediation": "Route to finance review or attach rounding-policy evidence.",
+          "ref": "inv:consortium-gbp-105"
+        }
+      ]
+    },
+    {
+      "invoiceId": "inv:jp-enterprise-219",
+      "accountId": "acct:jp-enterprise-3",
+      "invoiceCurrency": "JPY",
+      "settlementCurrency": "USD",
+      "expectedSettlement": 6208,
+      "decision": "HOLD_INVOICE",
+      "findings": [
+        {
+          "severity": "block",
+          "code": "minor_unit_rounding_invalid",
+          "message": "grossInvoice 1020000.55 has too many decimals for JPY.",
+          "remediation": "Round grossInvoice to 0 minor units before invoice release.",
+          "ref": "grossInvoice"
+        },
+        {
+          "severity": "block",
+          "code": "minor_unit_rounding_invalid",
+          "message": "netInvoice 970000.55 has too many decimals for JPY.",
+          "remediation": "Round netInvoice to 0 minor units before invoice release.",
+          "ref": "netInvoice"
+        },
+        {
+          "severity": "review",
+          "code": "fx_snapshot_stale",
+          "message": "FX snapshot is older than the allowed release window.",
+          "remediation": "Refresh FX snapshot or attach finance approval for stale-rate usage.",
+          "ref": "inv:jp-enterprise-219"
+        },
+        {
+          "severity": "block",
+          "code": "processor_reference_missing",
+          "message": "Processor settlement reference is missing.",
+          "remediation": "Attach payment processor settlement id before revenue close.",
+          "ref": "inv:jp-enterprise-219"
+        },
+        {
+          "severity": "block",
+          "code": "material_fx_settlement_variance",
+          "message": "Processor settlement differs from expected settlement by -708 USD.",
+          "remediation": "Attach finance approval and block release until variance is resolved.",
+          "ref": "inv:jp-enterprise-219"
+        },
+        {
+          "severity": "review",
+          "code": "credit_offset_approval_missing",
+          "message": "Credit notes are applied without a credit approval id.",
+          "remediation": "Attach approved credit memo before invoice release.",
+          "ref": "inv:jp-enterprise-219"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "invoiceId": "inv:lab-pro-eur-042",
+    "accountId": "acct:eu-lab-17",
+    "invoiceCurrency": "EUR",
+    "settlementCurrency": "USD",
+    "accountCurrency": "EUR",
+    "invoiceIssuedAt": "2026-06-13T12:00:00Z",
+    "releaseAt": "2026-06-13T14:00:00Z",
+    "lineItems": [
+      { "description": "Lab Pro annual subscription", "amount": 2400 },
+      { "description": "AI compute top-up", "amount": 300 }
+    ],
+    "creditNotes": [
+      { "creditNoteId": "cred:trial-conversion-9", "amount": 100 }
+    ],
+    "creditApprovalId": "approval:credit-881",
+    "fxSnapshot": {
+      "source": "treasury-policy-table",
+      "rateId": "fx:eur-usd:2026-06-13T13",
+      "rate": 1.08,
+      "quotedAt": "2026-06-13T13:00:00Z"
+    },
+    "processorReference": "stripe:settle:ok-4242",
+    "processorSettlementAmount": 2808,
+    "materialVarianceThreshold": 25
+  },
+  {
+    "invoiceId": "inv:consortium-gbp-105",
+    "accountId": "acct:uk-consortium-5",
+    "invoiceCurrency": "GBP",
+    "settlementCurrency": "USD",
+    "accountCurrency": "GBP",
+    "invoiceIssuedAt": "2026-06-13T09:30:00Z",
+    "releaseAt": "2026-06-14T12:00:00Z",
+    "lineItems": [
+      { "description": "Consortium analytics API", "amount": 1250 },
+      { "description": "Priority support", "amount": 250 }
+    ],
+    "creditNotes": [],
+    "fxSnapshot": {
+      "source": "treasury-policy-table",
+      "rateId": "fx:gbp-usd:2026-06-12T08",
+      "rate": 1.27,
+      "quotedAt": "2026-06-12T08:00:00Z"
+    },
+    "processorReference": "stripe:settle:review-105",
+    "processorSettlementAmount": 1904.98,
+    "materialVarianceThreshold": 25
+  },
+  {
+    "invoiceId": "inv:jp-enterprise-219",
+    "accountId": "acct:jp-enterprise-3",
+    "invoiceCurrency": "JPY",
+    "settlementCurrency": "USD",
+    "accountCurrency": "JPY",
+    "invoiceIssuedAt": "2026-06-13T05:00:00Z",
+    "releaseAt": "2026-06-13T08:00:00Z",
+    "lineItems": [
+      { "description": "Institutional license", "amount": 900000 },
+      { "description": "Compute bundle", "amount": 120000.55 }
+    ],
+    "creditNotes": [
+      { "creditNoteId": "cred:service-credit-44", "amount": 50000 }
+    ],
+    "fxSnapshot": {
+      "source": "treasury-policy-table",
+      "rateId": "fx:jpy-usd:2026-06-13T06",
+      "rate": 0.0064,
+      "quotedAt": "2026-06-13T06:00:00Z"
+    },
+    "processorReference": "",
+    "processorSettlementAmount": 5500,
+    "materialVarianceThreshold": 25
+  }
+]

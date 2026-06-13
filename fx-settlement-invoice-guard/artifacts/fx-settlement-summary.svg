@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #111827; }
+    .meta { font: 16px Arial, sans-serif; fill: #475569; }
+    .label { font: 15px Arial, sans-serif; fill: #111827; }
+    .decision { font: 700 14px Arial, sans-serif; fill: #ffffff; }
+  </style>
+  <rect width="920" height="360" fill="#f8fafc"/>
+  <text x="40" y="54" class="title">FX Settlement Invoice Guard</text>
+  <text x="40" y="86" class="meta">blocks=4 reviews=5 passes=1</text>
+  <text x="40" y="139" class="label">inv:lab-pro-eur-042</text>
+  <rect x="560" y="116" width="300" height="36" rx="6" fill="#15803d" />
+  <text x="580" y="139" class="decision">RELEASE_INVOICE</text>
+  <text x="40" y="211" class="label">inv:consortium-gbp-105</text>
+  <rect x="560" y="188" width="300" height="36" rx="6" fill="#b45309" />
+  <text x="580" y="211" class="decision">REVIEW_BEFORE_RELEASE</text>
+  <text x="40" y="283" class="label">inv:jp-enterprise-219</text>
+  <rect x="560" y="260" width="300" height="36" rx="6" fill="#b91c1c" />
+  <text x="580" y="283" class="decision">HOLD_INVOICE</text>
+</svg>

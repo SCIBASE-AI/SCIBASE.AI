@@ -1,0 +1,11 @@
+{
+  "name": "fx-settlement-invoice-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic multi-currency invoice settlement guard for revenue infrastructure.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test/fxSettlementInvoiceGuard.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

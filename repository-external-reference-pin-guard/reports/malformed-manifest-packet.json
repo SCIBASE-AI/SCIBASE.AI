@@ -1,0 +1,36 @@
+{
+  "repositoryId": "repo-reference-malformed-manifest",
+  "status": "hold_repository_release",
+  "releaseLanes": {
+    "doiPublication": "blocked",
+    "exportBundle": "blocked",
+    "apiAccess": "metadata_only"
+  },
+  "findings": [
+    {
+      "referenceId": "reference-manifest",
+      "kind": "unknown",
+      "target": null,
+      "code": "MALFORMED_REFERENCE_MANIFEST",
+      "severity": "blocker",
+      "message": "External reference manifest must be an array before release."
+    }
+  ],
+  "actions": [
+    "repair_reference_manifest:reference-manifest"
+  ],
+  "referenceSignals": {
+    "immutablePins": false,
+    "exportable": false,
+    "attributionComplete": false,
+    "verificationFresh": false
+  },
+  "referenceSummary": {
+    "total": 1,
+    "byKind": {
+      "unknown": 1
+    }
+  },
+  "assessedAt": "2026-05-28T12:00:00Z",
+  "auditDigest": "cd76d8b327ffca47048a3b054d92a71799bde2685529573670e07a3362ac5e69"
+}

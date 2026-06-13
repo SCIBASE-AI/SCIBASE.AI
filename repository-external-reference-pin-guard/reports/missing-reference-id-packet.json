@@ -1,0 +1,36 @@
+{
+  "repositoryId": "repo-reference-missing-identity",
+  "status": "hold_repository_release",
+  "releaseLanes": {
+    "doiPublication": "blocked",
+    "exportBundle": "blocked",
+    "apiAccess": "metadata_only"
+  },
+  "findings": [
+    {
+      "referenceId": "unidentified-reference-1",
+      "kind": "linked_dataset",
+      "target": "https://doi.org/10.5281/zenodo.5678901",
+      "code": "MISSING_REFERENCE_ID",
+      "severity": "blocker",
+      "message": "External reference entry needs a stable ID before reviewer remediation or export release."
+    }
+  ],
+  "actions": [
+    "assign_reference_id:unidentified-reference-1"
+  ],
+  "referenceSignals": {
+    "immutablePins": false,
+    "exportable": false,
+    "attributionComplete": false,
+    "verificationFresh": false
+  },
+  "referenceSummary": {
+    "total": 1,
+    "byKind": {
+      "linked_dataset": 1
+    }
+  },
+  "assessedAt": "2026-05-28T12:00:00Z",
+  "auditDigest": "8e92d816b839b031f7a36db04c068602a58d92919edf6c99297f82025adc5d72"
+}

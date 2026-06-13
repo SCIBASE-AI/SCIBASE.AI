@@ -1,0 +1,36 @@
+{
+  "repositoryId": "repo-reference-malformed-entry",
+  "status": "hold_repository_release",
+  "releaseLanes": {
+    "doiPublication": "blocked",
+    "exportBundle": "blocked",
+    "apiAccess": "metadata_only"
+  },
+  "findings": [
+    {
+      "referenceId": "malformed-reference-entry-1",
+      "kind": "unknown",
+      "target": null,
+      "code": "MALFORMED_REFERENCE_ENTRY",
+      "severity": "blocker",
+      "message": "External reference entry must be a structured object before release."
+    }
+  ],
+  "actions": [
+    "repair_reference_entry:malformed-reference-entry-1"
+  ],
+  "referenceSignals": {
+    "immutablePins": false,
+    "exportable": false,
+    "attributionComplete": false,
+    "verificationFresh": false
+  },
+  "referenceSummary": {
+    "total": 1,
+    "byKind": {
+      "unknown": 1
+    }
+  },
+  "assessedAt": "2026-05-28T12:00:00Z",
+  "auditDigest": "5712c8d01b35d778254650adc9a25bd0b08e9268a8a0a9bfc4d36f8ddafae41a"
+}

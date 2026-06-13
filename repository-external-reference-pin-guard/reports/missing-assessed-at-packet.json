@@ -1,0 +1,35 @@
+{
+  "repositoryId": "repo-reference-missing-assessed-at",
+  "status": "hold_repository_release",
+  "releaseLanes": {
+    "doiPublication": "blocked",
+    "exportBundle": "blocked",
+    "apiAccess": "metadata_only"
+  },
+  "findings": [
+    {
+      "referenceId": "repo-reference-missing-assessed-at",
+      "kind": "repository",
+      "target": null,
+      "code": "INVALID_REPOSITORY_ASSESSED_AT",
+      "severity": "blocker",
+      "message": "Repository assessment timestamp must be present and parseable before reference release."
+    }
+  ],
+  "actions": [
+    "repair_repository_assessed_at:repo-reference-missing-assessed-at"
+  ],
+  "referenceSignals": {
+    "immutablePins": true,
+    "exportable": false,
+    "attributionComplete": true,
+    "verificationFresh": false
+  },
+  "referenceSummary": {
+    "total": 1,
+    "byKind": {
+      "linked_dataset": 1
+    }
+  },
+  "auditDigest": "2f5db82d2497d727fa8919db02d80917032db6ef010b6d73b474b4e765162bd7"
+}

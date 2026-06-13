@@ -1,0 +1,34 @@
+{
+  "repositoryId": "unidentified-repository",
+  "status": "hold_repository_release",
+  "releaseLanes": {
+    "doiPublication": "blocked",
+    "exportBundle": "blocked",
+    "apiAccess": "metadata_only"
+  },
+  "findings": [
+    {
+      "referenceId": "unidentified-repository",
+      "kind": "repository",
+      "target": null,
+      "code": "MALFORMED_REPOSITORY_PACKET",
+      "severity": "blocker",
+      "message": "Repository external-reference packet must be a structured object before release."
+    }
+  ],
+  "actions": [
+    "repair_repository_packet:unidentified-repository"
+  ],
+  "referenceSignals": {
+    "immutablePins": false,
+    "exportable": false,
+    "attributionComplete": false,
+    "verificationFresh": false
+  },
+  "referenceSummary": {
+    "total": 0,
+    "byKind": {}
+  },
+  "assessedAt": null,
+  "auditDigest": "8b392c33f97afced4f208581a6858f6fb9a46fd0840ef08c8dd6dfba67a7d9d6"
+}

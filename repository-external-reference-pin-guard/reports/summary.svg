@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="684" viewBox="0 0 1200 684">
+  <rect width="1200" height="684" fill="#ffffff"/>
+  <text x="48" y="48" font-size="28" font-family="Arial" font-weight="700" fill="#111827">Repository External Reference Pin Guard</text>
+  <text x="48" y="74" font-size="15" font-family="Arial" fill="#475569">Issue #10 release/export gate for submodules, linked datasets, API sources, and model references</text>
+
+      <g transform="translate(48 94)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">repo-reference-risk</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">blocked-packet.json | findings 7 | digest 0cb0a30094dfe551</text>
+      </g>
+      <g transform="translate(48 162)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">unidentified-repository</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">malformed-repository-packet.json | findings 1 | digest 8b392c33f97afced</text>
+      </g>
+      <g transform="translate(48 230)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">repo-reference-malformed-manifest</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">malformed-manifest-packet.json | findings 1 | digest cd76d8b327ffca47</text>
+      </g>
+      <g transform="translate(48 298)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">repo-reference-malformed-entry</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">malformed-packet.json | findings 1 | digest 5712c8d01b35d778</text>
+      </g>
+      <g transform="translate(48 366)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">repo-reference-missing-identity</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">missing-reference-id-packet.json | findings 1 | digest 8e92d816b839b031</text>
+      </g>
+      <g transform="translate(48 434)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">repo-reference-missing-assessed-at</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">missing-assessed-at-packet.json | findings 1 | digest 2f5db82d2497d727</text>
+      </g>
+      <g transform="translate(48 502)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#047857"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">repo-reference-clean</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">clean-packet.json | findings 0 | digest 5b1ede709bdfe56b</text>
+      </g>
+      <g transform="translate(48 570)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#a16207"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">repo-reference-warning</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">warning-packet.json | findings 2 | digest 2bcec8202016cc03</text>
+      </g>
+</svg>

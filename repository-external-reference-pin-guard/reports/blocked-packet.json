@@ -1,0 +1,91 @@
+{
+  "repositoryId": "repo-reference-risk",
+  "status": "hold_repository_release",
+  "releaseLanes": {
+    "doiPublication": "blocked",
+    "exportBundle": "blocked",
+    "apiAccess": "metadata_only"
+  },
+  "findings": [
+    {
+      "referenceId": "api-weather-source",
+      "kind": "api_source",
+      "target": "https://api.example.invalid/weather/latest",
+      "code": "AUTH_REQUIRED_REFERENCE",
+      "severity": "blocker",
+      "message": "Export bundles cannot depend on authenticated external references."
+    },
+    {
+      "referenceId": "api-weather-source",
+      "kind": "api_source",
+      "target": "https://api.example.invalid/weather/latest",
+      "code": "FLOATING_API_REFERENCE",
+      "severity": "blocker",
+      "message": "API source must reference a dated snapshot with checksum evidence."
+    },
+    {
+      "referenceId": "dataset-lab-export",
+      "kind": "linked_dataset",
+      "target": "https://data.example.invalid/lab-export.csv",
+      "code": "INVALID_CHECKSUM_EVIDENCE",
+      "severity": "blocker",
+      "message": "Checksum evidence must use a supported algorithm and full-length hexadecimal digest."
+    },
+    {
+      "referenceId": "dataset-lab-export",
+      "kind": "linked_dataset",
+      "target": "https://data.example.invalid/lab-export.csv",
+      "code": "INVALID_DOI_EVIDENCE",
+      "severity": "blocker",
+      "message": "DOI evidence must be a parseable DOI or DOI URL before release."
+    },
+    {
+      "referenceId": "dataset-lab-export",
+      "kind": "linked_dataset",
+      "target": "https://data.example.invalid/lab-export.csv",
+      "code": "MISSING_DURABLE_IDENTIFIER",
+      "severity": "blocker",
+      "message": "External data or model reference needs a checksum, DOI, or immutable version."
+    },
+    {
+      "referenceId": "dataset-lab-export",
+      "kind": "linked_dataset",
+      "target": "https://data.example.invalid/lab-export.csv",
+      "code": "STALE_REFERENCE_EVIDENCE",
+      "severity": "blocker",
+      "message": "External reference verification is older than policy allows."
+    },
+    {
+      "referenceId": "submodule-analysis-tools",
+      "kind": "git_submodule",
+      "target": "https://github.com/example/analysis-tools",
+      "code": "FLOATING_GIT_REFERENCE",
+      "severity": "blocker",
+      "message": "Git reference must be pinned to an immutable commit SHA before release."
+    }
+  ],
+  "actions": [
+    "add_checksum_or_doi:dataset-lab-export",
+    "pin_external_reference:api-weather-source",
+    "pin_external_reference:submodule-analysis-tools",
+    "refresh_reference_verification:dataset-lab-export",
+    "repair_reference_evidence:dataset-lab-export",
+    "replace_or_snapshot_auth_reference:api-weather-source"
+  ],
+  "referenceSignals": {
+    "immutablePins": false,
+    "exportable": false,
+    "attributionComplete": true,
+    "verificationFresh": false
+  },
+  "referenceSummary": {
+    "total": 3,
+    "byKind": {
+      "git_submodule": 1,
+      "linked_dataset": 1,
+      "api_source": 1
+    }
+  },
+  "assessedAt": "2026-05-28T12:00:00Z",
+  "auditDigest": "0cb0a30094dfe5515aec52b275734cc495e22ef6e44921295fac7d26c6f21a52"
+}

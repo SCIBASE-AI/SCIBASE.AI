@@ -1,0 +1,12 @@
+{
+  "name": "repository-external-reference-pin-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "python make-demo-video.py",
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js && python -m py_compile make-demo-video.py"
+  }
+}

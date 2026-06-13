@@ -1,0 +1,29 @@
+{
+  "repositoryId": "repo-reference-clean",
+  "status": "release_repository_references",
+  "releaseLanes": {
+    "doiPublication": "allowed",
+    "exportBundle": "allowed",
+    "apiAccess": "allowed"
+  },
+  "findings": [],
+  "actions": [
+    "release_with_reference_pin_monitoring:repo-reference-clean"
+  ],
+  "referenceSignals": {
+    "immutablePins": true,
+    "exportable": true,
+    "attributionComplete": true,
+    "verificationFresh": true
+  },
+  "referenceSummary": {
+    "total": 3,
+    "byKind": {
+      "git_submodule": 1,
+      "linked_dataset": 1,
+      "api_source": 1
+    }
+  },
+  "assessedAt": "2026-05-28T12:00:00Z",
+  "auditDigest": "5b1ede709bdfe56bb066cce64315055c0e3e87678a2bc86d7d8846ab17ae48a1"
+}

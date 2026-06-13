@@ -1,0 +1,44 @@
+{
+  "repositoryId": "repo-reference-warning",
+  "status": "stage_reference_metadata_revision",
+  "releaseLanes": {
+    "doiPublication": "metadata_revision",
+    "exportBundle": "draft_only",
+    "apiAccess": "allowed"
+  },
+  "findings": [
+    {
+      "referenceId": "model-weights",
+      "kind": "model_weights",
+      "target": "https://models.example.invalid/model-v3.bin",
+      "code": "MISSING_ATTRIBUTION",
+      "severity": "warning",
+      "message": "External reference needs attribution metadata before DOI publication."
+    },
+    {
+      "referenceId": "model-weights",
+      "kind": "model_weights",
+      "target": "https://models.example.invalid/model-v3.bin",
+      "code": "MISSING_LICENSE",
+      "severity": "warning",
+      "message": "External reference needs license metadata before DOI publication."
+    }
+  ],
+  "actions": [
+    "complete_license_attribution:model-weights"
+  ],
+  "referenceSignals": {
+    "immutablePins": true,
+    "exportable": true,
+    "attributionComplete": false,
+    "verificationFresh": true
+  },
+  "referenceSummary": {
+    "total": 1,
+    "byKind": {
+      "model_weights": 1
+    }
+  },
+  "assessedAt": "2026-05-28T12:00:00Z",
+  "auditDigest": "2bcec8202016cc03a70f2a1bd751d8f07518e31cd76900ca9f428e638a168afc"
+}

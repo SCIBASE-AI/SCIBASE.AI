@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-06-13T15:54:40.327Z",
+  "summary": {
+    "blocks": 4,
+    "reviews": 3,
+    "passes": 1
+  },
+  "results": [
+    {
+      "packetId": "packet:oncology-review-ready",
+      "manuscriptId": "ms:oncology-review-42",
+      "decision": "RELEASE_ASSISTANT_OUTPUT",
+      "findings": [
+        {
+          "severity": "pass",
+          "code": "citation_evidence_ready",
+          "message": "Citation evidence is current, unretracted, and aligned with assistant output.",
+          "remediation": "No remediation required.",
+          "ref": "packet:oncology-review-ready"
+        }
+      ]
+    },
+    {
+      "packetId": "packet:neuro-preprint-review",
+      "manuscriptId": "ms:neuro-preprint-18",
+      "decision": "HOLD_FOR_EDITOR",
+      "findings": [
+        {
+          "severity": "review",
+          "code": "citation_superseded",
+          "message": "cite:preprint-2020 appears superseded by cite:journal-2022.",
+          "remediation": "Prefer the current published version or explain why the older version remains relevant.",
+          "ref": "cite:preprint-2020"
+        },
+        {
+          "severity": "review",
+          "code": "background_citation_used_as_support",
+          "message": "cite:preprint-2020 is only background evidence for claim:biomarker-generalizes.",
+          "remediation": "Attach direct support or lower the assistant confidence.",
+          "ref": "cite:preprint-2020"
+        }
+      ]
+    },
+    {
+      "packetId": "packet:materials-block",
+      "manuscriptId": "ms:materials-battery-07",
+      "decision": "BLOCK_ASSISTANT_OUTPUT",
+      "findings": [
+        {
+          "severity": "block",
+          "code": "citation_retracted",
+          "message": "cite:retracted-2017 is marked retracted.",
+          "remediation": "Remove the citation from supporting evidence or rewrite the assistant note as a retraction warning.",
+          "ref": "cite:retracted-2017"
+        },
+        {
+          "severity": "review",
+          "code": "citation_stale_without_replication",
+          "message": "cite:retracted-2017 is older than the configured evidence window and has no recent replication marker.",
+          "remediation": "Attach a recent replication, meta-analysis, or recency caveat.",
+          "ref": "cite:retracted-2017"
+        },
+        {
+          "severity": "block",
+          "code": "retracted_citation_supports_claim",
+          "message": "claim:electrolyte-stability is supported by retracted citation cite:retracted-2017.",
+          "remediation": "Remove this evidence path and regenerate the assistant output.",
+          "ref": "cite:retracted-2017"
+        },
+        {
+          "severity": "block",
+          "code": "citation_contradicts_claim",
+          "message": "cite:contradiction-2025 is marked as contradicting claim:electrolyte-stability.",
+          "remediation": "Rewrite the assistant note to present the contradiction rather than support the claim.",
+          "ref": "cite:contradiction-2025"
+        },
+        {
+          "severity": "block",
+          "code": "assistant_recommends_retracted_citation",
+          "message": "Assistant recommends retracted citation cite:retracted-2017.",
+          "remediation": "Regenerate the assistant note with retraction-safe evidence.",
+          "ref": "cite:retracted-2017"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "citation-retraction-evidence-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic citation retraction and evidence recency guard for AI research assistant outputs.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test/citationRetractionEvidenceGuard.test.js",
+    "demo": "node scripts/demo.js"
+  }
+}

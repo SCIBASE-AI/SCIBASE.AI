@@ -1,0 +1,120 @@
+[
+  {
+    "packetId": "packet:oncology-review-ready",
+    "manuscriptId": "ms:oncology-review-42",
+    "generatedAt": "2026-06-14",
+    "claims": [
+      {
+        "id": "claim:survival-signal",
+        "text": "The intervention improves progression-free survival in the target subgroup.",
+        "evidence": [
+          {
+            "citationId": "cite:phase2-2024",
+            "supportRelation": "supports"
+          }
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "id": "cite:phase2-2024",
+        "title": "Phase 2 subgroup survival analysis",
+        "doi": "10.1000/safe.2024.11",
+        "status": "active",
+        "sourceType": "journal",
+        "usedAs": "primary_support",
+        "publishedAt": "2024-04-12",
+        "hasRecentReplication": true,
+        "contextQuote": "The subgroup analysis showed improved progression-free survival under the prespecified endpoint."
+      }
+    ],
+    "assistantNote": {
+      "text": "Evidence appears aligned, recent, and unretracted for the target subgroup.",
+      "recommendedCitationIds": ["cite:phase2-2024"]
+    }
+  },
+  {
+    "packetId": "packet:neuro-preprint-review",
+    "manuscriptId": "ms:neuro-preprint-18",
+    "generatedAt": "2026-06-14",
+    "claims": [
+      {
+        "id": "claim:biomarker-generalizes",
+        "text": "The biomarker generalizes across independent neurodegeneration cohorts.",
+        "evidence": [
+          {
+            "citationId": "cite:preprint-2020",
+            "supportRelation": "background"
+          }
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "id": "cite:preprint-2020",
+        "title": "Early biomarker cohort preprint",
+        "doi": "10.1101/2020.01.02.abc",
+        "status": "superseded",
+        "sourceType": "preprint",
+        "usedAs": "primary_support",
+        "publishedVersionId": "cite:journal-2022",
+        "publishedAt": "2020-01-02",
+        "hasRecentReplication": false,
+        "contextQuote": "The preliminary cohort suggested possible transfer, but the authors called for external validation."
+      }
+    ],
+    "assistantNote": {
+      "text": "The assistant should hold this claim for an editor because the cited preprint was superseded.",
+      "recommendedCitationIds": ["cite:preprint-2020"]
+    }
+  },
+  {
+    "packetId": "packet:materials-block",
+    "manuscriptId": "ms:materials-battery-07",
+    "generatedAt": "2026-06-14",
+    "claims": [
+      {
+        "id": "claim:electrolyte-stability",
+        "text": "The electrolyte is stable for 1,000 cycles under high temperature.",
+        "evidence": [
+          {
+            "citationId": "cite:retracted-2017",
+            "supportRelation": "supports"
+          },
+          {
+            "citationId": "cite:contradiction-2025",
+            "supportRelation": "contradicts"
+          }
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "id": "cite:retracted-2017",
+        "title": "High-temperature electrolyte cycling",
+        "doi": "10.1000/retracted.2017.9",
+        "status": "retracted",
+        "sourceType": "journal",
+        "usedAs": "primary_support",
+        "publishedAt": "2017-09-01",
+        "hasRecentReplication": false,
+        "contextQuote": "The original article claimed stability at high temperature but was later retracted."
+      },
+      {
+        "id": "cite:contradiction-2025",
+        "title": "Independent electrolyte degradation study",
+        "doi": "10.1000/active.2025.4",
+        "status": "active",
+        "sourceType": "journal",
+        "usedAs": "primary_support",
+        "publishedAt": "2025-04-18",
+        "hasRecentReplication": true,
+        "contextQuote": "The independent study found rapid degradation under the same temperature and cycling protocol."
+      }
+    ],
+    "assistantNote": {
+      "text": "Unsafe draft: cite the older article as positive support for high-temperature stability.",
+      "recommendedCitationIds": ["cite:retracted-2017"]
+    }
+  }
+]

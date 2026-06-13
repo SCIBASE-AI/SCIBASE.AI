@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <rect width="920" height="360" fill="#f8fafc"/>
+  <text x="40" y="56" class="title">Instrument Calibration Graph Guard</text>
+  <text x="40" y="90" class="meta">blocks=4 reviews=2 passes=12</text>
+
+      <text x="40" y="126" class="label">instrument:mass-spec:orbitrap-0021</text>
+      <rect x="560" y="100" width="280" height="36" rx="6" fill="#15803d" />
+      <text x="580" y="123" class="decision">PUBLISH_GRAPH_EDGE</text>
+
+      <text x="40" y="192" class="label">instrument:microscope:confocal-17</text>
+      <rect x="560" y="166" width="280" height="36" rx="6" fill="#b45309" />
+      <text x="580" y="189" class="decision">HOLD_FOR_CURATOR</text>
+
+      <text x="40" y="258" class="label">instrument:sequencer:seq-09</text>
+      <rect x="560" y="232" width="280" height="36" rx="6" fill="#b91c1c" />
+      <text x="580" y="255" class="decision">BLOCK_RECOMMENDATION</text>
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #0f172a; }
+    .meta { font: 16px Arial, sans-serif; fill: #475569; }
+    .label { font: 16px Arial, sans-serif; fill: #111827; }
+    .decision { font: 700 12px Arial, sans-serif; fill: white; }
+  </style>
+</svg>

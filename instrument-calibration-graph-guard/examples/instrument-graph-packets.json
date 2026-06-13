@@ -1,0 +1,101 @@
+[
+  {
+    "instrument": {
+      "nodeId": "instrument:mass-spec:orbitrap-0021",
+      "type": "mass_spectrometer",
+      "model": "Orbitrap Exploris 480",
+      "serialNumber": "OE480-21",
+      "capabilityUnits": ["ppm", "m/z", "Da"]
+    },
+    "calibration": {
+      "certificateId": "cal-2026-ms-0021",
+      "issuer": "SCIBASE Metrology Core",
+      "artifactHash": "sha256:26d78a1c174fd405f8f6d3d403cc6df1a4338a4c9fe1adf5e8c4b85e6f75be33",
+      "validFrom": "2026-01-01T00:00:00Z",
+      "validUntil": "2026-12-31T23:59:59Z",
+      "revoked": false
+    },
+    "experimentEdges": [
+      {
+        "edgeId": "edge:protein-atlas-run-77",
+        "projectId": "protein-atlas",
+        "measuredAt": "2026-04-12T10:15:00Z",
+        "measurementUnit": "ppm"
+      }
+    ],
+    "recommendationTargets": [
+      {
+        "targetId": "recommend:similar-proteomics-workflows",
+        "usesInstrumentReliability": true,
+        "requiresCurrentCalibration": true,
+        "publicationMode": "holdable"
+      }
+    ]
+  },
+  {
+    "instrument": {
+      "nodeId": "instrument:microscope:confocal-17",
+      "type": "confocal_microscope",
+      "model": "LSM 980",
+      "serialNumber": "LSM980-17",
+      "capabilityUnits": ["nm", "um", "pixel"]
+    },
+    "calibration": {
+      "certificateId": "cal-2025-micro-17",
+      "issuer": "Imaging Core",
+      "artifactHash": "sha256:80dfe725cb5f2ed3ab2237ae6d8ac7d759956275961874cc47bdbf48c8562d5f",
+      "validFrom": "2025-01-01T00:00:00Z",
+      "validUntil": "2025-12-31T23:59:59Z",
+      "revoked": false
+    },
+    "experimentEdges": [
+      {
+        "edgeId": "edge:neuron-synapse-image-12",
+        "projectId": "synapse-map",
+        "measuredAt": "2025-10-15T09:30:00Z",
+        "measurementUnit": "nm"
+      }
+    ],
+    "recommendationTargets": [
+      {
+        "targetId": "recommend:microscopy-protocols",
+        "usesInstrumentReliability": true,
+        "requiresCurrentCalibration": true,
+        "publicationMode": "holdable"
+      }
+    ]
+  },
+  {
+    "instrument": {
+      "nodeId": "instrument:sequencer:seq-09",
+      "type": "sequencer",
+      "model": "NovaSeq X",
+      "serialNumber": "NSX-09",
+      "capabilityUnits": ["reads", "bp"]
+    },
+    "calibration": {
+      "certificateId": "cal-2026-seq-09",
+      "issuer": "Genome Core",
+      "artifactHash": "",
+      "validFrom": "2026-01-01T00:00:00Z",
+      "validUntil": "2026-06-01T00:00:00Z",
+      "revoked": true
+    },
+    "experimentEdges": [
+      {
+        "edgeId": "edge:rnaseq-run-19",
+        "projectId": "immune-atlas",
+        "measuredAt": "2026-06-10T11:20:00Z",
+        "measurementUnit": "cycles"
+      }
+    ],
+    "recommendationTargets": [
+      {
+        "targetId": "recommend:single-cell-pipeline",
+        "usesInstrumentReliability": true,
+        "requiresCurrentCalibration": true,
+        "publicationMode": "public"
+      }
+    ]
+  }
+]

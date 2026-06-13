@@ -1,0 +1,164 @@
+[
+  {
+    "graphNodeId": "instrument:mass-spec:orbitrap-0021",
+    "decision": "PUBLISH_GRAPH_EDGE",
+    "checkedAt": "2026-06-12T00:00:00.000Z",
+    "summary": {
+      "blocks": 0,
+      "reviews": 0,
+      "passes": 6
+    },
+    "findings": [
+      {
+        "code": "instrument_identity_ready",
+        "severity": "pass",
+        "message": "Instrument node has stable model, serial, type, and graph ID metadata.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "calibration_certificate_present",
+        "severity": "pass",
+        "message": "Calibration certificate metadata and artifact hash are present.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "calibration_current",
+        "severity": "pass",
+        "message": "Calibration certificate is current at review time.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "experiment_edges_covered",
+        "severity": "pass",
+        "message": "All experiment edges fall inside the calibration validity window.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "unit_compatibility_ready",
+        "severity": "pass",
+        "message": "Experiment measurement units match declared instrument capabilities.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "recommendation_controls_ready",
+        "severity": "pass",
+        "message": "Recommendation targets can be held when calibration evidence is not publishable.",
+        "remediation": "No remediation required."
+      }
+    ],
+    "audit": {
+      "instrumentType": "mass_spectrometer",
+      "certificateId": "cal-2026-ms-0021",
+      "experimentCount": 1,
+      "recommendationTargets": 1
+    }
+  },
+  {
+    "graphNodeId": "instrument:microscope:confocal-17",
+    "decision": "HOLD_FOR_CURATOR",
+    "checkedAt": "2026-06-12T00:00:00.000Z",
+    "summary": {
+      "blocks": 0,
+      "reviews": 1,
+      "passes": 5
+    },
+    "findings": [
+      {
+        "code": "instrument_identity_ready",
+        "severity": "pass",
+        "message": "Instrument node has stable model, serial, type, and graph ID metadata.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "calibration_certificate_present",
+        "severity": "pass",
+        "message": "Calibration certificate metadata and artifact hash are present.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "calibration_expired",
+        "severity": "review",
+        "message": "Calibration certificate expired at 2025-12-31T23:59:59.000Z.",
+        "remediation": "Refresh calibration evidence or hold graph publication for affected instrument edges."
+      },
+      {
+        "code": "experiment_edges_covered",
+        "severity": "pass",
+        "message": "All experiment edges fall inside the calibration validity window.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "unit_compatibility_ready",
+        "severity": "pass",
+        "message": "Experiment measurement units match declared instrument capabilities.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "recommendation_controls_ready",
+        "severity": "pass",
+        "message": "Recommendation targets can be held when calibration evidence is not publishable.",
+        "remediation": "No remediation required."
+      }
+    ],
+    "audit": {
+      "instrumentType": "confocal_microscope",
+      "certificateId": "cal-2025-micro-17",
+      "experimentCount": 1,
+      "recommendationTargets": 1
+    }
+  },
+  {
+    "graphNodeId": "instrument:sequencer:seq-09",
+    "decision": "BLOCK_RECOMMENDATION",
+    "checkedAt": "2026-06-12T00:00:00.000Z",
+    "summary": {
+      "blocks": 4,
+      "reviews": 1,
+      "passes": 1
+    },
+    "findings": [
+      {
+        "code": "instrument_identity_ready",
+        "severity": "pass",
+        "message": "Instrument node has stable model, serial, type, and graph ID metadata.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "calibration_certificate_missing",
+        "severity": "block",
+        "message": "Calibration certificate evidence missing: artifactHash.",
+        "remediation": "Attach calibration certificate ID, issuer, artifact hash, and validity dates."
+      },
+      {
+        "code": "calibration_revoked",
+        "severity": "block",
+        "message": "Calibration certificate is revoked.",
+        "remediation": "Remove the instrument from public recommendations until a valid replacement certificate is attached."
+      },
+      {
+        "code": "experiment_outside_calibration_window",
+        "severity": "block",
+        "message": "Experiment edges outside calibration window: edge:rnaseq-run-19.",
+        "remediation": "Split or hold experiment edges measured outside the calibration validity window."
+      },
+      {
+        "code": "unit_incompatible",
+        "severity": "review",
+        "message": "Measurement units not declared for instrument capability: edge:rnaseq-run-19:cycles.",
+        "remediation": "Normalize units or route the graph packet to a curator for capability review."
+      },
+      {
+        "code": "recommendation_without_hold_control",
+        "severity": "block",
+        "message": "Recommendation targets need hold controls before publication: recommend:single-cell-pipeline.",
+        "remediation": "Add hold controls so recommendation edges are suppressed when calibration evidence fails."
+      }
+    ],
+    "audit": {
+      "instrumentType": "sequencer",
+      "certificateId": "cal-2026-seq-09",
+      "experimentCount": 1,
+      "recommendationTargets": 1
+    }
+  }
+]

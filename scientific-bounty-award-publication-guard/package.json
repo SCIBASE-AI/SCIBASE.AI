@@ -1,0 +1,11 @@
+{
+  "name": "scientific-bounty-award-publication-guard",
+  "version": "1.0.0",
+  "description": "Deterministic publication readiness guard for scientific bounty award announcements.",
+  "type": "module",
+  "scripts": {
+    "test": "node test/awardPublicationGuard.test.js",
+    "demo": "node scripts/demo.js"
+  },
+  "license": "MIT"
+}

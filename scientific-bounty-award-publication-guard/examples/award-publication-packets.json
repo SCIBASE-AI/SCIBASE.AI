@@ -1,0 +1,119 @@
+[
+  {
+    "challengeId": "biomarker-single-cell-2026",
+    "award": {
+      "id": "award-ready-001",
+      "state": "awarded",
+      "sponsorApproved": true,
+      "splits": [
+        {
+          "recipientId": "lab-alpha",
+          "percent": 60,
+          "namedConsent": true,
+          "acceptedPublicationTerms": true
+        },
+        {
+          "recipientId": "researcher-beta",
+          "percent": 40,
+          "namedConsent": true,
+          "acceptedPublicationTerms": true
+        }
+      ]
+    },
+    "payout": {
+      "state": "released"
+    },
+    "appeal": {
+      "closesAt": "2026-06-01T00:00:00Z"
+    },
+    "ip": {
+      "policy": "transfer_on_payout",
+      "transferSigned": true
+    },
+    "publication": {
+      "mode": "public_challenge_public_award",
+      "namedWinners": true,
+      "embargoUntil": "2026-06-05T00:00:00Z"
+    },
+    "reproducibilityManifest": {
+      "artifactHash": "sha256:11c6db0f84b4f7f8f7fa6b8da6c89bda61b24f71d111bd3d31ec2d557ec9b9a0",
+      "resultDigest": "ranked model package reproduced with held-out validation report"
+    }
+  },
+  {
+    "challengeId": "climate-forecast-region-pack",
+    "award": {
+      "id": "award-hold-002",
+      "state": "awarded",
+      "sponsorApproved": true,
+      "splits": [
+        {
+          "recipientId": "team-gamma",
+          "percent": 100,
+          "namedConsent": true,
+          "acceptedPublicationTerms": true
+        }
+      ]
+    },
+    "payout": {
+      "state": "authorized"
+    },
+    "appeal": {
+      "closesAt": "2026-06-10T00:00:00Z"
+    },
+    "ip": {
+      "policy": "open_license",
+      "licenseId": "CC-BY-4.0"
+    },
+    "publication": {
+      "mode": "public_challenge_public_award",
+      "namedWinners": true,
+      "embargoUntil": "2026-06-20T00:00:00Z"
+    },
+    "reproducibilityManifest": {
+      "artifactHash": "sha256:6b1b9d9487c8be834df51d1bc67b0df4c475a4329a077ad10b7cf8a198cb9212",
+      "resultDigest": "forecast benchmark notebook reproduced with station holdout"
+    }
+  },
+  {
+    "challengeId": "private-quantum-noise-reduction",
+    "award": {
+      "id": "award-block-003",
+      "state": "awarded",
+      "sponsorApproved": true,
+      "splits": [
+        {
+          "recipientId": "solver-delta",
+          "percent": 70,
+          "namedConsent": true,
+          "acceptedPublicationTerms": true
+        },
+        {
+          "recipientId": "solver-epsilon",
+          "percent": 20,
+          "namedConsent": false,
+          "acceptedPublicationTerms": false
+        }
+      ]
+    },
+    "payout": {
+      "state": "pending"
+    },
+    "appeal": {
+      "waived": true
+    },
+    "ip": {
+      "policy": "transfer_on_payout",
+      "transferSigned": false
+    },
+    "publication": {
+      "mode": "private_challenge_public_award",
+      "namedWinners": true,
+      "redactionApproved": false
+    },
+    "reproducibilityManifest": {
+      "artifactHash": "",
+      "resultDigest": ""
+    }
+  }
+]

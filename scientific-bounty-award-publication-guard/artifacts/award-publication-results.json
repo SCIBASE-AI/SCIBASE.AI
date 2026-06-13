@@ -1,0 +1,258 @@
+[
+  {
+    "challengeId": "biomarker-single-cell-2026",
+    "awardId": "award-ready-001",
+    "decision": "RELEASE_PUBLICATION",
+    "checkedAt": "2026-06-12T00:00:00.000Z",
+    "summary": {
+      "blocks": 0,
+      "reviews": 0,
+      "passes": 9
+    },
+    "findings": [
+      {
+        "code": "award_decision_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Award decision and sponsor approval are present.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "payout_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Payout state allows public award publication.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "appeal_window_closed",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Appeal window is closed.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "ip_terms_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "IP or license terms allow publication.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "embargo_clear",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "No active embargo blocks publication.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "privacy_release_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Publication privacy mode is satisfied.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "named_consent_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "All named recipients consented to public announcement.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "award_splits_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Award splits and recipient publication terms are complete.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "reproducibility_manifest_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Reproducibility manifest has public claim evidence.",
+        "remediation": "No remediation required."
+      }
+    ],
+    "audit": {
+      "publicMode": "public_challenge_public_award",
+      "payoutState": "released",
+      "ipPolicy": "transfer_on_payout",
+      "embargoUntil": "2026-06-05T00:00:00Z",
+      "recipientCount": 2
+    }
+  },
+  {
+    "challengeId": "climate-forecast-region-pack",
+    "awardId": "award-hold-002",
+    "decision": "HOLD_FOR_REVIEW",
+    "checkedAt": "2026-06-12T00:00:00.000Z",
+    "summary": {
+      "blocks": 0,
+      "reviews": 1,
+      "passes": 8
+    },
+    "findings": [
+      {
+        "code": "award_decision_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Award decision and sponsor approval are present.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "payout_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Payout state allows public award publication.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "appeal_window_closed",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Appeal window is closed.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "ip_terms_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "IP or license terms allow publication.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "embargo_active",
+        "severity": "review",
+        "hardBlock": false,
+        "message": "Publication embargo remains active until 2026-06-20T00:00:00.000Z.",
+        "remediation": "Hold public publication until the embargo expires."
+      },
+      {
+        "code": "privacy_release_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Publication privacy mode is satisfied.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "named_consent_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "All named recipients consented to public announcement.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "award_splits_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Award splits and recipient publication terms are complete.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "reproducibility_manifest_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Reproducibility manifest has public claim evidence.",
+        "remediation": "No remediation required."
+      }
+    ],
+    "audit": {
+      "publicMode": "public_challenge_public_award",
+      "payoutState": "authorized",
+      "ipPolicy": "open_license",
+      "embargoUntil": "2026-06-20T00:00:00Z",
+      "recipientCount": 1
+    }
+  },
+  {
+    "challengeId": "private-quantum-noise-reduction",
+    "awardId": "award-block-003",
+    "decision": "BLOCK_PUBLICATION",
+    "checkedAt": "2026-06-12T00:00:00.000Z",
+    "summary": {
+      "blocks": 5,
+      "reviews": 2,
+      "passes": 3
+    },
+    "findings": [
+      {
+        "code": "award_decision_ready",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Award decision and sponsor approval are present.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "payout_not_authorized",
+        "severity": "block",
+        "hardBlock": true,
+        "message": "Public winner publication requires an authorized, released, or paid payout state.",
+        "remediation": "Move payout to authorized, released, or paid before publishing named winners."
+      },
+      {
+        "code": "appeal_waived",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "Appeal window was explicitly waived.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "ip_transfer_incomplete",
+        "severity": "block",
+        "hardBlock": true,
+        "message": "IP transfer publication requires signed handoff and released or paid payout.",
+        "remediation": "Complete signed IP handoff and release or pay the payout before publication."
+      },
+      {
+        "code": "embargo_clear",
+        "severity": "pass",
+        "hardBlock": false,
+        "message": "No active embargo blocks publication.",
+        "remediation": "No remediation required."
+      },
+      {
+        "code": "private_content_unredacted",
+        "severity": "block",
+        "hardBlock": true,
+        "message": "Private or NDA challenge content needs approved public redaction before award publication.",
+        "remediation": "Approve a public redaction packet for private challenge content."
+      },
+      {
+        "code": "named_consent_missing",
+        "severity": "review",
+        "hardBlock": false,
+        "message": "Named publication consent missing for solver-epsilon.",
+        "remediation": "Collect named publication consent or publish anonymized winners."
+      },
+      {
+        "code": "award_splits_invalid",
+        "severity": "block",
+        "hardBlock": true,
+        "message": "Award split percentages must sum to 100; received 90.",
+        "remediation": "Correct award splits so recipient percentages total exactly 100."
+      },
+      {
+        "code": "recipient_terms_missing",
+        "severity": "block",
+        "hardBlock": true,
+        "message": "Publication terms missing for solver-epsilon.",
+        "remediation": "Collect publication terms from each payout recipient."
+      },
+      {
+        "code": "reproducibility_manifest_incomplete",
+        "severity": "review",
+        "hardBlock": false,
+        "message": "Public claims should include artifact hash and result digest.",
+        "remediation": "Attach artifact hash and result digest before publishing technical claims."
+      }
+    ],
+    "audit": {
+      "publicMode": "private_challenge_public_award",
+      "payoutState": "pending",
+      "ipPolicy": "transfer_on_payout",
+      "embargoUntil": null,
+      "recipientCount": 2
+    }
+  }
+]

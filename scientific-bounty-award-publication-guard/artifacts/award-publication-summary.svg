@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <rect width="900" height="360" fill="#f8fafc"/>
+  <text x="40" y="58" class="title">Scientific Bounty Award Publication Guard</text>
+  <text x="40" y="92" class="meta">blocks=5 reviews=3 passes=20</text>
+  
+      <text x="40" y="128" class="label">biomarker-single-cell-2026</text>
+      <rect x="520" y="102" width="250" height="36" rx="6" fill="#15803d" />
+      <text x="545" y="125" class="decision">RELEASE_PUBLICATION</text>
+
+      <text x="40" y="192" class="label">climate-forecast-region-pack</text>
+      <rect x="520" y="166" width="250" height="36" rx="6" fill="#b45309" />
+      <text x="545" y="189" class="decision">HOLD_FOR_REVIEW</text>
+
+      <text x="40" y="256" class="label">private-quantum-noise-reduction</text>
+      <rect x="520" y="230" width="250" height="36" rx="6" fill="#b91c1c" />
+      <text x="545" y="253" class="decision">BLOCK_PUBLICATION</text>
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #0f172a; }
+    .meta { font: 16px Arial, sans-serif; fill: #475569; }
+    .label { font: 16px Arial, sans-serif; fill: #111827; }
+    .decision { font: 700 13px Arial, sans-serif; fill: white; }
+  </style>
+</svg>

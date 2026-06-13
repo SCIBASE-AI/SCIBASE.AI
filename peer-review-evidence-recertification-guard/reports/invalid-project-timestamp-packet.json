@@ -1,0 +1,72 @@
+{
+  "projectId": "project-invalid-project-timestamp",
+  "generatedAt": "not-a-date",
+  "reviewDecisions": [
+    {
+      "id": "review-current-with-invalid-project-time",
+      "artifactId": "analysis-code",
+      "mode": "public",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+      "status": "current",
+      "reasons": [],
+      "submittedAt": "2026-05-16T11:00:00Z",
+      "recertifiedAt": null,
+      "evidenceDigest": "sha256:code-v3",
+      "currentArtifactDigest": "sha256:code-v3"
+    }
+  ],
+  "commentDecisions": [],
+  "reputationActions": [
+    {
+      "id": "review-current-with-invalid-project-time",
+      "appliesTo": "reviewer:orcid:0000-0002-reviewer-c",
+      "originalDelta": 14,
+      "reasonDigest": "sha256:c7ed235e8e937666bff4591de0e593412b4869b6c410102db6a03933f9e63139",
+      "action": "apply-current-delta",
+      "effectiveDelta": 14
+    }
+  ],
+  "recertificationTasks": [
+    {
+      "id": "recertify-project-timestamp",
+      "kind": "project-evidence",
+      "projectId": "project-invalid-project-timestamp",
+      "priority": "high",
+      "requiredAction": "repair-project-timestamp-before-reputation-update",
+      "reasons": [
+        "invalid-project-timestamp"
+      ]
+    }
+  ],
+  "timelinePacket": {
+    "projectId": "project-invalid-project-timestamp",
+    "generatedAt": null,
+    "events": [
+      {
+        "type": "project-recertification-required",
+        "projectId": "project-invalid-project-timestamp",
+        "status": "recertification-required",
+        "reasons": [
+          "invalid-project-timestamp"
+        ]
+      },
+      {
+        "type": "review-evidence-current",
+        "reviewId": "review-current-with-invalid-project-time",
+        "artifactId": "analysis-code",
+        "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+        "status": "current",
+        "reasons": []
+      }
+    ],
+    "auditDigest": "sha256:521854ec6b808c822229f876bbdf09127709d5d3606763560e9602a18145de1e"
+  },
+  "summary": {
+    "totalReviews": 1,
+    "staleReviews": 0,
+    "staleComments": 0,
+    "staleProjectEvidence": 1,
+    "frozenReputationDelta": 0,
+    "recommendedAction": "block-reputation-update"
+  }
+}

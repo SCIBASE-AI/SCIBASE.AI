@@ -1,0 +1,22 @@
+{
+  "projectId": "project-empty-reputation-evidence",
+  "generatedAt": "2026-05-30T12:00:00Z",
+  "reviewDecisions": [],
+  "commentDecisions": [],
+  "reputationActions": [],
+  "recertificationTasks": [],
+  "timelinePacket": {
+    "projectId": "project-empty-reputation-evidence",
+    "generatedAt": "2026-05-30T12:00:00Z",
+    "events": [],
+    "auditDigest": "sha256:c07bcfcdaf03695001e50cd90924196dc27efbfe292e69e25dd870c3832cf3c6"
+  },
+  "summary": {
+    "totalReviews": 0,
+    "staleReviews": 0,
+    "staleComments": 0,
+    "staleProjectEvidence": 0,
+    "frozenReputationDelta": 0,
+    "recommendedAction": "allow-reputation-update"
+  }
+}

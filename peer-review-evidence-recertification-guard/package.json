@@ -1,0 +1,13 @@
+{
+  "name": "peer-review-evidence-recertification-guard",
+  "version": "1.0.0",
+  "description": "Dependency-free peer review evidence recertification guard for SCIBASE community reputation.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "python make-demo-video.py",
+    "check": "npm test && npm run demo && npm run video"
+  }
+}

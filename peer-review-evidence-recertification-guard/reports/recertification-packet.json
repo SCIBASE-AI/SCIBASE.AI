@@ -1,0 +1,278 @@
+{
+  "projectId": "project-alpha-replication",
+  "generatedAt": "2026-05-28T06:00:00Z",
+  "reviewDecisions": [
+    {
+      "id": "review-dataset-methods",
+      "artifactId": "dataset-cohort-table",
+      "mode": "public",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-a",
+      "status": "recertification-required",
+      "reasons": [
+        "artifact-digest-changed",
+        "artifact-updated-after-review"
+      ],
+      "submittedAt": "2026-05-18T09:00:00Z",
+      "recertifiedAt": null,
+      "evidenceDigest": "sha256:dataset-v1",
+      "currentArtifactDigest": "sha256:dataset-v2"
+    },
+    {
+      "id": "review-notebook-methods",
+      "artifactId": "notebook-methods",
+      "mode": "semi-private",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-b",
+      "status": "current",
+      "reasons": [],
+      "submittedAt": "2026-05-12T10:00:00Z",
+      "recertifiedAt": null,
+      "evidenceDigest": "sha256:notebook-v1",
+      "currentArtifactDigest": "sha256:notebook-v1"
+    },
+    {
+      "id": "review-missing-public-reviewer",
+      "artifactId": "notebook-methods",
+      "mode": "public",
+      "reviewer": "reviewer:unverified",
+      "status": "recertification-required",
+      "reasons": [
+        "reviewer-identity-missing"
+      ],
+      "submittedAt": "2026-05-12T10:30:00Z",
+      "recertifiedAt": null,
+      "evidenceDigest": "sha256:notebook-v1",
+      "currentArtifactDigest": "sha256:notebook-v1"
+    },
+    {
+      "id": "review-code-recertified",
+      "artifactId": "analysis-code",
+      "mode": "public",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+      "status": "current",
+      "reasons": [],
+      "submittedAt": "2026-05-16T11:00:00Z",
+      "recertifiedAt": "2026-05-21T13:00:00Z",
+      "evidenceDigest": "sha256:code-v3",
+      "currentArtifactDigest": "sha256:code-v3"
+    },
+    {
+      "id": "review-blind-data",
+      "artifactId": "dataset-cohort-table",
+      "mode": "double-blind",
+      "reviewer": "anonymous-reviewer-7",
+      "status": "recertification-required",
+      "reasons": [
+        "artifact-digest-changed",
+        "artifact-updated-after-review"
+      ],
+      "submittedAt": "2026-05-17T10:30:00Z",
+      "recertifiedAt": null,
+      "evidenceDigest": "sha256:dataset-v1",
+      "currentArtifactDigest": "sha256:dataset-v2"
+    }
+  ],
+  "commentDecisions": [
+    {
+      "id": "comment-code-line-41",
+      "artifactId": "analysis-code",
+      "status": "recertification-required",
+      "anchorStatus": "stale",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-b",
+      "reasons": [
+        "artifact-digest-changed",
+        "artifact-updated-after-comment",
+        "anchor-line-shifted-after-comment"
+      ],
+      "anchor": {
+        "selector": "src/analyze.py#L41",
+        "line": 41
+      }
+    }
+  ],
+  "reputationActions": [
+    {
+      "id": "review-dataset-methods",
+      "appliesTo": "reviewer:orcid:0000-0002-reviewer-a",
+      "originalDelta": 18,
+      "reasonDigest": "sha256:975baffcab1e852373e1ae5295c5c3dcc68f182386d1d96e938dd9ac7cb4f32c",
+      "action": "freeze-until-recertified",
+      "effectiveDelta": 0
+    },
+    {
+      "id": "review-notebook-methods",
+      "appliesTo": "reviewer:orcid:0000-0002-reviewer-b",
+      "originalDelta": 9,
+      "reasonDigest": "sha256:7cd90b9073f5b1c119338335d36d599717fdf5567412ddf9b702d2f2233f03a4",
+      "action": "apply-current-delta",
+      "effectiveDelta": 9
+    },
+    {
+      "id": "review-missing-public-reviewer",
+      "appliesTo": "reviewer:unverified",
+      "originalDelta": 12,
+      "reasonDigest": "sha256:13d8651c7be17689702d06eeea23841ddd36bd4ec3ff039ab97142bc515bb797",
+      "action": "freeze-until-recertified",
+      "effectiveDelta": 0
+    },
+    {
+      "id": "review-code-recertified",
+      "appliesTo": "reviewer:orcid:0000-0002-reviewer-c",
+      "originalDelta": 14,
+      "reasonDigest": "sha256:da4c076128fa02684b5e2ab3fa52a8628664976d7d3ec6b2b8b64066ddae70b4",
+      "action": "apply-current-delta",
+      "effectiveDelta": 14
+    },
+    {
+      "id": "review-blind-data",
+      "appliesTo": "anonymous-reviewer-7",
+      "originalDelta": 11,
+      "reasonDigest": "sha256:ca5d7918d21f6ed2f218a30b1933af1f11b5b80a06d49f920802b73181218907",
+      "action": "freeze-until-recertified",
+      "effectiveDelta": 0
+    }
+  ],
+  "recertificationTasks": [
+    {
+      "id": "recertify-review-dataset-methods",
+      "kind": "peer-review",
+      "reviewId": "review-dataset-methods",
+      "artifactId": "dataset-cohort-table",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-a",
+      "priority": "high",
+      "requiredAction": "confirm-review-still-applies-to-current-artifact",
+      "blockedProfileUpdates": [
+        "reputation-score",
+        "leaderboards",
+        "badges"
+      ],
+      "reasons": [
+        "artifact-digest-changed",
+        "artifact-updated-after-review"
+      ]
+    },
+    {
+      "id": "recertify-review-missing-public-reviewer",
+      "kind": "peer-review",
+      "reviewId": "review-missing-public-reviewer",
+      "artifactId": "notebook-methods",
+      "reviewer": "reviewer:unverified",
+      "priority": "normal",
+      "requiredAction": "confirm-review-still-applies-to-current-artifact",
+      "blockedProfileUpdates": [
+        "reputation-score",
+        "leaderboards",
+        "badges"
+      ],
+      "reasons": [
+        "reviewer-identity-missing"
+      ]
+    },
+    {
+      "id": "recertify-review-blind-data",
+      "kind": "peer-review",
+      "reviewId": "review-blind-data",
+      "artifactId": "dataset-cohort-table",
+      "reviewer": "anonymous-reviewer-7",
+      "priority": "normal",
+      "requiredAction": "confirm-review-still-applies-to-current-artifact",
+      "blockedProfileUpdates": [
+        "reputation-score",
+        "leaderboards",
+        "badges"
+      ],
+      "reasons": [
+        "artifact-digest-changed",
+        "artifact-updated-after-review"
+      ]
+    },
+    {
+      "id": "recertify-comment-code-line-41",
+      "kind": "inline-comment",
+      "commentId": "comment-code-line-41",
+      "artifactId": "analysis-code",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-b",
+      "priority": "normal",
+      "requiredAction": "confirm-comment-anchor-still-matches-current-artifact",
+      "reasons": [
+        "artifact-digest-changed",
+        "artifact-updated-after-comment",
+        "anchor-line-shifted-after-comment"
+      ]
+    }
+  ],
+  "timelinePacket": {
+    "projectId": "project-alpha-replication",
+    "generatedAt": "2026-05-28T06:00:00Z",
+    "events": [
+      {
+        "type": "review-recertification-required",
+        "reviewId": "review-dataset-methods",
+        "artifactId": "dataset-cohort-table",
+        "reviewer": "reviewer:orcid:0000-0002-reviewer-a",
+        "status": "recertification-required",
+        "reasons": [
+          "artifact-digest-changed",
+          "artifact-updated-after-review"
+        ]
+      },
+      {
+        "type": "review-evidence-current",
+        "reviewId": "review-notebook-methods",
+        "artifactId": "notebook-methods",
+        "reviewer": "reviewer:orcid:0000-0002-reviewer-b",
+        "status": "current",
+        "reasons": []
+      },
+      {
+        "type": "review-recertification-required",
+        "reviewId": "review-missing-public-reviewer",
+        "artifactId": "notebook-methods",
+        "reviewer": "reviewer:unverified",
+        "status": "recertification-required",
+        "reasons": [
+          "reviewer-identity-missing"
+        ]
+      },
+      {
+        "type": "review-evidence-current",
+        "reviewId": "review-code-recertified",
+        "artifactId": "analysis-code",
+        "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+        "status": "current",
+        "reasons": []
+      },
+      {
+        "type": "review-recertification-required",
+        "reviewId": "review-blind-data",
+        "artifactId": "dataset-cohort-table",
+        "reviewer": "anonymous-reviewer-7",
+        "status": "recertification-required",
+        "reasons": [
+          "artifact-digest-changed",
+          "artifact-updated-after-review"
+        ]
+      },
+      {
+        "type": "inline-comment-recertification-required",
+        "commentId": "comment-code-line-41",
+        "artifactId": "analysis-code",
+        "reviewer": "reviewer:orcid:0000-0002-reviewer-b",
+        "status": "recertification-required",
+        "reasons": [
+          "artifact-digest-changed",
+          "artifact-updated-after-comment",
+          "anchor-line-shifted-after-comment"
+        ]
+      }
+    ],
+    "auditDigest": "sha256:1b0987a020a04c8f099d4b2b06835c92e4a97862b9de96d13834e3ca4e62107f"
+  },
+  "summary": {
+    "totalReviews": 5,
+    "staleReviews": 3,
+    "staleComments": 1,
+    "staleProjectEvidence": 0,
+    "frozenReputationDelta": 41,
+    "recommendedAction": "block-reputation-update"
+  }
+}

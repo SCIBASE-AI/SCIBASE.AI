@@ -1,0 +1,75 @@
+{
+  "projectId": "unidentified-project",
+  "generatedAt": null,
+  "reviewDecisions": [
+    {
+      "id": "malformed-project-evidence",
+      "artifactId": null,
+      "mode": null,
+      "reviewer": "reviewer:unverified",
+      "status": "recertification-required",
+      "reasons": [
+        "malformed-project-evidence"
+      ],
+      "submittedAt": null,
+      "recertifiedAt": null,
+      "evidenceDigest": null,
+      "currentArtifactDigest": null
+    }
+  ],
+  "commentDecisions": [],
+  "reputationActions": [
+    {
+      "id": "malformed-project-evidence",
+      "appliesTo": "reviewer:unverified",
+      "originalDelta": 0,
+      "reasonDigest": "sha256:d9400edbca854122715c4c474a9bcf681f68fd16de7071ccbff7ef9f721b353a",
+      "action": "freeze-until-recertified",
+      "effectiveDelta": 0
+    }
+  ],
+  "recertificationTasks": [
+    {
+      "id": "recertify-malformed-project-evidence",
+      "kind": "peer-review",
+      "reviewId": "malformed-project-evidence",
+      "artifactId": null,
+      "reviewer": "reviewer:unverified",
+      "priority": "normal",
+      "requiredAction": "confirm-review-still-applies-to-current-artifact",
+      "blockedProfileUpdates": [
+        "reputation-score",
+        "leaderboards",
+        "badges"
+      ],
+      "reasons": [
+        "malformed-project-evidence"
+      ]
+    }
+  ],
+  "timelinePacket": {
+    "projectId": "unidentified-project",
+    "generatedAt": null,
+    "events": [
+      {
+        "type": "review-recertification-required",
+        "reviewId": "malformed-project-evidence",
+        "artifactId": null,
+        "reviewer": "reviewer:unverified",
+        "status": "recertification-required",
+        "reasons": [
+          "malformed-project-evidence"
+        ]
+      }
+    ],
+    "auditDigest": "sha256:0178d93df04b1943332209616d325b4b994d5a1240aa53304ff46f0b9ce7ad6d"
+  },
+  "summary": {
+    "totalReviews": 1,
+    "staleReviews": 1,
+    "staleComments": 0,
+    "staleProjectEvidence": 0,
+    "frozenReputationDelta": 0,
+    "recommendedAction": "block-reputation-update"
+  }
+}

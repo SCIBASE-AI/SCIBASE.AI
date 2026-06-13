@@ -1,0 +1,75 @@
+{
+  "projectId": "project-backdated-recertification",
+  "generatedAt": "2026-05-30T12:45:00Z",
+  "reviewDecisions": [
+    {
+      "id": "review-backdated-recertification",
+      "artifactId": "analysis-code",
+      "mode": "public",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+      "status": "recertification-required",
+      "reasons": [
+        "recertification-before-submission"
+      ],
+      "submittedAt": "2026-05-16T11:00:00Z",
+      "recertifiedAt": "2026-05-15T11:00:00Z",
+      "evidenceDigest": "sha256:code-v3",
+      "currentArtifactDigest": "sha256:code-v3"
+    }
+  ],
+  "commentDecisions": [],
+  "reputationActions": [
+    {
+      "id": "review-backdated-recertification",
+      "appliesTo": "reviewer:orcid:0000-0002-reviewer-c",
+      "originalDelta": 14,
+      "reasonDigest": "sha256:c1a5ff09268111ff8e15c87ba929737f1596a1f0d91f03fb306113fbdbb6db2b",
+      "action": "freeze-until-recertified",
+      "effectiveDelta": 0
+    }
+  ],
+  "recertificationTasks": [
+    {
+      "id": "recertify-review-backdated-recertification",
+      "kind": "peer-review",
+      "reviewId": "review-backdated-recertification",
+      "artifactId": "analysis-code",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+      "priority": "normal",
+      "requiredAction": "confirm-review-still-applies-to-current-artifact",
+      "blockedProfileUpdates": [
+        "reputation-score",
+        "leaderboards",
+        "badges"
+      ],
+      "reasons": [
+        "recertification-before-submission"
+      ]
+    }
+  ],
+  "timelinePacket": {
+    "projectId": "project-backdated-recertification",
+    "generatedAt": "2026-05-30T12:45:00Z",
+    "events": [
+      {
+        "type": "review-recertification-required",
+        "reviewId": "review-backdated-recertification",
+        "artifactId": "analysis-code",
+        "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+        "status": "recertification-required",
+        "reasons": [
+          "recertification-before-submission"
+        ]
+      }
+    ],
+    "auditDigest": "sha256:de72a608485f8c7a808f5088e21fae32ba50a9cffb49bc66b399b27e49b3fbde"
+  },
+  "summary": {
+    "totalReviews": 1,
+    "staleReviews": 1,
+    "staleComments": 0,
+    "staleProjectEvidence": 0,
+    "frozenReputationDelta": 14,
+    "recommendedAction": "block-reputation-update"
+  }
+}

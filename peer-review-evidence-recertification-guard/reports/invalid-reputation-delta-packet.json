@@ -1,0 +1,75 @@
+{
+  "projectId": "project-invalid-reputation-delta",
+  "generatedAt": "2026-05-30T12:30:00Z",
+  "reviewDecisions": [
+    {
+      "id": "review-invalid-reputation-delta",
+      "artifactId": "analysis-code",
+      "mode": "public",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+      "status": "recertification-required",
+      "reasons": [
+        "invalid-reputation-delta"
+      ],
+      "submittedAt": "2026-05-16T11:00:00Z",
+      "recertifiedAt": null,
+      "evidenceDigest": "sha256:code-v3",
+      "currentArtifactDigest": "sha256:code-v3"
+    }
+  ],
+  "commentDecisions": [],
+  "reputationActions": [
+    {
+      "id": "review-invalid-reputation-delta",
+      "appliesTo": "reviewer:orcid:0000-0002-reviewer-c",
+      "originalDelta": 0,
+      "reasonDigest": "sha256:11295498de075b5d18c63d5855cdc6b15c30f825ba0f68edad125c3f4bbfe605",
+      "action": "freeze-until-recertified",
+      "effectiveDelta": 0
+    }
+  ],
+  "recertificationTasks": [
+    {
+      "id": "recertify-review-invalid-reputation-delta",
+      "kind": "peer-review",
+      "reviewId": "review-invalid-reputation-delta",
+      "artifactId": "analysis-code",
+      "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+      "priority": "normal",
+      "requiredAction": "confirm-review-still-applies-to-current-artifact",
+      "blockedProfileUpdates": [
+        "reputation-score",
+        "leaderboards",
+        "badges"
+      ],
+      "reasons": [
+        "invalid-reputation-delta"
+      ]
+    }
+  ],
+  "timelinePacket": {
+    "projectId": "project-invalid-reputation-delta",
+    "generatedAt": "2026-05-30T12:30:00Z",
+    "events": [
+      {
+        "type": "review-recertification-required",
+        "reviewId": "review-invalid-reputation-delta",
+        "artifactId": "analysis-code",
+        "reviewer": "reviewer:orcid:0000-0002-reviewer-c",
+        "status": "recertification-required",
+        "reasons": [
+          "invalid-reputation-delta"
+        ]
+      }
+    ],
+    "auditDigest": "sha256:a643983186a0dc6feb3f8e4ca41621c20ce5cb9f9db6c9cfc4a1d52025bae1a2"
+  },
+  "summary": {
+    "totalReviews": 1,
+    "staleReviews": 1,
+    "staleComments": 0,
+    "staleProjectEvidence": 0,
+    "frozenReputationDelta": 0,
+    "recommendedAction": "block-reputation-update"
+  }
+}

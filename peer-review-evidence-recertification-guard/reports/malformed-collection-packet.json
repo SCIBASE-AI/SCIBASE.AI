@@ -1,0 +1,109 @@
+{
+  "projectId": "project-malformed-review-comment-collections",
+  "generatedAt": "2026-05-30T12:40:00Z",
+  "reviewDecisions": [
+    {
+      "id": "malformed-review-list",
+      "artifactId": null,
+      "mode": null,
+      "reviewer": "reviewer:unverified",
+      "status": "recertification-required",
+      "reasons": [
+        "malformed-review-list"
+      ],
+      "submittedAt": null,
+      "recertifiedAt": null,
+      "evidenceDigest": null,
+      "currentArtifactDigest": null
+    }
+  ],
+  "commentDecisions": [
+    {
+      "id": "malformed-inline-comment-list",
+      "artifactId": null,
+      "status": "recertification-required",
+      "anchorStatus": "missing",
+      "reviewer": "reviewer:unverified",
+      "reasons": [
+        "malformed-inline-comment-list"
+      ],
+      "anchor": null
+    }
+  ],
+  "reputationActions": [
+    {
+      "id": "malformed-review-list",
+      "appliesTo": "reviewer:unverified",
+      "originalDelta": 0,
+      "reasonDigest": "sha256:8098ca1c3e969283b6c57e58b3ac75f38c35eb5685fe84ec3a2e1e2352a989e7",
+      "action": "freeze-until-recertified",
+      "effectiveDelta": 0
+    }
+  ],
+  "recertificationTasks": [
+    {
+      "id": "recertify-malformed-review-list",
+      "kind": "peer-review",
+      "reviewId": "malformed-review-list",
+      "artifactId": null,
+      "reviewer": "reviewer:unverified",
+      "priority": "normal",
+      "requiredAction": "confirm-review-still-applies-to-current-artifact",
+      "blockedProfileUpdates": [
+        "reputation-score",
+        "leaderboards",
+        "badges"
+      ],
+      "reasons": [
+        "malformed-review-list"
+      ]
+    },
+    {
+      "id": "recertify-malformed-inline-comment-list",
+      "kind": "inline-comment",
+      "commentId": "malformed-inline-comment-list",
+      "artifactId": null,
+      "reviewer": "reviewer:unverified",
+      "priority": "normal",
+      "requiredAction": "confirm-comment-anchor-still-matches-current-artifact",
+      "reasons": [
+        "malformed-inline-comment-list"
+      ]
+    }
+  ],
+  "timelinePacket": {
+    "projectId": "project-malformed-review-comment-collections",
+    "generatedAt": "2026-05-30T12:40:00Z",
+    "events": [
+      {
+        "type": "review-recertification-required",
+        "reviewId": "malformed-review-list",
+        "artifactId": null,
+        "reviewer": "reviewer:unverified",
+        "status": "recertification-required",
+        "reasons": [
+          "malformed-review-list"
+        ]
+      },
+      {
+        "type": "inline-comment-recertification-required",
+        "commentId": "malformed-inline-comment-list",
+        "artifactId": null,
+        "reviewer": "reviewer:unverified",
+        "status": "recertification-required",
+        "reasons": [
+          "malformed-inline-comment-list"
+        ]
+      }
+    ],
+    "auditDigest": "sha256:f28929f692213316212053173ed8b0afc2892ae5d7dca1d1062b9905587f4d5a"
+  },
+  "summary": {
+    "totalReviews": 1,
+    "staleReviews": 1,
+    "staleComments": 1,
+    "staleProjectEvidence": 0,
+    "frozenReputationDelta": 0,
+    "recommendedAction": "block-reputation-update"
+  }
+}

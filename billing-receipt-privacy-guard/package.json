@@ -1,0 +1,13 @@
+{
+  "name": "billing-receipt-privacy-guard",
+  "version": "1.0.0",
+  "description": "Dependency-free billing receipt privacy guard for SCIBASE revenue infrastructure.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "python make-demo-video.py",
+    "check": "npm test && npm run demo && npm run video"
+  }
+}

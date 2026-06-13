@@ -1,0 +1,13 @@
+{
+  "batchId": "billing-empty-review-20",
+  "generatedAt": "2026-05-30T12:00:00Z",
+  "receipts": [],
+  "remediationActions": [],
+  "summary": {
+    "deliverableReceipts": 0,
+    "heldReceipts": 0,
+    "remediationActions": 0,
+    "totalCentsReviewed": 0
+  },
+  "auditDigest": "sha256:600daa8274aae6ef49d5ea13eebb7841666aad4046ee736fe944e692d15f238a"
+}

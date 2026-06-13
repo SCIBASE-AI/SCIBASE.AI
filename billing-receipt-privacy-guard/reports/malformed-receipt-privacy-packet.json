@@ -1,0 +1,70 @@
+{
+  "batchId": "billing-malformed-fields-review-20",
+  "generatedAt": "2026-05-30T12:15:00Z",
+  "receipts": [
+    {
+      "id": "receipt-malformed-numeric-fields",
+      "invoiceId": "inv-malformed-numeric-fields",
+      "customerId": "customer-lab-013",
+      "decision": "hold-for-finance-review",
+      "findings": [
+        "invalid-billing-amount",
+        "invalid-billing-quantity"
+      ],
+      "removedMetadataKeys": [],
+      "providerMetadata": {
+        "accountRef": "acct-lab-013",
+        "billingPeriod": "2026-05",
+        "invoiceRef": "inv-malformed-numeric-fields",
+        "plan": "lab-pro"
+      },
+      "redactedLineItems": [
+        {
+          "id": "line-malformed-quantity",
+          "description": "Research platform service",
+          "usageCategory": "subscription",
+          "findings": [
+            "invalid-billing-amount",
+            "invalid-billing-quantity"
+          ]
+        }
+      ],
+      "customerCopy": {
+        "receiptId": "receipt-malformed-numeric-fields",
+        "customerId": "customer-lab-013",
+        "currency": "USD",
+        "totalCents": null,
+        "lineItems": [
+          {
+            "id": "line-malformed-quantity",
+            "description": "Research platform service",
+            "usageCategory": "subscription",
+            "quantity": null,
+            "unit": "month",
+            "amountCents": null
+          }
+        ]
+      },
+      "auditDigest": "sha256:4a5ec7c1505990fe77bed26177f50c19d29b2cd8179bae3f19c95478af361100"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-receipt-malformed-numeric-fields",
+      "receiptId": "receipt-malformed-numeric-fields",
+      "action": "repair-malformed-billing-fields-before-delivery",
+      "priority": "normal",
+      "findings": [
+        "invalid-billing-amount",
+        "invalid-billing-quantity"
+      ]
+    }
+  ],
+  "summary": {
+    "deliverableReceipts": 0,
+    "heldReceipts": 1,
+    "remediationActions": 1,
+    "totalCentsReviewed": 0
+  },
+  "auditDigest": "sha256:b2b35b8d83e1bf7fab9388e8086eb7f2cc5fc5ad226bb2b9e80203b5e2087066"
+}

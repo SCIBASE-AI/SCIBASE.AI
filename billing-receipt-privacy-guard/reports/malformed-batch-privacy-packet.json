@@ -1,0 +1,44 @@
+{
+  "batchId": "malformed-billing-batch",
+  "generatedAt": null,
+  "receipts": [
+    {
+      "id": "receipt-malformed-batch",
+      "invoiceId": "invoice-malformed-batch",
+      "customerId": "customer-malformed-batch",
+      "decision": "hold-for-finance-review",
+      "findings": [
+        "malformed-billing-batch"
+      ],
+      "removedMetadataKeys": [],
+      "providerMetadata": {},
+      "redactedLineItems": [],
+      "customerCopy": {
+        "receiptId": "receipt-malformed-batch",
+        "customerId": "customer-malformed-batch",
+        "currency": "XXX",
+        "totalCents": null,
+        "lineItems": []
+      },
+      "auditDigest": "sha256:ccb7ffc968dcaf5a14a99bd389d37886c72f53869a975793dcb8b224a59060f7"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-receipt-malformed-batch",
+      "receiptId": "receipt-malformed-batch",
+      "action": "repair-malformed-billing-fields-before-delivery",
+      "priority": "normal",
+      "findings": [
+        "malformed-billing-batch"
+      ]
+    }
+  ],
+  "summary": {
+    "deliverableReceipts": 0,
+    "heldReceipts": 1,
+    "remediationActions": 1,
+    "totalCentsReviewed": 0
+  },
+  "auditDigest": "sha256:16346971184748261cc19821ce6f9d45113eb89770d9406f9b0ac3379d2bddd5"
+}

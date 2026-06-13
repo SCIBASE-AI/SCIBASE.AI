@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#102027"/>
+  <rect x="54" y="58" width="1172" height="604" rx="16" fill="#17313a" stroke="#9bd67a" stroke-width="4"/>
+  <text x="96" y="134" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">Billing Receipt Privacy Guard</text>
+  <text x="96" y="208" fill="#dff5d5" font-family="Arial, sans-serif" font-size="28">Deliverable receipts: 1</text>
+  <text x="96" y="258" fill="#dff5d5" font-family="Arial, sans-serif" font-size="28">Held receipts: 1</text>
+  <text x="96" y="308" fill="#dff5d5" font-family="Arial, sans-serif" font-size="28">Remediation actions: 1</text>
+  <text x="96" y="380" fill="#ffffff" font-family="Arial, sans-serif" font-size="24">Checks: line-item text, provider metadata, restricted datasets, collaborator identifiers</text>
+  <text x="96" y="448" fill="#ffd37a" font-family="Arial, sans-serif" font-size="26">Private research context is replaced before receipts leave SCIBASE.</text>
+  <text x="96" y="574" fill="#a6d7c3" font-family="Arial, sans-serif" font-size="18">sha256:08e21ce3fc6915ed223f64220fdcc534986805530e3a1169f3d73ebe8860930f</text>
+</svg>

@@ -1,0 +1,67 @@
+{
+  "batchId": "billing-malformed-line-item-review-20",
+  "generatedAt": "2026-05-31T08:45:00Z",
+  "receipts": [
+    {
+      "id": "receipt-malformed-line-item",
+      "invoiceId": "inv-malformed-line-item",
+      "customerId": "customer-lab-014",
+      "decision": "hold-for-finance-review",
+      "findings": [
+        "malformed-line-item"
+      ],
+      "removedMetadataKeys": [],
+      "providerMetadata": {
+        "accountRef": "acct-lab-014",
+        "billingPeriod": "2026-05",
+        "invoiceRef": "inv-malformed-line-item",
+        "plan": "lab-pro"
+      },
+      "redactedLineItems": [
+        {
+          "id": "line-malformed-1",
+          "description": "Malformed billing line item requires finance repair",
+          "usageCategory": "billing-line-repair",
+          "findings": [
+            "malformed-line-item"
+          ]
+        }
+      ],
+      "customerCopy": {
+        "receiptId": "receipt-malformed-line-item",
+        "customerId": "customer-lab-014",
+        "currency": "USD",
+        "totalCents": 19900,
+        "lineItems": [
+          {
+            "id": "line-malformed-1",
+            "description": "Malformed billing line item requires finance repair",
+            "usageCategory": "billing-line-repair",
+            "quantity": null,
+            "unit": "usage-unit",
+            "amountCents": null
+          }
+        ]
+      },
+      "auditDigest": "sha256:25a546ee2ea4a53284a23f2a42bd6495de0768139b8b411d2abc0405c8072fcb"
+    }
+  ],
+  "remediationActions": [
+    {
+      "id": "remediate-receipt-malformed-line-item",
+      "receiptId": "receipt-malformed-line-item",
+      "action": "repair-malformed-billing-fields-before-delivery",
+      "priority": "normal",
+      "findings": [
+        "malformed-line-item"
+      ]
+    }
+  ],
+  "summary": {
+    "deliverableReceipts": 0,
+    "heldReceipts": 1,
+    "remediationActions": 1,
+    "totalCentsReviewed": 19900
+  },
+  "auditDigest": "sha256:5237f198878acd22edd9df965ade3ed79888abb9e4f37ddd736c05cdf2ceb83d"
+}

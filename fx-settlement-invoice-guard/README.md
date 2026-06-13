@@ -31,6 +31,8 @@ node --check test/fxSettlementInvoiceGuard.test.js
 git diff --check
 ```
 
+See `REQUIREMENT_MAP.md` for the issue-to-evidence map and explicit non-scope boundaries.
+
 ## Boundaries
 
 - synthetic invoice packets only

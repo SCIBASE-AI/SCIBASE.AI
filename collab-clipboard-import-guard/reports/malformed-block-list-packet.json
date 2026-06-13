@@ -1,0 +1,30 @@
+{
+  "importId": "import-malformed-block-list",
+  "workspaceId": "workspace-paper-7",
+  "status": "stage_for_curator_review",
+  "insertionLanes": {
+    "collaborativeInsert": "curator_review",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "staged"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "trusted-docx-export",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [
+    {
+      "code": "MALFORMED_IMPORT_BLOCKS",
+      "severity": "warning",
+      "blockId": null,
+      "message": "Import payload is missing a valid block list for collaborative insertion."
+    }
+  ],
+  "sanitizedBlocks": [],
+  "actions": [
+    "require_curator_payload_review:import-malformed-block-list"
+  ],
+  "assessedAt": "2026-05-30T12:10:00Z",
+  "auditDigest": "0c3ff91f831fe1d04c6c3cc16c54cd02f90f31ea3d46053f5c8c23a4d6c506d0"
+}

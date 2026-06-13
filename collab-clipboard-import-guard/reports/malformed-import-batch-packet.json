@@ -1,0 +1,30 @@
+{
+  "importId": "unknown-import",
+  "workspaceId": null,
+  "status": "stage_for_curator_review",
+  "insertionLanes": {
+    "collaborativeInsert": "curator_review",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "staged"
+  },
+  "source": {
+    "channel": "unknown",
+    "origin": "unknown",
+    "trustLevel": "unknown",
+    "attested": false
+  },
+  "findings": [
+    {
+      "code": "MALFORMED_IMPORT_BATCH",
+      "severity": "warning",
+      "blockId": null,
+      "message": "Import payload is malformed and cannot enter collaborative state directly."
+    }
+  ],
+  "sanitizedBlocks": [],
+  "actions": [
+    "require_curator_payload_review:unknown-import"
+  ],
+  "assessedAt": null,
+  "auditDigest": "61a232d4090e3177ed842838b77d8aca12a8fe17ba33713ba5882c203430bb21"
+}

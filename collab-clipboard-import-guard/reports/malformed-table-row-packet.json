@@ -1,0 +1,44 @@
+{
+  "importId": "import-malformed-table-row",
+  "workspaceId": "workspace-paper-7",
+  "status": "stage_for_curator_review",
+  "insertionLanes": {
+    "collaborativeInsert": "curator_review",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "staged"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "trusted-docx-export",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [
+    {
+      "code": "MALFORMED_TABLE_ROW",
+      "severity": "warning",
+      "blockId": "blk-malformed-table-row",
+      "message": "Imported table contains a malformed row that cannot enter collaborative state directly."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-malformed-table-row",
+      "type": "table",
+      "sectionId": "results",
+      "anchor": "malformed-table-row",
+      "cells": [
+        [
+          "metric",
+          "value"
+        ],
+        []
+      ]
+    }
+  ],
+  "actions": [
+    "require_curator_payload_review:import-malformed-table-row"
+  ],
+  "assessedAt": "2026-05-30T18:35:00Z",
+  "auditDigest": "74979dcfd50f96020506f403d92e8537bb61456c08b5c628db4e29d6e37514c5"
+}

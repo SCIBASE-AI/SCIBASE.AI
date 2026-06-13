@@ -1,0 +1,112 @@
+{
+  "importId": "import-clipboard-unsafe",
+  "workspaceId": "workspace-paper-7",
+  "status": "quarantine_import",
+  "insertionLanes": {
+    "collaborativeInsert": "blocked",
+    "reviewerPreview": "redacted",
+    "auditRetention": "quarantine"
+  },
+  "source": {
+    "channel": "clipboard",
+    "origin": "unknown-rich-text-editor",
+    "trustLevel": "untrusted",
+    "attested": false
+  },
+  "findings": [
+    {
+      "code": "CSV_FORMULA_CELL",
+      "severity": "blocker",
+      "blockId": "blk-table",
+      "message": "Imported table contains spreadsheet formulas that must be escaped before render."
+    },
+    {
+      "code": "DUPLICATE_ANCHOR",
+      "severity": "blocker",
+      "blockId": "blk-output",
+      "message": "Anchor assay-table appears more than once in the imported payload."
+    },
+    {
+      "code": "DUPLICATE_ANCHOR",
+      "severity": "blocker",
+      "blockId": "blk-table",
+      "message": "Anchor assay-table appears more than once in the imported payload."
+    },
+    {
+      "code": "HIDDEN_INSTRUCTION_TEXT",
+      "severity": "blocker",
+      "blockId": "blk-hidden",
+      "message": "Hidden clipboard text contains instruction-like content that reviewers cannot see."
+    },
+    {
+      "code": "LOCAL_PRIVATE_PATH",
+      "severity": "blocker",
+      "blockId": "blk-output",
+      "message": "Imported notebook output references a local or private filesystem path."
+    },
+    {
+      "code": "STALE_REVIEW_METADATA",
+      "severity": "blocker",
+      "blockId": "blk-review",
+      "message": "Imported review metadata is expired or bound to an old section version."
+    },
+    {
+      "code": "UNTRUSTED_SOURCE",
+      "severity": "blocker",
+      "blockId": null,
+      "message": "Import source unknown-rich-text-editor is not trusted for collaborative insertion."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-hidden",
+      "type": "paragraph",
+      "sectionId": "methods",
+      "anchor": "methods-overview",
+      "content": "Sample preparation summary."
+    },
+    {
+      "id": "blk-table",
+      "type": "table",
+      "sectionId": "methods",
+      "anchor": "assay-table-3ddee974",
+      "cells": [
+        [
+          "condition",
+          "result"
+        ],
+        [
+          "control",
+          "'=IMPORTXML(\"https://tracker.example/pixel\", \"//title\")"
+        ]
+      ]
+    },
+    {
+      "id": "blk-output",
+      "type": "notebook-output",
+      "sectionId": "methods",
+      "anchor": "assay-table-eb943d5e",
+      "content": "Saved figure to [redacted-local-path]"
+    },
+    {
+      "id": "blk-review",
+      "type": "comment",
+      "sectionId": "methods",
+      "anchor": "review-note",
+      "content": "Looks fine.",
+      "reviewMetadataStatus": "dropped_stale"
+    }
+  ],
+  "actions": [
+    "drop_stale_review_metadata:blk-review",
+    "escape_formula_cells:blk-table",
+    "quarantine_import:import-clipboard-unsafe",
+    "redact_local_paths:blk-output",
+    "regenerate_anchor:blk-output",
+    "regenerate_anchor:blk-table",
+    "require_curator_source_review:import-clipboard-unsafe",
+    "strip_hidden_instruction_text:blk-hidden"
+  ],
+  "assessedAt": "2026-05-28T08:30:00Z",
+  "auditDigest": "000b4c1e32eb25862548aae7b19e8b0aec79ffbdc3fe63c34a779e1d57a1d27e"
+}

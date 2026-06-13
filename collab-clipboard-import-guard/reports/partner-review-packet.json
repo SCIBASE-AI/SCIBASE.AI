@@ -1,0 +1,38 @@
+{
+  "importId": "import-partner-forward",
+  "workspaceId": "workspace-paper-7",
+  "status": "stage_for_curator_review",
+  "insertionLanes": {
+    "collaborativeInsert": "curator_review",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "staged"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "partner-lab-docx",
+    "trustLevel": "partner",
+    "attested": false
+  },
+  "findings": [
+    {
+      "code": "MISSING_SOURCE_ATTESTATION",
+      "severity": "warning",
+      "blockId": null,
+      "message": "Partner import needs a signed source attestation before direct insertion."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-partner",
+      "type": "paragraph",
+      "sectionId": "results",
+      "anchor": "partner-summary",
+      "content": "Partner lab supplied a corrected assay summary."
+    }
+  ],
+  "actions": [
+    "request_signed_source_attestation:import-partner-forward"
+  ],
+  "assessedAt": "2026-05-28T08:35:00Z",
+  "auditDigest": "5a8ec70105dc78199e8fb8854958ebda51a74c1d5f828890d06196e925edb464"
+}

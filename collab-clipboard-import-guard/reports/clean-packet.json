@@ -1,0 +1,31 @@
+{
+  "importId": "import-clean-zotero-note",
+  "workspaceId": "workspace-paper-7",
+  "status": "allow_collaborative_insert",
+  "insertionLanes": {
+    "collaborativeInsert": "allowed",
+    "reviewerPreview": "allowed",
+    "auditRetention": "standard"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "institutional-review-export",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-clean",
+      "type": "paragraph",
+      "sectionId": "discussion",
+      "anchor": "discussion-summary",
+      "content": "The intervention improved the pre-registered endpoint."
+    }
+  ],
+  "actions": [
+    "allow_collaborative_insert:import-clean-zotero-note"
+  ],
+  "assessedAt": "2026-05-28T08:40:00Z",
+  "auditDigest": "09bbb96c9f6d7b9de6e6647d020288bd859ff5297d545dd90b1860fcaa1bc4e7"
+}

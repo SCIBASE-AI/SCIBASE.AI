@@ -1,0 +1,38 @@
+{
+  "importId": "import-malformed-existing-anchors",
+  "workspaceId": "workspace-paper-7",
+  "status": "stage_for_curator_review",
+  "insertionLanes": {
+    "collaborativeInsert": "curator_review",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "staged"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "trusted-docx-export",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [
+    {
+      "code": "MALFORMED_EXISTING_ANCHORS",
+      "severity": "warning",
+      "blockId": null,
+      "message": "Existing shared-document anchors are malformed, so imported anchors need curator review before insertion."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-malformed-existing-anchors",
+      "type": "paragraph",
+      "sectionId": "methods",
+      "anchor": "methods-overview",
+      "content": "Imported paragraph with unchecked existing anchor metadata."
+    }
+  ],
+  "actions": [
+    "require_curator_anchor_review:import-malformed-existing-anchors"
+  ],
+  "assessedAt": "2026-05-31T20:55:00Z",
+  "auditDigest": "1edd8ecb020cf6d74c30033d001d80f2b143a9a489c2419eefa4e5219ac2b266"
+}

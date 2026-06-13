@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1346" viewBox="0 0 1200 1346">
+  <rect width="1200" height="1346" fill="#eef2f7"/>
+  <text x="48" y="52" font-size="31" font-family="Arial" font-weight="700" fill="#111827">Clipboard Import Provenance Guard</text>
+  <text x="48" y="80" font-size="16" font-family="Arial" fill="#374151">Pasted and imported research-editor blocks are gated before collaborative insertion.</text>
+
+      <g transform="translate(48 108)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-clipboard-unsafe</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">quarantine_import | findings 7 | digest 000b4c1e32eb2586</text>
+      </g>
+      <g transform="translate(48 182)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-partner-forward</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 5a8ec70105dc7819</text>
+      </g>
+      <g transform="translate(48 256)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-trusted-missing-attestation</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 560cb36f0413466d</text>
+      </g>
+      <g transform="translate(48 330)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-trusted-placeholder-attestation</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest a56510b069c495c8</text>
+      </g>
+      <g transform="translate(48 404)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-unsupported-channel</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 0f58494d8118cca9</text>
+      </g>
+      <g transform="translate(48 478)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">unknown-import</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 61a232d4090e3177</text>
+      </g>
+      <g transform="translate(48 552)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-malformed-block-list</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 0c3ff91f831fe1d0</text>
+      </g>
+      <g transform="translate(48 626)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-malformed-block-entry</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 074a13aafdf24b23</text>
+      </g>
+      <g transform="translate(48 700)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-malformed-table-row</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 74979dcfd50f9602</text>
+      </g>
+      <g transform="translate(48 774)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-malformed-table-cells</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest e73790cbf7f1b5c7</text>
+      </g>
+      <g transform="translate(48 848)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b45309"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-malformed-existing-anchors</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">stage_for_curator_review | findings 1 | digest 1edd8ecb020cf6d7</text>
+      </g>
+      <g transform="translate(48 922)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-missing-block-ids-anchor-collision</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">quarantine_import | findings 2 | digest fd8ab1fbe9f47add</text>
+      </g>
+      <g transform="translate(48 996)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-private-source-origin</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">quarantine_import | findings 1 | digest a7f7271b903c5ec7</text>
+      </g>
+      <g transform="translate(48 1070)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-lowercase-windows-path</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">quarantine_import | findings 1 | digest e17275a00e2d2715</text>
+      </g>
+      <g transform="translate(48 1144)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#b91c1c"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-forward-slash-windows-path</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">quarantine_import | findings 1 | digest bcae99436e765559</text>
+      </g>
+      <g transform="translate(48 1218)">
+        <rect width="1104" height="52" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+        <circle cx="28" cy="26" r="11" fill="#15803d"/>
+        <text x="58" y="22" font-size="18" font-family="Arial" fill="#111827">import-clean-zotero-note</text>
+        <text x="58" y="41" font-size="13" font-family="Arial" fill="#475569">allow_collaborative_insert | findings 0 | digest 09bbb96c9f6d7b9d</text>
+      </g>
+</svg>

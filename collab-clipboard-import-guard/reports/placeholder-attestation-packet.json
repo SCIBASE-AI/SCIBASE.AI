@@ -1,0 +1,38 @@
+{
+  "importId": "import-trusted-placeholder-attestation",
+  "workspaceId": "workspace-paper-7",
+  "status": "stage_for_curator_review",
+  "insertionLanes": {
+    "collaborativeInsert": "curator_review",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "staged"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "trusted-docx-export",
+    "trustLevel": "trusted",
+    "attested": false
+  },
+  "findings": [
+    {
+      "code": "INVALID_SOURCE_ATTESTATION",
+      "severity": "warning",
+      "blockId": null,
+      "message": "Trusted import has a placeholder or malformed source attestation."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-trusted-placeholder-attestation",
+      "type": "paragraph",
+      "sectionId": "results",
+      "anchor": "trusted-placeholder-attestation",
+      "content": "Trusted export supplied a corrected result summary."
+    }
+  ],
+  "actions": [
+    "request_signed_source_attestation:import-trusted-placeholder-attestation"
+  ],
+  "assessedAt": "2026-05-30T08:22:00Z",
+  "auditDigest": "a56510b069c495c82fb5935aeb91986b259c213ad51153ff9ddedde993c5ef94"
+}

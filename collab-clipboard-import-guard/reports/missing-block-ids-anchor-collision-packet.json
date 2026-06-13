@@ -1,0 +1,51 @@
+{
+  "importId": "import-missing-block-ids-anchor-collision",
+  "workspaceId": "workspace-paper-7",
+  "status": "quarantine_import",
+  "insertionLanes": {
+    "collaborativeInsert": "blocked",
+    "reviewerPreview": "redacted",
+    "auditRetention": "quarantine"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "trusted-docx-export",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [
+    {
+      "code": "DUPLICATE_ANCHOR",
+      "severity": "blocker",
+      "blockId": "unidentified-block-1",
+      "message": "Anchor shared-anchor appears more than once in the imported payload."
+    },
+    {
+      "code": "DUPLICATE_ANCHOR",
+      "severity": "blocker",
+      "blockId": "unidentified-block-2",
+      "message": "Anchor shared-anchor appears more than once in the imported payload."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "type": "paragraph",
+      "sectionId": "methods",
+      "anchor": "shared-anchor-74a832c2",
+      "content": "First imported paragraph without a source block id."
+    },
+    {
+      "type": "paragraph",
+      "sectionId": "methods",
+      "anchor": "shared-anchor-6a3f41da",
+      "content": "Second imported paragraph without a source block id."
+    }
+  ],
+  "actions": [
+    "quarantine_import:import-missing-block-ids-anchor-collision",
+    "regenerate_anchor:unidentified-block-1",
+    "regenerate_anchor:unidentified-block-2"
+  ],
+  "assessedAt": "2026-06-03T00:20:00Z",
+  "auditDigest": "fd8ab1fbe9f47add3cbcace2ea7a77854dc00a562aaf51c9ebfef5dc3045aa9a"
+}

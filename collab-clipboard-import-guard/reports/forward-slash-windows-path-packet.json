@@ -1,0 +1,39 @@
+{
+  "importId": "import-forward-slash-windows-path",
+  "workspaceId": "workspace-paper-7",
+  "status": "quarantine_import",
+  "insertionLanes": {
+    "collaborativeInsert": "blocked",
+    "reviewerPreview": "redacted",
+    "auditRetention": "quarantine"
+  },
+  "source": {
+    "channel": "clipboard",
+    "origin": "trusted-notebook-output",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [
+    {
+      "code": "LOCAL_PRIVATE_PATH",
+      "severity": "blocker",
+      "blockId": "blk-forward-slash-windows-path",
+      "message": "Imported notebook output references a local or private filesystem path."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-forward-slash-windows-path",
+      "type": "notebook-output",
+      "sectionId": "results",
+      "anchor": "forward-slash-windows-output",
+      "content": "Rendered output to [redacted-local-path]"
+    }
+  ],
+  "actions": [
+    "quarantine_import:import-forward-slash-windows-path",
+    "redact_local_paths:blk-forward-slash-windows-path"
+  ],
+  "assessedAt": "2026-05-30T11:35:00Z",
+  "auditDigest": "bcae99436e765559253b63a577579f09199220de68856afc3f55393c2cb57733"
+}

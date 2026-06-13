@@ -1,0 +1,39 @@
+{
+  "importId": "import-private-source-origin",
+  "workspaceId": "workspace-paper-7",
+  "status": "quarantine_import",
+  "insertionLanes": {
+    "collaborativeInsert": "blocked",
+    "reviewerPreview": "redacted",
+    "auditRetention": "quarantine"
+  },
+  "source": {
+    "channel": "file-import",
+    "origin": "[redacted-local-path]",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [
+    {
+      "code": "LOCAL_PRIVATE_SOURCE",
+      "severity": "blocker",
+      "blockId": null,
+      "message": "Import source origin references a local or private filesystem path."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-clean-private-source",
+      "type": "paragraph",
+      "sectionId": "methods",
+      "anchor": "private-source-origin",
+      "content": "Clean paragraph content from the imported document."
+    }
+  ],
+  "actions": [
+    "quarantine_import:import-private-source-origin",
+    "redact_source_origin:import-private-source-origin"
+  ],
+  "assessedAt": "2026-05-28T08:39:45Z",
+  "auditDigest": "a7f7271b903c5ec746ff4429bbc0b33645a2ab806731e6fdc35538f382da2061"
+}

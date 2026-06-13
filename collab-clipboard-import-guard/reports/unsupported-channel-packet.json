@@ -1,0 +1,38 @@
+{
+  "importId": "import-unsupported-channel",
+  "workspaceId": "workspace-paper-7",
+  "status": "stage_for_curator_review",
+  "insertionLanes": {
+    "collaborativeInsert": "curator_review",
+    "reviewerPreview": "watermarked",
+    "auditRetention": "staged"
+  },
+  "source": {
+    "channel": "side-loaded-cache",
+    "origin": "trusted-docx-export",
+    "trustLevel": "trusted",
+    "attested": true
+  },
+  "findings": [
+    {
+      "code": "UNKNOWN_IMPORT_CHANNEL",
+      "severity": "warning",
+      "blockId": null,
+      "message": "Import channel side-loaded-cache is not recognized for direct collaborative insertion."
+    }
+  ],
+  "sanitizedBlocks": [
+    {
+      "id": "blk-unsupported-channel",
+      "type": "paragraph",
+      "sectionId": "discussion",
+      "anchor": "unsupported-channel-clean",
+      "content": "Clean text imported through an unsupported channel."
+    }
+  ],
+  "actions": [
+    "require_curator_channel_review:import-unsupported-channel"
+  ],
+  "assessedAt": "2026-05-28T08:36:30Z",
+  "auditDigest": "0f58494d8118cca96c688a068cb9e3f4dff9136b7b75111190f7b9aa1734454a"
+}

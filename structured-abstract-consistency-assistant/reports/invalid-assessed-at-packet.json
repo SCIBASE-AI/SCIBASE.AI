@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-invalid-assessed-at",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "INVALID_ASSESSMENT_TIMESTAMP",
+      "severity": "blocker",
+      "target": "assessedAt",
+      "message": "Structured abstract assessment timestamp must be a valid ISO-style timestamp before AI peer-review evidence can release."
+    }
+  ],
+  "actions": [
+    "repair_assessment_timestamp:ms-abstract-invalid-assessed-at"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": true,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "not-a-date",
+  "auditDigest": "df428520c4bf4c08ef4b61ccf6a47eb6b09ae40598ae114e1db99b5ea6cf9d08"
+}

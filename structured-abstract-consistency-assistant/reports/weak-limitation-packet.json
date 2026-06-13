@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-weak-limitation-hedge",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "MISSING_LIMITATION_LANGUAGE",
+      "severity": "blocker",
+      "target": "abstract.conclusions",
+      "message": "Exploratory or uncertain findings need limitation language before AI review release."
+    }
+  ],
+  "actions": [
+    "add_limitations_to_abstract:ms-abstract-weak-limitation-hedge"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": true,
+    "limitationsBalanced": false
+  },
+  "assessedAt": "2026-05-30T09:05:00Z",
+  "auditDigest": "299309042661dd810d7a76391c3f53552d653320d32e151d246f799ee6dd0aaf"
+}

@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-negated-primary-endpoint",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "ENDPOINT_MISMATCH",
+      "severity": "blocker",
+      "target": "results.primaryEndpoint",
+      "message": "Abstract results do not name the primary endpoint: comment triage time."
+    }
+  ],
+  "actions": [
+    "align_results_with_primary_endpoint:ms-abstract-negated-primary-endpoint"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-30T15:05:00Z",
+  "auditDigest": "e4f5ec6d6a38ebb6b3ccc9ebee45046b7c5c4610dae86756cfb2ecb121c06a29"
+}

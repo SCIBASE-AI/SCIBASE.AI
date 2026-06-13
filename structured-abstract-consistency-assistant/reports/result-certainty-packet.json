@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-result-certainty-overclaim",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "RESULT_OVERSTATES_EVIDENCE",
+      "severity": "blocker",
+      "target": "abstract.results",
+      "message": "Abstract results use certainty language despite exploratory or null-crossing evidence."
+    }
+  ],
+  "actions": [
+    "revise_results_certainty:ms-abstract-result-certainty-overclaim"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-30T02:55:00Z",
+  "auditDigest": "01c5f5aec02725ae1ef51774bd06d97e4fce12467d667db0baedcd0e69d5e87a"
+}

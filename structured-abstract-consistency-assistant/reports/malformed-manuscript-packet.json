@@ -1,0 +1,66 @@
+{
+  "manuscriptId": "unknown-manuscript",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "MALFORMED_MANUSCRIPT_PACKET",
+      "severity": "blocker",
+      "target": "manuscript",
+      "message": "Structured abstract manuscript packet is malformed and cannot release AI peer-review evidence."
+    },
+    {
+      "code": "MISSING_ABSTRACT_SECTION",
+      "severity": "warning",
+      "target": "background",
+      "message": "Structured abstract is missing the background section."
+    },
+    {
+      "code": "MISSING_ABSTRACT_SECTION",
+      "severity": "warning",
+      "target": "conclusions",
+      "message": "Structured abstract is missing the conclusions section."
+    },
+    {
+      "code": "MISSING_ABSTRACT_SECTION",
+      "severity": "warning",
+      "target": "methods",
+      "message": "Structured abstract is missing the methods section."
+    },
+    {
+      "code": "MISSING_ABSTRACT_SECTION",
+      "severity": "warning",
+      "target": "results",
+      "message": "Structured abstract is missing the results section."
+    },
+    {
+      "code": "MISSING_METHODS_EVIDENCE",
+      "severity": "blocker",
+      "target": "methods",
+      "message": "Structured abstract release requires a source methods evidence packet."
+    },
+    {
+      "code": "MISSING_RESULTS_EVIDENCE",
+      "severity": "blocker",
+      "target": "results",
+      "message": "Structured abstract release requires a source results evidence packet."
+    }
+  ],
+  "actions": [
+    "add_missing_sections:unknown-manuscript",
+    "attach_source_evidence:unknown-manuscript",
+    "repair_manuscript_packet:unknown-manuscript"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": false,
+    "methodsAligned": false,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": null,
+  "auditDigest": "d0a3e2985da88bf1ce81f021a70f4fcd0c576c0b68a2ef38d1c546e596c02029"
+}

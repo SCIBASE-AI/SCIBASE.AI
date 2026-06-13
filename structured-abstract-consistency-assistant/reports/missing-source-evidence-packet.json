@@ -1,0 +1,34 @@
+{
+  "manuscriptId": "ms-abstract-missing-source-evidence",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "MISSING_METHODS_EVIDENCE",
+      "severity": "blocker",
+      "target": "methods",
+      "message": "Structured abstract release requires a source methods evidence packet."
+    },
+    {
+      "code": "MISSING_RESULTS_EVIDENCE",
+      "severity": "blocker",
+      "target": "results",
+      "message": "Structured abstract release requires a source results evidence packet."
+    }
+  ],
+  "actions": [
+    "attach_source_evidence:ms-abstract-missing-source-evidence"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": false,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-30T15:40:00Z",
+  "auditDigest": "cfd2ebab2fc04cdafdc7ca5daa0a7ede2cd8146a1ea8e381ece4be54b09bf7a1"
+}

@@ -1,0 +1,21 @@
+{
+  "manuscriptId": "ms-abstract-clean",
+  "status": "release_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "allowed",
+    "aiPeerReview": "allowed",
+    "editorSummary": "allowed"
+  },
+  "findings": [],
+  "actions": [
+    "release_with_abstract_consistency_monitoring:ms-abstract-clean"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": true,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-28T10:20:00Z",
+  "auditDigest": "6b8b62382bb68cbf72ec93d4f43cbcca7101c2049b06adc3ff2e01cdb2a35f89"
+}

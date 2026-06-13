@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-missing-methods-endpoint",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "MISSING_METHODS_ENDPOINT",
+      "severity": "blocker",
+      "target": "methods.primaryEndpoint",
+      "message": "Methods evidence must name the primary endpoint before structured abstract release."
+    }
+  ],
+  "actions": [
+    "attach_source_evidence:ms-abstract-missing-methods-endpoint"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": false,
+    "resultsAligned": true,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-06-01T14:55:00Z",
+  "auditDigest": "cd382aadb1d1f62187e7d550510fb618dbc731020db01a396e3d9e8ab0fc3ff5"
+}

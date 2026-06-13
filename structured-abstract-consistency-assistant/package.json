@@ -1,0 +1,12 @@
+{
+  "name": "structured-abstract-consistency-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free structured abstract consistency assistant for AI peer-review readiness.",
+  "scripts": {
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "video": "python make-demo-video.py",
+    "check": "node --check index.js && node --check sample-data.js && node --check test.js && node --check demo.js"
+  }
+}

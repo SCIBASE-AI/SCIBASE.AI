@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-negated-methods-design",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "METHODS_DESIGN_MISMATCH",
+      "severity": "blocker",
+      "target": "methods.design",
+      "message": "Abstract methods do not describe the study design as retrospective cohort."
+    }
+  ],
+  "actions": [
+    "revise_methods_summary:ms-abstract-negated-methods-design"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": false,
+    "resultsAligned": true,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-30T13:40:00Z",
+  "auditDigest": "c7d0b98bb805d76dec1b3cda1a23a88755986dcb0212f20263ed1d30d0659fd5"
+}

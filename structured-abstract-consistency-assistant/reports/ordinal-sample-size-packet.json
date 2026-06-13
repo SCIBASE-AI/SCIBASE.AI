@@ -1,0 +1,34 @@
+{
+  "manuscriptId": "ms-abstract-ordinal-sample-size",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "SAMPLE_SIZE_MISMATCH",
+      "severity": "blocker",
+      "target": "methods.sampleSize",
+      "message": "Abstract methods do not match the method sample size of 96."
+    },
+    {
+      "code": "SAMPLE_SIZE_MISMATCH",
+      "severity": "blocker",
+      "target": "results.sampleSize",
+      "message": "Abstract results do not match the result sample size of 96."
+    }
+  ],
+  "actions": [
+    "revise_methods_summary:ms-abstract-ordinal-sample-size"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": false,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-30T13:05:00Z",
+  "auditDigest": "ea3765bb4adaa5a7bf78e984e258a15ef4f7db09f1d937cf990e957244343b3c"
+}

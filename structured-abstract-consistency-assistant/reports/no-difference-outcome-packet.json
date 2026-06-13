@@ -1,0 +1,35 @@
+{
+  "manuscriptId": "ms-abstract-no-difference-drift",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "CONCLUSION_RESULT_DIRECTION_MISMATCH",
+      "severity": "blocker",
+      "target": "abstract.conclusions",
+      "message": "Abstract conclusion describes a directional effect that conflicts with the result packet: improved."
+    },
+    {
+      "code": "RESULT_DIRECTION_MISMATCH",
+      "severity": "blocker",
+      "target": "results.direction",
+      "message": "Abstract results describe a directional effect that conflicts with the result packet: improved."
+    }
+  ],
+  "actions": [
+    "align_results_with_primary_endpoint:ms-abstract-no-difference-drift",
+    "tone_down_conclusion:ms-abstract-no-difference-drift"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-31T16:55:00Z",
+  "auditDigest": "de1e7227730f1783459a73ea38e5ea50e13b5a4b7abb1d50303045fffb98ff7f"
+}

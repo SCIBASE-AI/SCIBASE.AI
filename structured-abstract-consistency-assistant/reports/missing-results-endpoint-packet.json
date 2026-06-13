@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-missing-results-endpoint",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "MISSING_RESULTS_ENDPOINT",
+      "severity": "blocker",
+      "target": "results.primaryEndpoint",
+      "message": "Results evidence must name the primary endpoint before structured abstract release."
+    }
+  ],
+  "actions": [
+    "attach_source_evidence:ms-abstract-missing-results-endpoint"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-06-01T11:05:00Z",
+  "auditDigest": "57f88174fedfc5982d791032748f2f1b3d0cc151a550697c12122ada2ac69580"
+}

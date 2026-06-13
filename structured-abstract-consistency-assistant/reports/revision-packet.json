@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-incomplete",
+  "status": "stage_for_author_revision",
+  "reviewLanes": {
+    "authorDraft": "revision_queue",
+    "aiPeerReview": "draft_only",
+    "editorSummary": "withhold"
+  },
+  "findings": [
+    {
+      "code": "MISSING_ABSTRACT_SECTION",
+      "severity": "warning",
+      "target": "conclusions",
+      "message": "Structured abstract is missing the conclusions section."
+    }
+  ],
+  "actions": [
+    "add_missing_sections:ms-abstract-incomplete"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": false,
+    "methodsAligned": true,
+    "resultsAligned": true,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-05-28T10:15:00Z",
+  "auditDigest": "9e1519b697770c35e46248b5beea8fce0d5e9c2a7b3c4c39ac4fd4db7fc6bece"
+}

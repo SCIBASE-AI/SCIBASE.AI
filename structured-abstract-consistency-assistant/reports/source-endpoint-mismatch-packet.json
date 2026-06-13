@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-source-endpoint-mismatch",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "SOURCE_ENDPOINT_MISMATCH",
+      "severity": "blocker",
+      "target": "methods.primaryEndpoint",
+      "message": "Methods evidence primary endpoint (reviewer workload score) does not match results evidence primary endpoint (comment triage time)."
+    }
+  ],
+  "actions": [
+    "reconcile_source_endpoints:ms-abstract-source-endpoint-mismatch"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": false,
+    "resultsAligned": false,
+    "limitationsBalanced": true
+  },
+  "assessedAt": "2026-06-01T13:05:00Z",
+  "auditDigest": "0cd33ec6c15339937eb9c88a9d8fe6f4cdb4c238aaa3b673498defc943ba5eda"
+}

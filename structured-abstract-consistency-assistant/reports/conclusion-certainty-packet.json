@@ -1,0 +1,28 @@
+{
+  "manuscriptId": "ms-abstract-conclusion-certainty-overclaim",
+  "status": "hold_peer_review_packet",
+  "reviewLanes": {
+    "authorDraft": "revise_required",
+    "aiPeerReview": "blocked",
+    "editorSummary": "blocked"
+  },
+  "findings": [
+    {
+      "code": "CONCLUSION_OVERSTATES_EVIDENCE",
+      "severity": "blocker",
+      "target": "abstract.conclusions",
+      "message": "Conclusion uses definitive language despite exploratory or uncertain evidence."
+    }
+  ],
+  "actions": [
+    "tone_down_conclusion:ms-abstract-conclusion-certainty-overclaim"
+  ],
+  "abstractSignals": {
+    "sectionsComplete": true,
+    "methodsAligned": true,
+    "resultsAligned": true,
+    "limitationsBalanced": false
+  },
+  "assessedAt": "2026-05-30T03:35:00Z",
+  "auditDigest": "eaf994f1eca77f2d31b0da4f3d2a113a481e71c32ca876199fbe46d0a665e949"
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "STUDY-01",
+    "title": "Sleep intervention trial",
+    "preregistrationId": "OSF-123",
+    "primaryOutcomeReported": true,
+    "primaryOutcomeChanged": false,
+    "amendmentLogged": false,
+    "analysisPlanChanged": false,
+    "deviationExplained": false,
+    "unplannedSubgroupClaim": false,
+    "markedExploratory": false,
+    "sampleSize": 240,
+    "plannedSampleSize": 220,
+    "secondaryOutcomesPromoted": false,
+    "nullResultsMentioned": true
+  },
+  {
+    "id": "STUDY-02",
+    "title": "Microbiome cohort analysis",
+    "preregistrationId": "OSF-778",
+    "primaryOutcomeReported": true,
+    "primaryOutcomeChanged": false,
+    "amendmentLogged": false,
+    "analysisPlanChanged": false,
+    "deviationExplained": false,
+    "unplannedSubgroupClaim": false,
+    "markedExploratory": false,
+    "sampleSize": 141,
+    "plannedSampleSize": 180,
+    "secondaryOutcomesPromoted": true,
+    "nullResultsMentioned": false
+  },
+  {
+    "id": "STUDY-03",
+    "title": "Cognitive training trial",
+    "preregistrationId": "",
+    "primaryOutcomeReported": false,
+    "primaryOutcomeChanged": true,
+    "amendmentLogged": false,
+    "analysisPlanChanged": true,
+    "deviationExplained": false,
+    "unplannedSubgroupClaim": true,
+    "markedExploratory": false,
+    "sampleSize": 86,
+    "plannedSampleSize": 120,
+    "secondaryOutcomesPromoted": true,
+    "nullResultsMentioned": false
+  }
+]

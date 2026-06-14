@@ -1,0 +1,40 @@
+[
+  {
+    "studyId": "STUDY-01",
+    "title": "Sleep intervention trial",
+    "decision": "RELEASE_ASSISTANT_REVIEW",
+    "blockers": [],
+    "warnings": [],
+    "nextStep": "release the assistant review with preregistration receipt"
+  },
+  {
+    "studyId": "STUDY-02",
+    "title": "Microbiome cohort analysis",
+    "decision": "FLAG_FOR_AUTHOR_CHECK",
+    "blockers": [],
+    "warnings": [
+      "sample size is below the preregistered plan",
+      "secondary outcomes are promoted above the primary outcome",
+      "null results are not mentioned"
+    ],
+    "nextStep": "ask authors to address warnings before final release"
+  },
+  {
+    "studyId": "STUDY-03",
+    "title": "Cognitive training trial",
+    "decision": "HOLD_ASSISTANT_REVIEW",
+    "blockers": [
+      "missing preregistration id",
+      "primary outcome is not reported",
+      "primary outcome changed without amendment",
+      "analysis plan changed without explanation",
+      "unplanned subgroup claim is not marked exploratory"
+    ],
+    "warnings": [
+      "sample size is below the preregistered plan",
+      "secondary outcomes are promoted above the primary outcome",
+      "null results are not mentioned"
+    ],
+    "nextStep": "hold AI review output until preregistration conflicts are resolved"
+  }
+]

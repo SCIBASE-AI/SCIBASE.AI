@@ -1,0 +1,35 @@
+[
+  {
+    "notebookId": "NB-100",
+    "title": "RNA velocity notebook",
+    "decision": "PUBLISH_REPRODUCIBLE",
+    "blockers": [],
+    "warnings": [],
+    "nextStep": "publish the rerun badge and output manifest"
+  },
+  {
+    "notebookId": "NB-210",
+    "title": "Climate downscaling notebook",
+    "decision": "REVIEW_BEFORE_RELEASE",
+    "blockers": [],
+    "warnings": [
+      "rerun is slower than expected",
+      "provenance bundle is missing"
+    ],
+    "nextStep": "ask a reviewer to approve the reproducibility packet"
+  },
+  {
+    "notebookId": "NB-404",
+    "title": "Tumor segmentation notebook",
+    "decision": "HOLD_RELEASE",
+    "blockers": [
+      "missing environment digest",
+      "random seed is not pinned",
+      "output digest changed from baseline",
+      "numeric drift exceeds allowed tolerance",
+      "expected figures are missing"
+    ],
+    "warnings": [],
+    "nextStep": "hold the notebook until the rerun packet matches the baseline"
+  }
+]

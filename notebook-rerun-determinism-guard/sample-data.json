@@ -1,0 +1,47 @@
+[
+  {
+    "id": "NB-100",
+    "title": "RNA velocity notebook",
+    "environmentDigest": "env-a12",
+    "randomSeedPinned": true,
+    "rawDataDigest": "raw-991",
+    "baselineOutputDigest": "out-441",
+    "outputDigest": "out-441",
+    "numericDrift": 0.002,
+    "allowedDrift": 0.01,
+    "missingFigures": 0,
+    "rerunMinutes": 12,
+    "maxRerunMinutes": 20,
+    "provenanceAttached": true
+  },
+  {
+    "id": "NB-210",
+    "title": "Climate downscaling notebook",
+    "environmentDigest": "env-b77",
+    "randomSeedPinned": true,
+    "rawDataDigest": "raw-103",
+    "baselineOutputDigest": "out-915",
+    "outputDigest": "out-915",
+    "numericDrift": 0.004,
+    "allowedDrift": 0.01,
+    "missingFigures": 0,
+    "rerunMinutes": 42,
+    "maxRerunMinutes": 30,
+    "provenanceAttached": false
+  },
+  {
+    "id": "NB-404",
+    "title": "Tumor segmentation notebook",
+    "environmentDigest": "",
+    "randomSeedPinned": false,
+    "rawDataDigest": "raw-700",
+    "baselineOutputDigest": "out-201",
+    "outputDigest": "out-999",
+    "numericDrift": 0.09,
+    "allowedDrift": 0.02,
+    "missingFigures": 2,
+    "rerunMinutes": 18,
+    "maxRerunMinutes": 25,
+    "provenanceAttached": true
+  }
+]

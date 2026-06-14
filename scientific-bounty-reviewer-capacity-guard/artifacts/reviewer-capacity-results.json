@@ -1,0 +1,47 @@
+[
+  {
+    "challengeId": "BIO-42",
+    "title": "Biomarker scoring challenge",
+    "decision": "ASSIGN_PANEL",
+    "eligibleReviewers": [
+      "r-ada",
+      "r-lin"
+    ],
+    "missingExpertise": [],
+    "blockers": [],
+    "nextStep": "assign the listed reviewers and open the review window"
+  },
+  {
+    "challengeId": "MAT-11",
+    "title": "Low heat cement materials challenge",
+    "decision": "HOLD_ASSIGNMENT",
+    "eligibleReviewers": [
+      "r-ivy"
+    ],
+    "missingExpertise": [],
+    "blockers": [
+      "not enough eligible reviewers",
+      "conflicts: r-noah",
+      "overloaded: r-mira"
+    ],
+    "nextStep": "hold assignment until coverage and capacity are fixed"
+  },
+  {
+    "challengeId": "QNT-7",
+    "title": "Quantum noise reduction challenge",
+    "decision": "HOLD_ASSIGNMENT",
+    "eligibleReviewers": [
+      "r-june"
+    ],
+    "missingExpertise": [
+      "quantum",
+      "signal-processing"
+    ],
+    "blockers": [
+      "not enough eligible reviewers",
+      "missing expertise: quantum, signal-processing",
+      "stale training: r-sam"
+    ],
+    "nextStep": "hold assignment until coverage and capacity are fixed"
+  }
+]

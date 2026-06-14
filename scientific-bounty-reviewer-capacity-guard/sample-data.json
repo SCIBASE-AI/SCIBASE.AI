@@ -1,0 +1,86 @@
+[
+  {
+    "id": "BIO-42",
+    "title": "Biomarker scoring challenge",
+    "requiredExpertise": ["bioinformatics", "statistics"],
+    "reviewers": [
+      {
+        "id": "r-ada",
+        "expertise": ["bioinformatics"],
+        "activeReviews": 1,
+        "maxActiveReviews": 4,
+        "conflicts": [],
+        "trainingCurrent": true,
+        "available": true
+      },
+      {
+        "id": "r-lin",
+        "expertise": ["statistics", "ml"],
+        "activeReviews": 2,
+        "maxActiveReviews": 4,
+        "conflicts": [],
+        "trainingCurrent": true,
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "MAT-11",
+    "title": "Low heat cement materials challenge",
+    "requiredExpertise": ["materials", "climate"],
+    "reviewers": [
+      {
+        "id": "r-mira",
+        "expertise": ["materials"],
+        "activeReviews": 4,
+        "maxActiveReviews": 4,
+        "conflicts": [],
+        "trainingCurrent": true,
+        "available": true
+      },
+      {
+        "id": "r-noah",
+        "expertise": ["climate"],
+        "activeReviews": 1,
+        "maxActiveReviews": 3,
+        "conflicts": ["MAT-11"],
+        "trainingCurrent": true,
+        "available": true
+      },
+      {
+        "id": "r-ivy",
+        "expertise": ["materials", "climate"],
+        "activeReviews": 1,
+        "maxActiveReviews": 3,
+        "conflicts": [],
+        "trainingCurrent": true,
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "QNT-7",
+    "title": "Quantum noise reduction challenge",
+    "requiredExpertise": ["quantum", "signal-processing"],
+    "reviewers": [
+      {
+        "id": "r-sam",
+        "expertise": ["quantum"],
+        "activeReviews": 2,
+        "maxActiveReviews": 3,
+        "conflicts": [],
+        "trainingCurrent": false,
+        "available": true
+      },
+      {
+        "id": "r-june",
+        "expertise": ["statistics"],
+        "activeReviews": 0,
+        "maxActiveReviews": 2,
+        "conflicts": [],
+        "trainingCurrent": true,
+        "available": true
+      }
+    ]
+  }
+]

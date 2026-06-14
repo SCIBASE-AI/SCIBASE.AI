@@ -1,0 +1,41 @@
+[
+  {
+    "recordId": "CB-1001",
+    "department": "Neuroscience lab",
+    "amount": 4200,
+    "decision": "APPROVE_CHARGEBACK",
+    "blockers": [],
+    "warnings": [],
+    "nextStep": "post the chargeback to the institution ledger"
+  },
+  {
+    "recordId": "CB-1002",
+    "department": "Materials group",
+    "amount": 9600,
+    "decision": "ROUTE_FOR_APPROVAL",
+    "blockers": [],
+    "warnings": [
+      "charge exceeds remaining budget but has overage approval",
+      "no purchase order attached"
+    ],
+    "nextStep": "send to finance for a manual approval pass"
+  },
+  {
+    "recordId": "CB-1003",
+    "department": "Clinical data unit",
+    "amount": 3100,
+    "decision": "BLOCK_CHARGEBACK",
+    "blockers": [
+      "inactive cost center",
+      "missing PI approval",
+      "expense category not allowed",
+      "missing usage evidence",
+      "data residency mismatch"
+    ],
+    "warnings": [
+      "no purchase order attached",
+      "missing tax code"
+    ],
+    "nextStep": "do not post until blockers are fixed"
+  }
+]

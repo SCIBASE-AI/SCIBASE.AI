@@ -1,0 +1,50 @@
+[
+  {
+    "id": "CB-1001",
+    "department": "Neuroscience lab",
+    "amount": 4200,
+    "remainingBudget": 12000,
+    "costCenterActive": true,
+    "piApproval": true,
+    "grantAllowsCharge": true,
+    "categoryAllowed": true,
+    "projectActive": true,
+    "usageEvidence": true,
+    "dataResidencyOk": true,
+    "overageApproval": false,
+    "purchaseOrder": "PO-4451",
+    "taxCode": "RND-SVC"
+  },
+  {
+    "id": "CB-1002",
+    "department": "Materials group",
+    "amount": 9600,
+    "remainingBudget": 8000,
+    "costCenterActive": true,
+    "piApproval": true,
+    "grantAllowsCharge": true,
+    "categoryAllowed": true,
+    "projectActive": true,
+    "usageEvidence": true,
+    "dataResidencyOk": true,
+    "overageApproval": true,
+    "purchaseOrder": "",
+    "taxCode": "RND-COMPUTE"
+  },
+  {
+    "id": "CB-1003",
+    "department": "Clinical data unit",
+    "amount": 3100,
+    "remainingBudget": 7000,
+    "costCenterActive": false,
+    "piApproval": false,
+    "grantAllowsCharge": true,
+    "categoryAllowed": false,
+    "projectActive": true,
+    "usageEvidence": false,
+    "dataResidencyOk": false,
+    "overageApproval": false,
+    "purchaseOrder": "",
+    "taxCode": ""
+  }
+]

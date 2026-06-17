@@ -1,0 +1,326 @@
+{
+  "asOf": "2026-06-18",
+  "policy": {
+    "noticeDays": 90,
+    "legacyGraceDays": 45,
+    "materialIncreasePercent": 15,
+    "maxComputeRegressionPercent": 20,
+    "defaultConsentThresholdPercent": 12
+  },
+  "summary": {
+    "totalAccounts": 5,
+    "release": 1,
+    "review": 1,
+    "hold": 3,
+    "totalMonthlyDeltaCents": 151000,
+    "heldAccountIds": [
+      "acct-lab-price-lock",
+      "acct-notice-gap",
+      "acct-currency-mismatch"
+    ],
+    "reviewAccountIds": [
+      "acct-grace-review"
+    ],
+    "topRisks": [
+      {
+        "accountId": "acct-lab-price-lock",
+        "severity": "HOLD_INVOICE",
+        "code": "ACTIVE_PRICE_LOCK"
+      },
+      {
+        "accountId": "acct-lab-price-lock",
+        "severity": "HOLD_INVOICE",
+        "code": "GRANDFATHERING_BLOCKS_AUTO_MIGRATION"
+      },
+      {
+        "accountId": "acct-lab-price-lock",
+        "severity": "HOLD_INVOICE",
+        "code": "MISSING_MATERIAL_INCREASE_CONSENT"
+      },
+      {
+        "accountId": "acct-lab-price-lock",
+        "severity": "HOLD_INVOICE",
+        "code": "NOTICE_WINDOW_NOT_MET"
+      },
+      {
+        "accountId": "acct-notice-gap",
+        "severity": "HOLD_INVOICE",
+        "code": "ADD_ON_PARITY_GAP"
+      },
+      {
+        "accountId": "acct-notice-gap",
+        "severity": "HOLD_INVOICE",
+        "code": "MISSING_MATERIAL_INCREASE_CONSENT"
+      },
+      {
+        "accountId": "acct-notice-gap",
+        "severity": "HOLD_INVOICE",
+        "code": "NOTICE_WINDOW_NOT_MET"
+      },
+      {
+        "accountId": "acct-notice-gap",
+        "severity": "HOLD_INVOICE",
+        "code": "SEAT_CAP_REGRESSION"
+      }
+    ]
+  },
+  "results": [
+    {
+      "accountId": "acct-univ-ready",
+      "accountName": "Northbridge University Research Office",
+      "segment": "institution",
+      "decision": "RELEASE_INVOICE",
+      "priceImpact": {
+        "currentMonthlyCents": 420000,
+        "targetMonthlyCents": 459000,
+        "deltaMonthlyCents": 39000,
+        "increasePercent": 9.29,
+        "displayDelta": "USD 390.00"
+      },
+      "entitlementImpact": {
+        "seatDelta": 20,
+        "computeHourDelta": 200,
+        "missingAddOns": []
+      },
+      "evidence": {
+        "customerNoticeId": "notice-NBU-2026-pricebook",
+        "consentReceivedAt": "2026-04-02",
+        "financeApproval": "fin-2026-104",
+        "legalApproval": "legal-legacy-migration-7",
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "enterprise-renewals"
+      },
+      "reasons": [],
+      "actions": [],
+      "riskScore": 0
+    },
+    {
+      "accountId": "acct-lab-price-lock",
+      "accountName": "Meridian Lab Collaborative",
+      "segment": "lab",
+      "decision": "HOLD_INVOICE",
+      "priceImpact": {
+        "currentMonthlyCents": 78000,
+        "targetMonthlyCents": 94000,
+        "deltaMonthlyCents": 16000,
+        "increasePercent": 20.51,
+        "displayDelta": "USD 160.00"
+      },
+      "entitlementImpact": {
+        "seatDelta": 0,
+        "computeHourDelta": 0,
+        "missingAddOns": []
+      },
+      "evidence": {
+        "customerNoticeId": "notice-MLC-2026-pricebook",
+        "consentReceivedAt": null,
+        "financeApproval": "fin-2026-188",
+        "legalApproval": null,
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "lab-success"
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "ACTIVE_PRICE_LOCK",
+          "message": "Price lock remains active until 2026-12-31."
+        },
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "GRANDFATHERING_BLOCKS_AUTO_MIGRATION",
+          "message": "Contract is grandfathered until 2026-12-31 and does not allow automatic migration."
+        },
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "MISSING_MATERIAL_INCREASE_CONSENT",
+          "message": "Increase is 20.51% and requires consent above 10%."
+        },
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "NOTICE_WINDOW_NOT_MET",
+          "message": "Customer notice is 29 days old; policy requires 90 days."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "MATERIAL_INCREASE_NEEDS_LEGAL_REVIEW",
+          "message": "Increase is 20.51%, above the 15% materiality threshold."
+        }
+      ],
+      "actions": [
+        "Keep the account on the legacy price book until the price lock expires or a new order form is signed.",
+        "Request explicit customer approval before creating a new-price invoice.",
+        "Hold invoice release until the notice window is satisfied.",
+        "Collect explicit consent or signed renewal before migration.",
+        "Attach legal approval before release."
+      ],
+      "riskScore": 9
+    },
+    {
+      "accountId": "acct-notice-gap",
+      "accountName": "Civic Methods Consortium",
+      "segment": "institution",
+      "decision": "HOLD_INVOICE",
+      "priceImpact": {
+        "currentMonthlyCents": 250000,
+        "targetMonthlyCents": 302000,
+        "deltaMonthlyCents": 52000,
+        "increasePercent": 20.8,
+        "displayDelta": "USD 520.00"
+      },
+      "entitlementImpact": {
+        "seatDelta": -10,
+        "computeHourDelta": -80,
+        "missingAddOns": [
+          "sso"
+        ]
+      },
+      "evidence": {
+        "customerNoticeId": "notice-CMC-2026-pricebook",
+        "consentReceivedAt": null,
+        "financeApproval": null,
+        "legalApproval": null,
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": null
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "ADD_ON_PARITY_GAP",
+          "message": "Target plan is missing legacy add-ons: sso."
+        },
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "MISSING_MATERIAL_INCREASE_CONSENT",
+          "message": "Increase is 20.8% and requires consent above 10%."
+        },
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "NOTICE_WINDOW_NOT_MET",
+          "message": "Customer notice is 21 days old; policy requires 90 days."
+        },
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "SEAT_CAP_REGRESSION",
+          "message": "Target plan includes 170 seats but current usage has 178."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "COMPUTE_ENTITLEMENT_REGRESSION",
+          "message": "Target compute allowance is 520 hours while recent usage is 581."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "INSIDE_LEGACY_GRACE_PERIOD",
+          "message": "Grandfathering ended 19 days ago, inside the 45-day review grace period."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "MATERIAL_INCREASE_NEEDS_LEGAL_REVIEW",
+          "message": "Increase is 20.8%, above the 15% materiality threshold."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "STRATEGIC_ACCOUNT_OWNER_MISSING",
+          "message": "Strategic account lacks a sales-owner signoff."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "VOLUME_DISCOUNT_SEAT_BASE_CHANGED",
+          "message": "Volume discount 11% is tied to 180 legacy seats."
+        }
+      ],
+      "actions": [
+        "Route through renewals review before release.",
+        "Hold invoice release until the notice window is satisfied.",
+        "Collect explicit consent or signed renewal before migration.",
+        "Attach legal approval before release.",
+        "Increase target seat allowance or collect admin confirmation for seat reduction.",
+        "Confirm customer-facing compute entitlement changes before billing.",
+        "Add equivalent add-ons or document an accepted replacement.",
+        "Confirm volume discount recalculation with revenue operations.",
+        "Attach named sales owner or renewal owner signoff."
+      ],
+      "riskScore": 13
+    },
+    {
+      "accountId": "acct-grace-review",
+      "accountName": "Helix Bioinformatics Studio",
+      "segment": "lab",
+      "decision": "REVIEW_BEFORE_RELEASE",
+      "priceImpact": {
+        "currentMonthlyCents": 114000,
+        "targetMonthlyCents": 132000,
+        "deltaMonthlyCents": 18000,
+        "increasePercent": 15.79,
+        "displayDelta": "EUR 180.00"
+      },
+      "entitlementImpact": {
+        "seatDelta": 10,
+        "computeHourDelta": 10,
+        "missingAddOns": []
+      },
+      "evidence": {
+        "customerNoticeId": "notice-HBS-2026-pricebook",
+        "consentReceivedAt": null,
+        "financeApproval": "fin-eu-2026-077",
+        "legalApproval": null,
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "eu-renewals"
+      },
+      "reasons": [
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "INSIDE_LEGACY_GRACE_PERIOD",
+          "message": "Grandfathering ended 29 days ago, inside the 45-day review grace period."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "MATERIAL_INCREASE_NEEDS_LEGAL_REVIEW",
+          "message": "Increase is 15.79%, above the 15% materiality threshold."
+        }
+      ],
+      "actions": [
+        "Route through renewals review before release.",
+        "Attach legal approval before release."
+      ],
+      "riskScore": 2
+    },
+    {
+      "accountId": "acct-currency-mismatch",
+      "accountName": "Pacific Applied Science Center",
+      "segment": "institution",
+      "decision": "HOLD_INVOICE",
+      "priceImpact": {
+        "currentMonthlyCents": 360000,
+        "targetMonthlyCents": 386000,
+        "deltaMonthlyCents": 26000,
+        "increasePercent": 7.22,
+        "displayDelta": "HKD 260.00"
+      },
+      "entitlementImpact": {
+        "seatDelta": 10,
+        "computeHourDelta": 40,
+        "missingAddOns": []
+      },
+      "evidence": {
+        "customerNoticeId": "notice-PASC-2026-pricebook",
+        "consentReceivedAt": "2026-04-18",
+        "financeApproval": null,
+        "legalApproval": "legal-apac-2026-02",
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "apac-renewals"
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_INVOICE",
+          "code": "CURRENCY_CHANGE_WITHOUT_FINANCE_APPROVAL",
+          "message": "Currency changes from USD to HKD."
+        }
+      ],
+      "actions": [
+        "Add finance approval and settlement notes for the currency migration."
+      ],
+      "riskScore": 2
+    }
+  ]
+}

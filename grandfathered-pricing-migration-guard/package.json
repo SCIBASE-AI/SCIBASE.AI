@@ -1,0 +1,11 @@
+{
+  "name": "grandfathered-pricing-migration-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline guard for legacy-price plan migrations before revenue invoices are released.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/demo.js"
+  }
+}

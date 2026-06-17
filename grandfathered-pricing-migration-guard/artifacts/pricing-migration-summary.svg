@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="360" viewBox="0 0 860 360" role="img" aria-labelledby="title desc">
+  <title id="title">Grandfathered pricing migration guard summary</title>
+  <desc id="desc">Portfolio release, review, and hold counts for synthetic price-book migrations.</desc>
+  <rect width="860" height="360" fill="#f8fafc"/>
+  <text x="40" y="48" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#111827">Grandfathered Pricing Migration Guard</text>
+  <text x="40" y="78" font-size="15" font-family="Arial, sans-serif" fill="#475569">Synthetic reviewer packet for Revenue Infrastructure issue #20</text>
+  <rect x="40" y="108" width="90" height="28" rx="4" fill="#16a34a"/>
+  <rect x="130" y="108" width="90" height="28" rx="4" fill="#ca8a04"/>
+  <rect x="220" y="108" width="270" height="28" rx="4" fill="#ea580c"/>
+  <text x="40" y="156" font-size="13" font-family="Arial, sans-serif" fill="#111827">Release: 1 | Review: 1 | Hold: 3</text>
+  <text x="42" y="176" font-size="14" fill="#111827">Northbridge University Research Office</text><text x="520" y="176" font-size="14" fill="#15803d" font-weight="700">RELEASE_INVOICE</text><text x="42" y="206" font-size="14" fill="#111827">Meridian Lab Collaborative</text><text x="520" y="206" font-size="14" fill="#c2410c" font-weight="700">HOLD_INVOICE</text><text x="42" y="236" font-size="14" fill="#111827">Civic Methods Consortium</text><text x="520" y="236" font-size="14" fill="#c2410c" font-weight="700">HOLD_INVOICE</text><text x="42" y="266" font-size="14" fill="#111827">Helix Bioinformatics Studio</text><text x="520" y="266" font-size="14" fill="#a16207" font-weight="700">REVIEW_BEFORE_RELEASE</text><text x="42" y="296" font-size="14" fill="#111827">Pacific Applied Science Center</text><text x="520" y="296" font-size="14" fill="#c2410c" font-weight="700">HOLD_INVOICE</text>
+</svg>

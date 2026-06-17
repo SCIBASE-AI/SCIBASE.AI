@@ -1,0 +1,184 @@
+{
+  "asOf": "2026-06-18",
+  "policy": {
+    "evidenceFreshnessDays": 365,
+    "restrictedReviewRequiresAuthorConsent": true
+  },
+  "dossiers": [
+    {
+      "id": "dossier-release",
+      "researcher": "Dr. Lina Park",
+      "purpose": "promotion",
+      "recipient": "institutional-promotion-committee",
+      "consent": {
+        "exportConsentAt": "2026-04-12",
+        "optOut": false
+      },
+      "reviews": [
+        {
+          "id": "review-public-1",
+          "mode": "public",
+          "reviewerName": "Dr. Mateo Cruz",
+          "redacted": false,
+          "authorConsent": true,
+          "evidenceId": "review-evidence-100"
+        },
+        {
+          "id": "review-blind-1",
+          "mode": "double-blind",
+          "reviewerName": null,
+          "redacted": true,
+          "authorConsent": true,
+          "evidenceId": "review-evidence-101"
+        }
+      ],
+      "credits": [
+        {
+          "role": "Data curation",
+          "timestamp": "2026-01-21",
+          "evidenceId": "credit-data-221"
+        },
+        {
+          "role": "Software",
+          "timestamp": "2026-02-14",
+          "evidenceId": "credit-software-114"
+        }
+      ],
+      "badges": [
+        {
+          "id": "open-science-champion",
+          "grantedAt": "2026-03-10",
+          "evidenceId": "badge-open-2026"
+        }
+      ],
+      "reputation": {
+        "score": 84,
+        "delta": 7,
+        "sourceEventIds": ["review-evidence-100", "credit-data-221", "badge-open-2026"]
+      },
+      "conflictNotes": []
+    },
+    {
+      "id": "dossier-opt-out",
+      "researcher": "Dr. Amara Singh",
+      "purpose": "annual-review",
+      "recipient": "department-chair",
+      "consent": {
+        "exportConsentAt": "2025-11-03",
+        "optOut": true
+      },
+      "reviews": [
+        {
+          "id": "review-public-2",
+          "mode": "public",
+          "reviewerName": "Dr. N. Rivera",
+          "redacted": false,
+          "authorConsent": true,
+          "evidenceId": "review-evidence-200"
+        }
+      ],
+      "credits": [
+        {
+          "role": "Investigation",
+          "timestamp": "2026-02-02",
+          "evidenceId": "credit-investigation-202"
+        }
+      ],
+      "badges": [],
+      "reputation": {
+        "score": 61,
+        "delta": 2,
+        "sourceEventIds": ["review-evidence-200"]
+      },
+      "conflictNotes": []
+    },
+    {
+      "id": "dossier-blind-leak",
+      "researcher": "Dr. Theo Imani",
+      "purpose": "grant-report",
+      "recipient": "external-funder",
+      "consent": {
+        "exportConsentAt": "2026-05-08",
+        "optOut": false
+      },
+      "reviews": [
+        {
+          "id": "review-blind-2",
+          "mode": "anonymous",
+          "reviewerName": "Dr. Hidden Reviewer",
+          "redacted": false,
+          "authorConsent": true,
+          "evidenceId": "review-evidence-301"
+        },
+        {
+          "id": "review-semi-1",
+          "mode": "semi-private",
+          "reviewerName": "Dr. Kay Holt",
+          "redacted": true,
+          "authorConsent": false,
+          "evidenceId": "review-evidence-302"
+        }
+      ],
+      "credits": [
+        {
+          "role": "Formal analysis",
+          "timestamp": "2026-01-05",
+          "evidenceId": "credit-analysis-301"
+        }
+      ],
+      "badges": [
+        {
+          "id": "trusted-reviewer",
+          "grantedAt": "2025-04-01",
+          "evidenceId": "badge-reviewer-old"
+        }
+      ],
+      "reputation": {
+        "score": 73,
+        "delta": 9,
+        "sourceEventIds": []
+      },
+      "conflictNotes": ["Unredacted committee conflict note should not leave the platform."]
+    },
+    {
+      "id": "dossier-stale-review",
+      "researcher": "Dr. Noura Bell",
+      "purpose": "tenure",
+      "recipient": "faculty-affairs",
+      "consent": {
+        "exportConsentAt": "2026-02-01",
+        "optOut": false
+      },
+      "reviews": [
+        {
+          "id": "review-public-3",
+          "mode": "public",
+          "reviewerName": "Dr. Owen Liu",
+          "redacted": false,
+          "authorConsent": true,
+          "evidenceId": "review-evidence-401"
+        }
+      ],
+      "credits": [
+        {
+          "role": "Writing - review and editing",
+          "timestamp": "2025-08-02",
+          "evidenceId": ""
+        }
+      ],
+      "badges": [
+        {
+          "id": "reproducibility-badge",
+          "grantedAt": "2024-12-15",
+          "evidenceId": "badge-repro-2024"
+        }
+      ],
+      "reputation": {
+        "score": 79,
+        "delta": 4,
+        "sourceEventIds": ["review-evidence-401"]
+      },
+      "conflictNotes": []
+    }
+  ]
+}

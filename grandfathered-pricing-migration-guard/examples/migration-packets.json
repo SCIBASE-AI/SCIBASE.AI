@@ -1,0 +1,274 @@
+{
+  "asOf": "2026-06-18",
+  "policy": {
+    "noticeDays": 90,
+    "legacyGraceDays": 45,
+    "materialIncreasePercent": 15,
+    "maxComputeRegressionPercent": 20,
+    "defaultConsentThresholdPercent": 12
+  },
+  "accounts": [
+    {
+      "id": "acct-univ-ready",
+      "name": "Northbridge University Research Office",
+      "segment": "institution",
+      "currency": "USD",
+      "currentPlan": {
+        "planId": "institution-legacy-2024",
+        "priceBookId": "pb-legacy-2024",
+        "monthlyPriceCents": 420000,
+        "billingCycle": "annual",
+        "includedSeats": 240,
+        "includedComputeHours": 900,
+        "addOns": ["analytics-api", "priority-support"]
+      },
+      "targetPlan": {
+        "planId": "institution-enterprise-2026",
+        "priceBookId": "pb-enterprise-2026",
+        "monthlyPriceCents": 459000,
+        "billingCycle": "annual",
+        "includedSeats": 260,
+        "includedComputeHours": 1100,
+        "addOns": ["analytics-api", "priority-support"]
+      },
+      "contract": {
+        "grandfatheredUntil": "2026-04-30",
+        "priceLockUntil": "2026-03-31",
+        "allowsAutoMigration": true,
+        "requiresConsentAbovePct": 12,
+        "noticeSentAt": "2026-02-10",
+        "consentReceivedAt": "2026-04-02",
+        "signedOrderFormAt": "2026-01-18"
+      },
+      "usage": {
+        "activeSeats": 221,
+        "averageComputeHours": 812
+      },
+      "discounts": {
+        "annualCommitment": true,
+        "volumePercent": 8
+      },
+      "evidence": {
+        "customerNoticeId": "notice-NBU-2026-pricebook",
+        "addOnParityReview": "passed",
+        "financeApproval": "fin-2026-104",
+        "legalApproval": "legal-legacy-migration-7",
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "enterprise-renewals"
+      },
+      "flags": {
+        "billingDispute": false,
+        "delinquent": false,
+        "strategicAccount": true
+      }
+    },
+    {
+      "id": "acct-lab-price-lock",
+      "name": "Meridian Lab Collaborative",
+      "segment": "lab",
+      "currency": "USD",
+      "currentPlan": {
+        "planId": "lab-growth-legacy",
+        "priceBookId": "pb-lab-2023",
+        "monthlyPriceCents": 78000,
+        "billingCycle": "monthly",
+        "includedSeats": 45,
+        "includedComputeHours": 180,
+        "addOns": ["private-workspaces"]
+      },
+      "targetPlan": {
+        "planId": "lab-growth-2026",
+        "priceBookId": "pb-lab-2026",
+        "monthlyPriceCents": 94000,
+        "billingCycle": "monthly",
+        "includedSeats": 45,
+        "includedComputeHours": 180,
+        "addOns": ["private-workspaces"]
+      },
+      "contract": {
+        "grandfatheredUntil": "2026-12-31",
+        "priceLockUntil": "2026-12-31",
+        "allowsAutoMigration": false,
+        "requiresConsentAbovePct": 10,
+        "noticeSentAt": "2026-05-20",
+        "signedOrderFormAt": "2025-12-19"
+      },
+      "usage": {
+        "activeSeats": 39,
+        "averageComputeHours": 131
+      },
+      "discounts": {
+        "annualCommitment": false,
+        "volumePercent": 0
+      },
+      "evidence": {
+        "customerNoticeId": "notice-MLC-2026-pricebook",
+        "addOnParityReview": "passed",
+        "financeApproval": "fin-2026-188",
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "lab-success"
+      },
+      "flags": {
+        "billingDispute": false,
+        "delinquent": false,
+        "strategicAccount": false
+      }
+    },
+    {
+      "id": "acct-notice-gap",
+      "name": "Civic Methods Consortium",
+      "segment": "institution",
+      "currency": "USD",
+      "currentPlan": {
+        "planId": "consortium-legacy",
+        "priceBookId": "pb-public-sector-2024",
+        "monthlyPriceCents": 250000,
+        "billingCycle": "annual",
+        "includedSeats": 180,
+        "includedComputeHours": 600,
+        "addOns": ["analytics-api", "sso"]
+      },
+      "targetPlan": {
+        "planId": "consortium-2026",
+        "priceBookId": "pb-public-sector-2026",
+        "monthlyPriceCents": 302000,
+        "billingCycle": "annual",
+        "includedSeats": 170,
+        "includedComputeHours": 520,
+        "addOns": ["analytics-api"]
+      },
+      "contract": {
+        "grandfatheredUntil": "2026-05-30",
+        "priceLockUntil": "2026-05-30",
+        "allowsAutoMigration": true,
+        "requiresConsentAbovePct": 10,
+        "noticeSentAt": "2026-05-28",
+        "signedOrderFormAt": "2025-11-04"
+      },
+      "usage": {
+        "activeSeats": 178,
+        "averageComputeHours": 581
+      },
+      "discounts": {
+        "annualCommitment": true,
+        "volumePercent": 11
+      },
+      "evidence": {
+        "customerNoticeId": "notice-CMC-2026-pricebook",
+        "addOnParityReview": "missing",
+        "migrationRunbook": "runbook-pricebook-2026-v3"
+      },
+      "flags": {
+        "billingDispute": false,
+        "delinquent": false,
+        "strategicAccount": true
+      }
+    },
+    {
+      "id": "acct-grace-review",
+      "name": "Helix Bioinformatics Studio",
+      "segment": "lab",
+      "currency": "EUR",
+      "currentPlan": {
+        "planId": "lab-pro-legacy-eu",
+        "priceBookId": "pb-eu-2024",
+        "monthlyPriceCents": 114000,
+        "billingCycle": "annual",
+        "includedSeats": 70,
+        "includedComputeHours": 350,
+        "addOns": ["priority-support"]
+      },
+      "targetPlan": {
+        "planId": "lab-pro-eu-2026",
+        "priceBookId": "pb-eu-2026",
+        "monthlyPriceCents": 132000,
+        "billingCycle": "annual",
+        "includedSeats": 80,
+        "includedComputeHours": 360,
+        "addOns": ["priority-support"]
+      },
+      "contract": {
+        "grandfatheredUntil": "2026-05-20",
+        "priceLockUntil": "2026-05-20",
+        "allowsAutoMigration": true,
+        "requiresConsentAbovePct": 20,
+        "noticeSentAt": "2026-02-15",
+        "signedOrderFormAt": "2025-10-10"
+      },
+      "usage": {
+        "activeSeats": 61,
+        "averageComputeHours": 342
+      },
+      "discounts": {
+        "annualCommitment": true,
+        "volumePercent": 5
+      },
+      "evidence": {
+        "customerNoticeId": "notice-HBS-2026-pricebook",
+        "addOnParityReview": "passed",
+        "financeApproval": "fin-eu-2026-077",
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "eu-renewals"
+      },
+      "flags": {
+        "billingDispute": false,
+        "delinquent": false,
+        "strategicAccount": false
+      }
+    },
+    {
+      "id": "acct-currency-mismatch",
+      "name": "Pacific Applied Science Center",
+      "segment": "institution",
+      "currency": "USD",
+      "currentPlan": {
+        "planId": "institution-legacy-apac",
+        "priceBookId": "pb-apac-2024",
+        "monthlyPriceCents": 360000,
+        "billingCycle": "annual",
+        "includedSeats": 210,
+        "includedComputeHours": 760,
+        "addOns": ["analytics-api", "priority-support", "sso"]
+      },
+      "targetPlan": {
+        "planId": "institution-apac-2026",
+        "priceBookId": "pb-apac-2026",
+        "monthlyPriceCents": 386000,
+        "billingCycle": "annual",
+        "currency": "HKD",
+        "includedSeats": 220,
+        "includedComputeHours": 800,
+        "addOns": ["analytics-api", "priority-support", "sso"]
+      },
+      "contract": {
+        "grandfatheredUntil": "2026-03-31",
+        "priceLockUntil": "2026-03-31",
+        "allowsAutoMigration": true,
+        "requiresConsentAbovePct": 15,
+        "noticeSentAt": "2026-01-20",
+        "consentReceivedAt": "2026-04-18",
+        "signedOrderFormAt": "2026-01-05"
+      },
+      "usage": {
+        "activeSeats": 201,
+        "averageComputeHours": 721
+      },
+      "discounts": {
+        "annualCommitment": true,
+        "volumePercent": 6
+      },
+      "evidence": {
+        "customerNoticeId": "notice-PASC-2026-pricebook",
+        "addOnParityReview": "passed",
+        "legalApproval": "legal-apac-2026-02",
+        "migrationRunbook": "runbook-pricebook-2026-v3",
+        "salesOwner": "apac-renewals"
+      },
+      "flags": {
+        "billingDispute": false,
+        "delinquent": false,
+        "strategicAccount": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "asOf": "2026-06-18",
+  "policy": {
+    "embargoBufferDays": 0,
+    "unsupportedClaimVerbs": [
+      "proves",
+      "cures",
+      "guarantees",
+      "eliminates"
+    ],
+    "restrictedAudienceRequiresApproval": true
+  },
+  "summary": {
+    "totalPackets": 5,
+    "release": 1,
+    "review": 1,
+    "hold": 3,
+    "heldPacketIds": [
+      "packet-phi-hold",
+      "packet-private-repro",
+      "packet-prompt-leak"
+    ],
+    "reviewPacketIds": [
+      "packet-gap-review"
+    ],
+    "topRisks": [
+      {
+        "packetId": "packet-phi-hold",
+        "severity": "HOLD_OUTPUT",
+        "code": "DOUBLE_BLIND_IDENTITY_LEAK"
+      },
+      {
+        "packetId": "packet-phi-hold",
+        "severity": "HOLD_OUTPUT",
+        "code": "EMAIL_ADDRESS"
+      },
+      {
+        "packetId": "packet-phi-hold",
+        "severity": "HOLD_OUTPUT",
+        "code": "MEDICAL_RECORD_NUMBER"
+      },
+      {
+        "packetId": "packet-phi-hold",
+        "severity": "HOLD_OUTPUT",
+        "code": "REDACTION_REVIEW_MISSING"
+      },
+      {
+        "packetId": "packet-phi-hold",
+        "severity": "HOLD_OUTPUT",
+        "code": "RESTRICTED_OUTPUT_LACKS_APPROVAL"
+      },
+      {
+        "packetId": "packet-private-repro",
+        "severity": "HOLD_OUTPUT",
+        "code": "DATA_USE_EVIDENCE_MISSING"
+      },
+      {
+        "packetId": "packet-private-repro",
+        "severity": "HOLD_OUTPUT",
+        "code": "EMBARGOED_PUBLIC_OUTPUT"
+      },
+      {
+        "packetId": "packet-private-repro",
+        "severity": "HOLD_OUTPUT",
+        "code": "INTERNAL_TOKEN_REFERENCE"
+      }
+    ]
+  },
+  "results": [
+    {
+      "packetId": "packet-clean-review",
+      "title": "Sanitized internal peer-review note",
+      "assistantMode": "auto-peer-review",
+      "visibility": "team",
+      "audience": "project-authors",
+      "decision": "RELEASE_OUTPUT",
+      "disclosureSignals": {
+        "directIdentifierMatches": [],
+        "promptLeak": false,
+        "unsupportedClaimCount": 0,
+        "citationCount": 1
+      },
+      "evidence": {
+        "humanApproval": "review-lead-17",
+        "redactionReview": "passed",
+        "deidentificationSummary": "direct identifiers removed",
+        "dataUseAgreement": "dua-synthetic-2026"
+      },
+      "reasons": [],
+      "actions": [],
+      "riskScore": 0
+    },
+    {
+      "packetId": "packet-phi-hold",
+      "title": "Peer-review note with direct identifiers",
+      "assistantMode": "auto-peer-review",
+      "visibility": "external-review",
+      "audience": "double-blind-reviewers",
+      "decision": "HOLD_OUTPUT",
+      "disclosureSignals": {
+        "directIdentifierMatches": [
+          "EMAIL_ADDRESS",
+          "MEDICAL_RECORD_NUMBER"
+        ],
+        "promptLeak": false,
+        "unsupportedClaimCount": 1,
+        "citationCount": 0
+      },
+      "evidence": {
+        "humanApproval": null,
+        "redactionReview": "missing",
+        "deidentificationSummary": null,
+        "dataUseAgreement": "dua-synthetic-2026"
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "DOUBLE_BLIND_IDENTITY_LEAK",
+          "message": "Double-blind output appears to reveal reviewer identity."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "EMAIL_ADDRESS",
+          "message": "Generated text matches email address pattern."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "MEDICAL_RECORD_NUMBER",
+          "message": "Generated text matches medical record number pattern."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "REDACTION_REVIEW_MISSING",
+          "message": "No passed redaction review is attached."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "RESTRICTED_OUTPUT_LACKS_APPROVAL",
+          "message": "Restricted assistant output has no human approval evidence."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "DEIDENTIFICATION_SUMMARY_MISSING",
+          "message": "No de-identification summary is attached."
+        },
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "UNSUPPORTED_HIGH_IMPACT_CLAIM",
+          "message": "Found 1 high-impact claim(s) without source support."
+        }
+      ],
+      "actions": [
+        "Redact direct identifiers and rerun disclosure review before release.",
+        "Replace reviewer names with role-neutral labels before release.",
+        "Attach human approval before releasing restricted output.",
+        "Run and attach redaction review evidence.",
+        "Add a de-identification summary for reviewer replay.",
+        "Rewrite claims with source support or downgrade the language."
+      ],
+      "riskScore": 12
+    },
+    {
+      "packetId": "packet-private-repro",
+      "title": "Reproducibility note with private storage",
+      "assistantMode": "reproducibility-checker",
+      "visibility": "public",
+      "audience": "public-project-page",
+      "decision": "HOLD_OUTPUT",
+      "disclosureSignals": {
+        "directIdentifierMatches": [
+          "PRIVATE_STORAGE_LINK",
+          "INTERNAL_TOKEN_REFERENCE"
+        ],
+        "promptLeak": false,
+        "unsupportedClaimCount": 0,
+        "citationCount": 1
+      },
+      "evidence": {
+        "humanApproval": null,
+        "redactionReview": "missing",
+        "deidentificationSummary": "pending",
+        "dataUseAgreement": null
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "DATA_USE_EVIDENCE_MISSING",
+          "message": "Restricted assistant output lacks data-use evidence."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "EMBARGOED_PUBLIC_OUTPUT",
+          "message": "Output is public while project remains embargoed for 42 days."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "INTERNAL_TOKEN_REFERENCE",
+          "message": "Generated text matches internal token reference pattern."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "PRIVATE_STORAGE_LINK",
+          "message": "Generated text matches private storage link pattern."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "REDACTION_REVIEW_MISSING",
+          "message": "No passed redaction review is attached."
+        },
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "RESTRICTED_OUTPUT_LACKS_APPROVAL",
+          "message": "Restricted assistant output has no human approval evidence."
+        }
+      ],
+      "actions": [
+        "Redact direct identifiers and rerun disclosure review before release.",
+        "Keep assistant output private until the embargo expires.",
+        "Attach human approval before releasing restricted output.",
+        "Run and attach redaction review evidence.",
+        "Attach data-use agreement or mark the output non-releasable."
+      ],
+      "riskScore": 12
+    },
+    {
+      "packetId": "packet-gap-review",
+      "title": "Research gap feed with missing source support",
+      "assistantMode": "research-gap-finder",
+      "visibility": "team",
+      "audience": "lab-members",
+      "decision": "REVIEW_BEFORE_RELEASE",
+      "disclosureSignals": {
+        "directIdentifierMatches": [],
+        "promptLeak": false,
+        "unsupportedClaimCount": 1,
+        "citationCount": 1
+      },
+      "evidence": {
+        "humanApproval": "gap-reviewer-4",
+        "redactionReview": "passed",
+        "deidentificationSummary": "no human subjects",
+        "dataUseAgreement": "not-required"
+      },
+      "reasons": [
+        {
+          "severity": "REVIEW_BEFORE_RELEASE",
+          "code": "UNSUPPORTED_HIGH_IMPACT_CLAIM",
+          "message": "Found 1 high-impact claim(s) without source support."
+        }
+      ],
+      "actions": [
+        "Rewrite claims with source support or downgrade the language."
+      ],
+      "riskScore": 1
+    },
+    {
+      "packetId": "packet-prompt-leak",
+      "title": "Assistant note with instruction leakage",
+      "assistantMode": "auto-peer-review",
+      "visibility": "team",
+      "audience": "project-authors",
+      "decision": "HOLD_OUTPUT",
+      "disclosureSignals": {
+        "directIdentifierMatches": [],
+        "promptLeak": true,
+        "unsupportedClaimCount": 0,
+        "citationCount": 0
+      },
+      "evidence": {
+        "humanApproval": "review-lead-19",
+        "redactionReview": "passed",
+        "deidentificationSummary": "not applicable",
+        "dataUseAgreement": "not-required"
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_OUTPUT",
+          "code": "PROMPT_OR_INSTRUCTION_LEAK",
+          "message": "Generated text appears to expose prompt, system, or instruction content."
+        }
+      ],
+      "actions": [
+        "Suppress output and inspect the assistant prompt chain."
+      ],
+      "riskScore": 2
+    }
+  ]
+}

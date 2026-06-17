@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="360" viewBox="0 0 860 360" role="img" aria-labelledby="title desc">
+  <title id="title">Assistant output disclosure guard summary</title>
+  <desc id="desc">Release, review, and hold counts for synthetic AI research assistant outputs.</desc>
+  <rect width="860" height="360" fill="#f8fafc"/>
+  <text x="40" y="48" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#111827">Assistant Output Disclosure Guard</text>
+  <text x="40" y="78" font-size="15" font-family="Arial, sans-serif" fill="#475569">Synthetic reviewer packet for AI-Powered Research Assistant issue #16</text>
+  <rect x="40" y="108" width="90" height="28" rx="4" fill="#16a34a"/>
+  <rect x="130" y="108" width="90" height="28" rx="4" fill="#ca8a04"/>
+  <rect x="220" y="108" width="270" height="28" rx="4" fill="#ea580c"/>
+  <text x="40" y="156" font-size="13" font-family="Arial, sans-serif" fill="#111827">Release: 1 | Review: 1 | Hold: 3</text>
+  <text x="42" y="176" font-size="14" fill="#111827">Sanitized internal peer-review note</text><text x="560" y="176" font-size="14" fill="#15803d" font-weight="700">RELEASE_OUTPUT</text><text x="42" y="206" font-size="14" fill="#111827">Peer-review note with direct identifiers</text><text x="560" y="206" font-size="14" fill="#c2410c" font-weight="700">HOLD_OUTPUT</text><text x="42" y="236" font-size="14" fill="#111827">Reproducibility note with private storage</text><text x="560" y="236" font-size="14" fill="#c2410c" font-weight="700">HOLD_OUTPUT</text><text x="42" y="266" font-size="14" fill="#111827">Research gap feed with missing source support</text><text x="560" y="266" font-size="14" fill="#a16207" font-weight="700">REVIEW_BEFORE_RELEASE</text><text x="42" y="296" font-size="14" fill="#111827">Assistant note with instruction leakage</text><text x="560" y="296" font-size="14" fill="#c2410c" font-weight="700">HOLD_OUTPUT</text>
+</svg>

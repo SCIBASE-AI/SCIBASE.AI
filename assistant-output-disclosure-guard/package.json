@@ -1,0 +1,11 @@
+{
+  "name": "assistant-output-disclosure-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline disclosure guard for AI research assistant outputs before release.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/demo.js"
+  }
+}

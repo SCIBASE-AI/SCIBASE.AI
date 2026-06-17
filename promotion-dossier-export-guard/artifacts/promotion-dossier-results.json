@@ -1,0 +1,214 @@
+{
+  "asOf": "2026-06-18",
+  "policy": {
+    "evidenceFreshnessDays": 365,
+    "restrictedReviewRequiresAuthorConsent": true
+  },
+  "summary": {
+    "totalDossiers": 4,
+    "release": 1,
+    "review": 1,
+    "hold": 2,
+    "heldDossierIds": [
+      "dossier-opt-out",
+      "dossier-blind-leak"
+    ],
+    "reviewDossierIds": [
+      "dossier-stale-review"
+    ],
+    "topRisks": [
+      {
+        "dossierId": "dossier-opt-out",
+        "severity": "HOLD_EXPORT",
+        "code": "CONTRIBUTOR_OPT_OUT"
+      },
+      {
+        "dossierId": "dossier-blind-leak",
+        "severity": "HOLD_EXPORT",
+        "code": "BLIND_REVIEW_IDENTITY_LEAK"
+      },
+      {
+        "dossierId": "dossier-blind-leak",
+        "severity": "HOLD_EXPORT",
+        "code": "RESTRICTED_REVIEW_EXPORT_NOT_AUTHORIZED"
+      },
+      {
+        "dossierId": "dossier-blind-leak",
+        "severity": "REVIEW_BEFORE_EXPORT",
+        "code": "BADGE_EVIDENCE_STALE"
+      },
+      {
+        "dossierId": "dossier-blind-leak",
+        "severity": "REVIEW_BEFORE_EXPORT",
+        "code": "CONFLICT_NOTES_REQUIRE_REDACTION"
+      },
+      {
+        "dossierId": "dossier-blind-leak",
+        "severity": "REVIEW_BEFORE_EXPORT",
+        "code": "REPUTATION_DELTA_SOURCE_MISSING"
+      },
+      {
+        "dossierId": "dossier-stale-review",
+        "severity": "REVIEW_BEFORE_EXPORT",
+        "code": "BADGE_EVIDENCE_STALE"
+      },
+      {
+        "dossierId": "dossier-stale-review",
+        "severity": "REVIEW_BEFORE_EXPORT",
+        "code": "CREDIT_EVIDENCE_MISSING"
+      }
+    ]
+  },
+  "results": [
+    {
+      "dossierId": "dossier-release",
+      "researcher": "Dr. Lina Park",
+      "purpose": "promotion",
+      "recipient": "institutional-promotion-committee",
+      "decision": "RELEASE_DOSSIER",
+      "exportSignals": {
+        "reviewCount": 2,
+        "creditCount": 2,
+        "badgeCount": 1,
+        "blindReviewCount": 1,
+        "restrictedReviewCount": 1
+      },
+      "evidence": {
+        "exportConsentAt": "2026-04-12",
+        "optOut": false,
+        "reputationSourceEventIds": [
+          "review-evidence-100",
+          "credit-data-221",
+          "badge-open-2026"
+        ]
+      },
+      "reasons": [],
+      "actions": [],
+      "riskScore": 0
+    },
+    {
+      "dossierId": "dossier-opt-out",
+      "researcher": "Dr. Amara Singh",
+      "purpose": "annual-review",
+      "recipient": "department-chair",
+      "decision": "HOLD_EXPORT",
+      "exportSignals": {
+        "reviewCount": 1,
+        "creditCount": 1,
+        "badgeCount": 0,
+        "blindReviewCount": 0,
+        "restrictedReviewCount": 0
+      },
+      "evidence": {
+        "exportConsentAt": "2025-11-03",
+        "optOut": true,
+        "reputationSourceEventIds": [
+          "review-evidence-200"
+        ]
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_EXPORT",
+          "code": "CONTRIBUTOR_OPT_OUT",
+          "message": "Researcher has opted out of institution-facing dossier export."
+        }
+      ],
+      "actions": [
+        "Remove this dossier from the export batch or collect updated consent."
+      ],
+      "riskScore": 2
+    },
+    {
+      "dossierId": "dossier-blind-leak",
+      "researcher": "Dr. Theo Imani",
+      "purpose": "grant-report",
+      "recipient": "external-funder",
+      "decision": "HOLD_EXPORT",
+      "exportSignals": {
+        "reviewCount": 2,
+        "creditCount": 1,
+        "badgeCount": 1,
+        "blindReviewCount": 1,
+        "restrictedReviewCount": 2
+      },
+      "evidence": {
+        "exportConsentAt": "2026-05-08",
+        "optOut": false,
+        "reputationSourceEventIds": []
+      },
+      "reasons": [
+        {
+          "severity": "HOLD_EXPORT",
+          "code": "BLIND_REVIEW_IDENTITY_LEAK",
+          "message": "Review review-blind-2 is anonymous but reviewer identity is not safely redacted."
+        },
+        {
+          "severity": "HOLD_EXPORT",
+          "code": "RESTRICTED_REVIEW_EXPORT_NOT_AUTHORIZED",
+          "message": "Review review-semi-1 is semi-private and lacks author consent for export."
+        },
+        {
+          "severity": "REVIEW_BEFORE_EXPORT",
+          "code": "BADGE_EVIDENCE_STALE",
+          "message": "Badge trusted-reviewer evidence is 443 days old."
+        },
+        {
+          "severity": "REVIEW_BEFORE_EXPORT",
+          "code": "CONFLICT_NOTES_REQUIRE_REDACTION",
+          "message": "Conflict notes are present and must be redacted or summarized before export."
+        },
+        {
+          "severity": "REVIEW_BEFORE_EXPORT",
+          "code": "REPUTATION_DELTA_SOURCE_MISSING",
+          "message": "Reputation delta is present without source event ids."
+        }
+      ],
+      "actions": [
+        "Redact reviewer identity and regenerate the dossier.",
+        "Exclude the restricted review or attach author export consent.",
+        "Refresh badge evidence or annotate the dossier with stale-evidence status.",
+        "Attach source reputation events before export.",
+        "Replace internal conflict notes with a reviewer-safe export summary."
+      ],
+      "riskScore": 7
+    },
+    {
+      "dossierId": "dossier-stale-review",
+      "researcher": "Dr. Noura Bell",
+      "purpose": "tenure",
+      "recipient": "faculty-affairs",
+      "decision": "REVIEW_BEFORE_EXPORT",
+      "exportSignals": {
+        "reviewCount": 1,
+        "creditCount": 1,
+        "badgeCount": 1,
+        "blindReviewCount": 0,
+        "restrictedReviewCount": 0
+      },
+      "evidence": {
+        "exportConsentAt": "2026-02-01",
+        "optOut": false,
+        "reputationSourceEventIds": [
+          "review-evidence-401"
+        ]
+      },
+      "reasons": [
+        {
+          "severity": "REVIEW_BEFORE_EXPORT",
+          "code": "BADGE_EVIDENCE_STALE",
+          "message": "Badge reproducibility-badge evidence is 550 days old."
+        },
+        {
+          "severity": "REVIEW_BEFORE_EXPORT",
+          "code": "CREDIT_EVIDENCE_MISSING",
+          "message": "CRediT role \"Writing - review and editing\" lacks an evidence id."
+        }
+      ],
+      "actions": [
+        "Attach contribution evidence before using this credit in a dossier.",
+        "Refresh badge evidence or annotate the dossier with stale-evidence status."
+      ],
+      "riskScore": 2
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="330" viewBox="0 0 860 330" role="img" aria-labelledby="title desc">
+  <title id="title">Promotion dossier export guard summary</title>
+  <desc id="desc">Release, review, and hold counts for synthetic institution-facing reputation dossier exports.</desc>
+  <rect width="860" height="330" fill="#f8fafc"/>
+  <text x="40" y="48" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#111827">Promotion Dossier Export Guard</text>
+  <text x="40" y="78" font-size="15" font-family="Arial, sans-serif" fill="#475569">Synthetic reviewer packet for Community &amp; Reputation issue #15</text>
+  <rect x="40" y="108" width="110" height="28" rx="4" fill="#16a34a"/>
+  <rect x="150" y="108" width="110" height="28" rx="4" fill="#ca8a04"/>
+  <rect x="260" y="108" width="220" height="28" rx="4" fill="#ea580c"/>
+  <text x="40" y="156" font-size="13" font-family="Arial, sans-serif" fill="#111827">Release: 1 | Review: 1 | Hold: 2</text>
+  <text x="42" y="176" font-size="14" fill="#111827">Dr. Lina Park</text><text x="520" y="176" font-size="14" fill="#15803d" font-weight="700">RELEASE_DOSSIER</text><text x="42" y="206" font-size="14" fill="#111827">Dr. Amara Singh</text><text x="520" y="206" font-size="14" fill="#c2410c" font-weight="700">HOLD_EXPORT</text><text x="42" y="236" font-size="14" fill="#111827">Dr. Theo Imani</text><text x="520" y="236" font-size="14" fill="#c2410c" font-weight="700">HOLD_EXPORT</text><text x="42" y="266" font-size="14" fill="#111827">Dr. Noura Bell</text><text x="520" y="266" font-size="14" fill="#a16207" font-weight="700">REVIEW_BEFORE_EXPORT</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "promotion-dossier-export-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline guard for institution-facing community reputation dossier exports.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/demo.js"
+  }
+}

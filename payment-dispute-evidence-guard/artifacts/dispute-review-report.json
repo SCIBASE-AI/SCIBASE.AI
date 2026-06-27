@@ -1,0 +1,127 @@
+{
+  "generatedAt": "2026-06-27T08:00:00Z",
+  "summary": {
+    "totalPackets": 4,
+    "totalNetAmountAtRiskCents": 580000,
+    "decisions": {
+      "RELEASE_RESPONSE": 1,
+      "REVIEW_BEFORE_RESPONSE": 1,
+      "HOLD_RESPONSE": 2
+    },
+    "findings": 10,
+    "overallDecision": "HOLD_RESPONSE"
+  },
+  "results": [
+    {
+      "id": "DSP-1001",
+      "accountId": "lab-north-42",
+      "invoiceId": "INV-2026-0418",
+      "processorCaseId": "chdp_91a7_release",
+      "netAmountAtRiskCents": 120000,
+      "hoursUntilDue": 74,
+      "findingCount": 0,
+      "highestSeverity": "info",
+      "decision": "RELEASE_RESPONSE",
+      "findings": []
+    },
+    {
+      "id": "DSP-1002",
+      "accountId": "quantum-cohort-8",
+      "invoiceId": "INV-2026-0442",
+      "processorCaseId": "chdp_91a7_hold",
+      "netAmountAtRiskCents": 260000,
+      "hoursUntilDue": -41,
+      "findingCount": 5,
+      "highestSeverity": "critical",
+      "decision": "HOLD_RESPONSE",
+      "findings": [
+        {
+          "severity": "critical",
+          "code": "RESPONSE_WINDOW_EXPIRED",
+          "message": "The processor response deadline has already passed.",
+          "remediation": "Hold revenue release and escalate to finance counsel before submitting a late dispute packet."
+        },
+        {
+          "severity": "critical",
+          "code": "MISSING_DISPUTE_EVIDENCE",
+          "message": "Missing dispute evidence: deliveryProof, usageLogs, customerCommunication, redactedReceipt.",
+          "remediation": "Attach the missing evidence before any dispute response leaves the revenue workflow."
+        },
+        {
+          "severity": "critical",
+          "code": "SENSITIVE_RECEIPT_DATA",
+          "message": "Receipt evidence appears to contain a full payment card number.",
+          "remediation": "Redact card, bank, and token data before exporting the response packet."
+        },
+        {
+          "severity": "warning",
+          "code": "CUSTOMER_NOTICE_MISSING",
+          "message": "No customer notification timestamp is recorded for this dispute.",
+          "remediation": "Notify the billing contact or document why notice is blocked before release."
+        },
+        {
+          "severity": "critical",
+          "code": "DUPLICATE_PROCESSOR_CASE",
+          "message": "Processor case chdp_91a7_hold appears in more than one packet.",
+          "remediation": "Merge or split the evidence packets before any response is submitted."
+        }
+      ]
+    },
+    {
+      "id": "DSP-1003",
+      "accountId": "bio-modeling-lab",
+      "invoiceId": "INV-2026-0461",
+      "processorCaseId": "chdp_91a7_credit",
+      "netAmountAtRiskCents": 0,
+      "hoursUntilDue": 124,
+      "findingCount": 1,
+      "highestSeverity": "warning",
+      "decision": "REVIEW_BEFORE_RESPONSE",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "DISPUTE_ALREADY_OFFSET",
+          "message": "Prior refunds or credit memos fully offset the disputed amount.",
+          "remediation": "Avoid duplicate recovery. Link the refund and credit memo evidence before responding."
+        }
+      ]
+    },
+    {
+      "id": "DSP-1004",
+      "accountId": "materials-ai-consortium",
+      "invoiceId": "INV-2026-0490",
+      "processorCaseId": "chdp_91a7_hold",
+      "netAmountAtRiskCents": 200000,
+      "hoursUntilDue": 34,
+      "findingCount": 4,
+      "highestSeverity": "critical",
+      "decision": "HOLD_RESPONSE",
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "RESPONSE_WINDOW_URGENT",
+          "message": "The processor response deadline is within 34 hours.",
+          "remediation": "Route to a reviewer before release and confirm the packet can be submitted before cutoff."
+        },
+        {
+          "severity": "warning",
+          "code": "CUSTOMER_NOTICE_LATE",
+          "message": "Customer notice was recorded after 73 hours.",
+          "remediation": "Have finance confirm late notice is acceptable for this account and region."
+        },
+        {
+          "severity": "warning",
+          "code": "RECOGNIZED_REVENUE_EXCEEDS_RISK",
+          "message": "Recognized revenue is higher than the current net disputed amount.",
+          "remediation": "Confirm whether deferred revenue or a reserve adjustment is needed before release."
+        },
+        {
+          "severity": "critical",
+          "code": "DUPLICATE_PROCESSOR_CASE",
+          "message": "Processor case chdp_91a7_hold appears in more than one packet.",
+          "remediation": "Merge or split the evidence packets before any response is submitted."
+        }
+      ]
+    }
+  ]
+}

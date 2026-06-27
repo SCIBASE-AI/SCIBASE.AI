@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="54" y="58" width="852" height="424" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="86" y="118" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Survey Psychometric Validity Assistant</text>
+  <text x="86" y="168" font-family="Arial, sans-serif" font-size="22" fill="#334155">Packet: survey-risky-017</text>
+  <text x="86" y="218" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#991b1b">Decision: HOLD</text>
+  <text x="86" y="268" font-family="Arial, sans-serif" font-size="22" fill="#334155">Severity score: 39 | Findings: 17</text>
+  <text x="86" y="326" font-family="Arial, sans-serif" font-size="20" fill="#111827">Top gates: reverse coding, reliability, CFA sample size, factor cross-loads</text>
+  <text x="86" y="372" font-family="Arial, sans-serif" font-size="20" fill="#111827">Action: hold AI peer-review release for psychometric review</text>
+  <rect x="86" y="414" width="660" height="16" fill="#fee2e2"/>
+  <rect x="86" y="414" width="540" height="16" fill="#ef4444"/>
+</svg>

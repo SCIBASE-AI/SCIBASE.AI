@@ -1,0 +1,59 @@
+{
+  "packetId": "submission-blocked-cover-letter",
+  "decision": "HOLD",
+  "findingCount": 8,
+  "highCount": 5,
+  "mediumCount": 3,
+  "findings": [
+    {
+      "severity": "high",
+      "code": "STALE_COVER_LETTER_HASH",
+      "message": "Cover letter references ms-v10-21bd, but final manuscript is ms-v11-aa30.",
+      "remediation": "Regenerate the cover-letter packet from the final manuscript version."
+    },
+    {
+      "severity": "high",
+      "code": "MISSING_CORRESPONDING_AUTHOR_APPROVAL",
+      "message": "Corresponding author approval is missing or tied to an older manuscript hash.",
+      "remediation": "Collect a fresh corresponding-author approval after the final edit."
+    },
+    {
+      "severity": "medium",
+      "code": "COAUTHOR_APPROVAL_DRIFT",
+      "message": "Missing fresh cover-letter approval from author-2, author-3.",
+      "remediation": "Route the final cover-letter packet to every coauthor who is listed on the manuscript."
+    },
+    {
+      "severity": "medium",
+      "code": "CLAIM_MISMATCH_NOVELTY",
+      "message": "Cover-letter novelty statement diverges from the manuscript claim.",
+      "remediation": "Align cover-letter statements with the final manuscript disclosure text before export."
+    },
+    {
+      "severity": "high",
+      "code": "CLAIM_MISMATCH_ETHICS",
+      "message": "Cover-letter ethics statement diverges from the manuscript claim.",
+      "remediation": "Align cover-letter statements with the final manuscript disclosure text before export."
+    },
+    {
+      "severity": "medium",
+      "code": "CLAIM_MISMATCH_DATAAVAILABILITY",
+      "message": "Cover-letter dataAvailability statement diverges from the manuscript claim.",
+      "remediation": "Align cover-letter statements with the final manuscript disclosure text before export."
+    },
+    {
+      "severity": "high",
+      "code": "CLAIM_MISMATCH_CONFLICTS",
+      "message": "Cover-letter conflicts statement diverges from the manuscript claim.",
+      "remediation": "Align cover-letter statements with the final manuscript disclosure text before export."
+    },
+    {
+      "severity": "high",
+      "code": "PRIVATE_COMMENT_LEAK",
+      "message": "Cover-letter export includes private reviewer or collaborator notes.",
+      "remediation": "Redact private comments and rebuild the editor-facing correspondence packet."
+    }
+  ],
+  "exportReady": false,
+  "auditDigest": "fa958c5cf99c0caa"
+}

@@ -1,0 +1,10 @@
+{
+  "packetId": "submission-ready-cover-letter",
+  "decision": "RELEASE",
+  "findingCount": 0,
+  "highCount": 0,
+  "mediumCount": 0,
+  "findings": [],
+  "exportReady": true,
+  "auditDigest": "b987f52224b801a1"
+}

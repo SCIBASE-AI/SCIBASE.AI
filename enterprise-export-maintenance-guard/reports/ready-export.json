@@ -1,0 +1,11 @@
+{
+  "jobId": "zenodo-export-ready",
+  "exportTarget": "zenodo",
+  "decision": "SEND",
+  "findingCount": 0,
+  "highCount": 0,
+  "mediumCount": 0,
+  "retryAfterMinutes": 0,
+  "findings": [],
+  "auditDigest": "15f23d4df1aefe5e"
+}

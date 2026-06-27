@@ -1,0 +1,48 @@
+{
+  "jobId": "funder-portal-held",
+  "exportTarget": "horizon-eu-portal",
+  "decision": "HOLD",
+  "findingCount": 6,
+  "highCount": 2,
+  "mediumCount": 4,
+  "retryAfterMinutes": 90,
+  "findings": [
+    {
+      "severity": "high",
+      "code": "ACTIVE_DESTINATION_MAINTENANCE",
+      "message": "horizon-eu-portal is in maintenance: grant portal database failover.",
+      "remediation": "Defer export for at least 130 minutes or route to a safe queue."
+    },
+    {
+      "severity": "medium",
+      "code": "INSTITUTIONAL_BLACKOUT_WINDOW",
+      "message": "Institutional blackout is active: institutional grant-office freeze.",
+      "remediation": "Wait for the institutional export freeze to end or obtain explicit admin override evidence."
+    },
+    {
+      "severity": "medium",
+      "code": "STALE_DESTINATION_STATUS_EVIDENCE",
+      "message": "Status evidence is 30.3 hours old.",
+      "remediation": "Refresh destination health evidence before exporting to institutional systems."
+    },
+    {
+      "severity": "high",
+      "code": "DEGRADED_DESTINATION_HEALTH",
+      "message": "horizon-eu-portal health is degraded.",
+      "remediation": "Hold embargo-sensitive exports or queue non-sensitive exports until destination health recovers."
+    },
+    {
+      "severity": "medium",
+      "code": "MISSING_OWNER_ACKNOWLEDGEMENT",
+      "message": "Export owner has not acknowledged destination timing risk.",
+      "remediation": "Collect owner acknowledgement before pushing to the external destination."
+    },
+    {
+      "severity": "medium",
+      "code": "RETRY_WINDOW_EXCEEDS_POLICY",
+      "message": "Retry-after 90m exceeds allowed delay 20m.",
+      "remediation": "Reschedule the job rather than relying on automatic retries beyond policy."
+    }
+  ],
+  "auditDigest": "3aac7e7788d1480d"
+}

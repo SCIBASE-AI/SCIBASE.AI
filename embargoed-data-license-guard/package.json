@@ -1,0 +1,11 @@
+{
+  "name": "embargoed-data-license-guard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free release guard for embargoed research data licensing exports.",
+  "type": "module",
+  "scripts": {
+    "demo": "node src/cli.js",
+    "test": "node test/license-guard.test.js"
+  }
+}

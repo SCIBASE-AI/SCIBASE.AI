@@ -1,0 +1,68 @@
+[
+  {
+    "licenseId": "lic-gov-neuro-2026",
+    "customer": "NIH Policy Lab",
+    "exportType": "api",
+    "decision": "RELEASE",
+    "findings": [],
+    "financeAction": "release_export_and_invoice"
+  },
+  {
+    "licenseId": "lic-market-rare-disease-2026",
+    "customer": "Market Intel A",
+    "exportType": "periodic_snapshot",
+    "decision": "REVIEW",
+    "findings": [
+      {
+        "code": "EARLY_ACCESS_REVIEW",
+        "severity": "REVIEW",
+        "message": "Export is still under embargo but has an early-access approval."
+      },
+      {
+        "code": "CONSENT_GAP",
+        "severity": "REVIEW",
+        "message": "Consent coverage 92% is below required 95%."
+      }
+    ],
+    "financeAction": "route_to_licensing_operations"
+  },
+  {
+    "licenseId": "lic-exclusive-funder-2026",
+    "customer": "Regional Consortium",
+    "exportType": "white_label",
+    "decision": "HOLD",
+    "findings": [
+      {
+        "code": "EXCLUSIVITY_CONFLICT",
+        "severity": "HOLD",
+        "message": "License conflicts with an active exclusive customer grant."
+      },
+      {
+        "code": "COHORT_TOO_SMALL",
+        "severity": "HOLD",
+        "message": "Cohort size 42 is below minimum 100."
+      },
+      {
+        "code": "CONSENT_GAP",
+        "severity": "REVIEW",
+        "message": "Consent coverage 88% is below required 95%."
+      },
+      {
+        "code": "TIER_NOT_ENTITLED",
+        "severity": "HOLD",
+        "message": "Dashboard license does not permit white_label exports."
+      },
+      {
+        "code": "MISSING_RELEASE_TERMS",
+        "severity": "REVIEW",
+        "message": "Missing data processing agreement, redaction profile, attribution text."
+      },
+      {
+        "code": "STALE_SNAPSHOT",
+        "severity": "REVIEW",
+        "message": "Snapshot is 57 days old; maximum is 30."
+      }
+    ],
+    "financeAction": "hold_export_and_block_invoice"
+  }
+]

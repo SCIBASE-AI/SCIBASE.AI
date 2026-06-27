@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0f172a"/>
+  <text x="48" y="78" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Enterprise Export Maintenance Guard</text>
+  <text x="48" y="136" fill="#fca5a5" font-family="Arial, sans-serif" font-size="28">Decision: HOLD</text>
+  <text x="48" y="190" fill="#d1d5db" font-family="Arial, sans-serif" font-size="23">Findings: 6 | High: 2 | Medium: 4</text>
+  <text x="48" y="246" fill="#d1d5db" font-family="Arial, sans-serif" font-size="22">Checks maintenance windows, degraded health, stale evidence, and retry policy.</text>
+  <text x="48" y="306" fill="#93c5fd" font-family="Arial, sans-serif" font-size="22">Audit digest: 3aac7e7788d1480d</text>
+</svg>

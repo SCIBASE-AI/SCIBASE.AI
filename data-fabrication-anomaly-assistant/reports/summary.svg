@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="492" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="34" y="72" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Data Fabrication Anomaly Assistant</text>
+  <text x="34" y="112" font-family="Arial, sans-serif" font-size="20" fill="#374151">Cytokine response claims from a disputed assay batch</text>
+  <rect x="34" y="136" width="180" height="44" rx="6" fill="#b91c1c"/>
+  <text x="58" y="165" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">HOLD</text>
+  <text x="240" y="165" font-family="Arial, sans-serif" font-size="18" fill="#374151">Findings: 5 | Digest: 6466f6cc655b23a7</text>
+  <g font-family="Arial, sans-serif"><text x="34" y="180" font-size="18" fill="#111827">HIGH - duplicate-measurement-rows</text><text x="34" y="214" font-size="18" fill="#111827">HIGH - invalid-collection-timestamps</text><text x="34" y="248" font-size="18" fill="#111827">MEDIUM - terminal-digit-preference</text><text x="34" y="282" font-size="18" fill="#111827">MEDIUM - over-smooth-measurement-series</text></g>
+  <text x="34" y="482" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">Synthetic data only. No live manuscripts, private datasets, credentials, or external APIs.</text>
+</svg>

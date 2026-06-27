@@ -1,0 +1,45 @@
+{
+  "packetId": "risky-cytokine-study",
+  "manuscriptTitle": "Cytokine response claims from a disputed assay batch",
+  "decision": "HOLD",
+  "findingCount": 5,
+  "findings": [
+    {
+      "id": "duplicate-measurement-rows",
+      "severity": "high",
+      "title": "Repeated measurement rows need raw-data verification",
+      "evidence": "1 duplicate row pair(s): #12/#13",
+      "action": "Hold AI review output until source instruments, audit trail, and import logs explain the repeated rows."
+    },
+    {
+      "id": "invalid-collection-timestamps",
+      "severity": "high",
+      "title": "Collection timestamps are not machine-auditable",
+      "evidence": "Invalid timestamp rows: #14",
+      "action": "Require normalized ISO-8601 collection timestamps before the assistant cites this dataset."
+    },
+    {
+      "id": "terminal-digit-preference",
+      "severity": "medium",
+      "title": "Terminal digit distribution is unusually concentrated",
+      "evidence": "50% of numeric measurements end in 0",
+      "action": "Ask for raw instrument exports or an explanation of rounding rules before trusting fine-grained effects."
+    },
+    {
+      "id": "over-smooth-measurement-series",
+      "severity": "medium",
+      "title": "Measurement series is smoother than expected for independent observations",
+      "evidence": "control delta sd/value sd=0",
+      "action": "Route to statistical reviewer for instrument drift, interpolation, or synthetic-row checks."
+    },
+    {
+      "id": "perfect-between-group-separation",
+      "severity": "medium",
+      "title": "Groups separate perfectly without overlap",
+      "evidence": "control: n=6, range=10-12.5; treated: n=8, range=20-23",
+      "action": "Require preregistered exclusion rules and raw row provenance before strong causal or classification claims are released."
+    }
+  ],
+  "auditDigest": "6466f6cc655b23a7",
+  "assistantScope": "Synthetic data-fabrication anomaly red flags before AI peer-review output is trusted."
+}

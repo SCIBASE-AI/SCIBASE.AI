@@ -1,0 +1,102 @@
+[
+  {
+    "id": "DSP-1001",
+    "accountId": "lab-north-42",
+    "invoiceId": "INV-2026-0418",
+    "processorCaseId": "chdp_91a7_release",
+    "processorStatus": "needs_response",
+    "invoiceAmountCents": 480000,
+    "disputedAmountCents": 120000,
+    "revenueRecognizedCents": 120000,
+    "priorRefundCents": 0,
+    "creditMemoCents": 0,
+    "disputeReceivedAt": "2026-06-23T10:00:00Z",
+    "responseDueAt": "2026-06-30T10:00:00Z",
+    "customerNotifiedAt": "2026-06-24T09:00:00Z",
+    "evidence": {
+      "contract": true,
+      "invoice": true,
+      "deliveryProof": true,
+      "usageLogs": true,
+      "termsAcceptance": true,
+      "customerCommunication": true,
+      "redactedReceipt": true
+    },
+    "receiptText": "Receipt INV-2026-0418 paid by card ending 4242. Sponsor contact: billing@example.edu."
+  },
+  {
+    "id": "DSP-1002",
+    "accountId": "quantum-cohort-8",
+    "invoiceId": "INV-2026-0442",
+    "processorCaseId": "chdp_91a7_hold",
+    "processorStatus": "needs_response",
+    "invoiceAmountCents": 740000,
+    "disputedAmountCents": 260000,
+    "revenueRecognizedCents": 260000,
+    "priorRefundCents": 0,
+    "creditMemoCents": 0,
+    "disputeReceivedAt": "2026-06-19T15:00:00Z",
+    "responseDueAt": "2026-06-25T15:00:00Z",
+    "customerNotifiedAt": null,
+    "evidence": {
+      "contract": true,
+      "invoice": true,
+      "deliveryProof": false,
+      "usageLogs": false,
+      "termsAcceptance": true,
+      "customerCommunication": false,
+      "redactedReceipt": false
+    },
+    "receiptText": "Raw receipt contains card 4111111111111111 and should be redacted before any dispute packet leaves finance."
+  },
+  {
+    "id": "DSP-1003",
+    "accountId": "bio-modeling-lab",
+    "invoiceId": "INV-2026-0461",
+    "processorCaseId": "chdp_91a7_credit",
+    "processorStatus": "needs_response",
+    "invoiceAmountCents": 300000,
+    "disputedAmountCents": 90000,
+    "revenueRecognizedCents": 90000,
+    "priorRefundCents": 50000,
+    "creditMemoCents": 50000,
+    "disputeReceivedAt": "2026-06-24T12:00:00Z",
+    "responseDueAt": "2026-07-02T12:00:00Z",
+    "customerNotifiedAt": "2026-06-26T12:00:00Z",
+    "evidence": {
+      "contract": true,
+      "invoice": true,
+      "deliveryProof": true,
+      "usageLogs": true,
+      "termsAcceptance": true,
+      "customerCommunication": true,
+      "redactedReceipt": true
+    },
+    "receiptText": "Credit memo CM-2026-0091 and refund RF-2026-0024 already offset this disputed amount."
+  },
+  {
+    "id": "DSP-1004",
+    "accountId": "materials-ai-consortium",
+    "invoiceId": "INV-2026-0490",
+    "processorCaseId": "chdp_91a7_hold",
+    "processorStatus": "needs_response",
+    "invoiceAmountCents": 620000,
+    "disputedAmountCents": 200000,
+    "revenueRecognizedCents": 250000,
+    "priorRefundCents": 0,
+    "creditMemoCents": 0,
+    "disputeReceivedAt": "2026-06-24T18:00:00Z",
+    "responseDueAt": "2026-06-28T18:00:00Z",
+    "customerNotifiedAt": "2026-06-27T18:30:00Z",
+    "evidence": {
+      "contract": true,
+      "invoice": true,
+      "deliveryProof": true,
+      "usageLogs": true,
+      "termsAcceptance": true,
+      "customerCommunication": true,
+      "redactedReceipt": true
+    },
+    "receiptText": "Dispute packet references sanitized invoice and usage evidence only."
+  }
+]

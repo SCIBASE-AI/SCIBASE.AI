@@ -30,6 +30,7 @@ The guard is intentionally offline: it uses no credentials, no payment processor
 - `data/dispute-packets.json` - synthetic reviewer packets.
 - `test/disputeGuard.test.mjs` - Node test coverage.
 - `scripts/run-demo.mjs` - generates reviewer artifacts.
+- `scripts/render-demo-video.mjs` - renders the SVG demo into a short WebM review video.
 - `artifacts/` - generated JSON, Markdown, and SVG outputs after running the demo.
 
 ## Validation
@@ -37,6 +38,7 @@ The guard is intentionally offline: it uses no credentials, no payment processor
 ```bash
 npm test
 npm run demo
+npm run demo:video
 ```
 
 The demo writes:
@@ -44,6 +46,7 @@ The demo writes:
 - `artifacts/dispute-review-report.json`
 - `artifacts/dispute-review-report.md`
 - `artifacts/dispute-review-demo.svg`
+- `artifacts/dispute-review-demo.webm`
 
 ## Review Notes
 

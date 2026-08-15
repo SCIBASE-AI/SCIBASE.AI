@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380" role="img" aria-label="Research materials authentication assistant summary">
+  <rect width="960" height="380" fill="#f7f9fb"/>
+  <text x="48" y="60" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#17202a">Research Materials Authentication</text>
+  <text x="48" y="96" font-family="Inter, Arial, sans-serif" font-size="16" fill="#53616f">RRIDs, lots, validation dates, contamination checks, passage ranges, organism fit, and antibody target alignment.</text>
+  <text x="48" y="135" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#17202a">RELEASE: 1</text>
+  <rect x="48" y="148" width="212" height="34" rx="6" fill="#32b38c"/>
+  <rect x="48" y="148" width="800" height="34" rx="6" fill="none" stroke="#d7dee6"/>
+  <text x="48" y="205" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#17202a">REVIEW: 1</text>
+  <rect x="48" y="218" width="212" height="34" rx="6" fill="#d69d2e"/>
+  <rect x="48" y="218" width="800" height="34" rx="6" fill="none" stroke="#d7dee6"/>
+  <text x="48" y="275" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#17202a">HOLD: 2</text>
+  <rect x="48" y="288" width="328" height="34" rx="6" fill="#d8526b"/>
+  <rect x="48" y="288" width="800" height="34" rx="6" fill="none" stroke="#d7dee6"/>
+</svg>

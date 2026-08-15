@@ -1,0 +1,170 @@
+[
+  {
+    "id": "clean-organoid-panel",
+    "title": "Authenticated organoid cytokine response panel",
+    "domain": "translational immunology",
+    "reviewDate": "2026-08-15",
+    "materials": [
+      {
+        "name": "HBEC-Alpha authenticated airway cell line",
+        "type": "cell_line",
+        "role": "model system",
+        "rrid": "RRID:CVCL_SYN1",
+        "lot": "BANK-2026-07-A",
+        "source": "institutional biobank",
+        "species": "human",
+        "claimedOrganism": "human",
+        "validationEvidence": ["STR profile match", "certificate of analysis", "mycoplasma PCR negative"],
+        "validationDate": "2026-07-10",
+        "contaminationStatus": "negative",
+        "passageRange": { "min": 5, "max": 18 },
+        "reportedPassage": 9
+      },
+      {
+        "name": "Anti-IL6 clone S6",
+        "type": "antibody",
+        "role": "capture antibody",
+        "rrid": "RRID:AB_9000001",
+        "lot": "LOT-IL6-2606",
+        "source": "validated synthetic catalog",
+        "species": "human",
+        "target": "IL6",
+        "assayTargets": ["IL6"],
+        "validationEvidence": ["western blot specificity", "orthogonal ELISA spike recovery"],
+        "validationDate": "2026-06-14",
+        "contaminationStatus": "not_detected"
+      }
+    ],
+    "assays": [
+      {
+        "name": "IL6 secretion ELISA",
+        "materialName": "Anti-IL6 clone S6",
+        "organism": "human",
+        "target": "IL6",
+        "readout": "secreted cytokine concentration"
+      }
+    ],
+    "manuscriptClaims": [
+      "All primary materials were identity checked before cytokine-response analysis."
+    ]
+  },
+  {
+    "id": "review-stale-rrid-organism",
+    "title": "Stale antibody validation with organism mismatch",
+    "domain": "cell signaling",
+    "reviewDate": "2026-08-15",
+    "materials": [
+      {
+        "name": "Anti-pERK screening antibody",
+        "type": "antibody",
+        "role": "western blot antibody",
+        "rrid": "",
+        "lot": "WB-ERK-2019",
+        "source": "legacy freezer box",
+        "species": "mouse",
+        "claimedOrganism": "human",
+        "target": "pERK",
+        "assayTargets": ["pERK"],
+        "validationEvidence": ["vendor blot from 2019"],
+        "validationDate": "2019-03-04",
+        "contaminationStatus": "not_detected"
+      }
+    ],
+    "assays": [
+      {
+        "name": "Human pERK western blot",
+        "materialName": "Anti-pERK screening antibody",
+        "organism": "human",
+        "target": "pERK",
+        "readout": "phosphorylated ERK band intensity"
+      }
+    ],
+    "manuscriptClaims": [
+      "Human samples were assayed with pathway-specific antibody material."
+    ]
+  },
+  {
+    "id": "hold-contaminated-line",
+    "title": "Contaminated cell line in proliferation assay",
+    "domain": "cancer biology",
+    "reviewDate": "2026-08-15",
+    "materials": [
+      {
+        "name": "MCB-Tumor-2 working stock",
+        "type": "cell_line",
+        "role": "tumor model",
+        "rrid": "RRID:CVCL_SYN2",
+        "lot": "CELL-2026-05-B",
+        "source": "working stock",
+        "species": "human",
+        "claimedOrganism": "human",
+        "validationEvidence": ["STR profile match"],
+        "validationDate": "2026-05-12",
+        "contaminationStatus": "mycoplasma_positive",
+        "passageRange": { "min": 3, "max": 14 },
+        "reportedPassage": 11
+      }
+    ],
+    "assays": [
+      {
+        "name": "Proliferation growth curve",
+        "materialName": "MCB-Tumor-2 working stock",
+        "organism": "human",
+        "target": "cell growth",
+        "readout": "confluence over time"
+      }
+    ],
+    "manuscriptClaims": [
+      "The tumor cell model supports the proliferation finding."
+    ]
+  },
+  {
+    "id": "hold-antibody-passage",
+    "title": "Antibody target mismatch and impossible passage metadata",
+    "domain": "neurobiology",
+    "reviewDate": "2026-08-15",
+    "materials": [
+      {
+        "name": "NeuroStem-X passage record",
+        "type": "primary_cell",
+        "role": "differentiation model",
+        "rrid": "RRID:CVCL_SYN3",
+        "lot": "NSX-2601",
+        "source": "synthetic stem-cell bank",
+        "species": "human",
+        "claimedOrganism": "human",
+        "validationEvidence": ["identity PCR panel"],
+        "validationDate": "2026-01-15",
+        "contaminationStatus": "negative",
+        "passageRange": { "min": 22, "max": 8 },
+        "reportedPassage": 31
+      },
+      {
+        "name": "Anti-GFAP clone G4",
+        "type": "antibody",
+        "role": "immunostaining antibody",
+        "rrid": "RRID:AB_9000002",
+        "lot": "LOT-GFAP-2601",
+        "source": "validated synthetic catalog",
+        "species": "human",
+        "target": "GFAP",
+        "assayTargets": ["GFAP"],
+        "validationEvidence": ["knockdown specificity panel"],
+        "validationDate": "2026-01-20",
+        "contaminationStatus": "not_detected"
+      }
+    ],
+    "assays": [
+      {
+        "name": "MAP2 neuron staining",
+        "materialName": "Anti-GFAP clone G4",
+        "organism": "human",
+        "target": "MAP2",
+        "readout": "fluorescent neurite area"
+      }
+    ],
+    "manuscriptClaims": [
+      "Neuron differentiation was quantified with validated immunostaining material."
+    ]
+  }
+]

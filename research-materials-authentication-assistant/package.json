@@ -1,0 +1,13 @@
+{
+  "name": "research-materials-authentication-assistant",
+  "version": "1.0.0",
+  "description": "Dependency-free research materials authentication guard for AI research assistant review packets.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/demo.js",
+    "video": "node scripts/render-demo-video.js",
+    "check": "node --check src/index.js && node --check scripts/demo.js && node --check scripts/render-demo-video.js"
+  },
+  "license": "MIT"
+}

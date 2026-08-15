@@ -1,0 +1,13 @@
+{
+  "name": "benchmark-contamination-graph-guard",
+  "version": "1.0.0",
+  "description": "Dependency-free knowledge graph guard for model benchmark contamination and leakage edges.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/demo.js",
+    "video": "node scripts/render-demo-video.js",
+    "check": "node --check src/index.js && node --check scripts/demo.js && node --check scripts/render-demo-video.js"
+  },
+  "license": "MIT"
+}

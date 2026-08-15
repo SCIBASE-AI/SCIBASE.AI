@@ -1,0 +1,317 @@
+{
+  "generatedAt": "2026-08-15T22:12:47.311Z",
+  "totalPackets": 4,
+  "counts": {
+    "RELEASE": 1,
+    "REVIEW_RELEASE": 1,
+    "HOLD_RELEASE": 2
+  },
+  "results": [
+    {
+      "id": "split-release-001",
+      "title": "Clean imaging dataset split package for DOI release",
+      "decision": "RELEASE",
+      "splitNames": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "findings": [],
+      "recommendedActions": [
+        "Release split manifests with normal artifact provenance."
+      ]
+    },
+    {
+      "id": "split-hold-002",
+      "title": "Clinical split package with patient leakage and embargoed rows",
+      "decision": "HOLD_RELEASE",
+      "splitNames": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "findings": [
+        {
+          "code": "TRAIN_VALIDATION_TEST_RECORD_OVERLAP",
+          "severity": "critical",
+          "message": "One or more records appear in multiple splits.",
+          "evidence": {
+            "overlaps": [
+              {
+                "left": "train",
+                "right": "validation",
+                "key": "recordIds",
+                "values": [
+                  "c4"
+                ]
+              }
+            ]
+          },
+          "remediation": "Regenerate split manifests with disjoint record identifiers and new manifest hashes."
+        },
+        {
+          "code": "GROUP_LEAKAGE_ACROSS_SPLITS",
+          "severity": "critical",
+          "message": "A participant, patient, subject, lab, or other grouping identifier appears across multiple splits.",
+          "evidence": {
+            "overlaps": [
+              {
+                "left": "train",
+                "right": "validation",
+                "key": "groupIds",
+                "values": [
+                  "patient-4"
+                ]
+              }
+            ]
+          },
+          "remediation": "Regenerate splits with group-level disjointness to prevent leakage across train/validation/test boundaries."
+        },
+        {
+          "code": "SPLIT_PROVENANCE_INCOMPLETE",
+          "severity": "major",
+          "message": "The split generation seed or script hash is missing.",
+          "evidence": {
+            "seedLocked": false,
+            "splitScriptHashPresent": false
+          },
+          "remediation": "Attach deterministic seed and split-script hash evidence before DOI/API release."
+        },
+        {
+          "code": "SPLIT_CHECKSUM_COVERAGE_MISSING",
+          "severity": "major",
+          "message": "One or more split manifests lack checksum or manifest hash evidence.",
+          "evidence": {
+            "splits": [
+              "train",
+              "validation",
+              "test"
+            ]
+          },
+          "remediation": "Add per-split content checksums and manifest hashes before release."
+        },
+        {
+          "code": "SPLIT_LICENSE_ACCESS_PARITY_MISMATCH",
+          "severity": "major",
+          "message": "Split manifests have inconsistent license or access states.",
+          "evidence": {
+            "licenses": [
+              {
+                "split": "train",
+                "license": "restricted-clinical"
+              },
+              {
+                "split": "validation",
+                "license": "restricted-clinical"
+              },
+              {
+                "split": "test",
+                "license": "restricted-clinical"
+              }
+            ],
+            "access": [
+              {
+                "split": "train",
+                "access": "private"
+              },
+              {
+                "split": "validation",
+                "access": "public"
+              },
+              {
+                "split": "test",
+                "access": "private"
+              }
+            ]
+          },
+          "remediation": "Align license and access state across splits or document why a split must remain restricted."
+        },
+        {
+          "code": "STRATIFICATION_BALANCE_DRIFT",
+          "severity": "major",
+          "message": "Class or stratum balance differs from the dataset policy beyond the allowed threshold.",
+          "evidence": {
+            "drifts": [
+              {
+                "split": "train",
+                "label": "case",
+                "actual": 0.75,
+                "expected": 0.5,
+                "delta": 0.25
+              },
+              {
+                "split": "train",
+                "label": "control",
+                "actual": 0.25,
+                "expected": 0.5,
+                "delta": 0.25
+              },
+              {
+                "split": "validation",
+                "label": "case",
+                "actual": 1,
+                "expected": 0.5,
+                "delta": 0.5
+              },
+              {
+                "split": "validation",
+                "label": "control",
+                "actual": 0,
+                "expected": 0.5,
+                "delta": 0.5
+              },
+              {
+                "split": "test",
+                "label": "case",
+                "actual": 0,
+                "expected": 0.5,
+                "delta": 0.5
+              },
+              {
+                "split": "test",
+                "label": "control",
+                "actual": 1,
+                "expected": 0.5,
+                "delta": 0.5
+              }
+            ]
+          },
+          "remediation": "Regenerate stratified splits or document the imbalance in the release notes."
+        },
+        {
+          "code": "EMBARGOED_RECORD_IN_PUBLIC_SPLIT",
+          "severity": "critical",
+          "message": "Embargoed records are present in one or more release split manifests.",
+          "evidence": {
+            "embargoedRecords": [
+              {
+                "split": "validation",
+                "recordId": "c5"
+              }
+            ]
+          },
+          "remediation": "Remove embargoed records or keep the affected split private until embargo restrictions are lifted."
+        },
+        {
+          "code": "PUBLIC_RELEASE_NOT_FROZEN_FOR_SPLIT_RISK",
+          "severity": "critical",
+          "message": "Public DOI/API release is enabled while split-integrity findings remain unresolved.",
+          "evidence": {
+            "publicDoiRelease": true,
+            "freezePublicRelease": false
+          },
+          "remediation": "Freeze DOI/API/public-preview release until split integrity issues are resolved."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze public DOI/API release and reproducibility badges.",
+        "Attach findings to the dataset release review packet.",
+        "Regenerate split manifests or document curator-approved exceptions.",
+        "Re-run checksum, license, access, and stratification checks before DOI/API release."
+      ]
+    },
+    {
+      "id": "split-review-003",
+      "title": "Good disjointness with missing provenance and balance drift",
+      "decision": "REVIEW_RELEASE",
+      "splitNames": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "findings": [
+        {
+          "code": "SPLIT_PROVENANCE_INCOMPLETE",
+          "severity": "major",
+          "message": "The split generation seed or script hash is missing.",
+          "evidence": {
+            "seedLocked": true,
+            "splitScriptHashPresent": false
+          },
+          "remediation": "Attach deterministic seed and split-script hash evidence before DOI/API release."
+        },
+        {
+          "code": "STRATIFICATION_BALANCE_DRIFT",
+          "severity": "major",
+          "message": "Class or stratum balance differs from the dataset policy beyond the allowed threshold.",
+          "evidence": {
+            "drifts": [
+              {
+                "split": "train",
+                "label": "positive",
+                "actual": 0.9,
+                "expected": 0.5,
+                "delta": 0.4
+              },
+              {
+                "split": "train",
+                "label": "negative",
+                "actual": 0.1,
+                "expected": 0.5,
+                "delta": 0.4
+              },
+              {
+                "split": "validation",
+                "label": "positive",
+                "actual": 0,
+                "expected": 0.5,
+                "delta": 0.5
+              },
+              {
+                "split": "validation",
+                "label": "negative",
+                "actual": 1,
+                "expected": 0.5,
+                "delta": 0.5
+              }
+            ]
+          },
+          "remediation": "Regenerate stratified splits or document the imbalance in the release notes."
+        }
+      ],
+      "recommendedActions": [
+        "Attach findings to the dataset release review packet.",
+        "Regenerate split manifests or document curator-approved exceptions.",
+        "Re-run checksum, license, access, and stratification checks before DOI/API release."
+      ]
+    },
+    {
+      "id": "split-hold-004",
+      "title": "Missing test split with public release still enabled",
+      "decision": "HOLD_RELEASE",
+      "splitNames": [
+        "train",
+        "validation"
+      ],
+      "findings": [
+        {
+          "code": "REQUIRED_SPLIT_MISSING",
+          "severity": "critical",
+          "message": "The release packet lacks one or more required train/validation/test split manifests.",
+          "evidence": {
+            "missingSplits": [
+              "test"
+            ]
+          },
+          "remediation": "Hold release until all required split manifests are present and checksummed."
+        },
+        {
+          "code": "PUBLIC_RELEASE_NOT_FROZEN_FOR_SPLIT_RISK",
+          "severity": "critical",
+          "message": "Public DOI/API release is enabled while split-integrity findings remain unresolved.",
+          "evidence": {
+            "publicDoiRelease": true,
+            "freezePublicRelease": false
+          },
+          "remediation": "Freeze DOI/API/public-preview release until split integrity issues are resolved."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze public DOI/API release and reproducibility badges.",
+        "Attach findings to the dataset release review packet.",
+        "Regenerate split manifests or document curator-approved exceptions.",
+        "Re-run checksum, license, access, and stratification checks before DOI/API release."
+      ]
+    }
+  ]
+}

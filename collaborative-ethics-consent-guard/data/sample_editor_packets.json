@@ -1,0 +1,162 @@
+[
+  {
+    "id": "release-clean-consent",
+    "title": "Clean collaborative consent export",
+    "reviewDate": "2026-08-15",
+    "manuscript": {
+      "domain": "public health",
+      "humanSubjects": true,
+      "participantGroups": ["adults"]
+    },
+    "ethics": {
+      "approvalId": "IRB-2026-114",
+      "expiryDate": "2027-01-31",
+      "vulnerablePopulationReview": false
+    },
+    "consent": {
+      "required": true,
+      "statementPresent": true,
+      "scope": "journal publication",
+      "requiredLanguages": ["English", "Spanish"],
+      "presentLanguages": ["English", "Spanish"]
+    },
+    "collaborativeState": {
+      "lastEthicsReviewAt": "2026-08-01",
+      "ethicsSection": {
+        "locked": true,
+        "pendingEdits": false
+      }
+    },
+    "comments": [
+      {
+        "id": "c1",
+        "section": "methods ethics",
+        "private": false,
+        "exportVisible": false,
+        "resolved": true,
+        "text": "Consent statement reviewed."
+      }
+    ],
+    "exportTarget": {
+      "releaseScope": "journal publication"
+    }
+  },
+  {
+    "id": "review-stale-vulnerable",
+    "title": "Vulnerable population review needs refresh",
+    "reviewDate": "2026-08-15",
+    "manuscript": {
+      "domain": "education research",
+      "humanSubjects": true,
+      "participantGroups": ["children"]
+    },
+    "ethics": {
+      "approvalId": "REC-2025-09",
+      "expiryDate": "2026-12-01",
+      "vulnerablePopulationReview": false
+    },
+    "consent": {
+      "required": true,
+      "statementPresent": true,
+      "scope": "conference abstract",
+      "requiredLanguages": ["English", "French"],
+      "presentLanguages": ["English"]
+    },
+    "collaborativeState": {
+      "lastEthicsReviewAt": "2025-11-01",
+      "ethicsSection": {
+        "locked": true,
+        "pendingEdits": true,
+        "approvedOverride": true
+      }
+    },
+    "comments": [
+      {
+        "id": "c2",
+        "section": "ethics statement",
+        "private": false,
+        "exportVisible": false,
+        "resolved": false,
+        "text": "Need French consent upload confirmation."
+      }
+    ],
+    "exportTarget": {
+      "releaseScope": "conference abstract"
+    }
+  },
+  {
+    "id": "hold-missing-approval",
+    "title": "Human-subjects packet without approval",
+    "reviewDate": "2026-08-15",
+    "manuscript": {
+      "domain": "clinical methods",
+      "humanSubjects": true,
+      "participantGroups": ["adults"]
+    },
+    "ethics": {
+      "approvalId": "",
+      "exempt": false
+    },
+    "consent": {
+      "required": true,
+      "statementPresent": false,
+      "scope": "journal publication",
+      "requiredLanguages": ["English"],
+      "presentLanguages": []
+    },
+    "collaborativeState": {
+      "lastEthicsReviewAt": "2026-08-01",
+      "ethicsSection": {
+        "locked": true,
+        "pendingEdits": false
+      }
+    },
+    "comments": [],
+    "exportTarget": {
+      "releaseScope": "journal publication"
+    }
+  },
+  {
+    "id": "hold-private-comment-leak",
+    "title": "Private participant details leaking through comments",
+    "reviewDate": "2026-08-15",
+    "manuscript": {
+      "domain": "behavioral science",
+      "humanSubjects": true,
+      "participantGroups": ["adults"]
+    },
+    "ethics": {
+      "approvalId": "IRB-2026-202",
+      "expiryDate": "2027-03-01",
+      "vulnerablePopulationReview": false
+    },
+    "consent": {
+      "required": true,
+      "statementPresent": true,
+      "scope": "journal publication",
+      "requiredLanguages": ["English"],
+      "presentLanguages": ["English"]
+    },
+    "collaborativeState": {
+      "lastEthicsReviewAt": "2026-07-20",
+      "ethicsSection": {
+        "locked": true,
+        "pendingEdits": true,
+        "approvedOverride": false
+      }
+    },
+    "comments": [
+      {
+        "id": "c3",
+        "section": "ethics statement",
+        "private": true,
+        "exportVisible": true,
+        "resolved": false,
+        "text": "participant 104 withdrew after DOB: 02/04/1999 note."
+      }
+    ],
+    "exportTarget": {
+      "releaseScope": "journal publication"
+    }
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "id": "split-release-001",
+    "title": "Clean imaging dataset split package for DOI release",
+    "dataset": {
+      "recordCount": 9,
+      "expectedClassBalance": { "case": 0.33, "control": 0.67 }
+    },
+    "splits": {
+      "train": {
+        "recordCount": 5,
+        "recordIds": ["r1", "r2", "r3", "r4", "r5"],
+        "groupIds": ["p1", "p2", "p3", "p4", "p5"],
+        "classBalance": { "case": 0.4, "control": 0.6 },
+        "license": "CC-BY-4.0",
+        "access": "public",
+        "checksum": "sha256:train",
+        "manifestHash": "sha256:manifest-train",
+        "embargoedRecordIds": []
+      },
+      "validation": {
+        "recordCount": 2,
+        "recordIds": ["r6", "r7"],
+        "groupIds": ["p6", "p7"],
+        "classBalance": { "case": 0.5, "control": 0.5 },
+        "license": "CC-BY-4.0",
+        "access": "public",
+        "checksum": "sha256:validation",
+        "manifestHash": "sha256:manifest-validation",
+        "embargoedRecordIds": []
+      },
+      "test": {
+        "recordCount": 2,
+        "recordIds": ["r8", "r9"],
+        "groupIds": ["p8", "p9"],
+        "classBalance": { "case": 0.5, "control": 0.5 },
+        "license": "CC-BY-4.0",
+        "access": "public",
+        "checksum": "sha256:test",
+        "manifestHash": "sha256:manifest-test",
+        "embargoedRecordIds": []
+      }
+    },
+    "provenance": {
+      "seedLocked": true,
+      "splitScriptHashPresent": true
+    },
+    "release": {
+      "publicDoiRelease": true,
+      "freezePublicRelease": false
+    },
+    "policy": {
+      "requireGroupDisjointness": true,
+      "maxClassBalanceDelta": 0.2
+    }
+  },
+  {
+    "id": "split-hold-002",
+    "title": "Clinical split package with patient leakage and embargoed rows",
+    "dataset": {
+      "recordCount": 8,
+      "expectedClassBalance": { "case": 0.5, "control": 0.5 }
+    },
+    "splits": {
+      "train": {
+        "recordCount": 4,
+        "recordIds": ["c1", "c2", "c3", "c4"],
+        "groupIds": ["patient-1", "patient-2", "patient-3", "patient-4"],
+        "classBalance": { "case": 0.75, "control": 0.25 },
+        "license": "restricted-clinical",
+        "access": "private",
+        "checksum": "sha256:train",
+        "manifestHash": "sha256:manifest-train",
+        "embargoedRecordIds": []
+      },
+      "validation": {
+        "recordCount": 2,
+        "recordIds": ["c4", "c5"],
+        "groupIds": ["patient-4", "patient-5"],
+        "classBalance": { "case": 1,
+          "control": 0 },
+        "license": "restricted-clinical",
+        "access": "public",
+        "checksum": "",
+        "manifestHash": "",
+        "embargoedRecordIds": ["c5"]
+      },
+      "test": {
+        "recordCount": 2,
+        "recordIds": ["c6", "c7"],
+        "groupIds": ["patient-6", "patient-7"],
+        "classBalance": { "case": 0,
+          "control": 1 },
+        "license": "restricted-clinical",
+        "access": "private",
+        "checksum": "sha256:test",
+        "manifestHash": "sha256:manifest-test",
+        "embargoedRecordIds": []
+      }
+    },
+    "provenance": {
+      "seedLocked": false,
+      "splitScriptHashPresent": false
+    },
+    "release": {
+      "publicDoiRelease": true,
+      "freezePublicRelease": false
+    },
+    "policy": {
+      "requireGroupDisjointness": true,
+      "maxClassBalanceDelta": 0.15
+    }
+  },
+  {
+    "id": "split-review-003",
+    "title": "Good disjointness with missing provenance and balance drift",
+    "dataset": {
+      "recordCount": 6,
+      "expectedClassBalance": { "positive": 0.5, "negative": 0.5 }
+    },
+    "splits": {
+      "train": {
+        "recordCount": 3,
+        "recordIds": ["a1", "a2", "a3"],
+        "groupIds": ["g1", "g2", "g3"],
+        "classBalance": { "positive": 0.9, "negative": 0.1 },
+        "license": "CC0-1.0",
+        "access": "public",
+        "checksum": "sha256:train",
+        "manifestHash": "sha256:manifest-train",
+        "embargoedRecordIds": []
+      },
+      "validation": {
+        "recordCount": 1,
+        "recordIds": ["a4"],
+        "groupIds": ["g4"],
+        "classBalance": { "positive": 0,
+          "negative": 1 },
+        "license": "CC0-1.0",
+        "access": "public",
+        "checksum": "sha256:validation",
+        "manifestHash": "sha256:manifest-validation",
+        "embargoedRecordIds": []
+      },
+      "test": {
+        "recordCount": 2,
+        "recordIds": ["a5", "a6"],
+        "groupIds": ["g5", "g6"],
+        "classBalance": { "positive": 0.5, "negative": 0.5 },
+        "license": "CC0-1.0",
+        "access": "public",
+        "checksum": "sha256:test",
+        "manifestHash": "sha256:manifest-test",
+        "embargoedRecordIds": []
+      }
+    },
+    "provenance": {
+      "seedLocked": true,
+      "splitScriptHashPresent": false
+    },
+    "release": {
+      "publicDoiRelease": false,
+      "freezePublicRelease": true
+    },
+    "policy": {
+      "requireGroupDisjointness": true,
+      "maxClassBalanceDelta": 0.25
+    }
+  },
+  {
+    "id": "split-hold-004",
+    "title": "Missing test split with public release still enabled",
+    "dataset": {
+      "recordCount": 5,
+      "expectedClassBalance": { "included": 1 }
+    },
+    "splits": {
+      "train": {
+        "recordCount": 3,
+        "recordIds": ["m1", "m2", "m3"],
+        "groupIds": ["mg1", "mg2", "mg3"],
+        "classBalance": { "included": 1 },
+        "license": "CC-BY-4.0",
+        "access": "public",
+        "checksum": "sha256:train",
+        "manifestHash": "sha256:manifest-train",
+        "embargoedRecordIds": []
+      },
+      "validation": {
+        "recordCount": 2,
+        "recordIds": ["m4", "m5"],
+        "groupIds": ["mg4", "mg5"],
+        "classBalance": { "included": 1 },
+        "license": "CC-BY-4.0",
+        "access": "public",
+        "checksum": "sha256:validation",
+        "manifestHash": "sha256:manifest-validation",
+        "embargoedRecordIds": []
+      }
+    },
+    "provenance": {
+      "seedLocked": true,
+      "splitScriptHashPresent": true
+    },
+    "release": {
+      "publicDoiRelease": true,
+      "freezePublicRelease": false
+    },
+    "policy": {
+      "requireGroupDisjointness": true,
+      "maxClassBalanceDelta": 0.15
+    }
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "assistant": "citation-context-fit-assistant",
+  "issue": "SCIBASE-AI/SCIBASE.AI#13",
+  "manuscriptId": "ms-ai-citation-013",
+  "title": "Synthetic Microbiome Intervention Review",
+  "asOfDate": "2026-05-22",
+  "decision": "block-unsafe-citation-insertions",
+  "score": 0,
+  "severitySummary": {
+    "critical": 2,
+    "high": 3,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "rule": "contradictory-citation-for-supporting-claim",
+      "message": "cand-002 contradicts a claim that requested direct support.",
+      "action": "Block one-click insertion unless the manuscript text is rewritten as a contrast or limitation.",
+      "refs": [
+        "cand-002",
+        "claim-002"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "contradictory-citation-note-missing",
+      "message": "cand-002 is contradictory but has no insertion note.",
+      "action": "Require an explicit contrast note before insertion.",
+      "refs": [
+        "cand-002",
+        "claim-002"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "citation-context-irrelevant",
+      "message": "cand-004 is irrelevant to claim-001.",
+      "action": "Suppress the recommendation from the citation tool.",
+      "refs": [
+        "cand-004",
+        "claim-001"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "direct-support-evidence-too-weak",
+      "message": "cand-004 evidence strength 0.3 is below support threshold.",
+      "action": "Downgrade the candidate to background/context or require a stronger source.",
+      "refs": [
+        "cand-004",
+        "claim-001"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "citation-field-fit-too-low",
+      "message": "cand-004 field overlap 0.18 is below the accepted threshold.",
+      "action": "Hold the candidate for manual review or retrieve a field-matched citation.",
+      "refs": [
+        "cand-004",
+        "claim-001",
+        "environmental-microbiology"
+      ]
+    }
+  ],
+  "insertionDecisions": [
+    {
+      "candidateId": "cand-001",
+      "claimId": "claim-001",
+      "decision": "allow-insertion",
+      "rules": []
+    },
+    {
+      "candidateId": "cand-002",
+      "claimId": "claim-002",
+      "decision": "suppress",
+      "rules": [
+        "contradictory-citation-for-supporting-claim",
+        "contradictory-citation-note-missing"
+      ]
+    },
+    {
+      "candidateId": "cand-003",
+      "claimId": "claim-003",
+      "decision": "allow-insertion",
+      "rules": []
+    },
+    {
+      "candidateId": "cand-004",
+      "claimId": "claim-001",
+      "decision": "suppress",
+      "rules": [
+        "citation-context-irrelevant",
+        "direct-support-evidence-too-weak",
+        "citation-field-fit-too-low"
+      ]
+    }
+  ],
+  "safety": [
+    "Synthetic manuscript claims and citation candidates only",
+    "No DOI, Crossref, PubMed, arXiv, Semantic Scholar, publisher, or external corpus calls",
+    "No private manuscripts, credentials, real literature metadata, or live citation insertions"
+  ]
+}

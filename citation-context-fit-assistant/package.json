@@ -1,0 +1,14 @@
+{
+  "name": "citation-context-fit-assistant",
+  "version": "1.0.0",
+  "description": "Deterministic assistant for citation recommendation context-fit checks.",
+  "main": "index.js",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "check": "node --check index.js && node --check sample-data.js && node --check demo.js && node --check demo-video.js && node --check test.js",
+    "test": "node test.js",
+    "demo": "node demo.js",
+    "demo:video": "node demo-video.js"
+  }
+}

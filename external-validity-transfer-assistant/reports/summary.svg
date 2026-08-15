@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<rect width="900" height="360" fill="#f8fafc"/>
+<text x="40" y="48" font-size="28" font-family="Arial, sans-serif" fill="#0f172a">External Validity Transfer Assistant</text>
+<text x="40" y="82" font-size="18" font-family="Arial, sans-serif" fill="#475569">Average transfer score</text>
+<rect x="250" y="62" width="400" height="20" rx="5" fill="#e2e8f0"/>
+<rect x="250" y="62" width="176" height="20" rx="5" fill="#b91c1c"/>
+<text x="670" y="80" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">44 - hold-for-transfer-evidence</text>
+<text x="40" y="130" font-size="18" fill="#0f172a">claim-generalizable-oncology</text>
+<rect x="40" y="142" width="400" height="16" rx="4" fill="#e2e8f0"/>
+<rect x="40" y="142" width="10" height="16" rx="4" fill="#0f766e"/>
+<text x="460" y="156" font-size="16" fill="#334155">0 - quarantine-from-review-packet</text>
+<text x="40" y="182" font-size="18" fill="#0f172a">claim-reproducible-pipeline</text>
+<rect x="40" y="194" width="400" height="16" rx="4" fill="#e2e8f0"/>
+<rect x="40" y="194" width="400" height="16" rx="4" fill="#0f766e"/>
+<text x="460" y="208" font-size="16" fill="#334155">100 - review-ready</text>
+<text x="40" y="234" font-size="18" fill="#0f172a">claim-deployment-ready</text>
+<rect x="40" y="246" width="400" height="16" rx="4" fill="#e2e8f0"/>
+<rect x="40" y="246" width="128" height="16" rx="4" fill="#0f766e"/>
+<text x="460" y="260" font-size="16" fill="#334155">32 - quarantine-from-review-packet</text>
+<text x="40" y="330" font-size="14" font-family="Arial, sans-serif" fill="#64748b">Synthetic deterministic demo. No credentials, private manuscripts, or external APIs.</text>
+</svg>

@@ -1,0 +1,263 @@
+{
+  "projectId": "project-transfer-001",
+  "title": "Portable biomarker triage assistant for multi-site oncology cohorts",
+  "assistant": "external-validity-transfer-assistant",
+  "issue": "SCIBASE-AI/SCIBASE.AI#16",
+  "averageScore": 44,
+  "decision": "hold-for-transfer-evidence",
+  "severitySummary": {
+    "critical": 0,
+    "high": 5,
+    "medium": 5,
+    "low": 0
+  },
+  "claimReviews": [
+    {
+      "id": "claim-generalizable-oncology",
+      "text": "The model generalizes across oncology patient populations and hospital settings.",
+      "score": 0,
+      "decision": "quarantine-from-review-packet",
+      "evidenceCount": 2,
+      "observedScope": {
+        "populations": [
+          "adult"
+        ],
+        "settings": [
+          "academic hospital"
+        ],
+        "instruments": [
+          "bulk-rna-seq"
+        ],
+        "environments": [
+          "python-3.11"
+        ],
+        "externalValidation": false,
+        "runnableEvidence": true
+      },
+      "findings": [
+        {
+          "severity": "high",
+          "rule": "population-transfer-gap",
+          "message": "Claim claim-generalizable-oncology asserts populations not represented in linked evidence: pediatric, underrepresented ancestry.",
+          "action": "Narrow the claim wording or add external validation for each missing population."
+        },
+        {
+          "severity": "high",
+          "rule": "setting-transfer-gap",
+          "message": "Claim claim-generalizable-oncology asserts settings not represented in linked evidence: community hospital, international site.",
+          "action": "Add site-level validation evidence or mark the setting as a future research gap."
+        },
+        {
+          "severity": "medium",
+          "rule": "assay-transfer-gap",
+          "message": "Claim claim-generalizable-oncology references unsupported assay or instrument contexts: single-cell-rna-seq.",
+          "action": "Separate assay-specific claims and document conversion limits before reviewer release."
+        },
+        {
+          "severity": "medium",
+          "rule": "runtime-transfer-gap",
+          "message": "Claim claim-generalizable-oncology references runtime environments not covered by rerun evidence: cuda, cpu-only.",
+          "action": "Run the pipeline in each deployment-like environment or downgrade deployment readiness language."
+        },
+        {
+          "severity": "high",
+          "rule": "no-external-validation",
+          "message": "Claim claim-generalizable-oncology has broad transfer language without external validation evidence.",
+          "action": "Hold broad generalizability language until at least one independent validation artifact is linked."
+        },
+        {
+          "severity": "medium",
+          "rule": "strong-claim-subgroup-undercoverage",
+          "message": "Strong claim claim-generalizable-oncology does not cover required subgroup evidence: pediatric, underrepresented ancestry.",
+          "action": "Convert the claim to qualified language or create a subgroup-specific validation plan."
+        }
+      ]
+    },
+    {
+      "id": "claim-reproducible-pipeline",
+      "text": "The manuscript includes enough artifacts for an independent lab to rerun the triage pipeline.",
+      "score": 100,
+      "decision": "review-ready",
+      "evidenceCount": 3,
+      "observedScope": {
+        "populations": [
+          "adult"
+        ],
+        "settings": [
+          "academic hospital",
+          "community hospital"
+        ],
+        "instruments": [
+          "bulk-rna-seq"
+        ],
+        "environments": [
+          "python-3.11"
+        ],
+        "externalValidation": true,
+        "runnableEvidence": true
+      },
+      "findings": []
+    },
+    {
+      "id": "claim-deployment-ready",
+      "text": "The assistant is ready for deployment guidance in low-resource clinics.",
+      "score": 32,
+      "decision": "quarantine-from-review-packet",
+      "evidenceCount": 1,
+      "observedScope": {
+        "populations": [
+          "adult"
+        ],
+        "settings": [
+          "community hospital"
+        ],
+        "instruments": [
+          "bulk-rna-seq"
+        ],
+        "environments": [
+          "cpu-only"
+        ],
+        "externalValidation": false,
+        "runnableEvidence": false
+      },
+      "findings": [
+        {
+          "severity": "medium",
+          "rule": "setting-transfer-gap",
+          "message": "Claim claim-deployment-ready asserts settings not represented in linked evidence: low-resource clinic.",
+          "action": "Add site-level validation evidence or mark the setting as a future research gap."
+        },
+        {
+          "severity": "high",
+          "rule": "no-external-validation",
+          "message": "Claim claim-deployment-ready has broad transfer language without external validation evidence.",
+          "action": "Hold broad generalizability language until at least one independent validation artifact is linked."
+        },
+        {
+          "severity": "high",
+          "rule": "no-runnable-transfer-evidence",
+          "message": "Claim claim-deployment-ready lacks reproducible runtime evidence for the asserted context.",
+          "action": "Add a deterministic runbook, manifest, or notebook rerun before the assistant marks the claim reproducible."
+        },
+        {
+          "severity": "medium",
+          "rule": "strong-claim-subgroup-undercoverage",
+          "message": "Strong claim claim-deployment-ready does not cover required subgroup evidence: pediatric, underrepresented ancestry.",
+          "action": "Convert the claim to qualified language or create a subgroup-specific validation plan."
+        }
+      ]
+    }
+  ],
+  "peerReviewSuggestions": [
+    {
+      "claimId": "claim-generalizable-oncology",
+      "severity": "high",
+      "suggestion": "Claim claim-generalizable-oncology asserts populations not represented in linked evidence: pediatric, underrepresented ancestry.",
+      "action": "Narrow the claim wording or add external validation for each missing population."
+    },
+    {
+      "claimId": "claim-generalizable-oncology",
+      "severity": "high",
+      "suggestion": "Claim claim-generalizable-oncology asserts settings not represented in linked evidence: community hospital, international site.",
+      "action": "Add site-level validation evidence or mark the setting as a future research gap."
+    },
+    {
+      "claimId": "claim-generalizable-oncology",
+      "severity": "medium",
+      "suggestion": "Claim claim-generalizable-oncology references unsupported assay or instrument contexts: single-cell-rna-seq.",
+      "action": "Separate assay-specific claims and document conversion limits before reviewer release."
+    },
+    {
+      "claimId": "claim-generalizable-oncology",
+      "severity": "medium",
+      "suggestion": "Claim claim-generalizable-oncology references runtime environments not covered by rerun evidence: cuda, cpu-only.",
+      "action": "Run the pipeline in each deployment-like environment or downgrade deployment readiness language."
+    },
+    {
+      "claimId": "claim-generalizable-oncology",
+      "severity": "high",
+      "suggestion": "Claim claim-generalizable-oncology has broad transfer language without external validation evidence.",
+      "action": "Hold broad generalizability language until at least one independent validation artifact is linked."
+    },
+    {
+      "claimId": "claim-generalizable-oncology",
+      "severity": "medium",
+      "suggestion": "Strong claim claim-generalizable-oncology does not cover required subgroup evidence: pediatric, underrepresented ancestry.",
+      "action": "Convert the claim to qualified language or create a subgroup-specific validation plan."
+    },
+    {
+      "claimId": "claim-deployment-ready",
+      "severity": "medium",
+      "suggestion": "Claim claim-deployment-ready asserts settings not represented in linked evidence: low-resource clinic.",
+      "action": "Add site-level validation evidence or mark the setting as a future research gap."
+    },
+    {
+      "claimId": "claim-deployment-ready",
+      "severity": "high",
+      "suggestion": "Claim claim-deployment-ready has broad transfer language without external validation evidence.",
+      "action": "Hold broad generalizability language until at least one independent validation artifact is linked."
+    },
+    {
+      "claimId": "claim-deployment-ready",
+      "severity": "high",
+      "suggestion": "Claim claim-deployment-ready lacks reproducible runtime evidence for the asserted context.",
+      "action": "Add a deterministic runbook, manifest, or notebook rerun before the assistant marks the claim reproducible."
+    },
+    {
+      "claimId": "claim-deployment-ready",
+      "severity": "medium",
+      "suggestion": "Strong claim claim-deployment-ready does not cover required subgroup evidence: pediatric, underrepresented ancestry.",
+      "action": "Convert the claim to qualified language or create a subgroup-specific validation plan."
+    }
+  ],
+  "reproducibilityActions": [
+    {
+      "claimId": "claim-generalizable-oncology",
+      "priority": "recommended",
+      "action": "Run the pipeline in each deployment-like environment or downgrade deployment readiness language."
+    },
+    {
+      "claimId": "claim-generalizable-oncology",
+      "priority": "blocking",
+      "action": "Hold broad generalizability language until at least one independent validation artifact is linked."
+    },
+    {
+      "claimId": "claim-deployment-ready",
+      "priority": "blocking",
+      "action": "Hold broad generalizability language until at least one independent validation artifact is linked."
+    },
+    {
+      "claimId": "claim-deployment-ready",
+      "priority": "blocking",
+      "action": "Add a deterministic runbook, manifest, or notebook rerun before the assistant marks the claim reproducible."
+    }
+  ],
+  "researchGaps": [
+    {
+      "id": "gap-pediatric-oncology-rnaseq",
+      "topic": "pediatric oncology RNA-seq validation",
+      "reason": "frequently cited limitation with low replication coverage",
+      "priority": "high",
+      "suggestedNextStep": "Use pediatric oncology RNA-seq validation as a targeted validation or grant-planning workstream."
+    },
+    {
+      "id": "gap-cpu-only-clinic-run",
+      "topic": "CPU-only low-resource clinic reproducibility run",
+      "reason": "deployment claim depends on clinic-like runtime evidence",
+      "priority": "high",
+      "suggestedNextStep": "Use CPU-only low-resource clinic reproducibility run as a targeted validation or grant-planning workstream."
+    },
+    {
+      "id": "gap-ancestry-balanced-evaluation",
+      "topic": "ancestry-balanced external validation",
+      "reason": "underrepresented ancestry is asserted but not evidenced",
+      "priority": "high",
+      "suggestedNextStep": "Use ancestry-balanced external validation as a targeted validation or grant-planning workstream."
+    }
+  ],
+  "safetyNotes": [
+    "Synthetic data only.",
+    "No external APIs, credentials, private manuscripts, or live clinical data are used.",
+    "The assistant produces deterministic review packets suitable for pre-submission review."
+  ]
+}

@@ -1,0 +1,165 @@
+[
+  {
+    "id": "benchmark-publish-001",
+    "title": "Clean independent benchmark edge for microscopy segmentation model",
+    "reviewDate": "2026-08-15",
+    "model": {
+      "id": "model-microseg-v4",
+      "trainingCutoff": "2025-11-01"
+    },
+    "benchmark": {
+      "id": "benchmark-cellmask-2026",
+      "releaseDate": "2026-02-15"
+    },
+    "graphEdges": [
+      {
+        "type": "trained_on",
+        "source": "model-microseg-v4",
+        "target": "dataset-labcells-2025"
+      },
+      {
+        "type": "evaluated_on",
+        "source": "model-microseg-v4",
+        "target": "benchmark-cellmask-2026",
+        "doi": "10.5555/cellmask.2026"
+      }
+    ],
+    "splitEvidence": {
+      "trainingHashes": ["tr-a1", "tr-b2", "tr-c3"],
+      "evaluationHashes": ["ev-x9", "ev-y8", "ev-z7"],
+      "trainingLabelSources": ["labcells-curation-v1"],
+      "benchmarkLabelSources": ["cellmask-independent-v2"],
+      "independentHoldout": true,
+      "splitChecksumPresent": true,
+      "evaluationLockedBeforeTraining": true
+    },
+    "recommendation": {
+      "publishToEntityPage": true
+    },
+    "safeguards": {
+      "freezeRecommendations": false
+    }
+  },
+  {
+    "id": "benchmark-hold-002",
+    "title": "Benchmark reused in model pretraining and public recommendation",
+    "reviewDate": "2026-08-15",
+    "model": {
+      "id": "model-proteinrank-7",
+      "trainingCutoff": "2026-04-01"
+    },
+    "benchmark": {
+      "id": "benchmark-proteinbind-2025",
+      "releaseDate": "2025-10-15"
+    },
+    "graphEdges": [
+      {
+        "type": "pretrained_on",
+        "source": "model-proteinrank-7",
+        "target": "benchmark-proteinbind-2025",
+        "datasetId": "benchmark-proteinbind-2025"
+      },
+      {
+        "type": "claims_sota_on",
+        "source": "model-proteinrank-7",
+        "target": "benchmark-proteinbind-2025",
+        "doi": "10.5555/proteinbind.2025"
+      }
+    ],
+    "splitEvidence": {
+      "trainingHashes": ["pb-001", "pb-002", "pb-003"],
+      "evaluationHashes": ["pb-002", "pb-044"],
+      "trainingLabelSources": ["proteinbind-labels-v1"],
+      "benchmarkLabelSources": ["proteinbind-labels-v1"],
+      "independentHoldout": false,
+      "splitChecksumPresent": true,
+      "evaluationLockedBeforeTraining": false
+    },
+    "recommendation": {
+      "publishToEntityPage": true
+    },
+    "safeguards": {
+      "freezeRecommendations": false
+    }
+  },
+  {
+    "id": "benchmark-review-003",
+    "title": "Older benchmark with missing holdout lock evidence",
+    "reviewDate": "2026-08-15",
+    "model": {
+      "id": "model-solar-forecast-2",
+      "trainingCutoff": "2026-01-01"
+    },
+    "benchmark": {
+      "id": "benchmark-solar-2024",
+      "releaseDate": "2024-07-01"
+    },
+    "graphEdges": [
+      {
+        "type": "trained_on",
+        "source": "model-solar-forecast-2",
+        "target": "dataset-grid-2025"
+      },
+      {
+        "type": "evaluated_on",
+        "source": "model-solar-forecast-2",
+        "target": "benchmark-solar-2024"
+      }
+    ],
+    "splitEvidence": {
+      "trainingHashes": ["grid-1", "grid-2"],
+      "evaluationHashes": ["solar-a", "solar-b"],
+      "trainingLabelSources": ["grid-labels"],
+      "benchmarkLabelSources": ["solar-benchmark-labels"],
+      "independentHoldout": true,
+      "splitChecksumPresent": false,
+      "evaluationLockedBeforeTraining": false
+    },
+    "recommendation": {
+      "publishToEntityPage": false
+    },
+    "safeguards": {
+      "freezeRecommendations": true
+    }
+  },
+  {
+    "id": "benchmark-hold-004",
+    "title": "Label source leakage without direct dataset edge",
+    "reviewDate": "2026-08-15",
+    "model": {
+      "id": "model-neuroreader-5",
+      "trainingCutoff": "2025-08-01"
+    },
+    "benchmark": {
+      "id": "benchmark-neurocases-2025",
+      "releaseDate": "2025-12-01"
+    },
+    "graphEdges": [
+      {
+        "type": "fine_tuned_on",
+        "source": "model-neuroreader-5",
+        "target": "dataset-hospital-notes-2025"
+      },
+      {
+        "type": "recommended_for",
+        "source": "model-neuroreader-5",
+        "target": "benchmark-neurocases-2025"
+      }
+    ],
+    "splitEvidence": {
+      "trainingHashes": ["note-1", "note-2"],
+      "evaluationHashes": ["case-a", "case-b"],
+      "trainingLabelSources": ["neuro-labeler-shared"],
+      "benchmarkLabelSources": ["neuro-labeler-shared", "expert-panel-b"],
+      "independentHoldout": false,
+      "splitChecksumPresent": true,
+      "evaluationLockedBeforeTraining": true
+    },
+    "recommendation": {
+      "publishToEntityPage": true
+    },
+    "safeguards": {
+      "freezeRecommendations": false
+    }
+  }
+]

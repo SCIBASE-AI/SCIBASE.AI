@@ -1,0 +1,194 @@
+{
+  "generatedAt": "2026-08-15T21:57:22.692Z",
+  "totalPackets": 4,
+  "counts": {
+    "PUBLISH": 1,
+    "REVIEW": 1,
+    "HOLD": 2
+  },
+  "results": [
+    {
+      "id": "benchmark-publish-001",
+      "title": "Clean independent benchmark edge for microscopy segmentation model",
+      "decision": "PUBLISH",
+      "riskScore": 0,
+      "benchmarkClaimEdges": 1,
+      "contaminationEdges": 1,
+      "findings": [],
+      "recommendedActions": [
+        "Publish benchmark graph edge and recommendation with normal provenance metadata."
+      ]
+    },
+    {
+      "id": "benchmark-hold-002",
+      "title": "Benchmark reused in model pretraining and public recommendation",
+      "decision": "HOLD",
+      "riskScore": 100,
+      "benchmarkClaimEdges": 1,
+      "contaminationEdges": 1,
+      "findings": [
+        {
+          "code": "DIRECT_TRAINING_BENCHMARK_OVERLAP",
+          "severity": "critical",
+          "message": "The model graph links training or pretraining data directly to the claimed benchmark.",
+          "evidence": {
+            "model": "model-proteinrank-7",
+            "benchmark": "benchmark-proteinbind-2025",
+            "edges": [
+              {
+                "type": "pretrained_on",
+                "source": "model-proteinrank-7",
+                "target": "benchmark-proteinbind-2025",
+                "datasetId": "benchmark-proteinbind-2025"
+              }
+            ]
+          },
+          "remediation": "Suppress clean-benchmark claims and mark the evaluation as contaminated until an independent holdout is supplied."
+        },
+        {
+          "code": "TRAIN_EVAL_SPLIT_HASH_COLLISION",
+          "severity": "critical",
+          "message": "Training and evaluation split hashes overlap.",
+          "evidence": {
+            "collisions": [
+              "pb-002"
+            ]
+          },
+          "remediation": "Hold the benchmark edge, regenerate split manifests, and require a locked evaluation set before publication."
+        },
+        {
+          "code": "LABEL_SOURCE_LEAKAGE",
+          "severity": "critical",
+          "message": "Training labels and benchmark labels share a source that can leak answers into evaluation.",
+          "evidence": {
+            "collisions": [
+              "proteinbind-labels-v1"
+            ]
+          },
+          "remediation": "Block recommendation paths that cite this benchmark as independent evidence until label provenance is separated."
+        },
+        {
+          "code": "BENCHMARK_PREDATES_TRAINING_CUTOFF",
+          "severity": "major",
+          "message": "The benchmark was released before the model training cutoff, increasing contamination risk.",
+          "evidence": {
+            "benchmarkReleaseDate": "2025-10-15",
+            "modelTrainingCutoff": "2026-04-01"
+          },
+          "remediation": "Require explicit exclusion evidence or downgrade the graph edge confidence."
+        },
+        {
+          "code": "INDEPENDENT_HOLDOUT_EVIDENCE_MISSING",
+          "severity": "major",
+          "message": "The packet lacks complete independent holdout evidence for the benchmark claim.",
+          "evidence": {
+            "independentHoldout": false,
+            "splitChecksumPresent": true,
+            "evaluationLockedBeforeTraining": false
+          },
+          "remediation": "Attach split checksums and locked evaluation-set evidence before publishing entity-page or recommendation claims."
+        },
+        {
+          "code": "UNSAFE_RECOMMENDATION_PATH_NOT_FROZEN",
+          "severity": "critical",
+          "message": "Entity-page or recommendation publication is enabled while contamination risk is unresolved.",
+          "evidence": {
+            "publishToEntityPage": true,
+            "freezeRecommendations": false
+          },
+          "remediation": "Freeze graph recommendation paths and entity-page benchmark badges until contamination review is resolved."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze model recommendation paths and entity-page benchmark badges.",
+        "Attach contamination findings to the graph curation queue.",
+        "Downgrade or suppress benchmark-confidence badges until evidence is resolved.",
+        "Generate a reviewer packet with split, label-source, and edge-provenance evidence."
+      ]
+    },
+    {
+      "id": "benchmark-review-003",
+      "title": "Older benchmark with missing holdout lock evidence",
+      "decision": "REVIEW",
+      "riskScore": 44,
+      "benchmarkClaimEdges": 1,
+      "contaminationEdges": 1,
+      "findings": [
+        {
+          "code": "BENCHMARK_PREDATES_TRAINING_CUTOFF",
+          "severity": "major",
+          "message": "The benchmark was released before the model training cutoff, increasing contamination risk.",
+          "evidence": {
+            "benchmarkReleaseDate": "2024-07-01",
+            "modelTrainingCutoff": "2026-01-01"
+          },
+          "remediation": "Require explicit exclusion evidence or downgrade the graph edge confidence."
+        },
+        {
+          "code": "INDEPENDENT_HOLDOUT_EVIDENCE_MISSING",
+          "severity": "major",
+          "message": "The packet lacks complete independent holdout evidence for the benchmark claim.",
+          "evidence": {
+            "independentHoldout": true,
+            "splitChecksumPresent": false,
+            "evaluationLockedBeforeTraining": false
+          },
+          "remediation": "Attach split checksums and locked evaluation-set evidence before publishing entity-page or recommendation claims."
+        }
+      ],
+      "recommendedActions": [
+        "Attach contamination findings to the graph curation queue.",
+        "Downgrade or suppress benchmark-confidence badges until evidence is resolved.",
+        "Generate a reviewer packet with split, label-source, and edge-provenance evidence."
+      ]
+    },
+    {
+      "id": "benchmark-hold-004",
+      "title": "Label source leakage without direct dataset edge",
+      "decision": "HOLD",
+      "riskScore": 92,
+      "benchmarkClaimEdges": 1,
+      "contaminationEdges": 1,
+      "findings": [
+        {
+          "code": "LABEL_SOURCE_LEAKAGE",
+          "severity": "critical",
+          "message": "Training labels and benchmark labels share a source that can leak answers into evaluation.",
+          "evidence": {
+            "collisions": [
+              "neuro-labeler-shared"
+            ]
+          },
+          "remediation": "Block recommendation paths that cite this benchmark as independent evidence until label provenance is separated."
+        },
+        {
+          "code": "INDEPENDENT_HOLDOUT_EVIDENCE_MISSING",
+          "severity": "major",
+          "message": "The packet lacks complete independent holdout evidence for the benchmark claim.",
+          "evidence": {
+            "independentHoldout": false,
+            "splitChecksumPresent": true,
+            "evaluationLockedBeforeTraining": true
+          },
+          "remediation": "Attach split checksums and locked evaluation-set evidence before publishing entity-page or recommendation claims."
+        },
+        {
+          "code": "UNSAFE_RECOMMENDATION_PATH_NOT_FROZEN",
+          "severity": "critical",
+          "message": "Entity-page or recommendation publication is enabled while contamination risk is unresolved.",
+          "evidence": {
+            "publishToEntityPage": true,
+            "freezeRecommendations": false
+          },
+          "remediation": "Freeze graph recommendation paths and entity-page benchmark badges until contamination review is resolved."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze model recommendation paths and entity-page benchmark badges.",
+        "Attach contamination findings to the graph curation queue.",
+        "Downgrade or suppress benchmark-confidence badges until evidence is resolved.",
+        "Generate a reviewer packet with split, label-source, and edge-provenance evidence."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f8faf8"/>
+  <text x="56" y="76" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#18211d">Benchmark Contamination Graph Guard</text>
+  <text x="56" y="118" font-family="Arial, sans-serif" font-size="19" fill="#3d4b44">Synthetic model-benchmark graph audit for SCIBASE recommendations.</text>
+  <text x="56" y="180" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18211d">Decision distribution</text>
+  <text x="56" y="235" font-family="Arial, sans-serif" font-size="20" fill="#18211d">HOLD</text>
+  <rect x="180" y="212" width="310" height="32" rx="4" fill="#cf3f45"/>
+  <text x="500" y="235" font-family="Arial, sans-serif" font-size="18" fill="#18211d">2</text>
+  <text x="56" y="295" font-family="Arial, sans-serif" font-size="20" fill="#18211d">REVIEW</text>
+  <rect x="180" y="272" width="155" height="32" rx="4" fill="#e0a12b"/>
+  <text x="345" y="295" font-family="Arial, sans-serif" font-size="18" fill="#18211d">1</text>
+  <text x="56" y="355" font-family="Arial, sans-serif" font-size="20" fill="#18211d">PUBLISH</text>
+  <rect x="180" y="332" width="155" height="32" rx="4" fill="#2d7d5f"/>
+  <text x="345" y="355" font-family="Arial, sans-serif" font-size="18" fill="#18211d">1</text>
+  <text x="56" y="430" font-family="Arial, sans-serif" font-size="18" fill="#3d4b44">Flags direct training overlap, split hash collisions, label leakage, stale benchmarks, and unsafe recommendation paths.</text>
+  <text x="56" y="468" font-family="Arial, sans-serif" font-size="16" fill="#61706a">Synthetic generated artifact only. No desktop capture or private data.</text>
+</svg>

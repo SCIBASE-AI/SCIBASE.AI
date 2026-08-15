@@ -1,0 +1,183 @@
+[
+  {
+    "id": "succession-approve-001",
+    "title": "Departed PI transfer to verified co-owner with full notice",
+    "reviewDate": "2026-08-15",
+    "project": {
+      "visibility": "institutional-only",
+      "holds": []
+    },
+    "currentOwner": {
+      "id": "owner-1",
+      "active": false,
+      "lastSeenAt": "2026-03-01"
+    },
+    "proposedOwner": {
+      "id": "co-owner-2",
+      "roles": ["co_owner", "admin"],
+      "identityVerified": true,
+      "mfaFresh": true
+    },
+    "request": {
+      "reason": "departed_institution",
+      "inactivityThresholdDays": 90,
+      "activeDisputeCount": 0
+    },
+    "approvals": {
+      "institutionalSteward": true,
+      "dataSteward": true,
+      "coOwnerQuorum": true,
+      "complianceOfficer": false
+    },
+    "notices": {
+      "collaboratorCount": 8,
+      "notifiedCollaborators": 8,
+      "objectionWindowDays": 21
+    },
+    "attribution": {
+      "preserveOriginalOwnerCredit": true,
+      "preserveContributionHistory": true,
+      "transferReasonPublicReceipt": true
+    },
+    "audit": {
+      "immutableReceipt": true,
+      "openOwnershipDispute": false
+    }
+  },
+  {
+    "id": "succession-hold-002",
+    "title": "Contributor attempts takeover without independent approval",
+    "reviewDate": "2026-08-15",
+    "project": {
+      "visibility": "private",
+      "holds": []
+    },
+    "currentOwner": {
+      "id": "owner-9",
+      "active": true,
+      "lastSeenAt": "2026-08-01"
+    },
+    "proposedOwner": {
+      "id": "contributor-4",
+      "roles": ["contributor"],
+      "identityVerified": true,
+      "mfaFresh": false
+    },
+    "request": {
+      "reason": "team_preference",
+      "inactivityThresholdDays": 90,
+      "competingOwnerClaim": true,
+      "activeDisputeCount": 1
+    },
+    "approvals": {
+      "institutionalSteward": false,
+      "dataSteward": false,
+      "coOwnerQuorum": false,
+      "complianceOfficer": false
+    },
+    "notices": {
+      "collaboratorCount": 5,
+      "notifiedCollaborators": 2,
+      "objectionWindowDays": 3
+    },
+    "attribution": {
+      "preserveOriginalOwnerCredit": false,
+      "preserveContributionHistory": true,
+      "transferReasonPublicReceipt": false
+    },
+    "audit": {
+      "immutableReceipt": false,
+      "openOwnershipDispute": true
+    }
+  },
+  {
+    "id": "succession-hold-003",
+    "title": "Clinical dataset project transfer missing compliance signoff",
+    "reviewDate": "2026-08-15",
+    "project": {
+      "visibility": "invitation-only",
+      "holds": ["irb_hold", "clinical_data_lock", "data_use_agreement"]
+    },
+    "currentOwner": {
+      "id": "owner-3",
+      "active": false,
+      "lastSeenAt": "2025-12-15"
+    },
+    "proposedOwner": {
+      "id": "data-steward-7",
+      "roles": ["data_steward", "admin"],
+      "identityVerified": true,
+      "mfaFresh": true
+    },
+    "request": {
+      "reason": "owner_unreachable",
+      "inactivityThresholdDays": 90,
+      "activeDisputeCount": 0
+    },
+    "approvals": {
+      "institutionalSteward": true,
+      "dataSteward": true,
+      "coOwnerQuorum": true,
+      "complianceOfficer": false
+    },
+    "notices": {
+      "collaboratorCount": 12,
+      "notifiedCollaborators": 12,
+      "objectionWindowDays": 21
+    },
+    "attribution": {
+      "preserveOriginalOwnerCredit": true,
+      "preserveContributionHistory": true,
+      "transferReasonPublicReceipt": true
+    },
+    "audit": {
+      "immutableReceipt": true,
+      "openOwnershipDispute": false
+    }
+  },
+  {
+    "id": "succession-review-004",
+    "title": "Eligible successor with short notice window and missing receipt",
+    "reviewDate": "2026-08-15",
+    "project": {
+      "visibility": "private",
+      "holds": []
+    },
+    "currentOwner": {
+      "id": "owner-5",
+      "active": false,
+      "lastSeenAt": "2026-02-01"
+    },
+    "proposedOwner": {
+      "id": "admin-11",
+      "roles": ["admin"],
+      "identityVerified": true,
+      "mfaFresh": true
+    },
+    "request": {
+      "reason": "owner_inactive",
+      "inactivityThresholdDays": 90,
+      "activeDisputeCount": 0
+    },
+    "approvals": {
+      "institutionalSteward": true,
+      "dataSteward": false,
+      "coOwnerQuorum": false,
+      "complianceOfficer": false
+    },
+    "notices": {
+      "collaboratorCount": 6,
+      "notifiedCollaborators": 6,
+      "objectionWindowDays": 7
+    },
+    "attribution": {
+      "preserveOriginalOwnerCredit": true,
+      "preserveContributionHistory": true,
+      "transferReasonPublicReceipt": true
+    },
+    "audit": {
+      "immutableReceipt": false,
+      "openOwnershipDispute": false
+    }
+  }
+]

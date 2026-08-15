@@ -1,0 +1,196 @@
+{
+  "generatedAt": "2026-08-15T21:45:36.455Z",
+  "totalPackets": 4,
+  "counts": {
+    "APPROVE": 1,
+    "REVIEW": 1,
+    "HOLD": 2
+  },
+  "results": [
+    {
+      "id": "succession-approve-001",
+      "title": "Departed PI transfer to verified co-owner with full notice",
+      "decision": "APPROVE",
+      "riskScore": 0,
+      "hasSuccessionTrigger": true,
+      "complianceHold": false,
+      "findings": [],
+      "recommendedActions": [
+        "Approve the ownership transfer and retain the succession receipt."
+      ]
+    },
+    {
+      "id": "succession-hold-002",
+      "title": "Contributor attempts takeover without independent approval",
+      "decision": "HOLD",
+      "riskScore": 100,
+      "hasSuccessionTrigger": false,
+      "complianceHold": false,
+      "findings": [
+        {
+          "code": "NO_VALID_SUCCESSION_TRIGGER",
+          "severity": "critical",
+          "message": "The packet does not show a valid owner inactivity, departure, or succession trigger.",
+          "evidence": {
+            "reason": "team_preference",
+            "currentOwnerActive": true,
+            "currentOwnerLastSeenAt": "2026-08-01"
+          },
+          "remediation": "Require owner consent or document a valid inactivity, departure, death, suspension, or institutional succession trigger."
+        },
+        {
+          "code": "PROPOSED_OWNER_ROLE_INELIGIBLE",
+          "severity": "critical",
+          "message": "The proposed owner lacks a succession-eligible project role.",
+          "evidence": {
+            "proposedOwner": "contributor-4",
+            "roles": [
+              "contributor"
+            ]
+          },
+          "remediation": "Limit ownership succession to admins, co-owners, PIs, data stewards, or institutional stewards."
+        },
+        {
+          "code": "SUCCESSOR_IDENTITY_POSTURE_INSUFFICIENT",
+          "severity": "major",
+          "message": "The proposed owner does not have current verified identity and MFA evidence.",
+          "evidence": {
+            "identityVerified": true,
+            "mfaFresh": false
+          },
+          "remediation": "Require fresh identity verification and MFA before ownership transfer."
+        },
+        {
+          "code": "INDEPENDENT_SUCCESSION_APPROVAL_MISSING",
+          "severity": "critical",
+          "message": "Ownership transfer lacks an independent institutional, data-steward, quorum, or legal approval path.",
+          "evidence": {
+            "institutionalSteward": false,
+            "dataSteward": false,
+            "coOwnerQuorum": false,
+            "complianceOfficer": false
+          },
+          "remediation": "Route the packet to an institutional steward, data steward plus co-owner quorum, or documented legal authority."
+        },
+        {
+          "code": "COLLABORATOR_SUCCESSION_NOTICE_INCOMPLETE",
+          "severity": "major",
+          "message": "Not all collaborators were notified about the ownership succession request.",
+          "evidence": {
+            "collaboratorCount": 5,
+            "notifiedCollaborators": 2
+          },
+          "remediation": "Notify all active collaborators and preserve the notice receipt in the audit log."
+        },
+        {
+          "code": "OBJECTION_WINDOW_TOO_SHORT",
+          "severity": "major",
+          "message": "The collaborator objection window is too short for a project ownership transfer.",
+          "evidence": {
+            "objectionWindowDays": 3
+          },
+          "remediation": "Provide at least a 14-day objection window unless legal or safety escalation documents an exception."
+        },
+        {
+          "code": "ORIGINAL_OWNER_ATTRIBUTION_NOT_PRESERVED",
+          "severity": "major",
+          "message": "The transfer packet does not preserve original owner credit, contribution history, and a public transfer receipt.",
+          "evidence": {
+            "preserveOriginalOwnerCredit": false,
+            "preserveContributionHistory": true,
+            "transferReasonPublicReceipt": false
+          },
+          "remediation": "Preserve original PI/owner credit, contribution records, and a public audit receipt for the transfer reason."
+        },
+        {
+          "code": "COMPETING_OWNERSHIP_CLAIM_UNRESOLVED",
+          "severity": "critical",
+          "message": "The transfer has an unresolved ownership dispute or competing successor claim.",
+          "evidence": {
+            "competingOwnerClaim": true,
+            "activeDisputeCount": 1,
+            "openOwnershipDispute": true
+          },
+          "remediation": "Hold the transfer until the dispute is resolved by independent governance."
+        },
+        {
+          "code": "IMMUTABLE_TRANSFER_AUDIT_RECEIPT_MISSING",
+          "severity": "major",
+          "message": "The succession packet lacks an immutable audit receipt.",
+          "evidence": {
+            "immutableReceipt": false
+          },
+          "remediation": "Record the trigger, approvals, notices, object freezes, and attribution preservation in an immutable audit receipt."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze owner-only project actions until the succession packet is resolved.",
+        "Route the packet to independent governance review.",
+        "Preserve original owner attribution and collaborator notice evidence."
+      ]
+    },
+    {
+      "id": "succession-hold-003",
+      "title": "Clinical dataset project transfer missing compliance signoff",
+      "decision": "HOLD",
+      "riskScore": 35,
+      "hasSuccessionTrigger": true,
+      "complianceHold": true,
+      "findings": [
+        {
+          "code": "COMPLIANCE_HOLD_TRANSFER_APPROVAL_MISSING",
+          "severity": "critical",
+          "message": "The project has regulated-data, IRB, DUA, embargo, clinical, or export-control holds without compliance approval.",
+          "evidence": {
+            "holds": [
+              "irb_hold",
+              "clinical_data_lock",
+              "data_use_agreement"
+            ],
+            "complianceOfficer": false
+          },
+          "remediation": "Require compliance-officer approval and keep restricted objects frozen until the transfer is approved."
+        }
+      ],
+      "recommendedActions": [
+        "Keep regulated datasets and embargoed artifacts locked until compliance approval is recorded.",
+        "Freeze owner-only project actions until the succession packet is resolved.",
+        "Route the packet to independent governance review.",
+        "Preserve original owner attribution and collaborator notice evidence."
+      ]
+    },
+    {
+      "id": "succession-review-004",
+      "title": "Eligible successor with short notice window and missing receipt",
+      "decision": "REVIEW",
+      "riskScore": 44,
+      "hasSuccessionTrigger": true,
+      "complianceHold": false,
+      "findings": [
+        {
+          "code": "OBJECTION_WINDOW_TOO_SHORT",
+          "severity": "major",
+          "message": "The collaborator objection window is too short for a project ownership transfer.",
+          "evidence": {
+            "objectionWindowDays": 7
+          },
+          "remediation": "Provide at least a 14-day objection window unless legal or safety escalation documents an exception."
+        },
+        {
+          "code": "IMMUTABLE_TRANSFER_AUDIT_RECEIPT_MISSING",
+          "severity": "major",
+          "message": "The succession packet lacks an immutable audit receipt.",
+          "evidence": {
+            "immutableReceipt": false
+          },
+          "remediation": "Record the trigger, approvals, notices, object freezes, and attribution preservation in an immutable audit receipt."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze owner-only project actions until the succession packet is resolved.",
+        "Route the packet to independent governance review.",
+        "Preserve original owner attribution and collaborator notice evidence."
+      ]
+    }
+  ]
+}

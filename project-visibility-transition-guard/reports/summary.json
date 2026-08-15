@@ -1,0 +1,364 @@
+{
+  "guard": "project-visibility-transition-guard",
+  "issue": "SCIBASE-AI/SCIBASE.AI#11",
+  "workspaceId": "proj-visible-221",
+  "title": "Synthetic Proteomics Collaboration",
+  "currentVisibility": "institutional-only",
+  "requestedVisibility": "public",
+  "asOfDate": "2026-05-22",
+  "decision": "block-public-visibility-transition",
+  "score": 0,
+  "severitySummary": {
+    "critical": 8,
+    "high": 8,
+    "medium": 2,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "critical",
+      "rule": "required-audit-action-missing",
+      "message": "Required audit action object-reviewed is missing.",
+      "action": "Record the complete request, review, approval, and release decision trail before applying visibility.",
+      "refs": [
+        "proj-visible-221",
+        "object-reviewed"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "required-audit-action-missing",
+      "message": "Required audit action public-release-approved is missing.",
+      "action": "Record the complete request, review, approval, and release decision trail before applying visibility.",
+      "refs": [
+        "proj-visible-221",
+        "public-release-approved"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "required-visibility-approver-missing",
+      "message": "Required data-steward approval is not complete.",
+      "action": "Block public visibility until all required governance approvers consent.",
+      "refs": [
+        "data-steward"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "profile-exposure-consent-missing",
+      "message": "user-steward has no approved consent for public profile exposure.",
+      "action": "Hide the collaborator from public profile surfaces or collect explicit consent before transition.",
+      "refs": [
+        "user-steward",
+        "data-steward"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "profile-exposure-consent-missing",
+      "message": "user-partner has no approved consent for public profile exposure.",
+      "action": "Hide the collaborator from public profile surfaces or collect explicit consent before transition.",
+      "refs": [
+        "user-partner",
+        "external-partner"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "sensitive-object-in-public-transition",
+      "message": "Raw participant proteomics table carries sensitive labels: restricted-data, human-derived.",
+      "action": "Exclude or redact the object before public visibility is applied.",
+      "refs": [
+        "obj-dataset-raw",
+        "restricted-data",
+        "human-derived"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "object-kind-not-public-allowlisted",
+      "message": "dataset object obj-dataset-raw is not allowlisted for public visibility.",
+      "action": "Map the object to a public-safe derivative or keep it private.",
+      "refs": [
+        "obj-dataset-raw",
+        "dataset"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "unsafe-public-object-permission",
+      "message": "obj-dataset-raw would expose download permission after transition.",
+      "action": "Downgrade public permissions to read-only metadata or remove public access.",
+      "refs": [
+        "obj-dataset-raw",
+        "download"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "object-not-public-ready",
+      "message": "Raw participant proteomics table is not marked public-ready.",
+      "action": "Require owner/steward readiness attestation before making the object public.",
+      "refs": [
+        "obj-dataset-raw"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "unsafe-public-object-permission",
+      "message": "obj-code would expose edit permission after transition.",
+      "action": "Downgrade public permissions to read-only metadata or remove public access.",
+      "refs": [
+        "obj-code",
+        "edit"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "sensitive-object-in-public-transition",
+      "message": "Anonymous reviewer discussion carries sensitive labels: anonymous-review.",
+      "action": "Exclude or redact the object before public visibility is applied.",
+      "refs": [
+        "obj-review",
+        "anonymous-review"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "object-kind-not-public-allowlisted",
+      "message": "comment-thread object obj-review is not allowlisted for public visibility.",
+      "action": "Map the object to a public-safe derivative or keep it private.",
+      "refs": [
+        "obj-review",
+        "comment-thread"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "object-not-public-ready",
+      "message": "Anonymous reviewer discussion is not marked public-ready.",
+      "action": "Require owner/steward readiness attestation before making the object public.",
+      "refs": [
+        "obj-review"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "active-hold-blocks-public-transition",
+      "message": "IRB hold hold-irb blocks public exposure of Raw participant proteomics table.",
+      "action": "Block the visibility transition until the hold expires or a documented waiver is attached.",
+      "refs": [
+        "hold-irb",
+        "obj-dataset-raw",
+        "2026-08-01"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "active-hold-blocks-public-transition",
+      "message": "funder-embargo hold hold-funder blocks public exposure of Draft manuscript.",
+      "action": "Block the visibility transition until the hold expires or a documented waiver is attached.",
+      "refs": [
+        "hold-funder",
+        "obj-manuscript",
+        "2026-06-15"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "external-access-principal-unknown",
+      "message": "External access invite-2 references unknown principal unknown-consultant.",
+      "action": "Revoke or identify unknown external access before public transition.",
+      "refs": [
+        "invite-2",
+        "unknown-consultant"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "external-download-without-redistribution-rights",
+      "message": "External access invite-2 allows downloads without redistribution rights.",
+      "action": "Downgrade or revoke external download grants before public visibility changes.",
+      "refs": [
+        "invite-2"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "visibility-audit-evidence-incomplete",
+      "message": "Only 2 audit events are present for the transition.",
+      "action": "Record requester, approver, object-review, and final decision events before applying visibility.",
+      "refs": [
+        "proj-visible-221"
+      ]
+    }
+  ],
+  "transitionActions": [
+    {
+      "priority": "blocking",
+      "rule": "required-audit-action-missing",
+      "action": "Record the complete request, review, approval, and release decision trail before applying visibility.",
+      "refs": [
+        "proj-visible-221",
+        "object-reviewed"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "required-audit-action-missing",
+      "action": "Record the complete request, review, approval, and release decision trail before applying visibility.",
+      "refs": [
+        "proj-visible-221",
+        "public-release-approved"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "required-visibility-approver-missing",
+      "action": "Block public visibility until all required governance approvers consent.",
+      "refs": [
+        "data-steward"
+      ]
+    },
+    {
+      "priority": "review",
+      "rule": "profile-exposure-consent-missing",
+      "action": "Hide the collaborator from public profile surfaces or collect explicit consent before transition.",
+      "refs": [
+        "user-steward",
+        "data-steward"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "profile-exposure-consent-missing",
+      "action": "Hide the collaborator from public profile surfaces or collect explicit consent before transition.",
+      "refs": [
+        "user-partner",
+        "external-partner"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "sensitive-object-in-public-transition",
+      "action": "Exclude or redact the object before public visibility is applied.",
+      "refs": [
+        "obj-dataset-raw",
+        "restricted-data",
+        "human-derived"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "object-kind-not-public-allowlisted",
+      "action": "Map the object to a public-safe derivative or keep it private.",
+      "refs": [
+        "obj-dataset-raw",
+        "dataset"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "unsafe-public-object-permission",
+      "action": "Downgrade public permissions to read-only metadata or remove public access.",
+      "refs": [
+        "obj-dataset-raw",
+        "download"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "object-not-public-ready",
+      "action": "Require owner/steward readiness attestation before making the object public.",
+      "refs": [
+        "obj-dataset-raw"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "unsafe-public-object-permission",
+      "action": "Downgrade public permissions to read-only metadata or remove public access.",
+      "refs": [
+        "obj-code",
+        "edit"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "sensitive-object-in-public-transition",
+      "action": "Exclude or redact the object before public visibility is applied.",
+      "refs": [
+        "obj-review",
+        "anonymous-review"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "object-kind-not-public-allowlisted",
+      "action": "Map the object to a public-safe derivative or keep it private.",
+      "refs": [
+        "obj-review",
+        "comment-thread"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "object-not-public-ready",
+      "action": "Require owner/steward readiness attestation before making the object public.",
+      "refs": [
+        "obj-review"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "active-hold-blocks-public-transition",
+      "action": "Block the visibility transition until the hold expires or a documented waiver is attached.",
+      "refs": [
+        "hold-irb",
+        "obj-dataset-raw",
+        "2026-08-01"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "active-hold-blocks-public-transition",
+      "action": "Block the visibility transition until the hold expires or a documented waiver is attached.",
+      "refs": [
+        "hold-funder",
+        "obj-manuscript",
+        "2026-06-15"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "external-access-principal-unknown",
+      "action": "Revoke or identify unknown external access before public transition.",
+      "refs": [
+        "invite-2",
+        "unknown-consultant"
+      ]
+    },
+    {
+      "priority": "blocking",
+      "rule": "external-download-without-redistribution-rights",
+      "action": "Downgrade or revoke external download grants before public visibility changes.",
+      "refs": [
+        "invite-2"
+      ]
+    },
+    {
+      "priority": "review",
+      "rule": "visibility-audit-evidence-incomplete",
+      "action": "Record requester, approver, object-review, and final decision events before applying visibility.",
+      "refs": [
+        "proj-visible-221"
+      ]
+    }
+  ],
+  "safety": [
+    "Synthetic project, collaborator, object, hold, access, and audit data only",
+    "No OAuth, SAML, ORCID, storage, profile, permission, email, or audit-log network calls",
+    "No private project data, credentials, human-subject records, live users, or access-control mutations"
+  ]
+}

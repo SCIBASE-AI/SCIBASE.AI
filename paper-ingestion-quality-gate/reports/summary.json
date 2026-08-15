@@ -1,0 +1,241 @@
+{
+  "generatedAt": "2026-08-15T22:05:11.925Z",
+  "totalPackets": 4,
+  "counts": {
+    "SUMMARIZE": 1,
+    "REVIEW": 1,
+    "HOLD": 2
+  },
+  "results": [
+    {
+      "id": "ingest-summarize-001",
+      "title": "Clean paper intake for abstract and executive summary generation",
+      "decision": "SUMMARIZE",
+      "completeness": 0.984,
+      "findings": [],
+      "recommendedActions": [
+        "Allow AI summarization with normal extraction provenance attached."
+      ]
+    },
+    {
+      "id": "ingest-hold-002",
+      "title": "OCR-only scan with missing methods and dropped pages",
+      "decision": "HOLD",
+      "completeness": 0.528,
+      "findings": [
+        {
+          "code": "PDF_PAGE_DROP_DETECTED",
+          "severity": "critical",
+          "message": "The source paper has pages that were not extracted.",
+          "evidence": {
+            "pageCount": 18,
+            "pagesExtracted": 15,
+            "droppedPages": 3
+          },
+          "remediation": "Block summarization until the paper is reprocessed and every page has extraction evidence."
+        },
+        {
+          "code": "REQUIRED_SECTION_MISSING",
+          "severity": "critical",
+          "message": "Required scientific sections are missing from the extracted text map.",
+          "evidence": {
+            "missingSections": [
+              "methods",
+              "results"
+            ]
+          },
+          "remediation": "Re-run section segmentation or require manual section confirmation before summary generation."
+        },
+        {
+          "code": "OCR_OR_ENCODING_QUALITY_LOW",
+          "severity": "critical",
+          "message": "OCR confidence or glyph quality is too poor for a reliable AI-generated summary.",
+          "evidence": {
+            "ocrConfidence": 0.61,
+            "unrecognizedGlyphRate": 0.092
+          },
+          "remediation": "Use a higher-quality text layer or route to manual intake review before summarization."
+        },
+        {
+          "code": "TABLE_EXTRACTION_INCOMPLETE",
+          "severity": "critical",
+          "message": "One or more expected tables were not extracted for summarizer grounding.",
+          "evidence": {
+            "expectedTables": 4,
+            "extractedTables": 1
+          },
+          "remediation": "Hold key-finding and numeric-summary generation until table extraction is complete."
+        },
+        {
+          "code": "FIGURE_CAPTION_MAP_INCOMPLETE",
+          "severity": "major",
+          "message": "Figure captions are missing from the summarizer intake packet.",
+          "evidence": {
+            "expectedFigures": 6,
+            "extractedCaptions": 3
+          },
+          "remediation": "Regenerate figure-caption anchors or suppress figure-derived claims from the summary."
+        },
+        {
+          "code": "REFERENCE_PARSE_COVERAGE_LOW",
+          "severity": "major",
+          "message": "Reference parsing coverage is too low for reliable related-work or implication summaries.",
+          "evidence": {
+            "expectedReferences": 61,
+            "parsedReferences": 25
+          },
+          "remediation": "Suppress citation-based implication bullets until reference parsing is repaired."
+        },
+        {
+          "code": "EQUATION_EXTRACTION_COVERAGE_LOW",
+          "severity": "major",
+          "message": "Equation extraction coverage is below the configured summarizer threshold.",
+          "evidence": {
+            "equationCoverage": 0.41,
+            "minEquationCoverage": 0.9
+          },
+          "remediation": "Warn reviewers and avoid mathematical-method summaries until equation extraction is confirmed."
+        },
+        {
+          "code": "EXTRACTION_PROVENANCE_INCOMPLETE",
+          "severity": "major",
+          "message": "The intake packet lacks required extraction provenance flags.",
+          "evidence": {
+            "missingProvenance": [
+              "sectionMap",
+              "tableMap",
+              "figureCaptionMap",
+              "referenceMap",
+              "extractionDigest"
+            ]
+          },
+          "remediation": "Attach text, section, table, figure, reference, and digest evidence before releasing AI summaries."
+        },
+        {
+          "code": "INTAKE_COMPLETENESS_BELOW_THRESHOLD",
+          "severity": "critical",
+          "message": "Overall source extraction completeness is below the AI summarizer safety threshold.",
+          "evidence": {
+            "completeness": 0.528
+          },
+          "remediation": "Hold summarization and regenerate the intake packet from the source document."
+        },
+        {
+          "code": "SUMMARIZER_NOT_GATED_ON_CLEAN_INTAKE",
+          "severity": "critical",
+          "message": "AI key-finding generation is enabled while source-ingestion quality findings are unresolved.",
+          "evidence": {
+            "generateKeyFindings": true,
+            "requireCleanIntake": false
+          },
+          "remediation": "Require clean intake status before generating key findings, implications, or next steps."
+        }
+      ],
+      "recommendedActions": [
+        "Disable key-finding generation until intake quality is clean.",
+        "Attach the intake findings to the AI summarizer queue.",
+        "Regenerate extraction artifacts before key findings or implications are generated.",
+        "Show reviewers which source sections, tables, figures, or references are unsafe."
+      ]
+    },
+    {
+      "id": "ingest-review-003",
+      "title": "Good text extraction with incomplete tables and captions",
+      "decision": "REVIEW",
+      "completeness": 0.877,
+      "findings": [
+        {
+          "code": "TABLE_EXTRACTION_INCOMPLETE",
+          "severity": "major",
+          "message": "One or more expected tables were not extracted for summarizer grounding.",
+          "evidence": {
+            "expectedTables": 3,
+            "extractedTables": 2
+          },
+          "remediation": "Hold key-finding and numeric-summary generation until table extraction is complete."
+        },
+        {
+          "code": "FIGURE_CAPTION_MAP_INCOMPLETE",
+          "severity": "major",
+          "message": "Figure captions are missing from the summarizer intake packet.",
+          "evidence": {
+            "expectedFigures": 4,
+            "extractedCaptions": 2
+          },
+          "remediation": "Regenerate figure-caption anchors or suppress figure-derived claims from the summary."
+        },
+        {
+          "code": "EXTRACTION_PROVENANCE_INCOMPLETE",
+          "severity": "major",
+          "message": "The intake packet lacks required extraction provenance flags.",
+          "evidence": {
+            "missingProvenance": [
+              "figureCaptionMap"
+            ]
+          },
+          "remediation": "Attach text, section, table, figure, reference, and digest evidence before releasing AI summaries."
+        }
+      ],
+      "recommendedActions": [
+        "Attach the intake findings to the AI summarizer queue.",
+        "Regenerate extraction artifacts before key findings or implications are generated.",
+        "Show reviewers which source sections, tables, figures, or references are unsafe."
+      ]
+    },
+    {
+      "id": "ingest-hold-004",
+      "title": "Reference and equation extraction failure before implications summary",
+      "decision": "HOLD",
+      "completeness": 0.824,
+      "findings": [
+        {
+          "code": "REFERENCE_PARSE_COVERAGE_LOW",
+          "severity": "major",
+          "message": "Reference parsing coverage is too low for reliable related-work or implication summaries.",
+          "evidence": {
+            "expectedReferences": 48,
+            "parsedReferences": 20
+          },
+          "remediation": "Suppress citation-based implication bullets until reference parsing is repaired."
+        },
+        {
+          "code": "EQUATION_EXTRACTION_COVERAGE_LOW",
+          "severity": "major",
+          "message": "Equation extraction coverage is below the configured summarizer threshold.",
+          "evidence": {
+            "equationCoverage": 0.45,
+            "minEquationCoverage": 0.9
+          },
+          "remediation": "Warn reviewers and avoid mathematical-method summaries until equation extraction is confirmed."
+        },
+        {
+          "code": "EXTRACTION_PROVENANCE_INCOMPLETE",
+          "severity": "major",
+          "message": "The intake packet lacks required extraction provenance flags.",
+          "evidence": {
+            "missingProvenance": [
+              "referenceMap"
+            ]
+          },
+          "remediation": "Attach text, section, table, figure, reference, and digest evidence before releasing AI summaries."
+        },
+        {
+          "code": "SUMMARIZER_NOT_GATED_ON_CLEAN_INTAKE",
+          "severity": "critical",
+          "message": "AI key-finding generation is enabled while source-ingestion quality findings are unresolved.",
+          "evidence": {
+            "generateKeyFindings": true,
+            "requireCleanIntake": false
+          },
+          "remediation": "Require clean intake status before generating key findings, implications, or next steps."
+        }
+      ],
+      "recommendedActions": [
+        "Disable key-finding generation until intake quality is clean.",
+        "Attach the intake findings to the AI summarizer queue.",
+        "Regenerate extraction artifacts before key findings or implications are generated.",
+        "Show reviewers which source sections, tables, figures, or references are unsafe."
+      ]
+    }
+  ]
+}

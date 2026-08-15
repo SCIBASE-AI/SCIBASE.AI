@@ -1,0 +1,150 @@
+[
+  {
+    "id": "ingest-summarize-001",
+    "title": "Clean paper intake for abstract and executive summary generation",
+    "source": {
+      "fileType": "pdf",
+      "pageCount": 12
+    },
+    "expected": {
+      "tables": 2,
+      "figures": 3,
+      "references": 42,
+      "minEquationCoverage": 0.9
+    },
+    "extraction": {
+      "pagesExtracted": 12,
+      "sectionsPresent": ["abstract", "introduction", "methods", "results", "discussion", "references"],
+      "ocrConfidence": 0.98,
+      "unrecognizedGlyphRate": 0.002,
+      "textCoverage": 0.96,
+      "tablesExtracted": 2,
+      "figureCaptionsExtracted": 3,
+      "referencesParsed": 41,
+      "equationCoverage": 0.93
+    },
+    "summarizer": {
+      "generateKeyFindings": true,
+      "requireCleanIntake": true
+    },
+    "provenance": {
+      "textLayer": true,
+      "sectionMap": true,
+      "tableMap": true,
+      "figureCaptionMap": true,
+      "referenceMap": true,
+      "extractionDigest": true
+    }
+  },
+  {
+    "id": "ingest-hold-002",
+    "title": "OCR-only scan with missing methods and dropped pages",
+    "source": {
+      "fileType": "pdf_scan",
+      "pageCount": 18
+    },
+    "expected": {
+      "tables": 4,
+      "figures": 6,
+      "references": 61,
+      "minEquationCoverage": 0.9
+    },
+    "extraction": {
+      "pagesExtracted": 15,
+      "sectionsPresent": ["abstract", "introduction", "discussion", "references"],
+      "ocrConfidence": 0.61,
+      "unrecognizedGlyphRate": 0.092,
+      "textCoverage": 0.62,
+      "tablesExtracted": 1,
+      "figureCaptionsExtracted": 3,
+      "referencesParsed": 25,
+      "equationCoverage": 0.41
+    },
+    "summarizer": {
+      "generateKeyFindings": true,
+      "requireCleanIntake": false
+    },
+    "provenance": {
+      "textLayer": true,
+      "sectionMap": false,
+      "tableMap": false,
+      "figureCaptionMap": false,
+      "referenceMap": false,
+      "extractionDigest": false
+    }
+  },
+  {
+    "id": "ingest-review-003",
+    "title": "Good text extraction with incomplete tables and captions",
+    "source": {
+      "fileType": "pdf",
+      "pageCount": 9
+    },
+    "expected": {
+      "tables": 3,
+      "figures": 4,
+      "references": 30,
+      "minEquationCoverage": 0.85
+    },
+    "extraction": {
+      "pagesExtracted": 9,
+      "sectionsPresent": ["abstract", "introduction", "methods", "results", "discussion", "references"],
+      "ocrConfidence": 0.94,
+      "unrecognizedGlyphRate": 0.006,
+      "textCoverage": 0.91,
+      "tablesExtracted": 2,
+      "figureCaptionsExtracted": 2,
+      "referencesParsed": 28,
+      "equationCoverage": 0.87
+    },
+    "summarizer": {
+      "generateKeyFindings": false,
+      "requireCleanIntake": true
+    },
+    "provenance": {
+      "textLayer": true,
+      "sectionMap": true,
+      "tableMap": true,
+      "figureCaptionMap": false,
+      "referenceMap": true,
+      "extractionDigest": true
+    }
+  },
+  {
+    "id": "ingest-hold-004",
+    "title": "Reference and equation extraction failure before implications summary",
+    "source": {
+      "fileType": "pdf",
+      "pageCount": 14
+    },
+    "expected": {
+      "tables": 1,
+      "figures": 2,
+      "references": 48,
+      "minEquationCoverage": 0.9
+    },
+    "extraction": {
+      "pagesExtracted": 14,
+      "sectionsPresent": ["abstract", "introduction", "methods", "results", "discussion", "references"],
+      "ocrConfidence": 0.9,
+      "unrecognizedGlyphRate": 0.01,
+      "textCoverage": 0.88,
+      "tablesExtracted": 1,
+      "figureCaptionsExtracted": 2,
+      "referencesParsed": 20,
+      "equationCoverage": 0.45
+    },
+    "summarizer": {
+      "generateKeyFindings": true,
+      "requireCleanIntake": false
+    },
+    "provenance": {
+      "textLayer": true,
+      "sectionMap": true,
+      "tableMap": true,
+      "figureCaptionMap": true,
+      "referenceMap": false,
+      "extractionDigest": true
+    }
+  }
+]

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-label="Causal claim validity guard summary">
+  <rect width="900" height="360" fill="#f8faf7"/>
+  <text x="48" y="62" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#17201c">Causal Claim Validity Guard</text>
+  <text x="48" y="98" font-family="Inter, Arial, sans-serif" font-size="16" fill="#647067">AI peer-review gate for causal language, design support, comparator evidence, and uncertainty.</text>
+  <text x="48" y="136" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#17201c">RELEASE: 2</text>
+  <rect x="48" y="148" width="316" height="30" rx="6" fill="#4fbf9f"/>
+  <rect x="48" y="148" width="760" height="30" rx="6" fill="none" stroke="#d9e2dc"/>
+  <text x="48" y="202" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#17201c">REVISE: 1</text>
+  <rect x="48" y="214" width="206" height="30" rx="6" fill="#d6a137"/>
+  <rect x="48" y="214" width="760" height="30" rx="6" fill="none" stroke="#d9e2dc"/>
+  <text x="48" y="268" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#17201c">HOLD: 1</text>
+  <rect x="48" y="280" width="206" height="30" rx="6" fill="#d85f73"/>
+  <rect x="48" y="280" width="760" height="30" rx="6" fill="none" stroke="#d9e2dc"/>
+</svg>

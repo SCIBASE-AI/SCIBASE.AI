@@ -1,0 +1,85 @@
+[
+  {
+    "id": "cardio-rct-001",
+    "title": "Remote coaching reduces systolic blood pressure in high-risk adults",
+    "domain": "clinical trials",
+    "claim": {
+      "intent": "causal",
+      "text": "Remote coaching reduces systolic blood pressure after twelve weeks."
+    },
+    "evidence": {
+      "design": "randomized_controlled_trial",
+      "hasComparator": true,
+      "temporalOrder": true,
+      "confounderStrategy": "blocked randomization with prespecified covariate balance checks",
+      "effectSize": "-7.4 mmHg",
+      "confidenceInterval": "95% CI -10.1 to -4.9",
+      "subgroups": [
+        {
+          "name": "participants over 65",
+          "claim": "coaching may reduce systolic blood pressure",
+          "powered": true
+        }
+      ]
+    },
+    "conclusion": "Remote coaching reduces systolic blood pressure in the randomized study population."
+  },
+  {
+    "id": "education-cross-sectional-002",
+    "title": "Daily tutoring app usage improves mathematics scores",
+    "domain": "education",
+    "claim": {
+      "intent": "causal",
+      "text": "Daily tutoring app usage improves mathematics scores."
+    },
+    "evidence": {
+      "design": "cross_sectional",
+      "hasComparator": false,
+      "temporalOrder": false,
+      "effectSize": "0.31 SD"
+    },
+    "conclusion": "The tutoring app drives higher scores across schools."
+  },
+  {
+    "id": "ecology-longitudinal-003",
+    "title": "Wetland restoration is associated with higher amphibian diversity",
+    "domain": "ecology",
+    "claim": {
+      "intent": "associational",
+      "text": "Wetland restoration is associated with higher amphibian diversity."
+    },
+    "evidence": {
+      "design": "longitudinal_observational",
+      "hasComparator": true,
+      "temporalOrder": true,
+      "confounderStrategy": "matched watersheds and rainfall adjustment",
+      "effectSize": "18% higher species richness",
+      "confidenceInterval": "95% CI 6% to 29%"
+    },
+    "conclusion": "Wetland restoration is associated with higher observed amphibian diversity after adjustment."
+  },
+  {
+    "id": "oncology-subgroup-004",
+    "title": "Dose timing prevents relapse in a small oncology subgroup",
+    "domain": "oncology",
+    "claim": {
+      "intent": "causal",
+      "text": "Dose timing prevents relapse in the biomarker-positive subgroup."
+    },
+    "evidence": {
+      "design": "quasi_experimental",
+      "hasComparator": true,
+      "temporalOrder": true,
+      "confounderStrategy": "propensity score weighting",
+      "effectSize": "hazard ratio 0.72",
+      "subgroups": [
+        {
+          "name": "biomarker-positive subgroup",
+          "claim": "dose timing prevents relapse",
+          "powered": false
+        }
+      ]
+    },
+    "conclusion": "Dose timing prevents relapse for biomarker-positive patients."
+  }
+]

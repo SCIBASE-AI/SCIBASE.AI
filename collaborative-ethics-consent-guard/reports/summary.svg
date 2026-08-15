@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380" role="img" aria-label="Collaborative ethics and consent export guard summary">
+  <rect width="960" height="380" fill="#f9faf8"/>
+  <text x="48" y="60" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#18201d">Collaborative Ethics and Consent</text>
+  <text x="48" y="96" font-family="Inter, Arial, sans-serif" font-size="16" fill="#56635e">Export guard for approval IDs, consent scope, translations, private comments, and locked ethics edits.</text>
+  <text x="48" y="135" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#18201d">RELEASE: 1</text>
+  <rect x="48" y="148" width="212" height="34" rx="6" fill="#36af8f"/>
+  <rect x="48" y="148" width="800" height="34" rx="6" fill="none" stroke="#d9e1dc"/>
+  <text x="48" y="205" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#18201d">REVIEW: 1</text>
+  <rect x="48" y="218" width="212" height="34" rx="6" fill="#d4a235"/>
+  <rect x="48" y="218" width="800" height="34" rx="6" fill="none" stroke="#d9e1dc"/>
+  <text x="48" y="275" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#18201d">HOLD: 2</text>
+  <rect x="48" y="288" width="328" height="34" rx="6" fill="#d65d73"/>
+  <rect x="48" y="288" width="800" height="34" rx="6" fill="none" stroke="#d9e1dc"/>
+</svg>

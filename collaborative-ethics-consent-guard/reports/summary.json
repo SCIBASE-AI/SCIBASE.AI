@@ -1,0 +1,169 @@
+{
+  "generatedAt": "2026-08-15T21:08:58.890Z",
+  "packetCount": 4,
+  "decisionCounts": {
+    "RELEASE": 1,
+    "REVIEW": 1,
+    "HOLD": 2
+  },
+  "reviews": [
+    {
+      "id": "release-clean-consent",
+      "title": "Clean collaborative consent export",
+      "decision": "RELEASE",
+      "confidence": 0.96,
+      "humanSubjects": true,
+      "commentCount": 1,
+      "findingCount": 0,
+      "findings": [],
+      "reviewerNote": "public health: ethics, consent, comments, and export scope are publication-ready."
+    },
+    {
+      "id": "review-stale-vulnerable",
+      "title": "Vulnerable population review needs refresh",
+      "decision": "REVIEW",
+      "confidence": 0.31,
+      "humanSubjects": true,
+      "commentCount": 1,
+      "findingCount": 4,
+      "findings": [
+        {
+          "code": "VULNERABLE_POPULATION_REVIEW_MISSING",
+          "severity": "major",
+          "message": "The manuscript includes vulnerable participant groups without documented enhanced ethics review.",
+          "evidence": {
+            "vulnerableGroups": [
+              "children"
+            ]
+          },
+          "remediation": "Add vulnerable-population review evidence and consent safeguards before publication export."
+        },
+        {
+          "code": "TRANSLATED_CONSENT_COVERAGE_MISSING",
+          "severity": "major",
+          "message": "Required consent-language coverage is missing for one or more participant groups.",
+          "evidence": {
+            "missingLanguages": [
+              "french"
+            ]
+          },
+          "remediation": "Add translated consent evidence or justify why those participant groups are not included in the export."
+        },
+        {
+          "code": "STALE_ETHICS_REVIEW",
+          "severity": "major",
+          "message": "The last ethics-section review is older than the configured freshness window.",
+          "evidence": {
+            "lastEthicsReviewAt": "2025-11-01",
+            "maxAgeDays": 180
+          },
+          "remediation": "Refresh ethics reviewer signoff after the latest collaborative edits."
+        },
+        {
+          "code": "UNRESOLVED_ETHICS_COMMENT",
+          "severity": "minor",
+          "message": "An ethics-section comment remains unresolved at export time.",
+          "evidence": {
+            "commentId": "c2"
+          },
+          "remediation": "Resolve or explicitly defer the ethics comment before publication export."
+        }
+      ],
+      "reviewerNote": "education research: REVIEW before export because the manuscript includes vulnerable participant groups without documented enhanced ethics review."
+    },
+    {
+      "id": "hold-missing-approval",
+      "title": "Human-subjects packet without approval",
+      "decision": "HOLD",
+      "confidence": 0.11,
+      "humanSubjects": true,
+      "commentCount": 0,
+      "findingCount": 3,
+      "findings": [
+        {
+          "code": "MISSING_ETHICS_APPROVAL_ID",
+          "severity": "critical",
+          "message": "The manuscript involves human subjects but lacks an ethics approval identifier.",
+          "evidence": {
+            "humanSubjects": true,
+            "approvalId": null
+          },
+          "remediation": "Add the IRB/REC approval identifier or mark the study as exempt with supporting rationale."
+        },
+        {
+          "code": "MISSING_CONSENT_STATEMENT",
+          "severity": "critical",
+          "message": "Consent is required but no consent statement is present in the collaborative manuscript.",
+          "evidence": {
+            "consentRequired": true,
+            "statementPresent": false
+          },
+          "remediation": "Add a consent statement or documented waiver before export."
+        },
+        {
+          "code": "TRANSLATED_CONSENT_COVERAGE_MISSING",
+          "severity": "major",
+          "message": "Required consent-language coverage is missing for one or more participant groups.",
+          "evidence": {
+            "missingLanguages": [
+              "english"
+            ]
+          },
+          "remediation": "Add translated consent evidence or justify why those participant groups are not included in the export."
+        }
+      ],
+      "reviewerNote": "clinical methods: HOLD before export because the manuscript involves human subjects but lacks an ethics approval identifier."
+    },
+    {
+      "id": "hold-private-comment-leak",
+      "title": "Private participant details leaking through comments",
+      "decision": "HOLD",
+      "confidence": 0.1,
+      "humanSubjects": true,
+      "commentCount": 1,
+      "findingCount": 4,
+      "findings": [
+        {
+          "code": "LOCKED_ETHICS_SECTION_HAS_PENDING_EDITS",
+          "severity": "major",
+          "message": "A locked ethics or consent section has pending collaborative edits without approved override.",
+          "evidence": {
+            "locked": true,
+            "pendingEdits": true
+          },
+          "remediation": "Route pending edits through the section owner or ethics reviewer before export."
+        },
+        {
+          "code": "PRIVATE_ETHICS_COMMENT_VISIBLE_IN_EXPORT",
+          "severity": "critical",
+          "message": "A private ethics or reviewer comment is marked visible in the export packet.",
+          "evidence": {
+            "commentId": "c3",
+            "section": "ethics statement"
+          },
+          "remediation": "Redact or remove private comments before creating the public manuscript export."
+        },
+        {
+          "code": "PARTICIPANT_IDENTIFIER_IN_COMMENT",
+          "severity": "critical",
+          "message": "A collaborative comment appears to contain a participant, subject, patient, MRN, or DOB marker.",
+          "evidence": {
+            "commentId": "c3",
+            "section": "ethics statement"
+          },
+          "remediation": "Redact participant identifiers and regenerate reviewer-safe comments before export."
+        },
+        {
+          "code": "UNRESOLVED_ETHICS_COMMENT",
+          "severity": "minor",
+          "message": "An ethics-section comment remains unresolved at export time.",
+          "evidence": {
+            "commentId": "c3"
+          },
+          "remediation": "Resolve or explicitly defer the ethics comment before publication export."
+        }
+      ],
+      "reviewerNote": "behavioral science: HOLD before export because a locked ethics or consent section has pending collaborative edits without approved override."
+    }
+  ]
+}

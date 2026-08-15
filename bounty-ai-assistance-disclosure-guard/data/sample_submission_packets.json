@@ -1,0 +1,224 @@
+[
+  {
+    "id": "release-transparent-ai",
+    "title": "Transparent AI-assisted climate forecast submission",
+    "challenge": {
+      "title": "Regional climate forecasting bounty"
+    },
+    "challengePolicy": {
+      "allowsAiAssistance": true,
+      "requiresDisclosure": true,
+      "requiresAiToolList": true,
+      "approvedTools": ["Codex", "OpenModelLab"],
+      "allowedToolLicenses": ["MIT", "Apache-2.0"],
+      "allowedSubmissionLicenses": ["MIT", "CC-BY-4.0"],
+      "prohibitedDataClasses": ["private sponsor data", "participant health data", "export controlled data"]
+    },
+    "aiAssistance": {
+      "used": true,
+      "disclosed": true,
+      "tools": [
+        {
+          "name": "Codex",
+          "type": "coding agent",
+          "version": "local",
+          "license": "MIT",
+          "purpose": "test generation",
+          "disclosed": true
+        }
+      ],
+      "dataClassesUsed": ["public benchmark data"],
+      "privateDataUsed": false,
+      "promptLeakage": false
+    },
+    "humanReview": {
+      "completed": true,
+      "reviewer": "team lead",
+      "reviewedComponents": ["model.py", "report.md"]
+    },
+    "generatedComponents": [
+      {
+        "path": "model.py",
+        "type": "code",
+        "aiGenerated": true,
+        "disclosed": true,
+        "humanReviewed": true,
+        "provenanceHash": "sha256:111111",
+        "license": "MIT"
+      }
+    ],
+    "reproducibility": {
+      "commands": "python -m pytest && python run_forecast.py --seed 17",
+      "environment": "python 3.12",
+      "artifactHash": "sha256:222222"
+    },
+    "submission": {
+      "license": "MIT",
+      "includesPrivateData": false,
+      "promptLeakage": false,
+      "notes": "AI assistance disclosed in solver packet."
+    }
+  },
+  {
+    "id": "review-missing-component-provenance",
+    "title": "AI-assisted materials model with incomplete provenance",
+    "challenge": {
+      "title": "Materials discovery bounty"
+    },
+    "challengePolicy": {
+      "allowsAiAssistance": true,
+      "requiresDisclosure": true,
+      "requiresAiToolList": true,
+      "approvedTools": ["Codex"],
+      "allowedToolLicenses": ["MIT"],
+      "allowedSubmissionLicenses": ["MIT"],
+      "prohibitedDataClasses": ["private sponsor data"]
+    },
+    "aiAssistance": {
+      "used": true,
+      "disclosed": true,
+      "tools": [
+        {
+          "name": "Codex",
+          "type": "coding agent",
+          "license": "MIT",
+          "purpose": "feature extraction",
+          "disclosed": true
+        }
+      ],
+      "dataClassesUsed": ["public crystal dataset"],
+      "privateDataUsed": false,
+      "promptLeakage": false
+    },
+    "humanReview": {
+      "completed": true,
+      "reviewer": "principal investigator"
+    },
+    "generatedComponents": [
+      {
+        "path": "features.py",
+        "type": "code",
+        "aiGenerated": true,
+        "disclosed": true,
+        "humanReviewed": false,
+        "license": "MIT"
+      }
+    ],
+    "reproducibility": {
+      "commands": "python -m pytest",
+      "environment": "python 3.12"
+    },
+    "submission": {
+      "license": "MIT",
+      "includesPrivateData": false,
+      "promptLeakage": false,
+      "notes": "Needs final review signoff."
+    }
+  },
+  {
+    "id": "hold-undisclosed-ai",
+    "title": "Undisclosed AI-generated solver report",
+    "challenge": {
+      "title": "Single-cell biomarker bounty"
+    },
+    "challengePolicy": {
+      "allowsAiAssistance": true,
+      "requiresDisclosure": true,
+      "requiresAiToolList": true,
+      "approvedTools": ["Codex"],
+      "allowedSubmissionLicenses": ["MIT"],
+      "prohibitedDataClasses": ["private sponsor data", "participant health data"]
+    },
+    "aiAssistance": {
+      "used": true,
+      "disclosed": false,
+      "tools": [
+        {
+          "name": "Unknown LLM",
+          "type": "LLM",
+          "purpose": "drafted report",
+          "disclosed": false
+        }
+      ],
+      "dataClassesUsed": ["public benchmark data"],
+      "privateDataUsed": false,
+      "promptLeakage": false
+    },
+    "humanReview": {
+      "completed": false
+    },
+    "generatedComponents": [
+      {
+        "path": "report.md",
+        "type": "whitepaper",
+        "aiGenerated": true,
+        "disclosed": false,
+        "humanReviewed": false,
+        "license": "MIT"
+      }
+    ],
+    "reproducibility": {},
+    "submission": {
+      "license": "MIT",
+      "includesPrivateData": false,
+      "promptLeakage": false,
+      "notes": "No disclosure included."
+    }
+  },
+  {
+    "id": "hold-private-data-leak",
+    "title": "Private sponsor data sent through AI workflow",
+    "challenge": {
+      "title": "Protein design bounty"
+    },
+    "challengePolicy": {
+      "allowsAiAssistance": true,
+      "requiresDisclosure": true,
+      "approvedTools": ["Codex"],
+      "allowedSubmissionLicenses": ["Apache-2.0"],
+      "prohibitedDataClasses": ["private sponsor data", "export controlled data"]
+    },
+    "aiAssistance": {
+      "used": true,
+      "disclosed": true,
+      "tools": [
+        {
+          "name": "Codex",
+          "type": "coding agent",
+          "license": "MIT",
+          "purpose": "analysis rewrite",
+          "disclosed": true
+        }
+      ],
+      "dataClassesUsed": ["private sponsor data"],
+      "privateDataUsed": true,
+      "promptLeakage": true,
+      "promptExcerpt": "analysis with bearer abcdefghijklmnopqrstuvwxyz"
+    },
+    "humanReview": {
+      "completed": true,
+      "reviewer": "compliance reviewer"
+    },
+    "generatedComponents": [
+      {
+        "path": "analysis.ipynb",
+        "type": "notebook",
+        "aiGenerated": true,
+        "disclosed": true,
+        "humanReviewed": true,
+        "provenanceHash": "sha256:333333",
+        "license": "MIT"
+      }
+    ],
+    "reproducibility": {
+      "commands": "python rerun.py",
+      "environment": "python 3.12"
+    },
+    "submission": {
+      "license": "MIT",
+      "includesPrivateData": true,
+      "promptLeakage": true,
+      "notes": "Reviewer packet includes prompt material."
+    }
+  }
+]

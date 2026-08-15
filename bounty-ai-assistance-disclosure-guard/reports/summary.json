@@ -1,0 +1,198 @@
+{
+  "generatedAt": "2026-08-15T20:59:43.334Z",
+  "packetCount": 4,
+  "decisionCounts": {
+    "RELEASE": 1,
+    "REVIEW": 1,
+    "HOLD": 2
+  },
+  "reviews": [
+    {
+      "id": "release-transparent-ai",
+      "title": "Transparent AI-assisted climate forecast submission",
+      "challenge": "Regional climate forecasting bounty",
+      "decision": "RELEASE",
+      "confidence": 0.96,
+      "aiUsed": true,
+      "componentCount": 1,
+      "findingCount": 0,
+      "findings": [],
+      "reviewerNote": "Regional climate forecasting bounty: AI-assistance disclosure, provenance, human review, and reproducibility evidence are scoring-ready."
+    },
+    {
+      "id": "review-missing-component-provenance",
+      "title": "AI-assisted materials model with incomplete provenance",
+      "challenge": "Materials discovery bounty",
+      "decision": "REVIEW",
+      "confidence": 0.7,
+      "aiUsed": true,
+      "componentCount": 1,
+      "findingCount": 2,
+      "findings": [
+        {
+          "code": "GENERATED_COMPONENT_NOT_HUMAN_REVIEWED",
+          "severity": "major",
+          "message": "An AI-generated component lacks human review attestation.",
+          "evidence": {
+            "path": "features.py"
+          },
+          "remediation": "Add human review evidence before the component can be scored or released to a sponsor."
+        },
+        {
+          "code": "GENERATED_COMPONENT_MISSING_PROVENANCE_HASH",
+          "severity": "minor",
+          "message": "An AI-generated component does not include a provenance or artifact hash.",
+          "evidence": {
+            "path": "features.py"
+          },
+          "remediation": "Add a stable artifact hash, prompt digest, or build provenance digest."
+        }
+      ],
+      "reviewerNote": "Materials discovery bounty: REVIEW before scoring because an ai-generated component lacks human review attestation."
+    },
+    {
+      "id": "hold-undisclosed-ai",
+      "title": "Undisclosed AI-generated solver report",
+      "challenge": "Single-cell biomarker bounty",
+      "decision": "HOLD",
+      "confidence": 0.1,
+      "aiUsed": true,
+      "componentCount": 1,
+      "findingCount": 8,
+      "findings": [
+        {
+          "code": "AI_ASSISTANCE_UNDISCLOSED",
+          "severity": "critical",
+          "message": "The submission used AI assistance without the disclosure required by the challenge policy.",
+          "evidence": {
+            "aiUsed": true,
+            "disclosed": false
+          },
+          "remediation": "Require an explicit AI-use disclosure before scoring, award release, or sponsor handoff."
+        },
+        {
+          "code": "MISSING_HUMAN_REVIEW_ATTESTATION",
+          "severity": "major",
+          "message": "AI-assisted work lacks a completed human review attestation.",
+          "evidence": {
+            "humanReviewCompleted": false
+          },
+          "remediation": "Add named reviewer, review date, reviewed components, and residual-risk notes."
+        },
+        {
+          "code": "AI_ASSISTED_WORK_NOT_REPRODUCIBLE",
+          "severity": "major",
+          "message": "The submission lacks reproducibility commands or environment notes for AI-assisted deliverables.",
+          "evidence": {
+            "commands": null
+          },
+          "remediation": "Add commands, environment, seeds, and artifact hashes sufficient for sponsor-side reproduction."
+        },
+        {
+          "code": "UNAPPROVED_AI_TOOL_USED",
+          "severity": "major",
+          "message": "The submission used an AI/tooling system that is not listed in the challenge-approved tool policy.",
+          "evidence": {
+            "tool": "Unknown LLM",
+            "approvedTools": [
+              "Codex"
+            ]
+          },
+          "remediation": "Add sponsor approval evidence for the tool or rerun the affected work with an approved toolchain."
+        },
+        {
+          "code": "AI_TOOL_NOT_LISTED_IN_DISCLOSURE",
+          "severity": "major",
+          "message": "An apparent AI tool is present in provenance records but not listed as disclosed.",
+          "evidence": {
+            "tool": "Unknown LLM",
+            "type": "LLM"
+          },
+          "remediation": "Update the solver disclosure packet so reviewers can see which AI tools touched the deliverable."
+        },
+        {
+          "code": "GENERATED_COMPONENT_NOT_DISCLOSED",
+          "severity": "major",
+          "message": "An AI-generated component is not clearly disclosed in the submission packet.",
+          "evidence": {
+            "path": "report.md",
+            "type": "whitepaper"
+          },
+          "remediation": "Mark the generated component and explain how it was produced and reviewed."
+        },
+        {
+          "code": "GENERATED_COMPONENT_NOT_HUMAN_REVIEWED",
+          "severity": "major",
+          "message": "An AI-generated component lacks human review attestation.",
+          "evidence": {
+            "path": "report.md"
+          },
+          "remediation": "Add human review evidence before the component can be scored or released to a sponsor."
+        },
+        {
+          "code": "GENERATED_COMPONENT_MISSING_PROVENANCE_HASH",
+          "severity": "minor",
+          "message": "An AI-generated component does not include a provenance or artifact hash.",
+          "evidence": {
+            "path": "report.md"
+          },
+          "remediation": "Add a stable artifact hash, prompt digest, or build provenance digest."
+        }
+      ],
+      "reviewerNote": "Single-cell biomarker bounty: HOLD before scoring because the submission used ai assistance without the disclosure required by the challenge policy."
+    },
+    {
+      "id": "hold-private-data-leak",
+      "title": "Private sponsor data sent through AI workflow",
+      "challenge": "Protein design bounty",
+      "decision": "HOLD",
+      "confidence": 0.1,
+      "aiUsed": true,
+      "componentCount": 1,
+      "findingCount": 4,
+      "findings": [
+        {
+          "code": "PROHIBITED_DATA_SENT_TO_AI",
+          "severity": "critical",
+          "message": "AI assistance appears to have used data classes prohibited by the challenge policy.",
+          "evidence": {
+            "prohibitedData": [
+              "private sponsor data"
+            ]
+          },
+          "remediation": "Hold the packet, notify the sponsor, and require a clean-room rerun or documented exception."
+        },
+        {
+          "code": "PRIVATE_DATA_IN_AI_WORKFLOW",
+          "severity": "critical",
+          "message": "The AI workflow or final packet includes private or sponsor-restricted data.",
+          "evidence": {
+            "privateDataUsed": true,
+            "includesPrivateData": true
+          },
+          "remediation": "Remove private data, regenerate affected artifacts, and provide reviewer-safe provenance evidence."
+        },
+        {
+          "code": "PROMPT_OR_SECRET_LEAKAGE",
+          "severity": "critical",
+          "message": "The packet appears to expose prompts, secrets, bearer tokens, or private workflow instructions.",
+          "evidence": {
+            "promptLeakage": true
+          },
+          "remediation": "Redact the packet, rotate any exposed credentials if real, and resubmit reviewer-safe evidence only."
+        },
+        {
+          "code": "GENERATED_COMPONENT_LICENSE_MISMATCH",
+          "severity": "major",
+          "message": "A generated component uses a license outside the challenge submission policy.",
+          "evidence": {
+            "path": "analysis.ipynb",
+            "license": "MIT"
+          },
+          "remediation": "Relicense, remove, or obtain sponsor approval before scoring the submission."
+        }
+      ],
+      "reviewerNote": "Protein design bounty: HOLD before scoring because ai assistance appears to have used data classes prohibited by the challenge policy."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+  <title id="title">Scientific artifact hosting governance demo</title>
+  <desc id="desc">Privacy-safe workflow demo showing synthetic artifacts moving through manifest hashing, metadata checks, version diffs, FAIR exports, runtime checks, and review readiness.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 14; }
+      .primary { fill: #0f172a; }
+      .muted { fill: #475569; }
+      .label { font: 700 24px Arial, sans-serif; }
+      .sub { font: 16px Arial, sans-serif; }
+      .code { font: 14px Consolas, monospace; }
+      .pill { fill: #dcfce7; stroke: #16a34a; stroke-width: 1.5; rx: 18; }
+      .info { fill: #dbeafe; stroke: #2563eb; stroke-width: 1.5; rx: 18; }
+      .warn { fill: #fef3c7; stroke: #d97706; stroke-width: 1.5; rx: 18; }
+      .line { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dash { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 8 8; fill: none; }
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto">
+      <path d="M0,0 L12,5 L0,10 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1120" height="720"/>
+  <text x="56" y="58" class="primary label">Scientific Artifact Hosting Governance</text>
+  <text x="56" y="90" class="muted sub">Synthetic demo: data, code, notebook, metadata, runtime checks, and FAIR export readiness.</text>
+
+  <rect x="56" y="132" width="280" height="156" class="panel"/>
+  <text x="82" y="174" class="primary label">1. Artifact Intake</text>
+  <text x="82" y="210" class="muted sub">CSV dataset, Python code, notebook</text>
+  <rect x="82" y="232" width="186" height="36" class="info"/>
+  <text x="100" y="255" class="code primary">3 artifacts detected</text>
+
+  <path d="M336 210 H424" class="line"/>
+
+  <rect x="424" y="132" width="280" height="156" class="panel"/>
+  <text x="450" y="174" class="primary label">2. Manifest</text>
+  <text x="450" y="210" class="muted sub">Hashes, versions, access, previews</text>
+  <rect x="450" y="232" width="218" height="36" class="info"/>
+  <text x="468" y="255" class="code primary">SHA-256 + preview contracts</text>
+
+  <path d="M704 210 H792" class="line"/>
+
+  <rect x="792" y="132" width="272" height="156" class="panel"/>
+  <text x="818" y="174" class="primary label">3. Metadata Checks</text>
+  <text x="818" y="210" class="muted sub">Title, creators, description, license</text>
+  <rect x="818" y="232" width="176" height="36" class="pill"/>
+  <text x="836" y="255" class="code primary">metadata complete</text>
+
+  <path d="M928 288 V360" class="line"/>
+
+  <rect x="792" y="360" width="272" height="156" class="panel"/>
+  <text x="818" y="402" class="primary label">4. Version Diff</text>
+  <text x="818" y="438" class="muted sub">Dataset content changed from v1.0</text>
+  <rect x="818" y="460" width="186" height="36" class="warn"/>
+  <text x="836" y="483" class="code primary">content_changed</text>
+
+  <path d="M792 438 H704" class="line"/>
+
+  <rect x="424" y="360" width="280" height="156" class="panel"/>
+  <text x="450" y="402" class="primary label">5. FAIR Exports</text>
+  <text x="450" y="438" class="muted sub">schema.org JSON-LD and DataCite</text>
+  <rect x="450" y="460" width="198" height="36" class="pill"/>
+  <text x="468" y="483" class="code primary">DOI-ready metadata</text>
+
+  <path d="M424 438 H336" class="line"/>
+
+  <rect x="56" y="360" width="280" height="156" class="panel"/>
+  <text x="82" y="402" class="primary label">6. Runtime Readiness</text>
+  <text x="82" y="438" class="muted sub">Docker image and reproducibility command</text>
+  <rect x="82" y="460" width="168" height="36" class="pill"/>
+  <text x="100" y="483" class="code primary">ready_for_review</text>
+
+  <rect x="56" y="570" width="1008" height="94" class="panel"/>
+  <text x="82" y="608" class="primary label">Audit Result</text>
+  <text x="82" y="642" class="code muted">fairScore: 96  |  blockers: []  |  auditHash: deterministic review trace</text>
+  <path d="M78 622 H1042" class="dash"/>
+</svg>

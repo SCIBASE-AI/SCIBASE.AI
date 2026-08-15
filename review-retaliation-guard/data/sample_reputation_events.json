@@ -1,0 +1,156 @@
+[
+  {
+    "id": "rep-clear-001",
+    "title": "Critical review with independent reputation hold",
+    "reviewDate": "2026-08-01",
+    "review": {
+      "reviewerId": "reviewer-17",
+      "recommendation": "major_revision",
+      "rating": 2,
+      "criticalityScore": 0.82
+    },
+    "manuscript": {
+      "authors": ["author-a", "author-b"],
+      "institutions": ["North Ridge Lab"]
+    },
+    "reputationEvents": [
+      {
+        "id": "evt-001",
+        "createdAt": "2026-08-04",
+        "actor": "moderator-3",
+        "actorRelation": "independent_moderator",
+        "targetReviewer": "reviewer-17",
+        "action": "audit_hold",
+        "reputationDelta": 0,
+        "reason": "Automatic freeze while author response is reviewed."
+      }
+    ],
+    "safeguards": {
+      "retaliationWindowDays": 35,
+      "independentModeratorReview": true,
+      "appealWindowDays": 21,
+      "freezePublicExport": true
+    },
+    "exportTarget": {
+      "publicProfileExport": false
+    }
+  },
+  {
+    "id": "rep-hold-002",
+    "title": "Author-affiliated penalties after rejection recommendation",
+    "reviewDate": "2026-08-02",
+    "review": {
+      "reviewerId": "reviewer-88",
+      "recommendation": "reject",
+      "rating": 1,
+      "criticalityScore": 0.95
+    },
+    "manuscript": {
+      "authors": ["author-c", "author-d"],
+      "institutions": ["Cedar Clinical Center"]
+    },
+    "reputationEvents": [
+      {
+        "id": "evt-011",
+        "createdAt": "2026-08-05",
+        "actor": "author-c",
+        "actorRelation": "author",
+        "targetReviewer": "reviewer-88",
+        "action": "downvote",
+        "reputationDelta": -18,
+        "reason": "Low quality review."
+      },
+      {
+        "id": "evt-012",
+        "createdAt": "2026-08-06",
+        "actor": "lab-manager-c",
+        "actorRelation": "same_lab",
+        "targetReviewer": "reviewer-88",
+        "action": "badge_removed",
+        "reputationDelta": -7,
+        "reason": "Community confidence issue."
+      }
+    ],
+    "safeguards": {
+      "retaliationWindowDays": 35,
+      "independentModeratorReview": false,
+      "appealWindowDays": 7,
+      "freezePublicExport": false
+    },
+    "exportTarget": {
+      "publicProfileExport": true
+    }
+  },
+  {
+    "id": "rep-hold-003",
+    "title": "Coercive endorsement withdrawal tied to review revision",
+    "reviewDate": "2026-08-03",
+    "review": {
+      "reviewerId": "reviewer-42",
+      "recommendation": "major revisions",
+      "rating": 2,
+      "tone": "critical"
+    },
+    "manuscript": {
+      "authors": ["author-q"],
+      "institutions": ["East Harbor University"]
+    },
+    "reputationEvents": [
+      {
+        "id": "evt-021",
+        "createdAt": "2026-08-04",
+        "actor": "author-q",
+        "actorRelation": "author",
+        "targetReviewer": "reviewer-42",
+        "action": "endorsement_withdrawn",
+        "reputationDelta": -12,
+        "message": "Unless you revise the review and remove the negative comment, your reputation will drop."
+      }
+    ],
+    "safeguards": {
+      "retaliationWindowDays": 35,
+      "independentModeratorReview": false,
+      "appealWindowDays": 0,
+      "freezePublicExport": false
+    },
+    "exportTarget": {
+      "publicProfileExport": true
+    }
+  },
+  {
+    "id": "rep-clear-004",
+    "title": "Unrelated old moderation action outside review window",
+    "reviewDate": "2026-08-10",
+    "review": {
+      "reviewerId": "reviewer-9",
+      "recommendation": "accept",
+      "rating": 5,
+      "criticalityScore": 0.1
+    },
+    "manuscript": {
+      "authors": ["author-z"],
+      "institutions": ["Lakeview Bioinformatics"]
+    },
+    "reputationEvents": [
+      {
+        "id": "evt-031",
+        "createdAt": "2026-07-01",
+        "actor": "trust-and-safety",
+        "actorRelation": "independent_moderator",
+        "targetReviewer": "reviewer-9",
+        "action": "account_flag",
+        "reputationDelta": -3,
+        "reason": "Old spam duplicate unrelated to manuscript review."
+      }
+    ],
+    "safeguards": {
+      "retaliationWindowDays": 35,
+      "independentModeratorReview": true,
+      "appealWindowDays": 21,
+      "freezePublicExport": true
+    },
+    "exportTarget": {
+      "publicProfileExport": false
+    }
+  }
+]

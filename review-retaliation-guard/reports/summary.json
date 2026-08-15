@@ -1,0 +1,241 @@
+{
+  "generatedAt": "2026-08-15T21:37:04.968Z",
+  "totalPackets": 4,
+  "counts": {
+    "CLEAR": 2,
+    "REVIEW": 0,
+    "HOLD": 2
+  },
+  "results": [
+    {
+      "id": "rep-clear-001",
+      "title": "Critical review with independent reputation hold",
+      "reviewerId": "reviewer-17",
+      "criticalReview": true,
+      "retaliationWindowDays": 35,
+      "decision": "CLEAR",
+      "riskScore": 0,
+      "findings": [],
+      "suspiciousEventCount": 0,
+      "relevantEventCount": 1,
+      "recommendedActions": [
+        "Apply reputation changes with normal audit logging."
+      ]
+    },
+    {
+      "id": "rep-hold-002",
+      "title": "Author-affiliated penalties after rejection recommendation",
+      "reviewerId": "reviewer-88",
+      "criticalReview": true,
+      "retaliationWindowDays": 35,
+      "decision": "HOLD",
+      "riskScore": 100,
+      "findings": [
+        {
+          "code": "AFFILIATED_PUNITIVE_ACTION_AFTER_CRITICAL_REVIEW",
+          "severity": "critical",
+          "message": "An author-affiliated actor applied a punitive reputation action shortly after a critical review.",
+          "evidence": {
+            "action": "downvote",
+            "actor": "author-c",
+            "relation": "author",
+            "targetReviewer": "reviewer-88",
+            "daysAfterReview": 3,
+            "reputationDelta": -18
+          },
+          "remediation": "Freeze the reputation delta and route the action to an independent moderator before publication or profile export."
+        },
+        {
+          "code": "AFFILIATED_PUNITIVE_ACTION_AFTER_CRITICAL_REVIEW",
+          "severity": "critical",
+          "message": "An author-affiliated actor applied a punitive reputation action shortly after a critical review.",
+          "evidence": {
+            "action": "badge_removed",
+            "actor": "lab-manager-c",
+            "relation": "same_lab",
+            "targetReviewer": "reviewer-88",
+            "daysAfterReview": 4,
+            "reputationDelta": -7
+          },
+          "remediation": "Freeze the reputation delta and route the action to an independent moderator before publication or profile export."
+        },
+        {
+          "code": "RECIPROCAL_OR_CLUSTERED_RETALIATION_BURST",
+          "severity": "critical",
+          "message": "Multiple affiliated actors targeted the same reviewer within the retaliation window.",
+          "evidence": {
+            "affectedReviewer": "reviewer-88",
+            "distinctActors": 2,
+            "events": [
+              {
+                "actor": "author-c",
+                "action": "downvote",
+                "daysAfterReview": 3
+              },
+              {
+                "actor": "lab-manager-c",
+                "action": "badge_removed",
+                "daysAfterReview": 4
+              }
+            ]
+          },
+          "remediation": "Escalate as a retaliation cluster, suspend automated scoring, and require independent adjudication."
+        },
+        {
+          "code": "PROFILE_CREDIT_REMOVED_AFTER_UNFAVORABLE_REVIEW",
+          "severity": "major",
+          "message": "A public-facing badge, endorsement, role, or visibility signal was reduced after an unfavorable review.",
+          "evidence": {
+            "events": [
+              {
+                "actor": "lab-manager-c",
+                "action": "badge_removed",
+                "daysAfterReview": 4
+              }
+            ]
+          },
+          "remediation": "Hold public profile updates until the action is justified by evidence unrelated to the review outcome."
+        },
+        {
+          "code": "INDEPENDENT_REVIEW_MISSING_FOR_RETALIATION_RISK",
+          "severity": "major",
+          "message": "The packet has retaliation risk but no independent moderator review recorded.",
+          "evidence": {
+            "independentModeratorReview": false
+          },
+          "remediation": "Add independent moderator signoff before applying the reputation change."
+        },
+        {
+          "code": "APPEAL_WINDOW_TOO_SHORT_FOR_REPUTATION_DELTA",
+          "severity": "major",
+          "message": "The reviewer has insufficient time to appeal a reputation-impacting action.",
+          "evidence": {
+            "appealWindowDays": 7
+          },
+          "remediation": "Provide at least a 14-day appeal window and show the evidence packet to the affected reviewer."
+        },
+        {
+          "code": "PUBLIC_REPUTATION_EXPORT_NOT_FROZEN",
+          "severity": "critical",
+          "message": "Public reputation export is enabled while unresolved retaliation risk exists.",
+          "evidence": {
+            "publicProfileExport": true,
+            "freezePublicExport": false
+          },
+          "remediation": "Freeze the public export and leaderboard deltas until the retaliation review is resolved."
+        }
+      ],
+      "suspiciousEventCount": 2,
+      "relevantEventCount": 2,
+      "recommendedActions": [
+        "Disable leaderboard and public profile export for the affected reviewer until resolution.",
+        "Freeze reputation deltas tied to the flagged review.",
+        "Generate an evidence packet for an independent moderator.",
+        "Notify the affected reviewer of the appeal pathway."
+      ]
+    },
+    {
+      "id": "rep-hold-003",
+      "title": "Coercive endorsement withdrawal tied to review revision",
+      "reviewerId": "reviewer-42",
+      "criticalReview": true,
+      "retaliationWindowDays": 35,
+      "decision": "HOLD",
+      "riskScore": 100,
+      "findings": [
+        {
+          "code": "AFFILIATED_PUNITIVE_ACTION_AFTER_CRITICAL_REVIEW",
+          "severity": "critical",
+          "message": "An author-affiliated actor applied a punitive reputation action shortly after a critical review.",
+          "evidence": {
+            "action": "endorsement_withdrawn",
+            "actor": "author-q",
+            "relation": "author",
+            "targetReviewer": "reviewer-42",
+            "daysAfterReview": 1,
+            "reputationDelta": -12
+          },
+          "remediation": "Freeze the reputation delta and route the action to an independent moderator before publication or profile export."
+        },
+        {
+          "code": "COERCIVE_REVIEW_REVISION_SIGNAL",
+          "severity": "critical",
+          "message": "A reputation event contains language that appears to pressure the reviewer to soften or alter criticism.",
+          "evidence": {
+            "actor": "author-q",
+            "action": "endorsement_withdrawn",
+            "daysAfterReview": 1,
+            "excerpt": "Unless you revise the review and remove the negative comment, your reputation will drop."
+          },
+          "remediation": "Separate reputation handling from manuscript-review negotiation and preserve the message for moderator review."
+        },
+        {
+          "code": "PROFILE_CREDIT_REMOVED_AFTER_UNFAVORABLE_REVIEW",
+          "severity": "major",
+          "message": "A public-facing badge, endorsement, role, or visibility signal was reduced after an unfavorable review.",
+          "evidence": {
+            "events": [
+              {
+                "actor": "author-q",
+                "action": "endorsement_withdrawn",
+                "daysAfterReview": 1
+              }
+            ]
+          },
+          "remediation": "Hold public profile updates until the action is justified by evidence unrelated to the review outcome."
+        },
+        {
+          "code": "INDEPENDENT_REVIEW_MISSING_FOR_RETALIATION_RISK",
+          "severity": "major",
+          "message": "The packet has retaliation risk but no independent moderator review recorded.",
+          "evidence": {
+            "independentModeratorReview": false
+          },
+          "remediation": "Add independent moderator signoff before applying the reputation change."
+        },
+        {
+          "code": "APPEAL_WINDOW_TOO_SHORT_FOR_REPUTATION_DELTA",
+          "severity": "major",
+          "message": "The reviewer has insufficient time to appeal a reputation-impacting action.",
+          "evidence": {
+            "appealWindowDays": 0
+          },
+          "remediation": "Provide at least a 14-day appeal window and show the evidence packet to the affected reviewer."
+        },
+        {
+          "code": "PUBLIC_REPUTATION_EXPORT_NOT_FROZEN",
+          "severity": "critical",
+          "message": "Public reputation export is enabled while unresolved retaliation risk exists.",
+          "evidence": {
+            "publicProfileExport": true,
+            "freezePublicExport": false
+          },
+          "remediation": "Freeze the public export and leaderboard deltas until the retaliation review is resolved."
+        }
+      ],
+      "suspiciousEventCount": 1,
+      "relevantEventCount": 1,
+      "recommendedActions": [
+        "Disable leaderboard and public profile export for the affected reviewer until resolution.",
+        "Freeze reputation deltas tied to the flagged review.",
+        "Generate an evidence packet for an independent moderator.",
+        "Notify the affected reviewer of the appeal pathway."
+      ]
+    },
+    {
+      "id": "rep-clear-004",
+      "title": "Unrelated old moderation action outside review window",
+      "reviewerId": "reviewer-9",
+      "criticalReview": false,
+      "retaliationWindowDays": 35,
+      "decision": "CLEAR",
+      "riskScore": 0,
+      "findings": [],
+      "suspiciousEventCount": 0,
+      "relevantEventCount": 1,
+      "recommendedActions": [
+        "Apply reputation changes with normal audit logging."
+      ]
+    }
+  ]
+}

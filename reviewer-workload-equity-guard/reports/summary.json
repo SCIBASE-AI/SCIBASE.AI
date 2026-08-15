@@ -1,0 +1,191 @@
+{
+  "guard": "reviewer-workload-equity-guard",
+  "issue": "SCIBASE-AI/SCIBASE.AI#15",
+  "asOfDate": "2026-05-22",
+  "decision": "block-reputation-scoring-until-workload-is-fair",
+  "score": 0,
+  "severitySummary": {
+    "critical": 2,
+    "high": 6,
+    "medium": 3,
+    "low": 0
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "rule": "open-review-load-exceeded",
+      "message": "A. Rowan would hold 4 open reviews after asg-105.",
+      "action": "Reassign or queue the request before applying reputation penalties or leaderboard effects.",
+      "refs": [
+        "rev-001",
+        "asg-105"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "weekly-review-hour-budget-exceeded",
+      "message": "A. Rowan would reach 13 review hours this week.",
+      "action": "Suppress negative reputation deltas and route the request to a reviewer with available capacity.",
+      "refs": [
+        "rev-001",
+        "asg-105"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "reviewer-rest-window-too-short",
+      "message": "A. Rowan completed a review on 2026-05-21.",
+      "action": "Defer the new request or remove negative reputation effects until the rest window is met.",
+      "refs": [
+        "rev-001",
+        "asg-105"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "assignment-due-during-unavailable-window",
+      "message": "asg-105 is due while A. Rowan is unavailable.",
+      "action": "Move the due date or reassign before the review can change reputation points.",
+      "refs": [
+        "rev-001",
+        "asg-105",
+        "2026-05-24"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "weekly-review-hour-budget-exceeded",
+      "message": "M. Quinn would reach 10 review hours this week.",
+      "action": "Suppress negative reputation deltas and route the request to a reviewer with available capacity.",
+      "refs": [
+        "rev-002",
+        "asg-106"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "reviewer-expertise-mismatch",
+      "message": "asg-106 topic quantum-simulation is outside M. Quinn's declared expertise.",
+      "action": "Add a mentor, reassign the review, or prevent reputation penalties from mismatched work.",
+      "refs": [
+        "rev-002",
+        "asg-106",
+        "quantum-simulation"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "early-career-reviewer-high-penalty-risk",
+      "message": "asg-106 applies high negative deltas to an early-career reviewer.",
+      "action": "Route the assignment through mentor review before applying profile or leaderboard penalties.",
+      "refs": [
+        "rev-002",
+        "asg-106"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "reviewer-unavailable-but-penalized",
+      "message": "S. Imani is unavailable but asg-107 still carries decline and late penalties.",
+      "action": "Block decline/late reputation penalties while the reviewer is unavailable.",
+      "refs": [
+        "rev-003",
+        "asg-107"
+      ]
+    },
+    {
+      "severity": "critical",
+      "rule": "reviewer-opt-out-active",
+      "message": "S. Imani has opted out until 2026-05-30.",
+      "action": "Do not assign reputation-affecting reviews until the opt-out expires.",
+      "refs": [
+        "rev-003",
+        "asg-107",
+        "2026-05-30"
+      ]
+    },
+    {
+      "severity": "high",
+      "rule": "assignment-due-during-unavailable-window",
+      "message": "asg-107 is due while S. Imani is unavailable.",
+      "action": "Move the due date or reassign before the review can change reputation points.",
+      "refs": [
+        "rev-003",
+        "asg-107",
+        "2026-05-26"
+      ]
+    },
+    {
+      "severity": "medium",
+      "rule": "review-credit-concentration-too-high",
+      "message": "rev-001 received 67% of recent review credit.",
+      "action": "Spread review opportunities before awarding additional leaderboard-affecting points.",
+      "refs": [
+        "rev-001"
+      ]
+    }
+  ],
+  "assignmentDecisions": [
+    {
+      "assignmentId": "asg-105",
+      "reviewerId": "rev-001",
+      "decision": "suppress-negative-reputation-delta",
+      "protectedReasons": [
+        "over_capacity",
+        "rest_window"
+      ],
+      "allowedCompletionDelta": 8,
+      "blockedDeclineDelta": -4,
+      "blockedLateDelta": -6
+    },
+    {
+      "assignmentId": "asg-106",
+      "reviewerId": "rev-002",
+      "decision": "steward-review-before-scoring",
+      "protectedReasons": [
+        "weekly_hours_exceeded",
+        "expertise_mismatch"
+      ],
+      "allowedCompletionDelta": 0,
+      "blockedDeclineDelta": -5,
+      "blockedLateDelta": -8
+    },
+    {
+      "assignmentId": "asg-107",
+      "reviewerId": "rev-003",
+      "decision": "suppress-negative-reputation-delta",
+      "protectedReasons": [
+        "unavailable",
+        "opted_out"
+      ],
+      "allowedCompletionDelta": 6,
+      "blockedDeclineDelta": -3,
+      "blockedLateDelta": -5
+    }
+  ],
+  "concentration": {
+    "total": 6,
+    "entries": [
+      {
+        "reviewerId": "rev-001",
+        "count": 4,
+        "ratio": 0.6666666666666666
+      },
+      {
+        "reviewerId": "rev-002",
+        "count": 1,
+        "ratio": 0.16666666666666666
+      },
+      {
+        "reviewerId": "rev-003",
+        "count": 1,
+        "ratio": 0.16666666666666666
+      }
+    ]
+  },
+  "safety": [
+    "Synthetic reviewer, assignment, availability, and reputation data only",
+    "No profile writes, leaderboard writes, identity calls, email calls, or external review system calls",
+    "No private reviewer identities, credentials, moderation records, or live reputation mutations"
+  ]
+}

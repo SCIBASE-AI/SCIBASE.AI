@@ -1,0 +1,166 @@
+[
+  {
+    "id": "revenue-release-001",
+    "title": "Institutional license delivered cleanly",
+    "contract": {
+      "accountId": "inst-north-001",
+      "termStart": "2026-08-01",
+      "termEnd": "2027-07-31",
+      "billingActive": true,
+      "revenueRecognitionReady": true,
+      "revenueHold": false,
+      "currency": "USD",
+      "lines": [
+        {
+          "sku": "institutional-license",
+          "amount": 48000,
+          "entitlements": {
+            "seats": 40,
+            "apiCalls": 100000,
+            "computeHours": 400,
+            "storageGb": 2000,
+            "dataFeeds": ["analytics-digest"],
+            "supportTier": "enterprise"
+          }
+        }
+      ]
+    },
+    "delivery": {
+      "deliveryDate": "2026-08-05",
+      "evidenceHash": "sha256:ae541f458d2f6ca52b7dd8ce2a894020358d8a91f1d3b71d0fbd5f62b715db77",
+      "acceptedByCustomer": true,
+      "ownerAcknowledged": true,
+      "entitlements": {
+        "seats": 40,
+        "apiCalls": 100000,
+        "computeHours": 400,
+        "storageGb": 2000,
+        "dataFeeds": ["analytics-digest"],
+        "supportTier": "enterprise"
+      }
+    }
+  },
+  {
+    "id": "revenue-hold-002",
+    "title": "Active billing before customer access is delivered",
+    "contract": {
+      "accountId": "lab-east-002",
+      "termStart": "2026-08-01",
+      "termEnd": "2027-07-31",
+      "billingActive": true,
+      "revenueRecognitionReady": true,
+      "revenueHold": false,
+      "currency": "USD",
+      "lines": [
+        {
+          "sku": "lab-pro",
+          "amount": 12000,
+          "entitlements": {
+            "seats": 25,
+            "apiCalls": 50000,
+            "computeHours": 250,
+            "storageGb": 1000,
+            "dataFeeds": ["usage-metadata"],
+            "supportTier": "professional"
+          }
+        }
+      ]
+    },
+    "delivery": {
+      "deliveryDate": "2026-08-07",
+      "evidenceHash": "",
+      "acceptedByCustomer": false,
+      "ownerAcknowledged": false,
+      "entitlements": {
+        "seats": 12,
+        "apiCalls": 0,
+        "computeHours": 100,
+        "storageGb": 1000,
+        "dataFeeds": [],
+        "supportTier": "standard"
+      }
+    }
+  },
+  {
+    "id": "revenue-review-003",
+    "title": "Expansion account over-provisioned before true-up",
+    "contract": {
+      "accountId": "r-and-d-west-003",
+      "termStart": "2026-07-15",
+      "termEnd": "2027-07-14",
+      "billingActive": true,
+      "revenueRecognitionReady": false,
+      "revenueHold": true,
+      "currency": "USD",
+      "lines": [
+        {
+          "sku": "analytics-api",
+          "amount": 18000,
+          "entitlements": {
+            "seats": 10,
+            "apiCalls": 250000,
+            "computeHours": 0,
+            "storageGb": 200,
+            "dataFeeds": ["analytics-digest"],
+            "supportTier": "professional"
+          }
+        }
+      ]
+    },
+    "delivery": {
+      "deliveryDate": "2026-08-01",
+      "evidenceHash": "sha256:b467e61f098e041c5a67663a8efef30d11016e7fb4a9de264aa9fce7e4ba0f14",
+      "acceptedByCustomer": true,
+      "ownerAcknowledged": true,
+      "entitlements": {
+        "seats": 15,
+        "apiCalls": 300000,
+        "computeHours": 0,
+        "storageGb": 200,
+        "dataFeeds": ["analytics-digest", "licensed-benchmark-feed"],
+        "supportTier": "professional"
+      }
+    }
+  },
+  {
+    "id": "revenue-hold-004",
+    "title": "Expired data license still marked revenue-ready",
+    "contract": {
+      "accountId": "consortium-south-004",
+      "termStart": "2025-06-01",
+      "termEnd": "2026-05-31",
+      "billingActive": true,
+      "revenueRecognitionReady": true,
+      "revenueHold": false,
+      "currency": "USD",
+      "lines": [
+        {
+          "sku": "data-license",
+          "amount": 36000,
+          "entitlements": {
+            "seats": 5,
+            "apiCalls": 10000,
+            "computeHours": 0,
+            "storageGb": 100,
+            "dataFeeds": ["licensed-benchmark-feed"],
+            "supportTier": "standard"
+          }
+        }
+      ]
+    },
+    "delivery": {
+      "deliveryDate": "2026-08-15",
+      "evidenceHash": "sha256:c1375f1fb07f24f37a637f080e24c2d30500fc40edfc989850224123ca2ed33f",
+      "acceptedByCustomer": true,
+      "ownerAcknowledged": true,
+      "entitlements": {
+        "seats": 5,
+        "apiCalls": 10000,
+        "computeHours": 0,
+        "storageGb": 100,
+        "dataFeeds": ["licensed-benchmark-feed"],
+        "supportTier": "standard"
+      }
+    }
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "id": "paper-cpu-fixture-pass",
+    "title": "Open fixture rerun for a tabular treatment-effect study",
+    "assistantOutput": "pre-submission reproducibility checker",
+    "dataset": {
+      "sizeGb": 1.2,
+      "downloadGb": 1.2,
+      "workingSetMultiplier": 1.8,
+      "syntheticFixtureAvailable": true,
+      "requiresGpuResidency": false
+    },
+    "compute": {
+      "cpuCores": 8,
+      "ramGb": 32,
+      "accelerator": "cpu",
+      "gpuCount": 0,
+      "gpuVramGb": 0,
+      "estimatedRuntimeHours": 1.5,
+      "reviewerBudgetHours": 4,
+      "paidCloudRequired": false,
+      "hpcQueueRequired": false
+    },
+    "environment": {
+      "containerDigest": "sha256:fixture-pass-container",
+      "lockfileDigest": "sha256:fixture-pass-lock"
+    },
+    "reproducibility": {
+      "seedPolicy": "fixed seed family with three rerun seeds",
+      "determinismControls": ["seed manifest", "variance tolerance report"],
+      "checkpointResumeEvidence": "not required for short CPU rerun"
+    },
+    "disclosure": {
+      "estimatedCostUsd": 0,
+      "carbonOrResourceNote": "CPU fixture rerun completes locally under two hours."
+    }
+  },
+  {
+    "id": "paper-gpu-overclaim-hold",
+    "title": "Large multimodal training rerun marked reproducible without resources",
+    "assistantOutput": "AI reviewer reproducibility endorsement",
+    "dataset": {
+      "sizeGb": 480,
+      "downloadGb": 620,
+      "workingSetMultiplier": 2.2,
+      "syntheticFixtureAvailable": false,
+      "requiresGpuResidency": true
+    },
+    "compute": {
+      "cpuCores": 16,
+      "ramGb": 64,
+      "accelerator": "cuda",
+      "gpuCount": 1,
+      "gpuVramGb": 24,
+      "estimatedRuntimeHours": 38,
+      "reviewerBudgetHours": 8,
+      "paidCloudRequired": true,
+      "hpcQueueRequired": false
+    },
+    "environment": {},
+    "reproducibility": {
+      "seedPolicy": "",
+      "determinismControls": [],
+      "checkpointResumeEvidence": ""
+    },
+    "disclosure": {
+      "estimatedCostUsd": 0,
+      "carbonOrResourceNote": ""
+    }
+  },
+  {
+    "id": "paper-hpc-revise",
+    "title": "Queued HPC simulation with enough hardware but weak disclosure",
+    "assistantOutput": "journal internal reviewer copilot",
+    "dataset": {
+      "sizeGb": 32,
+      "downloadGb": 40,
+      "workingSetMultiplier": 1.5,
+      "syntheticFixtureAvailable": true,
+      "requiresGpuResidency": false
+    },
+    "compute": {
+      "cpuCores": 48,
+      "ramGb": 256,
+      "accelerator": "cpu",
+      "gpuCount": 0,
+      "gpuVramGb": 0,
+      "estimatedRuntimeHours": 12,
+      "reviewerBudgetHours": 8,
+      "paidCloudRequired": false,
+      "hpcQueueRequired": true
+    },
+    "environment": {
+      "runtimeDigest": "sha256:hpc-module-stack"
+    },
+    "reproducibility": {
+      "seedPolicy": "fixed Monte Carlo seed manifest",
+      "determinismControls": ["seed manifest", "variance tolerance"],
+      "checkpointResumeEvidence": "checkpoint manifest for every 90 simulated minutes"
+    },
+    "disclosure": {
+      "estimatedCostUsd": 0,
+      "queuePolicy": "institutional queue, expected wait not stated",
+      "carbonOrResourceNote": ""
+    }
+  },
+  {
+    "id": "paper-vram-fixture-needed",
+    "title": "Single-cell embedding rerun with GPU memory shortfall",
+    "assistantOutput": "research-gap assistant reproducibility sidebar",
+    "dataset": {
+      "sizeGb": 78,
+      "downloadGb": 92,
+      "workingSetMultiplier": 1.4,
+      "syntheticFixtureAvailable": false,
+      "requiresGpuResidency": true
+    },
+    "compute": {
+      "cpuCores": 24,
+      "ramGb": 192,
+      "accelerator": "cuda",
+      "gpuCount": 1,
+      "gpuVramGb": 40,
+      "estimatedRuntimeHours": 7,
+      "reviewerBudgetHours": 6,
+      "paidCloudRequired": true,
+      "hpcQueueRequired": true
+    },
+    "environment": {
+      "containerDigest": "sha256:single-cell-container"
+    },
+    "reproducibility": {
+      "seedPolicy": "seeded embedding initialization",
+      "determinismControls": ["seed manifest", "cuda deterministic kernels"],
+      "checkpointResumeEvidence": ""
+    },
+    "disclosure": {
+      "estimatedCostUsd": 48,
+      "queuePolicy": "shared GPU queue",
+      "carbonOrResourceNote": ""
+    }
+  }
+]

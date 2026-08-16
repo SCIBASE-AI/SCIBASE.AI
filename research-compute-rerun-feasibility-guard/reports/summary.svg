@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#f8fafc"/>
+  <text x="52" y="56" class="title">Compute Rerun Feasibility Guard</text>
+  <text x="52" y="84" class="subtitle">AI assistant release gate for practical reproducibility claims</text>
+
+  <g transform="translate(52 112)">
+    <text x="0" y="0" class="id">paper-cpu-fixture-pass</text>
+    <rect x="0" y="16" width="510" height="18" rx="4" fill="#e5e7eb"/>
+    <rect x="0" y="16" width="509.99999999999994" height="18" rx="4" fill="#1f9d55"/>
+    <text x="530" y="30" class="score">100/100</text>
+    <text x="0" y="58" class="decision" fill="#1f9d55">RELEASE_ASSISTANT_OUTPUT</text>
+  </g>
+
+  <g transform="translate(52 198)">
+    <text x="0" y="0" class="id">paper-gpu-overclaim-hold</text>
+    <rect x="0" y="16" width="510" height="18" rx="4" fill="#e5e7eb"/>
+    <rect x="0" y="16" width="16" height="18" rx="4" fill="#c2410c"/>
+    <text x="530" y="30" class="score">0/100</text>
+    <text x="0" y="58" class="decision" fill="#c2410c">HOLD_ASSISTANT_OUTPUT</text>
+  </g>
+
+  <g transform="translate(52 284)">
+    <text x="0" y="0" class="id">paper-hpc-revise</text>
+    <rect x="0" y="16" width="510" height="18" rx="4" fill="#e5e7eb"/>
+    <rect x="0" y="16" width="204" height="18" rx="4" fill="#c27803"/>
+    <text x="530" y="30" class="score">40/100</text>
+    <text x="0" y="58" class="decision" fill="#c27803">REVISE_ASSISTANT_OUTPUT</text>
+  </g>
+
+  <g transform="translate(52 370)">
+    <text x="0" y="0" class="id">paper-vram-fixture-needed</text>
+    <rect x="0" y="16" width="510" height="18" rx="4" fill="#e5e7eb"/>
+    <rect x="0" y="16" width="16" height="18" rx="4" fill="#c2410c"/>
+    <text x="530" y="30" class="score">0/100</text>
+    <text x="0" y="58" class="decision" fill="#c2410c">HOLD_ASSISTANT_OUTPUT</text>
+  </g>
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #111827; }
+    .subtitle { font: 16px Arial, sans-serif; fill: #475569; }
+    .id { font: 700 16px Arial, sans-serif; fill: #111827; }
+    .score { font: 700 15px Arial, sans-serif; fill: #111827; }
+    .decision { font: 700 13px Arial, sans-serif; }
+  </style>
+</svg>

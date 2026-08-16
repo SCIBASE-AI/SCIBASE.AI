@@ -1,0 +1,224 @@
+{
+  "generatedAt": "2026-08-16T19:40:17.361Z",
+  "packetCount": 4,
+  "decisionCounts": {
+    "RELEASE_ASSISTANT_OUTPUT": 1,
+    "HOLD_ASSISTANT_OUTPUT": 2,
+    "REVISE_ASSISTANT_OUTPUT": 1
+  },
+  "results": [
+    {
+      "id": "paper-cpu-fixture-pass",
+      "title": "Open fixture rerun for a tabular treatment-effect study",
+      "decision": "RELEASE_ASSISTANT_OUTPUT",
+      "score": 100,
+      "summary": {
+        "packetId": "paper-cpu-fixture-pass",
+        "title": "Open fixture rerun for a tabular treatment-effect study",
+        "assistantOutput": "pre-submission reproducibility checker",
+        "estimatedWorkingSetGb": 2.16,
+        "ramGb": 32,
+        "totalGpuVramGb": 0,
+        "findingCount": 0,
+        "worstSeverity": "none"
+      },
+      "findings": [],
+      "releaseGate": {
+        "canReleaseAssistantOutput": true,
+        "reviewerMessage": "Compute evidence is sufficient for the assistant to present the rerun as reviewer-feasible."
+      }
+    },
+    {
+      "id": "paper-gpu-overclaim-hold",
+      "title": "Large multimodal training rerun marked reproducible without resources",
+      "decision": "HOLD_ASSISTANT_OUTPUT",
+      "score": 0,
+      "summary": {
+        "packetId": "paper-gpu-overclaim-hold",
+        "title": "Large multimodal training rerun marked reproducible without resources",
+        "assistantOutput": "AI reviewer reproducibility endorsement",
+        "estimatedWorkingSetGb": 1056,
+        "ramGb": 64,
+        "totalGpuVramGb": 24,
+        "findingCount": 10,
+        "worstSeverity": "critical"
+      },
+      "findings": [
+        {
+          "code": "CONTAINER_OR_LOCKFILE_MISSING",
+          "severity": "high",
+          "title": "Executable environment evidence is missing",
+          "evidence": "No container digest, lockfile digest, runtime digest, or notebook environment digest was provided.",
+          "remediation": "Attach a digest-pinned container, lockfile, runtime manifest, or archived notebook environment."
+        },
+        {
+          "code": "DATASET_MEMORY_EXCEEDS_NODE",
+          "severity": "critical",
+          "title": "Dataset working set exceeds stated system memory",
+          "evidence": "1056 GB estimated working set vs 64 GB RAM with 4 GB reserved headroom.",
+          "remediation": "Provide a smaller reviewer fixture, streaming pipeline proof, shard plan, or larger reproducible hardware profile."
+        },
+        {
+          "code": "GPU_VRAM_FEASIBILITY_GAP",
+          "severity": "high",
+          "title": "GPU-resident workload exceeds available VRAM",
+          "evidence": "1056 GB working set marked GPU-resident vs 24 GB total VRAM.",
+          "remediation": "Document gradient accumulation, checkpointing, offload, or a verified smaller fixture before release."
+        },
+        {
+          "code": "RUNTIME_BUDGET_UNREALISTIC",
+          "severity": "high",
+          "title": "Reviewer rerun time exceeds the stated review budget",
+          "evidence": "38 hour rerun estimate vs 8 hour reviewer budget.",
+          "remediation": "Split the rerun into smoke, fixture, and full modes or disclose that full reproduction requires extended resources."
+        },
+        {
+          "code": "CHECKPOINT_RESUME_MISSING",
+          "severity": "high",
+          "title": "Long rerun lacks checkpoint or resume evidence",
+          "evidence": "38 hour run has no checkpoint/resume evidence in the packet.",
+          "remediation": "Attach a checkpoint manifest, restart transcript, or resumable workflow proof."
+        },
+        {
+          "code": "NONDETERMINISTIC_ACCELERATOR_PATH",
+          "severity": "high",
+          "title": "Accelerator rerun lacks determinism controls",
+          "evidence": "cuda path is present without seed policy plus deterministic kernel/runtime controls.",
+          "remediation": "Document seed handling, deterministic kernel settings, tolerance windows, and accepted variance."
+        },
+        {
+          "code": "SEED_POLICY_MISSING",
+          "severity": "medium",
+          "title": "Seed or variance policy is missing",
+          "evidence": "The assistant packet has no seed policy and no deterministic control list.",
+          "remediation": "Add seed policy, variance acceptance bands, and a rerun transcript showing stable outputs."
+        },
+        {
+          "code": "DATA_ACCESS_BANDWIDTH_GAP",
+          "severity": "medium",
+          "title": "Large data transfer lacks a reviewer fixture",
+          "evidence": "620 GB download is required and no synthetic or reduced reviewer fixture is listed.",
+          "remediation": "Provide a small fixture, cached digest, or staged data-access plan with expected transfer time."
+        },
+        {
+          "code": "CLOUD_OR_HPC_COST_UNDISCLOSED",
+          "severity": "high",
+          "title": "Paid cloud or queued HPC requirement is not disclosed",
+          "evidence": "The packet requires paid cloud/HPC resources but does not disclose expected reviewer cost.",
+          "remediation": "State cost, queue assumptions, no-cost fixture alternative, and who bears the rerun cost."
+        },
+        {
+          "code": "RESOURCE_IMPACT_NOTE_MISSING",
+          "severity": "low",
+          "title": "Long compute rerun lacks resource-impact disclosure",
+          "evidence": "No carbon/resource note is attached for a long-running rerun.",
+          "remediation": "Add a short resource-impact note and reviewer-facing rerun alternatives."
+        }
+      ],
+      "releaseGate": {
+        "canReleaseAssistantOutput": false,
+        "reviewerMessage": "Hold or revise the assistant's reproducibility wording until compute feasibility evidence is repaired."
+      }
+    },
+    {
+      "id": "paper-hpc-revise",
+      "title": "Queued HPC simulation with enough hardware but weak disclosure",
+      "decision": "REVISE_ASSISTANT_OUTPUT",
+      "score": 40,
+      "summary": {
+        "packetId": "paper-hpc-revise",
+        "title": "Queued HPC simulation with enough hardware but weak disclosure",
+        "assistantOutput": "journal internal reviewer copilot",
+        "estimatedWorkingSetGb": 48,
+        "ramGb": 256,
+        "totalGpuVramGb": 0,
+        "findingCount": 3,
+        "worstSeverity": "high"
+      },
+      "findings": [
+        {
+          "code": "RUNTIME_BUDGET_UNREALISTIC",
+          "severity": "medium",
+          "title": "Reviewer rerun time exceeds the stated review budget",
+          "evidence": "12 hour rerun estimate vs 8 hour reviewer budget.",
+          "remediation": "Split the rerun into smoke, fixture, and full modes or disclose that full reproduction requires extended resources."
+        },
+        {
+          "code": "CLOUD_OR_HPC_COST_UNDISCLOSED",
+          "severity": "high",
+          "title": "Paid cloud or queued HPC requirement is not disclosed",
+          "evidence": "The packet requires paid cloud/HPC resources but does not disclose expected reviewer cost.",
+          "remediation": "State cost, queue assumptions, no-cost fixture alternative, and who bears the rerun cost."
+        },
+        {
+          "code": "RESOURCE_IMPACT_NOTE_MISSING",
+          "severity": "low",
+          "title": "Long compute rerun lacks resource-impact disclosure",
+          "evidence": "No carbon/resource note is attached for a long-running rerun.",
+          "remediation": "Add a short resource-impact note and reviewer-facing rerun alternatives."
+        }
+      ],
+      "releaseGate": {
+        "canReleaseAssistantOutput": false,
+        "reviewerMessage": "Hold or revise the assistant's reproducibility wording until compute feasibility evidence is repaired."
+      }
+    },
+    {
+      "id": "paper-vram-fixture-needed",
+      "title": "Single-cell embedding rerun with GPU memory shortfall",
+      "decision": "HOLD_ASSISTANT_OUTPUT",
+      "score": 0,
+      "summary": {
+        "packetId": "paper-vram-fixture-needed",
+        "title": "Single-cell embedding rerun with GPU memory shortfall",
+        "assistantOutput": "research-gap assistant reproducibility sidebar",
+        "estimatedWorkingSetGb": 109.2,
+        "ramGb": 192,
+        "totalGpuVramGb": 40,
+        "findingCount": 5,
+        "worstSeverity": "high"
+      },
+      "findings": [
+        {
+          "code": "GPU_VRAM_FEASIBILITY_GAP",
+          "severity": "high",
+          "title": "GPU-resident workload exceeds available VRAM",
+          "evidence": "109.2 GB working set marked GPU-resident vs 40 GB total VRAM.",
+          "remediation": "Document gradient accumulation, checkpointing, offload, or a verified smaller fixture before release."
+        },
+        {
+          "code": "RUNTIME_BUDGET_UNREALISTIC",
+          "severity": "medium",
+          "title": "Reviewer rerun time exceeds the stated review budget",
+          "evidence": "7 hour rerun estimate vs 6 hour reviewer budget.",
+          "remediation": "Split the rerun into smoke, fixture, and full modes or disclose that full reproduction requires extended resources."
+        },
+        {
+          "code": "CHECKPOINT_RESUME_MISSING",
+          "severity": "high",
+          "title": "Long rerun lacks checkpoint or resume evidence",
+          "evidence": "7 hour run has no checkpoint/resume evidence in the packet.",
+          "remediation": "Attach a checkpoint manifest, restart transcript, or resumable workflow proof."
+        },
+        {
+          "code": "NO_LOW_COST_REVIEWER_MODE",
+          "severity": "high",
+          "title": "Expensive rerun lacks a low-cost review mode",
+          "evidence": "$48.00 estimated cost without a synthetic fixture or low-cost mode.",
+          "remediation": "Add an inexpensive smoke test and fixture-mode result before the AI assistant marks it reproducible."
+        },
+        {
+          "code": "RESOURCE_IMPACT_NOTE_MISSING",
+          "severity": "low",
+          "title": "Long compute rerun lacks resource-impact disclosure",
+          "evidence": "No carbon/resource note is attached for a long-running rerun.",
+          "remediation": "Add a short resource-impact note and reviewer-facing rerun alternatives."
+        }
+      ],
+      "releaseGate": {
+        "canReleaseAssistantOutput": false,
+        "reviewerMessage": "Hold or revise the assistant's reproducibility wording until compute feasibility evidence is repaired."
+      }
+    }
+  ]
+}

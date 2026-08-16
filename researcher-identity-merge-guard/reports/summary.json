@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "totalPackets": 4,
+    "decisions": {
+      "APPROVE_MERGE": 1,
+      "REVIEW_MERGE": 1,
+      "HOLD_MERGE": 2
+    },
+    "findingCounts": {
+      "IDENTITY_EVIDENCE_MISSING": 1,
+      "ORCID_CONFLICT": 1,
+      "GITHUB_HANDLE_CONFLICT": 1,
+      "INSTITUTIONAL_EMAIL_UNVERIFIED": 2,
+      "CREDIT_SPIKE_AFTER_MERGE": 2,
+      "SOURCE_PROFILE_OBJECTION_OPEN": 2,
+      "PRIVATE_OR_BLIND_REVIEW_LEAK": 1,
+      "AFFILIATION_APPROVAL_MISSING": 2,
+      "DUPLICATE_PUBLICATION_COLLISION": 2,
+      "AUDIT_RECEIPT_MISSING": 1
+    }
+  },
+  "results": [
+    {
+      "packetId": "identity-approve-001",
+      "decision": "APPROVE_MERGE",
+      "verifiedProofTypes": [
+        "orcid",
+        "github",
+        "institutional_email"
+      ],
+      "projectedCreditDelta": 17,
+      "findings": [],
+      "reviewerActions": [
+        "Approve merge and preserve the audit receipt on both source profiles."
+      ]
+    },
+    {
+      "packetId": "identity-hold-002",
+      "decision": "HOLD_MERGE",
+      "verifiedProofTypes": [
+        "github"
+      ],
+      "projectedCreditDelta": 87,
+      "findings": [
+        {
+          "code": "IDENTITY_EVIDENCE_MISSING",
+          "severity": "high",
+          "message": "Fewer than two independent verified identity proofs are present.",
+          "evidence": {
+            "verifiedProofTypes": [
+              "github"
+            ],
+            "required": 2
+          }
+        },
+        {
+          "code": "ORCID_CONFLICT",
+          "severity": "critical",
+          "message": "Profile records claim conflicting ORCID identifiers.",
+          "evidence": {
+            "orcids": [
+              "0000-0003-2222-3333",
+              "0000-0003-9999-3333"
+            ]
+          }
+        },
+        {
+          "code": "GITHUB_HANDLE_CONFLICT",
+          "severity": "high",
+          "message": "GitHub handles conflict without a verified alias or account migration proof.",
+          "evidence": {
+            "githubHandles": [
+              "lab-anika",
+              "anika-results"
+            ]
+          }
+        },
+        {
+          "code": "INSTITUTIONAL_EMAIL_UNVERIFIED",
+          "severity": "medium",
+          "message": "Institutional email evidence is missing, unverified, or stale.",
+          "evidence": {
+            "maxAgeDays": 180
+          }
+        },
+        {
+          "code": "CREDIT_SPIKE_AFTER_MERGE",
+          "severity": "medium",
+          "message": "Projected reputation or credit delta exceeds the configured merge allowance.",
+          "evidence": {
+            "projectedDelta": 87,
+            "maxAllowedDelta": 30
+          }
+        },
+        {
+          "code": "SOURCE_PROFILE_OBJECTION_OPEN",
+          "severity": "high",
+          "message": "Source profile owner or collaborator objection window is not closed.",
+          "evidence": {
+            "objectionWindowStatus": "open"
+          }
+        },
+        {
+          "code": "PRIVATE_OR_BLIND_REVIEW_LEAK",
+          "severity": "critical",
+          "message": "The merge would expose anonymous, double-blind, or private review history.",
+          "evidence": {
+            "exposedReviewIds": [
+              "dbl-122"
+            ]
+          }
+        },
+        {
+          "code": "AFFILIATION_APPROVAL_MISSING",
+          "severity": "high",
+          "message": "A governed affiliation merge is missing steward approval.",
+          "evidence": {
+            "stewardApprovalStatus": "missing"
+          }
+        },
+        {
+          "code": "DUPLICATE_PUBLICATION_COLLISION",
+          "severity": "high",
+          "message": "The same artifact is claimed by both profiles with conflicting roles or credit.",
+          "evidence": {
+            "collisions": [
+              "doi:10.5555/conflict.2026"
+            ]
+          }
+        },
+        {
+          "code": "AUDIT_RECEIPT_MISSING",
+          "severity": "medium",
+          "message": "The merge packet lacks a durable audit receipt.",
+          "evidence": {
+            "packetId": "identity-hold-002"
+          }
+        }
+      ],
+      "reviewerActions": [
+        "Require verified identity proof before reputation or credit transfer.",
+        "Request a signed GitHub alias or account migration receipt.",
+        "Route the packet to the institutional steward for approval.",
+        "Freeze public credit deltas until artifact ownership is reconciled.",
+        "Wait for the objection period to close and attach responses.",
+        "Redact private review history before any profile consolidation.",
+        "Generate an immutable merge receipt before approval."
+      ]
+    },
+    {
+      "packetId": "identity-review-003",
+      "decision": "REVIEW_MERGE",
+      "verifiedProofTypes": [
+        "orcid",
+        "github",
+        "institutional_email"
+      ],
+      "projectedCreditDelta": 58,
+      "findings": [
+        {
+          "code": "INSTITUTIONAL_EMAIL_UNVERIFIED",
+          "severity": "medium",
+          "message": "Institutional email evidence is missing, unverified, or stale.",
+          "evidence": {
+            "maxAgeDays": 180
+          }
+        },
+        {
+          "code": "CREDIT_SPIKE_AFTER_MERGE",
+          "severity": "medium",
+          "message": "Projected reputation or credit delta exceeds the configured merge allowance.",
+          "evidence": {
+            "projectedDelta": 58,
+            "maxAllowedDelta": 45
+          }
+        }
+      ],
+      "reviewerActions": [
+        "Route the packet to the institutional steward for approval.",
+        "Freeze public credit deltas until artifact ownership is reconciled."
+      ]
+    },
+    {
+      "packetId": "identity-hold-004",
+      "decision": "HOLD_MERGE",
+      "verifiedProofTypes": [
+        "orcid",
+        "github",
+        "institutional_email"
+      ],
+      "projectedCreditDelta": 11,
+      "findings": [
+        {
+          "code": "SOURCE_PROFILE_OBJECTION_OPEN",
+          "severity": "high",
+          "message": "Source profile owner or collaborator objection window is not closed.",
+          "evidence": {
+            "objectionWindowStatus": "missing"
+          }
+        },
+        {
+          "code": "AFFILIATION_APPROVAL_MISSING",
+          "severity": "high",
+          "message": "A governed affiliation merge is missing steward approval.",
+          "evidence": {
+            "stewardApprovalStatus": "pending"
+          }
+        },
+        {
+          "code": "DUPLICATE_PUBLICATION_COLLISION",
+          "severity": "high",
+          "message": "The same artifact is claimed by both profiles with conflicting roles or credit.",
+          "evidence": {
+            "collisions": [
+              "doi:10.5555/shared-credit.2026"
+            ]
+          }
+        }
+      ],
+      "reviewerActions": [
+        "Wait for the objection period to close and attach responses.",
+        "Route the packet to the institutional steward for approval.",
+        "Freeze public credit deltas until artifact ownership is reconciled."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Researcher identity merge guard summary">
+  <rect width="960" height="540" fill="#fbfaf6"/>
+  <text x="70" y="78" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#111827">Researcher Identity Merge Guard</text>
+  <text x="70" y="121" font-family="Arial, sans-serif" font-size="19" fill="#374151">Blocks reputation and credit transfer until identity, consent, privacy, and audit evidence align.</text>
+  <rect x="70" y="170" width="185" height="54" rx="8" fill="#2f855a"/>
+  <rect x="70" y="248" width="185" height="54" rx="8" fill="#b7791f"/>
+  <rect x="70" y="326" width="370" height="54" rx="8" fill="#c53030"/>
+  <text x="70" y="158" font-family="Arial, sans-serif" font-size="18" fill="#111827">Approve merge: 1</text>
+  <text x="70" y="236" font-family="Arial, sans-serif" font-size="18" fill="#111827">Review merge: 1</text>
+  <text x="70" y="314" font-family="Arial, sans-serif" font-size="18" fill="#111827">Hold merge: 2</text>
+  <text x="70" y="448" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#111827">Synthetic packets only</text>
+  <text x="70" y="482" font-family="Arial, sans-serif" font-size="18" fill="#374151">No credentials, external APIs, desktop capture, or private researcher data.</text>
+</svg>

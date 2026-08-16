@@ -1,0 +1,262 @@
+{
+  "generatedAt": "2026-08-16T14:57:25.834Z",
+  "totalPlans": 4,
+  "counts": {
+    "RELEASE": 1,
+    "REVIEW_MERGE": 1,
+    "HOLD_MERGE": 2
+  },
+  "results": [
+    {
+      "id": "repo-release-001",
+      "title": "Clean climate notebook reproduction",
+      "decision": "RELEASE",
+      "pipeline": "notebooks/run_analysis.ipynb",
+      "findings": [],
+      "recommendedActions": [
+        "Allow repository execution, merge, and tagged release with normal provenance."
+      ]
+    },
+    {
+      "id": "repo-hold-002",
+      "title": "Model benchmark rerun with open egress and host secrets",
+      "decision": "HOLD_MERGE",
+      "pipeline": "notebooks/benchmark.ipynb",
+      "findings": [
+        {
+          "code": "CONTAINER_IMAGE_NOT_PINNED",
+          "severity": "major",
+          "message": "The execution container is not pinned by a content digest.",
+          "evidence": {
+            "image": "python:latest",
+            "digest": null
+          },
+          "remediation": "Pin the runner image with a sha256 digest before publishing or merging the reproducibility run."
+        },
+        {
+          "code": "EXECUTION_PROVENANCE_INCOMPLETE",
+          "severity": "major",
+          "message": "The command hash or dependency lockfile evidence is missing.",
+          "evidence": {
+            "commandHashPresent": false,
+            "lockfilePresent": false
+          },
+          "remediation": "Attach hashed commands and dependency lock evidence for the exact pipeline revision."
+        },
+        {
+          "code": "SANDBOX_NETWORK_EGRESS_OPEN",
+          "severity": "critical",
+          "message": "The reproducibility run allows open or wildcard network egress.",
+          "evidence": {
+            "mode": "open",
+            "allowedHosts": [
+              "*"
+            ]
+          },
+          "remediation": "Deny egress by default or replace it with a narrow host allowlist and cached inputs."
+        },
+        {
+          "code": "SECRET_ENVIRONMENT_EXPOSED",
+          "severity": "critical",
+          "message": "Secret-like environment variables are available to the repository execution sandbox.",
+          "evidence": {
+            "env": [
+              "AWS_SECRET_ACCESS_KEY",
+              "SCIBASE_API_TOKEN"
+            ]
+          },
+          "remediation": "Remove secrets from reproducibility runs and replace live credentials with synthetic or read-only fixtures."
+        },
+        {
+          "code": "SECRET_MOUNT_EXPOSED",
+          "severity": "critical",
+          "message": "Host secret paths are mounted into the repository execution sandbox.",
+          "evidence": {
+            "mounts": [
+              "/home/researcher/.ssh"
+            ]
+          },
+          "remediation": "Remove host secret mounts and use declared, non-sensitive repository fixtures."
+        },
+        {
+          "code": "PRIVILEGED_SANDBOX_RUNTIME",
+          "severity": "critical",
+          "message": "The sandbox uses privileged, root, host PID, or host IPC execution settings.",
+          "evidence": {
+            "privileged": true,
+            "user": "root",
+            "hostPid": true,
+            "hostIpc": false
+          },
+          "remediation": "Run the container as a non-root user without privileged mode or host namespace sharing."
+        },
+        {
+          "code": "UNSAFE_HOST_OR_WRITE_MOUNT",
+          "severity": "critical",
+          "message": "The sandbox has unsafe host mounts or writable paths outside declared artifact locations.",
+          "evidence": {
+            "mounts": [
+              {
+                "source": "/var/run/docker.sock",
+                "target": "/var/run/docker.sock",
+                "mode": "rw"
+              },
+              {
+                "source": "workspace",
+                "target": "/workspace",
+                "mode": "rw"
+              }
+            ]
+          },
+          "remediation": "Restrict mounts to read-only workspace inputs and writable results/artifacts directories."
+        },
+        {
+          "code": "RESOURCE_CAPS_MISSING",
+          "severity": "major",
+          "message": "The execution plan lacks one or more resource caps.",
+          "evidence": {
+            "missingCaps": [
+              "cpu",
+              "memoryMb",
+              "timeoutSeconds",
+              "artifactLimitMb"
+            ]
+          },
+          "remediation": "Set CPU, memory, timeout, and artifact-size caps before queueing the run."
+        },
+        {
+          "code": "OUTPUT_PATH_ESCAPES_WORKSPACE",
+          "severity": "critical",
+          "message": "One or more output paths escape declared results or artifacts directories.",
+          "evidence": {
+            "outputs": [
+              "../published/model.pkl",
+              "/tmp/raw-dump.csv"
+            ]
+          },
+          "remediation": "Write outputs only under repository-scoped results/ or artifacts/ paths."
+        },
+        {
+          "code": "REPOSITORY_RELEASE_NOT_FROZEN_FOR_SANDBOX_RISK",
+          "severity": "critical",
+          "message": "Repository merge or public release remains enabled while sandbox findings are unresolved.",
+          "evidence": {
+            "publicReleaseEnabled": true,
+            "protectedBranchMerge": true,
+            "freezeRelease": false
+          },
+          "remediation": "Freeze protected-branch merge, DOI tagging, and public reproducibility badges until sandbox findings are cleared."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze protected-branch merge, DOI tagging, and public reproducibility badges.",
+        "Attach sandbox findings to the repository review packet.",
+        "Re-run the exact reproducibility pipeline after remediation.",
+        "Preserve reviewer evidence with the tagged release record."
+      ]
+    },
+    {
+      "id": "repo-review-003",
+      "title": "Materials simulation with approved package mirror",
+      "decision": "REVIEW_MERGE",
+      "pipeline": "code/run_simulation.py",
+      "findings": [
+        {
+          "code": "EXECUTION_PROVENANCE_INCOMPLETE",
+          "severity": "major",
+          "message": "The command hash or dependency lockfile evidence is missing.",
+          "evidence": {
+            "commandHashPresent": true,
+            "lockfilePresent": false
+          },
+          "remediation": "Attach hashed commands and dependency lock evidence for the exact pipeline revision."
+        },
+        {
+          "code": "SANDBOX_NETWORK_ALLOWLIST_REVIEW",
+          "severity": "major",
+          "message": "The reproducibility run uses limited network egress and needs reviewer approval before merge.",
+          "evidence": {
+            "mode": "allowlist",
+            "allowedHosts": [
+              "packages.scibase.example"
+            ]
+          },
+          "remediation": "Confirm every allowed host is required for deterministic package retrieval, then mirror or pin where possible."
+        }
+      ],
+      "recommendedActions": [
+        "Attach sandbox findings to the repository review packet.",
+        "Re-run the exact reproducibility pipeline after remediation.",
+        "Preserve reviewer evidence with the tagged release record."
+      ]
+    },
+    {
+      "id": "repo-hold-004",
+      "title": "Private dataset release with writable home mount",
+      "decision": "HOLD_MERGE",
+      "pipeline": "code/reproduce.sh",
+      "findings": [
+        {
+          "code": "SECRET_ENVIRONMENT_EXPOSED",
+          "severity": "critical",
+          "message": "Secret-like environment variables are available to the repository execution sandbox.",
+          "evidence": {
+            "env": [
+              "DATABASE_URL"
+            ]
+          },
+          "remediation": "Remove secrets from reproducibility runs and replace live credentials with synthetic or read-only fixtures."
+        },
+        {
+          "code": "PRIVILEGED_SANDBOX_RUNTIME",
+          "severity": "critical",
+          "message": "The sandbox uses privileged, root, host PID, or host IPC execution settings.",
+          "evidence": {
+            "privileged": false,
+            "user": "root",
+            "hostPid": false,
+            "hostIpc": true
+          },
+          "remediation": "Run the container as a non-root user without privileged mode or host namespace sharing."
+        },
+        {
+          "code": "UNSAFE_HOST_OR_WRITE_MOUNT",
+          "severity": "critical",
+          "message": "The sandbox has unsafe host mounts or writable paths outside declared artifact locations.",
+          "evidence": {
+            "mounts": [
+              {
+                "source": "/home/researcher",
+                "target": "/host-home",
+                "mode": "rw"
+              },
+              {
+                "source": "workspace",
+                "target": "/workspace",
+                "mode": "rw"
+              }
+            ]
+          },
+          "remediation": "Restrict mounts to read-only workspace inputs and writable results/artifacts directories."
+        },
+        {
+          "code": "REPOSITORY_RELEASE_NOT_FROZEN_FOR_SANDBOX_RISK",
+          "severity": "critical",
+          "message": "Repository merge or public release remains enabled while sandbox findings are unresolved.",
+          "evidence": {
+            "publicReleaseEnabled": false,
+            "protectedBranchMerge": true,
+            "freezeRelease": false
+          },
+          "remediation": "Freeze protected-branch merge, DOI tagging, and public reproducibility badges until sandbox findings are cleared."
+        }
+      ],
+      "recommendedActions": [
+        "Freeze protected-branch merge, DOI tagging, and public reproducibility badges.",
+        "Attach sandbox findings to the repository review packet.",
+        "Re-run the exact reproducibility pipeline after remediation.",
+        "Preserve reviewer evidence with the tagged release record."
+      ]
+    }
+  ]
+}

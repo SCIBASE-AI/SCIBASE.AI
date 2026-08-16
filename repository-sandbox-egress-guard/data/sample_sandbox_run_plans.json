@@ -1,0 +1,178 @@
+[
+  {
+    "id": "repo-release-001",
+    "title": "Clean climate notebook reproduction",
+    "repository": {
+      "publicReleaseEnabled": true,
+      "protectedBranchMerge": true,
+      "doiTag": "v1.2.0"
+    },
+    "execution": {
+      "pipeline": "notebooks/run_analysis.ipynb",
+      "commandHashPresent": true,
+      "lockfilePresent": true,
+      "runtime": "node18-python311"
+    },
+    "container": {
+      "image": "ghcr.io/scibase/repro-runner",
+      "digest": "sha256:7b8a8f2f9d8a73c7aa11188e9b3188bde11e2f3b21fcf5a8b70c1f949820ed13",
+      "privileged": false,
+      "user": "1000:1000",
+      "hostPid": false,
+      "hostIpc": false,
+      "mounts": [
+        { "source": "workspace", "target": "/workspace", "mode": "ro" },
+        { "source": "results", "target": "/workspace/results", "mode": "rw" }
+      ]
+    },
+    "network": {
+      "mode": "deny",
+      "allowedHosts": []
+    },
+    "secrets": {
+      "env": [],
+      "mounts": []
+    },
+    "resources": {
+      "cpu": "2",
+      "memoryMb": 4096,
+      "timeoutSeconds": 900,
+      "artifactLimitMb": 250
+    },
+    "outputs": {
+      "paths": ["results/figures/summary.png", "results/tables/model_metrics.csv"]
+    }
+  },
+  {
+    "id": "repo-hold-002",
+    "title": "Model benchmark rerun with open egress and host secrets",
+    "repository": {
+      "publicReleaseEnabled": true,
+      "protectedBranchMerge": true,
+      "doiTag": "preprint-v3"
+    },
+    "execution": {
+      "pipeline": "notebooks/benchmark.ipynb",
+      "commandHashPresent": false,
+      "lockfilePresent": false,
+      "runtime": "python311"
+    },
+    "container": {
+      "image": "python:latest",
+      "digest": "",
+      "privileged": true,
+      "user": "root",
+      "hostPid": true,
+      "hostIpc": false,
+      "mounts": [
+        { "source": "/var/run/docker.sock", "target": "/var/run/docker.sock", "mode": "rw" },
+        { "source": "workspace", "target": "/workspace", "mode": "rw" }
+      ]
+    },
+    "network": {
+      "mode": "open",
+      "allowedHosts": ["*"]
+    },
+    "secrets": {
+      "env": ["AWS_SECRET_ACCESS_KEY", "SCIBASE_API_TOKEN"],
+      "mounts": ["/home/researcher/.ssh"]
+    },
+    "resources": {
+      "cpu": "",
+      "memoryMb": 0,
+      "timeoutSeconds": 0,
+      "artifactLimitMb": 0
+    },
+    "outputs": {
+      "paths": ["../published/model.pkl", "/tmp/raw-dump.csv"]
+    }
+  },
+  {
+    "id": "repo-review-003",
+    "title": "Materials simulation with approved package mirror",
+    "repository": {
+      "publicReleaseEnabled": false,
+      "protectedBranchMerge": false,
+      "doiTag": ""
+    },
+    "execution": {
+      "pipeline": "code/run_simulation.py",
+      "commandHashPresent": true,
+      "lockfilePresent": false,
+      "runtime": "python311"
+    },
+    "container": {
+      "image": "ghcr.io/scibase/materials-runner",
+      "digest": "sha256:2d9f0d60c20afaf0a724f911ba894c30df83f061f1da7c8119f79a26b985bf91",
+      "privileged": false,
+      "user": "1000:1000",
+      "hostPid": false,
+      "hostIpc": false,
+      "mounts": [
+        { "source": "workspace", "target": "/workspace", "mode": "ro" },
+        { "source": "results", "target": "/workspace/results", "mode": "rw" }
+      ]
+    },
+    "network": {
+      "mode": "allowlist",
+      "allowedHosts": ["packages.scibase.example"]
+    },
+    "secrets": {
+      "env": [],
+      "mounts": []
+    },
+    "resources": {
+      "cpu": "4",
+      "memoryMb": 8192,
+      "timeoutSeconds": 1800,
+      "artifactLimitMb": 500
+    },
+    "outputs": {
+      "paths": ["results/simulation/report.json"]
+    }
+  },
+  {
+    "id": "repo-hold-004",
+    "title": "Private dataset release with writable home mount",
+    "repository": {
+      "publicReleaseEnabled": false,
+      "protectedBranchMerge": true,
+      "doiTag": ""
+    },
+    "execution": {
+      "pipeline": "code/reproduce.sh",
+      "commandHashPresent": true,
+      "lockfilePresent": true,
+      "runtime": "conda"
+    },
+    "container": {
+      "image": "ghcr.io/scibase/conda-runner",
+      "digest": "sha256:a14d0ea51f321418f1b7b4957677f0baaa18b6eab0e41a75032c5f0ee9913e58",
+      "privileged": false,
+      "user": "root",
+      "hostPid": false,
+      "hostIpc": true,
+      "mounts": [
+        { "source": "/home/researcher", "target": "/host-home", "mode": "rw" },
+        { "source": "workspace", "target": "/workspace", "mode": "rw" }
+      ]
+    },
+    "network": {
+      "mode": "deny",
+      "allowedHosts": []
+    },
+    "secrets": {
+      "env": ["DATABASE_URL"],
+      "mounts": []
+    },
+    "resources": {
+      "cpu": "2",
+      "memoryMb": 4096,
+      "timeoutSeconds": 1200,
+      "artifactLimitMb": 200
+    },
+    "outputs": {
+      "paths": ["results/private-summary.csv"]
+    }
+  }
+]

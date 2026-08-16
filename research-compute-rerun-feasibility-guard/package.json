@@ -1,0 +1,21 @@
+{
+  "name": "research-compute-rerun-feasibility-guard",
+  "version": "1.0.0",
+  "description": "Local guard that checks whether AI research assistant reproducibility claims are compute-feasible before reviewer release.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "check": "node --check src/index.js && node --check scripts/demo.js && node --check scripts/render-demo-video.js && node --check test/compute-rerun-feasibility.test.js",
+    "test": "node --test",
+    "demo": "node scripts/demo.js",
+    "video": "node scripts/render-demo-video.js"
+  },
+  "keywords": [
+    "research-assistant",
+    "reproducibility",
+    "compute-feasibility",
+    "peer-review",
+    "scibase"
+  ],
+  "license": "MIT"
+}

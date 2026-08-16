@@ -1,0 +1,287 @@
+{
+  "generatedAt": "2026-08-16T15:02:48.939Z",
+  "totalPackets": 4,
+  "counts": {
+    "RELEASE_REVENUE": 1,
+    "REVIEW_REVENUE": 1,
+    "HOLD_REVENUE": 2
+  },
+  "results": [
+    {
+      "id": "revenue-release-001",
+      "title": "Institutional license delivered cleanly",
+      "accountId": "inst-north-001",
+      "decision": "RELEASE_REVENUE",
+      "expected": {
+        "seats": 40,
+        "apiCalls": 100000,
+        "computeHours": 400,
+        "storageGb": 2000,
+        "dataFeeds": [
+          "analytics-digest"
+        ],
+        "supportTier": "enterprise"
+      },
+      "actual": {
+        "seats": 40,
+        "apiCalls": 100000,
+        "computeHours": 400,
+        "storageGb": 2000,
+        "dataFeeds": [
+          "analytics-digest"
+        ],
+        "supportTier": "enterprise"
+      },
+      "findings": [],
+      "recommendedActions": [
+        "Allow billing, renewal, expansion, and revenue-recognition workflows to proceed with the attached delivery evidence."
+      ]
+    },
+    {
+      "id": "revenue-hold-002",
+      "title": "Active billing before customer access is delivered",
+      "accountId": "lab-east-002",
+      "decision": "HOLD_REVENUE",
+      "expected": {
+        "seats": 25,
+        "apiCalls": 50000,
+        "computeHours": 250,
+        "storageGb": 1000,
+        "dataFeeds": [
+          "usage-metadata"
+        ],
+        "supportTier": "professional"
+      },
+      "actual": {
+        "seats": 12,
+        "apiCalls": 0,
+        "computeHours": 100,
+        "storageGb": 1000,
+        "dataFeeds": [],
+        "supportTier": "standard"
+      },
+      "findings": [
+        {
+          "code": "DELIVERY_EVIDENCE_HASH_MISSING",
+          "severity": "major",
+          "message": "The entitlement delivery packet lacks a stable evidence hash.",
+          "evidence": {
+            "evidenceHash": null
+          },
+          "remediation": "Attach a sha256 evidence hash for the provisioning export, acceptance record, or delivery audit packet."
+        },
+        {
+          "code": "CUSTOMER_ACCEPTANCE_MISSING",
+          "severity": "major",
+          "message": "The customer has not accepted or acknowledged entitlement delivery.",
+          "evidence": {
+            "acceptedByCustomer": false
+          },
+          "remediation": "Capture customer or authorized account-owner acceptance before marking delivery complete."
+        },
+        {
+          "code": "ACCOUNT_OWNER_ACK_MISSING",
+          "severity": "major",
+          "message": "The internal account owner has not acknowledged the provisioned entitlements.",
+          "evidence": {
+            "ownerAcknowledged": false
+          },
+          "remediation": "Require account-owner acknowledgement before renewal, expansion, or recognition workflows proceed."
+        },
+        {
+          "code": "ENTITLEMENT_UNDER_DELIVERED",
+          "severity": "critical",
+          "message": "One or more purchased entitlements are under-provisioned.",
+          "evidence": {
+            "deltas": [
+              {
+                "field": "seats",
+                "direction": "under",
+                "expected": 25,
+                "actual": 12,
+                "delta": 13
+              },
+              {
+                "field": "apiCalls",
+                "direction": "under",
+                "expected": 50000,
+                "actual": 0,
+                "delta": 50000
+              },
+              {
+                "field": "computeHours",
+                "direction": "under",
+                "expected": 250,
+                "actual": 100,
+                "delta": 150
+              }
+            ]
+          },
+          "remediation": "Provision the purchased seats, quotas, storage, and compute before billing or revenue recognition proceeds."
+        },
+        {
+          "code": "LICENSED_FEED_NOT_ENABLED",
+          "severity": "critical",
+          "message": "A purchased analytics or data feed is not enabled for the customer.",
+          "evidence": {
+            "missingFeeds": [
+              "usage-metadata"
+            ]
+          },
+          "remediation": "Enable the purchased feed or hold revenue workflows until delivery is complete."
+        },
+        {
+          "code": "SUPPORT_TIER_UNDER_DELIVERED",
+          "severity": "critical",
+          "message": "The provisioned support tier is below the signed contract tier.",
+          "evidence": {
+            "expected": "professional",
+            "actual": "standard"
+          },
+          "remediation": "Upgrade the support entitlement or hold billing and recognition until support delivery matches the contract."
+        },
+        {
+          "code": "REVENUE_RECOGNITION_NOT_HELD_FOR_DELIVERY_RISK",
+          "severity": "critical",
+          "message": "Revenue recognition remains ready while entitlement-delivery findings are unresolved.",
+          "evidence": {
+            "revenueRecognitionReady": true,
+            "revenueHold": false
+          },
+          "remediation": "Set a revenue hold until delivery evidence, quota parity, support tier, and term checks pass."
+        }
+      ],
+      "recommendedActions": [
+        "Place revenue recognition and renewal automation on hold.",
+        "Attach entitlement findings to the revenue operations review packet.",
+        "Reconcile contract lines against provisioned seats, quotas, feeds, and support tier.",
+        "Regenerate delivery evidence after provisioning or commercial amendments are complete."
+      ]
+    },
+    {
+      "id": "revenue-review-003",
+      "title": "Expansion account over-provisioned before true-up",
+      "accountId": "r-and-d-west-003",
+      "decision": "REVIEW_REVENUE",
+      "expected": {
+        "seats": 10,
+        "apiCalls": 250000,
+        "computeHours": 0,
+        "storageGb": 200,
+        "dataFeeds": [
+          "analytics-digest"
+        ],
+        "supportTier": "professional"
+      },
+      "actual": {
+        "seats": 15,
+        "apiCalls": 300000,
+        "computeHours": 0,
+        "storageGb": 200,
+        "dataFeeds": [
+          "analytics-digest",
+          "licensed-benchmark-feed"
+        ],
+        "supportTier": "professional"
+      },
+      "findings": [
+        {
+          "code": "ENTITLEMENT_OVER_PROVISIONED",
+          "severity": "major",
+          "message": "One or more entitlements exceed the signed contract and need true-up or correction.",
+          "evidence": {
+            "deltas": [
+              {
+                "field": "seats",
+                "direction": "over",
+                "expected": 10,
+                "actual": 15,
+                "delta": 5
+              },
+              {
+                "field": "apiCalls",
+                "direction": "over",
+                "expected": 250000,
+                "actual": 300000,
+                "delta": 50000
+              }
+            ]
+          },
+          "remediation": "Either amend the contract with a true-up order or reduce the provisioned entitlement to the purchased limit."
+        },
+        {
+          "code": "UNPURCHASED_FEED_ENABLED",
+          "severity": "major",
+          "message": "An analytics or data feed is enabled without a matching contract line.",
+          "evidence": {
+            "extraFeeds": [
+              "licensed-benchmark-feed"
+            ]
+          },
+          "remediation": "Disable the unpurchased feed or attach a signed amendment before renewal or usage reporting."
+        }
+      ],
+      "recommendedActions": [
+        "Attach entitlement findings to the revenue operations review packet.",
+        "Reconcile contract lines against provisioned seats, quotas, feeds, and support tier.",
+        "Regenerate delivery evidence after provisioning or commercial amendments are complete."
+      ]
+    },
+    {
+      "id": "revenue-hold-004",
+      "title": "Expired data license still marked revenue-ready",
+      "accountId": "consortium-south-004",
+      "decision": "HOLD_REVENUE",
+      "expected": {
+        "seats": 5,
+        "apiCalls": 10000,
+        "computeHours": 0,
+        "storageGb": 100,
+        "dataFeeds": [
+          "licensed-benchmark-feed"
+        ],
+        "supportTier": "standard"
+      },
+      "actual": {
+        "seats": 5,
+        "apiCalls": 10000,
+        "computeHours": 0,
+        "storageGb": 100,
+        "dataFeeds": [
+          "licensed-benchmark-feed"
+        ],
+        "supportTier": "standard"
+      },
+      "findings": [
+        {
+          "code": "DELIVERY_DATE_OUTSIDE_CONTRACT_TERM",
+          "severity": "critical",
+          "message": "The delivery date is missing or outside the active contract term.",
+          "evidence": {
+            "termStart": "2025-06-01",
+            "termEnd": "2026-05-31",
+            "deliveryDate": "2026-08-15",
+            "status": "after_term"
+          },
+          "remediation": "Align delivery with the active contract term or execute a renewal/amendment before revenue workflows proceed."
+        },
+        {
+          "code": "REVENUE_RECOGNITION_NOT_HELD_FOR_DELIVERY_RISK",
+          "severity": "critical",
+          "message": "Revenue recognition remains ready while entitlement-delivery findings are unresolved.",
+          "evidence": {
+            "revenueRecognitionReady": true,
+            "revenueHold": false
+          },
+          "remediation": "Set a revenue hold until delivery evidence, quota parity, support tier, and term checks pass."
+        }
+      ],
+      "recommendedActions": [
+        "Place revenue recognition and renewal automation on hold.",
+        "Attach entitlement findings to the revenue operations review packet.",
+        "Reconcile contract lines against provisioned seats, quotas, feeds, and support tier.",
+        "Regenerate delivery evidence after provisioning or commercial amendments are complete."
+      ]
+    }
+  ]
+}

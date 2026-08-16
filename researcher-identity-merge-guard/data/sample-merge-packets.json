@@ -1,0 +1,198 @@
+[
+  {
+    "packetId": "identity-approve-001",
+    "policy": {
+      "minimumVerifiedProofTypes": 2,
+      "maxInstitutionalEmailAgeDays": 180
+    },
+    "primaryProfile": {
+      "profileId": "sci-user-1029",
+      "orcid": "0000-0002-1111-2222",
+      "github": "dr-rivera"
+    },
+    "sourceProfiles": [
+      {
+        "profileId": "legacy-user-44",
+        "orcid": "0000-0002-1111-2222",
+        "github": "dr-rivera"
+      }
+    ],
+    "identityProofs": [
+      {
+        "type": "orcid",
+        "status": "verified"
+      },
+      {
+        "type": "github",
+        "status": "verified"
+      },
+      {
+        "type": "institutional_email",
+        "status": "verified",
+        "freshnessDays": 34
+      }
+    ],
+    "objectionWindowStatus": "closed",
+    "requiresStewardApproval": true,
+    "stewardApprovalStatus": "approved",
+    "auditReceiptId": "merge-receipt-2026-08-16-001",
+    "reputationPreview": {
+      "before": 184,
+      "after": 201,
+      "maxAllowedDelta": 25
+    },
+    "privateReviewLinks": [
+      {
+        "reviewId": "dbl-948",
+        "mergeVisibility": "redact"
+      }
+    ],
+    "publicationCollisions": []
+  },
+  {
+    "packetId": "identity-hold-002",
+    "policy": {
+      "minimumVerifiedProofTypes": 2,
+      "maxInstitutionalEmailAgeDays": 180
+    },
+    "primaryProfile": {
+      "profileId": "sci-user-8821",
+      "orcid": "0000-0003-2222-3333",
+      "github": "lab-anika"
+    },
+    "sourceProfiles": [
+      {
+        "profileId": "legacy-user-17",
+        "orcid": "0000-0003-9999-3333",
+        "github": "anika-results"
+      }
+    ],
+    "identityProofs": [
+      {
+        "type": "github",
+        "status": "verified"
+      },
+      {
+        "type": "institutional_email",
+        "status": "stale",
+        "freshnessDays": 412
+      }
+    ],
+    "objectionWindowStatus": "open",
+    "requiresStewardApproval": true,
+    "stewardApprovalStatus": "missing",
+    "auditReceiptId": "",
+    "reputationPreview": {
+      "before": 91,
+      "after": 178,
+      "maxAllowedDelta": 30
+    },
+    "privateReviewLinks": [
+      {
+        "reviewId": "dbl-122",
+        "mergeVisibility": "expose"
+      }
+    ],
+    "publicationCollisions": [
+      {
+        "artifactId": "doi:10.5555/conflict.2026",
+        "status": "unresolved"
+      }
+    ]
+  },
+  {
+    "packetId": "identity-review-003",
+    "policy": {
+      "minimumVerifiedProofTypes": 2,
+      "maxInstitutionalEmailAgeDays": 180
+    },
+    "primaryProfile": {
+      "profileId": "sci-user-3104",
+      "orcid": "0000-0001-4444-5555",
+      "github": "m-chen"
+    },
+    "sourceProfiles": [
+      {
+        "profileId": "legacy-user-90",
+        "orcid": "0000-0001-4444-5555",
+        "github": "m-chen"
+      }
+    ],
+    "identityProofs": [
+      {
+        "type": "orcid",
+        "status": "verified"
+      },
+      {
+        "type": "github",
+        "status": "verified"
+      },
+      {
+        "type": "institutional_email",
+        "status": "verified",
+        "freshnessDays": 219
+      }
+    ],
+    "objectionWindowStatus": "closed",
+    "requiresStewardApproval": false,
+    "stewardApprovalStatus": "not_required",
+    "auditReceiptId": "merge-receipt-2026-08-16-003",
+    "reputationPreview": {
+      "before": 132,
+      "after": 190,
+      "maxAllowedDelta": 45
+    },
+    "privateReviewLinks": [],
+    "publicationCollisions": []
+  },
+  {
+    "packetId": "identity-hold-004",
+    "policy": {
+      "minimumVerifiedProofTypes": 2,
+      "maxInstitutionalEmailAgeDays": 180
+    },
+    "primaryProfile": {
+      "profileId": "sci-user-6407",
+      "orcid": "0000-0002-7777-8888",
+      "github": "kpatel-open"
+    },
+    "sourceProfiles": [
+      {
+        "profileId": "legacy-user-128",
+        "orcid": "0000-0002-7777-8888",
+        "github": "kpatel-open"
+      }
+    ],
+    "identityProofs": [
+      {
+        "type": "orcid",
+        "status": "verified"
+      },
+      {
+        "type": "github",
+        "status": "verified"
+      },
+      {
+        "type": "institutional_email",
+        "status": "verified",
+        "freshnessDays": 88
+      }
+    ],
+    "objectionWindowStatus": "missing",
+    "requiresStewardApproval": true,
+    "stewardApprovalStatus": "pending",
+    "auditReceiptId": "merge-receipt-2026-08-16-004",
+    "reputationPreview": {
+      "before": 220,
+      "after": 231,
+      "maxAllowedDelta": 35
+    },
+    "privateReviewLinks": [],
+    "publicationCollisions": [
+      {
+        "artifactId": "doi:10.5555/shared-credit.2026",
+        "status": "unresolved"
+      }
+    ]
+  }
+]

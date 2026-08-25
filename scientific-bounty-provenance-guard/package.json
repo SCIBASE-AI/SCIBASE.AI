@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test test/*.test.js",
-    "demo": "node scripts/demo.js"
+    "demo": "node scripts/demo.js",
+    "start": "node scripts/serve.js"
   }
 }

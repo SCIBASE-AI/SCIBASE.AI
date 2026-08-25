@@ -6,4 +6,4 @@ const packet = JSON.parse(
 );
 const result = evaluateSubmissionProvenance(packet);
 
-console.log(renderReviewerReport(result));
+process.stdout.write(renderReviewerReport(result));

@@ -4,10 +4,13 @@
   "description": "Deterministic survey psychometric validity assistant for SCIBASE issue #16.",
   "type": "module",
   "scripts": {
-    "check": "node --check src/guard.js && node --check src/samplePackets.js && node --check test.js && node --check demo.js && node --check make-demo-video.js",
+    "check": "node --check src/guard.js && node --check src/release.js && node --check src/samplePackets.js && node --check cli.js && node --check test.js && node --check demo.js && node --check make-demo-video.js",
     "test": "node test.js",
     "demo": "node demo.js",
     "demo:video": "node make-demo-video.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  }
 }

@@ -14,15 +14,15 @@ Findings: 17
 - [medium] weak_primary_loading: wa_2 has primary loading 0.39, below 0.5.
 - [medium] weak_primary_loading: wa_3 has primary loading 0.44, below 0.5.
 - [medium] weak_primary_loading: wa_4 has primary loading 0.31, below 0.5.
-- [high] factor_cross_loading: wa_1 has secondary loading 0.41, above 0.32.
-- [high] factor_cross_loading: wa_3 has secondary loading 0.37, above 0.32.
-- [high] missing_internal_consistency: Productivity Perception Index does not report Cronbach alpha or equivalent reliability evidence.
+- [high] factor_cross_loading: wa_1 has secondary loading 0.41, with magnitude at or above 0.32.
+- [high] factor_cross_loading: wa_3 has secondary loading 0.37, with magnitude at or above 0.32.
+- [high] missing_internal_consistency: Productivity Perception Index does not report Cronbach alpha; alternative reliability coefficients are not evaluated by this module.
 - [medium] weak_primary_loading: ppi_1 has primary loading 0.47, below 0.5.
 - [medium] weak_primary_loading: ppi_2 has primary loading 0.36, below 0.5.
-- [high] factor_cross_loading: ppi_2 has secondary loading 0.34, above 0.32.
-- [high] construct_claim_mismatch: Manuscript claims anxiety, but no submitted scale validates that construct directly.
-- [high] construct_claim_mismatch: Manuscript claims productivity, but no submitted scale validates that construct directly.
-- [high] construct_claim_mismatch: Manuscript claims clinical burnout, but no submitted scale validates that construct directly.
+- [high] factor_cross_loading: ppi_2 has secondary loading 0.34, with magnitude at or above 0.32.
+- [high] construct_claim_mismatch: Manuscript claims anxiety, but no submitted scale has a matching construct label (this is not a validation assessment).
+- [high] construct_claim_mismatch: Manuscript claims productivity, but no submitted scale has a matching construct label (this is not a validation assessment).
+- [high] construct_claim_mismatch: Manuscript claims clinical burnout, but no submitted scale has a matching construct label (this is not a validation assessment).
 
 ## Release gate
 - Can release AI review: false

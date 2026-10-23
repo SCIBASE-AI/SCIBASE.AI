@@ -88,7 +88,7 @@
     {
       "severity": "high",
       "code": "factor_cross_loading",
-      "message": "wa_1 has secondary loading 0.41, above 0.32.",
+      "message": "wa_1 has secondary loading 0.41, with magnitude at or above 0.32.",
       "evidence": {
         "scale": "Workload Anxiety Draft Scale",
         "itemId": "wa_1",
@@ -98,7 +98,7 @@
     {
       "severity": "high",
       "code": "factor_cross_loading",
-      "message": "wa_3 has secondary loading 0.37, above 0.32.",
+      "message": "wa_3 has secondary loading 0.37, with magnitude at or above 0.32.",
       "evidence": {
         "scale": "Workload Anxiety Draft Scale",
         "itemId": "wa_3",
@@ -108,7 +108,7 @@
     {
       "severity": "high",
       "code": "missing_internal_consistency",
-      "message": "Productivity Perception Index does not report Cronbach alpha or equivalent reliability evidence.",
+      "message": "Productivity Perception Index does not report Cronbach alpha; alternative reliability coefficients are not evaluated by this module.",
       "evidence": {
         "scale": "Productivity Perception Index"
       }
@@ -136,7 +136,7 @@
     {
       "severity": "high",
       "code": "factor_cross_loading",
-      "message": "ppi_2 has secondary loading 0.34, above 0.32.",
+      "message": "ppi_2 has secondary loading 0.34, with magnitude at or above 0.32.",
       "evidence": {
         "scale": "Productivity Perception Index",
         "itemId": "ppi_2",
@@ -146,7 +146,7 @@
     {
       "severity": "high",
       "code": "construct_claim_mismatch",
-      "message": "Manuscript claims anxiety, but no submitted scale validates that construct directly.",
+      "message": "Manuscript claims anxiety, but no submitted scale has a matching construct label (this is not a validation assessment).",
       "evidence": {
         "claim": "anxiety",
         "availableConstructs": [
@@ -158,7 +158,7 @@
     {
       "severity": "high",
       "code": "construct_claim_mismatch",
-      "message": "Manuscript claims productivity, but no submitted scale validates that construct directly.",
+      "message": "Manuscript claims productivity, but no submitted scale has a matching construct label (this is not a validation assessment).",
       "evidence": {
         "claim": "productivity",
         "availableConstructs": [
@@ -170,7 +170,7 @@
     {
       "severity": "high",
       "code": "construct_claim_mismatch",
-      "message": "Manuscript claims clinical burnout, but no submitted scale validates that construct directly.",
+      "message": "Manuscript claims clinical burnout, but no submitted scale has a matching construct label (this is not a validation assessment).",
       "evidence": {
         "claim": "clinical burnout",
         "availableConstructs": [

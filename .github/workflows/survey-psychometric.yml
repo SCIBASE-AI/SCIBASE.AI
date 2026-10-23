@@ -1,0 +1,21 @@
+name: Survey psychometric guard
+on:
+  push:
+    paths: ['survey-psychometric-validity-assistant/**', '.github/workflows/survey-psychometric.yml']
+  pull_request:
+    paths: ['survey-psychometric-validity-assistant/**', '.github/workflows/survey-psychometric.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm run check && npm test && npm run demo
+        working-directory: survey-psychometric-validity-assistant

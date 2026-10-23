@@ -8,6 +8,6 @@
   "releaseGate": {
     "canReleaseAiReview": true,
     "requiresPsychometricReviewer": false,
-    "rationale": "Psychometric evidence is sufficient for AI peer-review release."
+    "rationale": "No configured metadata checks flagged issues. This does not establish psychometric validity or approve the full AI review."
   }
 }

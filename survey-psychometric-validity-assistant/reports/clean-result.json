@@ -1,0 +1,13 @@
+{
+  "packetId": "survey-clean-001",
+  "title": "Validated Remote Collaboration Burnout Scale",
+  "decision": "RELEASE",
+  "severityScore": 0,
+  "findingCount": 0,
+  "findings": [],
+  "releaseGate": {
+    "canReleaseAiReview": true,
+    "requiresPsychometricReviewer": false,
+    "rationale": "No configured metadata checks flagged issues. This does not establish psychometric validity or approve the full AI review."
+  }
+}

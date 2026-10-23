@@ -1,0 +1,188 @@
+{
+  "packetId": "survey-risky-017",
+  "title": "AI Workload Anxiety and Productivity Claims",
+  "decision": "HOLD",
+  "severityScore": 39,
+  "findingCount": 17,
+  "findings": [
+    {
+      "severity": "medium",
+      "code": "thin_likert_anchor_set",
+      "message": "Survey reports 3 Likert anchors; expected at least 5.",
+      "evidence": {
+        "anchors": [
+          "Never",
+          "Sometimes",
+          "Often"
+        ]
+      }
+    },
+    {
+      "severity": "high",
+      "code": "cfa_sample_size_shortfall",
+      "message": "CFA sample size 96 is below 280 for 28 parameters.",
+      "evidence": {
+        "sampleSize": 96,
+        "plannedCfaParameters": 28,
+        "minimumCfaSample": 280
+      }
+    },
+    {
+      "severity": "high",
+      "code": "low_internal_consistency",
+      "message": "Workload Anxiety Draft Scale reports alpha 0.58, below 0.7.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "alpha": 0.58
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "weak_primary_loading",
+      "message": "wa_1 has primary loading 0.42, below 0.5.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "itemId": "wa_1",
+        "loading": 0.42
+      }
+    },
+    {
+      "severity": "critical",
+      "code": "reverse_coding_drift",
+      "message": "wa_2 is reverse coded but not reverse scored before scale scoring.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "itemId": "wa_2"
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "weak_primary_loading",
+      "message": "wa_2 has primary loading 0.39, below 0.5.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "itemId": "wa_2",
+        "loading": 0.39
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "weak_primary_loading",
+      "message": "wa_3 has primary loading 0.44, below 0.5.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "itemId": "wa_3",
+        "loading": 0.44
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "weak_primary_loading",
+      "message": "wa_4 has primary loading 0.31, below 0.5.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "itemId": "wa_4",
+        "loading": 0.31
+      }
+    },
+    {
+      "severity": "high",
+      "code": "factor_cross_loading",
+      "message": "wa_1 has secondary loading 0.41, with magnitude at or above 0.32.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "itemId": "wa_1",
+        "secondaryLoading": 0.41
+      }
+    },
+    {
+      "severity": "high",
+      "code": "factor_cross_loading",
+      "message": "wa_3 has secondary loading 0.37, with magnitude at or above 0.32.",
+      "evidence": {
+        "scale": "Workload Anxiety Draft Scale",
+        "itemId": "wa_3",
+        "secondaryLoading": 0.37
+      }
+    },
+    {
+      "severity": "high",
+      "code": "missing_internal_consistency",
+      "message": "Productivity Perception Index does not report Cronbach alpha; alternative reliability coefficients are not evaluated by this module.",
+      "evidence": {
+        "scale": "Productivity Perception Index"
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "weak_primary_loading",
+      "message": "ppi_1 has primary loading 0.47, below 0.5.",
+      "evidence": {
+        "scale": "Productivity Perception Index",
+        "itemId": "ppi_1",
+        "loading": 0.47
+      }
+    },
+    {
+      "severity": "medium",
+      "code": "weak_primary_loading",
+      "message": "ppi_2 has primary loading 0.36, below 0.5.",
+      "evidence": {
+        "scale": "Productivity Perception Index",
+        "itemId": "ppi_2",
+        "loading": 0.36
+      }
+    },
+    {
+      "severity": "high",
+      "code": "factor_cross_loading",
+      "message": "ppi_2 has secondary loading 0.34, with magnitude at or above 0.32.",
+      "evidence": {
+        "scale": "Productivity Perception Index",
+        "itemId": "ppi_2",
+        "secondaryLoading": 0.34
+      }
+    },
+    {
+      "severity": "high",
+      "code": "construct_claim_mismatch",
+      "message": "Manuscript claims anxiety, but no submitted scale has a matching construct label (this is not a validation assessment).",
+      "evidence": {
+        "claim": "anxiety",
+        "availableConstructs": [
+          "workload anxiety",
+          "productivity perception"
+        ]
+      }
+    },
+    {
+      "severity": "high",
+      "code": "construct_claim_mismatch",
+      "message": "Manuscript claims productivity, but no submitted scale has a matching construct label (this is not a validation assessment).",
+      "evidence": {
+        "claim": "productivity",
+        "availableConstructs": [
+          "workload anxiety",
+          "productivity perception"
+        ]
+      }
+    },
+    {
+      "severity": "high",
+      "code": "construct_claim_mismatch",
+      "message": "Manuscript claims clinical burnout, but no submitted scale has a matching construct label (this is not a validation assessment).",
+      "evidence": {
+        "claim": "clinical burnout",
+        "availableConstructs": [
+          "workload anxiety",
+          "productivity perception"
+        ]
+      }
+    }
+  ],
+  "releaseGate": {
+    "canReleaseAiReview": false,
+    "requiresPsychometricReviewer": true,
+    "rationale": "Psychometric validity issues must be reviewed before AI output is trusted."
+  }
+}
